@@ -25,7 +25,8 @@ class LoginSystem {
 
     function logout() {
         unset($_SESSION['status']);
-        header('location: /login');
-        // maybe this should go to the current page where the logout button is clicked from
+        $referer = parse_url($_SERVER['HTTP_REFERER']);
+        $referer_path = $referer['path'];
+        header("location: $referer_path");
     }
 }
