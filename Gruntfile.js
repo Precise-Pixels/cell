@@ -41,9 +41,13 @@ module.exports = function(grunt) {
                 options: {
                     style: 'expanded'
                 },
-                files: {
-                    'css/styles.css': 'sass/styles.scss'
-                }
+                files: [{
+                    expand: true,
+                    cwd: 'sass/',
+                    src: ['*.scss'],
+                    dest: 'css/',
+                    ext: '.css'
+                }]
             }
         },
         uglify: {
@@ -55,7 +59,7 @@ module.exports = function(grunt) {
         watch: {
             scripts: {
                 files: [
-                    'sass/styles.scss'
+                    'sass/*.scss'
                 ],
                 tasks: ['sass:dev', 'autoprefixer']
             }
