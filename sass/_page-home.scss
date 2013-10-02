@@ -1,0 +1,75 @@
+#splash-page {
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    color: #FFF;
+    text-align: center;
+    perspective: 800;
+    perspective-origin: 50%;
+}
+
+.logo {
+  width: 600px;
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  margin-left: -300px;
+  display: block;
+  z-index: 2;
+}
+
+@-webkit-keyframes spin {
+  from { transform: rotateY(-45); }
+  to   { transform: rotateY(-135deg); }
+}
+
+.cube {
+  width: 350px;
+  padding: 225px 0;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  transform-style: preserve-3d;
+  transform: rotateY(-45deg);
+  animation: spin 4s infinite linear;
+}
+.cube h1 {
+    padding-top: 450px;
+}
+
+/* outer cube */
+.cube > div {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  display: block;
+  font-size: 0;
+}
+
+.front {
+  transform: translateZ(175px);
+  animation: front 2s infinite linear;
+}
+.back {
+  transform: translateZ(-175px) rotateY(180deg);
+  animation: back 6s infinite linear;
+}
+.right {
+  transform: rotateY(90deg) translateZ(175px);
+  animation: right 4s infinite linear;
+}
+
+@-webkit-keyframes front {
+  from { background: #333; }
+  to   { background: #000; }
+}
+
+@-webkit-keyframes back {
+  from { background: #999; }
+  to   { background: #666; }
+}
+
+@-webkit-keyframes right {
+  from { background: #666; }
+  to   { background: #333; }
+}
