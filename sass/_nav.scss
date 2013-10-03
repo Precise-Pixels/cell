@@ -1,0 +1,148 @@
+nav {
+    width: 40px;
+    height: 40px;
+    background: #FFF;
+    overflow: hidden;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.menu__icon {
+    width: 40px;
+    height: 0;
+    background: #CCC;
+    display: block;
+    position: relative;
+    z-index: 2;
+    transition: height .3s;
+}
+
+#menu > a {
+    display: block;
+    position: relative;
+}
+
+.menu__label {
+    width: 100px;
+    height: 40px;
+    background: #999;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -100px;
+    z-index: 1;
+    transition: left .3s;
+}
+
+// MOBILE 
+.nav--open {
+    overflow: visible;
+}
+
+.nav--open .menu__icon {
+    height: 40px;
+}
+
+.nav--open .menu__label {
+    left: 40px;
+}
+
+@media ($min_bp_c) {
+    nav:hover {
+        overflow: visible;
+    }
+
+    nav:hover .menu__icon {
+        height: 40px;
+    }
+
+    #menu:hover .menu__label {
+        left: 40px;
+    }
+}
+
+// NO-JS
+@media ($max_bp_c) {
+    .no-js nav {
+        overflow: visible;
+    }
+
+    .no-js nav .menu__icon {
+        height: 40px;
+    }
+}
+
+// Completely mobile first, adds more specificity having to use .js
+/*nav {
+    width: 40px;
+    height: 40px;
+    background: #FFF;
+    overflow: visible;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.menu__icon {
+    width: 40px;
+    height: 40px;
+    background: #CCC;
+    display: block;
+    position: relative;
+    z-index: 2;
+    transition: height .3s;
+}
+
+#menu > a {
+    display: block;
+    position: relative;
+}
+
+.menu__label {
+    width: 100px;
+    height: 40px;
+    background: #999;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -100px;
+    z-index: 1;
+    transition: left .3s;
+}*/
+
+// JS
+/*.js nav {
+    overflow: hidden;
+}
+
+.js .menu__icon {
+    height: 0;
+}*/
+
+// MOBILE
+/*.js .nav--open {
+    overflow: visible;
+}
+
+.js .nav--open .menu__icon {
+    height: 40px;
+}
+
+.js .nav--open .menu__label {
+    left: 40px;
+}*/
+
+/*@media (min-width: 1000px) {
+    nav:hover {
+        overflow: visible;
+    }
+
+    nav:hover .menu__icon {
+        height: 40px;
+    }
+
+    #menu:hover .menu__label {
+        left: 40px;
+    }
+}*/
