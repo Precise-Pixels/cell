@@ -5,3 +5,11 @@ $('#nav').click(function() {
         $(this).toggleClass('nav--open');
     }
 });
+
+$(window).resize($.debounce(250, closeMenu));
+
+function closeMenu() {
+    if($(window).width() >= min_bp_b) {
+        $('#nav').removeClass('nav--open');
+    }
+};
