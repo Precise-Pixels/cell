@@ -9,3 +9,7 @@
     <link rel="stylesheet" type="text/css" href="/build/styles.min.css"/>
 <?php endif; ?>
 <link rel="shortcut icon" href="/img/favicon.ico"/>
+
+<!--[if lt IE 9]>
+<script src="js/respond.min.js"></script>
+<![endif]-->
