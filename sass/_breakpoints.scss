@@ -1,2 +1,13 @@
-$min_bp_c: 'min-width: 1000px';
-$max_bp_c: 'max-width: 999px';
+// For use with @media queries
+// e.g. @media ($min_bp_c) {}
+
+// mobile:    0    - 640px
+// tablet:    641  - 800px
+// desktop:   801  - 1200px
+// max-width: 1200px
+
+$min_bp_a: 'min-width: 640px';
+$min_bp_b: 'min-width: 800px';
+$min_bp_c: 'min-width: 1200px';
+
+$max_bp_b: 'max-width: 799px';

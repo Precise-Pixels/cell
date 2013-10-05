@@ -48,7 +48,7 @@ nav {
     left: 40px;
 }
 
-@media ($min_bp_c) {
+@media ($min_bp_b) {
     nav:hover {
         overflow: visible;
     }
@@ -63,7 +63,7 @@ nav {
 }
 
 // NO-JS
-@media ($max_bp_c) {
+@media ($max_bp_b) {
     .no-js nav {
         overflow: visible;
     }

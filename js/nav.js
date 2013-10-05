@@ -1,7 +1,7 @@
-var min_bp_c = 1000;
+var min_bp_b = 800;
 
 $('#nav').click(function() {
-    if($(window).width() < min_bp_c) {
+    if($(window).width() < min_bp_b) {
         $(this).toggleClass('nav--open');
     }
 });
