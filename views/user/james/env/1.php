@@ -1,5 +1,7 @@
 <h1>JAMES ENV 1</h1>
 
+<progress id="prog-bar" min=0 max=100 value=0></progress>
+
 <div id="env"></div>
 
 <div id="env-info">ENV INFO</div>

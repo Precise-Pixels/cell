@@ -3,12 +3,39 @@ var Detector = {
 }
 
 if(Detector.webgl) {
-    // INIT
-    var container, containerX, containerY, scene, camera, renderer, controls;
 
-    init();
-    animate();
-    loadStats();
+    // REQUEST MAHOOSIVE FILE AND UPDATE PROGRESS BAR
+    var $progBar = $('#prog-bar');
+
+    var xhr = new XMLHttpRequest();
+
+    xhr.open("get", "/js/threejs.tweenjs.stats.loaders.controls.php", true);
+    xhr.send();
+
+    xhr.onprogress = function(e) {
+        var responseText = xhr.responseText;
+
+        if(responseText.length > 10) {
+            var total = responseText.match(/\d{6}?/);
+            $progBar.attr('value', e.loaded / total[0] * 100);
+        }
+
+        xhr.responseText = ''; //clear responseText to save memory
+    };
+
+    xhr.onreadystatechange = function() {
+        if(xhr.readyState == 4) {
+            var s = document.createElement('script');
+            s.appendChild(document.createTextNode(xhr.responseText));
+            document.body.appendChild(s);
+            init();
+            animate();
+            loadStats();
+        }
+    };
+
+    // SETUP
+    var container, containerX, containerY, scene, camera, renderer, controls;
 
     function init() {
         container = document.getElementById('env');
@@ -131,4 +158,5 @@ if(Detector.webgl) {
             controls = new THREE.OrbitControls(camera, container, view);
         }
     }
+
 }
