@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1200px"
+	 height="400px" viewBox="0 0 1200 400" enable-background="new 0 0 1200 400" xml:space="preserve">
+<g id="Layer_2" display="none">
+	<rect display="inline" fill="#BA3A3A" width="40" height="40"/>
+	<rect x="7.5" y="10" display="inline" fill="#75F9FC" width="25" height="20"/>
+	<rect x="40" display="inline" fill="#BA3A3A" width="20" height="20"/>
+</g>
+<g id="Layer_1">
+	<rect x="342" y="-117" fill="#FFFFFF" stroke="#231F20" stroke-miterlimit="10" width="36" height="54"/>
+	<rect x="432" y="-243" fill="#7C4747" stroke="#231F20" stroke-miterlimit="10" width="153" height="135"/>
+	<rect x="288" y="-252" fill="#FFFFFF" width="30" height="8.66"/>
+	<rect x="288" y="-242.66" fill="#FFFFFF" width="30" height="8.66"/>
+	<rect x="288" y="-233.66" fill="#FFFFFF" width="30" height="8.66"/>
+	<rect x="7.5" y="10" fill="#FFFFFF" width="25" height="5.773"/>
+	<rect x="7.5" y="24.227" fill="#FFFFFF" width="25" height="5.773"/>
+	<rect x="7.5" y="17.113" fill="#FFFFFF" width="25" height="5.773"/>
+	<polyline fill="#FFFFFF" points="54,7.75 46,7.75 50,12.25 	"/>
+</g>
+</svg>
