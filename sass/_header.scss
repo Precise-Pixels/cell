@@ -1,6 +1,6 @@
 header {
     height: 40px;
-    background: #333;
+    background: $dgrey;
 }
 
 #nav-btn {
@@ -15,7 +15,7 @@ header {
     position: absolute;
     right: 70px;
     line-height: 40px;
-    color: #FFFFFF;
+    color: #FFF;
 }
 
 #user-pic {
@@ -33,5 +33,5 @@ header {
     position: absolute;
     top: 40px;
     right: 60px;
-    background: #343434 url(/img/spritesheet.svg) -40px 1px;
+    background: $dgrey url(/img/spritesheet.svg) -40px 1px;
 }
