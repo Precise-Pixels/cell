@@ -9,11 +9,6 @@
 	<rect x="40" display="inline" fill="#BA3A3A" width="20" height="20"/>
 </g>
 <g id="Layer_1">
-	<rect x="342" y="-117" fill="#FFFFFF" stroke="#231F20" stroke-miterlimit="10" width="36" height="54"/>
-	<rect x="432" y="-243" fill="#7C4747" stroke="#231F20" stroke-miterlimit="10" width="153" height="135"/>
-	<rect x="288" y="-252" fill="#FFFFFF" width="30" height="8.66"/>
-	<rect x="288" y="-242.66" fill="#FFFFFF" width="30" height="8.66"/>
-	<rect x="288" y="-233.66" fill="#FFFFFF" width="30" height="8.66"/>
 	<rect x="7.5" y="10" fill="#FFFFFF" width="25" height="5.773"/>
 	<rect x="7.5" y="24.227" fill="#FFFFFF" width="25" height="5.773"/>
 	<rect x="7.5" y="17.113" fill="#FFFFFF" width="25" height="5.773"/>
