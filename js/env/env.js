@@ -8,7 +8,7 @@ if(Detector.webgl) {
 
     var xhr = new XMLHttpRequest();
 
-    xhr.open("get", "/js/env/threejs.tweenjs.stats.loaders.controls.php", true);
+    xhr.open('get', '/js/env/threejs.tweenjs.stats.loaders.controls.php', true);
     xhr.send();
 
     xhr.onprogress = function(e) {
