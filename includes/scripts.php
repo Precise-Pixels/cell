@@ -7,5 +7,5 @@
 <?php endif; ?>
 
 <?php if(preg_match('/env\/\d/', $_SERVER['REQUEST_URI'])): ?>
-    <script src='/js/env.js'></script>
+    <script src='/js/env/env.js'></script>
 <?php endif; ?>
