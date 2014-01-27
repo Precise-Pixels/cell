@@ -1,7 +1,5 @@
 header {
     height: 40px;
-    margin: 0;
-    padding: 0;
     background: #333;
 }
 
@@ -13,7 +11,7 @@ header {
 }
 
 #user-message {
-    height: 100%;
+    height: 40px;
     position: absolute;
     right: 70px;
     line-height: 40px;
@@ -26,7 +24,7 @@ header {
     position: absolute;
     top: 0;
     right: 0;
-    background: url(/img/user/james/jamespic.png);
+    background: url(/img/user/james/pic.jpg);
 }
 
 #user-menu {
@@ -37,5 +35,3 @@ header {
     right: 60px;
     background: #343434 url(/img/spritesheet.svg) -40px 1px;
 }
-
-
