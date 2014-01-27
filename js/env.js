@@ -3,7 +3,6 @@ var Detector = {
 }
 
 if(Detector.webgl) {
-
     // REQUEST MAHOOSIVE FILE AND UPDATE PROGRESS BAR
     var $progBar = $('#prog-bar');
 
@@ -116,11 +115,11 @@ if(Detector.webgl) {
     }
 
     // EVENTS
-    var v360   = document.getElementById('360');
-    var vTop   = document.getElementById('top');
-    var vSide  = document.getElementById('side');
+    var v360     = document.getElementById('360');
+    var vTop     = document.getElementById('top');
+    var vSide    = document.getElementById('side');
     var iDefault = document.getElementById('default');
-    var iWebcam   = document.getElementById('webcam');
+    var iWebcam  = document.getElementById('webcam');
 
     v360.addEventListener( 'click', function(e) { switchView('360', e); }, false );
     vTop.addEventListener( 'click', function(e) { switchView('top', e); }, false );
@@ -183,6 +182,6 @@ if(Detector.webgl) {
             case 'webcam':
                 iWebcam.className += ' btn--selected';
                 break;
-            }
+        }
     }
 }
