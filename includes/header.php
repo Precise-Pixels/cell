@@ -1,8 +1,6 @@
 <header>
-    <div class="nav-btn"></div>
-    <div class="user">
-        <div class="userpic"></div>
-        <div class="message">Welcome back, James</div>
-        <div class="usermenu"></div>
-    </div>
+    <div id="nav-btn"></div>
+    <div id="user-pic"></div>
+    <div id="user-message">Welcome back, James</div>
+    <div id="user-menu"></div>
 </header>

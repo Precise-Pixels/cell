@@ -5,33 +5,37 @@ header {
     background: #343434;
 }
 
-.nav-btn {
+#nav-btn {
     width: 40px;
     height: 40px;
-    float: left;
-    background: url("/img/spritesheet.svg");
+    position: absolute;
+    background: url(/img/spritesheet.svg);
 }
 
-.message {
-    float: right;
-    padding: 10px 10px 0 0;
+#user-message {
+    height: 100%;
+    position: absolute;
+    right: 70px;
+    line-height: 40px;
     color: #FFFFFF;
 }
 
-.userpic {
+#user-pic {
     height: 60px;
     width: 60px;
-    float: right;
-    background: url("/img/user/james/jamespic.png");
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(/img/user/james/jamespic.png);
 }
 
-.usermenu {
+#user-menu {
     height: 20px;
     width: 20px;
     position: absolute;
-    margin: 40px 60px 0 0;
-    right: 0;
-    background: #343434 url("/img/spritesheet.svg") 0px 0px;
+    top: 40px;
+    right: 60px;
+    background: #343434 url(/img/spritesheet.svg) -40px 1px;
 }
 
 
