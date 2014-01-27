@@ -2142,7 +2142,11 @@ THREE.OrbitControls = function ( object, domElement, view ) {
 
                 state = STATE.TOUCH_ROTATE;
 
-                rotateStart.set( event.touches[ 0 ].pageX, event.touches[ 0 ].pageY );
+                if ( scope.rotateDirection == 'both' ) {
+                    rotateStart.set( event.touches[ 0 ].pageX, event.touches[ 0 ].pageY );
+                } else {
+                    rotateStart.set( event.touches[ 0 ].pageX );
+                }
                 break;
 
             case 2: // two-fingered touch: dolly
@@ -2178,13 +2182,26 @@ THREE.OrbitControls = function ( object, domElement, view ) {
             case 1: // one-fingered touch: rotate
                 if ( state !== STATE.TOUCH_ROTATE ) { return; }
 
-                rotateEnd.set( event.touches[ 0 ].pageX, event.touches[ 0 ].pageY );
+                if ( scope.rotateDirection == 'both' ) {
+                    rotateEnd.set( event.touches[ 0 ].pageX, event.touches[ 0 ].pageY );
+                } else {
+                    rotateEnd.set( event.touches[ 0 ].pageX );
+                }
                 rotateDelta.subVectors( rotateEnd, rotateStart );
 
-                // rotating across whole screen goes 360 degrees around
-                scope.rotateLeft( 2 * Math.PI * rotateDelta.x / element.clientWidth * scope.rotateSpeed );
-                // rotating up and down along whole screen attempts to go 360, but limited to 180
-                scope.rotateUp( 2 * Math.PI * rotateDelta.y / element.clientHeight * scope.rotateSpeed );
+                if ( scope.rotateDirection == 'both' ) {
+                    // rotating across whole screen goes 360 degrees around
+                    scope.rotateLeft( 2 * Math.PI * rotateDelta.x / element.clientWidth * scope.rotateSpeed );
+                    // rotating up and down along whole screen attempts to go 360, but limited to 180
+                    scope.rotateUp( 2 * Math.PI * rotateDelta.y / element.clientHeight * scope.rotateSpeed );
+                } else {
+                    // rotating across whole screen goes 360 degrees around
+                    if ( scope.view == 'top' ) {
+                        scope.rotateLeft( -2 * Math.PI * rotateDelta.x / element.clientWidth * scope.rotateSpeed );
+                    } else {
+                        scope.rotateLeft( 2 * Math.PI * rotateDelta.x / element.clientWidth * scope.rotateSpeed );
+                    }
+                }
 
                 rotateStart.copy( rotateEnd );
                 break;
