@@ -1,0 +1,37 @@
+header {
+    height: 40px;
+    background: $dgrey;
+}
+
+#nav-btn {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background: url(/img/spritesheet.svg);
+}
+
+#user-message {
+    height: 40px;
+    position: absolute;
+    right: 70px;
+    line-height: 40px;
+    color: #FFF;
+}
+
+#user-pic {
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(/img/user/james/pic.jpg);
+}
+
+#user-menu {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    background: $dgrey url(/img/spritesheet.svg) -40px 1px;
+}
