@@ -1,6 +1,8 @@
 <?php
 
-$path = preg_replace('/\/$|.php/', '', $_GET['q']);
+$q = $_GET['q'];
+
+$path = preg_replace('/\/$|.php/', '', $q);
 
 if(empty($path)) {                                  // HOME
     $file = 'index';
@@ -11,5 +13,7 @@ if(empty($path)) {                                  // HOME
 } else {                                            // NOT FOUND
     $file = '404';
 }
+
+$isEnv = preg_match('/env\/\d/', $q);
 
 require_once('front_view.php');

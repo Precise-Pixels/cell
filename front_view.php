@@ -3,7 +3,7 @@
 <head>
     <?php require_once('includes/head.php'); ?>
 </head>
-<body>
+<body class="<?= ($isEnv == 1) ? 'env' : ''; ?>">
     <?php require_once('includes/header.php'); ?>
     <?php require_once("views/$file.php"); ?>
     <?php require_once('includes/scripts.php'); ?>

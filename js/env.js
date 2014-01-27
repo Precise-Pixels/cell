@@ -38,7 +38,7 @@ if(Detector.webgl) {
     var container, containerX, containerY, scene, camera, renderer, controls;
 
     function init() {
-        container = document.getElementById('env');
+        container = document.getElementById('model');
         containerX = container.clientWidth;
         containerY = container.clientHeight;
 
@@ -116,19 +116,29 @@ if(Detector.webgl) {
     }
 
     // EVENTS
-    var v360  = document.getElementById('360');
-    var vTop  = document.getElementById('top');
-    var vSide = document.getElementById('side');
+    var v360   = document.getElementById('360');
+    var vTop   = document.getElementById('top');
+    var vSide  = document.getElementById('side');
+    var iDefault = document.getElementById('default');
+    var iWebcam   = document.getElementById('webcam');
 
-    v360.addEventListener( 'click', function() { switchView('360'); }, false );
-    vTop.addEventListener( 'click', function() { switchView('top'); }, false );
-    vSide.addEventListener( 'click', function() { switchView('side'); }, false );
+    v360.addEventListener( 'click', function(e) { switchView('360', e); }, false );
+    vTop.addEventListener( 'click', function(e) { switchView('top', e); }, false );
+    vSide.addEventListener( 'click', function(e) { switchView('side', e); }, false );
+    iDefault.addEventListener( 'click', function(e) { switchInteraction('default', e); }, false );
+    iWebcam.addEventListener( 'click', function(e) { switchInteraction('webcam', e); }, false );
 
-    function switchView(view) {
+    // FUNCTIONS
+    function switchView(view, e) {
+        if (e.target.className.match(/btn--selected/)) { return false; }
+
         controls.removeAllEventListeners();
+
+        v360.className = vTop.className = vSide.className = 'btn btn--views';
 
         switch(view) {
             case '360':
+                v360.className += ' btn--selected';
                 new TWEEN.Tween( camera.position ).to({
                     x: 1000, y: 400, z: 400
                 }, 500).onUpdate(function() {
@@ -137,6 +147,7 @@ if(Detector.webgl) {
                 break;
 
             case 'top':
+                vTop.className += ' btn--selected';
                 // TODO: Animation 'clicks' potentially due to OrbitControls.autoRotation not being animated
                 new TWEEN.Tween( camera.position ).to({
                     x: 0, y: 1000, z: 0
@@ -146,6 +157,7 @@ if(Detector.webgl) {
                 break;
 
             case 'side':
+                vSide.className += ' btn--selected';
                 new TWEEN.Tween( camera.position ).to({
                     x: 1000, y: 0, z: 0
                 }, 500).onUpdate(function() {
@@ -159,4 +171,18 @@ if(Detector.webgl) {
         }
     }
 
+    function switchInteraction(interaction, e) {
+        if (e.target.className.match(/btn--selected/)) { return false; }
+        
+        iDefault.className = iWebcam.className = 'btn btn--interact';
+
+        switch(interaction) {
+            case 'default':
+                iDefault.className += ' btn--selected';
+                break;
+            case 'webcam':
+                iWebcam.className += ' btn--selected';
+                break;
+            }
+    }
 }
