@@ -10,6 +10,14 @@ header {
     background: url(/img/spritesheet.svg);
 }
 
+#nav-btn:hover {
+    -webkit-transition: all 0.3s ease; 
+    -moz-transition: all 0.3s ease;  
+    -o-transition: all 0.3s ease; 
+    transition: all 0.3s ease;  
+    background: $lgrey url(/img/spritesheet.svg);
+}
+
 #user-message {
     height: 40px;
     position: absolute;
@@ -27,6 +35,14 @@ header {
     background: url(/img/user/james/pic.jpg);
 }
 
+#user-pic:hover {
+    -webkit-filter: brightness(90%); 
+    -webkit-transition: all 0.3s ease; 
+    -moz-transition: all 0.3s ease;  
+    -o-transition: all 0.3s ease; 
+    transition: all 0.3s ease;  
+}
+
 #user-menu {
     height: 20px;
     width: 20px;
@@ -34,4 +50,12 @@ header {
     top: 40px;
     right: 60px;
     background: $dgrey url(/img/spritesheet.svg) -40px 1px;
+}
+
+#user-pic:hover ~ #user-menu {
+    -webkit-transition: all 0.3s ease; 
+    -moz-transition: all 0.3s ease;  
+    -o-transition: all 0.3s ease; 
+    transition: all 0.3s ease;  
+    background: $lgrey url(/img/spritesheet.svg) -40px 1px;
 }
