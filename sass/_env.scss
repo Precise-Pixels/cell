@@ -5,7 +5,7 @@
 
     #header {
         width:100%;
-        height: 160px;
+        height: 100px;
         position: relative;
         overflow: hidden;
         background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MjE3NjY3MkI4NkI0MTFFMzk1ODdENUU5MDgzMkE5OTMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MjE3NjY3MkM4NkI0MTFFMzk1ODdENUU5MDgzMkE5OTMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyMTc2NjcyOTg2QjQxMUUzOTU4N0Q1RTkwODMyQTk5MyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyMTc2NjcyQTg2QjQxMUUzOTU4N0Q1RTkwODMyQTk5MyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsX6wW4AAACBSURBVHja7NdBCsAgDETRJIcQvP/xvELVtrt2pzCLlP4Bt8MTDKrPo9Xp1n3aI3GtYesJmz7s3SHK6K2K+4qyL9S7VveFJc8XgJF6z7E3rUtjwhkECBAgQIDcxRtt90tYGXVf+gerp/+T3EBxX/nbFAMECBAgQIAAAQIEmDenAAMATKkqOf9b9kUAAAAASUVORK5CYII=) top left #6699cc;
@@ -18,7 +18,7 @@
         height: auto;
         overflow: hidden;
         margin: 0 auto;
-        padding: 40px 0 0 0;
+        padding: 0;
     }
 
     #header-bkg {
@@ -36,6 +36,9 @@
 
     #header-right {
         float: right;
+        font-size: 2.6rem;
+        font-weight: 400;
+        padding: 35px 0 0 0;
     }
 
     #header-icon {
@@ -43,13 +46,13 @@
         max-width: 75px;
         height: auto;
         float: left;
+        display: none;
         img {
             width:100%;       
         }
     }
 
     #header-title {
-        margin: 0 0 0 10px;
         float: left;
     }
 }
@@ -105,8 +108,13 @@ progress::-moz-progress-bar {
 
 #model-controls {
     width: 100%;
+    max-width: 1400px;
     height: auto;
-    position: relative;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 20px;
+    left:0;
+    right: 0;
     overflow: hidden;
     h2 {
         display: none;
@@ -122,7 +130,7 @@ progress::-moz-progress-bar {
 #default {
     width: 20%;
     position: absolute;
-    left:0;
+    left: 20px;
     padding: 0;
     img {
         max-width: 45px;
@@ -133,7 +141,7 @@ progress::-moz-progress-bar {
 #webcam {
     width: 20%;
     position: absolute;
-    right:0;
+    right: 20px;
     padding: 0;
         img {
         max-width: 45px;
@@ -210,4 +218,27 @@ progress::-moz-progress-bar {
 
 #more-models {
     display: none;
+}
+
+@media ($min_bp_c) {
+
+    .env {
+
+        #header {
+            height: 140px;
+        }
+
+        #header-inner {
+            padding: 20px 0 0 0;
+        }
+
+        #header-icon {
+            display: inline-block;
+        }
+
+        #header-title {
+            margin: 0 0 0 10px;
+        }
+    }
+
 }

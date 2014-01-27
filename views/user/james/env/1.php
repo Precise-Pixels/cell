@@ -11,7 +11,7 @@
                     </div>
                 </div>
                 <div id="header-right">
-                    <h2>?</h2>
+                    ?
                 </div>
         </div>
     </div>
@@ -47,4 +47,3 @@
 </section>
 
     <div id="more-models"><h2>MORE-ENVS <small>(post-loaded on [tablet&amp;]desktop only)</small></h2></div>
-
