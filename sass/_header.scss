@@ -26,6 +26,14 @@ header {
     line-height: 40px;
 }
 
+#user-menu {
+    height: 60px;
+    width: 80px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 #user-pic {
     height: 60px;
     width: 60px;
@@ -33,16 +41,12 @@ header {
     top: 0;
     right: 0;
     filter: brightness(50%); 
-    background: url(/img/user/james/pic.jpg) #FFF;
+    background: url(/img/user/james/pic.jpg);
     transition: all .3s ease; 
     
 }
 
-#user-pic:hover {
-    filter: brightness(100%);   
-}
-
-#user-menu {
+#user-arrow {
     height: 20px;
     width: 20px;
     position: absolute;
@@ -52,6 +56,10 @@ header {
     transition: all .3s ease; 
 }
 
-#user-pic:hover ~ #user-menu { 
+#user-menu:hover > #user-arrow{
     background: $lgrey url(/img/spritesheet.svg) -40px 1px;
+}
+
+#user-menu:hover > #user-pic {
+    filter: brightness(100%);  
 }
