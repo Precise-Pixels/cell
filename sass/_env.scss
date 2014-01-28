@@ -310,7 +310,8 @@ progress::-moz-progress-bar {
 }
 
 #menu-info-toggle:checked ~ #model-desc {
-    display: block;
+    visibility: visible;
+    opacity: 1;
 }
 
 #model-desc {
@@ -322,8 +323,10 @@ progress::-moz-progress-bar {
     overflow-x: none;
     top: 0;
     left: 0;
-    display: none;
-    background: #333;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s;
+    background: #222;
     z-index: 3;
 }
 
