@@ -97,6 +97,11 @@ progress::-moz-progress-bar {
     background: #666;
 }
 
+.progress--complete {
+    opacity: 0;
+    transition: opacity .3s;
+}
+
 #model {
     width: 100%;
     height: 100%;
