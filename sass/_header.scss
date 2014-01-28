@@ -10,13 +10,10 @@ header {
     height: 40px;
     position: absolute;
     background: url(/img/spritesheet.svg);
+    transition: all .3s;  
 }
 
 #nav-btn:hover {
-    -webkit-transition: all 0.3s ease; 
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease; 
-    transition: all 0.3s ease;  
     background: $lgrey url(/img/spritesheet.svg);
 }
 
@@ -35,15 +32,14 @@ header {
     position: absolute;
     top: 0;
     right: 0;
-    background: url(/img/user/james/pic.jpg);
+    filter: brightness(50%); 
+    background: url(/img/user/james/pic.jpg) #FFF;
+    transition: all .3s ease; 
+    
 }
 
 #user-pic:hover {
-    -webkit-filter: brightness(50%); 
-    -webkit-transition: all 0.3s ease; 
-    -moz-transition: all 0.3s ease;  
-    -o-transition: all 0.3s ease; 
-    transition: all 0.3s ease;  
+    filter: brightness(100%);   
 }
 
 #user-menu {
@@ -53,12 +49,9 @@ header {
     top: 40px;
     right: 60px;
     background: $dgrey url(/img/spritesheet.svg) -40px 1px;
+    transition: all .3s ease; 
 }
 
-#user-pic:hover ~ #user-menu {
-    -webkit-transition: all 0.3s ease; 
-    -moz-transition: all 0.3s ease;  
-    -o-transition: all 0.3s ease; 
-    transition: all 0.3s ease;  
+#user-pic:hover ~ #user-menu { 
     background: $lgrey url(/img/spritesheet.svg) -40px 1px;
 }
