@@ -70,6 +70,12 @@
     left: 0;
     right: 0;
     bottom: 90px;
+    opacity: 0;
+
+    .env--loaded & {
+        opacity: 1;
+        transition: opacity .3s;
+    }
 }
 
 progress {
@@ -82,6 +88,11 @@ progress {
     border: none;
     // IE: Value
     color: #666;
+
+    .env--loaded & {
+        opacity: 0;
+        transition: opacity .3s;
+    }
 }
 
 // Webkit: Bar
@@ -97,11 +108,6 @@ progress::-webkit-progress-value {
 // FF: Value
 progress::-moz-progress-bar {
     background: #666;
-}
-
-.progress--complete {
-    opacity: 0;
-    transition: opacity .3s;
 }
 
 #model {

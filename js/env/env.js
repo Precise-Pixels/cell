@@ -28,7 +28,7 @@ if(Detector.webgl) {
             s.appendChild(document.createTextNode(xhr.responseText));
             document.body.appendChild(s);
 
-            $progBar.className = 'progress--complete';
+            document.body.className += ' env--loaded';
 
             init();
             animate();
