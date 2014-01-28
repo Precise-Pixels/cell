@@ -16,7 +16,7 @@ if(Detector.webgl) {
 
         if(responseText.length > 10) {
             var total = responseText.match(/\d{6}?/);
-            $progBar.attr('value', e.loaded / total[0] * 100);
+            $progBar.value = e.loaded / total[0] * 100;
         }
 
         xhr.responseText = ''; //clear responseText to save memory
