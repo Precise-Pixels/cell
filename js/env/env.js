@@ -113,7 +113,7 @@ if(Detector.webgl) {
     }
 
     // EVENTS
-    var vMenuCheckbox = document.getElementById('menu-toggle');
+    var vMenuCheckbox = document.getElementById('model-menu-toggle');
     var v360          = document.getElementById('360');
     var vTop          = document.getElementById('top');
     var vSide         = document.getElementById('side');
