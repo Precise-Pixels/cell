@@ -39,13 +39,20 @@
             <div id="live" class="btn btn--views btn--views--live">LIVE</div>
         </div>      
     </div>
+        
 
+</section>
+         <input type="checkbox" id="info-toggle"/>
+         <label for="info-toggle" id="info-btn"></label>
     <div id="model-desc">
-        <div class="btn btn--close">×</div>
         <p>Maecenas aliquam a ligula et tincidunt. Suspendisse tempor nisi enim, accumsan interdum lacus semper sed. Phasellus ornare in ante gravida gravida. Duis et gravida nisi. Vestibulum semper bibendum rutrum. Ut porta ut purus non ultricies. Vestibulum sed risus egestas, ultrices turpis ac, pellentesque risus.</p>
         <p>Etiam in nisl eu leo aliquam porta. Cras rutrum tellus vehicula hendrerit sodales. Nullam condimentum gravida volutpat. Sed molestie gravida fermentum. In euismod diam eget posuere tempor. Mauris sit amet sem laoreet, consequat sapien eu, aliquam purus. Nunc sit amet lorem ut nunc tempus scelerisque vitae vel ligula.</p>
     </div>
 
+<<<<<<< Updated upstream
 </section>
 
 <div id="more-models"><h2>MORE-ENVS <small>(post-loaded on [tablet&amp;]desktop only)</small></h2></div>
+=======
+    <div id="more-models"><h2>MORE-ENVS <small>(post-loaded on [tablet&amp;]desktop only)</small></h2></div>
+>>>>>>> Stashed changes

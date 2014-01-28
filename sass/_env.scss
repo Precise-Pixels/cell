@@ -168,7 +168,8 @@ progress::-moz-progress-bar {
 }
 
 #menu-toggle:checked ~ #menu-btn {
-    background: url(../img/icons/ico_views_menu-hover.png);   
+    opacity: 1;
+    background: url(../img/icons/ico_views_menu.png);   
 }
 
 #menu-toggle:checked ~ #model-views {
@@ -186,12 +187,13 @@ progress::-moz-progress-bar {
     right: 0;
     bottom: 0;
     cursor: pointer;
+    opacity: 0.35;
     background: url(../img/icons/ico_views_menu.png);
     z-index: 2;
 }
 
 #menu-btn:hover {
-    background: url(../img/icons/ico_views_menu-hover.png);
+    opacity: 1;
 }
 
 #model-views {
@@ -206,17 +208,6 @@ progress::-moz-progress-bar {
     background: #222;
 }
 
-#model-desc {
-    width: 100%;
-    height: 100%;
-    padding: 40px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-    background: #333;
-    z-index: 3;
-}
 
 .btn {
     padding: 20px;
@@ -241,14 +232,6 @@ progress::-moz-progress-bar {
 .btn--menu:hover {
     color: #333;
     background:#ccc;
-}
-
-.btn--close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 2rem;
-    font-weight: 800;
 }
 
 .btn--views {
@@ -286,6 +269,49 @@ progress::-moz-progress-bar {
 .btn--selected:hover {
     cursor:default;
 }
+
+#info-btn {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 20%;
+    right: 8%;
+    opacity: 0.5;
+    transition: all .8s;
+    background: url(../img/icons/ico_info.png); 
+    z-index: 4;
+}
+
+#info-btn:hover {
+    opacity: 1;
+}
+
+#info-toggle {
+    display: none; /* hide the checkbox */
+}
+
+#info-toggle:checked ~ #info-btn {
+    top: 0;
+    right: 0;
+    background: url(../img/icons/ico_cross.png);   
+}
+
+#info-toggle:checked ~ #model-desc {
+    display: block;
+}
+
+#model-desc {
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    background: #333;
+    z-index: 3;
+}
+
 
 #more-models {
     display: none;
