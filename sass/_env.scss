@@ -106,31 +106,18 @@ progress::-moz-progress-bar {
     margin: 0 auto;
 }
 
-#model-controls {
-    width: 100%;
-    max-width: 1400px;
-    height: auto;
-    margin: 0 auto;
-    position: fixed;
-    bottom: 20px;
-    left:0;
-    right: 0;
-    overflow: hidden;
-    h2 {
+
+#model-interaction {
+    p {
         display: none;
     }
-}
-
-#model-interact {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
 }
 
 #default {
     width: 20%;
     position: absolute;
     left: 20px;
+    bottom: 20px;
     padding: 0;
     img {
         max-width: 45px;
@@ -142,6 +129,7 @@ progress::-moz-progress-bar {
     width: 20%;
     position: absolute;
     right: 20px;
+    bottom: 20px;
     padding: 0;
         img {
         max-width: 45px;
@@ -149,9 +137,59 @@ progress::-moz-progress-bar {
     }
 }
 
-#model-views {
+#model-controls {
     width: 65%;
+    max-width: 1400px;
     margin: 0 auto;
+    position: fixed;
+    bottom: 20px;
+    left:0;
+    right: 0;
+}
+
+#menu-toggle {
+    display: none; /* hide the checkbox */
+}
+
+#menu-toggle:checked ~ #menu-btn {
+    background: url(../img/icons/ico_views_menu-hover.png);   
+}
+
+#menu-toggle:checked ~ #model-views {
+    width:100%;
+    height: 180px;
+    visibility: visible;
+    opacity: 1;
+}
+
+#menu-btn {
+    width: 80px;
+    height: auto;
+    overflow: hidden;  
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    background: url(../img/icons/ico_views_menu.png);
+    z-index: 2;
+}
+
+#menu-btn:hover {
+    background: url(../img/icons/ico_views_menu-hover.png);
+}
+
+#model-views {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    margin: 0 0 18px 0;
+    padding: 10px 10px 40px 10px;
+    opacity: 0;
+    text-align: center;
+    transition: all .3s;
+    visibility: hidden;
+    background: #222;
 }
 
 #model-desc {
@@ -166,6 +204,31 @@ progress::-moz-progress-bar {
     z-index: 3;
 }
 
+.btn {
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    background: #666;
+}
+
+.btn:hover {
+    color: #333;
+    background:#ccc;
+}
+
+.btn--menu {
+    width: 33.33%;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+    background: #666;
+}
+
+.btn--menu:hover {
+    color: #333;
+    background:#ccc;
+}
+
 .btn--close {
     position: absolute;
     top: 0;
@@ -174,23 +237,14 @@ progress::-moz-progress-bar {
     font-weight: 800;
 }
 
-#model-views {
-}
-
-.btn {
-    padding: 20px;
-    text-align: center;
-    cursor: pointer;
-    background: #666;
-}
-.btn:hover {
-    color: #333;
-    background:#ccc;
-}
-
 .btn--views {
-    width: 25%;
+    width: 29.3%;
+    margin: 0 2% 4% 2%;
     float: left;
+}
+
+.btn--views--live {
+    width: 96%;
 }
 
 .btn--interact {
