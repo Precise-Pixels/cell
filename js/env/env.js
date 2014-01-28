@@ -3,6 +3,8 @@ var Detector = {
 }
 
 if(Detector.webgl) {
+    document.documentElement.className += 'webgl';
+
     // REQUEST MAHOOSIVE FILE AND UPDATE PROGRESS BAR
     var $progBar = document.getElementById('prog-bar');
 
@@ -41,6 +43,8 @@ if(Detector.webgl) {
 
     function init() {
         $container = document.getElementById('model');
+        $container.innerHTML = '';
+
         getContainerSize();
 
         // scene
