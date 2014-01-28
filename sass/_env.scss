@@ -273,26 +273,25 @@ progress::-moz-progress-bar {
 #info-btn {
     width: 40px;
     height: 40px;
-    position: absolute;
-    top: 20%;
-    right: 8%;
+    position:absolute;
+    top: 15%;
+    left: 5%;
     opacity: 0.5;
-    transition: all .8s;
+    transition: background .3s;
     background: url(../img/icons/ico_info.png); 
     z-index: 4;
-}
-
-#info-btn:hover {
-    opacity: 1;
 }
 
 #info-toggle {
     display: none; /* hide the checkbox */
 }
 
-#info-toggle:checked ~ #info-btn {
+#info-toggle:checked ~ #info-btn { 
+    position: fixed;
     top: 0;
+    left: 0;
     right: 0;
+    opacity: 1;
     background: url(../img/icons/ico_cross.png);   
 }
 
@@ -304,7 +303,8 @@ progress::-moz-progress-bar {
     width: 100%;
     height: 100%;
     padding: 40px;
-    position: absolute;
+    position: fixed;
+    overflow: scroll;
     top: 0;
     left: 0;
     display: none;
