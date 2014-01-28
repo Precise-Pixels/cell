@@ -49,10 +49,5 @@
         <p>Etiam in nisl eu leo aliquam porta. Cras rutrum tellus vehicula hendrerit sodales. Nullam condimentum gravida volutpat. Sed molestie gravida fermentum. In euismod diam eget posuere tempor. Mauris sit amet sem laoreet, consequat sapien eu, aliquam purus. Nunc sit amet lorem ut nunc tempus scelerisque vitae vel ligula.</p>
     </div>
 
-<<<<<<< Updated upstream
-</section>
-
 <div id="more-models"><h2>MORE-ENVS <small>(post-loaded on [tablet&amp;]desktop only)</small></h2></div>
-=======
-    <div id="more-models"><h2>MORE-ENVS <small>(post-loaded on [tablet&amp;]desktop only)</small></h2></div>
->>>>>>> Stashed changes
+
