@@ -17,8 +17,8 @@
     </div>
 </div>
 
-
 <progress id="prog-bar" min=0 max=100 value=0></progress>
+
 <section id="interface">
 
     <div id="model"></div>
@@ -48,4 +48,4 @@
 
 </section>
 
-    <div id="more-models"><h2>MORE-ENVS <small>(post-loaded on [tablet&amp;]desktop only)</small></h2></div>
+<div id="more-models"><h2>MORE-ENVS <small>(post-loaded on [tablet&amp;]desktop only)</small></h2></div>

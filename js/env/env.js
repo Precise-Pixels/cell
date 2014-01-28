@@ -4,7 +4,7 @@ var Detector = {
 
 if(Detector.webgl) {
     // REQUEST MAHOOSIVE FILE AND UPDATE PROGRESS BAR
-    var $progBar = $('#prog-bar');
+    var $progBar = document.getElementById('prog-bar');
 
     var xhr = new XMLHttpRequest();
 
@@ -34,12 +34,12 @@ if(Detector.webgl) {
     };
 
     // SETUP
-    var container, containerX, containerY, scene, camera, renderer, controls;
+    var $container, containerX, containerY, scene, camera, renderer, controls;
 
     function init() {
-        container = document.getElementById('model');
-        containerX = container.clientWidth;
-        containerY = container.clientHeight;
+        $container = document.getElementById('model');
+        containerX = $container.clientWidth;
+        containerY = $container.clientHeight;
 
         // scene
         scene = new THREE.Scene();
@@ -74,7 +74,7 @@ if(Detector.webgl) {
         camera.lookAt(scene.position);
 
         // controls
-        controls = new THREE.OrbitControls(camera, container, '360');
+        controls = new THREE.OrbitControls(camera, $container, '360');
         controls.addEventListener('change', render);
 
         // model & texture
@@ -92,7 +92,7 @@ if(Detector.webgl) {
         // render
         renderer = new THREE.WebGLRenderer( { alpha: true, antialias: true } );
         renderer.setSize(containerX, containerY);
-        container.appendChild(renderer.domElement);
+        $container.appendChild(renderer.domElement);
         window.addEventListener('resize', onWindowResize, false);
     }
 
@@ -166,7 +166,7 @@ if(Detector.webgl) {
         }
 
         function reinstateControls() {
-            controls = new THREE.OrbitControls(camera, container, view);
+            controls = new THREE.OrbitControls(camera, $container, view);
         }
     }
 
