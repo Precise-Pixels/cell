@@ -293,12 +293,11 @@ progress::-moz-progress-bar {
     opacity: 1;
 }
 
-#model-info-toggle:checked ~ #model-info-btn { 
+#model-info-toggle:checked ~ #model-info-btn {
     position: fixed;
     top: 0;
     right: 0;
-    opacity: 1;
-    background: url(../img/icons/ico_cross.png);   
+    background: url(../img/icons/ico_cross.png);
 }
 
 #model-info-toggle:checked ~ #model-desc {
@@ -311,6 +310,22 @@ progress::-moz-progress-bar {
     visibility: visible;
     opacity: 1;
     z-index: 5;
+}
+
+#model-live-close {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    opacity: 0.5;
+    cursor: pointer;
+    text-indent: -9999px;
+    background: url(../img/icons/ico_cross.png);
+}
+
+#model-live-close:hover {
+    opacity: 1;
 }
 
 .full-screen {
