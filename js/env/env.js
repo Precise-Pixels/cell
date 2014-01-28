@@ -41,8 +41,7 @@ if(Detector.webgl) {
 
     function init() {
         $container = document.getElementById('model');
-        containerX = $container.clientWidth;
-        containerY = $container.clientHeight;
+        getContainerSize();
 
         // scene
         scene = new THREE.Scene();
@@ -96,14 +95,6 @@ if(Detector.webgl) {
         renderer = new THREE.WebGLRenderer( { alpha: true, antialias: true } );
         renderer.setSize(containerX, containerY);
         $container.appendChild(renderer.domElement);
-        window.addEventListener('resize', onWindowResize, false);
-    }
-
-    function onWindowResize() {
-        camera.aspect = containerX / containerY;
-        camera.updateProjectionMatrix();
-
-        renderer.setSize(containerX, containerY);
     }
 
     function animate() {
@@ -130,6 +121,8 @@ if(Detector.webgl) {
     vSide.addEventListener( 'click', function(e) { switchView('side', e); }, false );
     iDefault.addEventListener( 'click', function(e) { switchInteraction('default', e); }, false );
     iWebcam.addEventListener( 'click', function(e) { switchInteraction('webcam', e); }, false );
+
+    window.addEventListener('resize', onWindowResize, false);
 
     // FUNCTIONS
     function switchView(view, e) {
@@ -188,5 +181,19 @@ if(Detector.webgl) {
                 iWebcam.className += ' btn--selected';
                 break;
         }
+    }
+
+    function onWindowResize() {
+        getContainerSize();
+
+        camera.aspect = containerX / containerY;
+        camera.updateProjectionMatrix();
+
+        renderer.setSize(containerX, containerY);
+    }
+
+    function getContainerSize() {
+        containerX = $container.clientWidth;
+        containerY = $container.clientHeight;
     }
 }
