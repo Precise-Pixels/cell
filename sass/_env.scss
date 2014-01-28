@@ -174,22 +174,22 @@ progress::-moz-progress-bar {
     bottom: 20px;
 }
 
-#menu-toggle {
+#model-menu-toggle {
     display: none; /* hide the checkbox */
 }
 
-#menu-toggle:checked ~ #menu-btn {
+#model-menu-toggle:checked ~ #menu-btn {
     opacity: 1;
     background: url(../img/icons/ico_views_menu.png);   
 }
 
-#menu-toggle:checked ~ #model-views {
+#model-menu-toggle:checked ~ #model-views {
     width:100%;
     height: 160px;
     opacity: 1;
 }
 
-#menu-btn {
+#model-menu-btn {
     width: 80px;
     height: auto;
     overflow: hidden;  
@@ -203,7 +203,7 @@ progress::-moz-progress-bar {
     z-index: 2;
 }
 
-#menu-btn:hover {
+#model-menu-btn:hover {
     opacity: 1;
 }
 
@@ -281,32 +281,35 @@ progress::-moz-progress-bar {
     cursor:default;
 }
 
-#info-btn {
+#menu-info-btn {
     width: 40px;
     height: 40px;
     position:absolute;
-    top: 15%;
-    left: 5%;
+    top: 20px;
+    right: 20px;
     opacity: 0.5;
     transition: background .3s;
     background: url(../img/icons/ico_info.png); 
     z-index: 4;
 }
 
-#info-toggle {
+#menu-info-btn:hover {
+    opacity: 1;
+}
+
+#menu-info-toggle {
     display: none; /* hide the checkbox */
 }
 
-#info-toggle:checked ~ #info-btn { 
+#menu-info-toggle:checked ~ #menu-info-btn { 
     position: fixed;
     top: 0;
-    left: 0;
     right: 0;
     opacity: 1;
     background: url(../img/icons/ico_cross.png);   
 }
 
-#info-toggle:checked ~ #model-desc {
+#menu-info-toggle:checked ~ #model-desc {
     display: block;
 }
 
@@ -315,7 +318,8 @@ progress::-moz-progress-bar {
     height: 100%;
     padding: 40px;
     position: fixed;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: none;
     top: 0;
     left: 0;
     display: none;

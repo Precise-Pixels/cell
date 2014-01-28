@@ -10,7 +10,7 @@
                         <p><a href="">Username</a> / <a href="#">E0123456</a></p>
                     </div>
                 </div>
-                <div id="header-right">?</div>
+                <div id="header-right"></div>
         </div>
     </div>
 </div>
@@ -27,8 +27,8 @@
             <div id="webcam" class="btn btn--interact"><img src="/img/icons/ico_webcam.png" alt="Use Webcam"></div>
         </div>
         <div id="model-controls">
-            <input type="checkbox" id="menu-toggle"/>
-            <label for="menu-toggle" id="menu-btn" class="btn--menu"></label>
+            <input type="checkbox" id="model-menu-toggle"/>
+            <label for="model-menu-toggle" id="model-menu-btn" class="btn--menu"></label>
             <div id="model-views">
                 <p>Views</p>
                 <div id="360" class="btn btn--views btn--selected">360</div>
@@ -37,9 +37,10 @@
                 <div id="live" class="btn btn--views btn--views--live">LIVE</div>
             </div>
         </div>
-        <input type="checkbox" id="info-toggle"/>
-        <label for="info-toggle" id="info-btn"></label>
+        <input type="checkbox" id="menu-info-toggle"/>
+        <label for="menu-info-toggle" id="menu-info-btn"></label>
         <div id="model-desc">
+            <h1>Environment Name</h1>
             <p>Maecenas aliquam a ligula et tincidunt. Suspendisse tempor nisi enim, accumsan interdum lacus semper sed. Phasellus ornare in ante gravida gravida. Duis et gravida nisi. Vestibulum semper bibendum rutrum. Ut porta ut purus non ultricies. Vestibulum sed risus egestas, ultrices turpis ac, pellentesque risus.</p>
             <p>Etiam in nisl eu leo aliquam porta. Cras rutrum tellus vehicula hendrerit sodales. Nullam condimentum gravida volutpat. Sed molestie gravida fermentum. In euismod diam eget posuere tempor. Mauris sit amet sem laoreet, consequat sapien eu, aliquam purus. Nunc sit amet lorem ut nunc tempus scelerisque vitae vel ligula.</p>
             <p>Maecenas aliquam a ligula et tincidunt. Suspendisse tempor nisi enim, accumsan interdum lacus semper sed. Phasellus ornare in ante gravida gravida. Duis et gravida nisi. Vestibulum semper bibendum rutrum. Ut porta ut purus non ultricies. Vestibulum sed risus egestas, ultrices turpis ac, pellentesque risus.</p>
