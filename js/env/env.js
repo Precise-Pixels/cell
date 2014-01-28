@@ -118,11 +118,12 @@ if(Detector.webgl) {
     }
 
     // EVENTS
-    var v360     = document.getElementById('360');
-    var vTop     = document.getElementById('top');
-    var vSide    = document.getElementById('side');
-    var iDefault = document.getElementById('default');
-    var iWebcam  = document.getElementById('webcam');
+    var vMenuCheckbox = document.getElementById('menu-toggle');
+    var v360          = document.getElementById('360');
+    var vTop          = document.getElementById('top');
+    var vSide         = document.getElementById('side');
+    var iDefault      = document.getElementById('default');
+    var iWebcam       = document.getElementById('webcam');
 
     v360.addEventListener( 'click', function(e) { switchView('360', e); }, false );
     vTop.addEventListener( 'click', function(e) { switchView('top', e); }, false );
@@ -134,9 +135,10 @@ if(Detector.webgl) {
     function switchView(view, e) {
         if (e.target.className.match(/btn--selected/)) { return false; }
 
-        controls.removeAllEventListeners();
-
+        vMenuCheckbox.checked = false;
         v360.className = vTop.className = vSide.className = 'btn btn--views';
+
+        controls.removeAllEventListeners();
 
         switch(view) {
             case '360':
