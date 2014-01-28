@@ -117,12 +117,16 @@ if(Detector.webgl) {
     var v360          = document.getElementById('360');
     var vTop          = document.getElementById('top');
     var vSide         = document.getElementById('side');
+    var vLive         = document.getElementById('live');
+    var vLiveClose    = document.getElementById('model-live-close');
     var iDefault      = document.getElementById('default');
     var iWebcam       = document.getElementById('webcam');
 
     v360.addEventListener( 'click', function(e) { switchView('360', e); }, false );
     vTop.addEventListener( 'click', function(e) { switchView('top', e); }, false );
     vSide.addEventListener( 'click', function(e) { switchView('side', e); }, false );
+    vLive.addEventListener( 'click', function(e) { toggleLiveView('open'); }, false );
+    vLiveClose.addEventListener( 'click', function(e) { toggleLiveView('close'); }, false );
     iDefault.addEventListener( 'click', function(e) { switchInteraction('default', e); }, false );
     iWebcam.addEventListener( 'click', function(e) { switchInteraction('webcam', e); }, false );
 
@@ -184,6 +188,14 @@ if(Detector.webgl) {
             case 'webcam':
                 iWebcam.className += ' btn--selected';
                 break;
+        }
+    }
+
+    function toggleLiveView(toggle) {
+        if(toggle == 'open') {
+            document.body.className += ' env--live';
+        } else {
+            document.body.className = document.body.className.replace(' env--live', '');
         }
     }
 

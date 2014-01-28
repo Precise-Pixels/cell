@@ -174,10 +174,6 @@ progress::-moz-progress-bar {
     bottom: 20px;
 }
 
-#menu-toggle {
-    display: none; /* hide the checkbox */
-}
-
 #menu-toggle:checked ~ #menu-btn {
     opacity: 1;
     background: url(../img/icons/ico_views_menu.png);   
@@ -293,10 +289,6 @@ progress::-moz-progress-bar {
     z-index: 4;
 }
 
-#info-toggle {
-    display: none; /* hide the checkbox */
-}
-
 #info-toggle:checked ~ #info-btn { 
     position: fixed;
     top: 0;
@@ -310,12 +302,16 @@ progress::-moz-progress-bar {
     display: block;
 }
 
-#model-desc {
+.env--live #model-live {
+    display: block;
+}
+
+.full-screen {
     width: 100%;
     height: 100%;
     padding: 40px;
     position: fixed;
-    overflow: scroll;
+    overflow-y: auto;
     top: 0;
     left: 0;
     display: none;
@@ -323,6 +319,9 @@ progress::-moz-progress-bar {
     z-index: 3;
 }
 
+.checkbox-hack {
+    display: none;
+}
 
 #more-models {
     display: none;
