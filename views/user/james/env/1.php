@@ -18,7 +18,7 @@
 <progress id="prog-bar" min=0 max=100 value=0></progress>
 
 <section id="interface">
-    <div id="model"><img src="/3d/models/city-still.jpg" alt="Environment"/></div>
+    <div id="model"><img src="/3d/models/mountain.jpg" alt="Environment"/></div>
 
     <div id="interface-elements">
         <div id="model-interaction">
