@@ -126,6 +126,9 @@ progress::-moz-progress-bar {
 
 #model img {
     width: 100%;
+    position: absolute;
+    top: 50%;
+    margin-top: -25%;
 }
 
 #model-interaction {
