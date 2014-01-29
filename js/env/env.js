@@ -93,7 +93,7 @@ if(Detector.webgl) {
             scene.add( object );
 
         });
-        loader.load( '/3d/models/city.obj', '/3d/materials/city.mtl' );
+        loader.load( '/3d/models/mountain.obj', '/3d/materials/mountain.mtl' );
 
         // render
         renderer = new THREE.WebGLRenderer( { alpha: true, antialias: true } );
