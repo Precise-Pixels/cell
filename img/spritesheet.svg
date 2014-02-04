@@ -8,6 +8,9 @@
 	<rect x="9.375" y="7.5" display="inline" fill="#75F9FC" width="31.25" height="25"/>
 </g>
 <g id="Layer_1">
+	<rect x="12.375" y="17.161" fill="#FFFFFF" width="25" height="4.803"/>
+	<rect x="12.375" y="24.822" fill="#FFFFFF" width="25" height="4.803"/>
+	<rect x="12.375" y="9.5" fill="#FFFFFF" width="25" height="4.803"/>
 	<polygon fill="#FFFFFF" points="58.464,8.226 55,14.226 51.536,8.226 	"/>
 	<g>
 		<rect x="9.85" y="60.02" fill="none" width="75" height="65"/>
@@ -17,9 +20,6 @@
 			<ellipse fill="#FFFFFF" cx="47.35" cy="111.852" rx="36.334" ry="10.667"/>
 		</g>
 	</g>
-	<rect x="9.375" y="7.665" fill="#FFFFFF" width="31.25" height="7.122"/>
-	<rect x="9.375" y="25.213" fill="#FFFFFF" width="31.25" height="7.122"/>
-	<rect x="9.375" y="16.439" fill="#FFFFFF" width="31.25" height="7.121"/>
 	<g>
 		<rect x="235.339" y="62.425" fill="none" width="65" height="77"/>
 		<g>
