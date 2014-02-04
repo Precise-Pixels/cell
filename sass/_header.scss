@@ -9,12 +9,12 @@ header {
     width: 40px;
     height: 40px;
     position: absolute;
-    background: url(/img/spritesheet.svg);
+    background: url(/img/spritesheet.svg) -5px 0;
     transition: all .3s;  
 }
 
 #nav-btn:hover {
-    background: $lgrey url(/img/spritesheet.svg);
+    background: $lgrey url(/img/spritesheet.svg) -5px 0;
 }
 
 #user-message {
@@ -52,12 +52,12 @@ header {
     position: absolute;
     top: 40px;
     right: 60px;
-    background: $dgrey url(/img/spritesheet.svg) -40px 1px;
+    background: $dgrey url(/img/spritesheet.svg) -45px -1px;
     transition: all .3s ease; 
 }
 
 #user-menu:hover > #user-arrow{
-    background: $lgrey url(/img/spritesheet.svg) -40px 1px;
+    background: $lgrey url(/img/spritesheet.svg) -45px -1px;
 }
 
 #user-menu:hover > #user-pic {

@@ -3,7 +3,6 @@
         <div id="header-inner">
                 <div id="header-left">
                     <div id="header-icon">
-                        <img src="/img/icons/ico_env.png" alt="">
                     </div>
                     <div id="header-title">
                         <h1>Environment Name</h1>
@@ -23,8 +22,8 @@
     <div id="interface-elements">
         <div id="model-interaction">
             <p>Interact</p>
-            <div id="default" class="btn btn--interact btn--selected"><img src="/img/icons/ico_touch.png" alt="Use Touch"></div>
-            <div id="webcam" class="btn btn--interact"><img src="/img/icons/ico_webcam.png" alt="Use Webcam"></div>
+            <div id="default" class="btn btn--interact btn--selected"></div>
+            <div id="webcam" class="btn btn--interact"></div>
         </div>
         <div id="model-controls">
             <input type="checkbox" id="model-menu-toggle" class="checkbox-hack"/>

@@ -4,14 +4,70 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1200px"
 	 height="400px" viewBox="0 0 1200 400" enable-background="new 0 0 1200 400" xml:space="preserve">
 <g id="Layer_2" display="none">
-	<rect display="inline" fill="#BA3A3A" width="40" height="40"/>
-	<rect x="7.5" y="10" display="inline" fill="#75F9FC" width="25" height="20"/>
-	<rect x="40" display="inline" fill="#BA3A3A" width="20" height="20"/>
+	<rect display="inline" fill="#BA3A3A" width="50" height="40"/>
+	<rect x="9.375" y="7.5" display="inline" fill="#75F9FC" width="31.25" height="25"/>
 </g>
 <g id="Layer_1">
-	<rect x="7.5" y="10" fill="#FFFFFF" width="25" height="5.773"/>
-	<rect x="7.5" y="24.227" fill="#FFFFFF" width="25" height="5.773"/>
-	<rect x="7.5" y="17.113" fill="#FFFFFF" width="25" height="5.773"/>
-	<polyline fill="#FFFFFF" points="54,7.75 46,7.75 50,12.25 	"/>
+	<polygon fill="#FFFFFF" points="58.464,8.226 55,14.226 51.536,8.226 	"/>
+	<g>
+		<rect x="9.85" y="60.02" fill="none" width="75" height="65"/>
+		<g>
+			<polyline fill="#FFFFFF" points="19.85,105.852 33.184,78.518 36.85,87.852 45.225,71.521 48.35,78.518 55.184,62.521 
+				75.517,105.852 			"/>
+			<ellipse fill="#FFFFFF" cx="47.35" cy="111.852" rx="36.334" ry="10.667"/>
+		</g>
+	</g>
+	<rect x="9.375" y="7.665" fill="#FFFFFF" width="31.25" height="7.122"/>
+	<rect x="9.375" y="25.213" fill="#FFFFFF" width="31.25" height="7.122"/>
+	<rect x="9.375" y="16.439" fill="#FFFFFF" width="31.25" height="7.121"/>
+	<g>
+		<rect x="235.339" y="62.425" fill="none" width="65" height="77"/>
+		<g>
+			<ellipse fill="#FFFFFF" cx="269.256" cy="130.79" rx="16.958" ry="4.146"/>
+			<circle fill="none" stroke="#FFFFFF" stroke-width="9" stroke-miterlimit="10" cx="268.256" cy="94.02" r="23.583"/>
+			<g>
+				<g>
+					<path fill="#FFFFFF" d="M268.256,82.853c-6.167,0-11.167,4.999-11.167,11.167c0,6.167,5,11.166,11.167,11.166
+						c6.167,0,11.167-4.999,11.167-11.166C279.423,87.852,274.423,82.853,268.256,82.853z M266.923,92.52h-5.5
+						c0,0,0.002-5.5,5.5-5.5V92.52z"/>
+				</g>
+			</g>
+			<polyline fill="#FFFFFF" points="295.339,133.936 243.173,133.936 243.173,132.686 255.923,123.353 261.756,123.353 
+				261.756,119.353 274.923,119.353 274.923,123.27 282.256,123.27 295.339,132.353 			"/>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 9.375 50.6675)" font-family="'MyriadPro-Regular'" font-size="12">Environment Page</text>
+	<g>
+		<rect x="170.338" y="64.592" fill="none" width="65" height="77"/>
+		<path fill="#FFFFFF" d="M183.647,107.325c-0.833-5.999-0.5-12.746-1.667-13.246s-2.5-2.168-0.833-2.5
+			c1.667-0.334,5.7,1.082,6,5.164c0.3,4.083,1.191,6.697,2.503,8.002s1.193-0.594,1.497-2.521s2-12.813,2.667-15.813
+			s2.367-15.081,3-16.667c0.633-1.585,2.361-1.861,2.833-1.833s2.358-0.69,2.358,4.476s-1.358,14.357-1.358,15.691
+			c0,1.333-0.216,5.418-0.167,6.333s1.831,3.001,2.666,0.833c0.834-2.166,0.668-6,1.668-7.5s5.667-3.166,6.333,0.334
+			s0.284,3.086,0,4.666c-0.284,1.581,2.333-0.832,3.5-0.5c1.167,0.334,2.962,2.977,2.833,4.498
+			c-0.129,1.523-1.812,4.336,0.011,3.502c1.823-0.833,2.49-2,4.156,0s2.667,5.5,3,6.5s0.667,4.334,0.667,6.167s-3.167,13.5-7,17.5
+			s-7.833,7.667-12.5,7.667s-4.833,1-7.667-1.334c-2.833-2.333-12.833-17.67-13.333-20.002
+			C184.313,114.412,184.48,113.324,183.647,107.325z"/>
+	</g>
+	<g id="Cross">
+		
+			<rect x="140.872" y="64.258" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 190.4518 238.9618)" fill="#FFFFFF" width="7.682" height="31.563"/>
+		
+			<rect x="140.872" y="64.506" transform="matrix(0.707 -0.7072 0.7072 0.707 -14.3815 125.8575)" fill="#FFFFFF" width="7.682" height="31.562"/>
+		<rect x="124.85" y="60.163" fill="none" width="40" height="40"/>
+	</g>
+	<g id="i">
+		<rect x="102.013" y="77.153" fill="#FFFFFF" width="5.541" height="14.178"/>
+		<ellipse fill="#FFFFFF" cx="104.784" cy="73.122" rx="3.017" ry="2.906"/>
+		<circle fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="104.85" cy="81.04" r="13.614"/>
+		<rect x="84.85" y="60.04" fill="none" width="40" height="40"/>
+	</g>
+	<g id="Env._Menu">
+		<rect x="84.85" y="100.179" fill="none" width="82" height="42"/>
+		<rect x="88.6" y="103.092" fill="#FFFFFF" width="23" height="17.341"/>
+		<rect x="114.434" y="103.092" fill="#FFFFFF" width="23" height="17.341"/>
+		<rect x="140.1" y="103.092" fill="#FFFFFF" width="23" height="17.341"/>
+		<rect x="88.6" y="123.254" fill="#FFFFFF" width="74.5" height="16.012"/>
+		<path fill="#FFFFFF" d="M126.229,118.679"/>
+	</g>
 </g>
 </svg>
