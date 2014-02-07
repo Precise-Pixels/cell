@@ -211,8 +211,8 @@ progress::-moz-progress-bar {
     width: 100%;
     height: 0;
     overflow: hidden;
-    margin: 0 0 18px 0;
-    padding: 10px 10px 40px 10px;
+    margin-bottom: 18px;
+    padding: 10px 10px 40px;
     opacity: 0;
     text-align: center;
     visibility: hidden;
@@ -249,7 +249,7 @@ progress::-moz-progress-bar {
 .btn--views {
     width: 29.3%;
     height: 40px;
-    margin: 0 2% 4% 2%;
+    margin: 0 2% 4%;
     padding:0;
     float: left;
     line-height: 40px;
@@ -356,16 +356,19 @@ progress::-moz-progress-bar {
     display: none;
 }
 
+@media ($min_bp_a) {
+    // show all View buttons
+}
+
 @media ($min_bp_c) {
 
     .env {
-
         #header {
             height: 140px;
         }
 
         #header-inner {
-            padding: 20px 0 0 0;
+            padding-top: 20px;
         }
 
         #header-icon {
@@ -373,11 +376,74 @@ progress::-moz-progress-bar {
         }
 
         #header-title {
-            margin: 0 0 0 10px;
+            margin-left: 10px;
         }
 
         #interface {
             top: 180px;
+        }
+    }
+
+    #model-menu-toggle,
+    #model-menu-btn,
+    #model-info-toggle,
+    #model-info-btn {
+        display: none;
+    }
+
+    #model-interaction {
+        width: 200px;
+        height: 90px;
+        position: absolute;
+        top: 20px;
+        right: 240px;
+        text-align: center;
+
+        p {
+            display: block;
+        }
+    }
+
+    #default,
+    #webcam {
+        width: 50%;
+        height: auto;
+        position: static;
+        float: left;
+    }
+
+    #model-controls {
+        width: 200px;
+        margin: 0;
+        position: absolute;
+        top: 20px;
+        left: auto;
+        right: 20px;
+        bottom: auto;
+    }
+
+    #model-views {
+        width: 100%;
+        height: 100%;
+        float: right;
+        padding-bottom: 10px;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    #model-desc {
+        width: 350px;
+        height: 300px;
+        padding: 0;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        visibility: visible;
+        opacity: 1;
+        background: none;
+
+        h1 {
+            display: none;
         }
     }
 
