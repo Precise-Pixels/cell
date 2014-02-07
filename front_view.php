@@ -1,3 +1,5 @@
+<?php require_once('includes/session.php'); ?>
+
 <!DOCTYPE HTML>
 <html>
 <head>
