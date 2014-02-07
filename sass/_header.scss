@@ -14,6 +14,7 @@ header {
     width: 40px;
     height: 40px;
     position: absolute;
+    cursor: pointer;
     background: url(/img/spritesheet.svg) -5px 0;
     transition: all .3s;
 }
@@ -37,6 +38,7 @@ header {
     position: absolute;
     top: 0;
     right: 0;
+    cursor: pointer;
 }
 
 #user-arrow {
