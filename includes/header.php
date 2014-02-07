@@ -9,7 +9,7 @@
         <a href="/press">Press</a>
     </nav>
 
-    <div id="user-message"><?= (isset($_SESSION['username']) ? 'Welcome back, ' . ucfirst($_SESSION['username']) : 'CTA to sign up'); ?></div>
+    <div id="user-message"><?= (isset($_SESSION['username']) ? 'Welcome back, ' . ucfirst($_SESSION['username']) : 'Sign in'); ?></div>
 
     <input type="checkbox" id="user-nav-toggle" class="checkbox-hack"/>
     <label for="user-nav-toggle" id="user-nav-btn" class="btn--menu">
@@ -20,9 +20,9 @@
         <?php if(isset($_SESSION['status']) && $_SESSION['status'] == 'loggedin'): ?>
         <a href="/user/<?= $_SESSION['username']; ?>">MyCell</a>
         <a href="/user/<?= $_SESSION['username']; ?>/env/new">Clone a new environment</a>
-        <a href="/logout?r=<?= $_SERVER['REQUEST_URI']; ?>">Logout</a>
+        <a href="/signout?r=<?= $_SERVER['REQUEST_URI']; ?>">Sign out</a>
         <?php else: ?>
-        <a href="/login">Login / Register</a>
+        <a href="/signin">Sign in / Register</a>
         <?php endif; ?>
     </nav>
 </header>

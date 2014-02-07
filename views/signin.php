@@ -12,12 +12,12 @@ require_once('php/LoginSystem.php');
 $login_system = new LoginSystem();
 ?>
 
-<h1>LOGIN</h1>
+<h1>SIGN IN</h1>
 
 <?php
-if(!empty($_POST['login-submit'])) {
+if(!empty($_POST['signin-submit'])) {
     if(!empty($_POST['email']) && !empty($_POST['password'])) {
-        $response = $login_system->login($_POST['email'], $_POST['password']);
+        $response = $login_system->signin($_POST['email'], $_POST['password']);
         echo $response;
     } else {
         echo $wrap_start . 'Please enter your email and password.' . $wrap_end;
@@ -25,7 +25,7 @@ if(!empty($_POST['login-submit'])) {
 }
 ?>
 
-<form method="post" id="login-form">
+<form method="post" id="signin-form">
     <table>
         <tr>
             <td><label for="email">Email:</label></td>
@@ -39,7 +39,7 @@ if(!empty($_POST['login-submit'])) {
     
         <tr>
             <td></td>
-            <td><input type="submit" name="login-submit" value="Login"/></td>
+            <td><input type="submit" name="signin-submit" value="Sign in"/></td>
         </tr>
     </table>
 </form>
