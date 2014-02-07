@@ -9,7 +9,7 @@
         <a href="/press">Press</a>
     </nav>
 
-    <div id="user-message">Welcome back, James</div>
+    <div id="user-message"><?= (isset($_SESSION['username']) ? 'Welcome back, ' . ucfirst($_SESSION['username']) : 'CTA to sign up'); ?></div>
 
     <input type="checkbox" id="user-nav-toggle" class="checkbox-hack"/>
     <label for="user-nav-toggle" id="user-nav-btn" class="btn--menu">
