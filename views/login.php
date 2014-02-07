@@ -4,7 +4,7 @@ if(isset($_SESSION['status'])) {
         echo 'You must be logged in to view this page.';
         unset($_SESSION['status']);
     } elseif($_SESSION['status'] == 'loggedin') {
-        header('location: /user/james');
+        header("location: /user/{$_SESSION['username']}");
     }
 }
 
