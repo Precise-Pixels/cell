@@ -21,7 +21,7 @@ class LoginSystem {
                     $_SESSION['status']     = 'loggedin';
                     $_SESSION['user_id']    = $row->id;
                     $_SESSION['user_email'] = $email;
-                    header('location: /');
+                    header('location: /user/james');
                 } else {
                     return $this->wrap_start . 'Wrong email and/or password.' . $this->wrap_end;
                 }
@@ -37,7 +37,7 @@ class LoginSystem {
         unset($_SESSION['status']);
         unset($_SESSION['user_id']);
         unset($_SESSION['user_email']);
-        header('location: /');
+        (isset($_GET['r']) ? header("location:" . $_GET['r']) : header('location: /'));
     }
 
     function create_user($email, $password) {
