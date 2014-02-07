@@ -18,8 +18,9 @@ class LoginSystem {
         if($row) {
             if($row->valid == 1) {
                 if($row->password === $password_e) {
-                    $_SESSION['status']   = 'loggedin';
-                    $_SESSION['username'] = $row->username;
+                    $_SESSION['status']     = 'loggedin';
+                    $_SESSION['user-email'] = $email;
+                    $_SESSION['username']   = $row->username;
 
                     header("location: /user/{$_SESSION['username']}");
 
@@ -36,6 +37,7 @@ class LoginSystem {
 
     function logout() {
         unset($_SESSION['status']);
+        unset($_SESSION['user-email']);
         unset($_SESSION['username']);
         (isset($_GET['r']) ? header("location:" . $_GET['r']) : header('location: /'));
     }

@@ -14,7 +14,7 @@
     <input type="checkbox" id="user-nav-toggle" class="checkbox-hack"/>
     <label for="user-nav-toggle" id="user-nav-btn" class="btn--menu">
         <div id="user-arrow"></div>
-        <div id="user-pic"></div>
+        <img id="user-pic" src="http://www.gravatar.com/avatar/<?= md5(strtolower(trim($_SESSION['user-email']))); ?>?d=mm&amp;s=60"/>
     </label>
     <nav id="user-nav">
         <?php if(isset($_SESSION['status']) && $_SESSION['status'] == 'loggedin'): ?>
