@@ -1,6 +1,5 @@
-$grey: #CCD;
+@import 'breakpoints';
+@import 'colours';
 
-body {
-    background: $grey;
-    transition: all 1s;
-}
+@import 'base';
+@import 'header';
