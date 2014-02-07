@@ -1,9 +1,9 @@
 <?php
 if(isset($_SESSION['status'])) {
-    if($_SESSION['status'] == 'notloggedin') {
+    if($_SESSION['status'] == 'notsignedin') {
         echo 'You must be logged in to view this page.';
         unset($_SESSION['status']);
-    } elseif($_SESSION['status'] == 'loggedin') {
+    } elseif($_SESSION['status'] == 'signedin') {
         header("location: /user/{$_SESSION['username']}");
     }
 }

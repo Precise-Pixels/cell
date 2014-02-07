@@ -18,7 +18,7 @@ class LoginSystem {
         if($row) {
             if($row->valid == 1) {
                 if($row->password === $password_e) {
-                    $_SESSION['status']     = 'loggedin';
+                    $_SESSION['status']     = 'signedin';
                     $_SESSION['user-email'] = $email;
                     $_SESSION['username']   = $row->username;
 

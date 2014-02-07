@@ -17,7 +17,7 @@
         <img id="user-pic" src="http://www.gravatar.com/avatar/<?= (isset($_SESSION['user-email']) ? md5(strtolower(trim($_SESSION['user-email']))) : 1); ?>?d=mm&amp;s=60"/>
     </label>
     <nav id="user-nav">
-        <?php if(isset($_SESSION['status']) && $_SESSION['status'] == 'loggedin'): ?>
+        <?php if(isset($_SESSION['status']) && $_SESSION['status'] == 'signedin'): ?>
         <a href="/user/<?= $_SESSION['username']; ?>">MyCell</a>
         <a href="/user/<?= $_SESSION['username']; ?>/env/new">Clone a new environment</a>
         <a href="/signout?r=<?= $_SERVER['REQUEST_URI']; ?>">Sign out</a>
