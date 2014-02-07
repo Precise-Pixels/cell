@@ -4,24 +4,26 @@ class LoginSystem {
     private $wrap_start = '<p class="full error">';
     private $wrap_end   = '</p>';
 
-    function login($email, $password) {
+    function signin($email, $password) {
         require_once('db.php');
         require_once('php/Encryption.php');
 
         $encryption = new Encryption;
         $password_e = $encryption->encrypt($password);
 
-        $STH = $DBH->query("SELECT id, password, valid FROM users WHERE email='$email'");
+        $STH = $DBH->query("SELECT id, password, valid, username FROM users WHERE email='$email'");
         $STH->setFetchMode(PDO::FETCH_OBJ);
         $row = $STH->fetch();
 
         if($row) {
             if($row->valid == 1) {
                 if($row->password === $password_e) {
-                    $_SESSION['status']     = 'loggedin';
-                    $_SESSION['user_id']    = $row->id;
-                    $_SESSION['user_email'] = $email;
-                    header('location: /');
+                    $_SESSION['status']     = 'signedin';
+                    $_SESSION['user-email'] = $email;
+                    $_SESSION['username']   = $row->username;
+
+                    header("location: /user/{$_SESSION['username']}");
+
                 } else {
                     return $this->wrap_start . 'Wrong email and/or password.' . $this->wrap_end;
                 }
@@ -33,11 +35,11 @@ class LoginSystem {
         }
     }
 
-    function logout() {
+    function signout() {
         unset($_SESSION['status']);
-        unset($_SESSION['user_id']);
-        unset($_SESSION['user_email']);
-        header('location: /');
+        unset($_SESSION['user-email']);
+        unset($_SESSION['username']);
+        (isset($_GET['r']) ? header("location:" . $_GET['r']) : header('location: /'));
     }
 
     function create_user($email, $password) {
@@ -138,7 +140,7 @@ class LoginSystem {
             $STH = $DBH->prepare("UPDATE users SET password='$password_e', reset_rand='$new_rand' WHERE email='$email'");
             $STH->execute();
 
-            return $this->wrap_start . 'Password successfully reset. Please <a href="login">login</a>.' . $this->wrap_end;
+            return $this->wrap_start . 'Password successfully reset. Please <a href="signin">sign in</a>.' . $this->wrap_end;
         } else {
             return $this->wrap_start . 'This link has expired. Please <a href="forgotten-password">request a new password reset link</a>.' . $this->wrap_end;
         }
