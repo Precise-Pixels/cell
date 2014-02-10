@@ -61,7 +61,10 @@ module.exports = function(grunt) {
                 files: [
                     'sass/*.scss'
                 ],
-                tasks: ['sass:dev', 'autoprefixer']
+                tasks: ['sass:dev', 'autoprefixer'],
+                options: {
+                    spawn: false
+                }
             }
         }
     });
