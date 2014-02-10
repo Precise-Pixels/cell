@@ -11,5 +11,6 @@
 <link rel="shortcut icon" href="/img/favicon.ico"/>
 
 <!--[if lt IE 9]>
-<script src="js/respond.min.js"></script>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<script src="/js/respond.min.js"></script>
 <![endif]-->

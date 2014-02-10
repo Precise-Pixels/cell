@@ -1,6 +1,24 @@
-$lgrey: #666;
+$lgrey: #EEE;
+$mgrey: #666;
 $dgrey: #333;
 
 $lblue: #9CF;
-$mblue: #69C;
+$mblue: #369;
 $dblue: #285989;
+
+$red: #7E0B08;
+
+.lgrey {
+    color: #000;
+    background: $lgrey;
+}
+
+.dgrey {
+    color: $lgrey;
+    background: $dgrey;
+}
+
+.mblue {
+    color: #FFF;
+    background: $mblue;
+}

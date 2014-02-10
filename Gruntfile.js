@@ -59,7 +59,7 @@ module.exports = function(grunt) {
         watch: {
             scripts: {
                 files: [
-                    'sass/*.scss'
+                    'sass/**/*'
                 ],
                 tasks: ['sass:dev', 'autoprefixer']
             }

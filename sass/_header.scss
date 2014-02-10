@@ -1,7 +1,6 @@
 header {
     height: 40px;
     position: relative;
-    background: $dgrey;
     z-index: 2;
 }
 
@@ -16,11 +15,11 @@ header {
     position: absolute;
     cursor: pointer;
     background: url(/img/spritesheet.svg) -5px 0;
-    transition: all .3s;
+    transition: background-color .3s;
 }
 
 #site-nav-btn:hover {
-    background-color: $lgrey;
+    background-color: $mgrey;
 }
 
 #user-message {
@@ -48,7 +47,7 @@ header {
     top: 40px;
     right: 60px;
     background: $dgrey url(/img/spritesheet.svg) -45px -1px;
-    transition: all .3s;
+    transition: background-color .3s;
 }
 
 #user-pic {
@@ -62,7 +61,7 @@ header {
 }
 
 #user-nav-btn:hover > #user-arrow {
-    background-color: $lgrey;
+    background-color: $mgrey;
 }
 
 #user-nav-btn:hover > #user-pic {

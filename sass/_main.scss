@@ -1,0 +1,22 @@
+main {
+    position: relative;
+    z-index: 1;
+}
+
+main header {
+    height: 250px;
+    display: table;
+}
+
+.section-padding {
+    overflow: hidden;
+    padding: 60px 45px;
+}
+
+.section-content-wrapper {
+    overflow: hidden;
+}
+
+.section--spacer {
+    margin-bottom: 100px;
+}
