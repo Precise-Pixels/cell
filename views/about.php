@@ -15,6 +15,13 @@
                 <p class="half-margin">Integer sit amet nibh sit amet lectus luctus placerat. Suspendisse eget arcu tortor. Fusce pretium sodales nisl et tempus. Curabitur pretium pellentesque libero. Curabitur pretium malesuada purus, id posuere neque. Donec ante metus, rutrum id lacus ut, ultricies aliquam magna.</p>
             </div>
         </div>
+
+    <section>
+        <div class="section-padding align-centre lgrey">
+            <h1>COMPANY ETHOS</h1>
+        </div>
+    </section>
+
     </section>
 
     <section>
