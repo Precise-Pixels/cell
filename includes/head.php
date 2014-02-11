@@ -8,8 +8,8 @@
 <?php else: ?>
     <link rel="stylesheet" type="text/css" href="/build/styles.min.css"/>
 <?php endif; ?>
-<link rel="shortcut icon" href="/img/favicon.ico"/>
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900' rel='stylesheet' type='text/css'>
+<link rel="shortcut icon" href="/img/favicon.ico"/>
 
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
