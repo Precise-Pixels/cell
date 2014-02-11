@@ -35,12 +35,12 @@ a {
 }
 
 a:hover {
-    color: #FFF;
+    color: $lgrey;
 }
 
 .warn {
     padding: 10px;
-    color: #FFF;
+    color: $lgrey;
     background: $red;
 }
 
