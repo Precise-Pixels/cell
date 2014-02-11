@@ -8,8 +8,11 @@ main header {
     display: table;
 }
 
-.section-padding {
+section > div {
     overflow: hidden;
+}
+
+.section-padding {
     padding: 40px 25px;
 }
 
