@@ -3,7 +3,7 @@
     <header class="section-padding align-centre dgrey">
         <hgroup class="align-vertical">
             <h1>TECHNOLOGY</h1>
-            <h2>IN DEPTH: QuantumCell&trade; CLONE CUBE</h2>
+            <h2>QuantumCell&trade; CLONE CUBE</h2>
         </hgroup>
     </header>
 
