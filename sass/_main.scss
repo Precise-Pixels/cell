@@ -10,7 +10,7 @@ main header {
 
 .section-padding {
     overflow: hidden;
-    padding: 60px 45px;
+    padding: 40px 25px;
 }
 
 .section-content-wrapper {
@@ -19,4 +19,10 @@ main header {
 
 .section--spacer {
     margin-bottom: 100px;
+}
+
+@media ($min-bp-b) {
+    .section-padding {
+        padding: 60px 45px;
+    }
 }
