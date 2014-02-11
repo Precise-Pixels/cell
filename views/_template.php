@@ -3,32 +3,32 @@
     <!-- Generous spacing between major sections-->
     <header class="section-padding align-centre dgrey">
         <hgroup class="align-vertical">
-            <h1>Page Title</h1>
-            <h2>Optional subtitle</h2>
+            <h1>PAGE TITLE</h1>
+            <h2>OPTIONAL TITLE</h2>
         </hgroup>
     </header>
 
     <section>
         <div class="section-padding align-centre lgrey">
-            <h1>Floating section</h1>
+            <h1>FLOATING SECTION</h1>
         </div>
     </section>
 
     <section class="mblue">
         <div class="section-padding align-centre">
-            <h1>Full bleed section</h1>
+            <h1>FULL BLEED SECTION</h1>
         </div>
     </section>
 
     <section class="section--spacer">
         <div class="section-padding align-centre lgrey">
-            <h1>Floating section with spacer (margin-bottom)</h1>
+            <h1>FLOATING SECTION WITH SPACER (MARGIN-BOTTOM)</h1>
         </div>
     </section>
 
     <section class="section--spacer">
         <div class="section-padding align-centre lgrey">
-            <h1>Fractions</h1>
+            <h1>FRACTIONS</h1>
 
             <p class="warn">If more than one type of fraction needs to be used within one section, wrap each 'section' in <code>.section-content-wrapper</code>, if not leave that div out.</p>
 
@@ -69,13 +69,19 @@
 
     <section class="section--spacer">
         <div class="section-padding align-centre lgrey">
-            <h1>Call To Actions</h1>
+            <h1>CALL TO ACTIONS</h1>
 
             <p class="warn">Each <code>.cta</code> will be accompanied by its own modifier (e.g <code>.cta--example</code>) where individual <code>height</code> and <code>background-image</code> styles can be set. <code>background-position: center</code> and <code>background-size: cover</code> have already been set on <code>.cta</code></p>
 
             <p class="warn">Transparent grey overlay is applied on top of the image using <code>:after</code> to promote reusability of the original image.</p>
 
-            <div class="cta cta--example full">
+            <div class="cta cta--example half">
+                <hgroup class="align-vertical">
+                    <h1>CTA Title</h1>
+                    <h2>Optional subtitle</h2>
+                </hgroup>
+            </div>
+            <div class="cta cta--example half">
                 <hgroup class="align-vertical">
                     <h1>CTA Title</h1>
                     <h2>Optional subtitle</h2>
@@ -86,12 +92,12 @@
 
     <section>
         <div class="section-padding align-centre lgrey">
-            <h1>Hoverboxes</h1>
+            <h1>HOVERBOXES</h1>
 
             <div class="hoverbox third-margin">
                 <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
                 <figcaption>
-                    <h1>Visible title</h1>
+                    <h1>VISIBLE TITLE</h1>
                     <p>This portion of the caption is hidden until the image is hovered.</p>
                 </figcaption>
             </div>
@@ -99,7 +105,7 @@
             <div class="hoverbox third-margin">
                 <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
                 <figcaption>
-                    <h1>Visible title</h1>
+                    <h1>VISIBLE TITLE</h1>
                     <p>This portion of the caption is hidden until the image is hovered.</p>
                 </figcaption>
             </div>
@@ -107,7 +113,7 @@
             <div class="hoverbox third-margin">
                 <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
                 <figcaption>
-                    <h1>Visible title</h1>
+                    <h1>VISIBLE TITLE</h1>
                     <p>This portion of the caption is hidden until the image is hovered.</p>
                 </figcaption>
             </div>

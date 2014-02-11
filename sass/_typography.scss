@@ -2,14 +2,19 @@ h1 {
     margin-top: 0;
     margin-bottom: 5px;
     font-size: 3rem;
-    font-weight: 200;
+    font-weight: 300;
+}
+
+section h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 h2 {
     margin-top: 5px;
     margin-bottom: 5px;
-    font-size: 2rem;
-    font-weight: 200;
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 
 h3 {
@@ -18,8 +23,10 @@ h3 {
 
 p {
     margin-top: 0;
-    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-size: 1rem;
     font-weight: 200;
+    line-height: 32px;
 }
 
 a {
@@ -34,4 +41,10 @@ a:hover {
     padding: 10px;
     color: #FFF;
     background: $red;
+}
+
+@media ($min_bp_a) {
+    p {
+        font-size: 1.2rem;
+    }
 }

@@ -9,7 +9,7 @@ $dblue: #285989;
 $red: #7E0B08;
 
 .lgrey {
-    color: #000;
+    color: $dgrey;
     background: $lgrey;
 }
 
@@ -19,6 +19,6 @@ $red: #7E0B08;
 }
 
 .mblue {
-    color: #FFF;
+    color: $lgrey;
     background: $mblue;
 }
