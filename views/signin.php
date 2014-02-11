@@ -60,7 +60,7 @@ $login_system = new LoginSystem();
             <h1>REGISTER</h1>
 
             <?php
-            $wrap_start = '<p class="full error">';
+            $wrap_start = '<p class="full warn">';
             $wrap_end   = '</p>';
 
             if(!empty($_POST['register-submit'])) {

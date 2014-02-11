@@ -22,10 +22,10 @@
                         $response = $login_system->send_reset_password_link($email);
                         echo $response;
                     } else {
-                        echo '<p class="full error">No account with this email exists.</p>';
+                        echo '<p class="full warn">No account with this email exists.</p>';
                     }
                 } else {
-                    echo '<p class="full error">Please enter your email.</p>';
+                    echo '<p class="full warn">Please enter your email.</p>';
                 }
             }
             ?>

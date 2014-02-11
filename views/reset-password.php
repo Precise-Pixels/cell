@@ -25,7 +25,7 @@
                     $response = $login_system->reset_password($email, $password, $rand);
                     echo $response;
                 } else {
-                    echo '<p class="full error">Please enter your new password.</a>';
+                    echo '<p class="full warn">Please enter your new password.</a>';
                 }
             }
             ?>

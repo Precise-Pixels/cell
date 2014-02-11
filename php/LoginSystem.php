@@ -1,7 +1,7 @@
 <?php
 
 class LoginSystem {
-    private $wrap_start = '<p class="full error">';
+    private $wrap_start = '<p class="full warn">';
     private $wrap_end   = '</p>';
 
     function signin($email, $password) {
