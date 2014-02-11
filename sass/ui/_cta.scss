@@ -1,0 +1,40 @@
+.cta {
+    position: relative;
+    display: table;
+    color: #FFF;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+
+    h1 {
+        margin-bottom: 5px;
+        font-size: 2.8rem;
+        font-weight: 300;
+    }
+
+    h2 {
+        font-weight: 300;
+    }
+
+    > hgroup {
+        width: 100%;
+        position: relative;
+        z-index: 2;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background: rgba(51,51,51,.8);
+    }
+}
+
+.cta--example {
+    height: 200px;
+    background-image: url(/img/placeholder.gif);
+}

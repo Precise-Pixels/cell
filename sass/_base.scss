@@ -1,4 +1,25 @@
+* {
+   box-sizing: border-box;
+}
+
+footer, header, hgroup, main, nav, section {
+    display: block;
+}
+
 body {
     margin: 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: $dgrey;
+}
+
+.align-centre {
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.align-vertical {
+    display: table-cell;
+    vertical-align: middle;
 }

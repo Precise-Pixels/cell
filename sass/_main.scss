@@ -1,0 +1,28 @@
+main {
+    position: relative;
+    z-index: 1;
+}
+
+main header {
+    height: 250px;
+    display: table;
+}
+
+.section-padding {
+    overflow: hidden;
+    padding: 40px 25px;
+}
+
+.section-content-wrapper {
+    overflow: hidden;
+}
+
+.section--spacer {
+    margin-bottom: 100px;
+}
+
+@media ($min-bp-b) {
+    .section-padding {
+        padding: 60px 45px;
+    }
+}
