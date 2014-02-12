@@ -31,10 +31,9 @@
 
     <section>
         <div class="align-centre lgrey">
-            <a href="#" class="cta cta--example half">
+            <a href="ted" class="cta cta--example half">
                 <hgroup class="align-vertical">
-                    <h1>CTA Title</h1>
-                    <h2>Optional subtitle</h2>
+                    <h1>TED Talk</h1>
                 </hgroup>
             </a>
             <div class="section-padding half">

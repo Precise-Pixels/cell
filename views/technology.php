@@ -36,16 +36,14 @@
 
     <section>
         <div class="align-centre">
-            <a href="#" class="cta cta--example half">
+            <a href="the-cloning-process" class="cta cta--example half">
                 <hgroup class="align-vertical">
-                    <h1>CTA Title</h1>
-                    <h2>Optional subtitle</h2>
+                    <h1>The cloning process</h1>
                 </hgroup>
             </a>
-            <a href="#" class="cta cta--example half">
+            <a href="project-titan" class="cta cta--example half">
                 <hgroup class="align-vertical">
-                    <h1>CTA Title</h1>
-                    <h2>Optional subtitle</h2>
+                    <h1>What is Project Titan?</h1>
                 </hgroup>
             </a>
         </div>
