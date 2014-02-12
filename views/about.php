@@ -53,15 +53,17 @@
     </section>
 
     <section>
-        <div class="section-padding align-centre lgrey">
+        <div class="align-centre">
             <div class="cta cta--example half">
                 <hgroup class="align-vertical">
-                    <h1>INFOGRAPHIC</h1>
+                    <h1>CTA Title</h1>
+                    <h2>Optional subtitle</h2>
                 </hgroup>
             </div>
             <div class="cta cta--example half">
                 <hgroup class="align-vertical">
-                    <h1>TECHNOLOGY</h1>
+                    <h1>CTA Title</h1>
+                    <h2>Optional subtitle</h2>
                 </hgroup>
             </div>
         </div>
