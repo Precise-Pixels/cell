@@ -1,4 +1,2 @@
 <?php
-$url = parse_url($_SERVER['REQUEST_URI']);
-$path = explode('/', $url['path']);
-echo (empty($path[count($path)-1]) ? 'index' : $path[count($path)-1]);
+echo str_replace('/', '_', substr(parse_url($_SERVER['REQUEST_URI'])['path'], 1));
