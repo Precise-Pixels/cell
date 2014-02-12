@@ -33,7 +33,6 @@
 
     <section>
         <div class="section-padding align-centre dgrey">
-            <div class="section-content-wrapper">
                 <div class="third-margin">
                     <h2>.third-margin</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -46,7 +45,6 @@
                     <h2>.third-margin</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
-            </div>
         </div>
     </section>
 
