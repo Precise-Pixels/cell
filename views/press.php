@@ -31,12 +31,12 @@
 
     <section>
         <div class="align-centre lgrey">
-            <div class="cta cta--example half">
+            <a href="#" class="cta cta--example half">
                 <hgroup class="align-vertical">
                     <h1>CTA Title</h1>
                     <h2>Optional subtitle</h2>
                 </hgroup>
-            </div>
+            </a>
             <div class="section-padding half">
                 <h1>REVIEWS</h1>
                 <p class="half-margin">Integer sit amet nibh sit amet lectus luctus placerat. Suspendisse eget arcu tortor. Fusce pretium sodales nisl et tempus.</p>
