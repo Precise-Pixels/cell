@@ -14,10 +14,15 @@ if(empty($path)) {                                  // HOME
     $file = '404';
 }
 
-$isEnv = preg_match('/env\/\d/', $q);
-$envVars = explode('/', $q);
+$isUser  = preg_match('#user\/[0-9a-zA-Z]+/?$#', $q);
+$isEnv   = preg_match('#env\/\d+/?$#', $q);
+
+if($isUser) {
+    $username = explode('/', $q)[1];
+}
 
 if($isEnv) {
+    $envVars  = explode('/', $q);
     $username = $envVars[1];
     $envId    = $envVars[3];
 }
