@@ -16,6 +16,12 @@
         </div>
     </section>
 
+    <header class="section-padding align-centre mblue">
+        <hgroup class="align-vertical">
+            <img src="/img/placeholder.gif" alt="Clone Cube" class="full">
+        </hgroup>
+    </header>
+
     <section>
         <div class="section-padding align-centre lgrey">
             <h1>KEY PEOPLE</h1>
