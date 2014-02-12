@@ -52,19 +52,19 @@
 
     <section class="sdgrey">
         <div class="section-padding align-centre sdgrey">
-            <div class="cta cta--example-home1 half">
+            <div class="cta cta--home1 half">
                 <hgroup class="align-vertical">
                     <h1>CTA Title</h1>
                     <h2>Optional subtitle</h2>
                 </hgroup>
             </div>
-            <div class="cta cta--example-home2 half">
+            <div class="cta cta--home2 half">
                 <hgroup class="align-vertical">
                     <h1>CTA Title</h1>
                     <h2>Optional subtitle</h2>
                 </hgroup>
             </div>
-            <div class="cta cta--example-home3 half">
+            <div class="cta cta--home3 half">
                 <hgroup class="align-vertical">
                     <h1>CTA Title</h1>
                     <h2>Optional subtitle</h2>
