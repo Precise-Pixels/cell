@@ -1,0 +1,49 @@
+table {
+    width: 100%;
+}
+
+label {
+    font-size: 1.4rem;
+}
+
+input[type="submit"] {
+    height: auto;
+    background: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+    padding: 15px;
+    color: $lgrey;
+    font-size: 1.2rem;
+    font-weight: 200;
+    background: $dgrey;
+    border: 0;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-radius: 0;
+    outline-color: $mblue;
+    box-shadow: inset 4px 4px 0px $mblue, inset -4px -4px 0px $mblue;
+}
+
+.mblue input:focus,
+.mblue select:focus,
+.mblue textarea:focus,
+.sdgrey input:focus,
+.sdgrey select:focus,
+.sdgrey textarea:focus,
+.dgrey input:focus,
+.dgrey select:focus,
+.dgrey textarea:focus {
+    outline-color: $lgrey;
+    box-shadow: inset 4px 4px 0px $lgrey, inset -4px -4px 0px $lgrey;
+}

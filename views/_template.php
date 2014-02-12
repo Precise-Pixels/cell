@@ -90,7 +90,7 @@
         </div>
     </section>
 
-    <section>
+    <section class="section--spacer">
         <div class="section-padding align-centre lgrey">
             <h1>HOVERBOXES</h1>
 
@@ -120,4 +120,92 @@
         </div>
     </section>
 
+    <section class="section--spacer">
+        <div class="section-padding align-centre lgrey">
+            <h1>BUTTONS</h1>
+            <a href="#" class="btn">LEARN MORE</a>
+            <a href="#" class="btn">SIGN UP</a>
+            <a href="#" class="btn">SUBMIT</a>
+        </div>
+        <div class="section-padding align-centre dgrey">
+            <a href="#" class="btn">LEARN MORE</a>
+            <a href="#" class="btn">SIGN UP</a>
+            <a href="#" class="btn">SUBMIT</a>
+        </div>
+        <div class="section-padding align-centre sdgrey">
+            <a href="#" class="btn">LEARN MORE</a>
+            <a href="#" class="btn">SIGN UP</a>
+            <a href="#" class="btn">SUBMIT</a>
+        </div>
+        <div class="section-padding align-centre mblue">
+            <a href="#" class="btn">LEARN MORE</a>
+            <a href="#" class="btn">SIGN UP</a>
+            <a href="#" class="btn">SUBMIT</a>
+        </div>        
+    </section>
+
+    <section class="section--spacer">
+        <div class="section-padding align-centre lgrey">
+            <h1>FORMS</h1>
+            <form method="post" id="signin-form">
+                <table>
+                    <tr>
+                        <td><label for="email">Email:</label></td>
+                        <td><input type="email" name="email" required autofocus/></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="password">Password:</label></td>
+                        <td><input type="password" name="password" required/></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" name="signin-submit" value="SIGN IN" class="btn"/></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="section-padding align-centre sdgrey">
+            <form method="post" id="signin-form">
+                <table>
+                    <tr>
+                        <td><label for="email">Email:</label></td>
+                        <td><input type="email" name="email" required autofocus/></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="password">Password:</label></td>
+                        <td><input type="password" name="password" required/></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" name="signin-submit" value="SIGN IN" class="btn"/></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="section-padding align-centre mblue">
+            <form method="post" id="signin-form">
+                <table>
+                    <tr>
+                        <td><label for="email">Email:</label></td>
+                        <td><input type="email" name="email" required autofocus/></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="password">Password:</label></td>
+                        <td><input type="password" name="password" required/></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" name="signin-submit" value="SIGN IN" class="btn"/></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </section>
+    
 </main>

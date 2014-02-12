@@ -1,6 +1,7 @@
 $lgrey: #EEE;
 $mgrey: #666;
 $dgrey: #333;
+$sdgrey: #222;
 
 $lblue: #9CF;
 $mblue: #369;
@@ -16,6 +17,11 @@ $red: #7E0B08;
 .dgrey {
     color: $lgrey;
     background: $dgrey;
+}
+
+.sdgrey {
+    color: $lgrey;
+    background: $sdgrey;
 }
 
 .mblue {
