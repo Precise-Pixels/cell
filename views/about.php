@@ -17,8 +17,8 @@
     </section>
 
     <section>
-        <div class="section-padding align-centre mblue">
-            <img src="/img/placeholder.gif" alt="Company Logo" class="full">
+        <div class="align-centre mblue">
+            <img src="/img/logo-diagram.jpg" alt="Company Logo" class="full">
         </div>
     </section>
 
