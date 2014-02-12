@@ -16,11 +16,11 @@
         </div>
     </section>
 
-    <header class="section-padding align-centre mblue">
-        <hgroup class="align-vertical">
-            <img src="/img/placeholder.gif" alt="Clone Cube" class="full">
-        </hgroup>
-    </header>
+    <section>
+        <div class="section-padding align-centre mblue">
+            <img src="/img/placeholder.gif" alt="Company Logo" class="full">
+        </div>
+    </section>
 
     <section>
         <div class="section-padding align-centre lgrey">
