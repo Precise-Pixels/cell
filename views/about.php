@@ -17,8 +17,8 @@
     </section>
 
     <section>
-        <div class="section-padding align-centre mblue">
-            <img src="/img/placeholder.gif" alt="Company Logo" class="full">
+        <div class="align-centre mblue">
+            <img src="/img/logo-diagram.jpg" alt="Company Logo" class="full">
         </div>
     </section>
 
@@ -60,16 +60,14 @@
 
     <section>
         <div class="align-centre">
-            <a href="#" class="cta cta--example half">
+            <a href="project-titan" class="cta cta--example half">
                 <hgroup class="align-vertical">
-                    <h1>CTA Title</h1>
-                    <h2>Optional subtitle</h2>
+                    <h1>Project Titan</h1>
                 </hgroup>
             </a>
-            <a href="#" class="cta cta--example half">
+            <a href="ted" class="cta cta--example half">
                 <hgroup class="align-vertical">
-                    <h1>CTA Title</h1>
-                    <h2>Optional subtitle</h2>
+                    <h1>TED Talk</h1>
                 </hgroup>
             </a>
         </div>
