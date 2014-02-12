@@ -6,12 +6,12 @@
         </hgroup>
     </header>
 
-    <header id="secondary-header">
-        <div class="align-centre">
-        <hgroup class="align-vertical mblue">
-            <h1>PROJECT TITAN</h1>
-            <h2>SUBHEADER</h2>
-        </hgroup>
+    <header id="secondary-header" class="mblue">
+        <div class="section-padding align-centre">
+            <hgroup class="align-vertical">
+                <h1>PROJECT TITAN</h1>
+                <h2>SUBHEADER</h2>
+            </hgroup>
         </div>
     </header>
 
