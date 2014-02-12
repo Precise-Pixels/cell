@@ -1,0 +1,46 @@
+.btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 20px 25px;
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: color .5s, background .5s, box-shadow .5s;
+}
+
+.lgrey .btn {
+    color: $dgrey;
+    box-shadow: inset 4px 4px 0px $dgrey, inset -4px -4px 0px $dgrey;
+    &:hover {
+        color: $lgrey;
+        box-shadow: inset 4px 240px 0px $dgrey, inset -4px 4px 0px $dgrey; 
+    }
+}
+
+.mblue .btn {
+    color: $lgrey;
+    box-shadow: inset 4px 4px 0px $lgrey, inset -4px -4px 0px $lgrey;
+    &:hover {
+        color: $mblue;
+        box-shadow: inset 4px 240px 0px $lgrey, inset -4px -4px 0px $lgrey; 
+    }
+}
+
+.dgrey .btn,
+.sdgrey .btn {
+    color: $lgrey;
+    box-shadow: inset 4px 4px 0px $lgrey, inset -4px -4px 0px $lgrey;
+    &:hover {
+        color: $dgrey;
+        box-shadow: inset 4px 240px 0px $lgrey, inset -4px -4px 0px $lgrey; 
+    }
+}
+
+@media ($min-bp-a) {
+    .btn {        
+        width: auto;
+        display: inline-block;
+    }   
+}
