@@ -2,7 +2,7 @@
 
     <header class="section-padding align-centre dgrey">
         <hgroup class="align-vertical">
-            <h1>ABOUT CELL INDUSTRIES</h1>
+            <h1>ABOUT</h1>
         </hgroup>
     </header>
 
@@ -53,9 +53,8 @@
     </section>
 
     <section>
-        <div class="section-padding align-centre dgrey">
+        <div class="section-padding align-centre sdgrey">
             <h1>TIMELINE</h1>
-            <img src="/img/placeholder.gif" alt="Company Logo" class="full">
         </div>
     </section>
 
