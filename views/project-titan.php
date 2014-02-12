@@ -58,4 +58,10 @@
         </div>
     </section>
 
+    <section>
+        <div class="align-centre">
+            <img src="/img/placeholder.gif" alt="Clone Cube" class="full"/>
+        </div>
+    </section>
+
 </main>
