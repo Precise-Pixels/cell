@@ -36,8 +36,8 @@
     </section>
 
     <section>
-        <div class="align-centre">
-            <img src="/img/placeholder.gif" alt="Clone Cube" class="full"/>
+        <div class="section-padding align-centre mblue">
+            <img src="/img/placeholder.gif" alt="Company Logo" class="full">
         </div>
     </section>
 
