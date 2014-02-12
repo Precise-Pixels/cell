@@ -24,10 +24,10 @@
     <section class="mblue">
         <div class="section-padding align-centre">
             <h1>FULL BLEED SECTION</h1>
-                <p class="text-align-center">Do your bit to save the planet</p>
-                <p class="third-margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rho.</p>
-                <a href="#" class="btn third-margin">LEARN MORE</a>
-                <p class="third-margin">Donec consequat est sed eros condimentum, nec porttitor mi convallis. Sed porttitor.</p>
+            <p class="text-align-center">Do your bit to save the planet</p>
+            <p class="third-margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rho.</p>
+            <a href="#" class="btn third-margin">LEARN MORE</a>
+            <p class="third-margin">Donec consequat est sed eros condimentum, nec porttitor mi convallis. Sed porttitor.</p>
         </div>
     </section>
 
