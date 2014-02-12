@@ -53,8 +53,9 @@
     </section>
 
     <section>
-        <div class="section-padding align-centre lgrey">
+        <div class="section-padding align-centre dgrey">
             <h1>TIMELINE</h1>
+            <img src="/img/placeholder.gif" alt="Company Logo" class="full">
         </div>
     </section>
 
