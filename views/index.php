@@ -32,7 +32,7 @@
     </section>
 
     <section>
-        <div class="section-padding align-centre lgrey">
+        <div class="section-padding align-centre dgrey">
             <div class="section-content-wrapper">
                 <div class="third-margin">
                     <h2>.third-margin</h2>
