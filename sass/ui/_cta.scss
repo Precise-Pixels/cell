@@ -3,6 +3,7 @@
     display: table;
     color: #FFF;
     text-align: center;
+    text-decoration: none;
     background-position: center;
     background-size: cover;
 
@@ -31,6 +32,11 @@
         bottom: 0;
         z-index: 1;
         background: rgba(51,51,51,.8);
+        transition: background .3s;
+    }
+
+    &:hover:after {
+        background: rgb(51,102,153);
     }
 }
 
