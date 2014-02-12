@@ -75,18 +75,18 @@
 
             <p class="warn">Transparent grey overlay is applied on top of the image using <code>:after</code> to promote reusability of the original image.</p>
 
-            <a href="#" class="cta cta--example half">
+            <div class="cta cta--example half">
                 <hgroup class="align-vertical">
                     <h1>CTA Title</h1>
                     <h2>Optional subtitle</h2>
                 </hgroup>
-            </a>
-            <a href="#" class="cta cta--example half">
+            </div>
+            <div class="cta cta--example half">
                 <hgroup class="align-vertical">
                     <h1>CTA Title</h1>
                     <h2>Optional subtitle</h2>
                 </hgroup>
-            </a>
+            </div>
         </div>
     </section>
 

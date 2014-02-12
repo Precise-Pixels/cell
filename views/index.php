@@ -7,7 +7,7 @@
     </header>
 
     <header class="section-padding align-centre mblue">
-        <hgroup class="align-vertical">
+        <hgroup class="align-vertical mblue">
             <h1>PROJECT TITAN</h1>
             <h2>SUBHEADER</h2>
         </hgroup>
@@ -29,7 +29,7 @@
         </div>
     </section>
 
-        <section class="section--spacer">
+    <section>
         <div class="section-padding align-centre lgrey">
             <div class="section-content-wrapper">
                 <div class="third-margin">
@@ -44,6 +44,29 @@
                     <h2>.third-margin</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sdgrey">
+        <div class="section-padding align-centre sdgrey">
+            <div class="cta cta--example-home1 half">
+                <hgroup class="align-vertical">
+                    <h1>CTA Title</h1>
+                    <h2>Optional subtitle</h2>
+                </hgroup>
+            </div>
+            <div class="cta cta--example-home2 half">
+                <hgroup class="align-vertical">
+                    <h1>CTA Title</h1>
+                    <h2>Optional subtitle</h2>
+                </hgroup>
+            </div>
+            <div class="cta cta--example-home3 half">
+                <hgroup class="align-vertical">
+                    <h1>CTA Title</h1>
+                    <h2>Optional subtitle</h2>
+                </hgroup>
             </div>
         </div>
     </section>
