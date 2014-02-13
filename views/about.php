@@ -25,7 +25,7 @@
             <h1>KEY PEOPLE</h1>
 
             <div class="hoverbox third-margin">
-                <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
+                <figure><img src="/img/james.jpg" alt="Hoverbox image"/></figure>
                 <figcaption>
                     <h1>DR REE</h1>
                     <p>This portion of the caption is hidden until the image is hovered.</p>
@@ -41,7 +41,7 @@
             </div>
 
             <div class="hoverbox third-margin">
-                <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
+                <figure><img src="/img/joe.jpg" alt="Hoverbox image"/></figure>
                 <figcaption>
                     <h1>JASOP WILHIELM</h1>
                     <p>This portion of the caption is hidden until the image is hovered.</p>
