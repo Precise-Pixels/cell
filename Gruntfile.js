@@ -84,6 +84,6 @@ module.exports = function(grunt) {
                            \n  grunt build      : cssmin, uglify');
     });
 
-    grunt.registerTask('sass:watch', ['watch']);
+    grunt.registerTask('sass:watch', ['sass:dev', 'watch']);
     grunt.registerTask('build', ['cssmin', 'uglify']);
 };
