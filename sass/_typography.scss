@@ -44,6 +44,40 @@ a:hover {
     background: $red;
 }
 
+blockquote p {
+    margin-bottom: 0;
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 3rem;
+}
+
+blockquote p:before {
+    content: '“';
+    margin-right: 14px;
+    vertical-align: -20px;
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+blockquote p:after {
+    content: '”';
+    vertical-align: -20px;
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+blockquote footer {
+    height: auto;
+    margin-bottom: 15px;
+    float: right;
+}
+
+blockquote footer:before {
+    content: '—';
+    margin-right: 10px;
+}
+
 @media ($min_bp_a) {
     p {
         font-size: 1.2rem;
