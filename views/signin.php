@@ -9,7 +9,7 @@ if(isset($_SESSION['status'])) {
 }
 
 require_once('php/LoginSystem.php');
-$login_system = new LoginSystem();
+$loginSystem = new LoginSystem();
 ?>
 
 <main>
@@ -26,10 +26,10 @@ $login_system = new LoginSystem();
             <?php
             if(!empty($_POST['signin-submit'])) {
                 if(!empty($_POST['email']) && !empty($_POST['password'])) {
-                    $response = $login_system->signin($_POST['email'], $_POST['password']);
+                    $response = $loginSystem->signin($_POST['email'], $_POST['password']);
                     echo $response;
                 } else {
-                    echo $wrap_start . 'Please enter your email and password.' . $wrap_end;
+                    echo $wrapStart . 'Please enter your email and password.' . $wrapEnd;
                 }
             }
             ?>
@@ -60,30 +60,30 @@ $login_system = new LoginSystem();
             <h1>REGISTER</h1>
 
             <?php
-            $wrap_start = '<p class="full warn">';
-            $wrap_end   = '</p>';
+            $wrapStart = '<p class="full warn">';
+            $wrapEnd   = '</p>';
 
             if(!empty($_POST['register-submit'])) {
-                $email          = $_POST['email'];
-                $password       = $_POST['password'];
-                $email_again    = $_POST['email_again'];
-                $password_again = $_POST['password_again'];
+                $email         = $_POST['email'];
+                $password      = $_POST['password'];
+                $emailAgain    = $_POST['email-again'];
+                $passwordAgain = $_POST['password-again'];
 
-                if(!empty($email) && !empty($password) && !empty($email_again) && !empty($password_again)) {
-                    if($email === $email_again && $password === $password_again) {
-                        $exists = $login_system->check_user_exists($email);
+                if(!empty($email) && !empty($password) && !empty($emailAgain) && !empty($passwordAgain)) {
+                    if($email === $emailAgain && $password === $passwordAgain) {
+                        $exists = $loginSystem->checkUserExists($email);
 
                         if($exists) {
-                            echo $wrap_start . 'An account with this email already exists.' . $wrap_end;
+                            echo $wrapStart . 'An account with this email already exists.' . $wrapEnd;
                         } else {
-                            $response = $login_system->create_user($email, $password);
+                            $response = $loginSystem->createUser($email, $password);
                             echo $response;
                         }
                     } else {
-                        echo $wrap_start . 'Email and/or password did not match. Please try again.' . $wrap_end;
+                        echo $wrapStart . 'Email and/or password did not match. Please try again.' . $wrapEnd;
                     }
                 } else {
-                    echo $wrap_start . 'Please enter your email and password.' . $wrap_end;
+                    echo $wrapStart . 'Please enter your email and password.' . $wrapEnd;
                 }
             }
             ?>
@@ -96,8 +96,8 @@ $login_system = new LoginSystem();
                     </tr>
 
                     <tr>
-                        <td><label for="email_again">Retype email:</label></td>
-                        <td><input type="text" name="email_again" required/></td>
+                        <td><label for="email-again">Retype email:</label></td>
+                        <td><input type="text" name="email-again" required/></td>
                     </tr>
 
                     <tr>
@@ -106,8 +106,8 @@ $login_system = new LoginSystem();
                     </tr>
 
                     <tr>
-                        <td><label for="password_again">Retype password:</label></td>
-                        <td><input type="password" name="password_again" required/></td>
+                        <td><label for="password-again">Retype password:</label></td>
+                        <td><input type="password" name="password-again" required/></td>
                     </tr>
 
                     <tr>

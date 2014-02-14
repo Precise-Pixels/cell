@@ -10,13 +10,13 @@
         <div class="section-padding align-centre lgrey">
             <?php
             require_once('php/LoginSystem.php');
-            $login_system = new LoginSystem();
+            $loginSystem = new LoginSystem();
 
             if($_POST) {
                 $email = $_POST['email'];
 
                 if(!empty($email)) {
-                    $response = $login_system->resend_validation_email($email);
+                    $response = $loginSystem->resendValidationEmail($email);
                     echo $response;
                 } else {
                     echo '<p class="full warn">Please enter your email.</p>';

@@ -10,16 +10,16 @@
         <div class="section-padding align-centre lgrey">
             <?php
             require_once('php/LoginSystem.php');
-            $login_system = new LoginSystem();
+            $loginSystem = new LoginSystem();
 
             if($_POST) {
                 $email = $_POST['email'];
 
                 if(!empty($email)) {
-                    $exists = $login_system->check_user_exists($email);
+                    $exists = $loginSystem->checkUserExists($email);
 
                     if($exists) {
-                        $response = $login_system->send_reset_password_link($email);
+                        $response = $loginSystem->sendResetPasswordLink($email);
                         echo $response;
                     } else {
                         echo '<p class="full warn">No account with this email exists.</p>';
