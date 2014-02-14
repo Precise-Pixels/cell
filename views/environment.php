@@ -1,5 +1,8 @@
 <h1>ENV</h1>
 
 <?php
-var_dump($username, $envId);
+require_once('php/Environment.php');
+$environment = new Environment();
+
+$environment->getData($username, $envId);
 ?>
