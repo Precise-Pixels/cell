@@ -18,7 +18,17 @@ class User {
         return $result;
     }
 
-    function getUserHandle($userId) {
+    function getUserId($username) {
+        require('db.php');
+
+        $sth = $dbh->query("SELECT userId FROM users WHERE username='$username'");
+        $sth->setFetchMode(PDO::FETCH_OBJ);
+        $result = $sth->fetch();
+
+        return $result->userId;
+    }
+
+    function getUsername($userId) {
         require('db.php');
         $username = false;
 
@@ -33,5 +43,22 @@ class User {
         } else {
             return $userId;
         }
+    }
+
+    function getEnvironments($userHandle) {
+        require('db.php');
+
+        // Check to see whether the $userHandle is an ID or a username
+        if(intval($userHandle) !== 0) {
+            $userId = $userHandle;
+        } else {
+            $userId = $this->getUserId($userHandle);
+        }
+
+        $sth = $dbh->query("SELECT timestamp, latitude, longitude FROM environments");
+        $sth->setFetchMode(PDO::FETCH_OBJ);
+        $result = $sth->fetchAll();
+
+        return $result;
     }
 }

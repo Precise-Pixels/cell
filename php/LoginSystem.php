@@ -20,7 +20,7 @@ class LoginSystem {
                 if($row->password === $passwordE) {
                     require_once('User.php');
                     $user = new User;
-                    $userHandle = $user->getUserHandle($row->userId);
+                    $userHandle = $user->getUsername($row->userId);
 
                     $_SESSION['status']    = 'signedin';
                     $_SESSION['userEmail'] = $email;
@@ -65,7 +65,7 @@ class LoginSystem {
         $sth->bindParam(':timestamp', $timestamp);
         $sth->execute();
 
-        $mailClient = new MailClient();
+        $mailClient = new MailClient;
         $mailClient->sendMsg($email, 'Verify your MyCell account', "Please follow this link to verify your MyCell account: http://cell.dev/verify-account?e=$email&r=$rand1");
 
         return $this->wrapStart . 'Account successfully created. We have sent a verification link to your email. Please verify your account before attempting to sign in. If you have not receive a verification email, please check your spam/junk or <a href="resend-validation-email">request another verification email</a>.' . $this->wrapEnd;
@@ -80,7 +80,7 @@ class LoginSystem {
         $sth = $dbh->prepare("UPDATE users SET validateRand='$rand' WHERE email='$email'");
         $sth->execute();
 
-        $mailClient = new MailClient();
+        $mailClient = new MailClient;
         $mailClient->sendMsg($email, 'Verify your MyCell account', "Please follow this link to verify your MyCell account: http://cell.dev/verify-account?e=$email&r=$rand");
 
         return $this->wrapStart . 'We have sent a verification link to your email. Please verify your account before attempting to sign in.' . $this->wrapEnd;
@@ -123,7 +123,7 @@ class LoginSystem {
         $sth = $dbh->prepare("UPDATE users SET resetRand='$rand' WHERE email='$email'");
         $sth->execute();
 
-        $mailClient = new MailClient();
+        $mailClient = new MailClient;
         $mailClient->sendMsg($email, 'Reset your MyCell account password', "Please follow this link to reset your MyCell account password: http://cell.dev/reset-password?e=$email&r=$rand");
 
         return $this->wrapStart . 'We have sent instructions on how to reset your password to your email. Please check your emails.' . $this->wrapEnd;
