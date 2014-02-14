@@ -57,9 +57,12 @@ class LoginSystem {
         $rand1 = $this->generateRandomNumber();
         $rand2 = $this->generateRandomNumber();
 
-        $sth = $dbh->prepare("INSERT INTO users (email, password, valid, validateRand, resetRand) value (:email, :password, 0, $rand1, $rand2)");
+        $timestamp = date("Y-m-d H:i:s");
+
+        $sth = $dbh->prepare("INSERT INTO users (email, password, valid, validateRand, resetRand, timestamp, username) value (:email, :password, 0, $rand1, $rand2, :timestamp, '')");
         $sth->bindParam(':email', $email);
         $sth->bindParam(':password', $passwordE);
+        $sth->bindParam(':timestamp', $timestamp);
         $sth->execute();
 
         $mailClient = new MailClient();

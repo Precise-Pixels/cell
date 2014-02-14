@@ -20,13 +20,13 @@ $isUser = preg_match('#user\/[0-9a-zA-Z]+/?$#', $q);
 $isEnv  = preg_match('#env\/\d+/?$#', $q);
 
 if($isUser) {
-    $username = explode('/', $q)[1];
+    $userHandle = explode('/', $q)[1];
 }
 
 if($isEnv) {
-    $envVars  = explode('/', $q);
-    $username = $envVars[1];
-    $envId    = $envVars[3];
+    $envVars    = explode('/', $q);
+    $userHandle = $envVars[1];
+    $envId      = $envVars[3];
 }
 
 require_once('front_view.php');

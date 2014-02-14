@@ -1,12 +1,23 @@
 <?php
 
 class User {
-    function getData($username) {
+    function getData($userHandle) {
         require('db.php');
 
-        $sth = $dbh->query("SELECT * FROM users WHERE username='$username'");
+        $userHandleType = $this->isUserHandleIdOrUsername($userHandle);
+
+        if($userHandleType == 'id') {
+            $userHandleColumn = 'userId';
+        } else {
+            $userHandleColumn = 'username';
+        }
+
+        $sth = $dbh->query("SELECT timestamp, username FROM users WHERE $userHandleColumn='$userHandle'");
+
         $sth->setFetchMode(PDO::FETCH_OBJ);
         $result = $sth->fetch();
+
+        return $result;
     }
 
     function getUserHandle($userId) {
@@ -23,6 +34,14 @@ class User {
             return $username;
         } else {
             return $userId;
+        }
+    }
+
+    function isUserHandleIdOrUsername($userHandle) {
+        if(intval($userHandle) !== 0) {
+            return 'id';
+        } else {
+            return 'username';
         }
     }
 }
