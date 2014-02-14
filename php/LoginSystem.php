@@ -11,18 +11,22 @@ class LoginSystem {
         $encryption = new Encryption;
         $passwordE  = $encryption->encrypt($password);
 
-        $sth = $dbh->query("SELECT id, password, valid, username FROM users WHERE email='$email'");
+        $sth = $dbh->query("SELECT userId, password, valid, username FROM users WHERE email='$email'");
         $sth->setFetchMode(PDO::FETCH_OBJ);
         $row = $sth->fetch();
 
         if($row) {
             if($row->valid == 1) {
                 if($row->password === $passwordE) {
+                    require_once('User.php');
+                    $user = new User;
+                    $userHandle = $user->getUserHandle($row->userId);
+
                     $_SESSION['status']    = 'signedin';
                     $_SESSION['userEmail'] = $email;
-                    $_SESSION['username']  = $row->username;
+                    $_SESSION['userHandle']  = $userHandle;
 
-                    header("location: /user/{$_SESSION['username']}");
+                    header("location: /user/{$_SESSION['userHandle']}");
 
                 } else {
                     return $this->wrapStart . 'Wrong email and/or password.' . $this->wrapEnd;
@@ -38,7 +42,7 @@ class LoginSystem {
     function signout() {
         unset($_SESSION['status']);
         unset($_SESSION['userEmail']);
-        unset($_SESSION['username']);
+        unset($_SESSION['userHandle']);
         (isset($_GET['r']) ? header("location:" . $_GET['r']) : header('location: /'));
     }
 
