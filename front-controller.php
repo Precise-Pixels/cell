@@ -29,4 +29,4 @@ if($isEnv) {
     $envId      = $envVars[3];
 }
 
-require_once('front_view.php');
+require_once('front-view.php');
