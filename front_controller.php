@@ -4,6 +4,8 @@ $q = $_GET['q'];
 
 $path = preg_replace('/\/$|.php/', '', $q);
 
+// NB: might be able to remove this after env/user views are done
+
 if(empty($path)) {                                  // HOME
     $file = 'index';
 } elseif(file_exists("views/$path/index.php")) {    // DIRECTORY INDEX
@@ -14,8 +16,8 @@ if(empty($path)) {                                  // HOME
     $file = '404';
 }
 
-$isUser  = preg_match('#user\/[0-9a-zA-Z]+/?$#', $q);
-$isEnv   = preg_match('#env\/\d+/?$#', $q);
+$isUser = preg_match('#user\/[0-9a-zA-Z]+/?$#', $q);
+$isEnv  = preg_match('#env\/\d+/?$#', $q);
 
 if($isUser) {
     $username = explode('/', $q)[1];
