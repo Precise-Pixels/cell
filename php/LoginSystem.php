@@ -6,7 +6,7 @@ class LoginSystem {
 
     function signin($email, $password) {
         require_once('db.php');
-        require_once('php/Encryption.php');
+        require_once('Encryption.php');
 
         $encryption = new Encryption;
         $passwordE  = $encryption->encrypt($password);
@@ -48,8 +48,8 @@ class LoginSystem {
 
     function createUser($email, $password) {
         require('db.php');
-        require_once('php/Encryption.php');
-        require_once('php/MailClient.php');
+        require_once('Encryption.php');
+        require_once('MailClient.php');
 
         $encryption = new Encryption;
         $passwordE  = $encryption->encrypt($password);
@@ -73,7 +73,7 @@ class LoginSystem {
 
     function resendValidationEmail($email) {
         require('db.php');
-        require_once('php/MailClient.php');
+        require_once('MailClient.php');
 
         $rand = $this->generateRandomNumber();
 
@@ -116,7 +116,7 @@ class LoginSystem {
 
     function sendResetPasswordLink($email) {
         require('db.php');
-        require_once('php/MailClient.php');
+        require_once('MailClient.php');
 
         $rand = $this->generateRandomNumber();
 
@@ -137,7 +137,7 @@ class LoginSystem {
         $result = $sth->fetch();
 
         if($result->resetRand == $rand) {
-            require_once('php/Encryption.php');
+            require_once('Encryption.php');
 
             $encryption = new Encryption;
             $passwordE  = $encryption->encrypt($password);
