@@ -4,16 +4,14 @@ class User {
     function getData($userHandle) {
         require('db.php');
 
-        $userHandleType = $this->isUserHandleIdOrUsername($userHandle);
-
-        if($userHandleType == 'id') {
+        // Check to see whether the $userHandle is an ID or a username
+        if(intval($userHandle) !== 0) {
             $userHandleColumn = 'userId';
         } else {
             $userHandleColumn = 'username';
         }
 
         $sth = $dbh->query("SELECT timestamp, username FROM users WHERE $userHandleColumn='$userHandle'");
-
         $sth->setFetchMode(PDO::FETCH_OBJ);
         $result = $sth->fetch();
 
@@ -34,14 +32,6 @@ class User {
             return $username;
         } else {
             return $userId;
-        }
-    }
-
-    function isUserHandleIdOrUsername($userHandle) {
-        if(intval($userHandle) !== 0) {
-            return 'id';
-        } else {
-            return 'username';
         }
     }
 }

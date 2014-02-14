@@ -7,15 +7,7 @@
 </head>
 <body>
     <?php require_once('includes/header.php'); ?>
-    <?php
-    if($isUser) {
-        require_once('views/user-profile.php');
-    } else if($isEnv) {
-        require_once('views/environment.php');
-    } else {
-        require_once("views/$file.php");
-    }
-    ?>
+    <?php require_once("views/$file.php"); ?>
     <?php require_once('includes/footer.php'); ?>
     <?php require_once('includes/scripts.php'); ?>
 </body>

@@ -1,11 +1,13 @@
 <?php
 
 class Environment {
-    function getData($username, $envId) {
+    function getData($envId) {
         require('db.php');
 
-        $STH = $DBH->query("SELECT * FROM environments WHERE username='$username'");
-        $STH->setFetchMode(PDO::FETCH_OBJ);
-        $result = $STH->fetch();
+        $sth = $dbh->query("SELECT userId, timestamp, latitude, longitude, elevationString FROM environments WHERE envId='$envId'");
+        $sth->setFetchMode(PDO::FETCH_OBJ);
+        $result = $sth->fetch();
+
+        return $result;
     }
 }
