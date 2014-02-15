@@ -18,7 +18,6 @@ myHeight = document.documentElement.clientHeight;
 
 window.onload = function ()
 {
-    console.log(myHeight - 40);
   var primaryHeader = document.getElementById('primary-header');
   primaryHeader.style.height = myHeight - 40 + 'px'; 
 } 
