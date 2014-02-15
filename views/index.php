@@ -1,6 +1,6 @@
 <main>
 
-    <header class="section-padding align-centre dgrey">
+    <header id="primary-header" class="section-padding align-centre dgrey">
         <hgroup class="align-vertical">
             <h1>CELL INDUSTRIES</h1>
         </hgroup>
