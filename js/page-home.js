@@ -20,7 +20,7 @@ window.onload = function ()
 {
     console.log(myHeight - 40);
   var primaryHeader = document.getElementById('primary-header');//.setAttribute("height","myHeight");
-  primaryHeader.style.height = myHeight; 
+  primaryHeader.style.height = myHeight - 40 + 'px'; 
 } 
 
 //think its something to do with the fact myHeight is not 
