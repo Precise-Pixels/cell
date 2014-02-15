@@ -22,3 +22,6 @@ window.onload = function ()
   var primaryHeader = document.getElementById('primary-header');//.setAttribute("height","myHeight");
   primaryHeader.style.height = myHeight; 
 } 
+
+//think its something to do with the fact myHeight is not 
+//coming out a pixels.
