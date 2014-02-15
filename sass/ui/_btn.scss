@@ -12,30 +12,30 @@
 
 .lgrey .btn {
     color: $dgrey;
-    box-shadow: inset 4px 4px 0px $dgrey, inset -4px -4px 0px $dgrey;
+    box-shadow: inset 4px 4px 0 $dgrey, inset -4px -4px 0 $dgrey;
     &:hover {
         color: $lgrey;
-        box-shadow: inset 4px 240px 0px $dgrey, inset -4px 4px 0px $dgrey; 
+        box-shadow: inset 4px 240px 0 $dgrey, inset -4px 4px 0 $dgrey; 
     }
 }
 
 .mblue .btn {
     color: $lgrey;
-    box-shadow: inset 4px 4px 0px $lgrey, inset -4px -4px 0px $lgrey;
+    box-shadow: inset 4px 4px 0 $lgrey, inset -4px -4px 0 $lgrey;
     &:hover {
         color: $mblue;
-        box-shadow: inset 4px 240px 0px $lgrey, inset -4px -4px 0px $lgrey; 
-    }
+        box-shadow: inset 4px 240px 0 $lgrey, inset -4px -4px 0 $lgrey; 
+
 }
 
 .dgrey .btn,
 .sdgrey .btn {
     color: $lgrey;
-    box-shadow: inset 4px 4px 0px $lgrey, inset -4px -4px 0px $lgrey;
+    box-shadow: inset 4px 4px 0 $lgrey, inset -4px -4px 0 $lgrey;
     &:hover {
         color: $dgrey;
-        box-shadow: inset 4px 240px 0px $lgrey, inset -4px -4px 0px $lgrey; 
-    }
+        box-shadow: inset 4px 240px 0 $lgrey, inset -4px -4px 0 $lgrey; 
+
 }
 
 @media ($min-bp-a) {
