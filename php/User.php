@@ -11,7 +11,7 @@ class User {
             $userHandleColumn = 'username';
         }
 
-        $sth = $dbh->query("SELECT timestamp, username FROM users WHERE $userHandleColumn='$userHandle'");
+        $sth = $dbh->query("SELECT userId, timestamp, username FROM users WHERE $userHandleColumn='$userHandle'");
         $sth->setFetchMode(PDO::FETCH_OBJ);
         $result = $sth->fetch();
 
@@ -28,7 +28,7 @@ class User {
         return $result->userId;
     }
 
-    function getUsername($userId) {
+    function getUserHandle($userId) {
         require('db.php');
         $username = false;
 

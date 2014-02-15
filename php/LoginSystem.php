@@ -20,11 +20,12 @@ class LoginSystem {
                 if($row->password === $passwordE) {
                     require_once('User.php');
                     $user = new User;
-                    $userHandle = $user->getUsername($row->userId);
+                    $userHandle = $user->getUserHandle($row->userId);
 
-                    $_SESSION['status']    = 'signedin';
-                    $_SESSION['userEmail'] = $email;
-                    $_SESSION['userHandle']  = $userHandle;
+                    $_SESSION['status']     = 'signedin';
+                    $_SESSION['userEmail']  = $email;
+                    $_SESSION['userId']     = $row->userId;
+                    $_SESSION['userHandle'] = $userHandle;
 
                     header("location: /user/{$_SESSION['userHandle']}");
 
@@ -42,6 +43,7 @@ class LoginSystem {
     function signout() {
         unset($_SESSION['status']);
         unset($_SESSION['userEmail']);
+        unset($_SESSION['userId']);
         unset($_SESSION['userHandle']);
         (isset($_GET['r']) ? header("location:" . $_GET['r']) : header('location: /'));
     }
