@@ -147,7 +147,7 @@
     <section class="section--spacer">
         <div class="section-padding align-centre lgrey">
             <h1>FORMS</h1>
-            <form method="post" id="signin-form">
+            <form>
                 <table>
                     <tr>
                         <td><label for="email">Email:</label></td>
@@ -167,7 +167,7 @@
             </form>
         </div>
         <div class="section-padding align-centre sdgrey">
-            <form method="post" id="signin-form">
+            <form>
                 <table>
                     <tr>
                         <td><label for="email">Email:</label></td>
@@ -187,7 +187,7 @@
             </form>
         </div>
         <div class="section-padding align-centre mblue">
-            <form method="post" id="signin-form">
+            <form>
                 <table>
                     <tr>
                         <td><label for="email">Email:</label></td>
