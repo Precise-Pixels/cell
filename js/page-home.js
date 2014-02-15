@@ -19,9 +19,6 @@ myHeight = document.documentElement.clientHeight;
 window.onload = function ()
 {
     console.log(myHeight - 40);
-  var primaryHeader = document.getElementById('primary-header');//.setAttribute("height","myHeight");
+  var primaryHeader = document.getElementById('primary-header');
   primaryHeader.style.height = myHeight - 40 + 'px'; 
 } 
-
-//think its something to do with the fact myHeight is not 
-//coming out a pixels.
