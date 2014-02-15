@@ -14,6 +14,18 @@ module.exports = function(grunt) {
                 dest: 'build/styles.min.css'
             }
         },
+        'ftp-deploy': {
+            build: {
+                auth: {
+                    host: 'ftp.precisepixels.co.uk',
+                    port: 21,
+                    authKey: 'key'
+                },
+                src: '.',
+                dest: '/precisepixels/cell',
+                exclusions: ['.ftppass', '.gitignore', 'Gruntfile.js', 'package.json', 'README.md', '.git', '.sass-cache', 'css', 'js', 'node_modules', 'sass']
+            }
+        },
         jshint: {
             all: ['js/*.js'],
             options: {
@@ -70,20 +82,23 @@ module.exports = function(grunt) {
     });
 
     // Load tasks
+    grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-ftp-deploy');
 
     // Register tasks
     grunt.registerTask('default', 'List grunt tasks', function() {
-        grunt.log.writeln('\n  grunt sass:watch : sass:watch, autoprefix\
-                           \n  grunt jshint     : jshint\
-                           \n  grunt build      : cssmin, uglify');
+        grunt.log.writeln('\n  grunt sass:watch : watches for Sass changes and adds vendor prefixes\
+                           \n  grunt jshint     : runs the JS through jshint\
+                           \n  grunt build      : minifies the JS and CSS\
+                           \n  grunt ftp        : FTPs the required files to the server');
     });
 
-    grunt.registerTask('sass:watch', ['watch']);
+    grunt.registerTask('sass:watch', ['sass:dev', 'watch']);
     grunt.registerTask('build', ['cssmin', 'uglify']);
+    grunt.registerTask('ftp', ['ftp-deploy']);
 };
