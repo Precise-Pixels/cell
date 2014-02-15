@@ -16,6 +16,6 @@ else: ?>
     <p>This user hasn't cloned any environments yet.</p>
 <?php endif; ?>
 
-<?php if($_SESSION['userId'] == $user->userId): // If user is signed in and viewing their own profile ?>
+<?php if(isset($_SESSION['userId']) && $_SESSION['userId'] == $user->userId): // If user is signed in and viewing their own profile ?>
     <a href="/user/<?= $userHandle; ?>/env/new">Clone a new environment</a>
 <?php endif; ?>
