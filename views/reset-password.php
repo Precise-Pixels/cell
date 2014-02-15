@@ -14,7 +14,7 @@
             }
 
             require_once('php/LoginSystem.php');
-            $login_system = new LoginSystem();
+            $loginSystem = new LoginSystem();
 
             if($_POST) {
                 $email    = $_GET['e'];
@@ -22,7 +22,7 @@
                 $password = $_POST['password'];
 
                 if(!empty($password)) {
-                    $response = $login_system->reset_password($email, $password, $rand);
+                    $response = $loginSystem->resetPassword($email, $password, $rand);
                     echo $response;
                 } else {
                     echo '<p class="full warn">Please enter your new password.</a>';

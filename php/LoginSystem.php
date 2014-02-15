@@ -1,95 +1,95 @@
 <?php
 
 class LoginSystem {
-    private $wrap_start = '<p class="full warn">';
-    private $wrap_end   = '</p>';
+    private $wrapStart = '<p class="full warn">';
+    private $wrapEnd   = '</p>';
 
     function signin($email, $password) {
         require_once('db.php');
         require_once('php/Encryption.php');
 
         $encryption = new Encryption;
-        $password_e = $encryption->encrypt($password);
+        $passwordE  = $encryption->encrypt($password);
 
-        $STH = $DBH->query("SELECT id, password, valid, username FROM users WHERE email='$email'");
-        $STH->setFetchMode(PDO::FETCH_OBJ);
-        $row = $STH->fetch();
+        $sth = $dbh->query("SELECT id, password, valid, username FROM users WHERE email='$email'");
+        $sth->setFetchMode(PDO::FETCH_OBJ);
+        $row = $sth->fetch();
 
         if($row) {
             if($row->valid == 1) {
-                if($row->password === $password_e) {
-                    $_SESSION['status']     = 'signedin';
-                    $_SESSION['user-email'] = $email;
-                    $_SESSION['username']   = $row->username;
+                if($row->password === $passwordE) {
+                    $_SESSION['status']    = 'signedin';
+                    $_SESSION['userEmail'] = $email;
+                    $_SESSION['username']  = $row->username;
 
                     header("location: /user/{$_SESSION['username']}");
 
                 } else {
-                    return $this->wrap_start . 'Wrong email and/or password.' . $this->wrap_end;
+                    return $this->wrapStart . 'Wrong email and/or password.' . $this->wrapEnd;
                 }
             } else {
-                return $this->wrap_start . 'Please verify your account by clicking the verification link in your email before attempting to log in. If you have not receive a verification email, please check your spam/junk or <a href="resend-validation-email">request another verification email</a>.' . $this->wrap_end;
+                return $this->wrapStart . 'Please verify your account by clicking the verification link in your email before attempting to log in. If you have not receive a verification email, please check your spam/junk or <a href="resend-validation-email">request another verification email</a>.' . $this->wrapEnd;
             }
         } else {
-            return $this->wrap_start . 'Wrong email and/or password.' . $this->wrap_end;
+            return $this->wrapStart . 'Wrong email and/or password.' . $this->wrapEnd;
         }
     }
 
     function signout() {
         unset($_SESSION['status']);
-        unset($_SESSION['user-email']);
+        unset($_SESSION['userEmail']);
         unset($_SESSION['username']);
         (isset($_GET['r']) ? header("location:" . $_GET['r']) : header('location: /'));
     }
 
-    function create_user($email, $password) {
+    function createUser($email, $password) {
         require('db.php');
         require_once('php/Encryption.php');
         require_once('php/MailClient.php');
 
         $encryption = new Encryption;
-        $password_e = $encryption->encrypt($password);
+        $passwordE  = $encryption->encrypt($password);
 
-        $rand1 = $this->generate_random_number();
-        $rand2 = $this->generate_random_number();
+        $rand1 = $this->generateRandomNumber();
+        $rand2 = $this->generateRandomNumber();
 
-        $STH = $DBH->prepare("INSERT INTO users (email, password, valid, validate_rand, reset_rand) value (:email, :password, 0, $rand1, $rand2)");
-        $STH->bindParam(':email', $email);
-        $STH->bindParam(':password', $password_e);
-        $STH->execute();
+        $sth = $dbh->prepare("INSERT INTO users (email, password, valid, validateRand, resetRand) value (:email, :password, 0, $rand1, $rand2)");
+        $sth->bindParam(':email', $email);
+        $sth->bindParam(':password', $passwordE);
+        $sth->execute();
 
-        $mail_client = new MailClient();
-        $mail_client->send_msg($email, 'Verify your MyCell account', "Please follow this link to verify your MyCell account: http://cell.dev/verify-account?e=$email&r=$rand1");
+        $mailClient = new MailClient();
+        $mailClient->sendMsg($email, 'Verify your MyCell account', "Please follow this link to verify your MyCell account: http://cell.dev/verify-account?e=$email&r=$rand1");
 
-        return $this->wrap_start . 'Account successfully created. We have sent a verification link to your email. Please verify your account before attempting to log in. If you have not receive a verification email, please check your spam/junk or <a href="resend-validation-email">request another verification email</a>.' . $this->wrap_end;
+        return $this->wrapStart . 'Account successfully created. We have sent a verification link to your email. Please verify your account before attempting to sign in. If you have not receive a verification email, please check your spam/junk or <a href="resend-validation-email">request another verification email</a>.' . $this->wrapEnd;
     }
 
-    function resend_validation_email($email) {
+    function resendValidationEmail($email) {
         require('db.php');
         require_once('php/MailClient.php');
 
-        $rand = $this->generate_random_number();
+        $rand = $this->generateRandomNumber();
 
-        $STH = $DBH->prepare("UPDATE users SET validate_rand='$rand' WHERE email='$email'");
-        $STH->execute();
+        $sth = $dbh->prepare("UPDATE users SET validateRand='$rand' WHERE email='$email'");
+        $sth->execute();
 
-        $mail_client = new MailClient();
-        $mail_client->send_msg($email, 'Verify your MyCell account', "Please follow this link to verify your MyCell account: http://cell.dev/verify-account?e=$email&r=$rand");
+        $mailClient = new MailClient();
+        $mailClient->sendMsg($email, 'Verify your MyCell account', "Please follow this link to verify your MyCell account: http://cell.dev/verify-account?e=$email&r=$rand");
 
-        return $this->wrap_start . 'We have sent a verification link to your email. Please verify your account before attempting to log in.' . $this->wrap_end;
+        return $this->wrapStart . 'We have sent a verification link to your email. Please verify your account before attempting to sign in.' . $this->wrapEnd;
     }
 
-    function validate_user($email, $rand) {
+    function validateUser($email, $rand) {
         require('db.php');
 
-        $STH = $DBH->query("SELECT validate_rand FROM users WHERE email='$email'");
-        $STH->setFetchMode(PDO::FETCH_OBJ);
-        $result = $STH->fetch();
+        $sth = $dbh->query("SELECT validateRand FROM users WHERE email='$email'");
+        $sth->setFetchMode(PDO::FETCH_OBJ);
+        $result = $sth->fetch();
 
         if($result) {
-            if($result->validate_rand == $rand) {
-                $STH = $DBH->prepare("UPDATE users SET valid=1 WHERE email='$email'");
-                $STH->execute();
+            if($result->validateRand == $rand) {
+                $sth = $dbh->prepare("UPDATE users SET valid=1 WHERE email='$email'");
+                $sth->execute();
                 return true;
             } else {
                 return false;
@@ -97,56 +97,56 @@ class LoginSystem {
         }
     }
 
-    function check_user_exists($email) {
+    function checkUserExists($email) {
         require('db.php');
 
-        $STH = $DBH->query("SELECT email FROM users WHERE email='$email'");
-        $STH->setFetchMode(PDO::FETCH_OBJ);
-        $result = $STH->fetch();
+        $sth = $dbh->query("SELECT email FROM users WHERE email='$email'");
+        $sth->setFetchMode(PDO::FETCH_OBJ);
+        $result = $sth->fetch();
 
         return (!$result ? false : true);
     }
 
-    function send_reset_password_link($email) {
+    function sendResetPasswordLink($email) {
         require('db.php');
         require_once('php/MailClient.php');
 
-        $rand = $this->generate_random_number();
+        $rand = $this->generateRandomNumber();
 
-        $STH = $DBH->prepare("UPDATE users SET reset_rand='$rand' WHERE email='$email'");
-        $STH->execute();
+        $sth = $dbh->prepare("UPDATE users SET resetRand='$rand' WHERE email='$email'");
+        $sth->execute();
 
-        $mail_client = new MailClient();
-        $mail_client->send_msg($email, 'Reset your MyCell account password', "Please follow this link to reset your MyCell account password: http://cell.dev/reset-password?e=$email&r=$rand");
+        $mailClient = new MailClient();
+        $mailClient->sendMsg($email, 'Reset your MyCell account password', "Please follow this link to reset your MyCell account password: http://cell.dev/reset-password?e=$email&r=$rand");
 
-        return $this->wrap_start . 'We have sent instructions on how to reset your password to your email. Please check your emails.' . $this->wrap_end;
+        return $this->wrapStart . 'We have sent instructions on how to reset your password to your email. Please check your emails.' . $this->wrapEnd;
     }
 
-    function reset_password($email, $password, $rand) {
+    function resetPassword($email, $password, $rand) {
         require('db.php');
 
-        $STH = $DBH->query("SELECT reset_rand FROM users WHERE email='$email'");
-        $STH->setFetchMode(PDO::FETCH_OBJ);
-        $result = $STH->fetch();
+        $sth = $dbh->query("SELECT resetRand FROM users WHERE email='$email'");
+        $sth->setFetchMode(PDO::FETCH_OBJ);
+        $result = $sth->fetch();
 
-        if($result->reset_rand == $rand) {
+        if($result->resetRand == $rand) {
             require_once('php/Encryption.php');
 
             $encryption = new Encryption;
-            $password_e = $encryption->encrypt($password);
+            $passwordE  = $encryption->encrypt($password);
 
-            $new_rand = $this->generate_random_number();
+            $newRand = $this->generateRandomNumber();
 
-            $STH = $DBH->prepare("UPDATE users SET password='$password_e', reset_rand='$new_rand' WHERE email='$email'");
-            $STH->execute();
+            $sth = $dbh->prepare("UPDATE users SET password='$passwordE', resetRand='$newRand' WHERE email='$email'");
+            $sth->execute();
 
-            return $this->wrap_start . 'Password successfully reset. Please <a href="signin">sign in</a>.' . $this->wrap_end;
+            return $this->wrapStart . 'Password successfully reset. Please <a href="signin">sign in</a>.' . $this->wrapEnd;
         } else {
-            return $this->wrap_start . 'This link has expired. Please <a href="forgotten-password">request a new password reset link</a>.' . $this->wrap_end;
+            return $this->wrapStart . 'This link has expired. Please <a href="forgotten-password">request a new password reset link</a>.' . $this->wrapEnd;
         }
     }
 
-    function generate_random_number() {
+    function generateRandomNumber() {
         return rand(pow(10, 6-1), pow(10, 6)-1);
     }
 }

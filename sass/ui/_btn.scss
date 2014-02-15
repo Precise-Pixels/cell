@@ -25,7 +25,7 @@
     &:hover {
         color: $mblue;
         box-shadow: inset 4px 240px 0 $lgrey, inset -4px -4px 0 $lgrey; 
-    }
+
 }
 
 .dgrey .btn,
@@ -35,7 +35,7 @@
     &:hover {
         color: $dgrey;
         box-shadow: inset 4px 240px 0 $lgrey, inset -4px -4px 0 $lgrey; 
-    }
+
 }
 
 @media ($min-bp-a) {
