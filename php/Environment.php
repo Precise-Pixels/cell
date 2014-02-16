@@ -1,7 +1,7 @@
 <?php
 
 class Environment {
-    function getData($envId) {
+    static function getData($envId) {
         require('db.php');
 
         $sth = $dbh->query("SELECT userId, timestamp, latitude, longitude, elevationString FROM environments WHERE envId='$envId'");

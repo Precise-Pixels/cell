@@ -1,7 +1,7 @@
 <?php
 
 class User {
-    function getData($userHandle) {
+    static function getData($userHandle) {
         require('db.php');
 
         // Check to see whether the $userHandle is an ID or a username
@@ -18,7 +18,7 @@ class User {
         return $result;
     }
 
-    function getUserId($username) {
+    static function getUserId($username) {
         require('db.php');
 
         $sth = $dbh->query("SELECT userId FROM users WHERE username='$username'");
@@ -28,7 +28,7 @@ class User {
         return $result->userId;
     }
 
-    function getUserHandle($userId) {
+    static function getUserHandle($userId) {
         require('db.php');
         $username = false;
 
@@ -45,14 +45,14 @@ class User {
         }
     }
 
-    function getEnvironments($userHandle) {
+    static function getEnvironments($userHandle) {
         require('db.php');
 
         // Check to see whether the $userHandle is an ID or a username
         if(intval($userHandle) !== 0) {
             $userId = $userHandle;
         } else {
-            $userId = $this->getUserId($userHandle);
+            $userId = User::getUserId($userHandle);
         }
 
         $sth = $dbh->query("SELECT timestamp, latitude, longitude FROM environments WHERE userId='$userId'");

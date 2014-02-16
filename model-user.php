@@ -3,11 +3,10 @@
 $userHandle = explode('/', $q)[1];
 
 require_once('php/User.php');
-$userInstance = new User;
-$user         = $userInstance->getData($userHandle);
+$user = User::getData($userHandle);
 
 if($user) {
-    $environments = $userInstance->getEnvironments($userHandle);
+    $environments = User::getEnvironments($userHandle);
     $file = 'user-profile';
 } else {
     $file = '404';

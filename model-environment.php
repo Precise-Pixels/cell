@@ -5,8 +5,7 @@ $userHandle = $envVars[1];
 $envId      = $envVars[3];
 
 require_once('php/Environment.php');
-$environmentInstance = new Environment;
-$environment = $environmentInstance->getData($envId);
+$environment = Environment::getData($envId);
 
 if($environment) {
     $file = 'environment';
