@@ -10,6 +10,7 @@
     margin: 10px auto;
     border: 2px solid $mgrey;
     animation: page-flow-circle-color 3s infinite;
+    animation-direction: alternate;
 }
 
 .arrow-down {
@@ -19,6 +20,7 @@
     border-right: 20px solid transparent;
     border-top: 20px solid $mgrey;
     animation: page-flow-arrow-color 3s infinite;
+    animation-direction: alternate;
 }
 
 #secondary-header {
