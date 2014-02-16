@@ -4,6 +4,9 @@
         <hgroup class="align-vertical">
             <h1>CELL INDUSTRIES</h1>
         </hgroup>
+        <div id="page-flow">
+            <div class="arrow-down"></div>
+        </div>
     </header>
 
     <header id="secondary-header" class="mblue">
