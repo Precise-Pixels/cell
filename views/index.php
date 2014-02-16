@@ -5,6 +5,8 @@
             <h1>CELL INDUSTRIES</h1>
         </hgroup>
         <div id="page-flow">
+            <div class="circle"></div>
+            <div class="circle"></div>
             <div class="arrow-down"></div>
         </div>
     </header>
