@@ -9,7 +9,7 @@ function init() {
     // Setup the map
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         center: new google.maps.LatLng(51.358061573190916, 1.42822265625),
-        zoom: 3,
+        zoom: 16,
         maxZoom: 16,
         minZoom: 3,
         mapTypeId: google.maps.MapTypeId.SATELLITE,
@@ -41,13 +41,60 @@ function init() {
             latLng1 = proj.fromPointToLatLng(new google.maps.Point(tile.x * 256 / Math.pow(2, zoom), (tile.y + 1) * 256 / Math.pow(2, zoom)));
             latLng2 = proj.fromPointToLatLng(new google.maps.Point((tile.x + 1) * 256 / Math.pow(2, zoom), tile.y * 256 / Math.pow(2, zoom)));
 
-            centreLat = latLng2.lat() - ((latLng2.lat() - latLng1.lat()) / 2);
-            centreLng = latLng2.lng() - ((latLng2.lng() - latLng1.lng()) / 2);
 
-            console.log([latLng1.lat(), latLng1.lng(), latLng2.lat(), latLng2.lng(), centreLat, centreLng]);
+            var lat1 = latLng1.lat();
+            var lat2 = latLng2.lat();
+            var lon1 = latLng1.lng();
+            var lon2 = latLng2.lng();
+            var centreLat = lat2 - ((lat2 - lat1) / 2);
+            var centreLon = lon2 - ((lon2 - lon1) / 2);
+
+            console.log([lat1, lon1, lat2, lon2, centreLat, centreLon]);
+
+            tileHeight = lat2 - lat1;
+            tileWidth = lon2 - lon1;
+
+            tileHeightDivision = tileHeight / 20;
+            tileWidthDivision = tileWidth / 20;
+
+            var latLonString = '';
+
+            for (y = 0; y < 20; y++) {
+                for (x = 0; x < 20; x++) {
+                    var latDivision = (lat1 + (tileHeightDivision * y)).toFixed(4);
+                    var lonDivision = (lon1 + (tileWidthDivision * x)).toFixed(4);
+
+                    latLonString += latDivision + ',' + lonDivision + '|';
+                }
+            }
+
+            latLonString = latLonString.slice(0, -1);
+            var latLonStringLength = latLonString.length;
+
+            latLonString1 = latLonString.slice(0, latLonStringLength/4);
+            latLonString2 = latLonString.slice(latLonStringLength/4*1, latLonStringLength/4*2);
+            latLonString3 = latLonString.slice(latLonStringLength/4*2, latLonStringLength/4*3);
+            latLonString4 = latLonString.slice(latLonStringLength/4*3, latLonStringLength/4*4);
+
+            latLonString2 = latLonString2.slice(1);
+            latLonString3 = latLonString3.slice(1);
+            latLonString4 = latLonString4.slice(1);
+
+            console.log(latLonString1, latLonString2, latLonString3, latLonString4);
+
+            var url = 'https://maps.googleapis.com/maps/api/elevation/json?locations='+latLonString1+'&sensor=false&key=AIzaSyB84USRNL-Xl_wiRhm1hPYRAdi0JbAD2zc&callback=?';
+
+            $.ajax({
+                url: url,
+                crossDomain: true,
+                dataType: 'jsonp',
+                success: function(data) {
+                    console.log(data)
+                }
+            });
 
             var selectedTile = document.getElementById('selected-tile');
-            selectedTile.src = 'http://maps.googleapis.com/maps/api/staticmap?center=' + centreLat + ',' + centreLng + '&zoom=16&size=256x256&scale=1&maptype=satellite&sensor=false';
+            selectedTile.src = 'http://maps.googleapis.com/maps/api/staticmap?center=' + centreLat + ',' + centreLon + '&zoom=16&size=256x256&scale=1&maptype=satellite&sensor=false';
             // Clear and load map grid overlay
             map.overlayMapTypes.setAt(0, null);
             map.overlayMapTypes.insertAt(0, tilelayer);
