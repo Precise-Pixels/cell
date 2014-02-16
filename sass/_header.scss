@@ -1,7 +1,15 @@
 header {
     height: 40px;
-    position: relative;
+    width: 100%;
+    position: fixed;
     z-index: 2;
+}
+
+#header-wrapper {
+    height: 40px;
+    min-width: 1200px;
+    position: relative;
+    background: $dgrey;
 }
 
 #site-nav,
