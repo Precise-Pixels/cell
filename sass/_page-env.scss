@@ -1,0 +1,16 @@
+#map-canvas {
+    width: 100%;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+}
+
+#selected-tile {
+    width: 256px;
+    height: 256px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: block;
+    border: 3px solid #000;
+}

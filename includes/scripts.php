@@ -5,3 +5,8 @@
 <?php else: ?>
     <script src='/build/scripts.min.js'></script>
 <?php endif; ?>
+
+<?php if($newEnv): ?>
+    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false'></script>
+    <script src='/js/new-env.js'></script>
+<?php endif; ?>
