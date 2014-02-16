@@ -76,22 +76,15 @@ function init() {
 
 var tilelayer = new google.maps.ImageMapType({
     getTileUrl: function(tile, zoom) {
-        var tileImg1 = "/img/tile1.png";
-        var tileImg2 = "/img/tile2.png";
-        var tileImg3 = "/img/tile3.png";
 
-        if (tile.x < 0 || tile.y < 0) return "tile_edge.png";
-        if (tile.x >= (1 << zoom) || tile.y >= (1 << zoom)) return "tile_edge.png";
+        if (tile.x < 0 || tile.y < 0) return 'tile-edge.png';
+        if (tile.x >= (1 << zoom) || tile.y >= (1 << zoom)) return 'tile-edge.png';
 
-        if ((tile.x % 2 && !(tile.y % 2)) || (!(tile.x % 2) && tile.y % 2)) {
-            imageurl = tileImg1;
-        } else {
-            imageurl = tileImg2;
-        }
+        imageurl = '/img/tile.png';
 
         if(currentTile != undefined) {
             if(tile.x == currentTile.x && tile.y == currentTile.y && currentZoom == 16) {
-                imageurl = tileImg3;
+                imageurl = '/img/tile-selected.png';
             }
         }
 
