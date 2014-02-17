@@ -6,26 +6,25 @@
     </header>
     
     <section>
-        <div class="align-centre lgrey">
+        <div class="align-centre">
 
-            <div class="section-padding half">
+            <div class="section-padding half lgrey">
+                <h1>INSTRUCTIONS</h1>
+                <p>Using the map below, zoom in fully then select the division of the planet you wish to clone.</p>
+            </div>
+            <div class="section-padding half sdgrey">
+                <h1>WHY ARE YOU HERE?</h1>
                 <p>Using the map below, zoom in fully then select the division of the planet you wish to clone.</p>
             </div>
 
-            <div class="cta cta--example half">
-                <hgroup class="align-vertical">
-                    <h1>Project Titan</h1>
-                    <h2>Preserving the planet</h2>
-                </hgroup>
-            </div>
         </div>
     </section>
 
     <section class="align-centre section--spacer">
-        <div id="map-canvas"></div>
     </section>
 
     <div class="align-centre mblue">
+        <div id="map-canvas"></div>
         <div id="env-form" class="mblue"> 
             <img src="/img/tile-select.jpg" id="selected-tile"/>
             <form>
@@ -39,16 +38,6 @@
                     </tr>
                 </table>
             </form>
-
-        <div class="half">
-            DATA NAME
         </div>
-        <div class="half">
-            DATA COORDS
-        </div>
-        
-        </div>
-
     </div>
-
 </main>
