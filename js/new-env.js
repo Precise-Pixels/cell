@@ -9,9 +9,8 @@ function init() {
     // Setup the map
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         center: new google.maps.LatLng(51.358061573190916, 1.42822265625),
-        zoom: 16,
+        zoom: 3,
         maxZoom: 16,
-        minZoom: 3,
         mapTypeId: google.maps.MapTypeId.SATELLITE,
         streetViewControl: false
     });
@@ -30,7 +29,7 @@ function init() {
 
             point = proj.fromLatLngToPoint(latLng);
 
-            currentTile = tile;               
+            currentTile = tile;
 
             tile.x = Math.floor((point.x / 256.0) * Math.pow(2, zoom));
             tile.y = Math.floor((point.y / 256.0) * Math.pow(2, zoom));

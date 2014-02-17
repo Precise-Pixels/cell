@@ -1,17 +1,33 @@
 #map-canvas {
     width: 100%;
     height: 600px;
-    margin: 0;
-    padding: 0;
+    float: left;
+    position: relative;
+    z-index: 1;
+}
+
+#env-form {
+    width: 100%;
+    float: left;
+    position: relative;
+    z-index: 2;
+}
+
+#env-form form {
+    width: 70%;
+    float: left;
+    margin-left: 350px;
+    padding: 30px;
+}
+
+#env-form #clone {
+    float: right;
 }
 
 #selected-tile {
-    width: 256px;
-    height: 256px;
+    top: -127px;
     position: absolute;
-    right: 0;
-    bottom: 0;
-    display: block;
-    border: 3px solid #000;
-    z-index: 2;
+    left: 40px;
+    border: 10px solid $mblue;
+    z-index: 3;
 }
