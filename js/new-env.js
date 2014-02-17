@@ -95,8 +95,8 @@ function init() {
 var tilelayer = new google.maps.ImageMapType({
     getTileUrl: function(tile, zoom) {
 
-        if (tile.x < 0 || tile.y < 0) return 'tile-edge.png';
-        if (tile.x >= (1 << zoom) || tile.y >= (1 << zoom)) return 'tile-edge.png';
+        if (tile.x < 0 || tile.y < 0) return '/img/tile-edge.png';
+        if (tile.x >= (1 << zoom) || tile.y >= (1 << zoom)) return '/img/tile-edge.png';
 
         imageurl = '/img/tile.png';
 
