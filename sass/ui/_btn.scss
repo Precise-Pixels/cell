@@ -10,6 +10,10 @@
     transition: color .5s, background .5s, box-shadow .5s;
 }
 
+.social {
+    margin-top: 0;
+}
+
 #btn--facebook {
     box-shadow: inset 4px 4px 0 #395B89, inset -4px -4px 0 #395B89;
     &:hover {

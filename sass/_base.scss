@@ -23,3 +23,11 @@ body {
     display: table-cell;
     vertical-align: middle;
 }
+
+.cell-logo {
+    height: 30px;
+    width: 30px;
+    position: relative;
+    margin: 0 auto;
+    background: $lgrey;
+}

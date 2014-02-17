@@ -2,3 +2,27 @@ footer {
     height: 150px;
     text-align: center;
 }
+
+#copyright {
+    width: 110px;
+    position: absolute;
+    left: 40px;
+    margin: auto;
+    color: $lgrey;
+}
+
+#social-icons {
+    right: 40px;
+    position: absolute;
+}
+
+@media ($min-bp-b) {
+    #copyright {
+        width: auto;
+        left: 60px;
+    }
+
+    #social-icons {
+        right: 60px;
+    }
+}
