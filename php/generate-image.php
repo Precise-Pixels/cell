@@ -2,6 +2,7 @@
 
 $heightsString = $_POST['h'];
 $resolution    = $_POST['r'];
+$tileSize      = $_POST['t'];
 
 $imgWidth = $imgHeight = $resolution;
 
@@ -22,13 +23,19 @@ foreach($rows as $y => $row) {
     }
 }
 
-// imagefilter($img, IMG_FILTER_GAUSSIAN_BLUR);
-// imagefilter($img, IMG_FILTER_SMOOTH, -2);
-// imagefilter($img, IMG_FILTER_GAUSSIAN_BLUR);
+$scaledImg = imagecreatetruecolor($tileSize, $tileSize);
+imagecopyresampled($scaledImg, $img, 0, 0, 0, 0, $tileSize, $tileSize, $resolution, $resolution);
 
-/*for ($i = 1; $i < 10; $i++) {
-    imagefilter($img, IMG_FILTER_GAUSSIAN_BLUR);
-}*/
+// imagefilter($scaledImg, IMG_FILTER_GAUSSIAN_BLUR);
+// imagefilter($scaledImg, IMG_FILTER_SMOOTH, -2);
+// imagefilter($scaledImg, IMG_FILTER_GAUSSIAN_BLUR);
 
-imagepng($img, 'generated-image.png');
-imagedestroy($img);
+// for ($i = 1; $i < 10; $i++) {
+    // imagefilter($scaledImg, IMG_FILTER_GAUSSIAN_BLUR);
+// }
+
+imagepng($scaledImg, 'generated-image.png');
+imagedestroy($scaledImg);
+
+// imagepng($img, 'generated-image.png');
+// imagedestroy($img);

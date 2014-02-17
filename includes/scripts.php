@@ -7,6 +7,6 @@
 <?php endif; ?>
 
 <?php if($isNewEnv): ?>
-    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false'></script>
+    <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4&sensor=false'></script>
     <script src='/js/new-env.js'></script>
 <?php endif; ?>

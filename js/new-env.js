@@ -5,8 +5,9 @@ var lat1;
 var lat2;
 var lon1;
 var lon2;
-var resolution = 20;
-var tileSize   = 256;
+var resolution   = 30;
+var tileSize     = 256;
+var requiredZoom = 16;
 
 function init() {
     var latLng;
@@ -15,20 +16,22 @@ function init() {
     // Setup the map
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         center: new google.maps.LatLng(51.358061573190916, 1.42822265625),
-        zoom: 3,
+        // center: new google.maps.LatLng(0, 0),
+        zoom: 16,
         maxZoom: 16,
+        minZoom: 2,
         mapTypeId: google.maps.MapTypeId.SATELLITE,
         streetViewControl: false
     });
 
     currentZoom = map.getZoom();
 
-    // Load map grid overlay
+    // Draw map grid overlay
     map.overlayMapTypes.insertAt(0, tilelayer);
 
     // Get the centre and bounding coordinates surrounding the clicked area
     getMapTileCoords = function() {
-        if(singleClick && currentZoom == 16) {
+        if(singleClick && currentZoom == requiredZoom) {
             var tile  = new google.maps.Point();
             var point = new google.maps.Point();
             var zoom  = map.getZoom();
@@ -58,7 +61,7 @@ function init() {
             // console.log([lat1, lon1, lat2, lon2, centreLat, centreLon]);
 
             var selectedTile = document.getElementById('selected-tile');
-            selectedTile.src = 'http://maps.googleapis.com/maps/api/staticmap?center=' + centreLat + ',' + centreLon + '&zoom=16&size=' + tileSize + 'x' + tileSize + '&scale=1&maptype=satellite&sensor=false';
+            selectedTile.src = 'http://maps.googleapis.com/maps/api/staticmap?center=' + centreLat + ',' + centreLon + '&zoom=' + requiredZoom + '&size=' + tileSize + 'x' + tileSize + '&scale=1&maptype=satellite&sensor=false';
             // Clear and load map grid overlay
             map.overlayMapTypes.setAt(0, null);
             map.overlayMapTypes.insertAt(0, tilelayer);
@@ -92,16 +95,19 @@ function init() {
     });
 }
 
+// Setup map grid overlay
 var tilelayer = new google.maps.ImageMapType({
     getTileUrl: function(tile, zoom) {
 
         if (tile.x < 0 || tile.y < 0) return '/img/tile-edge.png';
         if (tile.x >= (1 << zoom) || tile.y >= (1 << zoom)) return '/img/tile-edge.png';
 
-        imageurl = '/img/tile.png';
+        if(zoom == requiredZoom) {
+            imageurl = '/img/tile.png';
+        }
 
         if(currentTile != undefined) {
-            if(tile.x == currentTile.x && tile.y == currentTile.y && currentZoom == 16) {
+            if(tile.x == currentTile.x && tile.y == currentTile.y && currentZoom == requiredZoom) {
                 imageurl = '/img/tile-selected.png';
             }
         }
@@ -136,10 +142,11 @@ function generateEnv(lat1, lon1, lat2, lon2) {
 
     var latLonArrayLength = latLonArray.length;
 
-    var positionalRequest1 = { 'locations': latLonArray.slice(0,latLonArrayLength/4) };
-    var positionalRequest2 = { 'locations': latLonArray.slice(latLonArrayLength/4,latLonArrayLength/4*2) };
-    var positionalRequest3 = { 'locations': latLonArray.slice(latLonArrayLength/4*2,latLonArrayLength/4*3) };
-    var positionalRequest4 = { 'locations': latLonArray.slice(latLonArrayLength/4*3,latLonArrayLength/4*4) };
+    var positionalRequest1 = { 'locations': latLonArray.slice(0,latLonArrayLength/5) };
+    var positionalRequest2 = { 'locations': latLonArray.slice(latLonArrayLength/5,latLonArrayLength/5*2) };
+    var positionalRequest3 = { 'locations': latLonArray.slice(latLonArrayLength/5*2,latLonArrayLength/5*3) };
+    var positionalRequest4 = { 'locations': latLonArray.slice(latLonArrayLength/5*3,latLonArrayLength/5*4) };
+    var positionalRequest5 = { 'locations': latLonArray.slice(latLonArrayLength/5*4,latLonArrayLength/5*5) };
 
     var allResults = [];
 
@@ -161,7 +168,15 @@ function generateEnv(lat1, lon1, lat2, lon2) {
                             elevator.getElevationForLocations(positionalRequest4, function(results, status) {
                                 if(status == google.maps.ElevationStatus.OK) {
                                     allResults = allResults.concat(results);
-                                    getElevations();
+
+                                    elevator.getElevationForLocations(positionalRequest5, function(results, status) {
+                                        if(status == google.maps.ElevationStatus.OK) {
+                                            allResults = allResults.concat(results);
+                                            getElevations();
+                                        } else {
+                                            console.log('Elevation request 5 failed due to: ' + status);
+                                        }
+                                    });
                                 } else {
                                     console.log('Elevation request 4 failed due to: ' + status);
                                 }
@@ -223,7 +238,7 @@ function generateEnv(lat1, lon1, lat2, lon2) {
         // console.log(elevationsString);
 
         // Send elevationsString to PHP to generate and store image
-        var data = 'h=' + elevationsString + '&r=' + resolution;
+        var data = 'h=' + elevationsString + '&r=' + resolution + '&t=' + tileSize;
 
         request = new XMLHttpRequest;
         request.open('POST', '/php/generate-image.php', true);
