@@ -5,11 +5,12 @@
             <h1>NEW ENVIRONMENT</h1>
         </hgroup>
     </header>
-        <section class="full">
+    <section class="full">
         <div class="align-centre">
             <div id="map-canvas"></div>
             <img src="" id="selected-tile"/>
         </div>
-    </section> 
+    </section>
+    <button id="generate-btn">GENERATE</button>
     
 </main>
