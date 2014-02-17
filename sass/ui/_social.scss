@@ -1,0 +1,46 @@
+.social {
+    width: 50px;
+    height: 50px;
+    margin-right: 1%;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    background: $lgrey;
+}
+
+.social:hover .overlay { 
+    top: 0;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    z-index: 3;
+    -webkit-transition: top 0.3s ease-in-out; 
+    -moz-transition: top 0.3s ease-in-out; 
+    -o-transition: top 0.3s ease-in-out; 
+    transition: top 0.3s ease-in-out; 
+}
+
+.facebook .overlay {
+    background: #395b89;
+}
+
+.twitter .overlay {
+    background: #2BBFEC;
+}
+
+.google-plus .overlay {
+    background: #D63B3B;
+}
+
+.mail .overlay {
+    background: #9FAE37;
+}
+
+.linkedin .overlay {
+    background: #1184CD;
+}
