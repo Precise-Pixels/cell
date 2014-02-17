@@ -1,6 +1,14 @@
-main {
-    position: relative;
+#test {
+    width: 1200px;
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: 1;
+}
+
+main { 
+    position: relative;
+    z-index: 2;
 }
 
 main header {
@@ -13,7 +21,7 @@ section > div {
 }
 
 .parallax-margin {
-    margin-top: 100px;
+    margin-top: 400px;
 }
 
 .section-padding {
