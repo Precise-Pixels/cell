@@ -64,8 +64,6 @@ function init() {
             // Clear and load map grid overlay
             map.overlayMapTypes.setAt(0, null);
             map.overlayMapTypes.insertAt(0, tilelayer);
-
-
         }
     };
 

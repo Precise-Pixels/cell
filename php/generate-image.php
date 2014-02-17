@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $heightsString = $_POST['h'];
 $resolution    = $_POST['r'];
@@ -25,5 +26,9 @@ for ($i = 1; $i < 10; $i++) {
     imagefilter($scaledImg, IMG_FILTER_GAUSSIAN_BLUR);
 }
 
-imagepng($scaledImg, 'generated-image.png');
+if(!is_dir("../img/user/{$_SESSION['userId']}")) {
+    mkdir("../img/user/{$_SESSION['userId']}", 0777, true);
+}
+
+imagepng($scaledImg, "../img/user/{$_SESSION['userId']}/height-map-1.png");
 imagedestroy($scaledImg);
