@@ -10,6 +10,41 @@
     transition: color .5s, background .5s, box-shadow .5s;
 }
 
+#btn--facebook {
+    box-shadow: inset 4px 4px 0 #395B89, inset -4px -4px 0 #395B89;
+    &:hover {
+        box-shadow: inset 4px 50px 0 #395b89, inset -4px -4px 0 #395b89;
+    }
+}
+
+#btn--twitter {
+    box-shadow: inset 4px 4px 0 #2BBFEC, inset -4px -4px 0 #2BBFEC;
+    &:hover {
+        box-shadow: inset 4px 50px 0 #2BBFEC, inset -4px -4px 0 #2BBFEC;
+    }
+}
+
+#btn--google-plus {
+    box-shadow: inset 4px 4px 0 #D63B3B, inset -4px -4px 0 #D63B3B;
+    &:hover {
+        box-shadow: inset 4px 50px 0 #D63B3B, inset -4px -4px 0 #D63B3B;
+    }
+}
+
+#btn--mail {
+    box-shadow: inset 4px 4px 0 #9FAE37, inset -4px -4px 0 #9FAE37;
+    &:hover {
+        box-shadow: inset 4px 50px 0 #9FAE37, inset -4px -4px 0 #9FAE37;
+    }
+}
+
+#btn--linkedin {
+    box-shadow: inset 4px 4px 0 #1184CD, inset -4px -4px 0 #1184CD;
+    &:hover {
+        box-shadow: inset 4px 50px 0 #1184CD, inset -4px -4px 0 #1184CD;
+    }
+}
+
 .lgrey .btn {
     color: $dgrey;
     box-shadow: inset 4px 4px 0 $dgrey, inset -4px -4px 0 $dgrey;
