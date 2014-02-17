@@ -1,4 +1,4 @@
-<div id="test" class="section-padding align-centre dgrey">
+<div id="parallax-header" class="section-padding align-centre dgrey">
     <hgroup class="align-vertical">
         <h1>ABOUT</h1>
     </hgroup>
