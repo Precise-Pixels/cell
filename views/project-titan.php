@@ -1,10 +1,10 @@
-<main>
+<div id="parallax-header" class="section-padding align-centre dgrey">
+    <hgroup class="align-vertical">
+        <h1>PROJECT TITAN</h1>
+    </hgroup>
+</div>
 
-    <header class="section-padding align-centre dgrey">
-        <hgroup class="align-vertical">
-            <h1>PROJECT TITAN</h1>
-        </hgroup>
-    </header>
+<main class="parallax-margin">
 
     <section>
         <div class="align-centre">
