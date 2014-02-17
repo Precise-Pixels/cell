@@ -1,6 +1,8 @@
 <?php
 
-$userHandle = explode('/', $q)[1];
+$userVars   = explode('/', $q);
+$userHandle = $userVars[1];
+
 
 require_once('php/User.php');
 $user = User::getData($userHandle);
