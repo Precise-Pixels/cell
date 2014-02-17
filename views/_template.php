@@ -125,6 +125,7 @@
             <h1>SOCIAL BUTTONS</h1>
             <div class="social facebook">
                 <a href="#">
+                    <div class="icon facebook-icon"></div>
                     <div class="overlay"></div>
                 </a>
             </div>
