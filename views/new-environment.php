@@ -4,19 +4,15 @@
             <h1>CLONE A NEW ENVIRONMENT</h1>
         </hgroup>
     </header>
-    
-    <section>
-        <div class="align-centre">
 
-            <div class="section-padding half lgrey">
-                <h1>INSTRUCTIONS</h1>
-                <p>Using the map below, zoom in fully then select the division of the planet you wish to clone.</p>
-            </div>
-            <div class="section-padding half sdgrey">
-                <h1>WHY ARE YOU HERE?</h1>
-                <p>Using the map below, zoom in fully then select the division of the planet you wish to clone.</p>
-            </div>
-
+    <section class="align-centre">
+        <div class="section-padding half lgrey">
+            <h1>INSTRUCTIONS</h1>
+            <p>Using the map below, zoom in fully then select the division of the planet you wish to clone.</p>
+        </div>
+        <div class="section-padding half sdgrey">
+            <h1>WHY ARE YOU HERE?</h1>
+            <p>Using the map below, zoom in fully then select the division of the planet you wish to clone.</p>
         </div>
     </section>
 
@@ -34,7 +30,7 @@
                     </tr>
                     <tr>
                         <td><input type="text" name="env-name" required autofocus/></td>
-                        <td><input type="submit" id="clone" name="clone" value="CLONE" class="btn"/></td>
+                        <td><input type="submit" id="generate-btn" name="clone" value="CLONE" class="btn"/></td>
                     </tr>
                 </table>
             </form>
