@@ -64,17 +64,18 @@ $loginSystem = new LoginSystem();
             $wrapEnd   = '</p>';
 
             if(!empty($_POST['register-submit'])) {
+                $username      = $_POST['username'];
                 $email         = $_POST['email'];
                 $password      = $_POST['password'];
                 $emailAgain    = $_POST['email-again'];
                 $passwordAgain = $_POST['password-again'];
 
-                if(!empty($email) && !empty($password) && !empty($emailAgain) && !empty($passwordAgain)) {
+                if(!empty($username) && !empty($email) && !empty($password) && !empty($emailAgain) && !empty($passwordAgain)) {
                     if($email === $emailAgain && $password === $passwordAgain) {
-                        $exists = $loginSystem->checkUserExists($email);
+                        $exists = $loginSystem->checkUserExists($email, $username);
 
                         if($exists) {
-                            echo $wrapStart . 'An account with this email already exists.' . $wrapEnd;
+                            echo $wrapStart . 'An account with this email/username already exists.' . $wrapEnd;
                         } else {
                             $response = $loginSystem->createUser($email, $password);
                             echo $response;
@@ -90,6 +91,11 @@ $loginSystem = new LoginSystem();
 
             <form method="post" id="register-form">
                 <table>
+                    <tr>
+                        <td><label for="username">Username:</label></td>
+                        <td><input type="text" name="username" required/></td>
+                    </tr>
+
                     <tr>
                         <td><label for="email">Email:</label></td>
                         <td><input type="email" name="email" required/></td>

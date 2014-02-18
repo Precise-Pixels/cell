@@ -101,10 +101,10 @@ class LoginSystem {
         }
     }
 
-    static function checkUserExists($email) {
+    static function checkUserExists($email, $username) {
         require('db.php');
 
-        $sth = $dbh->query("SELECT email FROM users WHERE email='$email'");
+        $sth = $dbh->query("SELECT email, username FROM users WHERE email='$email' OR username='$username'");
         $sth->setFetchMode(PDO::FETCH_OBJ);
         $result = $sth->fetch();
 
