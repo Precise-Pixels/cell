@@ -1,17 +1,10 @@
 <?php
 
 class User {
-    static function getData($userHandle) {
+    static function getData($username) {
         require('db.php');
 
-        // Check to see whether the $userHandle is an ID or a username
-        if(intval($userHandle) !== 0) {
-            $userHandleColumn = 'userId';
-        } else {
-            $userHandleColumn = 'username';
-        }
-
-        $sth = $dbh->query("SELECT userId, timestamp, username FROM users WHERE $userHandleColumn='$userHandle'");
+        $sth = $dbh->query("SELECT userId, timestamp, username FROM users WHERE username='$username'");
         $sth->setFetchMode(PDO::FETCH_OBJ);
         $result = $sth->fetch();
 
@@ -28,32 +21,10 @@ class User {
         return $result->userId;
     }
 
-    static function getUserHandle($userId) {
-        require('db.php');
-        $username = false;
-
-        $sth = $dbh->query("SELECT username FROM users WHERE userId='$userId'");
-        $sth->setFetchMode(PDO::FETCH_OBJ);
-        $result = $sth->fetch();
-
-        $username = $result->username;
-
-        if($username != '') {
-            return $username;
-        } else {
-            return $userId;
-        }
-    }
-
-    static function getEnvironments($userHandle) {
+    static function getEnvironments($username) {
         require('db.php');
 
-        // Check to see whether the $userHandle is an ID or a username
-        if(intval($userHandle) !== 0) {
-            $userId = $userHandle;
-        } else {
-            $userId = User::getUserId($userHandle);
-        }
+        $userId = User::getUserId($username);
 
         $sth = $dbh->query("SELECT timestamp, latitude, longitude FROM environments WHERE userId='$userId'");
         $sth->setFetchMode(PDO::FETCH_OBJ);
