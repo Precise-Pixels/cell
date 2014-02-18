@@ -11,7 +11,7 @@ $name          = $_POST['n'];
 $userId        = $_SESSION['userId'];
 
 // Generate the height map
-$img = imagecreatetruecolor(1380, 1380);
+$img = imagecreatetruecolor(1282, 1282);
 $map = imagecreatetruecolor($resolution, $resolution);
 
 $rows = explode('-', $heightsString);
@@ -32,7 +32,7 @@ for ($i = 1; $i < 50; $i++) {
     imagefilter($scaledImg, IMG_FILTER_GAUSSIAN_BLUR);
 }
 
-imagecopy($img, $scaledImg, 50, 50, 0, 0, 1280, 1280);
+imagecopy($img, $scaledImg, 1, 1, 0, 0, 1280, 1280);
 
 // Save the data in the database
 $timestamp = date("Y-m-d H:i:s");
