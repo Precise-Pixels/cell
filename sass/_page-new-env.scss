@@ -21,9 +21,10 @@
 }
 
 #selected-tile {
-    top: -127px;
+    width: 240px;
     position: absolute;
-    left: 40px;
+    top: -120px;
+    left: 75px;
     border: 10px solid $mblue;
     z-index: 3;
 }
