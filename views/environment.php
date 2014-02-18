@@ -10,7 +10,6 @@
     var env = document.getElementById('env');
     var renderer = new THREE.WebGLRenderer({alpha: true, antialias: true});
     renderer.setSize(env.clientWidth, env.clientHeight);
-    console.log(document);
     env.appendChild(renderer.domElement);
 
     var scene = new THREE.Scene();
@@ -51,7 +50,7 @@
     var cubeFaceMaterials = [ podiumShader, podiumShader, podiumShader, podiumShader, podiumShader, dispMapShader ];
 
     // Geometry
-    var geometry = new THREE.CubeGeometry(100, 100, 5, 100, 100, 1, cubeFaceMaterials);
+    var geometry = new THREE.CubeGeometry(100, 100, 2, 100, 100, 1, cubeFaceMaterials);
     geometry.computeTangents();
 
     var podium = new THREE.Mesh( geometry, new THREE.MeshFaceMaterial(cubeFaceMaterials) );
