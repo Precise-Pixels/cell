@@ -91,7 +91,8 @@ function init() {
     var generateBtn = document.getElementById('generate-btn');
     generateBtn.addEventListener('click', function(e) {
         e.preventDefault();
-        generateEnv(lat1, lon1, lat2, lon2)
+        e.target.className += ' btn--spinner';
+        generateEnv(lat1, lon1, lat2, lon2);
     });
 }
 
