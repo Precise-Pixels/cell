@@ -5,6 +5,8 @@ var lat1;
 var lat2;
 var lon1;
 var lon2;
+var centreLat;
+var centreLon;
 var resolution   = 30;
 var tileSize     = 256;
 var requiredZoom = 10;
@@ -54,8 +56,8 @@ function init() {
             lat2 = latLng2.lat();
             lon1 = latLng1.lng();
             lon2 = latLng2.lng();
-            var centreLat = lat2 - ((lat2 - lat1) / 2);
-            var centreLon = lon2 - ((lon2 - lon1) / 2);
+            centreLat = lat2 - ((lat2 - lat1) / 2);
+            centreLon = lon2 - ((lon2 - lon1) / 2);
 
             // console.log([lat1, lon1, lat2, lon2, centreLat, centreLon]);
 
@@ -87,7 +89,8 @@ function init() {
     });
 
     var generateBtn = document.getElementById('generate-btn');
-    generateBtn.addEventListener('click', function() {
+    generateBtn.addEventListener('click', function(e) {
+        e.preventDefault();
         generateEnv(lat1, lon1, lat2, lon2)
     });
 }
@@ -235,21 +238,16 @@ function generateEnv(lat1, lon1, lat2, lon2) {
         // console.log(elevationsString);
 
         // Send elevationsString to PHP to generate and store image
-        var data = 'h=' + elevationsString + '&r=' + resolution + '&t=' + tileSize;
+        var data = 'cLat=' + centreLat + '&cLon=' + centreLon + '&h=' + elevationsString + '&r=' + resolution + '&t=' + tileSize;
 
-        request = new XMLHttpRequest;
-        request.open('POST', '/php/generate-image.php', true);
+        var request = new XMLHttpRequest;
+        request.open('POST', '/php/cloneEnv.php', true);
         request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         request.send(data);
 
-        request.onreadystatechange = function() {
+        request.onreadystatechange = function(data) {
             if(request.readyState == 4 && request.status == 200) {
-                // Display the generated image
-                var img = new Image();
-                img.src = '/php/generated-image.png';
-                img.style.position = 'absolute';
-                img.style.bottom = '0';
-                document.body.appendChild(img);
+                console.log('Environment cloned successfully.');
             } else if(request.status != 200) {
                 console.log('An error has occurred.');
             }
