@@ -45,17 +45,18 @@
     uniforms[ "tDiffuse" ].value = texture;
     uniforms[ "uDisplacementScale" ].value = 20;
 
-    var parameters = { fragmentShader: shader.fragmentShader, vertexShader: shader.vertexShader, uniforms: uniforms, lights: true, wireframe: false };
-    var material = new THREE.ShaderMaterial( parameters );
+    var dispMapShader = new THREE.ShaderMaterial({ fragmentShader: shader.fragmentShader, vertexShader: shader.vertexShader, uniforms: uniforms, lights: true, wireframe: false });
+    var podiumShader  = new THREE.MeshLambertMaterial({ ambient: 0x222222 });
+
+    var cubeFaceMaterials = [ podiumShader, podiumShader, podiumShader, podiumShader, podiumShader, dispMapShader ];
 
     // Geometry
-    geometry = new THREE.PlaneGeometry(100, 100, 100, 100);
+    var geometry = new THREE.CubeGeometry(100, 100, 5, 100, 100, 1, cubeFaceMaterials);
     geometry.computeTangents();
 
-    var plane = new THREE.Mesh( geometry, material);
-    plane.rotation.y = Math.PI;
+    var podium = new THREE.Mesh( geometry, new THREE.MeshFaceMaterial(cubeFaceMaterials) );
 
-    scene.add(plane);
+    scene.add(podium);
 
     // Functions
     function animate() {
