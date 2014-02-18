@@ -54,3 +54,5 @@ if(!is_dir("../img/user/$userId")) {
 // Save height map and clean up
 imagepng($img, "../img/user/$userId/height-map-{$dbh->lastInsertId()}.png");
 imagedestroy($img);
+
+header("X-Env-URL: /user/{$_SESSION['username']}/env/{$dbh->lastInsertId()}");

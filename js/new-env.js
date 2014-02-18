@@ -247,7 +247,7 @@ function generateEnv(lat1, lon1, lat2, lon2) {
 
         request.onreadystatechange = function(data) {
             if(request.readyState == 4 && request.status == 200) {
-                console.log('Environment cloned successfully.');
+                window.location.href = request.getResponseHeader('X-Env-URL');
             } else if(request.status != 200) {
                 console.log('An error has occurred.');
             }
