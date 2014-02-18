@@ -29,7 +29,7 @@
                         <td><label for="env-name">Your Environment Name:</label></td>
                     </tr>
                     <tr>
-                        <td><input type="text" name="env-name" required autofocus/></td>
+                        <td><input type="text" name="env-name" required/></td>
                         <td><input type="submit" id="generate-btn" name="clone" value="CLONE" class="btn"/></td>
                     </tr>
                 </table>
