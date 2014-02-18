@@ -11,27 +11,28 @@ $name          = $_POST['n'];
 $userId        = $_SESSION['userId'];
 
 // Generate the height map
-$imgWidth = $imgHeight = $resolution;
-
-$img = imagecreatetruecolor($imgWidth, $imgHeight);
+$img = imagecreatetruecolor(1380, 1380);
+$map = imagecreatetruecolor($resolution, $resolution);
 
 $rows = explode('-', $heightsString);
 
 foreach($rows as $y => $row) {
     $columns = explode(',', $row);
     foreach($columns as $x => $column) {
-        $colour = imagecolorallocate($img, $column, $column, $column);
-        imagesetpixel($img,$x,$y,$colour);
+        $colour = imagecolorallocate($map, $column, $column, $column);
+        imagesetpixel($map, $x, $y, $colour);
     }
 }
 
 // Resize and blur the height map
 $scaledImg = imagecreatetruecolor($tileSize, $tileSize);
-imagecopyresampled($scaledImg, $img, 0, 0, 0, 0, $tileSize, $tileSize, $resolution, $resolution);
+imagecopyresampled($scaledImg, $map, 0, 0, 0, 0, $tileSize, $tileSize, $resolution, $resolution);
 
-for ($i = 1; $i < 10; $i++) {
+for ($i = 1; $i < 50; $i++) {
     imagefilter($scaledImg, IMG_FILTER_GAUSSIAN_BLUR);
 }
+
+imagecopy($img, $scaledImg, 50, 50, 0, 0, 1280, 1280);
 
 // Save the data in the database
 $timestamp = date("Y-m-d H:i:s");
@@ -51,5 +52,5 @@ if(!is_dir("../img/user/$userId")) {
 }
 
 // Save height map and clean up
-imagepng($scaledImg, "../img/user/$userId/height-map-{$dbh->lastInsertId()}.png");
-imagedestroy($scaledImg);
+imagepng($img, "../img/user/$userId/height-map-{$dbh->lastInsertId()}.png");
+imagedestroy($img);

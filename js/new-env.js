@@ -238,7 +238,7 @@ function generateEnv(lat1, lon1, lat2, lon2) {
         // console.log(elevationsString);
 
         // Send elevationsString to PHP to generate and store image
-        var data = 'cLat=' + centreLat + '&cLon=' + centreLon + '&h=' + elevationsString + '&r=' + resolution + '&t=' + tileSize + '&n=' + encodeURIComponent(document.getElementsByName('env-name')[0].value);
+        var data = 'cLat=' + centreLat + '&cLon=' + centreLon + '&h=' + elevationsString + '&r=' + resolution + '&t=' + tileSize * 4 + '&n=' + encodeURIComponent(document.getElementsByName('env-name')[0].value);
 
         var request = new XMLHttpRequest;
         request.open('POST', '/php/cloneEnv.php', true);
