@@ -8,7 +8,7 @@
 <script>
     // Scene
     var env = document.getElementById('env');
-    var renderer = new THREE.WebGLRenderer({antialias: true});
+    var renderer = new THREE.WebGLRenderer({alpha: true, antialias: true});
     renderer.setSize(env.clientWidth, env.clientHeight);
     console.log(document);
     env.appendChild(renderer.domElement);
