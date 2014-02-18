@@ -8,7 +8,7 @@ var lon2;
 var centreLat;
 var centreLon;
 var resolution   = 30;
-var tileSize     = 256;
+var tileSize     = 320;
 var requiredZoom = 10;
 
 function init() {
@@ -62,7 +62,7 @@ function init() {
             // console.log([lat1, lon1, lat2, lon2, centreLat, centreLon]);
 
             var selectedTile = document.getElementById('selected-tile');
-            selectedTile.src = 'http://maps.googleapis.com/maps/api/staticmap?center=' + centreLat + ',' + centreLon + '&zoom=' + requiredZoom + '&size=' + tileSize + 'x' + tileSize + '&scale=1&maptype=satellite&sensor=false';
+            selectedTile.src = 'http://maps.googleapis.com/maps/api/staticmap?center=' + centreLat + ',' + centreLon + '&zoom=' + (requiredZoom + 1) + '&size=' + tileSize * 2 + 'x' + tileSize * 2 + '&scale=1&maptype=satellite&sensor=false';
             // Clear and load map grid overlay
             map.overlayMapTypes.setAt(0, null);
             map.overlayMapTypes.insertAt(0, tilelayer);
