@@ -5,9 +5,9 @@ $userHandle = $envVars[1];
 $envId      = $envVars[3];
 
 require_once('php/Environment.php');
-$environment = Environment::getData($envId);
+$env = Environment::getData($envId);
 
-if($environment) {
+if($env) {
     $file = 'environment';
 } else {
     $file = '404';
