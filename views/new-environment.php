@@ -40,14 +40,14 @@
             <div id="map-canvas"></div>
             <div id="env-form" class="mblue"> 
                 <img src="/img/tile-select.jpg" id="selected-tile"/>
-                <form>
+                <form method="POST">
                     <table>
                         <tr>
                             <td><label for="env-name">Your Environment Name:</label></td>
                         </tr>
                         <tr>
-                            <td><input type="text" name="env-name" required/></td>
-                            <td><input type="submit" id="generate-btn" name="clone" value="CLONE" class="btn"/></td>
+                            <td><input type="text" name="env-name" id="env-name" required/></td>
+                            <td><input type="button" id="clone-btn" value="CLONE" class="btn"/></td>
                         </tr>
                     </table>
                 </form>
