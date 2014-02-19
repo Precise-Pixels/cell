@@ -12,26 +12,24 @@
         </hgroup>
     </header>
 
-    <section class="section--spacer">
-        <div class="align-centre lgrey">
-            <ol>
-                <li class="third">
-                    <h1>1</h1>
-                    <img src="/img/new-env-instructions-1.png" class="scale">
-                    <p>Select an area on the map</p>
-                </li>
-                <li class="third">
-                    <h1>2</h1>
-                    <img src="/img/new-env-instructions-2.png" class="scale">
-                    <p>Click the clone button</p>
-                </li>
-                <li class="third">
-                    <h1>3</h1>
-                    <img src="/img/new-env-instructions-3.png" class="scale">
-                    <p>View your cloned environment</p>
-                </li>
-            </ol>
-        </div>      
+    <section class="align-centre lgrey section--spacer">
+        <ol>
+            <li class="third">
+                <h1>1</h1>
+                <img src="/img/new-env-instructions-1.png" class="scale">
+                <p>Select an area on the map</p>
+            </li>
+            <li class="third">
+                <h1>2</h1>
+                <img src="/img/new-env-instructions-2.png" class="scale">
+                <p>Click the clone button</p>
+            </li>
+            <li class="third">
+                <h1>3</h1>
+                <img src="/img/new-env-instructions-3.png" class="scale">
+                <p>View your cloned environment</p>
+            </li>
+        </ol>
     </section>
 
     <section class="section--spacer">
