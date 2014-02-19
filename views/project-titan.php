@@ -37,15 +37,17 @@
         </div>
     </section>
 
-    <section class="align-centre lgrey">
-        <div class="third">
-            <img src="/img/new-env-instructions-mblue-1.jpg" class="scale">
-        </div>
-        <div class="third">
-            <img src="/img/new-env-instructions-mblue-2.jpg" class="scale">
-        </div>
-        <div class="third">
-            <img src="/img/new-env-instructions-mblue-3.jpg" class="scale">
+    <section>
+        <div class="align-centre mblue">
+            <div class="third">
+                <img src="/img/new-env-instructions-mblue-1.jpg" class="scale">
+            </div>
+            <div class="third">
+                <img src="/img/new-env-instructions-mblue-2.jpg" class="scale">
+            </div>
+            <div class="third">
+                <img src="/img/new-env-instructions-mblue-3.jpg" class="scale">
+            </div>
         </div>
     </section>
 

@@ -5,15 +5,17 @@
         </hgroup>
     </header>
 
-    <section class="align-centre lgrey">
-        <div class="third">
-            <img src="/img/new-env-instructions-lgrey-1.jpg" class="scale">
-        </div>
-        <div class="third">
-            <img src="/img/new-env-instructions-lgrey-2.jpg" class="scale">
-        </div>
-        <div class="third">
-            <img src="/img/new-env-instructions-lgrey-3.jpg" class="scale">
+    <section>
+        <div class="align-centre lgrey">
+            <div class="third">
+                <img src="/img/new-env-instructions-lgrey-1.jpg" class="scale">
+            </div>
+            <div class="third">
+                <img src="/img/new-env-instructions-lgrey-2.jpg" class="scale">
+            </div>
+            <div class="third">
+                <img src="/img/new-env-instructions-lgrey-3.jpg" class="scale">
+            </div>
         </div>
     </section>
 
