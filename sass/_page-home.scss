@@ -45,11 +45,17 @@
 
 @media ($min_bp_b) {
     .home-data--right { 
+        width: auto;
         float: right;
         text-align: right;
     }
-    .home-data--left { 
+    .home-data--left {
+        width: auto; 
         text-align: left;
+    }
+    #home-learn-more {
+        width: auto;
+        padding: 30px;
     }
 }
 
