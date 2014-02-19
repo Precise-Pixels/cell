@@ -91,7 +91,8 @@ function init() {
     var generateBtn = document.getElementById('generate-btn');
     generateBtn.addEventListener('click', function(e) {
         e.preventDefault();
-        generateEnv(lat1, lon1, lat2, lon2)
+        e.target.className += ' btn--spinner';
+        generateEnv(lat1, lon1, lat2, lon2);
     });
 }
 
@@ -247,7 +248,7 @@ function generateEnv(lat1, lon1, lat2, lon2) {
 
         request.onreadystatechange = function(data) {
             if(request.readyState == 4 && request.status == 200) {
-                console.log('Environment cloned successfully.');
+                window.location.href = request.getResponseHeader('X-Env-URL');
             } else if(request.status != 200) {
                 console.log('An error has occurred.');
             }

@@ -38,6 +38,11 @@
     }
 }
 
+.btn--spinner {
+    text-indent: -9999px;
+    background: url(/img/spinner.gif) center no-repeat;
+}
+
 @media ($min-bp-a) {
     .btn {        
         width: auto;
