@@ -10,9 +10,12 @@
         <hgroup class="align-vertical">
             <h1>CLONE A NEW ENVIRONMENT</h1>
         </hgroup>
+        <div class="align-vertical">
+            <a class="btn">?</a>
+        </div>
     </header>
 
-    <section class="align-centre lgrey section--spacer">
+    <section id="new-env-instructions" class="align-centre lgrey section--spacer">
         <ol>
             <li class="third">
                 <h1>1</h1>
