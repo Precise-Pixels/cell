@@ -64,7 +64,7 @@
                 </div>
             </div>
             <div class="half section-padding sdgrey">
-                <h1>HOW IT'S DONE</h1>
+                <h1>HOW WE DO IT</h1>
                 <div class="section-content-wrapper">
                     <p>We send our Quantum Cell Clone Cubes from space. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo. Suspendisse adipiscing nunc tortor, eget accumsan tellus tincidunt at. Ut suscipit elit id tellus tincidunt.</p>
                 </div>
