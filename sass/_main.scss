@@ -24,7 +24,13 @@ section > div {
     margin-bottom: 100px;
 }
 
+alternate {
+    float:right;
+}
+
 @media ($min-bp-b) {
+
+
     .section-padding {
         padding: 60px 45px;
     }

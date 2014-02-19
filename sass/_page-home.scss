@@ -6,14 +6,56 @@
     padding: 70px 25px;
 }
 
-@media ($min-bp-a) {
-    #home-learn-more {
-        width: 100%;
+#project-titan-data {
+    position: relative;
+    text-align: center;
+}
+
+.home-data {  
+    text-align: center;
+}
+
+.home-data--left {
+    float: left;
+}
+
+.home-data--right { 
+    float: left;
+}
+
+
+.home-data h2 {
+    font-size: 4rem;
+    font-weight: 200;
+}
+
+.home-data p {
+    margin: 0;
+}
+
+#home-learn-more {
+    margin-top: 20px;
+    position: relative;
+    text-align: center;
+}
+
+@media ($min_bp_a) {
+
+}
+
+@media ($min_bp_b) {
+    .home-data--right { 
+        float: right;
+        text-align: right;
+    }
+    .home-data--left { 
+        text-align: left;
     }
 }
 
-@media ($min-bp-b) {
-    #home-learn-more {
-        width: auto;
-    }
+@media ($min_bp_c) {
+.home-data h2 {
+    font-size: 5rem;
+}
+
 }

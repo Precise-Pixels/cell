@@ -21,18 +21,40 @@
         </div>
     </section>
 
-    <section class="mblue">
-        <div class="section-padding align-centre">
-            <h1 class="text-align-center">Do your bit to save the planet</h1>
+        <section class="section-padding align-centre mblue">
+            <h1 class="home-data">Do your bit to save the planet</h1>
+                <div class="home-data home-data--left half">
+                    <h2>49%</h2>
+                    <p>OF THE PLANET CLONED</p>
+                </div>
+                <div class="home-data home-data--right half">
+                    <h2>167076</h2>
+                    <p>ENVIRONMENTS CLONED</p>
+                </div>
+                <div id="home-learn-more" class="section-padding align-centre mblue">
+                    <a href="#" class="btn">LEARN MORE</a>
+                </div>       
+        </section>
+
+
+<!--     <section class="mblue">
+        <div id="project-titan-data" class="section-padding align-centre">
+            <h1>Do your bit to save the planet</h1>
             <div class="section-content-wrapper">
-                <p class="half-margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rho.</p>
-                <p class="half-margin">Donec consequat est sed eros condimentum, nec porttitor mi convallis. Sed porttitor.</p>
+                <div class="home-data half">
+                    <h2>49%</h2>
+                    <p>OF THE PLANET CLONED</p>
+                </div>
+                <div class="home-data half">
+                    <h2>167076</h2>
+                    <p>ENVIRONMENTS CLONED</p>
+                </div>
             </div>
-            <div class="section-content-wrapper text-align-center">
-                <a href="#" id="home-learn-more" class="btn">LEARN MORE</a>
+            <div id="home-learn-more" class="section-content-wrapper">
+                <a href="#" class="btn">LEARN MORE</a>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section>
         <div class="section-padding align-centre dgrey">
