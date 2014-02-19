@@ -49,7 +49,7 @@ $loginSystem = new LoginSystem();
 
                     <tr>
                         <td></td>
-                        <td><input type="submit" name="signin-submit" value="Sign in"/></td>
+                        <td><input type="submit" name="signin-submit" value="Sign in" class="btn"/></td>
                     </tr>
                 </table>
             </form>
