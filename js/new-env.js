@@ -131,6 +131,7 @@ function init() {
 // Setup map grid overlay
 var tilelayer = new google.maps.ImageMapType({
     getTileUrl: function(tile, zoom) {
+        var imageurl;
 
         if (tile.x < 0 || tile.y < 0) return '/img/tile-edge.png';
         if (tile.x >= (1 << zoom) || tile.y >= (1 << zoom)) return '/img/tile-edge.png';
@@ -145,7 +146,9 @@ var tilelayer = new google.maps.ImageMapType({
             }
         }
 
-        return imageurl;
+        if(imageurl) {
+            return imageurl;
+        }
     },
     tileSize: new google.maps.Size(tileSize, tileSize)
 });
