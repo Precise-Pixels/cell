@@ -5,18 +5,16 @@
         </hgroup>
     </header>
 
-    <section class="align-centre">
-        <div class="section-padding half lgrey">
-            <h1>INSTRUCTIONS</h1>
-            <p>Using the map below, zoom in fully then select the division of the planet you wish to clone.</p>
+    <section class="align-centre lgrey">
+        <div class="third">
+            <img src="/img/new-env-instructions-lgrey-1.jpg" class="scale">
         </div>
-        <div class="section-padding half sdgrey">
-            <h1>WHY ARE YOU HERE?</h1>
-            <p>Using the map below, zoom in fully then select the division of the planet you wish to clone.</p>
+        <div class="third">
+            <img src="/img/new-env-instructions-lgrey-2.jpg" class="scale">
         </div>
-    </section>
-
-    <section class="align-centre section--spacer">
+        <div class="third">
+            <img src="/img/new-env-instructions-lgrey-3.jpg" class="scale">
+        </div>
     </section>
 
     <div class="align-centre mblue">
@@ -36,4 +34,7 @@
             </form>
         </div>
     </div>
+
+
+
 </main>

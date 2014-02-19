@@ -35,9 +35,15 @@
         </div>
     </section>
 
-    <section>
-        <div class="section-padding align-centre mblue">
-            <img src="/img/placeholder.gif" alt="Company Logo" class="full">
+    <section class="align-centre lgrey">
+        <div class="third">
+            <img src="/img/new-env-instructions-mblue-1.jpg" class="scale">
+        </div>
+        <div class="third">
+            <img src="/img/new-env-instructions-mblue-2.jpg" class="scale">
+        </div>
+        <div class="third">
+            <img src="/img/new-env-instructions-mblue-3.jpg" class="scale">
         </div>
     </section>
 
