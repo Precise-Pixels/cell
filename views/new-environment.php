@@ -11,7 +11,7 @@
             <h1>CLONE A NEW ENVIRONMENT</h1>
         </hgroup>
     </header>
-    
+
     <section class="section--spacer">
         <div class="align-centre lgrey">
             <ol>
@@ -71,13 +71,11 @@
         </section>
         
         <section class="section-content-wrapper">
-        <div class="half">
-            <a href="technology" class="cta cta--example">
+            <a href="technology" class="cta cta--example half">
                 <hgroup class="align-vertical">
                     <h1>Project Titan</h1>
                 </hgroup>
             </a>
-        </div>
             <a href="technology" class="cta cta--example half">
                 <hgroup class="align-vertical">
                     <h1>The Process</h1>
