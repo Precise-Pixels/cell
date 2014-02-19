@@ -11,25 +11,27 @@
             <h1>CLONE A NEW ENVIRONMENT</h1>
         </hgroup>
     </header>
-
-    <section class="align-centre">
-        <ol class="lgrey full section--spacer">
-            <li class="third">
-                <h1>1</h1>
-                <img src="/img/new-env-instructions-1.png" class="scale">
-                <p>Select an area on the map</p>
-            </li>
-            <li class="third">
-                <h1>2</h1>
-                <img src="/img/new-env-instructions-2.png" class="scale">
-                <p>Click the clone button</p>
-            </li>
-            <li class="third">
-                <h1>3</h1>
-                <img src="/img/new-env-instructions-3.png" class="scale">
-                <p>View your cloned environment</p>
-            </li>
-        </ol>
+    
+    <section class="section--spacer">
+        <div class="align-centre lgrey">
+            <ol>
+                <li class="third">
+                    <h1>1</h1>
+                    <img src="/img/new-env-instructions-1.png" class="scale">
+                    <p>Select an area on the map</p>
+                </li>
+                <li class="third">
+                    <h1>2</h1>
+                    <img src="/img/new-env-instructions-2.png" class="scale">
+                    <p>Click the clone button</p>
+                </li>
+                <li class="third">
+                    <h1>3</h1>
+                    <img src="/img/new-env-instructions-3.png" class="scale">
+                    <p>View your cloned environment</p>
+                </li>
+            </ol>
+        </div>      
     </section>
 
     <section class="section--spacer">
@@ -52,8 +54,8 @@
         </div>
     </section>
 
-    <section>
-        <div class="align-centre sdgrey">
+    <section class="align-centre sdgrey">
+        <section class="section-content-wrapper">
             <div class="half section-padding">
                 <h1>WHY ARE YOU HERE?</h1>
                 <div class="section-content-wrapper">
@@ -66,26 +68,22 @@
                     <p>We send our Quantum Cell Clone Cubes from space. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo. Suspendisse adipiscing nunc tortor, eget accumsan tellus tincidunt at. Ut suscipit elit id tellus tincidunt.</p>
                 </div>
             </div>
-            <div class="half">
-                <a href="technology" class="cta cta--example">
-                    <hgroup class="align-vertical">
-                        <h1>Project Titan</h1>
-                    </hgroup>
-                </a>
-            </div>
-            <div class="half">
-                <a href="technology" class="cta cta--example half">
-                    <hgroup class="align-vertical">
-                        <h1>The Process</h1>
-                    </hgroup>
-                </a>
-                <a href="technology" class="cta cta--example half">
-                    <hgroup class="align-vertical">
-                        <h1>Technology</h1>
-                    </hgroup>
-                </a>
-            </div>
+        </section>
+        
+        <section class="section-content-wrapper">
+        <div class="half">
+            <a href="technology" class="cta cta--example">
+                <hgroup class="align-vertical">
+                    <h1>Project Titan</h1>
+                </hgroup>
+            </a>
         </div>
+            <a href="technology" class="cta cta--example half">
+                <hgroup class="align-vertical">
+                    <h1>The Process</h1>
+                </hgroup>
+            </a>
+        </section>
     </section>
 
 </main>
