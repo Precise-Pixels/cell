@@ -5,3 +5,15 @@
 #secondary-header .section-padding {
     padding: 70px 25px;
 }
+
+@media ($min-bp-a) {
+    #home-learn-more {
+        width: 100%;
+    }
+}
+
+@media ($min-bp-b) {
+    #home-learn-more {
+        width: auto;
+    }
+}
