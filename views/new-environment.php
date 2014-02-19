@@ -5,18 +5,24 @@
         </hgroup>
     </header>
 
-    <section class="section--spacer">
-        <div class="align-centre lgrey">
-            <div class="third">
-                <img src="/img/new-env-instructions-lgrey-1.jpg" class="scale">
-            </div>
-            <div class="third">
-                <img src="/img/new-env-instructions-lgrey-2.jpg" class="scale">
-            </div>
-            <div class="third">
-                <img src="/img/new-env-instructions-lgrey-3.jpg" class="scale">
-            </div>
-        </div>
+    <section class="align-centre">
+        <ol class="lgrey full section--spacer">
+            <li class="third">
+                <h1>1</h1>
+                <img src="/img/new-env-instructions-1.png" class="scale">
+                <p>Select an area on the map</p>
+            </li>
+            <li class="third">
+                <h1>2</h1>
+                <img src="/img/new-env-instructions-2.png" class="scale">
+                <p>Click the clone button</p>
+            </li>
+            <li class="third">
+                <h1>3</h1>
+                <img src="/img/new-env-instructions-3.png" class="scale">
+                <p>View your cloned environment</p>
+            </li>
+        </ol>
     </section>
 
     <section class="section--spacer">
