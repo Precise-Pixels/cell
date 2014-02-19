@@ -12,7 +12,8 @@ form .btn {
     padding: 15px;
 }
 
-input[type="submit"] {
+input[type="submit"],
+input[type="button"] {
     height: auto;
     background-color: transparent;
     box-shadow: none;

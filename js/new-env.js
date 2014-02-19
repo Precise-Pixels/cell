@@ -66,6 +66,12 @@ function init() {
             // Clear and load map grid overlay
             map.overlayMapTypes.setAt(0, null);
             map.overlayMapTypes.insertAt(0, tilelayer);
+
+            // If 'no tile selected' warning is present, remove it
+            var warnNoTile = document.getElementById('env-warn-tile');
+            if(warnNoTile) {
+                warnNoTile.parentNode.removeChild(warnNoTile);
+            }
         }
     };
 
@@ -88,17 +94,44 @@ function init() {
         currentZoom = map.getZoom();
     });
 
-    var generateBtn = document.getElementById('generate-btn');
-    generateBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.target.className += ' btn--spinner';
-        generateEnv(lat1, lon1, lat2, lon2);
+    var envForm      = document.getElementById('env-form');
+    var cloneBtn     = document.getElementById('clone-btn');
+    var envNameInput = document.getElementById('env-name');
+    var warnNoTile   = document.createElement('p');
+    var warnNoName   = document.createElement('p');
+
+    warnNoTile.id = 'env-warn-tile';
+    warnNoName.id = 'env-warn-name';
+    warnNoTile.className = warnNoName.className = 'full warn';
+    warnNoTile.appendChild(document.createTextNode('Please select an area on the map.'));
+    warnNoName.appendChild(document.createTextNode('Please enter a name for your environment.'));
+
+    cloneBtn.addEventListener('click', function(e) {
+        if(!e.target.className.match(/btn--spinner/)) {
+            if(currentTile != undefined) {
+                if(envNameInput.checkValidity()) {
+                    e.target.className += ' btn--spinner';
+
+                    var warnNoNameElem = document.getElementById('env-warn-name');
+                    if(warnNoNameElem) {
+                        warnNoNameElem.parentNode.removeChild(warnNoNameElem);
+                    }
+
+                    generateEnv(lat1, lon1, lat2, lon2);
+                } else {
+                    envForm.appendChild(warnNoName);
+                }
+            } else {
+                envForm.appendChild(warnNoTile);
+            }
+        }
     });
 }
 
 // Setup map grid overlay
 var tilelayer = new google.maps.ImageMapType({
     getTileUrl: function(tile, zoom) {
+        var imageurl;
 
         if (tile.x < 0 || tile.y < 0) return '/img/tile-edge.png';
         if (tile.x >= (1 << zoom) || tile.y >= (1 << zoom)) return '/img/tile-edge.png';
@@ -113,7 +146,9 @@ var tilelayer = new google.maps.ImageMapType({
             }
         }
 
-        return imageurl;
+        if(imageurl) {
+            return imageurl;
+        }
     },
     tileSize: new google.maps.Size(tileSize, tileSize)
 });
