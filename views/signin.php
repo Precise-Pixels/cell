@@ -1,13 +1,4 @@
 <?php
-if(isset($_SESSION['status'])) {
-    if($_SESSION['status'] == 'notsignedin') {
-        echo 'You must be logged in to view this page.';
-        unset($_SESSION['status']);
-    } elseif($_SESSION['status'] == 'signedin') {
-        header("location: /user/{$_SESSION['username']}");
-    }
-}
-
 require_once('php/LoginSystem.php');
 $loginSystem = new LoginSystem();
 ?>
@@ -22,6 +13,16 @@ $loginSystem = new LoginSystem();
 
     <section>
         <div class="section-padding align-centre lgrey">
+            <?php
+            if(isset($_SESSION['status'])) {
+                if($_SESSION['status'] == 'notsignedin') {
+                    echo '<p class="full warn">You must be logged in to view this page.</p>';
+                    unset($_SESSION['status']);
+                } elseif($_SESSION['status'] == 'signedin') {
+                    header("location: /user/{$_SESSION['username']}");
+                }
+            }
+            ?>
             <h1>SIGN IN</h1>
             <?php
             if(!empty($_POST['signin-submit'])) {
@@ -48,7 +49,7 @@ $loginSystem = new LoginSystem();
 
                     <tr>
                         <td></td>
-                        <td><input type="submit" name="signin-submit" value="Sign in"/></td>
+                        <td><input type="submit" name="signin-submit" value="Sign in" class="btn"/></td>
                     </tr>
                 </table>
             </form>

@@ -1,3 +1,10 @@
+<?php
+    if(!isset($_SESSION['status'])) {
+        $_SESSION['status'] = 'notsignedin';
+        header('location: /signin');
+    }
+?>
+
 <main>
     <header class="section-padding align-centre dgrey">
         <hgroup class="align-vertical">
