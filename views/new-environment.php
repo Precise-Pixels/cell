@@ -11,7 +11,8 @@
             <h1>CLONE A NEW ENVIRONMENT</h1>
         </hgroup>
         <div class="align-vertical">
-            <a class="btn">?</a>
+            <label for="" id=""><a class="btn">?</a></label>
+            <input type="checkbox" id="user-nav-toggle" class="checkbox-hack"/>
         </div>
     </header>
 
