@@ -7,14 +7,16 @@
     </header>
 
     <section>
-        <div class="align-centre">
+        <div class="align-centre lgrey">
             <div class="section-padding half lgrey">
                 <h1>REVIEWS</h1>
                 <p class="full-margin">Integer sit amet nibh sit amet lectus luctus placerat. Suspendisse eget arcu tortor. Fusce pretium sodales nisl et tempus.</p>
             </div>
             <div class="section-padding half mblue">
-                <h1>QUOTE</h1>
-                <p class="full-margin">Integer sit amet nibh sit amet lectus luctus placerat. Suspendisse eget arcu tortor. Fusce pretium sodales nisl et tempus.</p>
+                <blockquote>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
+                    <footer>Mr Person, Title Here</footer>
+                </blockquote>
             </div>
         </div>
     </section>
