@@ -1,8 +1,11 @@
 #user-profile-banner {
     position: relative;
+    margin-bottom: 0;
+    padding: 40px;
 }
 
 #user-profile-card {
+    width: 100%;
     position: relative;
     text-align: center;
     img {
@@ -19,10 +22,14 @@
     }
 }
 
+#environment-listing {
+    padding: 40px;
+}
+
 .environment-block {
     float: left;
     position: relative;
-    margin-top: 10px;
+    border: 5px solid $sdgrey;
     text-align: center;
     img {
         width: 100%;
@@ -44,8 +51,10 @@
 }
 
  .environment-block--new {
+    position: relative;
     opacity: .1;
-    padding-bottom: 50%;
+    padding-bottom: 75%;
+    border: 0;
     transition: opacity .3s;
     &:hover {
         opacity: 1;
@@ -61,6 +70,36 @@
 
  @media ($min_bp_a) {
     .environment-block--new {
-       padding-bottom: 25%;
+       padding-bottom: 75%;
+    }
+
+    #user-profile-card {
+        width: auto;
+        display: block;
+        position: relative;
+        text-align: center;
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        h1 {    
+            width: 100%;
+            padding: 20px;
+            margin: 0;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+ }
+
+  @media ($min_bp_c) {
+    #user-profile-banner {
+        padding: 0;
+        margin-bottom: 50px;
+    }
+
+    #environment-listing {
+        padding: 0;
     }
  }
