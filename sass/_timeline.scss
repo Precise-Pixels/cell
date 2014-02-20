@@ -1,5 +1,6 @@
 .timeline {
-    height: 500px;
+    height: 520px;
+    padding-top: 20px;
     margin: 0 auto;
     overflow-x: scroll;
 }
@@ -16,10 +17,11 @@
     vertical-align: top;
     background: $sdgrey;
     opacity: .5;
-    transition: .3s;
+    transition: opacity .3s;
 }
 
 .event:hover {
+    border: 1px solid $mblue;
     opacity: 1;
 }
 

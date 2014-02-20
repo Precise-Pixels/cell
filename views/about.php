@@ -51,8 +51,7 @@
     </section>
 
     <section>
-        <div class="section-padding align-centre dgrey">
-            <h1>TIMELINE</h1>
+        <div class="align-centre dgrey">
             <div class="timeline">
                 <div class="timeline-wrapper">
                     <div class="event founded">
