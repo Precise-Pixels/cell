@@ -27,10 +27,10 @@
             foreach($environments as $env): ?>
             <a href="/user/<?= $user->username; ?>/env/<?= $env->envId; ?>">
                 <div class="user-environment quarter-margin mblue">
+                    <img src="/img/placeholder.gif">
 <!--                 <img src="http://maps.googleapis.com/maps/api/staticmap?center=<?= $env->latitude; ?>,<?= $env->longitude; ?>&amp;zoom=11&amp;size=640x640&amp;scale=1&amp;maptype=satellite&amp;sensor=false&amp;key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4">
  -->                 <p><?= $env->timestamp; ?></p>
-                  <p><?= $env->name; ?></p>
-
+                    <p><?= $env->name; ?></p>
 <!--                <p><?= $env->latitude; ?></p>
                     <p><?= $env->longitude; ?></p> -->
                 </div>
