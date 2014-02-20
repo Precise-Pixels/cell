@@ -55,9 +55,14 @@
             <h1>TIMELINE</h1>
             <div class="timeline">
                 <div class="timeline-wrapper">
-                    <div class="event founded">test1</div>
-                    <div class="event funding">test2</div>
-                    <div class="event party">test2</div>
+                    <div class="event founded">
+                        <div class="event-img-wrapper">
+                            <img class="event-img" src="/img/placeholder.gif">
+                        </div> 
+                        <p class="event-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, 
+                        rhoncus at sodales et, fringilla vitae justo. Suspendisse adipiscing nunc tortor, eget accumsan tellus</p></div>
+                    <div class="event funding"></div>
+                    <div class="event party"></div>
                 </div>
             </div>
         </div>

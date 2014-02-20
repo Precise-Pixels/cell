@@ -5,30 +5,41 @@
 }
 
 .timeline-wrapper {
-    width: 1300px;
+    width: 1360px;
     overflow: hidden;
 }
 
 .event {
-    height: 478px;
+    height: 460px;
+    margin-right: 20px;
+    background: $dgrey;
+    float: left;
+    vertical-align: top;
+}
+
+.event-img-wrapper {
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.event-img {
+    height: 100px;
+    width: 100px;
+}
+
+.event-text {
+    padding: 20px;
 }
 
 .founded {
-    width: 300px;
-    float: left;   
-    background-color: red;
+    width: 300px;  
  }
 
 .funding {
     width: 800px;
-    float: left;
-    vertical-align: top;
-    background-color: gray;
 }
 
 .party {
     width: 200px;
-    float: left;
-    vertical-align: top;
-    background-color: blue;
 }
