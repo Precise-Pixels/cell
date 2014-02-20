@@ -4,7 +4,7 @@
         <hgroup class="align-vertical">
             <h1>CELL INDUSTRIES</h1>
         </hgroup>
-        <a href=""><div id="page-flow">
+        <a id="page-flow" href="">
             <div class="circle"></div>
             <div class="circle"></div>
             <div class="arrow-down"></div>
