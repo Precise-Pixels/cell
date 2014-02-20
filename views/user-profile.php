@@ -6,9 +6,10 @@
     <section id="user-profile-banner" class="section--spacer">
         <div  class="align-centre mblue">    
             <div id="user-profile-card" class="quarter lgrey">
-                <img id="user-profile-pic" src="http://www.gravatar.com/avatar/6c4d9d7f7412a5c4e1ac47acd2d24112?d=mm&s=350">
+                <img id="user-profile-pic" src="http://www.gravatar.com/avatar/<?= (isset($user->email) ? md5(strtolower(trim($user->email))) : 1); ?>?d=mm&amp;s=350" />
                 <h1><?= $user->username; ?></h1>
-            </div>
+<!--                 <h1><?= $user->email; ?></h1>
+ -->            </div>
             <div class="three-quarters section-padding">
                 <div class="half-margin sdgrey">
                     <h2 class="align-vertical">No. Envs Cloned</h2>
@@ -24,9 +25,12 @@
         <div class="align-centre dgrey">
         <?php if(!empty($environments)):
             foreach($environments as $env): ?>
+            <a href="/user/<?= $user->username; ?>/env/<?= $env->envId; ?>">
                 <div class="user-environment quarter-margin mblue">
-                <img src="http://maps.googleapis.com/maps/api/staticmap?center=<?= $env->latitude; ?>,<?= $env->longitude; ?>&amp;zoom=11&amp;size=640x640&amp;scale=1&amp;maptype=satellite&amp;sensor=false&amp;key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4">
-                 <p><?= $env->timestamp; ?></p>
+<!--                 <img src="http://maps.googleapis.com/maps/api/staticmap?center=<?= $env->latitude; ?>,<?= $env->longitude; ?>&amp;zoom=11&amp;size=640x640&amp;scale=1&amp;maptype=satellite&amp;sensor=false&amp;key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4">
+ -->                 <p><?= $env->timestamp; ?></p>
+                  <p><?= $env->name; ?></p>
+
 <!--                <p><?= $env->latitude; ?></p>
                     <p><?= $env->longitude; ?></p> -->
                 </div>

@@ -96,8 +96,13 @@
     }
 
     .quarter-margin {
-        width: (98%/4);
+        width: (96%/4);
+        margin-left: .5%;
         margin-right: .5%;
+    }
+
+    .quarter-margin:nth(4) {
+        margin-right: 0;
     }
 
     .three-quarters {

@@ -4,7 +4,7 @@ class User {
     static function getData($username) {
         require('db.php');
 
-        $sth = $dbh->query("SELECT userId, timestamp, username FROM users WHERE username='$username'");
+        $sth = $dbh->query("SELECT userId, email, timestamp, username FROM users WHERE username='$username'");
         $sth->setFetchMode(PDO::FETCH_OBJ);
         $result = $sth->fetch();
 
@@ -26,7 +26,7 @@ class User {
 
         $userId = User::getUserId($username);
 
-        $sth = $dbh->query("SELECT timestamp, latitude, longitude FROM environments WHERE userId='$userId'");
+        $sth = $dbh->query("SELECT envId, timestamp, latitude, longitude, name FROM environments WHERE userId='$userId'");
         $sth->setFetchMode(PDO::FETCH_OBJ);
         $result = $sth->fetchAll();
 
