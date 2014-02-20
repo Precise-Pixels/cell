@@ -39,7 +39,7 @@ var podiumShader  = new THREE.MeshLambertMaterial({ ambient: 0x222222 });
 var cubeFaceMaterials = [ podiumShader, podiumShader, dispMapShader, podiumShader, podiumShader, podiumShader ];
 
 // Geometry
-var geometry = new THREE.CubeGeometry(100, 2, 100, 100, 1, 100, cubeFaceMaterials);
+var geometry = new THREE.CubeGeometry(100, 2, 100, 200, 1, 200, cubeFaceMaterials);
 geometry.computeTangents();
 
 var podium = new THREE.Mesh( geometry, new THREE.MeshFaceMaterial(cubeFaceMaterials) );
