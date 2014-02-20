@@ -4,13 +4,12 @@
         <hgroup class="align-vertical">
             <h1>CELL INDUSTRIES</h1>
         </hgroup>
-        <a id="page-flow" href="">
-            <div class="circle"></div>
-            <div class="circle"></div>
+        <a id="page-flow" href="#firststeps">
             <div class="arrow-down"></div>
         </div></a>
     </header>
 
+    <a href="#firststeps"></a>
     <header id="secondary-header" class="mblue">
         <div class="section-padding align-centre">
             <hgroup class="align-vertical">
