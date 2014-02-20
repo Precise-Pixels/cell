@@ -9,7 +9,7 @@
         </div></a>
     </header>
 
-    <a href="#firststeps"></a>
+    <div id="firststeps"></div>
     <header id="secondary-header" class="mblue">
         <div class="section-padding align-centre">
             <hgroup class="align-vertical">
