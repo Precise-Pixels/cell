@@ -1,4 +1,5 @@
 // Thanks: http://www.maptiler.org/google-maps-coordinates-tile-bounds-projection/
+var map;
 var currentTile;
 var currentZoom;
 var lat1;
@@ -16,7 +17,7 @@ function init() {
     var singleClick = false;
 
     // Setup the map
-    var map = new google.maps.Map(document.getElementById('map-canvas'), {
+    map = new google.maps.Map(document.getElementById('map-canvas'), {
         center: new google.maps.LatLng(33, 34),
         zoom: 2,
         maxZoom: 10,
@@ -188,7 +189,11 @@ var tilelayer = new google.maps.ImageMapType({
         if (tile.x >= (1 << zoom) || tile.y >= (1 << zoom)) return '/img/tile-edge.png';
 
         if(zoom == requiredZoom) {
-            imageurl = '/img/tile.png';
+            if(map.getMapTypeId() == 'terrain') {
+                imageurl= '/img/tile-terrain.png';
+            } else {
+                imageurl = '/img/tile.png';
+            }
         }
 
         if(currentTile != undefined) {
