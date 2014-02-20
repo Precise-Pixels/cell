@@ -37,22 +37,22 @@
         </div>
     </section>
 
-    <section class="align-centre mblue">
+    <section id="new-env-instructions" class="align-centre mblue">
         <ol>
             <li class="third">
                 <h1>1</h1>
                 <img src="/img/new-env-instructions-1.png" class="scale">
-                <p>Select an area on the map</p>
+                <p>Zoom in fully to select an area of the map</p>
             </li>
             <li class="third">
                 <h1>2</h1>
                 <img src="/img/new-env-instructions-2.png" class="scale">
-                <p>Click the clone button</p>
+                <p>Name your environment and click the clone button</p>
             </li>
             <li class="third">
                 <h1>3</h1>
                 <img src="/img/new-env-instructions-3.png" class="scale">
-                <p>View your cloned environment</p>
+                <p>View your newly cloned environment</p>
             </li>
         </ol>
     </section>
