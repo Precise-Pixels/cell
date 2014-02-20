@@ -54,6 +54,10 @@
         <div class="section-padding align-centre sdgrey">
             <h1>TIMELINE</h1>
         </div>
+        <ol id="timeline">
+            <li class="event founded"></li>
+            <li class="event grant"></li>
+        </ol>
     </section>
 
     <section>
