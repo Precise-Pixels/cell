@@ -10,14 +10,10 @@
         <hgroup class="align-vertical">
             <h1>CLONE A NEW ENVIRONMENT</h1>
         </hgroup>
-        <div class="align-vertical">
-            <label for="" id=""><a class="btn">?</a></label>
-            <input type="checkbox" id="user-nav-toggle" class="checkbox-hack"/>
-        </div>
     </header>
 
-    <section id="new-env-instructions" class="align-centre lgrey section--spacer">
-        <ol>
+    <section id="new-env-instructions" class="sdgrey section--spacer">
+        <ol class="align-centre">
             <li class="third">
                 <h1>1</h1>
                 <img src="/img/new-env-instructions-1.png" class="scale">
