@@ -1,4 +1,5 @@
 // Thanks: http://www.maptiler.org/google-maps-coordinates-tile-bounds-projection/
+var map;
 var currentTile;
 var currentZoom;
 var lat1;
@@ -16,16 +17,49 @@ function init() {
     var singleClick = false;
 
     // Setup the map
-    var map = new google.maps.Map(document.getElementById('map-canvas'), {
-        center: new google.maps.LatLng(0, 0),
+    map = new google.maps.Map(document.getElementById('map-canvas'), {
+        center: new google.maps.LatLng(33, 34),
         zoom: 2,
         maxZoom: 10,
         minZoom: 2,
         mapTypeId: google.maps.MapTypeId.SATELLITE,
+        mapTypeControlOptions: {
+            mapTypeIds: [google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.TERRAIN]
+        },
+        panControl: false,
         streetViewControl: false
     });
 
     currentZoom = map.getZoom();
+
+    // Create the search box and link it to the UI element
+    var input = document.getElementById('pac-input');
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+    var searchBox = new google.maps.places.SearchBox(input);
+
+    google.maps.event.addListener(searchBox, 'places_changed', function() {
+        var place = searchBox.getPlaces()[0];
+        if(!place.geometry) {
+            // on Enter key we can't help the user
+            return;
+        }
+        input.value = '';
+        // If the place has a geometry, then present it on a map
+        if(place.geometry.viewport) {
+            map.fitBounds(place.geometry.viewport);
+        } else {
+            map.setZoom(requiredZoom);
+        }
+        map.setCenter(place.geometry.location);
+
+    });
+
+    // Bias the SearchBox results towards places that are within the bounds of the current map's viewport
+    google.maps.event.addListener(map, 'bounds_changed', function() {
+        var bounds = map.getBounds();
+        searchBox.setBounds(bounds);
+    });
 
     // Draw map grid overlay
     map.overlayMapTypes.insertAt(0, tilelayer);
@@ -63,9 +97,8 @@ function init() {
 
             var selectedTile = document.getElementById('selected-tile');
             selectedTile.src = 'http://maps.googleapis.com/maps/api/staticmap?center=' + centreLat + ',' + centreLon + '&zoom=' + (requiredZoom + 1) + '&size=' + tileSize * 2 + 'x' + tileSize * 2 + '&scale=1&maptype=satellite&sensor=false&key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4';
-            // Clear and load map grid overlay
-            map.overlayMapTypes.setAt(0, null);
-            map.overlayMapTypes.insertAt(0, tilelayer);
+
+            redrawOverlayMap();
 
             // If 'no tile selected' warning is present, remove it
             var warnNoTile = document.getElementById('env-warn-tile');
@@ -75,9 +108,33 @@ function init() {
         }
     };
 
+    // Prevent overpanning
+    var allowedBounds = new google.maps.LatLngBounds(
+        new google.maps.LatLng(-85, -180),
+        new google.maps.LatLng(85, 180)
+    );
+    var lastValidCenter = map.getCenter();
+
+    google.maps.event.addListener(map, 'center_changed', function() {
+        if (allowedBounds.contains(map.getCenter())) {
+            // Still within valid bounds, so save the last valid position
+            lastValidCenter = map.getCenter();
+            return;
+        }
+
+        // Not valid anymore, return to last valid position
+        map.panTo(lastValidCenter);
+    });
+
     clearSingleClick = function() {
         singleClick = false;
     };
+
+    // Clear and load map grid overlay
+    redrawOverlayMap = function() {
+        map.overlayMapTypes.setAt(0, null);
+        map.overlayMapTypes.insertAt(0, tilelayer);
+    }
 
     // Event listeners
     google.maps.event.addListener(map, 'click', function(e) {
@@ -92,6 +149,10 @@ function init() {
 
     google.maps.event.addListener(map, 'zoom_changed', function() {
         currentZoom = map.getZoom();
+    });
+
+    google.maps.event.addListener(map, 'maptypeid_changed', function() {
+        redrawOverlayMap();
     });
 
     var envForm      = document.getElementById('env-form');
@@ -137,7 +198,11 @@ var tilelayer = new google.maps.ImageMapType({
         if (tile.x >= (1 << zoom) || tile.y >= (1 << zoom)) return '/img/tile-edge.png';
 
         if(zoom == requiredZoom) {
-            imageurl = '/img/tile.png';
+            if(map.getMapTypeId() == 'terrain') {
+                imageurl= '/img/tile-terrain.png';
+            } else {
+                imageurl = '/img/tile.png';
+            }
         }
 
         if(currentTile != undefined) {
