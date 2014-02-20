@@ -51,7 +51,7 @@
     </section>
 
     <section>
-        <div class="section-padding align-centre sdgrey">
+        <div class="section-padding align-centre dgrey">
             <h1>TIMELINE</h1>
             <div class="timeline">
                 <div class="timeline-wrapper">
@@ -60,9 +60,21 @@
                             <img class="event-img" src="/img/placeholder.gif">
                         </div> 
                         <p class="event-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, 
-                        rhoncus at sodales et, fringilla vitae justo. Suspendisse adipiscing nunc tortor, eget accumsan tellus</p></div>
-                    <div class="event funding"></div>
-                    <div class="event party"></div>
+                        rhoncus at sodales et, fringilla vitae justo. Suspendisse adipiscing nunc tortor, eget accumsan tellus</p>
+                    </div>
+                    <div class="event funding">
+                        <div class="event-img-wrapper">
+                            <img class="event-img" src="/img/placeholder.gif">
+                        </div> 
+                        <p class="event-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, 
+                        rhoncus at sodales et, fringilla vitae justo. Suspendisse adipiscing nunc tortor, eget accumsan tellus</p>
+                    </div>
+                    <div class="event party">
+                        <div class="event-img-wrapper">
+                            <img class="event-img" src="/img/placeholder.gif">
+                        </div> 
+                        <p class="event-text">Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,</p>
+                    </div>
                 </div>
             </div>
         </div>

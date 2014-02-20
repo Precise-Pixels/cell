@@ -12,14 +12,20 @@
 .event {
     height: 460px;
     margin-right: 20px;
-    background: $dgrey;
     float: left;
     vertical-align: top;
+    background: $sdgrey;
+    opacity: .5;
+    transition: .3s;
+}
+
+.event:hover {
+    opacity: 1;
 }
 
 .event-img-wrapper {
     width: 100%;
-    margin-top: 50px;
+    margin: 50px 0;
     text-align: center;
 }
 
