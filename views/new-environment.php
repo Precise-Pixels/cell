@@ -21,7 +21,7 @@
             <li class="third">
                 <h1>1</h1>
                 <img src="/img/new-env-instructions-1.png" class="scale">
-                <p>Select an area on the map</p>
+                <p>Zoom in fully to select an area of the map</p>
             </li>
             <li class="third">
                 <h1>2</h1>
