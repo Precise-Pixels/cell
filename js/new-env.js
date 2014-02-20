@@ -108,6 +108,24 @@ function init() {
         }
     };
 
+    // Prevent overpanning
+    var allowedBounds = new google.maps.LatLngBounds(
+        new google.maps.LatLng(-85, -180),
+        new google.maps.LatLng(85, 180)
+    );
+    var lastValidCenter = map.getCenter();
+
+    google.maps.event.addListener(map, 'center_changed', function() {
+        if (allowedBounds.contains(map.getCenter())) {
+            // Still within valid bounds, so save the last valid position
+            lastValidCenter = map.getCenter();
+            return;
+        }
+
+        // Not valid anymore, return to last valid position
+        map.panTo(lastValidCenter);
+    });
+
     clearSingleClick = function() {
         singleClick = false;
     };
