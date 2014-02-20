@@ -6,7 +6,7 @@
         </hgroup>
         <a id="page-flow" href="#firststeps">
             <div class="arrow-down"></div>
-        </div></a>
+        </a>
     </header>
 
     <div id="firststeps"></div>
