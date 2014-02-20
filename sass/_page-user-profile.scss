@@ -1,7 +1,7 @@
 #user-profile-banner {
     position: relative;
     margin-bottom: 0;
-    padding: 40px;
+    padding: 40px 20px 20px 20px;
 }
 
 #user-profile-card {
@@ -23,7 +23,7 @@
 }
 
 #environment-listing {
-    padding: 40px;
+    padding: 20px;
 }
 
 .environment-block {
@@ -69,8 +69,15 @@
  }
 
  @media ($min_bp_a) {
+
+   #user-profile-banner {
+        padding-top: 20px;
+        margin-bottom: 50px;
+    } 
+
     .environment-block--new {
-       padding-bottom: 75%;
+        padding-top: 0;
+        padding-bottom: 75%;
     }
 
     #user-profile-card {
