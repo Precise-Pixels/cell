@@ -17,7 +17,7 @@ function init() {
 
     // Setup the map
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
-        center: new google.maps.LatLng(0, 0),
+        center: new google.maps.LatLng(33, 34),
         zoom: 2,
         maxZoom: 10,
         minZoom: 2,
