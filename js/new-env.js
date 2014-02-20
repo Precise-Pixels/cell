@@ -22,6 +22,10 @@ function init() {
         maxZoom: 10,
         minZoom: 2,
         mapTypeId: google.maps.MapTypeId.SATELLITE,
+        mapTypeControlOptions: {
+            mapTypeIds: [google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.TERRAIN]
+        },
+        panControl: false,
         streetViewControl: false
     });
 
@@ -29,7 +33,6 @@ function init() {
 
     // Create the search box and link it to the UI element
     var input = document.getElementById('pac-input');
-    input.style.top = '20px';
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
     var searchBox = new google.maps.places.SearchBox(input);
