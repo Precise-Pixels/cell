@@ -6,6 +6,15 @@
     padding: 70px 25px;
 }
 
+.environment-logo {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    margin-left: -50px;
+}
+
 #project-titan-data {
     position: relative;
     text-align: center;
@@ -17,6 +26,7 @@
 
 .home-data--left {
     float: left;
+    padding-bottom: 40px;
 }
 
 .home-data--right { 
@@ -39,29 +49,29 @@
     text-align: center;
 }
 
-@media ($min_bp_a) {
-
-}
-
 @media ($min_bp_b) {
+    .home-data--left {
+        width: auto;
+        position: absolute;
+        left: 0;
+        padding-left: 45px;
+    }
     .home-data--right { 
         width: auto;
-        float: right;
-        text-align: right;
-    }
-    .home-data--left {
-        width: auto; 
-        text-align: left;
+        position: absolute;
+        right: 0;
+        padding-right: 45px;
     }
     #home-learn-more {
-        width: auto;
-        padding: 30px;
+        width: 300px;
+        position: relative;
+        padding-top: 20px;
+        margin: 0 auto;
     }
 }
 
 @media ($min_bp_c) {
 .home-data h2 {
     font-size: 5rem;
-}
-
+    }
 }
