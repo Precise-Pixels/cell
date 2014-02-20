@@ -1,7 +1,4 @@
 <main>
-
-        <p><?= $user->userId; ?></p>
-
     <!-- USER PROFILE BANNER -->
     <section id="user-profile-banner" class="section--spacer">
         <div class="align-centre sdgrey">    
