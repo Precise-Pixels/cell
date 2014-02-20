@@ -97,9 +97,8 @@ function init() {
 
             var selectedTile = document.getElementById('selected-tile');
             selectedTile.src = 'http://maps.googleapis.com/maps/api/staticmap?center=' + centreLat + ',' + centreLon + '&zoom=' + (requiredZoom + 1) + '&size=' + tileSize * 2 + 'x' + tileSize * 2 + '&scale=1&maptype=satellite&sensor=false&key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4';
-            // Clear and load map grid overlay
-            map.overlayMapTypes.setAt(0, null);
-            map.overlayMapTypes.insertAt(0, tilelayer);
+
+            redrawOverlayMap();
 
             // If 'no tile selected' warning is present, remove it
             var warnNoTile = document.getElementById('env-warn-tile');
@@ -131,6 +130,12 @@ function init() {
         singleClick = false;
     };
 
+    // Clear and load map grid overlay
+    redrawOverlayMap = function() {
+        map.overlayMapTypes.setAt(0, null);
+        map.overlayMapTypes.insertAt(0, tilelayer);
+    }
+
     // Event listeners
     google.maps.event.addListener(map, 'click', function(e) {
         singleClick = true;
@@ -144,6 +149,10 @@ function init() {
 
     google.maps.event.addListener(map, 'zoom_changed', function() {
         currentZoom = map.getZoom();
+    });
+
+    google.maps.event.addListener(map, 'maptypeid_changed', function() {
+        redrawOverlayMap();
     });
 
     var envForm      = document.getElementById('env-form');
