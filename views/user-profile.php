@@ -36,19 +36,18 @@
             foreach($environments as $env): ?>
 
             <a href="/user/<?= $user->username; ?>/env/<?= $env->envId; ?>">
-                <div class="environment-block quarter-margin mblue">
-                    <img src="/img/placeholder.gif">
-<!--               <img src="http://maps.googleapis.com/maps/api/staticmap?center=<?= $env->latitude; ?>,<?= $env->longitude; ?>&amp;zoom=11&amp;size=640x640&amp;scale=1&amp;maptype=satellite&amp;sensor=false&amp;key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4">
-      -->          
-                    <div class="environment-block-details">
-                        <p><?= $env->name; ?></p>
-                    </div>
-
+            <div class="environment-block quarter-margin mblue">
+                <img src="/img/placeholder.gif">       
+                <div class="environment-block-details">
+                    <p><?= $env->name; ?></p>
                 </div>
+            </div>
 
         <?php endforeach;
         else: ?>
-            <p>This user hasn't cloned any environments yet.</p>
+            <div id="no-environments" class="section-padding mblue">
+                <h1>This user hasn't cloned any environments yet.</h1>
+            </div>
         <?php endif; ?>
 
         

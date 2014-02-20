@@ -52,6 +52,13 @@
     }
  }
 
+ #no-environments {
+    width: 100%;
+    h1 {
+        margin: 0;
+    }
+ }
+
  @media ($min_bp_a) {
     .environment-block--new {
        padding-bottom: 25%;
