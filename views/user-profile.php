@@ -46,9 +46,11 @@
         
         <?php if(isset($_SESSION['userId']) && $_SESSION['userId'] == $user->userId): // If user is signed in and viewing their own profile ?>  
          
-            <div class="environment-block environment-block--new quarter-margin mblue">
-                <a href="/user/<?= $username; ?>/env/new">Clone a new environment</a>
+        <a href="/user/<?= $username; ?>/env/new" alt="Clone a new environment"> 
+            <div class="environment-block environment-block--new quarter-margin">
+                <div id="new-env-icon" class="vertical-align"></div>
             </div>
+        </a>
         
         <?php endif; ?>
         

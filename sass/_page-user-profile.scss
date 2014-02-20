@@ -32,7 +32,7 @@
 .environment-block-details {
     width: 100%;
     padding: 10px;
-    overflow:hidden;
+    overflow: hidden;
     position: absolute;
     bottom: 0;
     text-align: center;
@@ -43,11 +43,16 @@
     }
 }
 
-.environment-block--new {
-    border: 1px solid $lgrey;
+ .environment-block--new {
     opacity: .2;
-    background: none;
+    padding-bottom: 50%;
     &:hover {
         opacity: 1;
     }
-}
+ }
+
+ @media ($min_bp_a) {
+    .environment-block--new {
+       padding-bottom: 25%;
+    }
+ }

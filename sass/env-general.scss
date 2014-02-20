@@ -1,0 +1,12 @@
+#new-env-icon {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    margin-top: -75px;
+    margin-left: -75px;
+    top: 50%;
+    left: 50%;
+    border: 1px dashed $lgrey;
+    background: url(../img/spritesheet.svg) 7px -400px;
+    background-size: 1800px 900px;
+}
