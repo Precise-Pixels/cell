@@ -53,11 +53,14 @@
     <section>
         <div class="section-padding align-centre sdgrey">
             <h1>TIMELINE</h1>
+            <div class="timeline">
+                <div class="timeline-wrapper">
+                    <div class="event founded">test1</div>
+                    <div class="event funding">test2</div>
+                    <div class="event party">test2</div>
+                </div>
+            </div>
         </div>
-        <ol id="timeline">
-            <li class="event founded"></li>
-            <li class="event grant"></li>
-        </ol>
     </section>
 
     <section>

@@ -1,21 +1,34 @@
-#timeline {
+.timeline {
     height: 500px;
-    width: auto;
-    margin: 0;
-    background: red;
+    margin: 0 auto;
+    overflow-x: scroll;
+}
+
+.timeline-wrapper {
+    width: 1300px;
+    overflow: hidden;
 }
 
 .event {
-    height: 500px;
+    height: 478px;
 }
 
 .founded {
-    width: 400px;
+    width: 300px;
+    float: left;   
+    background-color: red;
+ }
+
+.funding {
+    width: 800px;
     float: left;
-    bakcground: blue;
+    vertical-align: top;
+    background-color: gray;
 }
 
-.grant {
-    width: 800px;
-    background: yellow;
+.party {
+    width: 200px;
+    float: left;
+    vertical-align: top;
+    background-color: blue;
 }
