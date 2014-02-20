@@ -44,8 +44,9 @@
 }
 
  .environment-block--new {
-    opacity: .2;
+    opacity: .1;
     padding-bottom: 50%;
+    transition: opacity .3s;
     &:hover {
         opacity: 1;
     }
