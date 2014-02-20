@@ -27,6 +27,36 @@ function init() {
 
     currentZoom = map.getZoom();
 
+    // Create the search box and link it to the UI element
+    var input = document.getElementById('pac-input');
+    input.style.top = '20px';
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+    var searchBox = new google.maps.places.SearchBox(input);
+
+    google.maps.event.addListener(searchBox, 'places_changed', function() {
+        var place = searchBox.getPlaces()[0];
+        if(!place.geometry) {
+            // on Enter key we can't help the user
+            return;
+        }
+        input.value = '';
+        // If the place has a geometry, then present it on a map
+        if(place.geometry.viewport) {
+            map.fitBounds(place.geometry.viewport);
+        } else {
+            map.setZoom(requiredZoom);
+        }
+        map.setCenter(place.geometry.location);
+
+    });
+
+    // Bias the SearchBox results towards places that are within the bounds of the current map's viewport
+    google.maps.event.addListener(map, 'bounds_changed', function() {
+        var bounds = map.getBounds();
+        searchBox.setBounds(bounds);
+    });
+
     // Draw map grid overlay
     map.overlayMapTypes.insertAt(0, tilelayer);
 

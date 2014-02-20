@@ -38,7 +38,9 @@
 
     <section class="section--spacer">
         <div class="align-centre mblue">
+            <input type="text" placeholder="Search Box" id="pac-input" class="controls">
             <div id="map-canvas"></div>
+
             <div id="env-form" class="mblue"> 
                 <img src="/img/tile-select.jpg" id="selected-tile"/>
                 <form method="POST">
