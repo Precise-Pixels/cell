@@ -37,7 +37,7 @@
         </div>
     </section>
 
-    <section class="align-centre mblue section--spacer">
+    <section class="align-centre mblue">
         <ol>
             <li class="third">
                 <h1>1</h1>
