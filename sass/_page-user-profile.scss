@@ -1,3 +1,32 @@
+#user-profile-banner {
+
+}
+
+#user-profile-card {
+    text-align: center;
+    h1, 
+    h2 {
+        margin: 0;
+        padding:20px;
+    }
+}
+
+#user-profile-pic {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.user-environment {
+    float: left;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.user-environment:hover {
+    opacity: 0.5;
+}
+
 .user-environment img {
     width: 100%;
 }

@@ -5,7 +5,7 @@
     float: left;
 }
 
-.quater {
+.quarter {
     width: (100%/2);
     float: left;
 }
@@ -21,6 +21,13 @@
 }
 
 .quarter-margin {
+    width: (98%/2);
+    margin-left: .5%;
+    margin-right: .5%;
+    float: left;
+}
+
+.three-quarters {
     width: (100%/2);
     float: left;
 }
@@ -84,14 +91,20 @@
         margin-right: 0;
     }
     
-    .quater {
+    .quarter {
         width: (100%/4);
+        float: left;
     }
 
     .quarter-margin {
         width: (96%/4);
         margin-left: .5%;
         margin-right: .5%;
+    }
+
+    .three-quarters {
+        width: (100%/4)*3;
+        float: left;
     }
 
 }
