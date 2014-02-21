@@ -51,8 +51,9 @@
                         </tr>
                     </table>
                 </form>
-                <div id="new-env-overlay" class="new-env-overlay"></div>
             </div>
+
+            <div id="new-env-overlay" class="new-env-overlay"></div>
         </div>
     </section>
 
