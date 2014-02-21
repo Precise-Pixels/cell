@@ -16,7 +16,6 @@ timeline.addEventListener('mouseup', function() {
 
 timeline.addEventListener('mousemove', function(e) {
   if (down) {
-  console.log(e.target)
     this.scrollLeft = scrollLeft + x - e.clientX;
   }
 });
