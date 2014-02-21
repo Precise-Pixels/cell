@@ -26,42 +26,7 @@
     padding: 20px;
 }
 
-.environment-block {
-    float: left;
-    position: relative;
-    border: 5px solid $sdgrey;
-    text-align: center;
-    img {
-        width: 100%;
-    }
-}
-
-.environment-block-details {
-    width: 100%;
-    padding: 10px;
-    overflow: hidden;
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    background: $mblue;
-    p {
-        padding: 0;
-        margin: 0;
-    }
-}
-
- .environment-block--new {
-    position: relative;
-    opacity: .1;
-    padding-bottom: 75%;
-    border: 0;
-    transition: opacity .3s;
-    &:hover {
-        opacity: 1;
-    }
- }
-
- #no-environments {
+#no-environments {
     width: 100%;
     h1 {
         margin: 0;
