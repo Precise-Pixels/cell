@@ -168,23 +168,21 @@ function init() {
     warnNoName.appendChild(document.createTextNode('Please enter a name for your environment.'));
 
     cloneBtn.addEventListener('click', function(e) {
-        if(!e.target.className.match(/btn--spinner/)) {
-            if(currentTile != undefined) {
-                if(envNameInput.checkValidity()) {
-                    e.target.className += ' btn--spinner';
+        if(currentTile != undefined) {
+            if(envNameInput.checkValidity()) {
+                document.getElementById('new-env-clone').className += ' new-env-cloning';
 
-                    var warnNoNameElem = document.getElementById('env-warn-name');
-                    if(warnNoNameElem) {
-                        warnNoNameElem.parentNode.removeChild(warnNoNameElem);
-                    }
-
-                    generateEnv(lat1, lon1, lat2, lon2);
-                } else {
-                    envForm.appendChild(warnNoName);
+                var warnNoNameElem = document.getElementById('env-warn-name');
+                if(warnNoNameElem) {
+                    warnNoNameElem.parentNode.removeChild(warnNoNameElem);
                 }
+
+                generateEnv(lat1, lon1, lat2, lon2);
             } else {
-                envForm.appendChild(warnNoTile);
+                envForm.appendChild(warnNoName);
             }
+        } else {
+            envForm.appendChild(warnNoTile);
         }
     });
 }

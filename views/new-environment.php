@@ -32,12 +32,12 @@
         </ol>
     </section>
 
-    <section class="section--spacer">
+    <section id="new-env-clone" class="section--spacer">
         <div class="align-centre mblue">
             <input type="text" placeholder="Search Box" id="pac-input" class="controls">
-            <div id="map-canvas"></div>
+            <div id="new-env-map"></div>
 
-            <div id="env-form" class="mblue"> 
+            <div id="new-env-form" class="mblue">
                 <img src="/img/tile-select.jpg" id="selected-tile"/>
                 <form method="POST">
                     <table>
@@ -45,11 +45,15 @@
                             <td><label for="env-name">Your Environment Name:</label></td>
                         </tr>
                         <tr>
-                            <td><input type="text" name="env-name" id="env-name" required/></td>
+                            <td><input type="text" name="new-env-name" id="new-env-name" required/></td>
                             <td><input type="button" id="clone-btn" value="CLONE" class="btn"/></td>
                         </tr>
                     </table>
                 </form>
+            </div>
+
+            <div id="new-env-overlay" class="new-env-overlay">
+                <h2 class="text-align-center">Your selected environment is currently being cloned. You will be automatically redirected when the process is complete. Please wait...</h2>
             </div>
         </div>
     </section>
