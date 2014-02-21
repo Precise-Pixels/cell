@@ -7,7 +7,7 @@
     </a>
 </header>
 
-<main class="parallax-margin">
+<main>
 
     <div id="firststeps"></div>
     <header id="secondary-header" class="mblue">
