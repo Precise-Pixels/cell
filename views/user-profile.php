@@ -1,5 +1,5 @@
 <main>
-    <!-- USER PROFILE BANNER -->
+
     <section id="user-profile-banner" class="sdgrey">
         <div class="align-centre">
             <div class="imagebox third-margin">
@@ -16,38 +16,39 @@
             </div> 
         </div>
     </section>
-    <!-- USER PROFILE BANNER END -->
 
     <section id="environment-listing">
         <div class="align-centre">
-        <?php if(!empty($environments)):
-            foreach($environments as $env): ?>
-            <a href="/user/<?= $user->username; ?>/env/<?= $env->envId; ?>">
-                <div class="imagebox quarter mblue">
-                    <figure>
-                        <img src="/img/placeholder.gif" alt="<?= $env->name; ?>">
-                    </figure>
-                    <figcaption>
-                        <h1><?= $env->name; ?></h1>
-                    </figcaption>
+            <?php if(!empty($environments)):
+                foreach($environments as $env): ?>
+                    <a href="/user/<?= $user->username; ?>/env/<?= $env->envId; ?>">
+                        <div class="imagebox quarter mblue">
+                            <figure>
+                                <img src="/img/placeholder.gif" alt="<?= $env->name; ?>">
+                            </figure>
+                            <figcaption>
+                                <h1><?= $env->name; ?></h1>
+                            </figcaption>
+                        </div>
+                    </a>
+            <?php endforeach;
+            else: ?>
+                <div id="no-environments" class="section-padding mblue">
+                    <h1>This user hasn't cloned any environments yet.</h1>
                 </div>
-            </a>
-        <?php endforeach;
-        else: ?>
-            <div id="no-environments" class="section-padding mblue">
-                <h1>This user hasn't cloned any environments yet.</h1>
-            </div>
-        <?php endif; ?>
-        <!-- If user is signed in and viewing their own profile -->
-        <?php if(isset($_SESSION['userId']) && $_SESSION['userId'] == $user->userId): ?>
-            <div class="quarter section-padding">
-                <a href="/user/<?= $username; ?>/env/new" alt="Clone a new environment">
-                    <div class="imagebox-new--environment">
-                        <div id="new-env-icon"></div>
-                    </div>
-                </a>
-            </div>
-        <?php endif; ?>
+            <?php endif; ?>
+
+            <?php // If user is signed in and viewing their own profile
+            if(isset($_SESSION['userId']) && $_SESSION['userId'] == $user->userId): ?>
+                <div class="quarter section-padding">
+                    <a href="/user/<?= $username; ?>/env/new" alt="Clone a new environment">
+                        <div class="imagebox-new--environment">
+                            <div id="new-env-icon"></div>
+                        </div>
+                    </a>
+                </div>
+            <?php endif; ?>
         </div>
     </section>
+
 </main>
