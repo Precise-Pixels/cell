@@ -11,8 +11,8 @@
                 </figcaption>
             </div>
             <div class="third-margin">
-                <h2 class="">No. Envs Cloned</h2>
-                <h2 class="align-vertical">Some other fact here</h2>
+                <h2>No. Envs Cloned</h2>
+                <h2>Some other fact here</h2>
             </div> 
         </div>
     </section>
