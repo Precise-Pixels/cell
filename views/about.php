@@ -54,26 +54,39 @@
         <div class="align-centre dgrey">
             <div class="timeline">
                 <div class="timeline-wrapper">
+
                     <div class="event founded">
+                        <div class="event-date-wrapper">
+                            <p class="event-date">1952</p>
+                        </div>
                         <div class="event-img-wrapper">
                             <img class="event-img" src="/img/placeholder.gif">
                         </div> 
                         <p class="event-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, 
                         rhoncus at sodales et, fringilla vitae justo. Suspendisse adipiscing nunc tortor, eget accumsan tellus</p>
                     </div>
+
                     <div class="event funding">
+                        <div class="event-date-wrapper">
+                            <p class="event-date">2005</p>
+                        </div>
                         <div class="event-img-wrapper">
                             <img class="event-img" src="/img/placeholder.gif">
                         </div> 
                         <p class="event-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, 
                         rhoncus at sodales et, fringilla vitae justo. Suspendisse adipiscing nunc tortor, eget accumsan tellus</p>
                     </div>
+
                     <div class="event party">
+                        <div class="event-date-wrapper">
+                            <p class="event-date">2200</p>
+                        </div>
                         <div class="event-img-wrapper">
                             <img class="event-img" src="/img/placeholder.gif">
                         </div> 
                         <p class="event-text">Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,</p>
                     </div>
+
                 </div>
             </div>
         </div>
