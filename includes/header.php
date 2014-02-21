@@ -11,7 +11,7 @@
 
     <p id="user-message"><?php
         if(isset($_SESSION['username'])) {
-            echo 'Welcome back, ' . ucfirst($_SESSION['username']);
+            echo "Welcome back, {$_SESSION['username']}";
         } else {
             echo 'Sign in';
         }
