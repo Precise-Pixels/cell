@@ -9,14 +9,9 @@
         <a href="/press">Press</a>
     </nav>
 
-    <p id="user-message">
-        <?php
-        if(isset($_SESSION['userHandle'])) {
-            if(is_numeric($_SESSION['userHandle'][0])) {
-                echo 'Welcome back';
-            } else {
-                echo 'Welcome back, ' . ucfirst($_SESSION['userHandle']);
-            }
+    <p id="user-message"><?php
+        if(isset($_SESSION['username'])) {
+            echo "Welcome back, {$_SESSION['username']}";
         } else {
             echo 'Sign in';
         }
@@ -30,8 +25,8 @@
     </label>
     <nav id="user-nav">
         <?php if(isset($_SESSION['status']) && $_SESSION['status'] == 'signedin'): ?>
-        <a href="/user/<?= $_SESSION['userHandle']; ?>">MyCell</a>
-        <a href="/user/<?= $_SESSION['userHandle']; ?>/env/new">Clone a new environment</a>
+        <a href="/user/<?= $_SESSION['username']; ?>">MyCell</a>
+        <a href="/user/<?= $_SESSION['username']; ?>/env/new">Clone a new environment</a>
         <a href="/signout?r=<?= $_SERVER['REQUEST_URI']; ?>">Sign out</a>
         <?php else: ?>
         <a href="/signin">Sign in / Register</a>

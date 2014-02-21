@@ -5,6 +5,11 @@
     float: left;
 }
 
+.quarter {
+    width: (100%/2);
+    float: left;
+}
+
 .half-margin {
     width: (100%/1);
     float: left;
@@ -12,6 +17,11 @@
 
 .third-margin {
     width: (100%/1);
+    float: left;
+}
+
+.three-quarters {
+    width: (100%/2);
     float: left;
 }
 
@@ -73,6 +83,17 @@
         margin-left: 0;
         margin-right: 0;
     }
+    
+    .quarter {
+        width: (100%/4);
+        float: left;
+    }
+
+    .three-quarters {
+        width: (100%/4)*3;
+        float: left;
+    }
+
 }
 
 @media ($min-bp-b) {

@@ -94,7 +94,7 @@
         <div class="section-padding align-centre lgrey">
             <h1>HOVERBOXES</h1>
 
-            <div class="hoverbox third-margin">
+            <div class="imagebox hoverbox third-margin">
                 <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
                 <figcaption>
                     <h1>VISIBLE TITLE</h1>
@@ -102,7 +102,7 @@
                 </figcaption>
             </div>
 
-            <div class="hoverbox third-margin">
+            <div class="imagebox hoverbox third-margin">
                 <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
                 <figcaption>
                     <h1>VISIBLE TITLE</h1>
@@ -110,7 +110,7 @@
                 </figcaption>
             </div>
 
-            <div class="hoverbox third-margin">
+            <div class="imagebox hoverbox third-margin">
                 <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
                 <figcaption>
                     <h1>VISIBLE TITLE</h1>

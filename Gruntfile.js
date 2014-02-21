@@ -64,8 +64,11 @@ module.exports = function(grunt) {
         },
         uglify: {
             build: {
-                src: 'js/*.js',
-                dest: 'build/scripts.min.js'
+                files: {
+                    'build/scripts.min.js': ['js/respond.min.js'],
+                    'build/env.min.js': ['js/threejs.tweenjs.stats.loaders.controls.js', 'js/env.js'],
+                    'build/new-env.min.js': ['js/new-env.js']
+                }
             }
         },
         watch: {
