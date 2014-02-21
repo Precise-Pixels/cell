@@ -18,14 +18,13 @@ class LoginSystem {
             if($row->valid == 1) {
                 if($row->password === $passwordE) {
                     require_once('User.php');
-                    $userHandle = User::getUserHandle($row->userId);
 
-                    $_SESSION['status']     = 'signedin';
-                    $_SESSION['userEmail']  = $email;
-                    $_SESSION['userId']     = $row->userId;
-                    $_SESSION['userHandle'] = $userHandle;
+                    $_SESSION['status']    = 'signedin';
+                    $_SESSION['userEmail'] = $email;
+                    $_SESSION['userId']    = $row->userId;
+                    $_SESSION['username']  = $row->username;
 
-                    header("location: /user/{$_SESSION['userHandle']}");
+                    header("location: /user/{$_SESSION['username']}");
 
                 } else {
                     return LoginSystem::wrapStart . 'Wrong email and/or password.' . LoginSystem::wrapEnd;
@@ -42,7 +41,7 @@ class LoginSystem {
         unset($_SESSION['status']);
         unset($_SESSION['userEmail']);
         unset($_SESSION['userId']);
-        unset($_SESSION['userHandle']);
+        unset($_SESSION['username']);
         (isset($_GET['r']) ? header("location:" . $_GET['r']) : header('location: /'));
     }
 
@@ -101,10 +100,10 @@ class LoginSystem {
         }
     }
 
-    static function checkUserExists($email) {
+    static function checkUserExists($email, $username) {
         require('db.php');
 
-        $sth = $dbh->query("SELECT email FROM users WHERE email='$email'");
+        $sth = $dbh->query("SELECT email, username FROM users WHERE email='$email' OR username='$username'");
         $sth->setFetchMode(PDO::FETCH_OBJ);
         $result = $sth->fetch();
 
