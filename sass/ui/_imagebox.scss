@@ -31,6 +31,17 @@
         background: $mblue;
         transition: height .3s, padding .3s;
     }
+
+    &.hoverbox:hover figcaption {
+        height: 100%;
+        padding: 40px;
+    }
+
+    @media ($min_bp_a) {
+        &.hoverbox:hover figcaption {
+            padding: 20px;
+        }
+    }
 }
 
 .imagebox-new--environment {
