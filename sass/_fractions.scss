@@ -20,11 +20,6 @@
     float: left;
 }
 
-.quarter-margin {
-    width: (100%/1);
-    float: left;
-}
-
 .three-quarters {
     width: (100%/2);
     float: left;
@@ -92,16 +87,6 @@
     .quarter {
         width: (100%/4);
         float: left;
-    }
-
-    .quarter-margin {
-        width: (96%/4);
-        margin-left: .5%;
-        margin-right: .5%;
-    }
-
-    .quarter-margin:nth(4) {
-        margin-right: 0;
     }
 
     .three-quarters {
