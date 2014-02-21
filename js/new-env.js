@@ -17,7 +17,7 @@ function init() {
     var singleClick = false;
 
     // Setup the map
-    map = new google.maps.Map(document.getElementById('map-canvas'), {
+    map = new google.maps.Map(document.getElementById('new-env-map'), {
         center: new google.maps.LatLng(33, 34),
         zoom: 2,
         maxZoom: 10,
@@ -101,7 +101,7 @@ function init() {
             redrawOverlayMap();
 
             // If 'no tile selected' warning is present, remove it
-            var warnNoTile = document.getElementById('env-warn-tile');
+            var warnNoTile = document.getElementById('new-env-warn-tile');
             if(warnNoTile) {
                 warnNoTile.parentNode.removeChild(warnNoTile);
             }
@@ -155,14 +155,14 @@ function init() {
         redrawOverlayMap();
     });
 
-    var envForm      = document.getElementById('env-form');
+    var envForm      = document.getElementById('new-env-form');
     var cloneBtn     = document.getElementById('clone-btn');
-    var envNameInput = document.getElementById('env-name');
+    var envNameInput = document.getElementById('new-env-name');
     var warnNoTile   = document.createElement('p');
     var warnNoName   = document.createElement('p');
 
-    warnNoTile.id = 'env-warn-tile';
-    warnNoName.id = 'env-warn-name';
+    warnNoTile.id = 'new-env-warn-tile';
+    warnNoName.id = 'new-env-warn-name';
     warnNoTile.className = warnNoName.className = 'full warn';
     warnNoTile.appendChild(document.createTextNode('Please select an area on the map.'));
     warnNoName.appendChild(document.createTextNode('Please enter a name for your environment.'));
@@ -172,7 +172,7 @@ function init() {
             if(envNameInput.checkValidity()) {
                 document.getElementById('new-env-clone').className += ' new-env-cloning';
 
-                var warnNoNameElem = document.getElementById('env-warn-name');
+                var warnNoNameElem = document.getElementById('new-env-warn-name');
                 if(warnNoNameElem) {
                     warnNoNameElem.parentNode.removeChild(warnNoNameElem);
                 }
@@ -333,7 +333,7 @@ function generateEnv(lat1, lon1, lat2, lon2) {
         // console.log(elevationsString);
 
         // Send elevationsString to PHP to generate and store image
-        var data = 'cLat=' + centreLat + '&cLon=' + centreLon + '&h=' + elevationsString + '&r=' + resolution + '&t=' + tileSize * 4 + '&n=' + encodeURIComponent(document.getElementsByName('env-name')[0].value);
+        var data = 'cLat=' + centreLat + '&cLon=' + centreLon + '&h=' + elevationsString + '&r=' + resolution + '&t=' + tileSize * 4 + '&n=' + encodeURIComponent(document.getElementsByName('new-env-name')[0].value);
 
         var request = new XMLHttpRequest;
         request.open('POST', '/php/cloneEnv.php', true);
