@@ -3,6 +3,8 @@
     padding-top: 20px;
     margin: 0 auto;
     overflow-x: scroll;
+    user-select: none;
+    cursor: default;
 }
 
 #timeline-wrapper {
