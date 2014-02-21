@@ -32,7 +32,7 @@
         </ol>
     </section>
 
-    <section id="new-env-clone" class="section--spacer">
+    <section class="section--spacer">
         <div class="align-centre mblue">
             <input type="text" placeholder="Search Box" id="pac-input" class="controls">
             <div id="new-env-map"></div>
@@ -52,9 +52,7 @@
                 </form>
             </div>
 
-            <div id="new-env-overlay" class="new-env-overlay">
-                <h2 class="text-align-center">Your selected environment is currently being cloned. You will be automatically redirected when the process is complete. Please wait...</h2>
-            </div>
+            <div id="new-env-overlay" class="new-env-overlay"></div>
         </div>
     </section>
 

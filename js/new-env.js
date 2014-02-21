@@ -170,7 +170,7 @@ function init() {
     cloneBtn.addEventListener('click', function(e) {
         if(currentTile != undefined) {
             if(envNameInput.checkValidity()) {
-                document.getElementById('new-env-clone').className += ' new-env-cloning';
+                document.getElementById('new-env-overlay').className += ' new-env-overlay--cloning';
 
                 var warnNoNameElem = document.getElementById('new-env-warn-name');
                 if(warnNoNameElem) {

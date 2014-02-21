@@ -39,11 +39,6 @@
     background: #FFF;
 }
 
-.new-env-cloning {
-    height: 100px;
-    overflow: hidden;
-}
-
 .new-env-overlay {
     width: 100%;
     height: 0;
@@ -51,18 +46,10 @@
     overflow: hidden;
     z-index: 3;
     line-height: 60px;
-    background: $dblue url(/img/spinner.gif) center 50px no-repeat;
+    background: $dblue url(/img/spinner.gif) center no-repeat;
     transition: height .3s;
-
-    h2 {
-        font-size: 0;
-    }
 }
 
-.new-env-cloning .new-env-overlay {
-    height: 100px;
-
-    h2 {
-        font-size: inherit;
-    }
+.new-env-overlay--cloning {
+    height: 100%;
 }
