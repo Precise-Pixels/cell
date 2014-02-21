@@ -58,8 +58,8 @@
 
     <section>
         <div class="align-centre dgrey">
-            <div class="timeline">
-                <div class="timeline-wrapper">
+            <div id="timeline">
+                <div id="timeline-wrapper">
 
                     <div class="event founded">
                         <div class="event-date-wrapper">
