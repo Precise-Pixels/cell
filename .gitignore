@@ -3,5 +3,6 @@
 build
 css
 node_modules
+img/user/[0-9]*
 php/db.php
 php/Encryption.php
