@@ -12,6 +12,7 @@ if(empty($path)) {                                  // HOME
     $file = '404';
 }
 
+$isHome   = ($q == '');
 $isUser   = preg_match('#user\/[0-9a-zA-Z]+/?$#', $q);
 $isEnv    = preg_match('#env\/\d+/?$#', $q);
 $isNewEnv = preg_match('#env\/new/?$#', $q);
