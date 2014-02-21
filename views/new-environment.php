@@ -37,7 +37,7 @@
             <input type="text" placeholder="Search Box" id="pac-input" class="controls">
             <div id="new-env-map"></div>
 
-            <div id="new-env-form" class="mblue">
+            <div id="new-env-form" class="section-padding mblue">
                 <img src="/img/tile-select.jpg" id="selected-tile"/>
                 <form method="POST">
                     <table>
@@ -50,9 +50,9 @@
                         </tr>
                     </table>
                 </form>
+                <div id="new-env-overlay" class="new-env-overlay"></div>
             </div>
 
-            <div id="new-env-overlay" class="new-env-overlay"></div>
         </div>
     </section>
 
