@@ -51,6 +51,12 @@
     </section>
 
     <section>
+        <div class="section-padding align-centre dgrey">
+            <h1>TIMELINE</h1>
+        </div>
+    </section>
+
+    <section>
         <div class="align-centre dgrey">
             <div class="timeline">
                 <div class="timeline-wrapper">
