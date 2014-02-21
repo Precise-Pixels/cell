@@ -2,7 +2,7 @@ var down = false;
 var scrollLeft = 0;
 var x = 0;
 
-$('#timeline-wrapper').mousedown(function(e) {
+document.getElementById('timeline').mousedown(function(e) {
   down = true;
   scrollLeft = this.scrollLeft;
   x = e.clientX;
