@@ -1,7 +1,32 @@
+#primary-header {
+    height: 2000px;
+}
+
+#page-flow {
+    left: 50%;
+    bottom: 10%;
+    position: absolute;
+}
+
+.arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid $mgrey;
+    animation: page-flow-arrow-color 3s infinite;
+    animation-direction: alternate;
+}
+
 #secondary-header {
     display: block;
 }
 
 #secondary-header .section-padding {
-    padding: 70px 25px;
+    padding-top: 70px;
+}
+
+@keyframes page-flow-arrow-color {
+  from { border-top-color: $mgrey; }
+  to   { border-top-color: $lgrey; }
 }
