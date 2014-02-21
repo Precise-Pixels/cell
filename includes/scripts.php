@@ -1,9 +1,12 @@
 <?php if($_SERVER['SERVER_NAME'] == 'cell.dev'): ?>
     <script src='/js/respond.min.js'></script>
-    <script src='/js/timeline-scroll.js'></script>
 
     <?php if($isHome): ?>
         <script src='/js/page-home.js'></script>
+    <?php endif; ?>
+
+    <?php if($isAbout): ?>
+        <script src='/js/timeline-scroll.js'></script>
     <?php endif; ?>
 
     <?php if($isEnv): ?>
