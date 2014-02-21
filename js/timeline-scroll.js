@@ -2,16 +2,25 @@ var down = false;
 var scrollLeft = 0;
 var x = 0;
 
-document.getElementById('timeline').mousedown(function(e) {
+var timeline = document.getElementById('timeline');
+
+timeline.addEventListener('mousedown', function(e) {
   down = true;
   scrollLeft = this.scrollLeft;
-  x = e.clientX;
-}).mouseup(function() {
+  x = e.clientX; 
+});
+
+timeline.addEventListener('mouseup', function() {
   down = false;
-}).mousemove(function(e) {
+});
+
+timeline.addEventListener('mousemove', function(e) {
   if (down) {
+  console.log(e.target)
     this.scrollLeft = scrollLeft + x - e.clientX;
   }
-}).mouseleave(function() {
+});
+
+timeline.addEventListener('moveleave', function() {
   down = false;
 });
