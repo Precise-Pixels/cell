@@ -20,6 +20,6 @@ timeline.addEventListener('mousemove', function(e) {
   }
 });
 
-timeline.addEventListener('moveleave', function() {
+timeline.addEventListener('mouseleave', function() {
   down = false;
 });
