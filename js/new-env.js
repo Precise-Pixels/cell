@@ -198,11 +198,7 @@ var tilelayer = new google.maps.ImageMapType({
         if (tile.x >= (1 << zoom) || tile.y >= (1 << zoom)) return '/img/tile-edge.png';
 
         if(zoom == requiredZoom) {
-            if(map.getMapTypeId() == 'terrain') {
-                imageurl= '/img/tile-terrain.png';
-            } else {
-                imageurl = '/img/tile.png';
-            }
+            imageurl = '/img/tile.png';
         }
 
         if(currentTile != undefined) {
