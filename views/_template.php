@@ -151,7 +151,7 @@
                 <table>
                     <tr>
                         <td><label for="email">Email:</label></td>
-                        <td><input type="email" name="email" required autofocus/></td>
+                        <td><input type="email" name="email" required/></td>
                     </tr>
 
                     <tr>
@@ -171,7 +171,7 @@
                 <table>
                     <tr>
                         <td><label for="email">Email:</label></td>
-                        <td><input type="email" name="email" required autofocus/></td>
+                        <td><input type="email" name="email" required/></td>
                     </tr>
 
                     <tr>
@@ -191,7 +191,7 @@
                 <table>
                     <tr>
                         <td><label for="email">Email:</label></td>
-                        <td><input type="email" name="email" required autofocus/></td>
+                        <td><input type="email" name="email" required/></td>
                     </tr>
 
                     <tr>
