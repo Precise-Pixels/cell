@@ -24,7 +24,7 @@
         <div class="section-padding align-centre lgrey">
             <h1>KEY PEOPLE</h1>
 
-            <div class="hoverbox third-margin">
+            <div class="imagebox hoverbox third-margin">
                 <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
                 <figcaption>
                     <h1>DR REE</h1>
@@ -32,7 +32,7 @@
                 </figcaption>
             </div>
 
-            <div class="hoverbox third-margin">
+            <div class="imagebox hoverbox third-margin">
                 <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
                 <figcaption>
                     <h1>JAKOB HAMMON</h1>
@@ -40,7 +40,7 @@
                 </figcaption>
             </div>
 
-            <div class="hoverbox third-margin">
+            <div class="imagebox hoverbox third-margin">
                 <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
                 <figcaption>
                     <h1>JASOP WILHIELM</h1>
