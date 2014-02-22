@@ -8,6 +8,10 @@
     padding: 20px;
 }
 
+#environment-listing .imagebox {
+    border: 5px solid $sdgrey;
+}
+
 #no-environments {
     width: 100%;
     h1 {
@@ -16,7 +20,6 @@
  }
 
  @media ($min_bp_a) {
-
    #user-profile-banner {
         padding-top: 20px;
         margin-bottom: 50px;
