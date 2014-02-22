@@ -1,10 +1,10 @@
-<main>
+<header id="parallax-header" class="section-padding align-centre dgrey">
+    <hgroup class="align-vertical">
+        <h1>TED TALK</h1>
+    </hgroup>
+</header>
 
-    <header class="section-padding align-centre dgrey">
-        <hgroup class="align-vertical">
-            <h1>TED TALK</h1>
-        </hgroup>
-    </header>
+<main class="parallax-margin">
 
     <section>
         <div class="align-centre">
