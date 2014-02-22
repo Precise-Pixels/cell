@@ -1757,7 +1757,7 @@ THREE.EventDispatcher.prototype.apply( THREE.OBJMTLLoader.prototype );
 //      controls.target.z = 150;
 // Simple substitute "OrbitControls" and the control should work as-is.
 
-THREE.OrbitControls = function ( object, domElement, view ) {
+THREE.OrbitControls = function ( object, domElement, view, maxDistance ) {
 
     this.object = object;
     this.domElement = ( domElement !== undefined ) ? domElement : document;
@@ -1784,7 +1784,7 @@ THREE.OrbitControls = function ( object, domElement, view ) {
     this.rotateSpeed = 1.0;
 
     // Set to true to automatically rotate around the target
-    this.autoRotate = false;
+    this.autoRotate = true;
     this.autoRotateSpeed = 2.0; // 30 seconds per round when fps is 60
 
     // How far you can orbit vertically, upper and lower limits.

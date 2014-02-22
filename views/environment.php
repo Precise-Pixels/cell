@@ -2,4 +2,4 @@
 
 <p><?= $env->timestamp; ?> | <?= $env->latitude; ?> | <?= $env->longitude; ?></p>
 
-<div id="env"></div>
+<div id="model"><img src="/img/placeholder.gif" alt="<?= $env->name; ?>"/></div>
