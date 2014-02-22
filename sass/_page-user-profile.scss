@@ -4,24 +4,6 @@
     padding: 40px 20px 20px;
 }
 
-#user-profile-card {
-    width: 100%;
-    position: relative;
-    text-align: center;
-    img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-    h1 {    
-        width: 100%;
-        padding: 20px;
-        margin: 0;
-        position: absolute;
-        bottom: 0;
-    }
-}
-
 #environment-listing {
     padding: 20px;
 }
@@ -39,30 +21,6 @@
         padding-top: 20px;
         margin-bottom: 50px;
     } 
-
-    .environment-block--new {
-        padding-top: 0;
-        padding-bottom: 75%;
-    }
-
-    #user-profile-card {
-        width: auto;
-        display: block;
-        position: relative;
-        text-align: center;
-        img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        h1 {    
-            width: 100%;
-            padding: 20px;
-            margin: 0;
-            position: absolute;
-            bottom: 0;
-        }
-    }
  }
 
   @media ($min_bp_c) {
