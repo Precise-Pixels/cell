@@ -4,7 +4,7 @@
     </hgroup>
 </header>
 
-<main id="parallax-margin">
+<main class="parallax-margin">
 
     <section>
         <div class="section-padding align-centre lgrey">
