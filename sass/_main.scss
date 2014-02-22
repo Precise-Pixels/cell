@@ -1,28 +1,21 @@
-#parallax-header {
+.fixed-header {
+    height: 260px;
     position: fixed;
-    top: 0;
+    top: 40px;
     left: 0;
     right: 0;
-    margin-top: 75px;
+    display: table;
     z-index: 1;
 }
 
-main { 
+main {
     position: relative;
+    margin-top: 300px;
     z-index: 2;
-}
-
-main header {
-    height: 250px;
-    display: table;
 }
 
 section > div {
     overflow: hidden;
-}
-
-.parallax-margin {
-    margin-top: 300px;
 }
 
 .section-padding {

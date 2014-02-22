@@ -1,14 +1,9 @@
-header {
+body > header {
     height: 40px;
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 3;
-}
-
-#header-wrapper {
-    height: 40px;
-    position: relative;
     background: $dgrey;
 }
 
