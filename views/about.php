@@ -57,7 +57,7 @@
     </section>
 
     <section>
-        <div id="scrollable-area" class="align-centre dgrey">
+        <div id="timeline-scroll" class="align-centre dgrey">
             <div id="timeline">
                 <div id="timeline-wrapper">
 
