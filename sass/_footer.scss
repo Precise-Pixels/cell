@@ -5,22 +5,32 @@ footer {
 
 #copyright {
     position: absolute;
-    left: 40px;
+    left: 25px;
     margin: auto;
     color: $lgrey;
 }
 
 #social-icons {
-    right: 40px;
+    right: 25px;
     position: absolute;
 }
 
 @media ($min-bp-b) {
     #copyright {
-        left: 60px;
+        left: 45px;
     }
 
     #social-icons {
-        right: 60px;
+        right: 45px;
+    }
+}
+
+@media ($min-bp-c) {
+    #copyright {
+        left: 0px;
+    }
+
+    #social-icons {
+        right: 0px;
     }
 }
