@@ -7,14 +7,16 @@
 <main>
 
     <section>
-        <div class="align-centre">
+        <div class="align-centre lgrey">
             <div class="section-padding half lgrey">
                 <h1>REVIEWS</h1>
                 <p class="full-margin">Integer sit amet nibh sit amet lectus luctus placerat. Suspendisse eget arcu tortor. Fusce pretium sodales nisl et tempus.</p>
             </div>
             <div class="section-padding half mblue">
-                <h1>QUOTE</h1>
-                <p class="full-margin">Integer sit amet nibh sit amet lectus luctus placerat. Suspendisse eget arcu tortor. Fusce pretium sodales nisl et tempus.</p>
+                <blockquote>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
+                    <footer>Mr Person, Title Here</footer>
+                </blockquote>
             </div>
         </div>
     </section>
@@ -35,10 +37,24 @@
         </div>
     </section>
 
-    <section>
-        <div class="section-padding align-centre mblue">
-            <img src="/img/placeholder.gif" alt="Company Logo" class="full">
-        </div>
+    <section id="new-env-instructions" class="align-centre mblue">
+        <ol>
+            <li class="third">
+                <h1>1</h1>
+                <img src="/img/new-env-instructions-1.png" class="scale">
+                <p>Zoom in fully to select an area of the map</p>
+            </li>
+            <li class="third">
+                <h1>2</h1>
+                <img src="/img/new-env-instructions-2.png" class="scale">
+                <p>Name your environment and click the clone button</p>
+            </li>
+            <li class="third">
+                <h1>3</h1>
+                <img src="/img/new-env-instructions-3.png" class="scale">
+                <p>View your newly cloned environment</p>
+            </li>
+        </ol>
     </section>
 
     <section>
