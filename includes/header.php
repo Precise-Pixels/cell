@@ -32,5 +32,5 @@
         <a href="/signin">Sign in / Register</a>
         <?php endif; ?>
     </nav>
-    <div class="cell-logo"></div>
+    <a href="/" class="cell-logo"></a>
 </header>

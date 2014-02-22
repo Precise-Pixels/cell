@@ -12,5 +12,5 @@
             </a>
         </div>
     </div>
-    <div class="cell-logo"></div>
+    <a href="/" class="cell-logo"></a>
 </footer>
