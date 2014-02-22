@@ -1,10 +1,10 @@
-<div id="parallax-header" class="section-padding align-centre dgrey">
+<header class="fixed-header section-padding align-centre dgrey">
     <hgroup class="align-vertical">
         <h1>ABOUT</h1>
     </hgroup>
-</div>
+</header>
 
-<main class="parallax-margin">
+<main>
 
     <section>
         <div class="section-padding align-centre lgrey">
@@ -24,7 +24,7 @@
         <div class="section-padding align-centre lgrey">
             <h1>KEY PEOPLE</h1>
 
-            <div class="hoverbox third-margin">
+            <div class="imagebox hoverbox third-margin">
                 <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
                 <figcaption>
                     <h1>DR REE</h1>
@@ -32,7 +32,7 @@
                 </figcaption>
             </div>
 
-            <div class="hoverbox third-margin">
+            <div class="imagebox hoverbox third-margin">
                 <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
                 <figcaption>
                     <h1>JAKOB HAMMON</h1>
@@ -40,7 +40,7 @@
                 </figcaption>
             </div>
 
-            <div class="hoverbox third-margin">
+            <div class="imagebox hoverbox third-margin">
                 <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
                 <figcaption>
                     <h1>JASOP WILHIELM</h1>
