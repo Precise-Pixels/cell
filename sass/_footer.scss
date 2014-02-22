@@ -4,7 +4,6 @@ footer {
 }
 
 #copyright {
-    width: 110px;
     position: absolute;
     left: 40px;
     margin: auto;
@@ -18,7 +17,6 @@ footer {
 
 @media ($min-bp-b) {
     #copyright {
-        width: auto;
         left: 60px;
     }
 
