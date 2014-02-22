@@ -4,12 +4,21 @@
     padding: 40px 20px 20px;
 }
 
-#environment-listing {
-    padding: 20px;
+#profile-image {
+    width: 100%;
 }
 
-#environment-listing .imagebox {
+#number-of-environments,
+#new-environment {
+    float: left;
+    width: 50%;
+}
+
+#environment-listing {
+    padding: 20px;
+    .imagebox {
     border: 5px solid $sdgrey;
+    }
 }
 
 #no-environments {
@@ -23,7 +32,22 @@
    #user-profile-banner {
         padding-top: 20px;
         margin-bottom: 50px;
-    } 
+    }
+
+    #profile-image,
+    #number-of-environments,
+    #new-environment {
+        width: 25%;
+    }
+
+    #profile-image,
+    #number-of-environments{
+        float: left;
+    }
+
+    #new-environment {
+        float: right;
+    }
  }
 
   @media ($min_bp_c) {
