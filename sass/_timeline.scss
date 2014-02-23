@@ -3,14 +3,15 @@
 }
 
 #timeline {
-    height: 535px;
+    height: auto;
     margin: 0 auto;
     overflow-x: scroll;
     cursor: move;
 }
 
 #timeline-wrapper {
-    width: 1360px;
+    width: 1340px;
+    margin: 20px 0;
     overflow: hidden;
 }
 
@@ -18,15 +19,17 @@
     height: 500px;
     margin-right: 20px;
     float: left;
+    border: 1px solid $dgrey;
     vertical-align: top;
     background: $sdgrey;
-    opacity: .5;
-    transition: opacity .3s;
+}
+
+.event:last-child {
+    margin-right: 0;
 }
 
 .event:hover {
     border: 1px solid $mblue;
-    opacity: 1;
 }
 
 .event-date-wrapper {
@@ -40,6 +43,7 @@
     padding-left: 5px;
     border-left: 30px solid $mblue;
     border-bottom: 5px solid $mblue;
+    background: $sdgrey;
 }
 
 .event-img-wrapper {

@@ -3,14 +3,18 @@
 }
 
 #page-flow {
-    left: 50%;
-    bottom: 10%;
+    width: 100%;
+    height: 100px;
     position: absolute;
+    left: 0;
+    bottom: 0;
 }
 
 .arrow-down {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 50%;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     border-top: 20px solid $mgrey;
