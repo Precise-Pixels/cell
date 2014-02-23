@@ -78,7 +78,7 @@ $loginSystem = new LoginSystem();
                         if($exists) {
                             echo $wrapStart . 'An account with this email/username already exists.' . $wrapEnd;
                         } else {
-                            $response = $loginSystem->createUser($email, $password);
+                            $response = $loginSystem->createUser($email, $password, $username);
                             echo $response;
                         }
                     } else {

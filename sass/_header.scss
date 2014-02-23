@@ -70,7 +70,7 @@ body > header {
     filter: brightness(100%);
 }
 
-#site-nav-toggle:checked ~ #site-nav {
+#site-nav-toggle:checked + #site-nav {
     width: 150px;
     position: absolute;
     top: 40px;
@@ -83,7 +83,7 @@ body > header {
     display: block;
 }
 
-#user-nav-toggle:checked ~ #user-nav {
+#user-nav-toggle:checked + #user-nav {
     width: 80px;
     position: absolute;
     top: 60px;
