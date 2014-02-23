@@ -12,6 +12,7 @@
 [class^="ico-"],
 [class*=" ico-"] {
     display: inline-block;
+    margin-right: 15px;
     font-family: 'cell-industries';
     font-style: normal;
     font-weight: normal;
@@ -68,7 +69,3 @@ a[class*="ico-"] {
 .ico-arrow-down2:before { content: "\56"; }
 .ico-connect:before { content: "\53"; }
 .ico-press:before { content: "\50"; }
-
-.inline {
-    margin-right: 15px;
-}
