@@ -7,7 +7,9 @@
     </header>
 
     <section id="new-env-instructions" class="sdgrey section--spacer">
-        <div class="align-centre"></div>
+        <div class="align-centre section-padding">
+            <div class="btn">CLONE NEW ENVIRONMENT</div>
+        </div>
     </section>
 
     <section id="environment-listing">
