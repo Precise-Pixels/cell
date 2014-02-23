@@ -15,11 +15,9 @@
         } else {
             echo 'Sign in';
         }
-        ?>
-    </p>
+    ?></p>
 
     <label for="user-nav-toggle" id="user-nav-btn">
-        <div id="user-arrow" class="ico-arrow-down"></div>
         <img id="user-pic" src="http://www.gravatar.com/avatar/<?= (isset($_SESSION['userEmail']) ? md5(strtolower(trim($_SESSION['userEmail']))) : 1); ?>?d=mm&amp;s=60"/>
     </label>
     <input type="checkbox" id="user-nav-toggle" class="checkbox-hack"/>
@@ -32,4 +30,5 @@
         <a href="/signin">Sign in / Register</a>
         <?php endif; ?>
     </nav>
+    <div id="user-arrow" class="ico-"></div>
 </header>

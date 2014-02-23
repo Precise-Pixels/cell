@@ -39,6 +39,7 @@ header {
     top: 0;
     right: 0;
     cursor: pointer;
+    z-index: 2;
 }
 
 #user-arrow {
@@ -52,6 +53,11 @@ header {
     text-align: center;
     line-height: 20px;
     transition: background .3s;
+    z-index: 1;
+}
+
+#user-arrow:before {
+    content: "v";
 }
 
 #user-pic {
@@ -64,7 +70,7 @@ header {
     transition: all .3s;
 }
 
-#user-nav-btn:hover > #user-arrow {
+#user-nav-btn:hover ~ #user-arrow {
     background: $mgrey;
 }
 
@@ -94,6 +100,9 @@ header {
     background: $dgrey;
 }
 
+#user-nav-toggle:checked ~ #user-arrow:before {
+    content: "^";
+}
 
 #user-nav a {
     display: block;
