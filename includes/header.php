@@ -1,5 +1,5 @@
 <header>
-    <label for="site-nav-toggle" id="site-nav-btn"></label>
+    <label for="site-nav-toggle" id="site-nav-btn" class="dgrey ico-burger"></label>
     <input type="checkbox" id="site-nav-toggle" class="checkbox-hack"/>
     <nav id="site-nav" class="force-repaint">
         <a href="/">Home</a>
