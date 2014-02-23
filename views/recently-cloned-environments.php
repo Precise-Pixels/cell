@@ -8,7 +8,8 @@
 
     <section id="new-env-instructions" class="sdgrey section--spacer">
         <div class="align-centre section-padding">
-            <div class="btn">CLONE NEW ENVIRONMENT</div>
+            <a href="#" class="btn"><i class="ico-env-new"></i>CLONE</a>
+            <a href="#" class="btn"><i class="ico-my-cell"></i>SIGN UP</a>
         </div>
     </section>
 
