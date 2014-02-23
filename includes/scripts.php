@@ -5,6 +5,10 @@
         <script src='/js/page-home.js'></script>
     <?php endif; ?>
 
+    <?php if($isAbout): ?>
+        <script src='/js/timeline-scroll.js'></script>
+    <?php endif; ?>
+
     <?php if($isEnv): ?>
         <script>
             var userId    = <?= $userId; ?>;

@@ -52,7 +52,46 @@
 
     <section>
         <div class="section-padding align-centre sdgrey">
-            <h1>TIMELINE</h1>
+            <h1 class="timeline-header">TIMELINE</h1>
+        </div>
+        <div class="align-centre dgrey">
+            <div id="timeline">
+                <div id="timeline-wrapper">
+
+                    <div class="event founded">
+                        <div class="event-date-wrapper">
+                            <p class="event-date">1952</p>
+                        </div>
+                        <div class="event-img-wrapper">
+                            <img class="event-img" src="/img/placeholder.gif">
+                        </div> 
+                        <p class="event-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, 
+                        rhoncus at sodales et, fringilla vitae justo. Suspendisse adipiscing nunc tortor, eget accumsan tellus</p>
+                    </div>
+
+                    <div class="event funding">
+                        <div class="event-date-wrapper">
+                            <p class="event-date">2005</p>
+                        </div>
+                        <div class="event-img-wrapper">
+                            <img class="event-img" src="/img/placeholder.gif">
+                        </div> 
+                        <p class="event-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, 
+                        rhoncus at sodales et, fringilla vitae justo. Suspendisse adipiscing nunc tortor, eget accumsan tellus</p>
+                    </div>
+
+                    <div class="event party">
+                        <div class="event-date-wrapper">
+                            <p class="event-date">2200</p>
+                        </div>
+                        <div class="event-img-wrapper">
+                            <img class="event-img" src="/img/placeholder.gif">
+                        </div> 
+                        <p class="event-text">Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,</p>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </section>
 
