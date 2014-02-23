@@ -13,7 +13,6 @@
 [class*=" ico-"] {
     display: inline-block;
     font-family: 'cell-industries';
-    speak: none;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -146,50 +145,10 @@
     content: "\50";
 }
 
-a.ico-cross,
-a.ico-info,
-a.ico-html5,
-a.ico-css3,
-a.ico-facebook,
-a.ico-twitter,
-a.ico-company,
-a.ico-key-people,
-a.ico-pin,
-a.ico-hyperlink,
-a.ico-chrome,
-a.ico-hdd,
-a.ico-ram,
-a.ico-chip,
-a.ico-domain,
-a.ico-performance,
-a.ico-email,
-a.ico-webcam,
-a.ico-download,
-a.ico-earth,
-a.ico-calendar,
-a.ico-bubble,
-a.ico-env-new,
-a.ico-my-cell,
-a.ico-hand,
-a.ico-env,
-a.ico-cell-logo,
-a.ico-burger,
-a.ico-env-menu,
-a.ico-question,
-a.ico-warning,
-a.ico-arrow-down,
-a.ico-arrow-up,
-a.ico-arrow-down2,
-a.ico-question,
-a.ico-arrow-down,
-a.ico-arrow-up,
-a.ico-arrow-down2,
-a.ico-connect:before,
-a.ico-press:before {
-    text-decoration: none;   
+a[class*="ico-"] {
+    text-decoration: none;
 }
 
 .inline {
     margin-right: 15px;
 }
-
