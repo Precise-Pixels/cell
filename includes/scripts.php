@@ -4,6 +4,7 @@
     <script src='/js/respond.min.js'></script>
 
     <?php if($isHome): ?>
+        <script src="/js/tween.js"></script>
         <script src='/js/page-home.js'></script>
     <?php endif; ?>
 
@@ -18,7 +19,8 @@
             var latitude  = <?= $env->latitude; ?>;
             var longitude = <?= $env->longitude; ?>;
         </script>
-        <script src="/js/threejs.tweenjs.stats.loaders.controls.js"></script>
+        <script src="/js/threejs-stats-loaders-controls.js"></script>
+        <script src="/js/tween.js"></script>
         <script src="/js/env.js"></script>
     <?php endif; ?>
 
@@ -33,6 +35,7 @@
     <script src='/build/respond.min.js'></script>
 
     <?php if($isHome): ?>
+        <script src="/build/tween.min.js"></script>
         <script src='/build/page-home.min.js'></script>
     <?php endif; ?>
 
@@ -42,7 +45,8 @@
 
     <?php if($isEnv): ?>
         <script>var userId=<?= $userId; ?>,envId=<?= $envId; ?>,latitude=<?= $env->latitude; ?>,var longitude=<?= $env->longitude; ?>;</script>
-        <script src="/build/threejs-tweenjs-stats-loaders-controls.min.js"></script>
+        <script src="/build/threejs-stats-loaders-controls.min.js"></script>
+        <script src="/build/tween.min.js"></script>
         <script src="/build/env.min.js"></script>
     <?php endif; ?>
 
