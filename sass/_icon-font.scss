@@ -11,6 +11,7 @@
 
 [class^="ico-"],
 [class*=" ico-"] {
+    display: inline-block;
     font-family: 'cell-industries';
     speak: none;
     font-style: normal;
@@ -44,9 +45,11 @@
 }
 .ico-company:before {
     content: "\42";
+    margin-right: 15px;
 }
 .ico-key-people:before {
     content: "\6b";
+    margin-right: 15px;
 }
 .ico-pin:before {
     content: "\70";
@@ -84,8 +87,9 @@
 .ico-earth:before {
     content: "\67";
 }
-.ico-calendar-alt-fill:before {
+.ico-calendar:before {
     content: "\43";
+    margin-right: 15px;
 }
 .ico-bubble:before {
     content: "\73";
@@ -159,7 +163,7 @@ a.ico-email,
 a.ico-webcam,
 a.ico-download,
 a.ico-earth,
-a.ico-calendar-alt-fill,
+a.ico-calendar,
 a.ico-bubble,
 a.ico-env-new,
 a.ico-my-cell,
@@ -177,7 +181,6 @@ a.ico-question,
 a.ico-arrow-down,
 a.ico-arrow-up,
 a.ico-arrow-down2 {
-border: none;
-text-decoration: none;   
+    text-decoration: none;   
 }
 
