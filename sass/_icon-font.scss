@@ -139,6 +139,12 @@
 .ico-arrow-down2:before {
     content: "\56";
 }
+.ico-connect:before {
+    content: "\53";
+}
+.ico-press:before {
+    content: "\50";
+}
 
 a.ico-cross,
 a.ico-info,
@@ -177,7 +183,9 @@ a.ico-arrow-down2,
 a.ico-question,
 a.ico-arrow-down,
 a.ico-arrow-up,
-a.ico-arrow-down2 {
+a.ico-arrow-down2,
+a.ico-connect:before,
+a.ico-press:before {
     text-decoration: none;   
 }
 

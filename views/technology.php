@@ -23,12 +23,12 @@
             </div>
 
             <div class="third-margin">
-                <h2><div class="ico-performance inline"></div>Performance</h2>
+                <h2><div class="ico-hdd inline"></div>Storage</h2>
                 <p>Integer sit amet nibh sit amet lectus luctus placerat. Suspendisse eget arcu tortor. Fusce pretium sodales nisl et tempus. Curabitur pretium pellentesque libero. Curabitur pretium malesuada purus, id posuere neque. Donec ante metus, rutrum id lacus ut, ultricies aliquam magna.</p>
             </div>
 
             <div class="third-margin">
-                <h2><div class="ico-hdd inline"></div>Storage</h2>
+                <h2><div class="ico-connect inline"></div>Connectivity</h2>
                 <p>Donec consequat est sed eros condimentum, nec porttitor mi convallis. Sed porttitor, justo a blandit interdum, lorem nulla ullamcorper eros, sit amet convallis ipsum ligula eu lorem. Praesent elementum diam at mauris sodales, et pellentesque nibh dignissim.</p>
             </div>
         </div>
