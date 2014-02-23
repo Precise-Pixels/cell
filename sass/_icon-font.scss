@@ -24,130 +24,50 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.ico-cross:before {
-    content: "\78";
-}
-.ico-info:before {
-    content: "\69";
-}
-.ico-html5:before {
-    content: "\39";
-}
-.ico-css3:before {
-    content: "\30";
-}
-.ico-facebook:before {
-    content: "\46";
-}
-.ico-twitter:before {
-    content: "\54";
-}
-.ico-company:before {
-    content: "\42";
-}
-.ico-key-people:before {
-    content: "\6b";
-}
-.ico-pin:before {
-    content: "\70";
-}
-.ico-hyperlink:before {
-    content: "\6c";
-}
-.ico-chrome:before {
-    content: "\63";
-}
-.ico-hdd:before {
-    content: "\31";
-}
-.ico-ram:before {
-    content: "\32";
-}
-.ico-chip:before {
-    content: "\33";
-}
-.ico-domain:before {
-    content: "\35";
-}
-.ico-performance:before {
-    content: "\36";
-}
-.ico-email:before {
-    content: "\4d";
-}
-.ico-webcam:before {
-    content: "\77";
-}
-.ico-download:before {
-    content: "\64";
-}
-.ico-earth:before {
-    content: "\67";
-}
-.ico-calendar:before {
-    content: "\43";
-}
-.ico-bubble:before {
-    content: "\73";
-}
-.ico-env-new:before {
-    content: "\45";
-}
-.ico-my-cell:before {
-    content: "\6d";
-}
-.ico-hand:before {
-    content: "\74";
-}
-.ico-env:before {
-    content: "\65";
-}
-.ico-cell-logo:before {
-    content: "\4c";
-}
-.ico-burger:before {
-    content: "\62";
-}
-.ico-env-menu:before {
-    content: "\2d";
-}
-.ico-question:before {
-    content: "\3f";
-}
-.ico-warning:before {
-    content: "\21";
-}
-.ico-arrow-down:before {
-    content: "\76";
-}
-.ico-arrow-up:before {
-    content: "\5e";
-}
-.ico-arrow-down2:before {
-    content: "\56";
-}
-.ico-question:before {
-    content: "\3f";
-}
-.ico-arrow-down:before {
-    content: "\76";
-}
-.ico-arrow-up:before {
-    content: "\5e";
-}
-.ico-arrow-down2:before {
-    content: "\56";
-}
-.ico-connect:before {
-    content: "\53";
-}
-.ico-press:before {
-    content: "\50";
-}
-
 a[class*="ico-"] {
     text-decoration: none;
 }
+
+.ico-cross:before { content: "\78"; }
+.ico-info:before { content: "\69"; }
+.ico-html5:before { content: "\39"; }
+.ico-css3:before { content: "\30"; }
+.ico-facebook:before { content: "\46"; }
+.ico-twitter:before { content: "\54"; }
+.ico-company:before { content: "\42"; }
+.ico-key-people:before { content: "\6b"; }
+.ico-pin:before { content: "\70"; }
+.ico-hyperlink:before { content: "\6c"; }
+.ico-chrome:before { content: "\63"; }
+.ico-hdd:before { content: "\31"; }
+.ico-ram:before { content: "\32"; }
+.ico-chip:before { content: "\33"; }
+.ico-domain:before { content: "\35"; }
+.ico-performance:before { content: "\36"; }
+.ico-email:before { content: "\4d"; }
+.ico-webcam:before { content: "\77"; }
+.ico-download:before { content: "\64"; }
+.ico-earth:before { content: "\67"; }
+.ico-calendar:before { content: "\43"; }
+.ico-bubble:before { content: "\73"; }
+.ico-env-new:before { content: "\45"; }
+.ico-my-cell:before { content: "\6d"; }
+.ico-hand:before { content: "\74"; }
+.ico-env:before { content: "\65"; }
+.ico-cell-logo:before { content: "\4c"; }
+.ico-burger:before { content: "\62"; }
+.ico-env-menu:before { content: "\2d"; }
+.ico-question:before { content: "\3f"; }
+.ico-warning:before { content: "\21"; }
+.ico-arrow-down:before { content: "\76"; }
+.ico-arrow-up:before { content: "\5e"; }
+.ico-arrow-down2:before { content: "\56"; }
+.ico-question:before { content: "\3f"; }
+.ico-arrow-down:before { content: "\76"; }
+.ico-arrow-up:before { content: "\5e"; }
+.ico-arrow-down2:before { content: "\56"; }
+.ico-connect:before { content: "\53"; }
+.ico-press:before { content: "\50"; }
 
 .inline {
     margin-right: 15px;
