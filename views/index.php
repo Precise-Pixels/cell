@@ -4,9 +4,7 @@
         <hgroup class="align-vertical">
             <h1>CELL INDUSTRIES</h1>
         </hgroup>
-        <a id="page-flow" href="#firststeps">
-            <div class="arrow-down"></div>
-        </a>
+        <a id="page-flow" class="arrow-down ico-arrow-down2" href="#firststeps"></a>
     </header>
 
     <a id="firststeps"></a>
