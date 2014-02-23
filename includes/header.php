@@ -1,5 +1,5 @@
-<header>
-    <label for="site-nav-toggle" id="site-nav-btn" class="dgrey ico-burger"></label>
+<header class="dgrey">
+    <label for="site-nav-toggle" id="site-nav-btn" class="ico-burger"></label>
     <input type="checkbox" id="site-nav-toggle" class="checkbox-hack"/>
     <nav id="site-nav" class="force-repaint">
         <a href="/">Home</a>
@@ -19,7 +19,7 @@
     </p>
 
     <label for="user-nav-toggle" id="user-nav-btn">
-        <div id="user-arrow"></div>
+        <div id="user-arrow" class="ico-arrow-down"></div>
         <img id="user-pic" src="http://www.gravatar.com/avatar/<?= (isset($_SESSION['userEmail']) ? md5(strtolower(trim($_SESSION['userEmail']))) : 1); ?>?d=mm&amp;s=60"/>
     </label>
     <input type="checkbox" id="user-nav-toggle" class="checkbox-hack"/>

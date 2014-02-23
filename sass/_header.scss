@@ -12,7 +12,7 @@ header {
 #site-nav-btn {
     width: 40px;
     height: 40px;
-    font-size: 2rem;
+    font-size: 1.9rem;
     text-align: center;
     line-height: 40px;
     position: absolute;
@@ -47,8 +47,10 @@ header {
     position: absolute;
     top: 40px;
     right: 60px;
-    background: $dgrey url(/img/spritesheet.svg) -45px -1px;
-    transition: background-color .3s;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 20px;
+    transition: background .3s;
 }
 
 #user-pic {
@@ -62,7 +64,7 @@ header {
 }
 
 #user-nav-btn:hover > #user-arrow {
-    background-color: $mgrey;
+    background: $mgrey;
 }
 
 #user-nav-btn:hover > #user-pic {
@@ -90,6 +92,7 @@ header {
     display: block;
     background: $dgrey;
 }
+
 
 #user-nav a {
     display: block;
