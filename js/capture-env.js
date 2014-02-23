@@ -8,7 +8,7 @@ env.appendChild(renderer.domElement);
 var scene = new THREE.Scene();
 
 // Camera
-var camera = new THREE.PerspectiveCamera(40, renderer.domElement.width / renderer.domElement.height);
+var camera = new THREE.PerspectiveCamera(45, renderer.domElement.width / renderer.domElement.height);
 camera.position.x = 400;
 camera.position.y = 200;
 camera.position.z = 400;
