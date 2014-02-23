@@ -8,7 +8,7 @@
 
     <section>
         <div class="section-padding align-centre lgrey">
-            <h1><i class="ico-email inline"></i>CONTACT</h1>
+            <h1><i class="ico-email"></i>CONTACT</h1>
 
             <div class="half-margin">
                 <h2>Press</h2>
@@ -24,7 +24,7 @@
 
     <section>
         <div class="section-padding align-centre mblue">
-            <h1><i class="ico-press inline"></i>DOWNLOAD OUR PRESS PACK</h1>
+            <h1><i class="ico-press"></i>DOWNLOAD OUR PRESS PACK</h1>
             <img src="/img/placeholder.gif" alt="Information pack" class="full"/>
         </div>
     </section>
