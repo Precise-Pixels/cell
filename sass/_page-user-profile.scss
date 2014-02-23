@@ -4,16 +4,6 @@
     padding: 40px 20px 20px;
 }
 
-#profile-image {
-    width: 100%;
-}
-
-#number-of-environments,
-#new-environment {
-    float: left;
-    width: 50%;
-}
-
 #environment-listing {
     padding: 20px;
     .imagebox {
@@ -32,21 +22,6 @@
    #user-profile-banner {
         padding-top: 20px;
         margin-bottom: 50px;
-    }
-
-    #profile-image,
-    #number-of-environments,
-    #new-environment {
-        width: 25%;
-    }
-
-    #profile-image,
-    #number-of-environments{
-        float: left;
-    }
-
-    #new-environment {
-        float: right;
     }
  }
 

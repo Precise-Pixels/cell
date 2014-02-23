@@ -10,17 +10,10 @@
                     <h1><?= $user->username; ?></h1>
                 </figcaption>
             </div>
-            <div id="number-of-environments">
-                <div class="environment-icon env-icon lgrey"></div>
-            </div>
-            <div id="new-environment" class="env-icon">
             <?php // If user is signed in and viewing their own profile
             if(isset($_SESSION['userId']) && $_SESSION['userId'] == $user->userId): ?>
-                    <a href="/user/<?= $username; ?>/env/new" alt="Clone a new environment">
-                            <div class="environment-icon new-env-icon"></div>
-                    </a>
+
             <?php endif; ?>
-            </div>
 
         </div>
     </section>
