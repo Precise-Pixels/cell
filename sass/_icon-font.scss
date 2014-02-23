@@ -45,11 +45,9 @@
 }
 .ico-company:before {
     content: "\42";
-    margin-right: 15px;
 }
 .ico-key-people:before {
     content: "\6b";
-    margin-right: 15px;
 }
 .ico-pin:before {
     content: "\70";
@@ -89,7 +87,6 @@
 }
 .ico-calendar:before {
     content: "\43";
-    margin-right: 15px;
 }
 .ico-bubble:before {
     content: "\73";
@@ -182,5 +179,9 @@ a.ico-arrow-down,
 a.ico-arrow-up,
 a.ico-arrow-down2 {
     text-decoration: none;   
+}
+
+.inline {
+    margin-right: 15px;
 }
 
