@@ -6,6 +6,7 @@ main {
 main header {
     height: 250px;
     display: table;
+    z-index: 3;
 }
 
 section > div {
