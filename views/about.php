@@ -54,10 +54,7 @@
         <div class="section-padding align-centre sdgrey">
             <h1 class="timeline-header">TIMELINE</h1>
         </div>
-    </section>
-
-    <section>
-        <div id="timeline-scroll" class="align-centre dgrey">
+        <div class="align-centre dgrey">
             <div id="timeline">
                 <div id="timeline-wrapper">
 
