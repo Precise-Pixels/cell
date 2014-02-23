@@ -12,16 +12,11 @@ if(empty($path)) {                                  // HOME
     $file = '404';
 }
 
-$isHome               = ($q == '');
-$isRecentlyClonedEnvs = preg_match('#recently-cloned-environments/?$#', $q);
-$isUser               = preg_match('#user\/[0-9a-zA-Z]+/?$#', $q);
-$isEnv                = preg_match('#env\/\d+/?$#', $q);
-$isNewEnv             = preg_match('#env\/new/?$#', $q);
-
-if($isRecentlyClonedEnvs) {
-    require_once('model-recently-cloned-environments.php');
-    $file = 'recently-cloned-environments';
-}
+$isHome   = ($q == '');
+$isAbout  = preg_match('#about/?$#', $q);
+$isUser   = preg_match('#user\/[0-9a-zA-Z]+/?$#', $q);
+$isEnv    = preg_match('#env\/\d+/?$#', $q);
+$isNewEnv = preg_match('#env\/new/?$#', $q);
 
 if($isUser) {
     require_once('model-user.php');

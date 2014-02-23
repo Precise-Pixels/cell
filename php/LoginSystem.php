@@ -45,7 +45,7 @@ class LoginSystem {
         (isset($_GET['r']) ? header("location:" . $_GET['r']) : header('location: /'));
     }
 
-    static function createUser($email, $password) {
+    static function createUser($email, $password, $username) {
         require('db.php');
         require_once('Encryption.php');
         require_once('MailClient.php');
@@ -57,10 +57,11 @@ class LoginSystem {
 
         $timestamp = date("Y-m-d H:i:s");
 
-        $sth = $dbh->prepare("INSERT INTO users (email, password, valid, validateRand, resetRand, timestamp, username) value (:email, :password, 0, $rand1, $rand2, :timestamp, '')");
+        $sth = $dbh->prepare("INSERT INTO users (email, password, valid, validateRand, resetRand, timestamp, username) value (:email, :password, 0, $rand1, $rand2, :timestamp, :username)");
         $sth->bindParam(':email', $email);
         $sth->bindParam(':password', $passwordE);
         $sth->bindParam(':timestamp', $timestamp);
+        $sth->bindParam(':username', $username);
         $sth->execute();
 
         MailClient::sendMsg($email, 'Verify your MyCell account', "Please follow this link to verify your MyCell account: http://cell.dev/verify-account?e=$email&r=$rand1");
