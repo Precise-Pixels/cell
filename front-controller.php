@@ -16,6 +16,7 @@ $isHome   = ($q == '');
 $isUser   = preg_match('#user\/[0-9a-zA-Z]+/?$#', $q);
 $isEnv    = preg_match('#env\/\d+/?$#', $q);
 $isNewEnv = preg_match('#env\/new/?$#', $q);
+$isCapturing = preg_match('#capturing-environment#', $q);
 
 if($isUser) {
     require_once('model-user.php');

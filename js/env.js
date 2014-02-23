@@ -23,8 +23,8 @@ scene.add( ambientLight );
 
 // Shaders
 var displace = new THREE.ImageUtils.loadTexture('/img/user/' + userId + '/height-map-' + envId + '.png');
-var texture = new THREE.ImageUtils.loadTexture('/php/getEnvTexture.php?lat=' + latitude + '&lon=' + longitude);
-var shader = THREE.ShaderLib[ "normalmap" ];
+var texture  = new THREE.ImageUtils.loadTexture('/php/getEnvTexture.php?lat=' + latitude + '&lon=' + longitude);
+var shader   = THREE.ShaderLib[ "normalmap" ];
 var uniforms = THREE.UniformsUtils.clone( shader.uniforms );
 
 uniforms[ "enableDisplacement" ].value = true;

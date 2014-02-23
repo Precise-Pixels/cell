@@ -21,6 +21,11 @@
         <script src='/js/new-env.js'></script>
     <?php endif; ?>
 
+    <?php if($isCapturing): ?>
+        <script src="/js/threejs.tweenjs.stats.loaders.controls.js"></script>
+        <script src="/js/capture-env.js"></script>
+    <?php endif; ?>
+
 <?php else: ?>
 
     <script src='/build/scripts.min.js'></script>
