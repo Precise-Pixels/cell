@@ -168,6 +168,17 @@ function init() {
     warnNoName.appendChild(document.createTextNode('Please enter a name for your environment.'));
 
     cloneBtn.addEventListener('click', function(e) {
+        validate();
+    });
+
+    envNameInput.addEventListener('keydown', function(e) {
+        if(e.which == 13) {
+            e.preventDefault();
+            validate();
+        }
+    });
+
+    function validate() {
         if(currentTile != undefined) {
             if(envNameInput.checkValidity()) {
                 document.getElementById('new-env-overlay').className += ' new-env-overlay--cloning';
@@ -184,7 +195,7 @@ function init() {
         } else {
             envForm.appendChild(warnNoTile);
         }
-    });
+    }
 }
 
 // Setup map grid overlay
