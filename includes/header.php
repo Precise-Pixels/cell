@@ -1,7 +1,7 @@
 <header>
-    <input type="checkbox" id="site-nav-toggle" class="checkbox-hack"/>
     <label for="site-nav-toggle" id="site-nav-btn"></label>
-    <nav id="site-nav">
+    <input type="checkbox" id="site-nav-toggle" class="checkbox-hack"/>
+    <nav id="site-nav" class="force-repaint">
         <a href="/">Home</a>
         <a href="/about">About</a>
         <a href="/project-titan">Project Titan</a>
@@ -18,12 +18,12 @@
         ?>
     </p>
 
-    <input type="checkbox" id="user-nav-toggle" class="checkbox-hack"/>
     <label for="user-nav-toggle" id="user-nav-btn">
         <div id="user-arrow"></div>
         <img id="user-pic" src="http://www.gravatar.com/avatar/<?= (isset($_SESSION['userEmail']) ? md5(strtolower(trim($_SESSION['userEmail']))) : 1); ?>?d=mm&amp;s=60"/>
     </label>
-    <nav id="user-nav">
+    <input type="checkbox" id="user-nav-toggle" class="checkbox-hack"/>
+    <nav id="user-nav" class="force-repaint">
         <?php if(isset($_SESSION['status']) && $_SESSION['status'] == 'signedin'): ?>
         <a href="/user/<?= $_SESSION['username']; ?>">MyCell</a>
         <a href="/user/<?= $_SESSION['username']; ?>/env/new">Clone a new environment</a>

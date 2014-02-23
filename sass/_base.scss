@@ -28,3 +28,11 @@ body {
     width: 100%;
     display: block;
 }
+
+// http://precisepixels.co.uk/blog/2014/01/30/checkbox-hack-problem-with-android-2-3/
+.force-repaint { -webkit-animation: force-repaint infinite 1s; }
+
+@-webkit-keyframes force-repaint {
+    from { fill: 0; }
+    to   { fill: 0; }
+}
