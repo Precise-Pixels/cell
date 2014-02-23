@@ -8,7 +8,7 @@
 
     <section>
         <div class="section-padding align-centre lgrey">
-            <h1><div class="ico-company inline"></div>THE COMPANY</h1>
+            <h1><i class="ico-company inline"></i>THE COMPANY</h1>
             <p class="half-margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo. Suspendisse adipiscing nunc tortor, eget accumsan tellus tincidunt at. Ut suscipit elit id tellus tincidunt, ac luctus nisi consectetur. Proin velit libero, faucibus sed ultricies eget, pulvinar sit amet erat. Suspendisse vel leo sit amet magna sodales tincidunt.</p>
             <p class="half-margin">Integer sit amet nibh sit amet lectus luctus placerat. Suspendisse eget arcu tortor. Fusce pretium sodales nisl et tempus. Curabitur pretium pellentesque libero. Curabitur pretium malesuada purus, id posuere neque. Donec ante metus, rutrum id lacus ut, ultricies aliquam magna.</p>
         </div>
@@ -22,7 +22,7 @@
 
     <section>
         <div class="section-padding align-centre lgrey">
-            <h1><div class="ico-key-people inline"></div>KEY PEOPLE</h1>
+            <h1><i class="ico-key-people inline"></i>KEY PEOPLE</h1>
 
             <div class="imagebox hoverbox third-margin">
                 <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
@@ -52,7 +52,7 @@
 
     <section>
         <div class="section-padding align-centre sdgrey">
-            <h1 class="timeline-header"><div class="ico-calendar inline"></div>TIMELINE</h1>
+            <h1 class="timeline-header"><i class="ico-calendar inline"></i>TIMELINE</h1>
         </div>
         <div class="align-centre dgrey">
             <div id="timeline">
