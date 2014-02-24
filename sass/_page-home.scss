@@ -8,16 +8,12 @@
     position: absolute;
     left: 0;
     bottom: 0;
+    font-size: 3rem;
+    text-align: center;
+    color: $lgrey;
 }
 
 .arrow-down {
-    width: 0;
-    height: 0;
-    position: absolute;
-    left: 50%;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-top: 20px solid $mgrey;
     animation: page-flow-arrow-color 3s infinite;
     animation-direction: alternate;
 }
@@ -29,6 +25,6 @@
 }
 
 @keyframes page-flow-arrow-color {
-  from { border-top-color: $mgrey; }
-  to   { border-top-color: $lgrey; }
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
