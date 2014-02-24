@@ -19,8 +19,6 @@
                     <a href="#"><i class="ico-twitter"></i></a>
                 </div>
             </div>
-            <div id="user-info" class="quarter">
-            </div>
             <div id="user-buttons" class="quarter">
             <?php // If user is signed in and viewing their own profile
             if(isset($_SESSION['userId']) && $_SESSION['userId'] == $user->userId): ?>
