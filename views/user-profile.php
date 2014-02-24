@@ -31,7 +31,7 @@
         </div>
     </section>
 
-<main class="user-profile-main">
+<main id="user-profile-main">
 
     <section id="environment-listing" class="sdgrey">
         <div class="align-centre">
