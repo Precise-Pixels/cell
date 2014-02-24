@@ -1,7 +1,10 @@
-header {
+body > header {
+    width: 100%;
     height: 40px;
-    position: relative;
+    position: fixed;
+    top: 0;
     z-index: 3;
+    background: $dgrey;
 }
 
 #site-nav,
