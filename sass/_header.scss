@@ -55,9 +55,9 @@ body > header {
     font-size: 1rem;
     text-align: center;
     line-height: 20px;
+    background: $dgrey;
     transition: background .3s;
     z-index: 1;
-    background: $dgrey;
 }
 
 #user-arrow:before {
