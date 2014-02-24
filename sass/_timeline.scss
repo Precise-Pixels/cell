@@ -10,26 +10,21 @@
 }
 
 #timeline-wrapper {
-    width: 1340px;
+    width: 1300px;
     margin: 20px 0;
     overflow: hidden;
 }
 
 .event {
     height: 500px;
-    margin-right: 20px;
     float: left;
-    border: 1px solid $dgrey;
     vertical-align: top;
+    box-shadow: inset 0px 0px 0 #333, inset -5px 0px 0 #333;
     background: $sdgrey;
 }
 
 .event:last-child {
     margin-right: 0;
-}
-
-.event:hover {
-    border: 1px solid $mblue;
 }
 
 .event-date-wrapper {
@@ -43,7 +38,7 @@
     padding-left: 5px;
     border-left: 30px solid $mblue;
     border-bottom: 5px solid $mblue;
-    background: $sdgrey;
+    background: $dgrey;
 }
 
 .event-img-wrapper {
