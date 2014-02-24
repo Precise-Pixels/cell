@@ -1,14 +1,15 @@
 .fixed-header-new-env {
-    position: fixed;
+    position: relative;
+    padding-bottom: 20px;
     top: 220px;
     left: 0;
     right: 0;
-    display: table;
     z-index: 1;
+    background: $dgrey;
 }
 
 #new-env-main {
-    margin-top: 640px;
+    margin-top: 220px;
 }
 
 #new-env-interface {
@@ -70,4 +71,20 @@
 
 .new-env-overlay--cloning {
     height: 100%;
+}
+
+@media ($min_bp_a) {
+    .fixed-header-new-env {
+        position: fixed;
+    }
+
+    #new-env-main {
+        margin-top: 560px;
+    }
+ }
+
+@media ($min_bp_b) {
+#new-env-main {
+    margin-top: 600px;
+}
 }

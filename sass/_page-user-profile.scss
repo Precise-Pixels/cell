@@ -8,7 +8,7 @@
     margin-bottom: 0;
     padding: 20px;
     .quarter {
-        width: (100%/1);
+        width: (100%/2);
     }
 }
 
@@ -51,7 +51,7 @@
     }
  }
 
- @media ($min_bp_a) {
+@media ($min_bp_a) {
     #user-profile-banner {  
         position: fixed; 
         top: 60px;
@@ -74,8 +74,7 @@
     }
  }
 
-   @media ($min_bp_b) {    
-
+@media ($min_bp_b) {    
     #user-info {
         margin-top: 20px;
         padding-left: 40px;
