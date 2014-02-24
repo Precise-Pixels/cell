@@ -4,15 +4,14 @@
         header('location: /signin');
     }
 ?>
-<header class="fixed-header section-padding align-centre dgrey">
-    <hgroup class="align-vertical">
-        <h1>CLONE A NEW ENVIRONMENT</h1>
-    </hgroup>
-</header>
 
-<main>
+    <header class="fixed-header section-padding align-centre dgrey">
+        <hgroup class="align-vertical">
+            <h1>CLONE A NEW ENVIRONMENT</h1>
+        </hgroup>
+    </header>
 
-    <section id="new-env-instructions" class="sdgrey section--spacer">
+    <section class="fixed-header-new-env align-centre dgrey">
         <ol class="align-centre">
             <li class="third">
                 <h1>1</h1>
@@ -32,7 +31,9 @@
         </ol>
     </section>
 
-    <section class="section--spacer">
+<main id="new-env-main">
+
+    <section id="new-env-interface" class="section--spacer sdgrey">
         <div class="align-centre mblue">
             <input type="text" placeholder="Search Box" id="pac-input" class="controls">
             <div id="new-env-map"></div>

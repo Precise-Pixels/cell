@@ -1,10 +1,10 @@
-#user-profile-banner {height: 275px;
-position: fixed;
-top: 41px;
-left: 0;
-right: 0;
-/* display: table; */
-z-index: 1;
+#user-profile-banner {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    /* display: table; */
+    z-index: 1;
     margin-bottom: 0;
     margin-top: 40px;
     padding: 20px;
@@ -31,7 +31,7 @@ z-index: 1;
 }
 
 #user-profile-main {
-    margin-top: 420px;
+    margin-top: 440px;
 }
 
 #environment-listing {
