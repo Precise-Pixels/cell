@@ -2,7 +2,7 @@
 
     <section id="user-profile-banner" class="sdgrey">
         <div class="align-centre">
-            <div id="profile-image" class="imagebox">
+            <div id="profile-image" class="imagebox quarter">
                 <figure>
                     <img src="http://www.gravatar.com/avatar/<?= (isset($user->email) ? md5(strtolower(trim($user->email))) : 1); ?>?d=mm&amp;s=350" />
                 </figure>
@@ -10,9 +10,18 @@
                     <h1><?= $user->username; ?></h1>
                 </figcaption>
             </div>
+            <div id="user-info" class="quarter section-padding">
+                <p><i class="ico-env"></i>34 Environments Cloned</p>
+            </div>
+            <div class="quarter">
+
+            </div>
             <?php // If user is signed in and viewing their own profile
             if(isset($_SESSION['userId']) && $_SESSION['userId'] == $user->userId): ?>
-
+            <div id="user-buttons" class="section-padding quarter">
+                <a href="#" class="btn"><i class="ico-env-new"></i></a>
+                <a href="#" class="btn"><i class="ico-my-cell"></i></a>
+            </div>
             <?php endif; ?>
 
         </div>
