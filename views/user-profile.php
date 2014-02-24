@@ -1,6 +1,6 @@
 <main>
 
-    <section id="user-profile-banner" class="sdgrey">
+    <section id="user-profile-banner" class="dgrey">
         <div class="align-centre">
             <div id="profile-image" class="imagebox quarter">
                 <figure>
@@ -10,24 +10,30 @@
                     <h1><?= $user->username; ?></h1>
                 </figcaption>
             </div>
-            <div id="user-info" class="quarter section-padding">
-                <p><i class="ico-env"></i>34 Environments Cloned</p>
+            <div id="user-info" class="half">
+                <h2><i class="ico-info"></i>Multimedia Designer</h2>
+                <h2><i class="ico-pin"></i>Canterbury, UK</h2>
+                <h2><i class="ico-env"></i>34 Environments Cloned</h2>
+                <h2><i class="ico-hash"></i>117 Profile Views</h2>
+                <div id="user-social">
+                    <a href="mailto:<?= $user->email; ?>"><i class="ico-email"></i></a>
+                    <a href="#"><i class="ico-facebook"></i></a>
+                    <a href="#"><i class="ico-twitter"></i></a>
+                </div>
             </div>
-            <div class="quarter">
-
+            <div id="user-info" class="quarter">
             </div>
+            <div id="user-buttons" class="quarter">
             <?php // If user is signed in and viewing their own profile
             if(isset($_SESSION['userId']) && $_SESSION['userId'] == $user->userId): ?>
-            <div id="user-buttons" class="section-padding quarter">
                 <a href="#" class="btn"><i class="ico-env-new"></i></a>
-                <a href="#" class="btn"><i class="ico-my-cell"></i></a>
-            </div>
             <?php endif; ?>
+            </div>
 
         </div>
     </section>
 
-    <section id="environment-listing">
+    <section id="environment-listing" class="sdgrey">
         <div class="align-centre">
             <?php if(!empty($environments)):
                 foreach($environments as $env): ?>

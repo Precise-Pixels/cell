@@ -1,7 +1,28 @@
 #user-profile-banner {
     position: relative;
     margin-bottom: 0;
-    padding: 40px 20px 20px;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+#user-info {
+    padding: 20px 0 0 40px;
+    font-size: 1.4rem;
+    font-weight: 200;
+    line-height: 40px;
+}
+
+#user-info h2 {
+    margin: 0;
+}
+
+#user-social {
+    margin-top: 20px;
+}
+
+#user-buttons {
+    text-align: right;
+    padding: 20px 0 0 40px;
 }
 
 #environment-listing {
@@ -20,8 +41,7 @@
 
  @media ($min_bp_a) {
    #user-profile-banner {
-        padding-top: 20px;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
     }
  }
 
@@ -32,6 +52,6 @@
     }
 
     #environment-listing {
-        padding: 0;
+        padding: 40px 0;
     }
  }
