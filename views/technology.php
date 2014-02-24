@@ -1,11 +1,11 @@
-<main>
+<header class="fixed-header section-padding align-centre dgrey">
+    <hgroup class="align-vertical">
+        <h1>TECHNOLOGY</h1>
+        <h2>QuantumCell&trade; CLONE CUBE</h2>
+    </hgroup>
+</header>
 
-    <header class="section-padding align-centre dgrey">
-        <hgroup class="align-vertical">
-            <h1>TECHNOLOGY</h1>
-            <h2>QuantumCell&trade; CLONE CUBE</h2>
-        </hgroup>
-    </header>
+<main>
 
     <section>
         <div class="section-padding align-centre dgrey">
