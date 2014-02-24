@@ -1,10 +1,10 @@
-<main>
+<header class="fixed-header section-padding align-centre dgrey">
+    <hgroup class="align-vertical">
+        <h1>PROJECT TITAN</h1>
+    </hgroup>
+</header>
 
-    <header class="section-padding align-centre dgrey">
-        <hgroup class="align-vertical">
-            <h1>PROJECT TITAN</h1>
-        </hgroup>
-    </header>
+<main>
 
     <section>
         <div class="align-centre lgrey">
