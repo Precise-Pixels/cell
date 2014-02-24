@@ -1,5 +1,3 @@
-<main>
-
     <section id="user-profile-banner" class="dgrey">
         <div class="align-centre">
             <div id="profile-image" class="imagebox quarter">
@@ -32,6 +30,8 @@
 
         </div>
     </section>
+
+<main class="user-profile-main">
 
     <section id="environment-listing" class="sdgrey">
         <div class="align-centre">
