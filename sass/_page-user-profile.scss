@@ -1,24 +1,27 @@
 #user-profile-banner {
-    position: fixed;
+    position: relative;
     top: 60px;
     left: 0;
     right: 0;
     /* display: table; */
     z-index: 1;
     margin-bottom: 0;
-    margin-top: 40px;
     padding: 20px;
+    .quarter {
+        width: (100%/1);
+    }
 }
 
 #user-info {
-    padding: 20px 0 0 40px;
-    font-size: 1.4rem;
+    margin-top: 40px;
+    font-size: 1rem;
     font-weight: 200;
-    line-height: 40px;
 }
 
 #user-info h2 {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
 }
 
 #user-social {
@@ -26,12 +29,12 @@
 }
 
 #user-buttons {
-    padding-top: 20px;
+    margin-top: 20px;
     text-align: right;
 }
 
 #user-profile-main {
-    margin-top: 440px;
+    margin-top: 60px;
 }
 
 #environment-listing {
@@ -49,8 +52,41 @@
  }
 
  @media ($min_bp_a) {
-   #user-profile-banner {
-        margin-bottom: 20px;
+    #user-profile-banner {  
+        position: fixed; 
+        top: 60px;
+        .quarter {
+            width: (100%/4);
+        }
+    }
+
+    #user-info {
+        margin-top: 0;
+        padding-left: 20px;
+    }
+
+    #user-buttons {
+        margin-top: 0;
+    }
+
+    #user-profile-main {
+        margin-top: 300px;
+    }
+ }
+
+   @media ($min_bp_b) {    
+
+    #user-info {
+        margin-top: 20px;
+        padding-left: 40px;
+    }
+
+    #user-buttons {
+        margin-top: 20px;
+    }
+
+    #user-profile-main {
+        margin-top: 380px;
     }
  }
 
@@ -58,6 +94,10 @@
     #user-profile-banner {
         padding: 0;
         margin-bottom: 100px;
+    }
+
+    #user-profile-main {
+        margin-top: 410px;
     }
 
     #environment-listing {
