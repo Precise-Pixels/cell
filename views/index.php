@@ -35,7 +35,7 @@
                 <p>ENVIRONMENTS CLONED</p>
             </div>
             <div id="homepage-map-learn-more" class=" align-centre">
-                <a href="#" class="btn">LEARN MORE</a>
+                <a href="/project-titan" class="btn">LEARN MORE</a>
             </div>   
         </div>    
     </section>

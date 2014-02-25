@@ -7,7 +7,8 @@
 <main>    
 
     <section>
-        <div class="align-centre mblue">
+        <div id="about-logo-header" class="align-centre mblue">
+            <i class="ico-cell-logo"></i>
             <img src="/img/logo-diagram.jpg" alt="Company Logo" class="full">
         </div>
     </section>
@@ -15,7 +16,7 @@
     <section>
         <div class="section-padding align-centre lgrey">
             <h1><i class="ico-company"></i>THE COMPANY</h1>
-            <p class="half-margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo. Suspendisse adipiscing nunc tortor, eget accumsan tellus tincidunt at. Ut suscipit elit id tellus tincidunt, ac luctus nisi consectetur. Proin velit libero, faucibus sed ultricies eget, pulvinar sit amet erat. Suspendisse vel leo sit amet magna sodales tincidunt.</p>
+            <p class="half-margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo. Suspendisse adipiscing nunc tortor, eget accumsan tellus tincidunt at. Ut suscipit elit id tellus tincidunt, ac luctus nisi consectetur. Proin velit libero, faucibus sed ultricies eget, pulvinar sit amet erat.</p>
             <p class="half-margin">Integer sit amet nibh sit amet lectus luctus placerat. Suspendisse eget arcu tortor. Fusce pretium sodales nisl et tempus. Curabitur pretium pellentesque libero. Curabitur pretium malesuada purus, id posuere neque. Donec ante metus, rutrum id lacus ut, ultricies aliquam magna.</p>
         </div>
     </section>
