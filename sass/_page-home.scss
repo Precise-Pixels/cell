@@ -33,71 +33,67 @@
     padding: 70px 25px;
 }
 
-.environment-logo {
-    height: 100px;
-    width: 100px;
+#homepage-map img {
+    max-height: 600px;
+}
+
+
+#homepage-map-info {
+    position: relative;
+    h1 {
+        margin-bottom: 40px;
+        font-weight: 200;
+        font-size: 2rem;
+    }
+}
+
+#homepage-map-env-icon {
+    width: 100%;
     position: absolute;
-    top: -70px;
-    left: 50%;
-    margin-left: -50px;
-}
-
-#project-titan-data {
-    position: relative;
+    top: -75px;
+    font-size: 6rem;
     text-align: center;
 }
 
-.home-data {  
+.homepage-map-data {
     text-align: center;
+    line-height: 45px;
+    h2 {
+        font-size: 4rem;
+        font-weight: 200;
+    }
+    p {
+        margin: 0;
+    }
 }
 
-.home-data--left {
-    float: left;
-    padding-bottom: 40px;
-}
-
-.home-data--right { 
-    float: left;
-}
-
-.home-data h2 {
-    font-size: 4rem;
-    font-weight: 200;
-}
-
-.home-data p {
-    margin: 0;
-}
-
-#home-learn-more {
-    margin-top: 20px;
+.homepage-map-data--left,
+.homepage-map-data--right {
     position: relative;
+    margin-bottom: 40px;
+}
+
+#homepage-map-learn-more {
+    width: 100%;
+    display: inline-block;
     text-align: center;
 }
 
 @media ($min_bp_b) {
-    .home-data--left {
-        width: auto;
+    .homepage-map-data--left {
         position: absolute;
-        left: 0;
-        padding-left: 45px;
+        left: 45px;
+        text-align: left;
     }
-    .home-data--right { 
-        width: auto;
+    .homepage-map-data--right {
         position: absolute;
-        right: 0;
-        padding-right: 45px;
+        right: 45px;
+        text-align: right;
     }
     #home-learn-more {
         width: 300px;
-        position: relative;
-        padding-top: 20px;
         margin: 0 auto;
+        display: block;
     }
-}
 
-@media ($min_bp_c) {
-    .home-data h2 {
-        font-size: 5rem;
-    }
 }

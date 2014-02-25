@@ -12,32 +12,31 @@
         <div class="section-padding align-centre">
             <hgroup class="align-vertical">
                 <h1>PROJECT TITAN</h1>
-                <h2>SUBHEADER</h2>
             </hgroup>
         </div>
     </header>
 
     <section>
-        <div class="align-centre">
+        <div id="homepage-map" class="align-centre">
             <img src="/img/placeholder.gif" alt="Clone Cube" class="full"/>
         </div>
     </section>
 
-    <section class="mblue">
+    <section id="homepage-map-info" class="mblue">
+        <i id="homepage-map-env-icon" class="ico-env"></i>
         <div class="section-padding align-centre">
-            <img class="environment-logo" src="/img/placeholder.gif">
-            <h1 class="home-data">Do your bit to save the planet</h1>
-                <div class="home-data home-data--left half">
-                    <h2>49%</h2>
-                    <p>OF THE PLANET CLONED</p>
-                </div>
-                <div class="home-data home-data--right half">
-                    <h2>167076</h2>
-                    <p>ENVIRONMENTS CLONED</p>
-                </div>
-                <div id="home-learn-more" class="section-padding align-centre mblue">
-                    <a href="#" class="btn">LEARN MORE</a>
-                </div>   
+            <h1 class="homepage-map-data">Do your bit to preserve the planet</h1>
+            <div class="homepage-map-data homepage-map-data--left half">
+                <h2>100%</h2>
+                <p>OF THE PLANET CLONED</p>
+            </div>
+            <div class="homepage-map-data homepage-map-data--right half">
+                <h2>167076</h2>
+                <p>ENVIRONMENTS CLONED</p>
+            </div>
+            <div id="homepage-map-learn-more" class=" align-centre">
+                <a href="#" class="btn">LEARN MORE</a>
+            </div>   
         </div>    
     </section>
 
