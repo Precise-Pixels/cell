@@ -22,15 +22,15 @@
 
     <section>
         <div id="about-numbers" class="section-padding align-centre mblue">
-            <div class="third">
+            <div class="about-number third">
                 <h2>1036<h2>
                 <p>Campuses Galaxy Wide</p>
             </div>
-            <div class="third">
+            <div class="about-number third">
                 <h2>2.3m<h2>
                 <p>Employees</p>
             </div>
-            <div class="third">
+            <div class="about-number third">
                 <h2>$480bn<h2>
                 <p>Annual Revenue</p>
             </div>
