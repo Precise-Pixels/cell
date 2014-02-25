@@ -20,7 +20,13 @@ body > header {
     line-height: 40px;
     position: absolute;
     cursor: pointer;
+    background: $sdgrey;
     transition: background .3s;
+    z-index: 3;
+}
+
+#site-nav-button:before {
+    content: "\62";
 }
 
 #site-nav-btn:hover {
@@ -81,13 +87,19 @@ body > header {
     filter: brightness(100%);
 }
 
-#site-nav-toggle:checked + #site-nav {
+#site-nav-toggle + #site-nav {
     width: 150px;
     position: absolute;
-    top: 40px;
+    top: -75px;
     left: 0;
     display: block;
-    background: $dgrey;
+    background: red;
+    transition: all .3s;
+    z-index: 1;
+}
+
+#site-nav-toggle:checked + #site-nav {
+    top: 40px;
 }
 
 #site-nav a {
