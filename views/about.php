@@ -4,7 +4,13 @@
     </hgroup>
 </header>
 
-<main>
+<main>    
+
+    <section>
+        <div class="align-centre mblue">
+            <img src="/img/logo-diagram.jpg" alt="Company Logo" class="full">
+        </div>
+    </section>
 
     <section>
         <div class="section-padding align-centre lgrey">
@@ -15,8 +21,19 @@
     </section>
 
     <section>
-        <div class="align-centre mblue">
-            <img src="/img/logo-diagram.jpg" alt="Company Logo" class="full">
+        <div id="about-numbers" class="section-padding align-centre mblue">
+            <div class="third">
+                <h2>1036<h2>
+                <p>Campuses Galaxy Wide</p>
+            </div>
+            <div class="third">
+                <h2>2.3m<h2>
+                <p>Employees</p>
+            </div>
+            <div class="third">
+                <h2>$480bn<h2>
+                <p>Annual Revenue</p>
+            </div>
         </div>
     </section>
 
