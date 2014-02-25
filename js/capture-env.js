@@ -61,20 +61,18 @@ function render() {
 requestAnimationFrame(animate);
 
 function loadComplete() {
-    // Callback seems to call just before the texture is actually applied to the model
-    setTimeout(function() {
-        var data = 's=' + encodeURIComponent(renderer.domElement.toDataURL('image/png').replace('data:image/png;base64,', ''));
-        var request = new XMLHttpRequest;
-        request.open('POST', '/php/captureEnv.php', true);
-        request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        request.send(data);
+    render();
+    var data = 's=' + encodeURIComponent(renderer.domElement.toDataURL('image/png').replace('data:image/png;base64,', ''));
+    var request = new XMLHttpRequest;
+    request.open('POST', '/php/captureEnv.php', true);
+    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    request.send(data);
 
-        request.onreadystatechange = function() {
-            if(request.readyState == 4 && request.status == 200) {
-                window.location.href = envURL;
-            } else if(request.status != 200) {
-                console.log('An error has occurred.');
-            }
+    request.onreadystatechange = function() {
+        if(request.readyState == 4 && request.status == 200) {
+            window.location.href = envURL;
+        } else if(request.status != 200) {
+            console.log('An error has occurred.');
         }
-    }, 100);
+    }
 }
