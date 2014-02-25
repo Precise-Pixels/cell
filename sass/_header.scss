@@ -43,6 +43,10 @@ body > header {
     content: "\78";
 }
 
+.menu-icon {
+    padding-left: 10px;
+}
+
 #user-message {
     height: 40px;
     position: absolute;
@@ -72,6 +76,7 @@ body > header {
     text-align: center;
     line-height: 20px;
     transition: background .3s;
+    transform: rotate(-90deg);
     z-index: 1;
 }
 
@@ -98,11 +103,11 @@ body > header {
 }
 
 #site-nav-toggle + #site-nav {
-    width: 150px;
+    width: 200px;
     height: auto;
     position: absolute;
     top: 40px;
-    left: -150px;
+    left: -200px;
     display: block;
     background: $sdgrey;
     z-index: 1;
@@ -114,16 +119,30 @@ body > header {
 }
 
 #site-nav a {
+    padding: 20px 10px;
+    color: $lgrey;
+    font-size: 1rem;
+    text-decoration: none;
     display: block;
+    transition: all .3s;
+}
+
+#site-nav a:hover {
+    margin-left: 10px;
 }
 
 #user-nav-toggle:checked + #user-nav {
-    width: 80px;
+    width: 250px;
     position: absolute;
     top: 60px;
-    right: 0;
+    right: -250px;
     display: block;
-    background: $dgrey;
+    background: $sdgrey;
+    transition: all .3s;
+}
+
+#user-nav-toggle:checked + #user-nav {
+    right: 0;
 }
 
 #user-nav-toggle:checked ~ #user-arrow:before {
@@ -131,5 +150,10 @@ body > header {
 }
 
 #user-nav a {
+    padding: 20px 10px;
+    color: $lgrey;
+    font-size: 1rem;
+    text-decoration: none;
     display: block;
+    transition: all .3s;
 }
