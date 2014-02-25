@@ -60,12 +60,11 @@
 
     <section class="sdgrey">
         <div class="section-padding align-centre sdgrey">
-            <div class="cta cta--home1 half">
+            <a href="project-titan" class="cta cta--pt-large half">
                 <hgroup class="align-vertical">
-                    <h1>CTA Title</h1>
-                    <h2>Optional subtitle</h2>
+                    <h1>Project Titan</h1>
                 </hgroup>
-            </div>
+            </a>
             <div class="cta cta--home2 half">
                 <hgroup class="align-vertical">
                     <h1>CTA Title</h1>
