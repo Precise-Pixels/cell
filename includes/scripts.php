@@ -18,13 +18,18 @@
             var latitude  = <?= $env->latitude; ?>;
             var longitude = <?= $env->longitude; ?>;
         </script>
-        <script src="/js/threejs.tweenjs.stats.loaders.controls.js"></script>
+        <script src="/js/threejs-tweenjs-stats-loaders-controls.js"></script>
         <script src="/js/env.js"></script>
     <?php endif; ?>
 
     <?php if($isNewEnv): ?>
         <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4&sensor=false&libraries=places'></script>
         <script src='/js/new-env.js'></script>
+    <?php endif; ?>
+
+    <?php if($isCapturing): ?>
+        <script src="/js/threejs-tweenjs-stats-loaders-controls.js"></script>
+        <script src="/js/capture-env.js"></script>
     <?php endif; ?>
 
 <?php else:
@@ -49,6 +54,11 @@
     <?php if($isNewEnv): ?>
         <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4&sensor=false&libraries=places'></script>
         <script src='/build/new-env.min.js'></script>
+    <?php endif; ?>
+
+    <?php if($isCapturing): ?>
+        <script src="/build/threejs-tweenjs-stats-loaders-controls.min.js"></script>
+        <script src="/build/capture-env.min.js"></script>
     <?php endif; ?>
 
 <?php endif; ?>
