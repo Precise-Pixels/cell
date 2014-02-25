@@ -68,8 +68,9 @@
     </section>
 
     <section>
-        <div class="align-centre">
-            <img src="/img/project-titan-map.jpg" alt="Clone Cube" class="full"/>
+        <div id="project-titan-sign-up" class="align-centre section-padding sdgrey">
+            <h2>Start preserving the planet today!</h2>
+            <a href="/signin" class="btn"><i class="ico-my-cell"></i>SIGN UP</a>
         </div>
     </section>
 
