@@ -15,22 +15,32 @@ body > header {
 #site-nav-btn {
     width: 40px;
     height: 40px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.site-nav-btn-icon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
     font-size: 1.9rem;
     text-align: center;
     line-height: 40px;
-    position: absolute;
-    cursor: pointer;
-    background: $sdgrey;
     transition: background .3s;
     z-index: 3;
 }
 
-#site-nav-button:before {
+#site-nav-btn:hover ~ .site-nav-btn-icon {
+    background: $mgrey;
+}
+
+.site-nav-btn-icon:before {
     content: "\62";
 }
 
-#site-nav-btn:hover {
-    background: $mgrey;
+#site-nav-toggle:checked ~ .site-nav-btn-icon:before {
+    content: "\78";
 }
 
 #user-message {
@@ -42,8 +52,8 @@ body > header {
 }
 
 #user-nav-btn {
-    height: 60px;
     width: 80px;
+    height: 60px;
     position: absolute;
     top: 0;
     right: 0;
@@ -52,8 +62,8 @@ body > header {
 }
 
 #user-arrow {
-    height: 20px;
     width: 20px;
+    height: 20px;
     margin-right: 0;
     position: absolute;
     top: 40px;
@@ -70,8 +80,8 @@ body > header {
 }
 
 #user-pic {
-    height: 60px;
     width: 60px;
+    height: 60px;
     position: absolute;
     top: 0;
     right: 0;
@@ -88,8 +98,8 @@ body > header {
 }
 
 #site-nav-toggle + #site-nav {
-    height: auto;
     width: 150px;
+    height: auto;
     position: absolute;
     top: 40px;
     left: -150px;

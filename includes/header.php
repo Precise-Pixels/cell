@@ -1,5 +1,5 @@
 <header class="dgrey">
-    <label for="site-nav-toggle" id="site-nav-btn" class="ico-"></label>
+    <label for="site-nav-toggle" id="site-nav-btn"></label>
     <input type="checkbox" id="site-nav-toggle" class="checkbox-hack"/>
     <nav id="site-nav" class="force-repaint">
         <a href="/">Home</a>
@@ -8,6 +8,7 @@
         <a href="/technology">Technology</a>
         <a href="/press">Press</a>
     </nav>
+    <i class="ico- site-nav-btn-icon"></i>
 
     <p id="user-message"><?php
         if(isset($_SESSION['username'])) {
