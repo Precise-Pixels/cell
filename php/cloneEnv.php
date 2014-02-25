@@ -51,8 +51,11 @@ if(!is_dir("../img/user/$userId")) {
     mkdir("../img/user/$userId", 0777, true);
 }
 
-// Save height map and clean up
-imagepng($img, "../img/user/$userId/height-map-{$dbh->lastInsertId()}.png");
-imagedestroy($img);
+$_SESSION['envId']  = $dbh->lastInsertId();
+$_SESSION['envURL'] = "/user/{$_SESSION['username']}/env/{$_SESSION['envId']}";
+$_SESSION['lat']    = $latitude;
+$_SESSION['lon']    = $longitude;
 
-header("X-Env-URL: /user/{$_SESSION['username']}/env/{$dbh->lastInsertId()}");
+// Save height map and clean up
+imagepng($img, "../img/user/$userId/height-map-{$_SESSION['envId']}.png");
+imagedestroy($img);

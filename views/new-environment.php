@@ -51,8 +51,6 @@
                     </table>
                 </form>
             </div>
-
-            <div id="new-env-overlay" class="new-env-overlay"></div>
         </div>
     </section>
 
@@ -87,3 +85,5 @@
     </section>
 
 </main>
+
+<div id="new-env-overlay" class="new-env-overlay"></div>
