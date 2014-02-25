@@ -41,7 +41,7 @@
                     <h1>The cloning process</h1>
                 </hgroup>
             </a>
-            <a href="project-titan" class="cta cta--pt-small half">
+            <a href="/project-titan" class="cta cta--pt-small half">
                 <hgroup class="align-vertical">
                     <h1>Project Titan</h1>
                 </hgroup>

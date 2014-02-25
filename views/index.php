@@ -60,7 +60,7 @@
 
     <section class="sdgrey">
         <div class="section-padding align-centre sdgrey">
-            <a href="project-titan" class="cta cta--pt-large half">
+            <a href="/project-titan" class="cta cta--pt-large half">
                 <hgroup class="align-vertical">
                     <h1>Project Titan</h1>
                 </hgroup>
