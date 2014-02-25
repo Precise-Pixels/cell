@@ -37,22 +37,17 @@
         </div>
     </section>
 
-    <section id="new-env-instructions" class="align-centre mblue">
+    <section class="align-centre lgrey">
         <ol>
-            <li class="third">
+            <li class="half">
                 <h1>1</h1>
-                <img src="/img/new-env-instructions-1.png" class="scale">
-                <p>Zoom in fully to select an area of the map</p>
+                <img src="/img/project-titan-example-1.png" class="scale">
+                <p>Select an area of earth to clone</p>
             </li>
-            <li class="third">
+            <li class="half">
                 <h1>2</h1>
-                <img src="/img/new-env-instructions-2.png" class="scale">
-                <p>Name your environment and click the clone button</p>
-            </li>
-            <li class="third">
-                <h1>3</h1>
-                <img src="/img/new-env-instructions-3.png" class="scale">
-                <p>View your newly cloned environment</p>
+                <img src="/img/project-titan-example-2.png" class="scale">
+                <p>View your 3D cloned environment</p>
             </li>
         </ol>
     </section>
@@ -74,7 +69,7 @@
 
     <section>
         <div class="align-centre">
-            <img src="/img/placeholder.gif" alt="Clone Cube" class="full"/>
+            <img src="/img/project-titan-map.jpg" alt="Clone Cube" class="full"/>
         </div>
     </section>
 
