@@ -18,14 +18,13 @@ class LoginSystem {
             if($row->valid == 1) {
                 if($row->password === $passwordE) {
                     require_once('User.php');
-                    $userHandle = User::getUserHandle($row->userId);
 
-                    $_SESSION['status']     = 'signedin';
-                    $_SESSION['userEmail']  = $email;
-                    $_SESSION['userId']     = $row->userId;
-                    $_SESSION['userHandle'] = $userHandle;
+                    $_SESSION['status']    = 'signedin';
+                    $_SESSION['userEmail'] = $email;
+                    $_SESSION['userId']    = $row->userId;
+                    $_SESSION['username']  = $row->username;
 
-                    header("location: /user/{$_SESSION['userHandle']}");
+                    header("location: /user/{$_SESSION['username']}");
 
                 } else {
                     return LoginSystem::wrapStart . 'Wrong email and/or password.' . LoginSystem::wrapEnd;
@@ -42,11 +41,11 @@ class LoginSystem {
         unset($_SESSION['status']);
         unset($_SESSION['userEmail']);
         unset($_SESSION['userId']);
-        unset($_SESSION['userHandle']);
+        unset($_SESSION['username']);
         (isset($_GET['r']) ? header("location:" . $_GET['r']) : header('location: /'));
     }
 
-    static function createUser($email, $password) {
+    static function createUser($email, $password, $username) {
         require('db.php');
         require_once('Encryption.php');
         require_once('MailClient.php');
@@ -58,10 +57,11 @@ class LoginSystem {
 
         $timestamp = date("Y-m-d H:i:s");
 
-        $sth = $dbh->prepare("INSERT INTO users (email, password, valid, validateRand, resetRand, timestamp, username) value (:email, :password, 0, $rand1, $rand2, :timestamp, '')");
+        $sth = $dbh->prepare("INSERT INTO users (email, password, valid, validateRand, resetRand, timestamp, username) value (:email, :password, 0, $rand1, $rand2, :timestamp, :username)");
         $sth->bindParam(':email', $email);
         $sth->bindParam(':password', $passwordE);
         $sth->bindParam(':timestamp', $timestamp);
+        $sth->bindParam(':username', $username);
         $sth->execute();
 
         MailClient::sendMsg($email, 'Verify your MyCell account', "Please follow this link to verify your MyCell account: http://cell.dev/verify-account?e=$email&r=$rand1");
@@ -101,10 +101,10 @@ class LoginSystem {
         }
     }
 
-    static function checkUserExists($email) {
+    static function checkUserExists($email, $username) {
         require('db.php');
 
-        $sth = $dbh->query("SELECT email FROM users WHERE email='$email'");
+        $sth = $dbh->query("SELECT email, username FROM users WHERE email='$email' OR username='$username'");
         $sth->setFetchMode(PDO::FETCH_OBJ);
         $result = $sth->fetch();
 

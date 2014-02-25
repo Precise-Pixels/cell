@@ -1,10 +1,10 @@
-<main>
+<header class="fixed-header section-padding align-centre dgrey">
+    <hgroup class="align-vertical">
+        <h1>FORGOTTEN YOUR PASSWORD</h1>
+    </hgroup>
+</header>
 
-    <header class="section-padding align-centre dgrey">
-        <hgroup class="align-vertical">
-            <h1>FORGOTTEN YOUR PASSWORD</h1>
-        </hgroup>
-    </header>
+<main>
 
     <section>
         <div class="section-padding align-centre lgrey">

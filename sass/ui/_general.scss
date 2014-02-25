@@ -1,3 +1,25 @@
 .checkbox-hack {
     display: none;
 }
+
+ol{ 
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    list-style: none;
+    text-align: center;
+}
+
+ol li{
+    padding: 20px;
+}
+
+ol h1 {
+    margin-bottom: 0;
+    margin-top: 30px;
+    font-size: 1.6rem;
+}
+
+ol p {
+    font-size: 1.4rem;
+}

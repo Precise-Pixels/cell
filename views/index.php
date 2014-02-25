@@ -1,11 +1,13 @@
+<header id="primary-header" class="fixed-header section-padding align-centre dgrey">
+    <hgroup class="align-vertical">
+        <h1>CELL INDUSTRIES</h1>
+    </hgroup>
+    <a id="page-flow" class="arrow-down ico-arrow-down2" href="#firststeps"></a>
+</header>
+
 <main>
 
-    <header class="section-padding align-centre dgrey">
-        <hgroup class="align-vertical">
-            <h1>CELL INDUSTRIES</h1>
-        </hgroup>
-    </header>
-
+    <a id="firststeps"></a>
     <header id="secondary-header" class="mblue">
         <div class="section-padding align-centre">
             <hgroup class="align-vertical">

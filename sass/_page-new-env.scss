@@ -1,0 +1,56 @@
+#new-env-map {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    float: left;
+    z-index: 1;
+}
+
+#new-env-form {
+    width: 100%;
+    position: relative;
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    z-index: 2;
+}
+
+#new-env-form form {
+    width: 70%;
+    float: right;
+    padding-bottom: 40px;
+}
+
+#selected-tile {
+    width: 240px;
+    position: absolute;
+    top: -120px;
+    left: 75px;
+    border: 10px solid $mblue;
+    z-index: 3;
+}
+
+#pac-input {
+    width: 300px;
+    margin-top: 20px;
+    padding: 10px 13px;
+    color: $dgrey;
+    font-size: 1rem;
+    font-weight: 300;
+    background: #FFF;
+}
+
+.new-env-overlay {
+    width: 100%;
+    height: 0;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+    line-height: 60px;
+    background: $dblue url(/img/spinner.gif) center no-repeat;
+    transition: height .3s;
+}
+
+.new-env-overlay--cloning {
+    height: 100%;
+}
