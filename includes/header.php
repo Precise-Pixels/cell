@@ -24,7 +24,7 @@
         <img id="user-pic" src="http://www.gravatar.com/avatar/<?= (isset($_SESSION['userEmail']) ? md5(strtolower(trim($_SESSION['userEmail']))) : 1); ?>?d=mm&amp;s=60"/>
     </label>
     <input type="checkbox" id="user-nav-toggle" class="checkbox-hack"/>
-    <nav id="user-nav" class="force-repaint">
+    <nav id="user-nav" class="force-repaint mblue">
         <?php if(isset($_SESSION['status']) && $_SESSION['status'] == 'signedin'): ?>
         <a href="/user/<?= $_SESSION['username']; ?>"><i class="ico-company menu-icon"></i>MyCell</a>
         <a href="/user/<?= $_SESSION['username']; ?>/env/new"><i class="ico-company menu-icon"></i>Clone a new environment</a>

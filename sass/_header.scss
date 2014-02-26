@@ -147,12 +147,11 @@ body > header {
 }
 
 #user-nav-toggle:checked + #user-nav {
-    width: 300px;
-    position: absolute;
+    width: 350px;
+    position: fixed;
     top: 60px;
-    right: -300px;
+    right: -350px;
     display: block;
-    background: $sdgrey;
     transition: all .3s;
 }
 
@@ -167,7 +166,7 @@ body > header {
 #user-nav a {
     padding: 20px 10px;
     color: $lgrey;
-    font-size: 1rem;
+    font-size: 1.4rem;
     text-decoration: none;
     display: block;
     transition: all .3s;
