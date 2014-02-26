@@ -1,4 +1,4 @@
-<header class="fixed-header section-padding align-centre dgrey">
+<header id="fixed-header" class="fixed-header--about section-padding dgrey">
     <hgroup class="align-vertical">
         <h1>ABOUT</h1>
     </hgroup>
@@ -6,12 +6,12 @@
 
 <main>    
 
-    <section>
+<!--     <section>
         <div id="about-logo-header" class="align-centre mblue">
             <i class="ico-cell-logo"></i>
             <img src="/img/logo-diagram.jpg" alt="Company Logo" class="full">
         </div>
-    </section>
+    </section> -->
 
     <section>
         <div class="section-padding align-centre lgrey">

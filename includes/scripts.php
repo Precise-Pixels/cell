@@ -1,6 +1,7 @@
 <?php if($_SERVER['SERVER_NAME'] == 'cell.dev'):
 // SANDBOX ?>
 
+    <script src='/js/header-animate.js'></script>
     <script src='/js/respond.min.js'></script>
 
     <?php if($isHome): ?>

@@ -1,19 +1,36 @@
-.fixed-header {
-    height: 260px;
-    position: fixed;
+#fixed-header {
+    height: 450px;
     top: 40px;
+    position: fixed;
     left: 0;
     right: 0;
     display: table;
     text-align: center;
+    background-size: cover;
     z-index: 1;
+    transition: opacity .8s;
+}
+
+.fixed-header--about {
+    background: url(/img/about-bg.jpg);
+    background-size: cover;
+}
+
+.fixed-header--pt {
+    background: url(/img/pt-bg.jpg);
+    background-size: cover;
+}
+
+#fixed-header > .align-vertical {
+    display: table-cell;
+    vertical-align: middle;
+    padding-bottom: 180px;
 }
 
 main {
     position: relative;
     margin-top: 300px;
     z-index: 2;
-    background: $dgrey;
 }
 
 section > div {

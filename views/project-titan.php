@@ -1,6 +1,6 @@
-<header class="fixed-header section-padding align-centre dgrey">
+<header id="fixed-header" class="fixed-header--pt section-padding dgrey">
     <hgroup class="align-vertical">
-        <h1>PROJECT TITAN</h1>
+        <h1 id="name">PROJECT TITAN</h1>
     </hgroup>
 </header>
 
