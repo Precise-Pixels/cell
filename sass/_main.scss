@@ -5,6 +5,7 @@
     left: 0;
     right: 0;
     display: table;
+    text-align: center;
     z-index: 1;
 }
 
@@ -31,13 +32,7 @@ section > div {
     margin-bottom: 100px;
 }
 
-alternate {
-    float:right;
-}
-
 @media ($min-bp-b) {
-
-
     .section-padding {
         padding: 60px 45px;
     }
