@@ -3,7 +3,6 @@
     top: 60px;
     left: 0;
     right: 0;
-    /* display: table; */
     z-index: 1;
     margin-bottom: 0;
     padding: 20px;
@@ -13,15 +12,16 @@
 }
 
 #user-info {
-    margin-top: 40px;
+    margin-top: 20px;
     font-size: 1rem;
     font-weight: 200;
-}
-
-#user-info h2 {
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 1.2rem;
+    text-align: center;
+    h2 {
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-weight: 200;
+        font-size: 1.2rem;
+    }
 }
 
 #user-social {
@@ -63,6 +63,7 @@
     #user-info {
         margin-top: 0;
         padding-left: 20px;
+        text-align: left;
     }
 
     #user-buttons {
@@ -78,6 +79,9 @@
     #user-info {
         margin-top: 20px;
         padding-left: 40px;
+        h2 {
+            font-size: 1.4rem;
+        }
     }
 
     #user-buttons {

@@ -11,7 +11,7 @@
             <div id="user-info" class="half">
                 <h2><i class="ico-info"></i>Multimedia Designer</h2>
                 <h2><i class="ico-pin"></i>Canterbury, UK</h2>
-                <h2><i class="ico-env"></i>34 Environments Cloned</h2>
+                <h2><i class="ico-env"></i><?= count($environments); ?> Environments Cloned</h2>
                 <h2><i class="ico-hash"></i>117 Profile Views</h2>
                 <div id="user-social">
                     <a href="mailto:<?= $user->email; ?>"><i class="ico-email"></i></a>
