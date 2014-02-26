@@ -1,0 +1,48 @@
+.slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.panes {
+    width: 500%;
+    position:relative;
+    overflow: hidden;
+    list-style: none;
+    animation:slider 30s infinite;
+}
+
+.panes > li {
+    width: 20%;
+    position: relative;
+    float: left;
+}
+
+blockquote footer {
+    padding-right: 40px;
+}
+
+@keyframes slider{
+    0%    { left:0; }
+    11%   { left:0; }
+    12.5% { left:-100%; }
+    23.5% { left:-100%; }
+    25%   { left:-200%; }
+    36%   { left:-200%; }
+    37.5% { left:-300%; }
+    48.5% { left:-300%; }
+    50%   { left:-400%; }
+    61%   { left:-400%; }
+    62.5% { left:-300%; }
+    73.5% { left:-300%; }
+    75%   { left:-200%; }
+    86%   { left:-200%; }
+    87.5% { left:-100%; }
+    98.5% { left:-100%; }
+    100%  { left:0; }
+}
+
+@media ($min-bp-a) {
+    .slider {
+        padding: 60px 45px;
+    }
+}

@@ -12,11 +12,29 @@
                 <h1><i class="ico-earth"></i>OUR AIM</h1>
                 <p class="full-margin">Integer sit amet nibh sit amet lectus luctus placerat. Suspendisse eget arcu tortor. Fusce pretium sodales nisl et tempus.</p>
             </div>
-            <div class="section-padding half mblue">
-                <blockquote>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
-                    <footer>Mr Person, Title Here</footer>
-                </blockquote>
+            <div class="slider section-padding half mblue">
+                <ul class="panes">
+                    <li><blockquote>
+                        <p>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
+                        <footer>Mr Person, Title Here</footer>
+                    </blockquote></li>
+                    <li><blockquote>
+                        <p>2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
+                        <footer>Mr Person, Title Here</footer>
+                    </blockquote></li>
+                    <li><blockquote>
+                        <p>3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
+                        <footer>Mr Person, Title Here</footer>
+                    </blockquote></li>
+                    <li><blockquote>
+                        <p>4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
+                        <footer>Mr Person, Title Here</footer>
+                    </blockquote></li>
+                    <li><blockquote>
+                        <p>5. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
+                        <footer>Mr Person, Title Here</footer>
+                    </blockquote></li>
+                </div>
             </div>
         </div>
     </section>
