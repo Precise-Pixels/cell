@@ -12,7 +12,7 @@
                 <h1><i class="ico-earth"></i>OUR AIM</h1>
                 <p class="full-margin">Integer sit amet nibh sit amet lectus luctus placerat. Suspendisse eget arcu tortor. Fusce pretium sodales nisl et tempus.</p>
             </div>
-            <div class="slider section-padding half mblue">
+            <div class="slider half mblue">
                 <ul class="panes">
                     <li><blockquote>
                         <p>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
@@ -31,7 +31,7 @@
                         <footer>Mr Person, Title Here</footer>
                     </blockquote></li>
                     <li><blockquote>
-                        <p>5. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
+                        <p>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
                         <footer>Mr Person, Title Here</footer>
                     </blockquote></li>
                 </div>

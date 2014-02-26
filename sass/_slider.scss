@@ -1,15 +1,16 @@
 .slider {
     width: 100%;
+    padding: 60px 40px;
     overflow: hidden;
 }
 
 .panes {
     width: 500%;
-    padding-left: 10px;
+    padding-left: 0;
     position:relative;
     overflow: hidden;
     list-style: none;
-    animation:slider 30s infinite;
+    animation: slider 10s infinite;
 }
 
 .panes > li {
@@ -18,28 +19,17 @@
     float: left;
 }
 
-blockquote footer {
-    padding-right: 40px;
-}
-
 @keyframes slider{
-    0%    { left:0; }
-    11%   { left:0; }
-    12.5% { left:-100%; }
-    23.5% { left:-100%; }
-    25%   { left:-200%; }
-    36%   { left:-200%; }
-    37.5% { left:-300%; }
-    48.5% { left:-300%; }
-    50%   { left:-400%; }
-    61%   { left:-400%; }
-    62.5% { left:-300%; }
-    73.5% { left:-300%; }
-    75%   { left:-200%; }
-    86%   { left:-200%; }
-    87.5% { left:-100%; }
-    98.5% { left:-100%; }
-    100%  { left:0; }
+    10%    { left:0; }
+    20%   { left:0; }
+    30% { left:-100%; }
+    40% { left:-100%; }
+    50%   { left:-200%; }
+    60%   { left:-200%; }
+    70% { left:-300%; }
+    80% { left:-300%; }
+    90%   { left:-400%; }
+    100%   { left: -400%;}
 }
 
 @media ($min-bp-a) {
