@@ -4,6 +4,7 @@
     <script src='/js/respond.min.js'></script>
 
     <?php if($isHome): ?>
+        <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4&sensor=false&libraries=places'></script>
         <script src='/js/page-home.js'></script>
     <?php endif; ?>
 
@@ -38,6 +39,7 @@
     <script src='/build/respond.min.js'></script>
 
     <?php if($isHome): ?>
+        <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4&sensor=false&libraries=places'></script>
         <script src='/build/page-home.min.js'></script>
     <?php endif; ?>
 
