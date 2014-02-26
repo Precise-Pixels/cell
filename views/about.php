@@ -83,8 +83,7 @@
                         <div class="event-img-wrapper">
                             <img class="event-img" src="/img/placeholder.gif">
                         </div> 
-                        <p class="event-text">Dr Lee felt the progresstion of technology was moving too slowly so he took a more
-                            active role in shaping the planets future. Thus, Cell Industries was born.</p>
+                        <p class="event-text">Dr Lee felt the progression of technology was moving too slowly so he took a more active role in shaping the planets future. Thus, Cell Industries was born.</p>
                     </div>
 
                     <div class="event funding">
@@ -94,8 +93,7 @@
                         <div class="event-img-wrapper">
                             <img class="event-img" src="/img/placeholder.gif">
                         </div> 
-                        <p class="event-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, 
-                        rhoncus at sodales et, fringilla vitae justo. Suspendisse adipiscing nunc tortor, eget accumsan tellus</p>
+                        <p class="event-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero,rhoncus at sodales et, fringilla vitae justo. Suspendisse adipiscing nunc tortor, eget accumsan tellus</p>
                     </div>
 
                     <div class="event party">
