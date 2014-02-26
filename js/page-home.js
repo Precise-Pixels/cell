@@ -35,12 +35,50 @@ function init() {
         zoom: 2,
         maxZoom: 10,
         minZoom: 2,
-        mapTypeId: google.maps.MapTypeId.SATELLITE,
+        mapTypeId: 'minimal',
         zoomControl: false,
         panControl: false,
         mapTypeControl: false,
         streetViewControl: false
     });
+
+    var styles = [
+        {
+            "featureType": "water",
+            "stylers": [
+                { "color": "#333333" }
+            ]
+        }, {
+            "featureType": "landscape",
+            "stylers": [
+                { "color": "#222222" }
+            ]
+        }, {
+            "featureType": "administrative",
+            "stylers": [
+                { "visibility": "off" }
+            ]
+        }, {
+            "featureType": "road",
+            "stylers": [
+                { "visibility": "off" }
+            ]
+        }, {
+            "featureType": "poi",
+            "stylers": [
+                { "visibility": "off" }
+            ]
+        }, {
+            "featureType": "transit",
+            "elementType": "geometry",
+            "stylers": [
+                { "visibility": "off" }
+            ]
+        }
+    ];
+
+    var mapStyle = new google.maps.StyledMapType(styles, 'minimal');
+    map.mapTypes.set('minimal', mapStyle);
 
     // Resize event
     google.maps.event.addDomListener(window, 'resize', function() {
