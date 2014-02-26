@@ -10,6 +10,7 @@ body > header {
 #site-nav,
 #user-nav {
     display: none;
+    z-index: 1;
 }
 
 #site-nav-btn {
@@ -45,6 +46,24 @@ body > header {
 
 .menu-icon {
     padding-left: 10px;
+}
+
+#nav-overlay {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+    opacity: 0;
+    background: #000;
+    transition: opacity .3s;
+}
+
+#site-nav-toggle:checked ~ #nav-overlay,
+#user-nav-toggle:checked ~ #nav-overlay {
+    visibility: visible;
+    opacity: .8;
 }
 
 #user-message {
@@ -110,7 +129,6 @@ body > header {
     top: 40px;
     left: -350px;
     display: block;
-    z-index: 1;
     transition: all .3s;
 }
 

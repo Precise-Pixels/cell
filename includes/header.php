@@ -34,4 +34,5 @@
         <?php endif; ?>
     </nav>
     <div id="user-arrow" class="ico-"></div>
+    <div id="nav-overlay"></div>
 </header>
