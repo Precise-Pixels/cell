@@ -7,3 +7,4 @@
     <div class="cell-logo">
         <a href="/" class="cell-logo-footer ico-cell-logo"></a>
     </div>
+</footer>
