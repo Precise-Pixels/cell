@@ -17,9 +17,9 @@
         </div>
     </header>
 
-    <section>
+    <section class="dgrey">
         <div class="align-centre">
-            <img src="/img/placeholder.gif" alt="Clone Cube" class="full"/>
+            <div id="homepage-map"></div>
         </div>
     </section>
 
