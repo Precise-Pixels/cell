@@ -1781,7 +1781,7 @@ THREE.OrbitControls = function ( object, domElement, view ) {
     
     // Limit rotation: 'x', both'
     this.rotateDirection = 'both';
-    this.rotateSpeed = 1.0;
+    this.rotateSpeed = .3;
 
     // Set to true to automatically rotate around the target
     this.autoRotate = false;
