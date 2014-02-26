@@ -14,24 +14,6 @@
     margin-top: 0;
 }
 
-#btn--facebook {
-    box-shadow: inset 4px 4px 0 #395B89, inset -4px -4px 0 #395B89;
-    background: url(/img/spritesheet.svg) -162px -712px;
-    &:hover {
-        box-shadow: inset 4px 50px 0 #395b89, inset -4px -4px 0 #395b89;
-        background: url(/img/spritesheet.svg) -162px -689px;
-    }
-}
-
-#btn--twitter {
-    box-shadow: inset 4px 4px 0 #2BBFEC, inset -4px -4px 0 #2BBFEC;
-    background: url(/img/spritesheet.svg) -141px -712px;
-    &:hover {
-        box-shadow: inset 4px 50px 0 #2BBFEC, inset -4px -4px 0 #2BBFEC;
-        background: url(/img/spritesheet.svg) -141px -689px;
-    }
-}
-
 .lgrey .btn {
     color: $dgrey;
     box-shadow: inset 4px 4px 0 $dgrey, inset -4px -4px 0 $dgrey;
