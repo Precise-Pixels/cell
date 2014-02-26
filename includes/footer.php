@@ -5,6 +5,5 @@
         <a href="#" class="btn social-btn ico-twitter"></a>
     </div>
     <div class="cell-logo">
-        <a href="/" class="cell-logo-footer ico-cell-logo"></a>
-    </div>
-</footer>
+        <a href="/" class="ico-cell-logo"></a>
+    </div></footer>
