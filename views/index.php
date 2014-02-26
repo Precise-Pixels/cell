@@ -17,7 +17,7 @@
         </div>
     </header>
 
-    <section>
+    <section class="sdgrey">
         <div class="align-centre">
             <div id="homepage-map"></div>
         </div>
