@@ -5,6 +5,7 @@
 
 .panes {
     width: 500%;
+    padding-left: 10px;
     position:relative;
     overflow: hidden;
     list-style: none;
@@ -43,6 +44,6 @@ blockquote footer {
 
 @media ($min-bp-a) {
     .slider {
-        padding: 60px 45px;
+        width: 50%;
     }
 }
