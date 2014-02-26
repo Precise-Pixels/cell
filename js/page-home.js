@@ -73,6 +73,15 @@ function init() {
         for(var i = 0; i < locations.length; i++) {
             var marker = new google.maps.Marker({
                 position: new google.maps.LatLng(locations[i]['latitude'], locations[i]['longitude']),
+                icon: {
+                    path: google.maps.SymbolPath.CIRCLE,
+                    fillColor: '#369',
+                    fillOpacity: .5,
+                    strokeColor: '#9CF',
+                    strokeWeight: 2,
+                    strokeOpacity: .3,
+                    scale: 8
+                },
                 map: map
             });
 
