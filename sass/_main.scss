@@ -1,6 +1,5 @@
 #fixed-header {
-    height: 450px;
-    top: 40px;
+    height: 800px;
     position: fixed;
     left: 0;
     right: 0;
@@ -24,7 +23,7 @@
 #fixed-header > .align-vertical {
     display: table-cell;
     vertical-align: middle;
-    padding-bottom: 180px;
+    padding-bottom: 460px;
 }
 
 main {
