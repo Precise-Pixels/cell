@@ -31,5 +31,5 @@
         <?php endif; ?>
     </nav>
     <div id="user-arrow" class="ico-"></div>
-    <a href="/" class="cell-logo"></a>
+    <a href="/" class="cell-logo ico-cell-logo"></a>
 </header>
