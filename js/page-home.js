@@ -68,8 +68,6 @@ function init() {
     };
 
     function plotMarkers() {
-        console.log(locations);
-
         for(var i = 0; i < locations.length; i++) {
             var marker = new google.maps.Marker({
                 position: new google.maps.LatLng(locations[i]['latitude'], locations[i]['longitude']),
