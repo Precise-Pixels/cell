@@ -10,12 +10,12 @@
         <div class="align-centre lgrey">
             <div class="section-padding half">
                 <h1><i class="ico-earth"></i>OUR AIM</h1>
-                <p class="full-margin">Integer sit amet nibh sit amet lectus luctus placerat. Suspendisse eget arcu tortor. Fusce pretium sodales nisl et tempus.</p>
+                <p class="full-margin">We at Cell Industries empower you to preserve the future of your planet. Using our groundbreaking QuantumCell™ technology we can clone your environment leaving it protected and ready to be restored in the event of undesirable occurrences.</p>
             </div>
             <div class="section-padding half mblue">
                 <blockquote>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
-                    <footer>Mr Person, Title Here</footer>
+                    <p>The process was easy to follow, efficient and intuative. The staff could not do enough for me and was very happy with the end product.</p>
+                    <footer>Mr Sea Shaw, Freelance Photographer</footer>
                 </blockquote>
             </div>
         </div>
