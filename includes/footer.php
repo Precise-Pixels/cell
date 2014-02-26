@@ -4,4 +4,6 @@
         <a href="#" class="btn social-btn ico-facebook"></a>
         <a href="#" class="btn social-btn ico-twitter"></a>
     </div>
-    <a href="/" class="cell-logo ico-cell-logo"></a>
+    <div class="cell-logo">
+        <a href="/" class="cell-logo-footer ico-cell-logo"></a>
+    </div>

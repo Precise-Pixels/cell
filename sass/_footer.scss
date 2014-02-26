@@ -1,19 +1,19 @@
 footer {
-    height: 150px;
+    height: auto;
+    overflow: hidden;
     text-align: center;
-    z-index: 2;
+    z-index: 1;
 }
 
 #copyright {
-    position: absolute;
-    left: 25px;
-    margin: auto;
-    color: $lgrey;
+    width: 100%;
 }
 
 #social-icons {
-    right: 25px;
-    position: absolute;
+    width: 100%;
+    .btn {
+        display: inline;
+    }
 }
 
 .social-btn {
@@ -24,16 +24,29 @@ footer {
     text-align: center;
 }
 
-.social-btn i {
+.cell-logo-footer {
+    margin-top: 30px;
 }
 
-@media ($min-bp-b) {
+@media ($min-bp-a) {
+    #copyright,
+    #social-icons {
+        width: auto;
+        position: absolute;
+    }
+
     #copyright {
-        left: 45px;
+        left: 20px;
     }
 
     #social-icons {
-        right: 45px;
+        right: 20px;
+        .btn {
+        display: inline-block;
+        }
+    }
+    .cell-logo-footer {
+        margin-top: 0;
     }
 }
 
