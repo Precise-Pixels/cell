@@ -96,6 +96,7 @@ function init() {
         if(request.readyState == 4 && request.status == 200) {
             locations = JSON.parse(request.responseText);
             plotMarkers();
+            updateData();
         } else if(request.status != 200) {
             console.log('An error has occurred.');
         }
@@ -119,5 +120,12 @@ function init() {
                 }
             })(marker, i));
         }
+    }
+
+    function updateData() {
+        var environments = document.getElementById('homepage-map-data--environments');
+        var percentage   = document.getElementById('homepage-map-env-icon-perc');
+        environments.innerHTML = locations.length;
+        percentage.innerHTML   = (locations.length / 167076 * 100).toFixed(2) + '%';
     }
 }

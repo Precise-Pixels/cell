@@ -24,20 +24,21 @@
 
     <section id="homepage-map-info" class="mblue">
         <i id="homepage-map-env-icon" class="ico-env"></i>
+        <p id="homepage-map-env-icon-perc">&nbsp;</p>
         <div class="section-padding align-centre">
-            <h1 class="homepage-map-data">Do your bit to preserve the planet</h1>
+            <h2 class="homepage-map-data homepage-map-env-icon-title">of the planet cloned</h2>
             <div class="homepage-map-data homepage-map-data--left half">
-                <h2>100%</h2>
-                <p>OF THE PLANET CLONED</p>
+                <h2 id="homepage-map-data--participants"><?= $participants; ?></h2>
+                <p>PARTICIPANTS</p>
             </div>
             <div class="homepage-map-data homepage-map-data--right half">
-                <h2>167076</h2>
+                <h2 id="homepage-map-data--environments">&nbsp;</h2>
                 <p>ENVIRONMENTS CLONED</p>
             </div>
-            <div id="homepage-map-learn-more" class=" align-centre">
+            <div id="homepage-map-learn-more" class="align-centre">
                 <a href="/project-titan" class="btn">LEARN MORE</a>
-            </div>   
-        </div>    
+            </div>
+        </div>
     </section>
 
     <section>
