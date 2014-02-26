@@ -111,3 +111,13 @@ body > header {
 #user-nav a {
     display: block;
 }
+
+header > .cell-logo {
+    display: none;
+}
+
+@media ($min-bp-b) {
+    header > .cell-logo {
+        display: block;
+    }
+}

@@ -16,9 +16,9 @@
         </div>
     </header>
 
-    <section>
-        <div id="homepage-map" class="align-centre">
-            <img src="/img/placeholder.gif" alt="Clone Cube" class="full"/>
+    <section class="dgrey">
+        <div class="align-centre">
+            <div id="homepage-map"></div>
         </div>
     </section>
 
