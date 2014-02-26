@@ -3,13 +3,13 @@ require_once('php/LoginSystem.php');
 $loginSystem = new LoginSystem();
 ?>
 
-<main>
+<header class="fixed-header section-padding align-centre dgrey">
+    <hgroup class="align-vertical">
+        <h1>MYCELL</h1>
+    </hgroup>
+</header>
 
-    <header class="section-padding align-centre dgrey">
-        <hgroup class="align-vertical">
-            <h1>MYCELL</h1>
-        </hgroup>
-    </header>
+<main>
 
     <section>
         <div class="section-padding align-centre lgrey">
@@ -78,7 +78,7 @@ $loginSystem = new LoginSystem();
                         if($exists) {
                             echo $wrapStart . 'An account with this email/username already exists.' . $wrapEnd;
                         } else {
-                            $response = $loginSystem->createUser($email, $password);
+                            $response = $loginSystem->createUser($email, $password, $username);
                             echo $response;
                         }
                     } else {

@@ -1,7 +1,10 @@
-header {
+body > header {
+    width: 100%;
     height: 40px;
-    position: relative;
+    position: fixed;
+    top: 0;
     z-index: 3;
+    background: $dgrey;
 }
 
 #site-nav,
@@ -12,14 +15,16 @@ header {
 #site-nav-btn {
     width: 40px;
     height: 40px;
+    font-size: 1.9rem;
+    text-align: center;
+    line-height: 40px;
     position: absolute;
     cursor: pointer;
-    background: url(/img/spritesheet.svg) -5px 0;
-    transition: background-color .3s;
+    transition: background .3s;
 }
 
 #site-nav-btn:hover {
-    background-color: $mgrey;
+    background: $mgrey;
 }
 
 #user-message {
@@ -37,16 +42,26 @@ header {
     top: 0;
     right: 0;
     cursor: pointer;
+    z-index: 2;
 }
 
 #user-arrow {
     height: 20px;
     width: 20px;
+    margin-right: 0;
     position: absolute;
     top: 40px;
     right: 60px;
-    background: $dgrey url(/img/spritesheet.svg) -45px -1px;
-    transition: background-color .3s;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 20px;
+    background: $dgrey;
+    transition: background .3s;
+    z-index: 1;
+}
+
+#user-arrow:before {
+    content: "v";
 }
 
 #user-pic {
@@ -59,15 +74,15 @@ header {
     transition: all .3s;
 }
 
-#user-nav-btn:hover > #user-arrow {
-    background-color: $mgrey;
+#user-nav-btn:hover ~ #user-arrow {
+    background: $mgrey;
 }
 
 #user-nav-btn:hover > #user-pic {
     filter: brightness(100%);
 }
 
-#site-nav-toggle:checked ~ #site-nav {
+#site-nav-toggle:checked + #site-nav {
     width: 150px;
     position: absolute;
     top: 40px;
@@ -80,13 +95,17 @@ header {
     display: block;
 }
 
-#user-nav-toggle:checked ~ #user-nav {
+#user-nav-toggle:checked + #user-nav {
     width: 80px;
     position: absolute;
     top: 60px;
     right: 0;
     display: block;
     background: $dgrey;
+}
+
+#user-nav-toggle:checked ~ #user-arrow:before {
+    content: "^";
 }
 
 #user-nav a {

@@ -4,14 +4,13 @@
         header('location: /signin');
     }
 ?>
+<header class="fixed-header section-padding align-centre dgrey">
+    <hgroup class="align-vertical">
+        <h1>CLONE A NEW ENVIRONMENT</h1>
+    </hgroup>
+</header>
 
 <main>
-
-    <header class="section-padding align-centre dgrey">
-        <hgroup class="align-vertical">
-            <h1>CLONE A NEW ENVIRONMENT</h1>
-        </hgroup>
-    </header>
 
     <section id="new-env-instructions" class="sdgrey section--spacer">
         <ol class="align-centre">
@@ -51,7 +50,6 @@
                         </tr>
                     </table>
                 </form>
-                <div id="new-env-overlay" class="new-env-overlay"></div>
             </div>
         </div>
     </section>
@@ -87,3 +85,5 @@
     </section>
 
 </main>
+
+<div id="new-env-overlay" class="new-env-overlay"></div>

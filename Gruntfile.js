@@ -64,11 +64,13 @@ module.exports = function(grunt) {
         },
         uglify: {
             build: {
-                files: {
-                    'build/scripts.min.js': ['js/respond.min.js'],
-                    'build/env.min.js': ['js/threejs.tweenjs.stats.loaders.controls.js', 'js/env.js'],
-                    'build/new-env.min.js': ['js/new-env.js']
-                }
+                files: [{
+                    expand: true,
+                    cwd: 'js',
+                    src: '*.js',
+                    dest: 'build',
+                    ext: '.min.js'
+                }]
             }
         },
         watch: {
@@ -86,11 +88,11 @@ module.exports = function(grunt) {
 
     // Load tasks
     grunt.loadNpmTasks('grunt-autoprefixer');
-    grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-ftp-deploy');
 
     // Register tasks
