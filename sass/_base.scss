@@ -25,11 +25,14 @@ body {
 }
 
 .cell-logo {
-    width: 100%;
     font-size: 2rem;
     text-align: center;
     line-height: 38px;
     color: $lgrey;
+    a {
+        margin-right: 0;
+        color: $lgrey;
+    }
 }
 
 .scale {

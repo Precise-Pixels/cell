@@ -16,6 +16,17 @@ footer {
     position: absolute;
 }
 
+.social-btn {
+    margin-right: 0;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 200;
+    text-align: center;
+}
+
+.social-btn i {
+}
+
 @media ($min-bp-b) {
     #copyright {
         left: 45px;
