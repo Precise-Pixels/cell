@@ -1,12 +1,14 @@
 <header class="dgrey">
     <label for="site-nav-toggle" id="site-nav-btn"></label>
     <input type="checkbox" id="site-nav-toggle" class="checkbox-hack"/>
-    <nav id="site-nav" class="force-repaint">
-        <a href="/"><i class="ico-company menu-icon"></i>HOME</a>
-        <a href="/about"><i class="ico-company menu-icon"></i>ABOUT</a>
-        <a href="/project-titan"><i class="ico-company menu-icon"></i>PROJECT TITAN</a>
-        <a href="/technology"><i class="ico-company menu-icon"></i>TECHNOLOGY</a>
-        <a href="/press"><i class="ico-company menu-icon"></i>PRESS</a>
+    <nav id="site-nav" class="force-repaint mblue">
+    <ul>
+        <li><a href="/"><i class="ico-company menu-icon"></i>HOME</a></li>
+        <li><a href="/about"><i class="ico-company menu-icon"></i>ABOUT</a></li>
+        <li><a href="/project-titan"><i class="ico-company menu-icon"></i>PROJECT TITAN</a></li>
+        <li><a href="/technology"><i class="ico-company menu-icon"></i>TECHNOLOGY</a></li>
+        <li><a href="/press"><i class="ico-company menu-icon"></i>PRESS</a></li>
+    </ul>
     </nav>
     <i class="ico- site-nav-btn-icon"></i>
 

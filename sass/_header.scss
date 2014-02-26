@@ -63,6 +63,7 @@ body > header {
     right: 0;
     cursor: pointer;
     z-index: 2;
+    transition: all .3s;
 }
 
 #user-arrow {
@@ -76,7 +77,7 @@ body > header {
     text-align: center;
     line-height: 20px;
     transition: background .3s;
-    transform: rotate(-90deg);
+    transform: rotate(90deg);
     z-index: 1;
 }
 
@@ -103,15 +104,23 @@ body > header {
 }
 
 #site-nav-toggle + #site-nav {
-    width: 200px;
-    height: auto;
-    position: absolute;
+    width: 350px;
+    height: 100%;
+    position: fixed;
     top: 40px;
-    left: -200px;
+    left: -350px;
     display: block;
-    background: $sdgrey;
     z-index: 1;
     transition: all .3s;
+}
+
+#site-nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+#site-nav ul li {
+    list-style: none;
 }
 
 #site-nav-toggle:checked + #site-nav {
@@ -119,23 +128,29 @@ body > header {
 }
 
 #site-nav a {
-    padding: 20px 10px;
+    width: 350px;
+    padding: 30px 0;
     color: $lgrey;
-    font-size: 1rem;
+    font-size: 1.4rem;
     text-decoration: none;
     display: block;
     transition: all .3s;
 }
 
 #site-nav a:hover {
-    margin-left: 10px;
+    background: #CCC;
+    padding-left: 10px;
+}
+
+#user-nav-toggle + #user-nav {
+    transition: all .3s;
 }
 
 #user-nav-toggle:checked + #user-nav {
-    width: 250px;
+    width: 300px;
     position: absolute;
     top: 60px;
-    right: -250px;
+    right: -300px;
     display: block;
     background: $sdgrey;
     transition: all .3s;
@@ -156,4 +171,8 @@ body > header {
     text-decoration: none;
     display: block;
     transition: all .3s;
+}
+
+#user-nav a:hover {
+    margin-left: 10px;
 }
