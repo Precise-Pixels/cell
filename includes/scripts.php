@@ -2,6 +2,7 @@
 // SANDBOX ?>
 
     <script src='/js/respond.min.js'></script>
+    <script src='/js/all.js'></script>
 
     <?php if($isHome): ?>
         <script src='/js/page-home.js'></script>
@@ -31,6 +32,7 @@
 // LIVE ?>
 
     <script src='/build/respond.min.js'></script>
+    <script src='/build/all.min.js'></script>
 
     <?php if($isHome): ?>
         <script src='/build/page-home.min.js'></script>
