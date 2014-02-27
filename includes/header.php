@@ -1,7 +1,7 @@
 <header class="dgrey">
     <label for="site-nav-toggle" id="site-nav-btn"></label>
     <input type="checkbox" id="site-nav-toggle" class="checkbox-hack"/>
-    <nav id="site-nav" class="force-repaint mblue">
+    <nav id="site-nav" class="force-repaint dgrey">
         <ul>
             <li><a href="/"><i class="ico-company menu-icon"></i>HOME</a></li>
             <li><a href="/about"><i class="ico-company menu-icon"></i>ABOUT</a></li>
@@ -24,18 +24,16 @@
         <img id="user-pic" src="http://www.gravatar.com/avatar/<?= (isset($_SESSION['userEmail']) ? md5(strtolower(trim($_SESSION['userEmail']))) : 1); ?>?d=mm&amp;s=60"/>
     </label>
     <input type="checkbox" id="user-nav-toggle" class="checkbox-hack"/>
-    <nav id="user-nav" class="force-repaint mblue">
-        <?php if(isset($_SESSION['status']) && $_SESSION['status'] == 'signedin'): ?>
-            <ul>
-                <li><a href="/user/<?= $_SESSION['username']; ?>"><i class="ico-company menu-icon"></i>MyCell</a></li>
-                <li><a href="/user/<?= $_SESSION['username']; ?>/env/new"><i class="ico-company menu-icon"></i>Clone a new environment</a></li>
-                <li><a href="/signout?r=<?= $_SERVER['REQUEST_URI']; ?>"><i class="ico-company menu-icon"></i>Sign out</a></li>
-            </ul>
-        <?php else: ?>
-            <ul>
-                <li><a href="/signin"><i class="ico-company menu-icon"></i>Sign in / Register</a></li>
-            </ul>
-        <?php endif; ?>
+    <nav id="user-menu-wrapper" class="force-repaint dgrey">
+        <div id="user-menu">
+            <?php if(isset($_SESSION['status']) && $_SESSION['status'] == 'signedin'): ?>
+                    <a href="/user/<?= $_SESSION['username']; ?>" class="btn"><i class="ico-my-cell"></i></a>
+                    <a href="/user/<?= $_SESSION['username']; ?>/env/new" class="btn"><i class="ico-env-new"></i></a>
+                    <a href="/signout?r=<?= $_SERVER['REQUEST_URI']; ?>" class="btn"><i class="ico-company"></i></a>
+            <?php else: ?>
+                    <a href="/signin" class="btn"><i class="ico-company"></i></a>
+            <?php endif; ?>
+        </div>
     </nav>
     <div id="user-arrow" class="ico-"></div>
     <div id="nav-overlay"></div>

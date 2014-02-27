@@ -129,15 +129,13 @@ body > header {
     left: -350px;
     display: block;
     transition: left .3s;
-}
-
-nav ul {
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    list-style: none;
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        list-style: none;
+    }
 }
 
 #site-nav-toggle:checked + #site-nav {
@@ -151,19 +149,34 @@ nav ul li {
     font-size: 1.4rem;
     text-decoration: none;
     display: block;
-    transition: padding .3s, background .3s;
+    transition: color .5s, background .5s, padding .5s;
+    &:hover {
+        padding-left: 10px;
+        background: $lgrey;
+        color: $dgrey;
+    }
 }
 
-#user-nav {
-    width: 350px;
+#user-menu-wrapper {
+    width: 300px;
     position: fixed;
     top: 60px;
-    right: -350px;
+    right: -300px;
     display: block;
-    transition: right .3s;
+    background: none;
+    transition: right .3s, color .3;
+    z-index: 3;
 }
 
-#user-nav-toggle:checked + #user-nav {
+#user-menu {
+    float: right;
+    display: inline-block;
+    padding: 20px;
+    text-align: center;
+    background: $dgrey;
+}
+
+#user-nav-toggle:checked + #user-menu-wrapper {
     right: 0;
 }
 
@@ -171,17 +184,6 @@ nav ul li {
     content: "^";
 }
 
-#user-nav a {
-    padding: 30px 0;
-    color: $lgrey;
-    font-size: 1.4rem;
-    text-decoration: none;
-    display: block;
-    transition: padding .3s, background .3s;
-}
-
-#site-nav a:hover,
-#user-nav a:hover {
-    padding-left: 10px;
-    background: #CCC;
+.sign-in {
+    margin: 20px 0 20px 20px;
 }

@@ -29,6 +29,11 @@ a[class*="ico-"] {
     text-decoration: none;
 }
 
+.btn i[class*="ico-"] {
+    width: 35px;
+    margin-right: 0;
+}
+
 .ico-cross:before { content: "\78"; }
 .ico-info:before { content: "\69"; }
 .ico-html5:before { content: "\39"; }
