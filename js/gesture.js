@@ -166,23 +166,23 @@ var movethresh   = 2,
     brightthresh = 600,
     overthresh   = 1000;
 
-var brightnessSetting = document.getElementsByName('brightness');
-var brightnessSettingChoice = 0;
+var sensitivitySetting = document.getElementsByName('sensitivity');
+var sensitivitySettingChoice = 0;
 
-for(var i = 0; i < brightnessSetting.length; i++) {
-    brightnessSetting[i].addEventListener('click', function() {
-        brightnessSettingChanged();
+for(var i = 0; i < sensitivitySetting.length; i++) {
+    sensitivitySetting[i].addEventListener('click', function() {
+        sensitivitySettingChanged();
     }, false);
 }
 
-function brightnessSettingChanged() {
-    for(var i = 0; i < brightnessSetting.length; i++) {
-        if(brightnessSetting[i].checked == true) {
-            brightnessSettingChoice = i;
+function sensitivitySettingChanged() {
+    for(var i = 0; i < sensitivitySetting.length; i++) {
+        if(sensitivitySetting[i].checked == true) {
+            sensitivitySettingChoice = i;
         }
     }
 
-    switch(brightnessSettingChoice) {
+    switch(sensitivitySettingChoice) {
         case 0:
             brightthresh = 300;
             break;
@@ -194,7 +194,6 @@ function brightnessSettingChanged() {
             break;
     }
 }
-
 
 function calibrate() {
     wasdown = {
