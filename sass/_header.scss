@@ -82,7 +82,6 @@ body > header {
     right: 0;
     cursor: pointer;
     z-index: 2;
-    transition: all .3s;
 }
 
 #user-arrow {
@@ -122,22 +121,22 @@ body > header {
     filter: brightness(100%);
 }
 
-#site-nav-toggle + #site-nav {
+#site-nav {
     width: 350px;
     height: 100%;
     position: fixed;
     top: 40px;
     left: -350px;
     display: block;
-    transition: all .3s;
+    transition: left .3s;
 }
 
-#site-nav ul {
+nav ul {
     margin: 0;
     padding: 0;
 }
 
-#site-nav ul li {
+nav ul li {
     list-style: none;
 }
 
@@ -152,25 +151,16 @@ body > header {
     font-size: 1.4rem;
     text-decoration: none;
     display: block;
-    transition: all .3s;
+    transition: padding .3s, background .3s;
 }
 
-#site-nav a:hover {
-    padding-left: 10px;
-    background: #CCC;
-}
-
-#user-nav-toggle + #user-nav {
-    transition: all .3s;
-}
-
-#user-nav-toggle:checked + #user-nav {
+#user-nav {
     width: 350px;
     position: fixed;
     top: 60px;
     right: -350px;
     display: block;
-    transition: all .3s;
+    transition: right .3s;
 }
 
 #user-nav-toggle:checked + #user-nav {
@@ -182,14 +172,16 @@ body > header {
 }
 
 #user-nav a {
-    padding: 20px 10px;
+    padding: 30px 0;
     color: $lgrey;
     font-size: 1.4rem;
     text-decoration: none;
     display: block;
-    transition: all .3s;
+    transition: padding .3s, background .3s;
 }
 
+#site-nav a:hover,
 #user-nav a:hover {
-    margin-left: 10px;
+    padding-left: 10px;
+    background: #CCC;
 }
