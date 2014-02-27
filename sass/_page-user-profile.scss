@@ -1,11 +1,7 @@
 #user-profile-banner {
-    position: relative;
-    top: 60px;
-    left: 0;
-    right: 0;
-    z-index: 1;
     margin-bottom: 0;
     padding: 20px;
+    z-index: 1;
     .quarter {
         width: (100%/1);
     }
@@ -31,16 +27,22 @@
 #user-buttons {
     margin-top: 20px;
     text-align: right;
-}
-
-#user-profile-main {
-    margin-top: 60px;
+    .btn {
+        
+    }
 }
 
 #environment-listing {
     padding: 20px;
     .imagebox {
-    border: 5px solid $sdgrey;
+        border: 5px solid $sdgrey;
+    }
+    .imagebox figure {
+        transition: all .5s ease-in-out;
+    }
+
+    .imagebox figure:hover{
+        transform: scale(2);
     }
 }
 
@@ -52,9 +54,7 @@
  }
 
 @media ($min_bp_a) {
-    #user-profile-banner {  
-        position: fixed; 
-        top: 60px;
+    #user-profile-banner {
         .quarter {
             width: (100%/4);
         }
@@ -68,10 +68,6 @@
 
     #user-buttons {
         margin-top: 0;
-    }
-
-    #user-profile-main {
-        margin-top: 300px;
     }
  }
 
@@ -94,14 +90,6 @@
  }
 
   @media ($min_bp_c) {
-    #user-profile-banner {
-        padding: 0;
-        margin-bottom: 100px;
-    }
-
-    #user-profile-main {
-        margin-top: 410px;
-    }
 
     #environment-listing {
         padding: 40px 0;
