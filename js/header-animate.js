@@ -5,8 +5,8 @@ window.onscroll = function (e) {
     var position    = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
     var target      = document.getElementsByTagName('section')[0].offsetParent.offsetTop;
 
-    header.style.top = position * -1 / 2 + "px";
-    hgroup.style.top = position * -1 / 1 + "px";
+    header.style.top = position * -1 / 3 + "px";
+    hgroup.style.top = position * -1 / 2 + "px";
     console.log(position);
 
     if ( position >= target ) {
