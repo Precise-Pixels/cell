@@ -8,6 +8,6 @@
 <canvas id="canvas"></canvas>
 <canvas id="comp"></canvas>
 
-<label for="sensitivity">more sensitive</label> <input type="radio" name="sensitivity" style="width:100px;">
-<label for="sensitivity">average</label> <input type="radio" name="sensitivity" checked style="width:100px;">
-<label for="sensitivity">less sensitive</label> <input type="radio" name="sensitivity" style="width:100px;">
+<label for="sensitivity">more sensitive</label> <input type="radio" name="sensitivity">
+<label for="sensitivity">average</label> <input type="radio" name="sensitivity" checked>
+<label for="sensitivity">less sensitive</label> <input type="radio" name="sensitivity">
