@@ -1,5 +1,61 @@
 footer {
-    height: 150px;
+    height: auto;
+    overflow: hidden;
     text-align: center;
-    z-index: 2;
+    z-index: 1;
+}
+
+#copyright {
+    width: 100%;
+}
+
+#social-icons {
+    width: 100%;
+    .btn {
+        display: inline;
+    }
+}
+
+.social-btn {
+    margin-right: 0;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 200;
+    text-align: center;
+}
+
+footer > .cell-logo {
+    margin-top: 30px;
+}
+
+@media ($min-bp-a) {
+    #copyright,
+    #social-icons {
+        width: auto;
+        position: absolute;
+    }
+
+    #copyright {
+        left: 20px;
+    }
+
+    #social-icons {
+        right: 20px;
+        .btn {
+        display: inline-block;
+        }
+    }
+    footer > .cell-logo {
+        margin-top: 0;
+    }
+}
+
+@media ($min-bp-c) {
+    #copyright {
+        left: 0px;
+    }
+
+    #social-icons {
+        right: 0px;
+    }
 }
