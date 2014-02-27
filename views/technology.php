@@ -1,4 +1,4 @@
-<header id="fixed-header" class="section-padding align-centre dgrey">
+<header id="fixed-header" class="fixed-header--tech section-padding">
     <hgroup class="align-vertical">
         <h1>TECHNOLOGY</h1>
         <h2>QuantumCell&trade; CLONE CUBE</h2>
@@ -8,7 +8,7 @@
 <main>
 
     <section>
-        <div class="section-padding align-centre dgrey">
+        <div class="section-padding align-centre">
             <img src="/img/placeholder.gif" alt="Clone Cube" class="full">
         </div>
     </section>
