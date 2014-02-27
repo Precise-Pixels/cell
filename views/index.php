@@ -26,7 +26,7 @@
         <i id="homepage-map-env-icon" class="ico-env"></i>
         <p id="homepage-map-env-icon-perc">&nbsp;</p>
         <div class="section-padding align-centre">
-            <h2 class="homepage-map-data homepage-map-env-icon-title">of the planet cloned</h2>
+            <h2 class="homepage-map-data homepage-map-env-icon-title">OF THE PLANET CLONED</h2>
             <div class="homepage-map-data homepage-map-data--left half">
                 <h2 id="homepage-map-data--participants"><?= $participants; ?></h2>
                 <p>PARTICIPANTS</p>
