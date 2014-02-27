@@ -162,8 +162,38 @@ function test() {
 }
 
 var movethresh   = 2,
-    brightthresh = 300,
+    brightthresh = 600,
     overthresh   = 1000;
+
+var brightnessSetting = document.getElementsByName('brightness');
+var brightnessSettingChoice = 0;
+
+for(var i = 0; i < brightnessSetting.length; i++) {
+    brightnessSetting[i].addEventListener('click', function() {
+        brightnessSettingChanged();
+    }, false);
+}
+
+function brightnessSettingChanged() {
+    for(var i = 0; i < brightnessSetting.length; i++) {
+        if(brightnessSetting[i].checked == true) {
+            brightnessSettingChoice = i;
+        }
+    }
+
+    switch(brightnessSettingChoice) {
+        case 0:
+            brightthresh = 300;
+            break;
+        case 1:
+            brightthresh = 600;
+            break;
+        case 2:
+            brightthresh = 900;
+            break;
+    }
+}
+
 
 function calibrate() {
     wasdown = {
