@@ -13,7 +13,7 @@
             <div id="user-info" class="half">
                 <?php // If user is signed in and viewing their own profile
                 if(isset($_SESSION['userId']) && $_SESSION['userId'] == $user->userId): ?>
-                    <h2 class="user-profile-title"><i class="ico-my-cell"></i>Welcome back <?= $user->username; ?>!</h2>
+                    <h2 class="user-profile-title"><i class="ico-my-cell"></i>Welcome to MyCell, <?= $user->username; ?>!</h2>
                 <?php endif; ?>
                 <h2><i class="ico-env"></i><?= count($environments); ?> Environments Cloned</h2>
                 <h2><i class="ico-pin"></i>Canterbury, UK</h2>
@@ -26,10 +26,17 @@
             <div id="user-buttons" class="quarter">
             <?php // If user is signed in and viewing their own profile
             if(isset($_SESSION['userId']) && $_SESSION['userId'] == $user->userId): ?>
-                <a href="<?= $user->username; ?>/env/new" class="btn" title="Clone New Environment"><i class="ico-env-new"></i></a>
-                <a href="/signout?r=<?= $_SERVER['REQUEST_URI']; ?>" class="btn" title="Sign Out"><i class="ico-logout"></i></a>
+                <?php if(!empty($environments)): ?>
+                    <a href="<?= $user->username; ?>/env/new" class="btn" title="Clone New Environment"><i class="ico-env-new"></i></a>
+                    <a href="/signout?r=<?= $_SERVER['REQUEST_URI']; ?>" class="btn" title="Sign Out"><i class="ico-logout"></i></a>
+                <?php else: ?>
+                    <a href="<?= $user->username; ?>/env/new" class="btn" title="Clone New Environment"><i class="ico-env-new"></i> NEW CLONE</a>
+                    <a href="/signout?r=<?= $_SERVER['REQUEST_URI']; ?>" class="btn" title="Sign Out"><i class="ico-logout"></i></a>                   
+                <?php endif; ?>
             <?php endif; ?>
             </div>
+
+
 
         </div>
     </section>
