@@ -171,9 +171,10 @@ body > header {
 #user-menu {
     float: right;
     display: inline-block;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     background: $dgrey;
+    transition: padding .3s;
 }
 
 #user-nav-toggle:checked + #user-menu-wrapper {
@@ -184,8 +185,8 @@ body > header {
     content: "^";
 }
 
-.sign-in {
-    margin: 20px 0 20px 20px;
+.user {
+    margin-top: 0;
 }
 
 @media ($min-bp-a) {
@@ -197,5 +198,9 @@ body > header {
     #site-nav a {
         width: 300px;
         font-size: 1.4rem;
+    }
+
+    #user-menu {
+       padding: 20px; 
     }
 }
