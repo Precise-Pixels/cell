@@ -4,14 +4,15 @@
         header('location: /signin');
     }
 ?>
+<main class="main--top">
 
-    <header class="fixed-header section-padding align-centre dgrey">
+    <header class="section-padding align-centre dgrey">
         <hgroup class="align-vertical">
             <h1>CLONE A NEW ENVIRONMENT</h1>
         </hgroup>
     </header>
 
-    <section class="fixed-header-new-env align-centre dgrey">
+    <section class="align-centre dgrey">
         <ol class="align-centre">
             <li class="third">
                 <h1>1</h1>
@@ -31,7 +32,6 @@
         </ol>
     </section>
 
-<main id="new-env-main">
 
     <section id="new-env-interface" class="section--spacer sdgrey">
         <div class="align-centre mblue">
