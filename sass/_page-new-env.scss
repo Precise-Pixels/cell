@@ -20,18 +20,21 @@
 }
 
 #new-env-form form {
-    width: 70%;
-    float: right;
-    padding-bottom: 40px;
+    width: 100%;
+    td {
+        float: left;
+        width: 100%;
+    }
 }
 
 #selected-tile {
-    width: 240px;
-    position: absolute;
-    top: -120px;
-    left: 75px;
-    border: 10px solid $mblue;
+    width: 100%;
+    max-width: 300px;
+    position: relative;
     z-index: 3;
+    img {
+
+    }
 }
 
 #pac-input {
@@ -59,18 +62,34 @@
     height: 100%;
 }
 
-@media ($min_bp_a) {
-    .fixed-header-new-env {
-        position: fixed;
-    }
-
-    #new-env-main {
-        margin-top: 560px;
-    }
- }
-
 @media ($min_bp_b) {
-#new-env-main {
-    margin-top: 600px;
+    #selected-tile {
+        width: 240px;
+        position: absolute;
+        top: -120px;
+        left: 40px;
+        border: 10px solid $mblue;
+    }
+    #new-env-form form {
+        width: 64%;
+        float: right;
+        padding: 0 0 20px 40px;
+        text-align: left;
+        td {
+            float: none;
+            width: auto;
+        }
+    }
 }
+
+@media ($min_bp_c) {
+    #selected-tile {
+        position: absolute;
+        left: 75px;
+    }
+    #new-env-form form {
+        width: 70%;
+        float: right;
+        padding: 0 0 20px 0;
+    }
 }
