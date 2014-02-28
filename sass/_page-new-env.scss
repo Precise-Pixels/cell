@@ -67,7 +67,7 @@
         width: 240px;
         position: absolute;
         top: -120px;
-        left: 40px;
+        left: 68px;
         border: 10px solid $mblue;
     }
     #new-env-form form {
@@ -84,8 +84,7 @@
 
 @media ($min_bp_c) {
     #selected-tile {
-        position: absolute;
-        left: 75px;
+        border: 10px solid $mblue;
     }
     #new-env-form form {
         width: 70%;
