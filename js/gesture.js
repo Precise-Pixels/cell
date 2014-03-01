@@ -232,22 +232,16 @@ function handledown() {
             var dx = down.x - wasdown.x, dy = down.y - wasdown.y;
             var dirx = Math.abs(dy) < Math.abs(dx);
 
-            // console.log(good, davg);
-
             if(dx < -movethresh && dirx) {
-                // console.log('right');
                 controls.rotateLeft(.2);
             }
             else if(dx > movethresh && dirx) {
-                // console.log('left');
                 controls.rotateLeft(-.2);
             }
             if(dy > movethresh && !dirx) {
-                // console.log('down');
                 controls.rotateUp(.1);
             }
             else if(dy < -movethresh && !dirx) {
-                // console.log('up');
                 controls.rotateUp(-.1);
             }
 
