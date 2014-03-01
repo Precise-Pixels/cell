@@ -36,10 +36,11 @@
                     <h1>TED Talk</h1>
                 </hgroup>
             </a>
-            <div class="slider half mblue">
+            <div class="slider half lgrey">
+                <h1>REVIEWS</h1>
                 <ul class="panes">
                     <li><blockquote>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
+                        <p>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
                         <footer>Mr Person, Title Here</footer>
                     </blockquote></li>
                     <li><blockquote>
@@ -48,6 +49,11 @@
                     </blockquote></li>
                 </ul>
             </div>
+<!--             <div class="section-padding half">
+                <h1>REVIEWS</h1>
+                <p class="half-margin">Integer sit amet nibh sit amet lectus luctus placerat. Suspendisse eget arcu tortor. Fusce pretium sodales nisl et tempus.</p>
+                <p class="half-margin">Integer sit amet nibh sit amet lectus luctus placerat. Suspendisse eget arcu tortor. Fusce pretium sodales nisl et tempus.</p>
+            </div> -->
         </div>
     </section>
 
