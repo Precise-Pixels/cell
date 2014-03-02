@@ -19,9 +19,8 @@
                     <a href="/user/<?= $env->username; ?>/env/<?= $env->envId; ?>">
                         <div class="imagebox quarter mblue">
                             <figure>
-                                <img src="/img/placeholder.gif" alt="<?= $env->name; ?>">
-<!--                                 <img src="/img/user/<?= $user->userId; ?>/capture-<?= $env->envId; ?>.jpg" alt="<?= $env->name; ?>">
- -->                            </figure>
+                                <img src="/img/user/<?= $env->userId; ?>/capture-<?= $env->envId; ?>.jpg" alt="<?= $env->name; ?>">
+                            </figure>
                             <figcaption>
                                 <h1><?= $env->name; ?></h1>
                             </figcaption>
