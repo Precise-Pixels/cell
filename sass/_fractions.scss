@@ -118,6 +118,13 @@
     }
 
     .quarter {
+        width: (100%/3);
+        float: left;
+    }
+}
+
+@media ($min-bp-c) {
+    .quarter {
         width: (100%/4);
         float: left;
     }
