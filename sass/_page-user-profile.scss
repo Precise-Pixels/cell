@@ -1,5 +1,5 @@
 #user-profile-banner {
-    margin-bottom: 20px;
+    margin-top: 60px;
     padding: 20px;
     z-index: 1;
     .quarter {
@@ -58,6 +58,10 @@
 }
 
 @media ($min_bp_b) {
+    #user-profile-banner {
+        margin-top: 20px;
+    }
+
     #user-info {
         margin-top: 20px;
         padding-left: 40px;
