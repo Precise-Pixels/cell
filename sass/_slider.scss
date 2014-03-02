@@ -1,10 +1,16 @@
+.slider {
+    width: 100%;
+    padding: 60px 40px;
+    overflow: hidden;
+}
+
 .panes {
     width: 200%;
     padding-left: 0;
     position:relative;
     overflow: hidden;
     list-style: none;
-    animation: slider 30s infinite;
+    animation: slider 10s alternate;
 }
 
 .panes > li {
