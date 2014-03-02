@@ -1,4 +1,4 @@
-<header id="fixed-header" class="fixed-header--pt section-padding dgrey">
+<header id="fixed-header" class="fixed-header--press section-padding dgrey">
     <hgroup class="align-vertical">
         <h1>PRESS</h1>
     </hgroup>
