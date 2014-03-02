@@ -6,7 +6,7 @@
 }
 
 .quarter {
-    width: (100%/2);
+    width: (100%/1);
     float: left;
 }
 
@@ -85,7 +85,7 @@
     }
     
     .quarter {
-        width: (100%/4);
+        width: (100%/2);
         float: left;
     }
 
@@ -115,5 +115,10 @@
     p.third-margin:last-of-type {
         margin-left: 1%;
         margin-right: 0;
+    }
+
+    .quarter {
+        width: (100%/4);
+        float: left;
     }
 }

@@ -2,11 +2,11 @@
     padding: 20px;
     .imagebox {
         border: 5px solid $sdgrey;
-        transition: all .5s ease-in-out;
+        transition: transform .5s ease-in-out;
     }
 
     .imagebox > figure {
-        transition: all .5s ease-in-out;
+        transition: transform .5s ease-in-out;
     }
 
     .imagebox:hover > figure{
