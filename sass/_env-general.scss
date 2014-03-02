@@ -1,0 +1,21 @@
+#environment-listing {
+    padding: 20px;
+    .imagebox {
+        border: 5px solid $sdgrey;
+        transition: all .5s ease-in-out;
+    }
+
+    .imagebox > figure {
+        transition: all .5s ease-in-out;
+    }
+
+    .imagebox:hover > figure{
+        transform: scale(2);
+    }
+}
+
+@media ($min_bp_c) {
+    #environment-listing {
+        padding: 40px 0;
+    }
+ }
