@@ -52,7 +52,7 @@
                             </figcaption>
                         </div>
                     </a>
-            <?php endforeach;
+                <?php endforeach;
             else: ?>
                 <div id="no-environments" class="section-padding mblue">
                     <h1>This user hasn't cloned any environments yet.</h1>
