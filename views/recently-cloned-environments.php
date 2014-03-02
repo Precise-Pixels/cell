@@ -30,7 +30,7 @@
                 <h2>View your cloned environments!</h2>
                 <a href="/user/<?= $env->username; ?>" class="btn"><i class="ico-my-cell"></i> MyCell</a>
             </div>
-        </section>   
+        </section>
     <?php else: ?>
         <section>
             <div id="project-titan-sign-up" class="align-centre section-padding sdgrey">
@@ -39,7 +39,7 @@
             </div>
         </section>
     <?php endif; ?>
-    
+
     <section>
         <div class="align-centre">
             <a href="project-titan" class="cta cta--example half">

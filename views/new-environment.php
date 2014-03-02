@@ -25,7 +25,7 @@
                             <td><label for="env-name">Your Environment Name:</label></td>
                         </tr>
                         <tr>
-                            <td><input type="text" name="new-env-name" id="new-env-name" maxlength="18" required/></td>
+                            <td><input type="text" name="new-env-name" id="new-env-name" maxlength="30" required/></td>
                             <td><input type="button" id="clone-btn" value="CLONE" class="btn"/></td>
                         </tr>
                     </table>
