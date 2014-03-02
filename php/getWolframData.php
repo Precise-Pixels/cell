@@ -2,8 +2,6 @@
 
 $url = $_POST['u'];
 
-$urlEncoded = urlencode($url);
-
 $xml = simplexml_load_file($url);
 
 $hasData = $xml->attributes()->success;
