@@ -31,7 +31,7 @@
 
 #selected-tile {
     width: 100%;
-    max-width: 300px;
+    max-width: 240px;
     position: relative;
     z-index: 3;
 }
@@ -63,7 +63,6 @@
 
 @media ($min_bp_b) {
     #selected-tile {
-        width: 240px;
         position: absolute;
         top: -120px;
         left: 68px;
