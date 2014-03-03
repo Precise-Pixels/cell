@@ -1,5 +1,13 @@
 #primary-header {
     height: 2000px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: table;
+    text-align: center;
+    background-size: cover;
+    z-index: 1;
+    transition: opacity .8s;
     z-index: 2;
 }
 
