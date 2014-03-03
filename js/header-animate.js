@@ -1,6 +1,6 @@
 window.onscroll = function (e) {
     var headerTop   = document.getElementById('top-bar');
-    var header      = document.getElementById('fixed-header');
+    var header      = document.querySelectorAll('#fixed-header, #primary-header');
     var hgroup      = header.getElementsByTagName('hgroup')[0];
     var position    = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
     var target      = document.getElementsByTagName('section')[0].offsetParent.offsetTop;
