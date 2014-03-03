@@ -16,11 +16,13 @@
     float: left;
     padding-top: 20px;
     padding-bottom: 20px;
+    text-align: center;
     z-index: 2;
 }
 
 #new-env-form form {
     width: 100%;
+    text-align: left;
     td {
         float: left;
         width: 100%;
@@ -32,9 +34,6 @@
     max-width: 300px;
     position: relative;
     z-index: 3;
-    img {
-
-    }
 }
 
 #pac-input {
