@@ -3,7 +3,7 @@
     .imagebox {
         border: 5px solid $sdgrey;
         transition: transform .5s ease-in-out;
-        figcaption h1{
+        figcaption h1 {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -14,7 +14,7 @@
         transition: transform .5s ease-in-out;
     }
 
-    .imagebox:hover > figure{
+    .imagebox:hover > figure {
         transform: scale(2);
     }
 }
