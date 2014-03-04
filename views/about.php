@@ -4,7 +4,13 @@
     </hgroup>
 </header>
 
-<main>    
+<main>
+
+    <section>
+        <div id="about-logo-header" class="align-centre mblue">
+            <i class="ico-cell-logo"></i>
+        </div>
+    </section>
 
     <section>
         <div class="section-padding align-centre lgrey">
