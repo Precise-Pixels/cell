@@ -19,12 +19,13 @@ window.onscroll = function (e) {
 
 }
 
-function test_checked() {
+function test_checked() { 
 
-    if (document.getElementById('site-nav-toggle').checked) {
+    if (document.getElementById('site-nav-toggle').checked || document.getElementById('user-nav-toggle').checked) {
         document.getElementById('top-bar').style.background = "#333";
     }
     else {
         document.getElementById('top-bar').style.background = "none"; 
     }
+
 }
