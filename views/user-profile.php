@@ -2,7 +2,7 @@
 
     <section id="user-profile-banner" class="dgrey">
         <div class="align-centre">
-            <div id="profile-image" class="imagebox quarter">
+            <div class="imagebox quarter">
                 <figure>
                     <img src="http://www.gravatar.com/avatar/<?= (isset($user->email) ? md5(strtolower(trim($user->email))) : 1); ?>?d=mm&amp;s=350" />
                 </figure>
