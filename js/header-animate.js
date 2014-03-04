@@ -1,4 +1,5 @@
 window.onscroll = function (e) {
+
     var headerTop   = document.getElementById('top-bar');
     var header      = document.getElementById('fixed-header') || document.getElementById('primary-header');
     var hgroup      = header.getElementsByTagName('hgroup')[0];
@@ -14,5 +15,16 @@ window.onscroll = function (e) {
     }
     else {
        headerTop.style.background = "none"; 
+    }
+
+}
+
+function checked() {
+
+    if (document.getElementById('site-nav-toggle').checked) {
+        document.getElementById('top-bar').style.background = "#333";
+    }
+    else {
+        document.getElementById('top-bar').style.background = "none"; 
     }
 }
