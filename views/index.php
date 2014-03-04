@@ -1,4 +1,4 @@
-<header id="primary-header" class="section-padding align-centre dgrey">
+<header id="primary-header" class="section-padding dgrey">
     <hgroup class="align-vertical">
         <h1>CELL INDUSTRIES</h1>
     </hgroup>
@@ -40,8 +40,8 @@
         </div>    
     </section>
 
-    <section>
-        <div class="section-padding align-centre dgrey">
+    <section class="dgrey">
+        <div class="section-padding align-centre">
             <div class="third-margin">
                 <h2>.third-margin</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
