@@ -27,6 +27,9 @@
         float: left;
         width: 100%;
     }
+    .btn {
+        margin-top: 10px;
+    }
 }
 
 #selected-tile {
@@ -76,6 +79,9 @@
         td {
             float: none;
             width: auto;
+        }
+        .btn {
+            margin-top: 0;
         }
     }
 }
