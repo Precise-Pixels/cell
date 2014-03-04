@@ -6,15 +6,15 @@ window.onscroll = function (e) {
     var position    = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
     var target      = document.getElementsByTagName('section')[0].offsetParent.offsetTop;
 
-    header.style.top      = position * -1 / 3 + "px";
-    hgroup.style.top      = position * -1 / 2 + "px";
+    header.style.top      = position * -1 / 3 + 'px';
+    hgroup.style.top      = position * -1 / 2 + 'px';
     console.log(position);
 
     if ( position >= target ) {
-       headerTop.style.background = "#333";     
+       headerTop.style.background = '#333';     
     }
     else {
-       headerTop.style.background = "none"; 
+       headerTop.style.background = 'none'; 
     }
 
 }
@@ -22,10 +22,10 @@ window.onscroll = function (e) {
 function nav_topbar_bkg() { 
 
     if (document.getElementById('site-nav-toggle').checked || document.getElementById('user-nav-toggle').checked) {
-        document.getElementById('top-bar').style.background = "#333";
+        document.getElementById('top-bar').style.background = '#333';
     }
     else {
-        document.getElementById('top-bar').style.background = "none"; 
+        document.getElementById('top-bar').style.background = 'none'; 
     }
 
 }
