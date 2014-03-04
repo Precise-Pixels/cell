@@ -55,9 +55,6 @@ a[class*="ico-"] {
 .ico-company:before {
     content: "\42";
 }
-.ico-key-people:before {
-    content: "\6b";
-}
 .ico-pin:before {
     content: "\70";
 }
@@ -103,32 +100,17 @@ a[class*="ico-"] {
 .ico-performance:before {
     content: "\36";
 }
-.ico-email:before {
-    content: "\4d";
-}
 .ico-webcam:before {
     content: "\77";
 }
 .ico-download:before {
     content: "\64";
 }
-.ico-calendar:before {
-    content: "\43";
-}
-.ico-bubble:before {
-    content: "\73";
-}
 .ico-connect:before {
     content: "\53";
 }
-.ico-earth:before {
-    content: "\67";
-}
-.ico-press:before {
-    content: "\50";
-}
-.ico-logout:before {
-    content: "\5a";
+.ico-press-pack:before {
+    content: "\27";
 }
 .ico-login:before {
     content: "\7a";
@@ -141,6 +123,33 @@ a[class*="ico-"] {
 }
 .ico-hash:before {
     content: "\23";
+}
+.ico-logout:before {
+    content: "\5a";
+}
+.ico-calendar:before {
+    content: "\43";
+}
+.ico-earth:before {
+    content: "\67";
+}
+.ico-email:before {
+    content: "\4d";
+}
+.ico-desktop:before {
+    content: "\24";
+}
+.ico-mobile:before {
+    content: "\a3";
+}
+.ico-atom:before {
+    content: "\40";
+}
+.ico-cube:before {
+    content: "\5b";
+}
+.ico-cube2:before {
+    content: "\5d";
 }
 .ico-warning:before {
     content: "\21";
@@ -156,4 +165,19 @@ a[class*="ico-"] {
 }
 .ico-arrow-down2:before {
     content: "\56";
+}
+.ico-home:before {
+    content: "\68";
+}
+.ico-press:before {
+    content: "\e609";
+}
+.ico-speech:before {
+    content: "\73";
+}
+.ico-people:before {
+    content: "\4b";
+}
+.ico-key-people:before {
+    content: "\6b";
 }
