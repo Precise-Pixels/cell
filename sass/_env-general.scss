@@ -9,14 +9,6 @@
             text-overflow: ellipsis;
         }
     }
-
-    .imagebox > figure {
-        transition: transform .5s ease-in-out;
-    }
-
-    .imagebox:hover > figure {
-        transform: scale(1.5);
-    }
 }
 
 @media ($min_bp_c) {

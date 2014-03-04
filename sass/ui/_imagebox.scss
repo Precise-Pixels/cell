@@ -37,3 +37,11 @@
         padding: 20px;
     }
 }
+
+.zoom > figure {
+    transition: transform .5s;
+}
+
+.zoom:hover > figure {
+    transform: scale(1.5);
+}
