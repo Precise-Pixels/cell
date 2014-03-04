@@ -19,7 +19,7 @@ window.onscroll = function (e) {
 
 }
 
-function checked() {
+function test_checked() {
 
     if (document.getElementById('site-nav-toggle').checked) {
         document.getElementById('top-bar').style.background = "#333";
