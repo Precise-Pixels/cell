@@ -24,8 +24,9 @@
 
     <section>
         <div class="section-padding align-centre mblue">
-            <h1><i class="ico-press"></i>DOWNLOAD OUR PRESS PACK</h1>
+            <h1><i class="ico-press"></i>PRESS PACK</h1>
             <img src="/img/placeholder.gif" alt="Information pack" class="full"/>
+            <a href="/" class="btn"><i class="ico-download"></i>DOWNLOAD</a>
         </div>
     </section>
 
