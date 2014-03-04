@@ -42,12 +42,12 @@
 
     <section>
         <div class="align-centre">
-            <a href="project-titan" class="cta cta--example half">
+            <a href="/project-titan" class="cta cta--example half">
                 <hgroup class="align-vertical">
                     <h1>Project Titan</h1>
                 </hgroup>
             </a>
-            <a href="ted" class="cta cta--example half">
+            <a href="/technology" class="cta cta--example half">
                 <hgroup class="align-vertical">
                     <h1>Technology</h1>
                 </hgroup>
