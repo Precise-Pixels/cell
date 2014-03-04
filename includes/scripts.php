@@ -12,6 +12,11 @@
         <script src='/js/timeline-scroll.js'></script>
     <?php endif; ?>
 
+    <?php if($isCloningProcess): ?>
+        <script src='/js/skrollr.min.js'></script>
+        <script>var s = skrollr.init();</script>
+    <?php endif; ?>
+
     <?php if($isEnv): ?>
         <script>
             var userId    = <?= $userId; ?>;
@@ -46,6 +51,11 @@
 
     <?php if($isAbout): ?>
         <script src='/build/timeline-scroll.min.js'></script>
+    <?php endif; ?>
+
+    <?php if($isCloningProcess): ?>
+        <script src='/build/skrollr.min.js'></script>
+        <script>var s=skrollr.init();</script>
     <?php endif; ?>
 
     <?php if($isEnv): ?>
