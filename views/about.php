@@ -6,13 +6,6 @@
 
 <main>    
 
-<!--     <section>
-        <div id="about-logo-header" class="align-centre mblue">
-            <i class="ico-cell-logo"></i>
-            <img src="/img/logo-diagram.jpg" alt="Company Logo" class="full">
-        </div>
-    </section> -->
-
     <section>
         <div class="section-padding align-centre lgrey">
             <h1><i class="ico-company"></i>THE COMPANY</h1>
