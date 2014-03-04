@@ -13,10 +13,10 @@
             <div id="user-info" class="half">
                 <?php // If user is signed in and viewing their own profile
                 if(isset($_SESSION['userId']) && $_SESSION['userId'] == $user->userId): ?>
-                    <h2 class="user-profile-title"><i class="ico-my-cell"></i>Welcome to MyCell, <?= $user->username; ?>!</h2>
+                    <p class="user-profile-title"><i class="ico-my-cell"></i>Welcome to MyCell, <?= $user->username; ?>!</p>
                 <?php endif; ?>
-                <h2><i class="ico-env"></i><?= count($environments); ?> Environments Cloned</h2>
-                <h2><i class="ico-pin"></i>Canterbury, UK</h2>
+                <p><i class="ico-env"></i><?= count($environments); ?> Environments Cloned</p>
+                <p><i class="ico-pin"></i>Canterbury, UK</p>
                 <div id="user-social">
                     <a href="mailto:<?= $user->email; ?>"><i class="ico-email"></i></a>
                     <a href="#"><i class="ico-facebook"></i></a>
