@@ -18,7 +18,6 @@
                 <p><i class="ico-env"></i><?= count($environments); ?> Environments Cloned</p>
                 <p><i class="ico-pin"></i>Canterbury, UK</p>
                 <div id="user-social">
-                    <a href="mailto:<?= $user->email; ?>"><i class="ico-email"></i></a>
                     <a href="#"><i class="ico-facebook"></i></a>
                     <a href="#"><i class="ico-twitter"></i></a>
                 </div>
