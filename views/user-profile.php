@@ -42,7 +42,7 @@
             <?php if(!empty($environments)):
                 foreach($environments as $env): ?>
                     <a href="/user/<?= $user->username; ?>/env/<?= $env->envId; ?>">
-                        <div class="imagebox quarter mblue zoom">
+                        <div class="imagebox zoombox quarter mblue">
                             <figure>
                                 <img src="/img/user/<?= $user->userId; ?>/capture-<?= $env->envId; ?>.jpg" alt="<?= $env->name; ?>">
                             </figure>

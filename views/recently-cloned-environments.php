@@ -10,7 +10,7 @@
         <div class="align-centre">
             <?php foreach($environments as $env): ?>
                 <a href="/user/<?= $env->username; ?>/env/<?= $env->envId; ?>">
-                    <div class="imagebox quarter mblue">
+                    <div class="imagebox zoombox quarter mblue">
                         <figure>
                             <img src="/img/user/<?= $env->userId; ?>/capture-<?= $env->envId; ?>.jpg" alt="<?= $env->name; ?>">
                        </figure>

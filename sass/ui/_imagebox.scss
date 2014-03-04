@@ -14,6 +14,7 @@
 
     figure {
         margin: 0;
+        transition: transform .5s;
     }
 
     img {
@@ -31,17 +32,13 @@
         background: $mblue;
         transition: height .3s, padding .3s;
     }
-
-    &.hoverbox:hover figcaption {
-        height: 100%;
-        padding: 20px;
-    }
 }
 
-.zoom > figure {
-    transition: transform .5s;
+.hoverbox:hover > figcaption {
+    height: 100%;
+    padding: 20px;
 }
 
-.zoom:hover > figure {
+.zoombox:hover > figure {
     transform: scale(1.5);
 }
