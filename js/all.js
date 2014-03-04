@@ -11,10 +11,10 @@ window.onscroll = function (e) {
     console.log(position);
 
     if ( position >= target ) {
-       headerTop.style.background = '#333';     
+       headerTop.style.backgroundColor = '#333';     
     }
     else {
-       headerTop.style.background = 'none'; 
+       headerTop.style.backgroundColor = 'none'; 
     }
 
 }
@@ -22,10 +22,13 @@ window.onscroll = function (e) {
 function nav_topbar_bkg() { 
 
     if (document.getElementById('site-nav-toggle').checked || document.getElementById('user-nav-toggle').checked) {
-        document.getElementById('top-bar').style.background = '#333';
+        document.getElementById('top-bar').style.backgroundColor = '#333';
     }
     else {
         document.getElementById('top-bar').style.background = 'none'; 
     }
 
 }
+
+document.getElementById('site-nav-toggle').addEventListener('click', nav_topbar_bkg, false);
+document.getElementById('user-nav-toggle').addEventListener('click', nav_topbar_bkg, false);
