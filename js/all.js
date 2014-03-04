@@ -8,7 +8,6 @@ window.onscroll = function (e) {
 
     header.style.top      = position * -1 / 3 + 'px';
     hgroup.style.top      = position * -1 / 2 + 'px';
-    console.log(position);
 
     if ( position >= target ) {
        headerTop.style.backgroundColor = '#333';     
