@@ -64,14 +64,15 @@
             <a href="/project-titan" class="cta cta--pt-large half">
                 <hgroup class="align-vertical">
                     <h1>Project Titan</h1>
+                    <h2>Discover the groundbreaking project</h2>
                 </hgroup>
             </a>
-            <div class="cta cta--home2 half">
+            <a href="/project-titan" class="cta cta--about half">
                 <hgroup class="align-vertical">
-                    <h1>CTA Title</h1>
-                    <h2>Optional subtitle</h2>
+                    <h1>About Cell</h1>
+                    <h2>Find out about Cell Industries</h2>
                 </hgroup>
-            </div>
+            </a>
             <div class="cta cta--home3 half">
                 <hgroup class="align-vertical">
                     <h1>CTA Title</h1>

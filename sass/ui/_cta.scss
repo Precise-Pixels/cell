@@ -31,7 +31,7 @@
         right: 0;
         bottom: 0;
         z-index: 1;
-        background: rgba(51,51,51,.8);
+        background: rgba(51,51,51,.6);
         transition: background .3s;
     }
 
@@ -55,9 +55,9 @@
     background-image: url(/img/cta/625x200-project-titan.jpg);
 }
 
-.cta--home2 {
+.cta--about {
     height: 200px;
-    background-image: url(/img/placeholder.gif);
+    background-image: url(/img/cta/625x200-about.jpg);
 }
 
 .cta--home3 {
