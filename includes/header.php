@@ -27,11 +27,11 @@
     <nav id="user-menu-wrapper" class="force-repaint dgrey">
         <div id="user-menu">
             <?php if(isset($_SESSION['status']) && $_SESSION['status'] == 'signedin'): ?>
-                    <a href="/user/<?= $_SESSION['username']; ?>" class="btn user"><i class="ico-my-cell"></i></a>
-                    <a href="/user/<?= $_SESSION['username']; ?>/env/new" class="btn"><i class="ico-env-new"></i></a>
-                    <a href="/signout?r=<?= $_SERVER['REQUEST_URI']; ?>" class="btn"><i class="ico-logout"></i></a>
+                    <a href="/user/<?= $_SESSION['username']; ?>" class="btn user" title="MyCell"><i class="ico-my-cell"></i></a>
+                    <a href="/user/<?= $_SESSION['username']; ?>/env/new" class="btn" title="Clone New Environment"><i class="ico-env-new"></i></a>
+                    <a href="/signout?r=<?= $_SERVER['REQUEST_URI']; ?>" class="btn" title="Sign Out"><i class="ico-logout"></i></a>
             <?php else: ?>
-                    <a href="/signin" class="btn"><i class="ico-login"></i></a>
+                    <a href="/signin" class="btn" title="Sign In"><i class="ico-login"></i></a>
             <?php endif; ?>
         </div>
     </nav>
