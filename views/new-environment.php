@@ -56,12 +56,12 @@
 
     <section class="align-centre sdgrey">   
         <section class="section-content-wrapper">
-            <a href="technology" class="cta cta--example half">
+            <a href="/project-titan" class="cta cta--example half">
                 <hgroup class="align-vertical">
                     <h1>Project Titan</h1>
                 </hgroup>
             </a>
-            <a href="technology" class="cta cta--example half">
+            <a href="/the-cloning-process" class="cta cta--example half">
                 <hgroup class="align-vertical">
                     <h1>The Process</h1>
                 </hgroup>
