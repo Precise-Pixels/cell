@@ -14,6 +14,7 @@
 
     figure {
         margin: 0;
+        transition: transform .5s;
     }
 
     img {
@@ -24,33 +25,20 @@
     figcaption {
         width: 100%;
         height: 0;
-        padding: 15px 40px 40px;
+        padding: 15px 20px 40px;
         position: absolute;
         bottom: 0;
         color: #FFF;
         background: $mblue;
         transition: height .3s, padding .3s;
     }
-
-    &.hoverbox:hover figcaption {
-        height: 100%;
-        padding: 40px;
-    }
-
-    @media ($min_bp_a) {
-        &.hoverbox:hover figcaption {
-            padding: 20px;
-        }
-    }
 }
 
-.imagebox-new--environment {
-    position: relative;
-    opacity: .1;
-    padding-bottom: 75%;
-    border: 0;
-    transition: opacity .3s;
-    &:hover {
-        opacity: 1;
-    }
- }
+.hoverbox:hover > figcaption {
+    height: 100%;
+    padding: 20px;
+}
+
+.zoombox:hover > figure {
+    transform: scale(1.5);
+}
