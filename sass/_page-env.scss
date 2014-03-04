@@ -2,3 +2,13 @@
     width: 100%;
     height: 600px;
 }
+
+#video,
+#canvas {
+    display: none;
+}
+
+#comp {
+    width: 300px;
+    transform: scaleX(-1);
+}
