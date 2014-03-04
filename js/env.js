@@ -83,6 +83,11 @@ function render() {
     renderer.render(scene, camera);
 }
 
+function getContainerSize() {
+    containerX = $container.clientWidth;
+    containerY = $container.clientHeight;
+}
+
 function onWindowResize() {
     getContainerSize();
 
@@ -92,7 +97,34 @@ function onWindowResize() {
     renderer.setSize(containerX, containerY);
 }
 
-function getContainerSize() {
-    containerX = $container.clientWidth;
-    containerY = $container.clientHeight;
+// WolframAlpha
+var envData = document.getElementById('env-data');
+var UTM = latLonToUTM(latitude, longitude);
+
+var data = 'u=' + encodeURIComponent('http://api.wolframalpha.com/v2/query?appid=&format=plaintext&input=' + UTM);
+var request = new XMLHttpRequest;
+request.open('POST', '/php/getWolframData.php', true);
+request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+request.send(data);
+
+request.onreadystatechange = function() {
+    if(request.readyState == 4 && request.status == 200) {
+        envData.innerHTML = request.responseText;
+    }
+}
+
+function latLonToUTM(lat, lon) {
+    // Thanks: http://transition.fcc.gov/mb/audio/bickel/DDDMMSS-decimal.html
+    var latSign = lonSign = 1;
+
+    if(lat < 0) { latSign = -1; }
+    if(lon < 0) { lonSign = -1; }
+
+    latAbs = Math.abs(Math.round(lat * 1000000));
+    lonAbs = Math.abs(Math.round(lon * 1000000));
+
+    latDeg = ((Math.floor(latAbs / 1000000) * latSign) + ' deg ' + Math.floor(((latAbs/1000000) - Math.floor(latAbs/1000000)) * 60) + '\'');
+    lonDeg = ((Math.floor(lonAbs / 1000000) * lonSign) + ' deg ' + Math.floor(((lonAbs/1000000) - Math.floor(lonAbs/1000000)) * 60) + '\'');
+
+    return latDeg + ' N, ' + lonDeg + ' E';
 }
