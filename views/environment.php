@@ -4,6 +4,8 @@
 
 <div id="env"></div>
 
+<div id="env-data"></div>
+
 <video id="video" autoplay></video>
 <canvas id="canvas"></canvas>
 <canvas id="comp"></canvas>
