@@ -144,13 +144,13 @@ body > header {
     float: left;
     padding: 20px 0;
     display: block;
+    border-top: 1px solid $sdgrey;
     color: $lgrey;
     text-decoration: none;
-    transition: all .5s;
+    transition: all .3s;
     &:hover {
-        padding-left: 10px;
-        background: $lgrey;
         color: $dgrey;
+        background: $lgrey;
     }
 }
 
@@ -175,7 +175,7 @@ body > header {
     display: inline-block;
     padding: 10px;
     text-align: center;
-    background: $dgrey;
+    background: $sdgrey;
     transition: padding .3s;
 }
 

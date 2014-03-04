@@ -1,11 +1,11 @@
 <header class="dgrey">
     <label for="site-nav-toggle" id="site-nav-btn"></label>
     <input type="checkbox" id="site-nav-toggle" class="checkbox-hack"/>
-    <nav id="site-nav" class="force-repaint sdgrey">
+    <nav id="site-nav" class="force-repaint dgrey">
         <ul>
             <li><a href="/"><i class="ico-home menu-icon"></i>HOME</a></li>
             <li><a href="/about"><i class="ico-people menu-icon"></i>ABOUT</a></li>
-            <li><a href="/project-titan"><i class="ico-cube menu-icon"></i>PROJECT TITAN</a></li>
+            <li><a href="/project-titan"><i class="ico-project-titan menu-icon"></i>PROJECT TITAN</a></li>
             <li><a href="/technology"><i class="ico-atom menu-icon"></i>TECHNOLOGY</a></li>
             <li><a href="/press"><i class="ico-press menu-icon"></i>PRESS</a></li>
         </ul>
