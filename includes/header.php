@@ -1,6 +1,6 @@
 <header id="top-bar">
     <label for="site-nav-toggle" id="site-nav-btn" class="ico-burger"></label>
-    <input type="checkbox" id="site-nav-toggle" class="checkbox-hack" onclick="test_checked();"/>
+    <input type="checkbox" id="site-nav-toggle" class="checkbox-hack" onclick="nav_topbar_bkg();"/>
     <nav id="site-nav" class="force-repaint">
         <a href="/">Home</a>
         <a href="/about">About</a>
@@ -20,7 +20,7 @@
     <label for="user-nav-toggle" id="user-nav-btn">
         <img id="user-pic" src="http://www.gravatar.com/avatar/<?= (isset($_SESSION['userEmail']) ? md5(strtolower(trim($_SESSION['userEmail']))) : 1); ?>?d=mm&amp;s=60"/>
     </label>
-    <input type="checkbox" id="user-nav-toggle" class="checkbox-hack" onclick="test_checked()"/>
+    <input type="checkbox" id="user-nav-toggle" class="checkbox-hack" onclick="nav_topbar_bkg()"/>
     <nav id="user-nav" class="force-repaint">
         <?php if(isset($_SESSION['status']) && $_SESSION['status'] == 'signedin'): ?>
         <a href="/user/<?= $_SESSION['username']; ?>">MyCell</a>
