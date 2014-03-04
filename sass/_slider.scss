@@ -1,0 +1,33 @@
+.slider {
+    width: 100%;
+    padding: 60px 40px;
+    overflow: hidden;
+}
+
+.panes {
+    width: 200%;
+    padding-left: 0;
+    position:relative;
+    overflow: hidden;
+    list-style: none;
+    animation: slider 10s infinite alternate;
+}
+
+.panes > li {
+    width: 50%;
+    position: relative;
+    float: left;
+}
+
+@keyframes slider {
+    0%   { left: 0; }
+    49%  { left: 0; }
+    51%  { left: -100%; }
+    100% { left: -100%; }
+}
+
+@media ($min-bp-a) {
+    .slider {
+        width: 50%;
+    }
+}

@@ -24,6 +24,17 @@ body {
     vertical-align: middle;
 }
 
+.cell-logo {
+    font-size: 2rem;
+    text-align: center;
+    line-height: 42px;
+    color: $lgrey;
+    a {
+        margin-right: 0;
+        color: $lgrey;
+    }
+}
+
 .scale {
     width: 100%;
     display: block;

@@ -94,6 +94,7 @@ body > header {
     font-size: 1rem;
     text-align: center;
     line-height: 20px;
+    background: $dgrey;
     transition: background .3s;
     transform: rotate(90deg);
     z-index: 1;
@@ -185,12 +186,20 @@ body > header {
     content: "^";
 }
 
+#user-nav a {
+    display: block;
+}
+
+header > .cell-logo {
+    display: none;
+}
+
 .user {
     margin-top: 0;
 }
 
 @media ($min-bp-a) {
-    #site-nav {        
+    #site-nav {
         width: 300px;
         left: -300px;
     }
@@ -203,5 +212,12 @@ body > header {
 
     #user-menu {
        padding: 20px; 
+    }
+}
+
+
+@media ($min-bp-b) {
+    header > .cell-logo {
+        display: block;
     }
 }

@@ -14,7 +14,7 @@
 
     <p id="user-message"><?php
         if(isset($_SESSION['username'])) {
-            echo "Welcome back, {$_SESSION['username']}";
+            echo "Welcome, {$_SESSION['username']}";
         } else {
             echo 'Sign in';
         }
@@ -37,4 +37,7 @@
     </nav>
     <div id="user-arrow" class="ico-"></div>
     <div id="nav-overlay"></div>
+    <div class="cell-logo">
+        <a href="/" class="ico-cell-logo"></a>
+    </div>
 </header>

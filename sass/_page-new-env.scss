@@ -1,3 +1,7 @@
+#new-env-interface {
+    padding: 80px 40px;
+}
+
 #new-env-map {
     width: 100%;
     height: 600px;
@@ -12,21 +16,26 @@
     float: left;
     padding-top: 20px;
     padding-bottom: 20px;
+    text-align: center;
     z-index: 2;
 }
 
 #new-env-form form {
-    width: 70%;
-    float: right;
-    padding-bottom: 40px;
+    width: 100%;
+    text-align: left;
+    td {
+        float: left;
+        width: 100%;
+    }
+    .btn {
+        margin-top: 10px;
+    }
 }
 
 #selected-tile {
-    width: 240px;
-    position: absolute;
-    top: -120px;
-    left: 75px;
-    border: 10px solid $mblue;
+    width: 100%;
+    max-width: 240px;
+    position: relative;
     z-index: 3;
 }
 
@@ -43,14 +52,47 @@
 .new-env-overlay {
     width: 100%;
     height: 0;
-    position: absolute;
-    overflow: hidden;
-    z-index: 3;
-    line-height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
     background: $dblue url(/img/spinner.gif) center no-repeat;
     transition: height .3s;
+    z-index: 4;
 }
 
 .new-env-overlay--cloning {
     height: 100%;
+}
+
+@media ($min_bp_b) {
+    #selected-tile {
+        position: absolute;
+        top: -120px;
+        left: 68px;
+        border: 10px solid $mblue;
+    }
+    #new-env-form form {
+        width: 64%;
+        float: right;
+        padding: 0 0 20px 40px;
+        text-align: left;
+        td {
+            float: none;
+            width: auto;
+        }
+        .btn {
+            margin-top: 0;
+        }
+    }
+}
+
+@media ($min_bp_c) {
+    #selected-tile {
+        border: 10px solid $mblue;
+    }
+    #new-env-form form {
+        width: 70%;
+        float: right;
+        padding: 0 0 20px;
+    }
 }

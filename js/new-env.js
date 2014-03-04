@@ -168,6 +168,17 @@ function init() {
     warnNoName.appendChild(document.createTextNode('Please enter a name for your environment.'));
 
     cloneBtn.addEventListener('click', function(e) {
+        validate();
+    });
+
+    envNameInput.addEventListener('keydown', function(e) {
+        if(e.which == 13) {
+            e.preventDefault();
+            validate();
+        }
+    });
+
+    function validate() {
         if(currentTile != undefined) {
             if(envNameInput.checkValidity()) {
                 document.getElementById('new-env-overlay').className += ' new-env-overlay--cloning';
@@ -184,7 +195,7 @@ function init() {
         } else {
             envForm.appendChild(warnNoTile);
         }
-    });
+    }
 }
 
 // Setup map grid overlay
@@ -340,9 +351,9 @@ function generateEnv(lat1, lon1, lat2, lon2) {
         request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         request.send(data);
 
-        request.onreadystatechange = function(data) {
+        request.onreadystatechange = function() {
             if(request.readyState == 4 && request.status == 200) {
-                window.location.href = request.getResponseHeader('X-Env-URL');
+                window.location.href = '/capturing-environment';
             } else if(request.status != 200) {
                 console.log('An error has occurred.');
             }
