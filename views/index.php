@@ -75,7 +75,7 @@
             </a>
             <div class="cta cta--home3 half">
                 <hgroup class="align-vertical">
-                    <h1>CTA Title</h1>
+                    <h1>Technology</h1>
                     <h2>Optional subtitle</h2>
                 </hgroup>
             </div>

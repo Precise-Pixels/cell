@@ -32,16 +32,22 @@
 
     <section>
         <div class="align-centre lgrey">
+            <div class="section-padding">
+                <h1>REVIEWS</h1>
+                <p class="half-margin">Integer sit amet nibh sit amet lectus luctus placerat. Suspendisse eget arcu tortor. Fusce pretium sodales nisl et tempus.</p>
+                <p class="half-margin">Integer sit amet nibh sit amet lectus luctus placerat. Suspendisse eget arcu tortor. Fusce pretium sodales nisl et tempus.</p>
+            </div>
             <a href="ted" class="cta cta--example half">
                 <hgroup class="align-vertical">
                     <h1>TED Talk</h1>
                 </hgroup>
             </a>
-            <div class="section-padding half">
-                <h1>REVIEWS</h1>
-                <p class="half-margin">Integer sit amet nibh sit amet lectus luctus placerat. Suspendisse eget arcu tortor. Fusce pretium sodales nisl et tempus.</p>
-                <p class="half-margin">Integer sit amet nibh sit amet lectus luctus placerat. Suspendisse eget arcu tortor. Fusce pretium sodales nisl et tempus.</p>
-            </div>
+            <a href="/project-titan" class="cta cta--about half">
+                <hgroup class="align-vertical">
+                    <h1>About Cell</h1>
+                    <h2>Find out about Cell Industries</h2>
+                </hgroup>
+            </a>
         </div>
     </section>
 
