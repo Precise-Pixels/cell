@@ -37,7 +37,7 @@
         </div>
     </section>
 
-    <section id="environment-listing" class="sdgrey">
+    <section id="environment-listing" class="section--spacer sdgrey">
         <div class="align-centre">
             <?php if(!empty($environments)):
                 foreach($environments as $env): ?>
@@ -57,6 +57,23 @@
                     <h1>This user hasn't cloned any environments yet.</h1>
                 </div>
             <?php endif; ?>
+        </div>
+    </section>
+
+    <section>
+        <div class="align-centre">
+            <a href="/recently-cloned-environments" class="cta cta--recent half">
+                <hgroup class="align-vertical">
+                    <h1>Recenty Cloned</h1>
+                    <h2>See the most recently cloned environments</h2>
+                </hgroup>
+            </a>
+            <a href="/project-titan" class="cta cta--pt-small half">
+                <hgroup class="align-vertical">
+                    <h1>Project Titan</h1>
+                    <h2>Discover the groundbreaking project</h2>
+                </hgroup>
+            </a>
         </div>
     </section>
 
