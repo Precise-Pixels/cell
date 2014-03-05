@@ -45,7 +45,7 @@
             <div class="imagebox hoverbox third-margin">
                 <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
                 <figcaption>
-                    <h1>DR REE</h1>
+                    <h1>James Lee</h1>
                     <p>This portion of the caption is hidden until the image is hovered.</p>
                 </figcaption>
             </div>
@@ -53,7 +53,7 @@
             <div class="imagebox hoverbox third-margin">
                 <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
                 <figcaption>
-                    <h1>JAKOB HAMMON</h1>
+                    <h1>Jacob Hammond</h1>
                     <p>This portion of the caption is hidden until the image is hovered.</p>
                 </figcaption>
             </div>
@@ -61,7 +61,7 @@
             <div class="imagebox hoverbox third-margin">
                 <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
                 <figcaption>
-                    <h1>JASOP WILHIELM</h1>
+                    <h1>Joseph Williams</h1>
                     <p>This portion of the caption is hidden until the image is hovered.</p>
                 </figcaption>
             </div>
