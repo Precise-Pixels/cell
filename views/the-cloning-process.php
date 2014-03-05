@@ -31,4 +31,6 @@
     <img src="/img/infographic/mountain.jpg" class="ig-mountain" data-8000="top: 100%;" data-13392="top: 0%;"/>
     <img src="/img/infographic/plane.png" class="ig-plane" data-7500="left: -50%; top: 30%;" data-9000="left: 110%; top: -10%"/>
 
+    <img src="/img/infographic/mountain.jpg" class="ig-mountain-cover" data-13391="opacity: 0;" data-13392="opacity: 1;" data-20000/>
+
 </main>
