@@ -62,9 +62,10 @@
                     <h2>Discover the groundbreaking project</h2>
                 </hgroup>
             </a>
-            <a href="/the-cloning-process" class="cta cta--example half">
+            <a href="/recently-cloned-environments" class="cta cta--recent half">
                 <hgroup class="align-vertical">
-                    <h1>The Process</h1>
+                    <h1>Recently Cloned</h1>
+                    <h2>See the most recently cloned environments</h2>
                 </hgroup>
             </a>
         </section>
