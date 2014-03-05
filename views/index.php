@@ -42,8 +42,8 @@
         </div>
     </section>
 
-    <section>
-        <div class="section-padding align-centre dgrey">
+    <section class="sdgrey">
+        <div class="section-padding align-centre">
             <div class="third-margin">
                 <h2>.third-margin</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -60,7 +60,7 @@
     </section>
 
     <section class="sdgrey">
-        <div class="section-padding align-centre sdgrey">
+        <div class="align-centre sdgrey">
             <a href="/project-titan" class="cta cta--pt-large half">
                 <hgroup class="align-vertical">
                     <h1>Project Titan</h1>
@@ -80,6 +80,7 @@
                 </hgroup>
             </a>
         </div>
+            <div id="homepage-cta-bkg"></div>
     </section>
 
 </main>
