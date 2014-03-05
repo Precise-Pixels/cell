@@ -18,7 +18,7 @@
     </header>
 
     <section class="dgrey">
-        <div class="section-padding align-centre">
+        <div class="align-centre">
             <div id="homepage-map"></div>
         </div>
     </section>
