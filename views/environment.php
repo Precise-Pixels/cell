@@ -1,14 +1,15 @@
 <main class="env">
 
     <header class="sdgrey">
-        <div id="env-user-badge">
-            <h2>Cloned by:</h2>
-            <a href="/user/<?= $env->username ?>"><?= $env->username ?>'s profile</a>
-        </div>
         <hgroup class="align-vertical">
             <h1><i class="ico-env"></i><?= $env->name; ?></h1>
             <h2><i class="ico-pin"></i><?= $env->latitude; ?>, <?= $env->longitude; ?></h2>
         </hgroup>
+        <div id="env-user-badge">
+            <h2>Cloned by:</h2>
+            <img src="http://www.gravatar.com/avatar/<?= (isset($env->email) ? md5(strtolower(trim($env->email))) : 1); ?>?d=mm&amp;s=60" />
+            <a href="/user/<?= $env->username ?>"><?= $env->username ?></a>
+        </div>
     </header>
     <?= $env->timestamp; ?> 
     <progress id="prog-bar" min=0 max=100 value=0></progress>
