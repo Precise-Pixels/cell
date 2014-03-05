@@ -9,7 +9,6 @@
     <section>
         <div class="section-padding align-centre lgrey">
             <h1><i class="ico-email"></i>CONTACT</h1>
-
             <div class="half-margin">
                 <h2>Press</h2>
                 <a href="mailto:press@cell.dev">press@cell.dev</a>
@@ -24,7 +23,7 @@
 
     <section>
         <div class="section-padding align-centre mblue">
-            <h1><i class="ico-press"></i>PRESS PACK</h1>
+            <h1><i class="ico-press-pack"></i>PRESS PACK</h1>
             <img src="/img/placeholder.gif" alt="Information pack" class="full"/>
             <div id="press-pack-download">
                 <a href="/" class="btn"><i class="ico-download"></i>DOWNLOAD</a>
@@ -46,7 +45,6 @@
                 </hgroup>
             </a>
             <div class="slider half lgrey">
-                <h1>REVIEWS</h1>
                 <ul class="panes">
                     <li><blockquote>
                         <p>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
