@@ -1,4 +1,4 @@
-<header id="fixed-header" class="section-padding">
+<header id="fixed-header" class="fixed-header--recent section-padding">
     <hgroup class="align-vertical">
         <h1>RECENTLY CLONED</h1>
         <h2>THE MOST RECENTLY CLONED ENVIRONMENTS</h2>
@@ -7,7 +7,7 @@
 
 <main>
 
-    <section id="environment-listing" class="section--spacer sdgrey">
+    <section id="environment-listing" class="section--spacer">
         <div class="align-centre">
             <?php foreach($environments as $env): ?>
                 <a href="/user/<?= $env->username; ?>/env/<?= $env->envId; ?>">
