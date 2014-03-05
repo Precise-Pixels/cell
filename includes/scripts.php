@@ -1,9 +1,10 @@
 <?php if($_SERVER['SERVER_NAME'] == 'cell.dev'):
 // SANDBOX ?>
-
     <script src='/js/respond.min.js'></script>
-
+    <script src='/js/all.js'></script>
+    
     <?php if($isHome): ?>
+        <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4&sensor=false&libraries=places'></script>
         <script src='/js/page-home.js'></script>
     <?php endif; ?>
 
@@ -36,8 +37,10 @@
 // LIVE ?>
 
     <script src='/build/respond.min.js'></script>
+    <script src='/build/all.min.js'></script>
 
     <?php if($isHome): ?>
+        <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4&sensor=false&libraries=places'></script>
         <script src='/build/page-home.min.js'></script>
     <?php endif; ?>
 

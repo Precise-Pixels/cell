@@ -1,4 +1,4 @@
-<header class="fixed-header section-padding align-centre dgrey">
+<header id="fixed-header" class="fixed-header--pt section-padding">
     <hgroup class="align-vertical">
         <h1>PROJECT TITAN</h1>
     </hgroup>
@@ -59,9 +59,10 @@
                     <h1>The cloning process</h1>
                 </hgroup>
             </a>
-            <a href="technology" class="cta cta--example half">
+            <a href="/technology" class="cta cta--technology half">
                 <hgroup class="align-vertical">
                     <h1>Technology</h1>
+                    <h2>Learn about our QuantumCell&trade; technology</h2>
                 </hgroup>
             </a>
         </div>

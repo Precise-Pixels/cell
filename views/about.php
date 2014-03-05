@@ -1,15 +1,14 @@
-<header class="fixed-header section-padding align-centre dgrey">
+<header id="fixed-header" class="fixed-header--about section-padding">
     <hgroup class="align-vertical">
         <h1>ABOUT</h1>
     </hgroup>
 </header>
 
-<main>    
+<main>
 
     <section>
         <div id="about-logo-header" class="align-centre mblue">
             <i class="ico-cell-logo"></i>
-            <img src="/img/logo-diagram.jpg" alt="Company Logo" class="full">
         </div>
     </section>
 
@@ -45,7 +44,7 @@
             <div class="imagebox hoverbox third-margin">
                 <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
                 <figcaption>
-                    <h1>DR REE</h1>
+                    <h1>JAMES LEE</h1>
                     <p>This portion of the caption is hidden until the image is hovered.</p>
                 </figcaption>
             </div>
@@ -53,7 +52,7 @@
             <div class="imagebox hoverbox third-margin">
                 <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
                 <figcaption>
-                    <h1>JAKOB HAMMON</h1>
+                    <h1>JACOB HAMMOND</h1>
                     <p>This portion of the caption is hidden until the image is hovered.</p>
                 </figcaption>
             </div>
@@ -61,7 +60,7 @@
             <div class="imagebox hoverbox third-margin">
                 <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
                 <figcaption>
-                    <h1>JASOP WILHIELM</h1>
+                    <h1>JOSEPH WILLIAMS</h1>
                     <p>This portion of the caption is hidden until the image is hovered.</p>
                 </figcaption>
             </div>
@@ -83,8 +82,7 @@
                         <div class="event-img-wrapper">
                             <img class="event-img" src="/img/placeholder.gif">
                         </div> 
-                        <p class="event-text">Dr Lee felt the progresstion of technology was moving too slowly so he took a more
-                            active role in shaping the planets future. Thus, Cell Industries was born.</p>
+                        <p class="event-text">Dr Lee felt the progression of technology was moving too slowly so he took a more active role in shaping the planets future. Thus, Cell Industries was born.</p>
                     </div>
 
                     <div class="event funding">
@@ -94,8 +92,7 @@
                         <div class="event-img-wrapper">
                             <img class="event-img" src="/img/placeholder.gif">
                         </div> 
-                        <p class="event-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, 
-                        rhoncus at sodales et, fringilla vitae justo. Suspendisse adipiscing nunc tortor, eget accumsan tellus</p>
+                        <p class="event-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero,rhoncus at sodales et, fringilla vitae justo. Suspendisse adipiscing nunc tortor, eget accumsan tellus</p>
                     </div>
 
                     <div class="event party">
@@ -118,11 +115,13 @@
             <a href="/project-titan" class="cta cta--pt-small half">
                 <hgroup class="align-vertical">
                     <h1>Project Titan</h1>
+                    <h2>Discover the groundbreaking project</h2>
                 </hgroup>
             </a>
-            <a href="ted" class="cta cta--example half">
+            <a href="/technology" class="cta cta--technology half">
                 <hgroup class="align-vertical">
-                    <h1>TED Talk</h1>
+                    <h1>Technology</h1>
+                    <h2>Learn about our QuantumCell&trade; technology</h2>
                 </hgroup>
             </a>
         </div>

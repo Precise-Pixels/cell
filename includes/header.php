@@ -1,4 +1,4 @@
-<header class="dgrey">
+<header id="top-bar">
     <label for="site-nav-toggle" id="site-nav-btn" class="ico-burger"></label>
     <input type="checkbox" id="site-nav-toggle" class="checkbox-hack"/>
     <nav id="site-nav" class="force-repaint">
@@ -11,7 +11,7 @@
 
     <p id="user-message"><?php
         if(isset($_SESSION['username'])) {
-            echo "Welcome back, {$_SESSION['username']}";
+            echo "Welcome, {$_SESSION['username']}";
         } else {
             echo 'Sign in';
         }
@@ -31,4 +31,7 @@
         <?php endif; ?>
     </nav>
     <div id="user-arrow" class="ico-"></div>
+    <div class="cell-logo">
+        <a href="/" class="ico-cell-logo"></a>
+    </div>
 </header>

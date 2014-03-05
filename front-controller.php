@@ -19,6 +19,10 @@ $isEnv    = preg_match('#env\/\d+/?$#', $q);
 $isNewEnv = preg_match('#env\/new/?$#', $q);
 $isCapturing = preg_match('#capturing-environment#', $q);
 
+if($isHome) {
+    require_once('model-home.php');
+}
+
 if($isUser) {
     require_once('model-user.php');
 }

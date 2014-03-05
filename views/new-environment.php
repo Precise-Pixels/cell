@@ -74,6 +74,7 @@
             <a href="/project-titan" class="cta cta--pt-small half">
                 <hgroup class="align-vertical">
                     <h1>Project Titan</h1>
+                    <h2>Discover the groundbreaking project</h2>
                 </hgroup>
             </a>
             <a href="technology" class="cta cta--example half">
