@@ -21,9 +21,14 @@
     <img src="/img/infographic/cloud.png" class="ig-cloud2" data-7500="top: 100%;" data-10000="top: -400%;"/>
     <img src="/img/infographic/cloud.png" class="ig-cloud3" data-7500="top: 100%;" data-10000="top: -100%;"/>
     <img src="/img/infographic/cloud.png" class="ig-cloud4" data-7500="top: 100%;" data-10000="top: -50%;"/>
+    <img src="/img/infographic/droplet.png" class="ig-droplet" data-7500="top: 100%;" data-10000="top: -50%;"/>
+    <img src="/img/infographic/droplet.png" class="ig-droplet2" data-7500="top: 100%;" data-10000="top: -300%;"/>
+    <img src="/img/infographic/droplet.png" class="ig-droplet3" data-7500="top: 100%;" data-10000="top: -400%;"/>
+    <img src="/img/infographic/droplet.png" class="ig-droplet4" data-7500="top: 100%;" data-10000="top: -100%;"/>
+
 
     <img src="/img/infographic/cube.png" class="ig-cube-env" data-7500="opacity: 0;" data-8500="opacity: 1;" data-13392=""/>
     <img src="/img/infographic/mountain.jpg" class="ig-mountain" data-8000="top: 100%;" data-13392="top: 0%;"/>
-    <img src="/img/infographic/plane.png" class="ig-plane" data-7000="left: -50%; top: 30%;" data-9000="left: 110%; top: -10%"/>
+    <img src="/img/infographic/plane.png" class="ig-plane" data-7500="left: -50%; top: 30%;" data-9000="left: 110%; top: -10%"/>
 
 </main>
