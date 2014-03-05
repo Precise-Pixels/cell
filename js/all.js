@@ -1,9 +1,13 @@
-window.onscroll = function (e) {
-    var headerTop = document.getElementById('top-bar');
-    var header    = document.getElementById('fixed-header') || document.getElementById('primary-header');
-    var hgroup    = header.getElementsByTagName('hgroup')[0];
+var headerTop     = document.getElementById('top-bar');
+var header        = document.getElementById('fixed-header') || document.getElementById('primary-header');
+var hgroup        = header.getElementsByTagName('hgroup')[0];
+var target        = document.getElementsByTagName('section')[0].offsetParent.offsetTop;
+var siteNavToggle = document.getElementById('site-nav-toggle');
+var userNavToggle = document.getElementById('user-nav-toggle');
+
+window.addEventListener('scroll', function () {
+
     var position  = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-    var target    = document.getElementsByTagName('section')[0].offsetParent.offsetTop;
 
     header.style.top = position * -1 / 3 + 'px';
     hgroup.style.top = position * -1 / 2 + 'px';
@@ -14,16 +18,17 @@ window.onscroll = function (e) {
     else {
        headerTop.style.backgroundColor = 'transparent'; 
     }
-}
+});
 
-function changeTopbarBkg() { 
-    if (document.getElementById('site-nav-toggle').checked || document.getElementById('user-nav-toggle').checked) {
-        document.getElementById('top-bar').style.backgroundColor = '#333';
+function changeTopbarBkg() {
+
+    if (siteNavToggle.checked || userNavToggle.checked) {
+        headerTop.style.backgroundColor = '#333';
     }
     else {
-        document.getElementById('top-bar').style.backgroundColor = 'transparent';
+        headerTop.style.backgroundColor = 'transparent';
     }
 }
 
-document.getElementById('site-nav-toggle').addEventListener('click', changeTopbarBkg);
-document.getElementById('user-nav-toggle').addEventListener('click', changeTopbarBkg);
+siteNavToggle.addEventListener('click', changeTopbarBkg);
+userNavToggle.addEventListener('click', changeTopbarBkg);
