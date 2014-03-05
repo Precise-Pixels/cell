@@ -16,7 +16,7 @@ window.onscroll = function (e) {
     }
 }
 
-function nav_topbar_bkg() { 
+function changeTopbarBkg() { 
     if (document.getElementById('site-nav-toggle').checked || document.getElementById('user-nav-toggle').checked) {
         document.getElementById('top-bar').style.backgroundColor = '#333';
     }
@@ -25,5 +25,5 @@ function nav_topbar_bkg() {
     }
 }
 
-document.getElementById('site-nav-toggle').addEventListener('click', nav_topbar_bkg);
-document.getElementById('user-nav-toggle').addEventListener('click', nav_topbar_bkg);
+document.getElementById('site-nav-toggle').addEventListener('click', changeTopbarBkg);
+document.getElementById('user-nav-toggle').addEventListener('click', changeTopbarBkg);
