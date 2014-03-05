@@ -20,6 +20,10 @@ $isNewEnv             = preg_match('#env\/new/?$#', $q);
 $isRecentlyClonedEnvs = preg_match('#recently-cloned-environments/?$#', $q);
 $isCapturing          = preg_match('#capturing-environment#', $q);
 
+if($isHome) {
+    require_once('model-home.php');
+}
+
 if($isUser) {
     require_once('model-user.php');
 }

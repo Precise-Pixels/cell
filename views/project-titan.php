@@ -1,4 +1,4 @@
-<header class="fixed-header section-padding align-centre dgrey">
+<header id="fixed-header" class="fixed-header--pt section-padding">
     <hgroup class="align-vertical">
         <h1>PROJECT TITAN</h1>
     </hgroup>
@@ -8,14 +8,14 @@
 
     <section>
         <div class="align-centre lgrey">
-            <div class="section-padding half lgrey">
-                <h1><i class="ico-earth"></i>OUR AIM</h1>
-                <p class="full-margin">Integer sit amet nibh sit amet lectus luctus placerat. Suspendisse eget arcu tortor. Fusce pretium sodales nisl et tempus.</p>
+            <div class="section-padding half">
+                <h1><i class="ico-project-titan"></i>OUR AIM</h1>
+                <p class="full-margin">We at Cell Industries empower you to preserve the future of your planet. Using our groundbreaking QuantumCell™ technology we can clone your environment leaving it protected and ready to be restored in the event of undesirable occurrences.</p>
             </div>
             <div class="section-padding half mblue">
                 <blockquote>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
-                    <footer>Mr Person, Title Here</footer>
+                    <p>The process was easy to follow, efficient and intuative. The staff could not do enough for me and was very happy with the end product.</p>
+                    <footer>Mr Sea Shaw, Freelance Photographer</footer>
                 </blockquote>
             </div>
         </div>
@@ -37,22 +37,17 @@
         </div>
     </section>
 
-    <section id="new-env-instructions" class="align-centre mblue">
+    <section class="align-centre lgrey">
         <ol>
-            <li class="third">
+            <li class="half">
                 <h1>1</h1>
-                <img src="/img/new-env-instructions-1.png" class="scale">
-                <p>Zoom in fully to select an area of the map</p>
+                <img src="/img/project-titan-example-1.jpg" class="scale">
+                <p>Select an area of earth to clone</p>
             </li>
-            <li class="third">
+            <li class="half">
                 <h1>2</h1>
-                <img src="/img/new-env-instructions-2.png" class="scale">
-                <p>Name your environment and click the clone button</p>
-            </li>
-            <li class="third">
-                <h1>3</h1>
-                <img src="/img/new-env-instructions-3.png" class="scale">
-                <p>View your newly cloned environment</p>
+                <img src="/img/project-titan-example-2.jpg" class="scale">
+                <p>View your 3D cloned environment</p>
             </li>
         </ol>
     </section>
@@ -64,17 +59,19 @@
                     <h1>The cloning process</h1>
                 </hgroup>
             </a>
-            <a href="technology" class="cta cta--example half">
+            <a href="/technology" class="cta cta--technology half">
                 <hgroup class="align-vertical">
                     <h1>Technology</h1>
+                    <h2>Learn about our QuantumCell&trade; technology</h2>
                 </hgroup>
             </a>
         </div>
     </section>
 
     <section>
-        <div class="align-centre">
-            <img src="/img/placeholder.gif" alt="Clone Cube" class="full"/>
+        <div id="project-titan-sign-up" class="align-centre section-padding sdgrey">
+            <h2>Start preserving the planet today</h2>
+            <a href="/signin" class="btn"><i class="ico-my-cell"></i>SIGN UP</a>
         </div>
     </section>
 

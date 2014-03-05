@@ -1,4 +1,4 @@
-<header class="fixed-header section-padding align-centre dgrey">
+<header id="fixed-header" class="section-padding">
     <hgroup class="align-vertical">
         <h1>THE CLONING PROCESS</h1>
     </hgroup>

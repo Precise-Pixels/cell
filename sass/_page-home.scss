@@ -1,5 +1,12 @@
 #primary-header {
     height: 2000px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: table;
+    text-align: center;
+    background-size: cover;
+    z-index: 2;
 }
 
 #page-flow {
@@ -11,17 +18,7 @@
     font-size: 3rem;
     text-align: center;
     color: $lgrey;
-}
-
-.arrow-down {
-    animation: page-flow-arrow-color 3s infinite;
-    animation-direction: alternate;
-}
-
-#secondary-header {
-    margin-top: 2000px;
-    position: relative;
-    display: block;
+    animation: page-flow-arrow-color 3s infinite alternate;
 }
 
 @keyframes page-flow-arrow-color {
@@ -29,7 +26,107 @@
     to   { opacity: 1; }
 }
 
+#secondary-header {
+    margin-top: 2000px;
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+#secondary-header .section-padding {
+    padding: 70px 25px;
+}
+
 #homepage-map {
     width: 100%;
     padding-bottom: 56.25%;
+}
+
+#homepage-map-info {
+    position: relative;
+}
+
+#homepage-map-env-icon {
+    width: 146px;
+    position: absolute;
+    margin-left: -73px;
+    top: -88px;
+    left: 50%;
+    color: $mblue;
+    font-size: 8rem;
+}
+
+#homepage-map-env-icon-perc {
+    width: 110px;
+    position: absolute;
+    margin-left: -55px;
+    top: -18px;
+    left: 50%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.homepage-map-env-icon-title {
+    margin-top: -30px;
+    margin-bottom: 50px;
+    font-weight: 200;
+    font-size: 1.6rem;
+}
+
+.homepage-map-data {
+    text-align: center;
+    line-height: 45px;
+
+    h2 {
+        font-size: 4rem;
+        font-weight: 200;
+    }
+
+    p {
+        margin: 0;
+        font-size: 1.4rem;
+    }
+}
+
+.homepage-map-data--left,
+.homepage-map-data--right {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+#homepage-map-learn-more {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+#homepage-cta-bkg {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: $dgrey;
+}
+
+@media ($min_bp_b) {
+    .homepage-map-data--left {
+        position: absolute;
+        left: 45px;
+        text-align: left;
+    }
+
+    .homepage-map-data--right {
+        position: absolute;
+        right: 45px;
+        text-align: right;
+    }
+
+    #home-learn-more {
+        width: 300px;
+        margin: 0 auto;
+        display: block;
+    }
 }
