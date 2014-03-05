@@ -14,7 +14,13 @@
 
     <?php if($isCloningProcess): ?>
         <script src='/js/skrollr.min.js'></script>
-        <script>var s = skrollr.init();</script>
+        <script>
+        var s = skrollr.init({
+            render: function(data) {
+                console.log(data.curTop);
+            }
+        });
+        </script>
     <?php endif; ?>
 
     <?php if($isEnv): ?>
