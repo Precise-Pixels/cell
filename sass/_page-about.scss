@@ -7,14 +7,12 @@
 #about-numbers {
     .about-number {
         text-align: center;
-        transition: all 0.3s; 
+        transition: transform 0.3s;
         h2 {
             font-size: 3rem;
-            font-weight: 200;
+        }
+        &:hover {
+            transform: scale(1.1);
         }
     }
-}
-
-.about-number:hover {
-    transform: scale(1.1);
 }
