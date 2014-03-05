@@ -30,7 +30,6 @@
     <?php endif; ?>
 
     <?php if($isCapturing): ?>
-        <script src="/js/threejs-tweenjs-stats-loaders-controls-stackblur.js"></script>
         <script src="/js/capture-env.js"></script>
     <?php endif; ?>
 
@@ -61,7 +60,6 @@
     <?php endif; ?>
 
     <?php if($isCapturing): ?>
-        <script src="/build/threejs-tweenjs-stats-loaders-controls-stackblur.min.js"></script>
         <script src="/build/capture-env.min.js"></script>
     <?php endif; ?>
 
