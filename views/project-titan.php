@@ -41,12 +41,12 @@
         <ol>
             <li class="half">
                 <h1>1</h1>
-                <img src="/img/project-titan-example-1.png" class="scale">
+                <img src="/img/project-titan-example-1.jpg" class="scale">
                 <p>Select an area of earth to clone</p>
             </li>
             <li class="half">
                 <h1>2</h1>
-                <img src="/img/project-titan-example-2.png" class="scale">
+                <img src="/img/project-titan-example-2.jpg" class="scale">
                 <p>View your 3D cloned environment</p>
             </li>
         </ol>
