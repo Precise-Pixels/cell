@@ -32,4 +32,14 @@ class User {
 
         return $result;
     }
+
+    static function getTotalParticipants() {
+        require('db.php');
+
+        $sth = $dbh->query("SELECT COUNT(*) FROM users");
+        $sth->setFetchMode(PDO::FETCH_NUM);
+        $result = $sth->fetch();
+
+        return $result[0];
+    }
 }

@@ -30,6 +30,7 @@
     margin-top: 2000px;
     position: relative;
     display: block;
+    text-align: center;
 }
 
 #secondary-header .section-padding {
@@ -43,30 +44,47 @@
 
 #homepage-map-info {
     position: relative;
-    h1 {
-        margin-bottom: 40px;
-        font-weight: 200;
-        font-size: 2rem;
-    }
 }
 
 #homepage-map-env-icon {
-    width: 100%;
+    width: 146px;
     position: absolute;
-    top: -75px;
-    font-size: 6rem;
+    margin-left: -73px;
+    top: -88px;
+    left: 50%;
+    color: $mblue;
+    font-size: 8rem;
+}
+
+#homepage-map-env-icon-perc {
+    width: 110px;
+    position: absolute;
+    margin-left: -55px;
+    top: -18px;
+    left: 50%;
     text-align: center;
+    font-size: 2rem;
+}
+
+.homepage-map-env-icon-title {
+    margin-top: -30px;
+    margin-bottom: 50px;
+    font-weight: 200;
+    font-size: 1.6rem;
 }
 
 .homepage-map-data {
     text-align: center;
     line-height: 45px;
+
     h2 {
         font-size: 4rem;
         font-weight: 200;
     }
+
     p {
         margin: 0;
+        font-size: 1.4rem;
     }
 }
 
@@ -82,17 +100,30 @@
     text-align: center;
 }
 
+#homepage-cta-bkg {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: $dgrey;
+}
+
 @media ($min_bp_b) {
     .homepage-map-data--left {
         position: absolute;
         left: 45px;
         text-align: left;
     }
+
     .homepage-map-data--right {
         position: absolute;
         right: 45px;
         text-align: right;
     }
+
     #home-learn-more {
         width: 300px;
         margin: 0 auto;
