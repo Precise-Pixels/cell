@@ -4,10 +4,10 @@ var secondaryHeader = document.getElementById('secondary-header');
 primaryHeader.style.height = (window.innerHeight || document.documentElement.clientHeight) - 40 + 'px';
 secondaryHeader.style.marginTop = (parseInt(primaryHeader.style.height) + 40) + 'px';
 
-window.onresize = function() {
+window.addEventListener('resize', function() {
     primaryHeader.style.height = (window.innerHeight || document.documentElement.clientHeight) - 40 + 'px';
     secondaryHeader.style.marginTop = (parseInt(primaryHeader.style.height) + 40) + 'px';
-};
+});
 
 // Animated scroll
 var pageFlow = document.getElementById('page-flow');
