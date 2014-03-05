@@ -1,5 +1,12 @@
 #primary-header {
     height: 2000px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: table;
+    text-align: center;
+    background-size: cover;
+    z-index: 2;
 }
 
 #page-flow {
@@ -11,11 +18,7 @@
     font-size: 3rem;
     text-align: center;
     color: $lgrey;
-}
-
-.arrow-down {
-    animation: page-flow-arrow-color 3s infinite;
-    animation-direction: alternate;
+    animation: page-flow-arrow-color 3s infinite alternate;
 }
 
 @keyframes page-flow-arrow-color {

@@ -1,4 +1,4 @@
-<header class="fixed-header section-padding align-centre dgrey">
+<header id="fixed-header" class="fixed-header--pt section-padding">
     <hgroup class="align-vertical">
         <h1>PROJECT TITAN</h1>
     </hgroup>
