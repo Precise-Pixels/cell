@@ -18,18 +18,31 @@
             <h1><i class="ico-domain"></i>SPECIFICATIONS</h1>
 
             <div class="third-margin">
-                <h2><i class="ico-chip"></i>Power</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo. Suspendisse adipiscing nunc tortor, eget accumsan tellus tincidunt at. Ut suscipit elit id tellus tincidunt, ac luctus nisi consectetur. Proin velit libero, faucibus sed ultricies eget, pulvinar sit amet erat. Suspendisse vel leo sit amet magna sodales tincidunt.</p>
+                <h2><i class="ico-chip"></i>Physical</h2>
+                <ul>
+                    <li>Dimensions: 300x300x300cm (118x118x118inches)</li>
+                    <li>Weight: 50kg</li>
+                </ul>
             </div>
 
             <div class="third-margin">
-                <h2><i class="ico-hdd"></i>Storage</h2>
-                <p>Integer sit amet nibh sit amet lectus luctus placerat. Suspendisse eget arcu tortor. Fusce pretium sodales nisl et tempus. Curabitur pretium pellentesque libero. Curabitur pretium malesuada purus, id posuere neque. Donec ante metus, rutrum id lacus ut, ultricies aliquam magna.</p>
+                <h2><i class="ico-hdd"></i>Hardware</h2>
+                <ul>
+                    <li>Storage capacity: 3.14 petabytes</li>
+                    <li>Nuclear fusion reactor power source</li>
+                    <li>Thermo-resistant shell - coated with Teflon 3.0</li>
+                    <li>Navigational thrusters (for more refined movements)</li>
+                    <li>Einstein-Rosen bridge initiator (for long-distance travel to remote storage facility)</li>
+                </ul>
             </div>
 
             <div class="third-margin">
-                <h2><i class="ico-connect"></i>Connectivity</h2>
-                <p>Donec consequat est sed eros condimentum, nec porttitor mi convallis. Sed porttitor, justo a blandit interdum, lorem nulla ullamcorper eros, sit amet convallis ipsum ligula eu lorem. Praesent elementum diam at mauris sodales, et pellentesque nibh dignissim.</p>
+                <h2><i class="ico-connect"></i>Connectivity &amp; Sensors</h2>
+                <ul>
+                    <li>Topographic profile scanner</li>
+                    <li>Gyroscope</li>
+                    <li>High Sensitivity Universal Positional System</li>
+                </ul>
             </div>
         </div>
     </section>
