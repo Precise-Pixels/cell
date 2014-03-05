@@ -9,7 +9,7 @@
     <section>
         <div class="align-centre lgrey">
             <div class="section-padding half">
-                <h1><i class="ico-earth"></i>OUR AIM</h1>
+                <h1><i class="ico-project-titan"></i>OUR AIM</h1>
                 <p class="full-margin">We at Cell Industries empower you to preserve the future of your planet. Using our groundbreaking QuantumCell™ technology we can clone your environment leaving it protected and ready to be restored in the event of undesirable occurrences.</p>
             </div>
             <div class="section-padding half mblue">
