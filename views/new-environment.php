@@ -4,7 +4,7 @@
         header('location: /signin');
     }
 ?>
-<header id="fixed-header" class="section-padding">
+<header id="fixed-header" class="fixed-header--newenv section-padding">
     <hgroup class="align-vertical">
         <h1>CLONE A NEW ENVIRONMENT</h1>
     </hgroup>
@@ -12,7 +12,7 @@
 
 <main>
 
-    <section id="new-env-interface" class="sdgrey">
+    <section id="new-env-interface">
         <div class="align-centre mblue">
             <input type="text" placeholder="Search Box" id="pac-input" class="controls">
             <div id="new-env-map"></div>
