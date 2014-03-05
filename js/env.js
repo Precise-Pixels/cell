@@ -34,18 +34,14 @@ if(Detector.webgl) {
             document.body.className += ' env--loaded';
 
             init();
-            animate();
-            loadStats();
-
-            // Events
-            window.addEventListener('resize', onWindowResize, false);
         }
     }
 }
 
-var $container, containerX, containerY, scene, camera, renderer, controls;
-
+// ThreeJS Setup
 function init() {
+    var $container, containerX, containerY, scene, camera, renderer, controls;
+
     $container = document.getElementById('model');
     $container.innerHTML = '';
 
@@ -98,33 +94,40 @@ function init() {
     renderer = new THREE.WebGLRenderer({alpha: true, antialias: true});
     renderer.setSize(containerX, containerY);
     $container.appendChild(renderer.domElement);
+
+    animate();
+    loadStats();
+
+    // Functions
+    function animate() {
+        requestAnimationFrame(animate);
+        render();
+        controls.update();
+        TWEEN.update();
+    }
+
+    function render() {
+        renderer.render(scene, camera);
+    }
+
+    function getContainerSize() {
+        containerX = $container.clientWidth;
+        containerY = $container.clientHeight;
+    }
+
+    function onWindowResize() {
+        getContainerSize();
+
+        camera.aspect = containerX / containerY;
+        camera.updateProjectionMatrix();
+
+        renderer.setSize(containerX, containerY);
+    }
+
+    // Events
+    window.addEventListener('resize', onWindowResize);
 }
 
-// Functions
-function animate() {
-    requestAnimationFrame(animate);
-    render();
-    controls.update();
-    TWEEN.update();
-}
-
-function render() {
-    renderer.render(scene, camera);
-}
-
-function getContainerSize() {
-    containerX = $container.clientWidth;
-    containerY = $container.clientHeight;
-}
-
-function onWindowResize() {
-    getContainerSize();
-
-    camera.aspect = containerX / containerY;
-    camera.updateProjectionMatrix();
-
-    renderer.setSize(containerX, containerY);
-}
 
 // WolframAlpha
 var envData = document.getElementById('env-data');
