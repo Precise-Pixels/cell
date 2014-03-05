@@ -65,29 +65,77 @@
                         <div class="event-img-wrapper">
                             <img class="event-img" src="/img/placeholder.gif">
                         </div> 
-                        <p class="event-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, 
-                        rhoncus at sodales et, fringilla vitae justo. Suspendisse adipiscing nunc tortor, eget accumsan tellus</p>
+                        <p class="event-text">Founded and established with the vision to advance technology.</p>
                     </div>
 
-                    <div class="event funding">
+                    <div class="event moon-landing">
                         <div class="event-date-wrapper">
-                            <p class="event-date">2005</p>
+                            <p class="event-date">1969</p>
                         </div>
                         <div class="event-img-wrapper">
                             <img class="event-img" src="/img/placeholder.gif">
                         </div> 
-                        <p class="event-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, 
-                        rhoncus at sodales et, fringilla vitae justo. Suspendisse adipiscing nunc tortor, eget accumsan tellus</p>
+                        <p class="event-text">Cell Industries assisted with the technology that went into Apollo 11 and partnered with NASA to put the first man on the moon.</p>
                     </div>
 
-                    <div class="event party">
+                    <div class="event test-tube">
                         <div class="event-date-wrapper">
-                            <p class="event-date">2200</p>
+                            <p class="event-date">1978</p>
                         </div>
                         <div class="event-img-wrapper">
                             <img class="event-img" src="/img/placeholder.gif">
                         </div> 
-                        <p class="event-text">Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,</p>
+                        <p class="event-text">Cell Industries sponsors and performs the research and development behind the first test tube baby born in the U.K.</p>
+                    </div>
+
+                    <div class="event lazer-eye">
+                        <div class="event-date-wrapper">
+                            <p class="event-date">1981</p>
+                        </div>
+                        <div class="event-img-wrapper">
+                            <img class="event-img" src="/img/placeholder.gif">
+                        </div> 
+                        <p class="event-text">Cell Industries sponsors and performs the research and development behind the first test tube baby born in the U.K.</p>
+                    </div>
+
+                    <div class="event stem-cells">
+                        <div class="event-date-wrapper">
+                            <p class="event-date">2007</p>
+                        </div>
+                        <div class="event-img-wrapper">
+                            <img class="event-img" src="/img/placeholder.gif">
+                        </div> 
+                        <p class="event-text">Cell Industries discover how to use human skin cells to create embryonic stem cells driving biological science into the future.</p>
+                    </div>
+
+                    <div class="event renewable-energy">
+                        <div class="event-date-wrapper">
+                            <p class="event-date">2012</p>
+                        </div>
+                        <div class="event-img-wrapper">
+                            <img class="event-img" src="/img/placeholder.gif">
+                        </div> 
+                        <p class="event-text">Scientist Richard Manning discovered a way to triple the output of a uranium while making it renewable and eco friendly. </p>
+                    </div>
+
+                    <div class="event research">
+                        <div class="event-date-wrapper">
+                            <p class="event-date">2074</p>
+                        </div>
+                        <div class="event-img-wrapper">
+                            <img class="event-img" src="/img/placeholder.gif">
+                        </div> 
+                        <p class="event-text">Dr Ree publishes his research into quantum cell technologies and wins a nobel prize in his field. A research facility dedicated to developing the technology is opened.</p>
+                    </div>
+
+                    <div class="event first-clone">
+                        <div class="event-date-wrapper">
+                            <p class="event-date">2108</p>
+                        </div>
+                        <div class="event-img-wrapper">
+                            <img class="event-img" src="/img/placeholder.gif">
+                        </div> 
+                        <p class="event-text">The first clone cube is created and the first environment is stored and recovered.</p>
                     </div>
 
                 </div>
