@@ -42,7 +42,7 @@
         </div>
     </section>
 
-    <section class="dgrey">
+    <section class="sdgrey">
         <div class="section-padding align-centre">
             <div class="third-margin">
                 <h2>.third-margin</h2>
