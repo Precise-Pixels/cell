@@ -24,13 +24,9 @@ foreach($rows as $y => $row) {
     }
 }
 
-// Resize and blur the height map
+// Resize the height map
 $scaledImg = imagecreatetruecolor($tileSize, $tileSize);
 imagecopyresampled($scaledImg, $map, 0, 0, 0, 0, $tileSize, $tileSize, $resolution, $resolution);
-
-for ($i = 1; $i < 50; $i++) {
-    imagefilter($scaledImg, IMG_FILTER_GAUSSIAN_BLUR);
-}
 
 imagecopy($img, $scaledImg, 1, 1, 0, 0, 1280, 1280);
 
