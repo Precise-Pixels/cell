@@ -7,7 +7,7 @@
 
 <main>
 
-    <section id="environment-listing" class="section--spacer">
+    <section id="environment-listing" class="section--spacer sdgrey">
         <div class="align-centre">
             <?php foreach($environments as $env): ?>
                 <a href="/user/<?= $env->username; ?>/env/<?= $env->envId; ?>">

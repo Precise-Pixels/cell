@@ -6,13 +6,13 @@
 ?>
 <header id="fixed-header" class="fixed-header--newenv section-padding">
     <hgroup class="align-vertical">
-        <h1>CLONE A NEW ENVIRONMENT</h1>
+        <h1>CLONE AN ENVIRONMENT</h1>
     </hgroup>
 </header>
 
 <main>
 
-    <section id="new-env-interface">
+    <section id="new-env-interface" class="sdgrey">
         <div class="align-centre mblue">
             <input type="text" placeholder="Search Box" id="pac-input" class="controls">
             <div id="new-env-map"></div>
@@ -34,7 +34,7 @@
         </div>
     </section>
 
-    <section class="align-centre dgrey">
+    <section class="dgrey align-centre">
         <ol class="align-centre">
             <li class="third">
                 <h1>1</h1>
