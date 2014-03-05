@@ -16,14 +16,14 @@ window.onscroll = function (e) {
     }
 }
 
-function nav_topbar_bkg() { 
+function changeTopbarBkg() { 
     if (document.getElementById('site-nav-toggle').checked || document.getElementById('user-nav-toggle').checked) {
         document.getElementById('top-bar').style.backgroundColor = '#333';
     }
     else {
-        document.getElementById('top-bar').style.background = 'none';
+        document.getElementById('top-bar').style.backgroundColor = 'transparent';
     }
 }
 
-document.getElementById('site-nav-toggle').addEventListener('click', nav_topbar_bkg, false);
-document.getElementById('user-nav-toggle').addEventListener('click', nav_topbar_bkg, false);
+document.getElementById('site-nav-toggle').addEventListener('click', changeTopbarBkg);
+document.getElementById('user-nav-toggle').addEventListener('click', changeTopbarBkg);
