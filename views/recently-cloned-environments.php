@@ -1,4 +1,4 @@
-<header class="fixed-header section-padding align-centre dgrey">
+<header id="fixed-header" class="section-padding">
     <hgroup class="align-vertical">
         <h1>RECENTLY CLONED ENVIRONMENTS</h1>
     </hgroup>

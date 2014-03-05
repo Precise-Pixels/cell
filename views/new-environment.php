@@ -4,7 +4,7 @@
         header('location: /signin');
     }
 ?>
-<header id="fixed-header" class="section-padding align-centre dgrey">
+<header id="fixed-header" class="section-padding">
     <hgroup class="align-vertical">
         <h1>CLONE A NEW ENVIRONMENT</h1>
     </hgroup>
