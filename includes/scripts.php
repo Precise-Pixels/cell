@@ -20,7 +20,6 @@
             var latitude  = <?= $env->latitude; ?>;
             var longitude = <?= $env->longitude; ?>;
         </script>
-        <script src="/js/stackblur.js"></script>
         <script src="/js/env.js"></script>
         <script src="/js/gesture.js"></script>
     <?php endif; ?>
@@ -31,7 +30,7 @@
     <?php endif; ?>
 
     <?php if($isCapturing): ?>
-        <script src="/js/threejs-tweenjs-stats-loaders-controls.js"></script>
+        <script src="/js/threejs-tweenjs-stats-loaders-controls-stackblur.js"></script>
         <script src="/js/capture-env.js"></script>
     <?php endif; ?>
 
@@ -52,7 +51,6 @@
 
     <?php if($isEnv): ?>
         <script>var userId=<?= $userId; ?>,envId=<?= $envId; ?>,latitude=<?= $env->latitude; ?>,longitude=<?= $env->longitude; ?>;</script>
-        <script src="/build/stackblur.min.js"></script>
         <script src="/build/env.min.js"></script>
         <script src="/build/gesture.min.js"></script>
     <?php endif; ?>
@@ -63,7 +61,7 @@
     <?php endif; ?>
 
     <?php if($isCapturing): ?>
-        <script src="/build/threejs-tweenjs-stats-loaders-controls.min.js"></script>
+        <script src="/build/threejs-tweenjs-stats-loaders-controls-stackblur.min.js"></script>
         <script src="/build/capture-env.min.js"></script>
     <?php endif; ?>
 
