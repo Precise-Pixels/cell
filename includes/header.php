@@ -1,5 +1,5 @@
 <header id="top-bar">
-    <label for="site-nav-toggle" id="site-nav-btn" class="ico-burger"></label>
+    <label for="site-nav-toggle" id="site-nav-btn"></label>
     <input type="checkbox" id="site-nav-toggle" class="checkbox-hack"/>
     <nav id="site-nav" class="force-repaint dgrey">
         <ul>

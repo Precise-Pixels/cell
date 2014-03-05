@@ -13,7 +13,7 @@ window.addEventListener('scroll', function () {
     header.style.top = position * -1 / 3 + 'px';
     hgroup.style.top = position * -1 / 2 + 'px';
 
-    if ( position >= target ) {
+    if (position >= target || siteNavToggle.checked || userNavToggle.checked) {
        headerTop.style.backgroundColor = '#333';
     }
     else {
@@ -22,8 +22,7 @@ window.addEventListener('scroll', function () {
 });
 
 function changeTopbarBkg() {
-
-    if (siteNavToggle.checked || userNavToggle.checked) {
+    if (siteNavToggle.checked || userNavToggle.checked || position >= target) {
         headerTop.style.backgroundColor = '#333';
     }
     else {
