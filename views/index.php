@@ -67,13 +67,13 @@
                     <h2>Discover the groundbreaking project</h2>
                 </hgroup>
             </a>
-            <a href="/project-titan" class="cta cta--about half">
+            <a href="/about" class="cta cta--about half">
                 <hgroup class="align-vertical">
                     <h1>About Cell</h1>
                     <h2>Find out about Cell Industries</h2>
                 </hgroup>
             </a>
-            <a href="/project-titan" class="cta cta--technology half">
+            <a href="/technology" class="cta cta--technology half">
                 <hgroup class="align-vertical">
                     <h1>Technology</h1>
                     <h2>Learn about our QuantumCell&trade; technology</h2>
