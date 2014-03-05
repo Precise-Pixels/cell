@@ -24,6 +24,6 @@
 
     <img src="/img/infographic/cube.png" class="ig-cube-env" data-7500="opacity: 0;" data-10000="opacity: 1;"/>
     <img src="/img/infographic/mountain.jpg" class="ig-mountain" data-8000="top: 100%;" data-10000="top: 0%;"/>
-    <img src="/img/infographic/plane.png" class="ig-plane" data-7500="left: -10%;" data-10000="left: 110%;"/>
+    <img src="/img/infographic/plane.png" class="ig-plane" data-7500="left: -50%;" data-9000="left: 110%;"/>
 
 </main>
