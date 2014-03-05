@@ -12,7 +12,7 @@ window.onscroll = function (e) {
        headerTop.style.backgroundColor = '#333';
     }
     else {
-       headerTop.style.backgroundColor = 'none'; 
+       headerTop.style.backgroundColor = 'transparent'; 
     }
 }
 
