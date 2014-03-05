@@ -2,15 +2,47 @@ var Detector = {
     webgl: ( function () { try { var canvas = document.createElement( 'canvas' ); return !! window.WebGLRenderingContext && ( canvas.getContext( 'webgl' ) || canvas.getContext( 'experimental-webgl' ) ); } catch( e ) { return false; } } )()
 }
 
+// ThreeJS
 if(Detector.webgl) {
     document.documentElement.className += 'webgl';
 
-    init();
-    animate();
-    loadStats();
+    // REQUEST MAHOOSIVE FILE AND UPDATE PROGRESS BAR
+    var $progBar = document.getElementById('prog-bar');
+
+    var xhr = new XMLHttpRequest();
+
+    xhr.open('get', '/php/getThreeJS.php', true);
+    xhr.send();
+
+    xhr.onprogress = function(e) {
+        var responseText = xhr.responseText;
+
+        if(responseText.length > 10) {
+            var total = responseText.match(/\d{6}?/);
+            $progBar.value = e.loaded / total[0] * 100;
+        }
+
+        xhr.responseText = ''; // clear responseText to save memory
+    };
+
+    xhr.onreadystatechange = function() {
+        if(xhr.readyState == 4) {
+            var s = document.createElement('script');
+            s.appendChild(document.createTextNode(xhr.responseText));
+            document.body.appendChild(s);
+
+            document.body.className += ' env--loaded';
+
+            init();
+            animate();
+            loadStats();
+
+            // Events
+            window.addEventListener('resize', onWindowResize, false);
+        }
+    }
 }
 
-// ThreeJS Setup
 var $container, containerX, containerY, scene, camera, renderer, controls;
 
 function init() {
@@ -67,9 +99,6 @@ function init() {
     renderer.setSize(containerX, containerY);
     $container.appendChild(renderer.domElement);
 }
-
-// Events
-window.addEventListener('resize', onWindowResize, false);
 
 // Functions
 function animate() {

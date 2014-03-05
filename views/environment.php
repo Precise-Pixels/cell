@@ -1,5 +1,7 @@
 <h1>ENV</h1>
 
+<progress id="prog-bar" min=0 max=100 value=0></progress>
+
 <p><?= $env->timestamp; ?> | <?= $env->latitude; ?> | <?= $env->longitude; ?></p>
 
 <a href="/user/<?= $env->username ?>"><?= $env->username ?>'s profile</a>
