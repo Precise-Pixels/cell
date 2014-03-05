@@ -50,6 +50,10 @@ if(Detector.webgl) {
 
                 init();
             });
+
+            heightMap.addEventListener('error', function() {
+                console.log('Error: The height map data for this environment has gone missing. Please try cloning a new environment.');
+            });
         }
     }
 }
