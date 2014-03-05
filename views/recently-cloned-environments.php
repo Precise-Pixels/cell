@@ -1,7 +1,7 @@
 <header id="fixed-header" class="section-padding">
     <hgroup class="align-vertical">
         <h1>RECENTLY CLONED</h1>
-        <h2>THE MOSE RECENTLY CLONED ENVIRONMENTS</h2>
+        <h2>THE MOST RECENTLY CLONED ENVIRONMENTS</h2>
     </hgroup>
 </header>
 
