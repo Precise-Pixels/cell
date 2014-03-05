@@ -119,9 +119,10 @@
                     <h2>Discover the groundbreaking project</h2>
                 </hgroup>
             </a>
-            <a href="ted" class="cta cta--example half">
+            <a href="/technology" class="cta cta--technology half">
                 <hgroup class="align-vertical">
-                    <h1>TED Talk</h1>
+                    <h1>Technology</h1>
+                    <h2>Learn about our QuantumCell&trade; technology</h2>
                 </hgroup>
             </a>
         </div>
