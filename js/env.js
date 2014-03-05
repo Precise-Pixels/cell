@@ -1,5 +1,6 @@
 var Detector = {
-    webgl: ( function () { try { var canvas = document.createElement( 'canvas' ); return !! window.WebGLRenderingContext && ( canvas.getContext( 'webgl' ) || canvas.getContext( 'experimental-webgl' ) ); } catch( e ) { return false; } } )()
+    webgl:  ( function() { try { var canvas = document.createElement( 'canvas' ); return !! window.WebGLRenderingContext && ( canvas.getContext( 'webgl' ) || canvas.getContext( 'experimental-webgl' ) ); } catch( e ) { return false; } } )(),
+    webrtc: ( function() { try { return navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia } catch( e ) { return false; } } )()
 }
 
 var $container, containerX, containerY, scene, camera, displace, renderer, controls;
@@ -40,6 +41,7 @@ if(Detector.webgl) {
             heightMap.src  = '/img/user/' + userId + '/height-map-' + envId + '.png';
 
             heightMap.addEventListener('load', function() {
+                var canvas = document.createElement('canvas');
                 var ctx = canvas.getContext('2d');
                 ctx.drawImage(heightMap, 0, 0, heightMap.width, heightMap.height);
                 stackBlurImage(heightMap, canvas, 20);
