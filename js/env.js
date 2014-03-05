@@ -40,8 +40,11 @@ if(Detector.webgl) {
             heightMap.src  = '/img/user/' + userId + '/height-map-' + envId + '.png';
 
             heightMap.addEventListener('load', function() {
-                canvas.getContext('2d').drawImage(heightMap, 0, 0, heightMap.width, heightMap.height);
+                var ctx = canvas.getContext('2d');
+                ctx.drawImage(heightMap, 0, 0, heightMap.width, heightMap.height);
                 stackBlurImage(heightMap, canvas, 20);
+                ctx.lineWidth = 2;
+                ctx.strokeRect(0, 0, heightMap.width, heightMap.height);
                 displace = new THREE.Texture(canvas);
                 displace.needsUpdate = true;
 
