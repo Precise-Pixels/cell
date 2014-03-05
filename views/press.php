@@ -34,11 +34,6 @@
 
     <section>
         <div class="align-centre lgrey">
-            <div class="section-padding">
-                <h1>REVIEWS</h1>
-                <p class="half-margin">Integer sit amet nibh sit amet lectus luctus placerat. Suspendisse eget arcu tortor. Fusce pretium sodales nisl et tempus.</p>
-                <p class="half-margin">Integer sit amet nibh sit amet lectus luctus placerat. Suspendisse eget arcu tortor. Fusce pretium sodales nisl et tempus.</p>
-            </div>
             <a href="/ted" class="cta cta--example half">
                 <hgroup class="align-vertical">
                     <h1>TED Talk</h1>
@@ -50,6 +45,19 @@
                     <h2>Find out about Cell Industries</h2>
                 </hgroup>
             </a>
+            <div class="slider half lgrey">
+                <h1>REVIEWS</h1>
+                <ul class="panes">
+                    <li><blockquote>
+                        <p>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
+                        <footer>Mr Person, Title Here</footer>
+                    </blockquote></li>
+                    <li><blockquote>
+                        <p>2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
+                        <footer>Mr Person, Title Here</footer>
+                    </blockquote></li>
+                </ul>
+            </div>
         </div>
     </section>
 

@@ -1,3 +1,4 @@
+// Top Bar parallax / hide
 var headerTop     = document.getElementById('top-bar');
 var header        = document.getElementById('fixed-header') || document.getElementById('primary-header');
 var hgroup        = header.getElementsByTagName('hgroup')[0];
@@ -32,3 +33,13 @@ function changeTopbarBkg() {
 
 siteNavToggle.addEventListener('click', changeTopbarBkg);
 userNavToggle.addEventListener('click', changeTopbarBkg);
+
+// Navigation overlay
+var navOverlay    = document.getElementById('nav-overlay');
+var siteNavToggle = document.getElementById('site-nav-toggle');
+var userNavToggle = document.getElementById('user-nav-toggle');
+
+navOverlay.addEventListener('click', function() {
+    siteNavToggle.checked = false;
+    userNavToggle.checked = false;
+});

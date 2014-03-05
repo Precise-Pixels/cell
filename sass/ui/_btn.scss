@@ -8,10 +8,13 @@
     text-align: center;
     text-decoration: none;
     transition: color .5s, background .5s, box-shadow .5s;
+    .social {
+        margin-top: 0;
+    }
 }
 
-.social {
-    margin-top: 0;
+a.btn {
+    line-height: 20px;
 }
 
 .lgrey .btn {

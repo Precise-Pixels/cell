@@ -1,29 +1,33 @@
 #user-profile-banner {
-    position: relative;
-    margin-bottom: 0;
-    padding: 40px 20px 20px;
-}
-
-#user-profile-card {
-    width: 100%;
-    position: relative;
-    text-align: center;
-    img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-    h1 {    
-        width: 100%;
-        padding: 20px;
-        margin: 0;
-        position: absolute;
-        bottom: 0;
-    }
-}
-
-#environment-listing {
+    margin-top: 60px;
     padding: 20px;
+    z-index: 1;
+    .quarter {
+        width: (100%/1);
+    }
+}
+
+#user-info {
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: 200;
+    text-align: center;
+    p {
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-weight: 200;
+        font-size: 1.2rem;
+    }
+}
+
+#user-social {
+    margin-top: 20px;
+    font-size: 1.4rem;
+}
+
+#user-buttons {
+    margin-top: 20px;
+    text-align: right;
 }
 
 #no-environments {
@@ -31,47 +35,44 @@
     h1 {
         margin: 0;
     }
- }
+}
 
- @media ($min_bp_a) {
-
-   #user-profile-banner {
-        padding-top: 20px;
-        margin-bottom: 50px;
-    } 
-
-    .environment-block--new {
-        padding-top: 0;
-        padding-bottom: 75%;
-    }
-
-    #user-profile-card {
-        width: auto;
-        display: block;
-        position: relative;
-        text-align: center;
-        img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        h1 {    
-            width: 100%;
-            padding: 20px;
-            margin: 0;
-            position: absolute;
-            bottom: 0;
-        }
-    }
- }
-
-  @media ($min_bp_c) {
+@media ($min_bp_a) {
     #user-profile-banner {
-        padding: 0;
-        margin-bottom: 50px;
+        .quarter {
+            width: (100%/4);
+        }
     }
 
-    #environment-listing {
-        padding: 0;
+    #user-info {
+        margin-top: 0;
+        padding-left: 20px;
+        text-align: left;
     }
- }
+
+    #user-buttons {
+        margin-top: 0;
+    }
+}
+
+@media ($min_bp_b) {
+    #user-profile-banner {
+        margin-top: 20px;
+    }
+
+    #user-info {
+        margin-top: 20px;
+        padding-left: 40px;
+        p {
+            font-size: 1.4rem;
+        }
+    }
+
+    #user-buttons {
+        margin-top: 20px;
+    }
+
+    #user-profile-main {
+        margin-top: 380px;
+    }
+}

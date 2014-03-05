@@ -11,21 +11,56 @@ body > header {
 #site-nav,
 #user-nav {
     display: none;
+    z-index: 1;
 }
 
 #site-nav-btn {
     width: 40px;
     height: 40px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.site-nav-btn-icon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
     font-size: 1.9rem;
     text-align: center;
     line-height: 40px;
-    position: absolute;
-    cursor: pointer;
     transition: background .3s;
+    z-index: 3;
 }
 
-#site-nav-btn:hover {
+#site-nav-btn:hover ~ .site-nav-btn-icon {
     background: $mgrey;
+}
+
+.site-nav-btn-icon:before {
+    content: "\62";
+}
+
+#site-nav-toggle:checked ~ .site-nav-btn-icon:before {
+    content: "\78";
+}
+
+#nav-overlay {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+    opacity: 0;
+    background: #000;
+    transition: opacity .3s;
+}
+
+#site-nav-toggle:checked ~ #nav-overlay,
+#user-nav-toggle:checked ~ #nav-overlay {
+    visibility: visible;
+    opacity: .8;
 }
 
 #user-message {
@@ -37,8 +72,8 @@ body > header {
 }
 
 #user-nav-btn {
-    height: 60px;
     width: 80px;
+    height: 60px;
     position: absolute;
     top: 0;
     right: 0;
@@ -47,8 +82,8 @@ body > header {
 }
 
 #user-arrow {
-    height: 20px;
     width: 20px;
+    height: 20px;
     margin-right: 0;
     position: absolute;
     top: 40px;
@@ -58,6 +93,7 @@ body > header {
     line-height: 20px;
     background: $dgrey;
     transition: background .3s;
+    transform: rotate(90deg);
     z-index: 1;
 }
 
@@ -66,8 +102,8 @@ body > header {
 }
 
 #user-pic {
-    height: 60px;
     width: 60px;
+    height: 60px;
     position: absolute;
     top: 0;
     right: 0;
@@ -83,26 +119,65 @@ body > header {
     filter: brightness(100%);
 }
 
-#site-nav-toggle:checked + #site-nav {
-    width: 150px;
-    position: absolute;
+#site-nav {
+    width: 200px;
+    height: 100%;
+    position: fixed;
     top: 40px;
+    left: -200px;
+    display: block;
+    transition: all .3s;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    a {
+        width: 100%;
+        padding: 20px 0;
+        float: left;
+        display: block;
+        border-top: 1px solid $sdgrey;
+        font-weight: 300;
+        text-decoration: none;
+        color: $lgrey;
+        transition: all .3s;
+        &:hover {
+            color: $dgrey;
+            background: $lgrey;
+        }
+    }
+}
+
+#site-nav-toggle:checked + #site-nav {
     left: 0;
-    display: block;
-    background: $dgrey;
 }
 
-#site-nav a {
-    display: block;
+.menu-icon {
+    padding-left: 15px;
 }
 
-#user-nav-toggle:checked + #user-nav {
-    width: 80px;
-    position: absolute;
+#user-menu-wrapper {
+    width: 300px;
+    position: fixed;
     top: 60px;
-    right: 0;
+    right: -300px;
     display: block;
+    background: none;
+    transition: right .3s, color .3s;
+    z-index: 3;
+}
+
+#user-menu {
+    float: right;
+    display: inline-block;
+    padding: 10px;
     background: $dgrey;
+    transition: padding .3s;
+}
+
+#user-nav-toggle:checked + #user-menu-wrapper {
+    right: 0;
 }
 
 #user-nav-toggle:checked ~ #user-arrow:before {
@@ -115,6 +190,22 @@ body > header {
 
 header > .cell-logo {
     display: none;
+}
+
+.user {
+    margin-top: 0;
+}
+
+@media ($min-bp-a) {
+    #site-nav {
+        width: 270px;
+        left: -270px;
+    }
+
+    #site-nav a {
+        padding: 25px 0;
+        font-size: 1.6rem;
+    }
 }
 
 @media ($min-bp-b) {
