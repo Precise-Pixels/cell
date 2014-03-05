@@ -2,6 +2,7 @@
 // SANDBOX ?>
 
     <script src='/js/respond.min.js'></script>
+    <script src='/js/all.js'></script>
 
     <?php if($isHome): ?>
         <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4&sensor=false&libraries=places'></script>
@@ -38,6 +39,7 @@
 // LIVE ?>
 
     <script src='/build/respond.min.js'></script>
+    <script src='/build/all.min.js'></script>
 
     <?php if($isHome): ?>
         <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4&sensor=false&libraries=places'></script>
