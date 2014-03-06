@@ -30,3 +30,5 @@
     <label for="sensitivity">less sensitive</label> <input type="radio" name="sensitivity">
 
 </main>
+
+<div id="new-env-overlay" class="new-env-overlay"></div>

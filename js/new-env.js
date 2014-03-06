@@ -186,7 +186,7 @@ if(Detector.webgl) {
         function validate() {
             if(currentTile != undefined) {
                 if(envNameInput.checkValidity()) {
-                    document.getElementById('new-env-overlay').className += ' new-env-overlay--cloning';
+                    document.getElementById('full-page-overlay--cloning').className += ' full-page-overlay--cloning';
 
                     var warnNoNameElem = document.getElementById('new-env-warn-name');
                     if(warnNoNameElem) {

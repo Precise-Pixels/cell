@@ -1,5 +1,5 @@
 <div id="capture-model" style="width: 600px; height: 600px;"></div>
-<div class="new-env-overlay new-env-overlay--cloning"></div>
+<div class="full-page-overlay full-page-overlay--cloning"></div>
 
 <script>
     var userId    = <?= $_SESSION['userId']; ?>;

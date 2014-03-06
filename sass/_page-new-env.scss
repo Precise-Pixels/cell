@@ -49,19 +49,19 @@
     background: #FFF;
 }
 
-.new-env-overlay {
+.full-page-overlay {
     width: 100%;
     height: 0;
     position: fixed;
     top: 0;
     left: 0;
-    background: $dblue url(/img/spinner.gif) center no-repeat;
     transition: height .3s;
     z-index: 4;
 }
 
-.new-env-overlay--cloning {
+.full-page-overlay--cloning {
     height: 100%;
+    background: $dblue url(/img/spinner.gif) center no-repeat;
 }
 
 .unsupported {

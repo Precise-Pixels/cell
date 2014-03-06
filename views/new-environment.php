@@ -81,4 +81,4 @@
 
 </main>
 
-<div id="new-env-overlay" class="new-env-overlay"></div>
+<div id="full-page-overlay--cloning" class="full-page-overlay"></div>
