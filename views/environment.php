@@ -7,16 +7,15 @@
         </hgroup>
         <div id="env-user-badge">
             <p>Cloned by:</p>
-            <a href="/user/<?= $env->username ?>">
-                <img src="http://www.gravatar.com/avatar/<?= (isset($env->email) ? md5(strtolower(trim($env->email))) : 1); ?>?d=mm&amp;s=40" alt="<?= $env->username ?>"/>
-                <p><?= $env->username ?><p>
+            <a href="/user/<?= $username ?>">
+                <img src="http://www.gravatar.com/avatar/<?= (isset($env->email) ? md5(strtolower(trim($env->email))) : 1); ?>?d=mm&amp;s=40" alt="<?= $username ?>"/>
+                <p><?= $username ?><p>
             </a>
         </div>
     </header>
-    <?= $env->timestamp; ?> 
+    <?= $env->timestamp; ?>
 
-    <div id="model"><img src="/img/placeholder.gif" alt="<?= $env->name; ?>"/></div>
-    <div id="env"></div>
+    <div id="model"><img src="/img/user/<?= $env->userId; ?>/capture-<?= $env->envId; ?>.jpg" alt="<?= $env->name; ?>"/></div>
 
     <section id="env-data" class="lgrey"></section>
 
