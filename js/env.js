@@ -51,6 +51,8 @@ if(Detector.webgl) {
             });
         }
     }
+} else {
+    document.documentElement.className += 'no-webgl';
 }
 
 // ThreeJS Setup
