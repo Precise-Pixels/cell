@@ -1,4 +1,4 @@
-<main class="env">
+<main>
 
     <header class="sdgrey">
         <hgroup class="align-vertical">

@@ -1,17 +1,20 @@
 .env {
-    margin-top: 40px;
-    header {
-        padding: 20px 25px;
-        overflow: hidden;
-        text-align: left;
-        hgroup {
-            float: left;
-            width: auto;
-        }
-        h2 {
-            font-weight: 300;
+    main {
+        margin-top: 40px;
+        header {
+            padding: 20px 25px;
+            overflow: hidden;
+            text-align: left;
+            hgroup {
+                float: left;
+                width: auto;
+            }
+            h2 {
+                font-weight: 300;
+            }
         }
     }
+
     #env-user-badge {
         margin-top: 10px;
         float: right;
