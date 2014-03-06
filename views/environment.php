@@ -25,7 +25,7 @@
             </div>
             <div id="model-controls">
                 <input type="checkbox" id="model-menu-toggle" class="checkbox-hack"/>
-                <label for="model-menu-toggle" id="model-menu-btn" class="btn--menu"><i class="ico-env-menu"></i></label>
+                <label for="model-menu-toggle" id="model-menu-btn" class="ico-"></label>
                 <div id="model-views">
                     <p>Views</p>
                     <div id="360" class="btn btn--views btn--selected">360</div>
