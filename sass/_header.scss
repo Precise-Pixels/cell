@@ -4,7 +4,8 @@ body > header {
     position: fixed;
     top: 0;
     z-index: 3;
-    background: $dgrey;
+    color: $lgrey;
+    transition: background .8s;
 }
 
 #site-nav,

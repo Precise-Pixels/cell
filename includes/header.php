@@ -1,6 +1,6 @@
-<header class="dgrey">
+<header id="top-bar">
     <label for="site-nav-toggle" id="site-nav-btn"></label>
-    <input type="checkbox" id="site-nav-toggle" class="checkbox-hack"/>
+    <input type="checkbox" id="site-nav-toggle" class="checkbox-hack" autocomplete="off"/>
     <nav id="site-nav" class="force-repaint dgrey">
         <ul>
             <li><a href="/"><i class="ico-home menu-icon"></i>HOME</a></li>
@@ -23,7 +23,7 @@
     <label for="user-nav-toggle" id="user-nav-btn">
         <img id="user-pic" src="http://www.gravatar.com/avatar/<?= (isset($_SESSION['userEmail']) ? md5(strtolower(trim($_SESSION['userEmail']))) : 1); ?>?d=mm&amp;s=60"/>
     </label>
-    <input type="checkbox" id="user-nav-toggle" class="checkbox-hack"/>
+    <input type="checkbox" id="user-nav-toggle" class="checkbox-hack" autocomplete="off"/>
     <nav id="user-menu-wrapper" class="force-repaint sdgrey">
         <div id="user-menu">
             <?php if(isset($_SESSION['status']) && $_SESSION['status'] == 'signedin'): ?>

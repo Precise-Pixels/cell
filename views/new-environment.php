@@ -4,11 +4,11 @@
         header('location: /signin');
     }
 ?>
-    <header class="fixed-header section-padding align-centre dgrey">
-        <hgroup class="align-vertical">
-            <h1>CLONE A NEW ENVIRONMENT</h1>
-        </hgroup>
-    </header>
+<header id="fixed-header" class="fixed-header--newenv section-padding">
+    <hgroup class="align-vertical">
+        <h1>CLONE AN ENVIRONMENT</h1>
+    </hgroup>
+</header>
 
 <main>
 
@@ -34,7 +34,7 @@
         </div>
     </section>
 
-    <section class="align-centre dgrey">
+    <section class="dgrey align-centre">
         <ol class="align-centre">
             <li class="third">
                 <h1>1</h1>
@@ -56,14 +56,16 @@
 
     <section class="align-centre sdgrey">   
         <section class="section-content-wrapper">
-            <a href="/project-titan" class="cta cta--example half">
+            <a href="/project-titan" class="cta cta--pt-small half">
                 <hgroup class="align-vertical">
                     <h1>Project Titan</h1>
+                    <h2>Discover the groundbreaking project</h2>
                 </hgroup>
             </a>
-            <a href="/the-cloning-process" class="cta cta--example half">
+            <a href="/recently-cloned-environments" class="cta cta--recent half">
                 <hgroup class="align-vertical">
-                    <h1>The Process</h1>
+                    <h1>Recently Cloned</h1>
+                    <h2>See the most recently cloned environments</h2>
                 </hgroup>
             </a>
         </section>

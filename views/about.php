@@ -1,4 +1,4 @@
-<header class="fixed-header section-padding align-centre dgrey">
+<header id="fixed-header" class="fixed-header--about section-padding">
     <hgroup class="align-vertical">
         <h1>ABOUT</h1>
     </hgroup>
@@ -7,16 +7,33 @@
 <main>
 
     <section>
+        <div id="about-logo-header" class="align-centre mblue">
+            <i class="ico-cell-logo"></i>
+        </div>
+    </section>
+
+    <section>
         <div class="section-padding align-centre lgrey">
             <h1><i class="ico-company"></i>THE COMPANY</h1>
-            <p class="half-margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo. Suspendisse adipiscing nunc tortor, eget accumsan tellus tincidunt at. Ut suscipit elit id tellus tincidunt, ac luctus nisi consectetur. Proin velit libero, faucibus sed ultricies eget, pulvinar sit amet erat. Suspendisse vel leo sit amet magna sodales tincidunt.</p>
+            <p class="half-margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo. Suspendisse adipiscing nunc tortor, eget accumsan tellus tincidunt at. Ut suscipit elit id tellus tincidunt, ac luctus nisi consectetur. Proin velit libero, faucibus sed ultricies eget, pulvinar sit amet erat.</p>
             <p class="half-margin">Integer sit amet nibh sit amet lectus luctus placerat. Suspendisse eget arcu tortor. Fusce pretium sodales nisl et tempus. Curabitur pretium pellentesque libero. Curabitur pretium malesuada purus, id posuere neque. Donec ante metus, rutrum id lacus ut, ultricies aliquam magna.</p>
         </div>
     </section>
 
     <section>
-        <div class="align-centre mblue">
-            <img src="/img/logo-diagram.jpg" alt="Company Logo" class="full">
+        <div id="about-numbers" class="section-padding align-centre mblue">
+            <div class="about-number third">
+                <h2>1036<h2>
+                <p>Campuses Galaxy Wide</p>
+            </div>
+            <div class="about-number third">
+                <h2>2.3m<h2>
+                <p>Employees</p>
+            </div>
+            <div class="about-number third">
+                <h2>$480bn<h2>
+                <p>Annual Revenue</p>
+            </div>
         </div>
     </section>
 
@@ -27,7 +44,7 @@
             <div class="imagebox hoverbox third-margin">
                 <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
                 <figcaption>
-                    <h1>DR REE</h1>
+                    <h1>JAMES LEE</h1>
                     <p>This portion of the caption is hidden until the image is hovered.</p>
                 </figcaption>
             </div>
@@ -35,7 +52,7 @@
             <div class="imagebox hoverbox third-margin">
                 <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
                 <figcaption>
-                    <h1>JAKOB HAMMON</h1>
+                    <h1>JACOB HAMMOND</h1>
                     <p>This portion of the caption is hidden until the image is hovered.</p>
                 </figcaption>
             </div>
@@ -43,7 +60,7 @@
             <div class="imagebox hoverbox third-margin">
                 <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
                 <figcaption>
-                    <h1>JASOP WILHIELM</h1>
+                    <h1>JOSEPH WILLIAMS</h1>
                     <p>This portion of the caption is hidden until the image is hovered.</p>
                 </figcaption>
             </div>
@@ -65,8 +82,7 @@
                         <div class="event-img-wrapper">
                             <img class="event-img" src="/img/placeholder.gif">
                         </div> 
-                        <p class="event-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, 
-                        rhoncus at sodales et, fringilla vitae justo. Suspendisse adipiscing nunc tortor, eget accumsan tellus</p>
+                        <p class="event-text">Dr Lee felt the progression of technology was moving too slowly so he took a more active role in shaping the planets future. Thus, Cell Industries was born.</p>
                     </div>
 
                     <div class="event funding">
@@ -76,8 +92,7 @@
                         <div class="event-img-wrapper">
                             <img class="event-img" src="/img/placeholder.gif">
                         </div> 
-                        <p class="event-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, 
-                        rhoncus at sodales et, fringilla vitae justo. Suspendisse adipiscing nunc tortor, eget accumsan tellus</p>
+                        <p class="event-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero,rhoncus at sodales et, fringilla vitae justo. Suspendisse adipiscing nunc tortor, eget accumsan tellus</p>
                     </div>
 
                     <div class="event party">
@@ -97,14 +112,16 @@
 
     <section>
         <div class="align-centre">
-            <a href="project-titan" class="cta cta--example half">
+            <a href="/project-titan" class="cta cta--pt-small half">
                 <hgroup class="align-vertical">
                     <h1>Project Titan</h1>
+                    <h2>Discover the groundbreaking project</h2>
                 </hgroup>
             </a>
-            <a href="ted" class="cta cta--example half">
+            <a href="/technology" class="cta cta--technology half">
                 <hgroup class="align-vertical">
-                    <h1>TED Talk</h1>
+                    <h1>Technology</h1>
+                    <h2>Learn about our QuantumCell&trade; technology</h2>
                 </hgroup>
             </a>
         </div>

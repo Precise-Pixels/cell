@@ -1,0 +1,18 @@
+#about-logo-header {
+    text-align: center;
+    font-size: 20rem;
+    padding-top: 40px;
+}
+
+#about-numbers {
+    .about-number {
+        text-align: center;
+        transition: transform .3s;
+        h2 {
+            font-size: 3rem;
+        }
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
