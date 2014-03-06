@@ -1,11 +1,6 @@
-var Detector = {
-    webgl:  ( function() { try { var canvas = document.createElement( 'canvas' ); return !! window.WebGLRenderingContext && ( canvas.getContext( 'webgl' ) || canvas.getContext( 'experimental-webgl' ) ); } catch( e ) { return false; } } )(),
-    webrtc: ( function() { try { return navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia } catch( e ) { return false; } } )()
-}
-
+// ThreeJS
 var $container, containerX, containerY, scene, camera, displace, renderer, controls;
 
-// ThreeJS
 if(Detector.webgl) {
     document.documentElement.className += 'webgl';
 
