@@ -14,12 +14,10 @@
     <?= $env->timestamp; ?> 
     <progress id="prog-bar" min=0 max=100 value=0></progress>
 
-
     <div id="model"><img src="/img/placeholder.gif" alt="<?= $env->name; ?>"/></div>
-
     <div id="env"></div>
 
-    <div id="env-data"></div>
+    <section id="env-data" class="lgrey"></section>
 
     <video id="video" autoplay></video>
     <canvas id="canvas"></canvas>

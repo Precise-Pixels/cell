@@ -4,18 +4,28 @@
         padding: 20px 25px;
         overflow: hidden;
         text-align: left;
+        hgroup {
+            float: left;
+            width: auto;
+        }
+        h2 {
+            font-weight: 300;
+        }
     }
-    h2 {
-        font-weight: 300;
-    }
-    hgroup {
-        float: left;
-        width: auto;
-    }
-
     #env-user-badge {
         float: right;
     }
+}
+
+#env-data {
+    float: left;
+    width: 100%;
+}
+
+.env-data-pod {
+    height: 250px;
+    border: 2px solid $sdgrey;
+    float: left;
 }
 
 #model {
