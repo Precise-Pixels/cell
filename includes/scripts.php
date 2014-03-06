@@ -10,6 +10,8 @@
         <script src='/js/timeline-scroll.js'></script>
     <?php endif; ?>
 
+    <script src='/js/all.js'></script>
+
     <?php if($isEnv): ?>
         <script>
             var userId    = <?= $userId; ?>;
@@ -30,8 +32,6 @@
         <script src="/js/capture-env.js"></script>
     <?php endif; ?>
 
-    <script src='/js/all.js'></script>
-
 <?php else:
 // LIVE ?>
 
@@ -43,6 +43,8 @@
     <?php if($isAbout): ?>
         <script src='/build/timeline-scroll.min.js'></script>
     <?php endif; ?>
+
+    <script src='/build/all.min.js'></script>
 
     <?php if($isEnv): ?>
         <script>var userId=<?= $userId; ?>,envId=<?= $envId; ?>,latitude=<?= $env->latitude; ?>,longitude=<?= $env->longitude; ?>;</script>
@@ -58,7 +60,5 @@
     <?php if($isCapturing): ?>
         <script src="/build/capture-env.min.js"></script>
     <?php endif; ?>
-
-    <script src='/build/all.min.js'></script>
 
 <?php endif; ?>
