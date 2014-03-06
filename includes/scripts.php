@@ -30,7 +30,6 @@
         <script src="/js/capture-env.js"></script>
     <?php endif; ?>
 
-    <script src='/js/respond.min.js'></script>
     <script src='/js/all.js'></script>
 
 <?php else:
@@ -60,7 +59,6 @@
         <script src="/build/capture-env.min.js"></script>
     <?php endif; ?>
 
-    <script src='/build/respond.min.js'></script>
     <script src='/build/all.min.js'></script>
 
 <?php endif; ?>
