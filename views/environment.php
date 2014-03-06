@@ -15,7 +15,7 @@
     </header>
     <?= $env->timestamp; ?>
 
-    <div id="model"><img src="/img/user/<?= $env->userId; ?>/capture-<?= $env->envId; ?>.jpg" alt="<?= $env->name; ?>"/></div>
+    <div id="model"><img src="/img/user/<?= $env->userId; ?>/capture-<?= $envId; ?>.jpg" alt="<?= $env->name; ?>"/></div>
 
     <section id="env-data" class="lgrey"></section>
 
