@@ -18,6 +18,7 @@
 .ig-satellite {
     width: 60%;
     left: -25%;
+    filter: blur(5px);
 }
 
 .ig-earth {
@@ -43,27 +44,25 @@
     left: 10%;
 }
 
-.ig-droplet {
+.ig-droplet, .ig-droplet2, .ig-droplet3, .ig-droplet4 {
     width: 10%;
     height: 20%;
+    filter: blur(5px);
 }
 
 .ig-droplet2 {
-    width: 10%;
-    height: 20%;
     left: 60%;
+    filter: blur(5px);
 }
 
 .ig-droplet3 {
-    width: 10%;
-    height: 20%;
     left: 40%;
+    filter: blur(5px);
 }
 
 .ig-droplet4 {
-    width: 10%;
-    height: 20%;
     left: 70%;
+    filter: blur(5px);
 }
 
 .ig-cube {
@@ -72,6 +71,7 @@
     margin-left: -5%;
     top: 50%;
     left: 50%;
+    z-index: 2;
 }
 
 .ig-cube-env {
