@@ -29,8 +29,6 @@ if(Detector.webgl) {
             s.appendChild(document.createTextNode(xhr.responseText));
             document.body.appendChild(s);
 
-            document.body.className += ' env--loaded';
-
             // Blur height map
             var heightMap = new Image();
             heightMap.src  = '/img/user/' + userId + '/height-map-' + envId + '.png';
@@ -77,9 +75,11 @@ function init() {
     scene.add(ambientLight);
 
     // Shaders
-    var texture  = new THREE.ImageUtils.loadTexture('/php/getEnvTexture.php?lat=' + latitude + '&lon=' + longitude);
     var shader   = THREE.ShaderLib['normalmap'];
     var uniforms = THREE.UniformsUtils.clone(shader.uniforms);
+    var texture  = new THREE.ImageUtils.loadTexture('/php/getEnvTexture.php?lat=' + latitude + '&lon=' + longitude, {}, function() {
+        document.body.className += ' env--loaded';
+    });
 
     uniforms['enableDisplacement'].value = true;
     uniforms['enableDiffuse'].value      = true;

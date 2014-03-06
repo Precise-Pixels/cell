@@ -8,9 +8,13 @@
     z-index: 4;
 }
 
-.full-page-overlay--cloning {
+.full-page-overlay--loading {
     height: 100%;
     background: $dblue url(/img/spinner.gif) center no-repeat;
+}
+
+.env--loaded .full-page-overlay {
+    height: 0;
 }
 
 #environment-listing {

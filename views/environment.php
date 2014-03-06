@@ -31,4 +31,4 @@
 
 </main>
 
-<div id="new-env-overlay" class="new-env-overlay"></div>
+<div id="full-page-overlay" class="full-page-overlay full-page-overlay--loading"></div>

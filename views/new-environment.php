@@ -81,4 +81,4 @@
 
 </main>
 
-<div id="full-page-overlay--cloning" class="full-page-overlay"></div>
+<div id="full-page-overlay--loading" class="full-page-overlay"></div>
