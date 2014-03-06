@@ -21,7 +21,305 @@
             font-size: 1rem;
         }
     }
+
+    #interface {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        bottom: 90px;
+    }
+
+    #interface-elements {
+        opacity: 0;
+
+        .env--loaded & {
+            opacity: 1;
+            transition: opacity .3s;
+        }
+    }
+
+    #model-interaction {
+        width: 100%;
+        height: 40px;
+        position: fixed;
+        bottom: 20px;
+        p {
+            display: none;
+        }
+    }
+
+    #default {
+        position: absolute;
+        left: 20px;
+        bottom: 0;
+        padding: 0;
+        background: url(../img/spritesheet.svg) -85px -32px;
+        background-size: 600px 200px;
+    }
+
+    #webcam {
+        position: absolute;
+        right: 20px;
+        bottom: 0;
+        padding: 0;
+        background: url(../img/spritesheet.svg) -116px -30px;
+        background-size: 600px 200px;
+    }
+
+    #model-controls {
+        width: 65%;
+        max-width: 1400px;
+        margin: 0 auto;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 20px;
+    }
+
+
+    #model-menu-btn {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin-right: 0;
+        cursor: pointer;
+        font-size: 5rem;
+        text-align: center;
+        line-height: 50px;
+        opacity: 0.35;
+        z-index: 2;
+        &:before {
+           content: "\2d";
+        }
+    }
+
+    #model-views {
+        height: 0;
+        overflow: hidden;
+        margin-bottom: 23px;
+        padding: 10px 10px 40px;
+        opacity: 0;
+        text-align: center;
+        visibility: hidden;
+        background: #222;
+    }
+
+    #model-menu-btn:hover {
+        opacity: 1;
+    }
+
+    #model-menu-toggle:checked ~ #model-menu-btn {
+        font-size: 3rem;
+        opacity: 1;
+    }
+
+    #model-menu-toggle:checked ~ #model-menu-btn:before {
+        content: "x";
+    }
+
+    #model-menu-toggle:checked ~ #model-views {
+        height: 160px;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    // .btn {
+    //     padding: 20px;
+    //     text-align: center;
+    //     cursor: pointer;
+    //     background: #666;
+    // }
+
+    .btn {
+        width: auto;
+    }
+
+    .btn:hover {
+        color: #333;
+        background:#ccc;
+    }
+
+    .btn--menu {
+        width: 33.33%;
+        padding: 20px;
+        margin: 0 auto;
+        text-align: center;
+        background: #666;
+    }
+
+    .btn--menu:hover {
+        color: #333;
+        background:#ccc;
+    }
+
+    .btn--views {
+        width: 29.3%;
+        height: 40px;
+        margin: 0 2% 4%;
+        padding: 0;
+        float: left;
+        line-height: 40px;
+    }
+
+    .btn--interact {
+        font-size: 3rem;
+        opacity: 0.5;
+        background: none;
+    }
+
+    .btn--interact:hover {
+        background: none;
+        opacity: 1;
+    }
+
+    .btn--views.btn--selected {
+        color: #333;
+        background:#ccc;
+    }
+
+    .btn--interact.btn--selected {
+        opacity: 1;
+    }
+
+    .btn--selected:hover {
+        cursor:default;
+    }
+
+    #model-info-btn {
+        width: 40px;
+        height: 40px;
+        position:absolute;
+        top: 20px;
+        right: 20px;
+        opacity: 0.5;
+        cursor: pointer;
+        background: url(../img/spritesheet.svg) -85px -61px;
+        z-index: 4;
+    }
+
+    #model-info-btn:hover {
+        opacity: 1;
+    }
+
+    #model-info-toggle:checked ~ #model-info-btn {
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: url(../img/spritesheet.svg) -125px -61px;
+    }
+
+    #model-info-toggle:checked ~ #model-desc {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .full-screen {
+        width: 100%;
+        height: 100%;
+        padding: 40px;
+        position: fixed;
+        overflow-y: auto;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s;
+        background: #222;
+        z-index: 3;
+    }
+
+    .checkbox-hack {
+        display: none;
+    }
+
+    #more-models {
+        display: none;
+    }
+
+    @media ($min_bp_a) {
+        // show all View buttons
+    }
+
+    @media ($min_bp_c) {
+
+        .env {
+        }
+
+        #model-menu-toggle,
+        #model-menu-btn,
+        #model-info-toggle,
+        #model-info-btn {
+            display: none;
+        }
+
+        #model-interaction {
+            width: 200px;
+            height: 90px;
+            position: absolute;
+            top: 20px;
+            right: 240px;
+            text-align: center;
+
+            p {
+                display: block;
+            }
+        }
+
+        #default,
+        #webcam {
+            width: 50%;
+            height: auto;
+            position: static;
+            float: left;
+        }
+
+        #model-controls {
+            width: 200px;
+            margin: 0;
+            position: absolute;
+            top: 20px;
+            left: auto;
+            right: 20px;
+            bottom: auto;
+        }
+
+        #model-views {
+            width: 100%;
+            height: 100%;
+            float: right;
+            padding-bottom: 10px;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        #model-desc {
+            width: 350px;
+            height: 300px;
+            padding: 0;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            visibility: visible;
+            opacity: 1;
+            background: none;
+
+            h1 {
+                display: none;
+            }
+        }
+
+    }
 }
+
+
+
+
+
+
+
+
+///
 
 #env-data {
     float: left;
@@ -33,6 +331,11 @@
     border: 2px solid $sdgrey;
     float: left;
 }
+    #model {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
 
 #model {
     width: 100%;
@@ -83,5 +386,9 @@
 
 .no-webgl #prog-bar,
 .env--loaded #prog-bar {
+    display: none; 
+}
+
+footer {
     display: none;
 }
