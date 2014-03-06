@@ -34,7 +34,7 @@ if($hasData == 'true') {
 
     foreach($dataArray as $dataPod) {
         if($dataPod) {
-            echo '<p>' . $dataPod[0]->attributes()->title . '<br>' . $dataPod[0]->subpod->plaintext . '</p>';
+            echo '<div class="env-data-pod">' . $dataPod[0]->attributes()->title . '<br>' . $dataPod[0]->subpod->plaintext . '</div>';
         }
     }
 }

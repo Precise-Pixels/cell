@@ -19,7 +19,7 @@
 
     <div id="env"></div>
 
-    <div id="env-data"></div>
+    <section id="env-data" class="lgrey"></section>
 
     <video id="video" autoplay></video>
     <canvas id="canvas"></canvas>
