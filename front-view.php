@@ -1,7 +1,7 @@
 <?php require_once('includes/session.php'); ?>
 
 <!DOCTYPE HTML>
-<html>
+<html class="no-webgl no-webrtc">
 <head>
     <?php require_once('includes/head.php'); ?>
 </head>

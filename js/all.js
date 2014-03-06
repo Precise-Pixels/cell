@@ -4,6 +4,9 @@ var Detector = {
     webrtc: ( function() { try { return navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia } catch( e ) { return false; } } )()
 }
 
+if(Detector.webgl)  { document.documentElement.className = document.documentElement.className.replace('no-webgl', 'webgl'); };
+if(Detector.webrtc) { document.documentElement.className = document.documentElement.className.replace('no-webrtc', 'webrtc'); };
+
 // Top Bar parallax / hide
 var headerTop     = document.getElementById('top-bar');
 var header        = document.getElementById('fixed-header') || document.getElementById('primary-header');

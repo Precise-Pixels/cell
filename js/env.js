@@ -2,8 +2,6 @@
 var $container, containerX, containerY, scene, camera, displace, renderer, controls;
 
 if(Detector.webgl) {
-    document.documentElement.className += 'webgl';
-
     // REQUEST MAHOOSIVE FILE AND UPDATE PROGRESS BAR
     var $progBar = document.getElementById('prog-bar');
 
@@ -51,8 +49,6 @@ if(Detector.webgl) {
             });
         }
     }
-} else {
-    document.documentElement.className += 'no-webgl';
 }
 
 // ThreeJS Setup
