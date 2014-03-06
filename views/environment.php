@@ -6,9 +6,11 @@
             <h2><i class="ico-pin"></i><?= $env->latitude; ?>, <?= $env->longitude; ?></h2>
         </hgroup>
         <div id="env-user-badge">
-            <h2>Cloned by:</h2>
-            <img src="http://www.gravatar.com/avatar/<?= (isset($env->email) ? md5(strtolower(trim($env->email))) : 1); ?>?d=mm&amp;s=60" />
-            <a href="/user/<?= $env->username ?>"><?= $env->username ?></a>
+            <p>Cloned by:</p>
+            <a href="/user/<?= $env->username ?>">
+                <img src="http://www.gravatar.com/avatar/<?= (isset($env->email) ? md5(strtolower(trim($env->email))) : 1); ?>?d=mm&amp;s=40" alt="<?= $env->username ?>"/>
+                <p><?= $env->username ?><p>
+            </a>
         </div>
     </header>
     <?= $env->timestamp; ?> 
