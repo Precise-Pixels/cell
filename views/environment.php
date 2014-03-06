@@ -33,21 +33,6 @@
                     <div id="side" class="btn btn--views">SIDE</div>
                 </div>
             </div>
-            <input type="checkbox" id="model-info-toggle" class="checkbox-hack"/>
-            <label for="model-info-toggle" id="model-info-btn"></label>
-            <div id="model-desc" class="full-screen">
-                <h1>Environment Name</h1>
-                <p>Maecenas aliquam a ligula et tincidunt. Suspendisse tempor nisi enim, accumsan interdum lacus semper sed. Phasellus ornare in ante gravida gravida. Duis et gravida nisi. Vestibulum semper bibendum rutrum. Ut porta ut purus non ultricies. Vestibulum sed risus egestas, ultrices turpis ac, pellentesque risus.</p>
-                <p>Etiam in nisl eu leo aliquam porta. Cras rutrum tellus vehicula hendrerit sodales. Nullam condimentum gravida volutpat. Sed molestie gravida fermentum. In euismod diam eget posuere tempor. Mauris sit amet sem laoreet, consequat sapien eu, aliquam purus. Nunc sit amet lorem ut nunc tempus scelerisque vitae vel ligula.</p>
-                <p>Maecenas aliquam a ligula et tincidunt. Suspendisse tempor nisi enim, accumsan interdum lacus semper sed. Phasellus ornare in ante gravida gravida. Duis et gravida nisi. Vestibulum semper bibendum rutrum. Ut porta ut purus non ultricies. Vestibulum sed risus egestas, ultrices turpis ac, pellentesque risus.</p>
-                <p>Etiam in nisl eu leo aliquam porta. Cras rutrum tellus vehicula hendrerit sodales. Nullam condimentum gravida volutpat. Sed molestie gravida fermentum. In euismod diam eget posuere tempor. Mauris sit amet sem laoreet, consequat sapien eu, aliquam purus. Nunc sit amet lorem ut nunc tempus scelerisque vitae vel ligula.</p>
-                <p>Maecenas aliquam a ligula et tincidunt. Suspendisse tempor nisi enim, accumsan interdum lacus semper sed. Phasellus ornare in ante gravida gravida. Duis et gravida nisi. Vestibulum semper bibendum rutrum. Ut porta ut purus non ultricies. Vestibulum sed risus egestas, ultrices turpis ac, pellentesque risus.</p>
-                <p>Etiam in nisl eu leo aliquam porta. Cras rutrum tellus vehicula hendrerit sodales. Nullam condimentum gravida volutpat. Sed molestie gravida fermentum. In euismod diam eget posuere tempor. Mauris sit amet sem laoreet, consequat sapien eu, aliquam purus. Nunc sit amet lorem ut nunc tempus scelerisque vitae vel ligula.</p>
-                <p>Maecenas aliquam a ligula et tincidunt. Suspendisse tempor nisi enim, accumsan interdum lacus semper sed. Phasellus ornare in ante gravida gravida. Duis et gravida nisi. Vestibulum semper bibendum rutrum. Ut porta ut purus non ultricies. Vestibulum sed risus egestas, ultrices turpis ac, pellentesque risus.</p>
-                <p>Etiam in nisl eu leo aliquam porta. Cras rutrum tellus vehicula hendrerit sodales. Nullam condimentum gravida volutpat. Sed molestie gravida fermentum. In euismod diam eget posuere tempor. Mauris sit amet sem laoreet, consequat sapien eu, aliquam purus. Nunc sit amet lorem ut nunc tempus scelerisque vitae vel ligula.</p>
-                <p>Maecenas aliquam a ligula et tincidunt. Suspendisse tempor nisi enim, accumsan interdum lacus semper sed. Phasellus ornare in ante gravida gravida. Duis et gravida nisi. Vestibulum semper bibendum rutrum. Ut porta ut purus non ultricies. Vestibulum sed risus egestas, ultrices turpis ac, pellentesque risus.</p>
-                <p>Etiam in nisl eu leo aliquam porta. Cras rutrum tellus vehicula hendrerit sodales. Nullam condimentum gravida volutpat. Sed molestie gravida fermentum. In euismod diam eget posuere tempor. Mauris sit amet sem laoreet, consequat sapien eu, aliquam purus. Nunc sit amet lorem ut nunc tempus scelerisque vitae vel ligula.</p>
-            </div>
         </div>
     </section>
 
