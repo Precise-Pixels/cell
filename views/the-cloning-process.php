@@ -35,4 +35,6 @@
     <img src="/img/infographic/cloud.png" class="ig-cloud7" data-8500="top: 110%;" data-14000="top: 5%;" data-15000="top: 4%;" data-20000="top: 9%;"/>
     <img src="/img/infographic/mountain.jpg" class="ig-mountain-cover" data-13999="opacity: 0;" data-14000="opacity: 1;" data-20000/>
 
+    <img src="/img/infographic/cube-reflection.png" class="ig-cube-reflection" data-15000="opacity: 0;" data-16000="opacity: .2;" data-20000/>
+
 </main>
