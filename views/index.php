@@ -2,6 +2,14 @@
     <hgroup class="align-vertical">
         <h1>CELL INDUSTRIES</h1>
     </hgroup>
+    <div class="wrapper">
+        <div class="cube">
+            <div class="front dark">FRONT</div>
+            <div class="back dark">BACK</div>
+            <div class="left light">LEFT</div>
+            <div class="right light">RIGHT</div>
+        </div>
+    </div>
     <a id="page-flow" class="arrow-down ico-arrow-down2" href="#firststeps"></a>
 </header>
 

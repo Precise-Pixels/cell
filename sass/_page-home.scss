@@ -9,6 +9,65 @@
     z-index: 2;
 }
 
+/* cube */
+
+@-webkit-keyframes spin {
+  from { transform: rotateY(-45); }
+  to   { transform: rotateY(-405deg); }
+  from { transform: rotateY(0); }
+  to   { transform: rotateY(-360deg); }
+}
+
+.wrapper {
+  height: 300px;
+  margin-top: 50px;
+  position: relative;
+  perspective: 800;
+  perspective-origin: 50%;
+}
+
+.cube {
+  width: 200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  transform-style: preserve-3d;
+  transform: rotateY(-45deg);
+  animation: spin 36s infinite linear;
+}
+
+/* outer cube */
+.cube > div {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  display: block;
+  font-size: 0;
+}
+
+.front {
+  transform: translateZ(100px);
+}
+.right {
+  transform: rotateY(90deg) translateZ(100px);
+}
+.back {
+  transform: translateZ(-100px) rotateY(180deg);
+}
+.left {
+  transform: rotateY(270deg) translateZ(100px);
+}
+
+.dark {
+  background: #333;
+}
+
+.light {
+  background: #666;
+}
+
+/* cube end */
+
 #page-flow {
     width: 100%;
     height: 100px;
@@ -19,6 +78,24 @@
     text-align: center;
     color: $lgrey;
     animation: page-flow-arrow-color 3s infinite alternate;
+}
+
+@keyframes front {
+  0%    { background: #333; }
+  12.5% { background: #000; }
+  75%   { background: #999; }
+  100%  { background: #333; }
+}
+
+@keyframes right {
+  0%    { background: #666; }
+  37.5% { background: #000; }
+  100%  { background: #666; }
+}
+
+@keyframes back {
+  from { background: #999; }
+  to   { background: #666; }
 }
 
 @keyframes page-flow-arrow-color {
