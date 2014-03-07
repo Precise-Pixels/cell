@@ -150,49 +150,6 @@
     opacity: 1;
 }
 
-#model-info-btn {
-    width: 40px;
-    height: 40px;
-    position:absolute;
-    top: 20px;
-    right: 20px;
-    opacity: 0.5;
-    cursor: pointer;
-    background: url(../img/spritesheet.svg) -85px -61px;
-    z-index: 4;
-}
-
-#model-info-btn:hover {
-    opacity: 1;
-}
-
-#model-info-toggle:checked ~ #model-info-btn {
-    position: fixed;
-    top: 0;
-    right: 0;
-    background: url(../img/spritesheet.svg) -125px -61px;
-}
-
-#model-info-toggle:checked ~ #model-desc {
-    visibility: visible;
-    opacity: 1;
-}
-
-.full-screen {
-    width: 100%;
-    height: 100%;
-    padding: 40px;
-    position: fixed;
-    overflow-y: auto;
-    top: 0;
-    left: 0;
-    visibility: hidden;
-    opacity: 0;
-    transition: all .3s;
-    background: #222;
-    z-index: 3;
-}
-
 #more-models {
     display: none;
 }
@@ -210,9 +167,7 @@
     }
 
     #model-menu-toggle,
-    #model-menu-btn,
-    #model-info-toggle,
-    #model-info-btn {
+    #model-menu-btn, {
         display: none;
     }
 
@@ -258,23 +213,6 @@
             margin-bottom: 0;
         }
     }
-
-    #model-desc {
-        width: 350px;
-        height: 300px;
-        padding: 0;
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        visibility: visible;
-        opacity: 1;
-        background: none;
-
-        h1 {
-            display: none;
-        }
-    }
-
 }
 
 
