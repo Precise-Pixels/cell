@@ -183,16 +183,27 @@ function init() {
     function switchInteraction(interaction, e) {
         if(e.target.className.match(/btn--selected/)) { return false; }
 
-        iDefault.className = iWebcam.className = 'btn btn--interact';
+        resetClassNames();
 
         switch(interaction) {
             case 'default':
                 iDefault.className += ' btn--selected';
+                stopWebcam();
                 break;
             case 'webcam':
                 iWebcam.className += ' btn--selected';
-                initWebcam();
+                if(Detector.webrtc) {
+                    initWebcam();
+                } else {
+                    alert('Your browser does not support webcam interaction.');
+                    resetClassNames();
+                    iDefault.className += ' btn--selected';
+                }
                 break;
+        }
+
+        function resetClassNames() {
+            iDefault.className = iWebcam.className = 'btn btn--interact';
         }
     }
 
