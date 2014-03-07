@@ -11,13 +11,6 @@
 
 /* cube */
 
-@-webkit-keyframes spin {
-  from { transform: rotateY(-45); }
-  to   { transform: rotateY(-405deg); }
-  from { transform: rotateY(0); }
-  to   { transform: rotateY(-360deg); }
-}
-
 .wrapper {
   height: 300px;
   position: absolute;
@@ -81,6 +74,13 @@
     text-align: center;
     color: $lgrey;
     animation: page-flow-arrow-color 3s infinite alternate;
+}
+
+@-webkit-keyframes spin {
+  from { transform: rotateY(-45); }
+  to   { transform: rotateY(-405deg); }
+  from { transform: rotateY(0); }
+  to   { transform: rotateY(-360deg); }
 }
 
 @keyframes front {
