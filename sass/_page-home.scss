@@ -55,11 +55,11 @@
 }
 
 .dark {
-  background: #333;
+  background: $dgrey;
 }
 
 .light {
-  background: #666;
+  background: $mgrey;
 }
 
 /* cube end */
@@ -84,21 +84,21 @@
 }
 
 @keyframes front {
-  0%    { background: #333; }
+  0%    { background: $dgrey; }
   12.5% { background: #000; }
   75%   { background: #999; }
-  100%  { background: #333; }
+  100%  { background: $dgrey; }
 }
 
 @keyframes right {
-  0%    { background: #666; }
+  0%    { background: $mgrey; }
   37.5% { background: #000; }
-  100%  { background: #666; }
+  100%  { background: $mgrey; }
 }
 
 @keyframes back {
   from { background: #999; }
-  to   { background: #666; }
+  to   { background: $mgrey; }
 }
 
 @keyframes page-flow-arrow-color {
