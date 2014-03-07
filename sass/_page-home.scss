@@ -16,14 +16,14 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 25%;
+  top: 35%;
   perspective: 800;
   perspective-origin: 50%;
   z-index: 1;
 }
 
 .cube {
-  width: 200px;
+  width: 150px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
@@ -35,23 +35,23 @@
 /* outer cube */
 .cube > div {
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   display: block;
   font-size: 0;
 }
 
 .front {
-  transform: translateZ(100px);
+  transform: translateZ(75px);
 }
 .right {
-  transform: rotateY(90deg) translateZ(100px);
+  transform: rotateY(90deg) translateZ(75px);
 }
 .back {
-  transform: translateZ(-100px) rotateY(180deg);
+  transform: translateZ(-75px) rotateY(180deg);
 }
 .left {
-  transform: rotateY(270deg) translateZ(100px);
+  transform: rotateY(270deg) translateZ(75px);
 }
 
 .dark {
