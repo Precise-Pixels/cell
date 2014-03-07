@@ -36,5 +36,6 @@
     <img src="/img/infographic/mountain.jpg" class="ig-mountain-cover" data-13999="opacity: 0;" data-14000="opacity: 1;" data-20000/>
 
     <img src="/img/infographic/cube-reflection.png" class="ig-cube-reflection" data-15000="opacity: 0; top: 85%;" data-16000="opacity: .2; top: 80%;" data-20000/>
+    <div class="ig-cube-scanner" data-16500="opacity: 0;" data-17000="opacity: 1;" data-20000="transform: perspective(800px) rotatey(0deg);"> </div>
 
 </main>
