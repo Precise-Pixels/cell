@@ -45,7 +45,8 @@ if(Detector.webgl) {
             });
 
             heightMap.addEventListener('error', function() {
-                console.log('Error: The height map data for this environment has gone missing. Please try cloning a new environment.');
+                alert('Error: The height map data for this environment has gone missing. Please try cloning a new environment.');
+                window.location.href = '/user/' + userId + '/env/new';
             });
         }
     }
