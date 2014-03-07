@@ -16,7 +16,7 @@
     <img src="/img/infographic/cube-reentry.png" class="ig-cube-reentry" data-5000="opacity:0;" data-7000="opacity:1;" data-8500="opacity:0;"/>
 
     <img src="/img/infographic/above-clouds.png" class="ig-above-clouds" data-8000="opacity:0; top:0%;" data-8300="opacity:1; top:0%;" data-10000="opacity:1; top:-50%;" />
-    <div class="ig-overlay" data-7500="background-color:rgb(255,255,255);opacity: 0;" data-8000="background-color: rgb(255,255,255);opacity: 1;" data-10000="background-color: rgb(63,151,249);" data-14000=""></div>
+    <div class="ig-overlay" data-7500="background-color:rgb(255,255,255);opacity: 0;" data-8000="background-color: rgb(255,255,255);opacity: 1;" data-9000="background-color: rgb(63,151,249);" data-14000=""></div>
     
     <img src="/img/infographic/cloud.png" class="ig-cloud" data-8500="top: 100%;" data-10000="top: -300%;"/>
     <img src="/img/infographic/cloud.png" class="ig-cloud2" data-8500="top: 100%;" data-10000="top: -400%;"/>
