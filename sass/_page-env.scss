@@ -18,6 +18,7 @@
     .btn {
         width: auto;
         cursor: pointer;
+        font-size: 1.4rem;
     }
 
     .btn--menu:hover {
@@ -64,6 +65,7 @@
 
 #interface-elements {
     display: none;
+    background: none;
     .webgl & {
         display: block;
     }
@@ -74,23 +76,25 @@
     height: 40px;
     position: fixed;
     bottom: 20px;
+    background: none;
     p {
         display: none;
     }
 }
 
-#default {
-    height: 65px;
+#default,
+#webcam {
     position: absolute;
-    left: 20px;
     bottom: 0;
+    line-height: 30px;
+}
+
+#default {
+    left: 20px;
 }
 
 #webcam {
-    height: 65px;
-    position: absolute;
     right: 20px;
-    bottom: 0;
 }
 
 #model-controls {
@@ -101,6 +105,7 @@
     left: 0;
     right: 0;
     bottom: 20px;
+    background: none;
 }
 
 #model-menu-btn {
@@ -163,11 +168,21 @@
 
     .env {  
         .btn--views {
-            width: 100%;
-            height: 50px;
-            line-height: 50px;
-            margin: 0% 0% 3% 0%;
+            width: 100px;
+            height: 62px;
+            margin: 0 0 0 5px;
+            float: left;
+            line-height: 62px;
         }
+    }
+
+    #interface-elements {
+        width: 100%;
+        height: 105px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background: $sdgrey;
     }
 
     #model-menu-toggle,
@@ -177,43 +192,40 @@
 
     #model-interaction {
         width: 200px;
-        height: 128px;
+        height: 115px;
         padding: 10px;
         position: absolute;
-        top: 170px;
-        right: 230px;
+        bottom: 0; 
         text-align: center;
         background: $sdgrey;
-        p {
-            display: block;
-            margin-bottom: 0;
-        }
+            p {
+                display: block;
+                margin-bottom: 0;
+            }
     }
 
     #default,
     #webcam {
-        width: 50%;
-        height: auto;
-        position: static;
-        float: left;
+        width: 38.5%;
+        height: 62px;
+        bottom: 10px;
     }
 
     #model-controls {
-        width: 200px;
-        margin: 0;
+        width: 335px;
+        height: 115px;
+        padding: 10px;
         position: absolute;
-        top: 160px;
+        right: 0;
+        bottom: 0; 
         left: auto;
-        right: 20px;
-        bottom: auto;
     }
 
     #model-views {
-        width: 100%;
+        width: auto;
         height: 100%;
-        float: right;
-        text-align: center;
-        padding-bottom: 10px;
+        margin: 0;
+        padding: 0;
         visibility: visible;
         opacity: 1;
         p {

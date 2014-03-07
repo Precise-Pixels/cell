@@ -14,16 +14,16 @@
         </div>
     </header>
 
-    <section id="interface" class="dgrey">
+    <section id="interface">
         <div id="model"><img src="/img/user/<?= $env->userId; ?>/capture-<?= $envId; ?>.jpg" alt="<?= $env->name; ?>"/></div>
 
         <div id="interface-elements">
-            <div id="model-interaction">
+            <div id="model-interaction" class="sdgrey">
                 <p>Interact</p>
                 <div id="default" class="btn btn--selected"><i class="ico-hand"></i></div>
                 <div id="webcam" class="btn"><i class="ico-webcam"></i></div>
             </div>
-            <div id="model-controls">
+            <div id="model-controls" class="sdgrey">
                 <input type="checkbox" id="model-menu-toggle" class="checkbox-hack"/>
                 <label for="model-menu-toggle" id="model-menu-btn" class="ico-"></label>
                 <div id="model-views">
@@ -49,3 +49,5 @@
 
 <div id="full-page-overlay" class="full-page-overlay full-page-overlay--loading"></div>
 <progress id="prog-bar" min=0 max=100 value=0></progress>
+
+<footer></footer>
