@@ -1,7 +1,12 @@
-var stream;
+var stream,
+    pending = false;
 
 function initWebcam() {
     // Thanks: https://github.com/willy-vvu/reveal.js/blob/master/js/gesture.js
+    if(pending) { return false };
+
+    pending = true;
+
     navigator.getMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia);
 
     navigator.getMedia(
@@ -24,6 +29,7 @@ function initWebcam() {
                 iWebcam.className  = 'btn btn--interact';
                 iDefault.className += ' btn--selected';
                 controls.autoRotate = true;
+                pending = false;
             }
         }
     );
@@ -263,5 +269,6 @@ function initWebcam() {
 function stopWebcam() {
     if(stream) {
         stream.stop();
+        pending = false;
     }
 }
