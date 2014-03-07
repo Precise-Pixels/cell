@@ -14,7 +14,6 @@
 
     <img src="/img/infographic/cube.png" class="ig-cube" data-300="top:0%;" data-1000="top:50%;transform:scale(0.7)" data-5000="opacity:1;transform:scale(0.8)" data-8000="opacity:0;transform:scale(1)"/>
     <img src="/img/infographic/cube-reentry.png" class="ig-cube-reentry" data-5000="opacity:0;" data-8000="opacity:1;" data-10000=""/>
-    <img src="/img/infographic/bg.jpg" class="ig-background" data-0="top: 0%;" data-10000="top: -300%;"/>
 
     <div class="ig-overlay" data-6500="background-color:rgb(255,255,255);opacity: 0;" data-7500="background-color: rgb(255,255,255);opacity: 1;" data-10000="background-color: rgb(63,151,249);" data-14000=""></div>
 
