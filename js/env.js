@@ -189,15 +189,18 @@ function init() {
             case 'default':
                 iDefault.className += ' btn--selected';
                 stopWebcam();
+                controls.autoRotate = true;
                 break;
             case 'webcam':
                 iWebcam.className += ' btn--selected';
                 if(Detector.webrtc) {
                     initWebcam();
+                    controls.autoRotate = false;
                 } else {
                     alert('Your browser does not support webcam interaction.');
                     resetClassNames();
                     iDefault.className += ' btn--selected';
+                    controls.autoRotate = true;
                 }
                 break;
         }
