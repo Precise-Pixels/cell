@@ -12,7 +12,7 @@
     <img src="/img/infographic/earth.png" class="ig-earth" data-0="top:50%;transform:scale(1); filter:blur(3px);" data-5000="top:25%;transform:scale(1.1);filter:blur(0px);" data-8000="top:0%;transform:scale(1.3);"/>
     <img src="/img/infographic/satellite.png" class="ig-satellite" data-3000="top:100%;" data-5000="top:-300px;"/>
 
-    <img src="/img/infographic/cube.png" class="ig-cube" data-300="top:0%;" data-1000="top:50%;transform:scale(0.8)" data-5000="opacity:1;transform:scale(0.8)" data-8000="opacity:0;transform:scale(1)" data-8200="opacity:1;" data-30000=""/>
+    <img src="/img/infographic/cube.png" class="ig-cube" data-300="top:0%;" data-1000="top:50%;transform:scale(0.8)" data-5000="opacity:1;transform:scale(0.8)" data-8000="opacity:0;transform:scale(1)" data-8200="opacity:1;" data-23500="top: 50%;" data-28000="top: -10%;" data-30000=""/>
     <img src="/img/infographic/cube-reentry.png" class="ig-cube-reentry" data-5000="opacity:0;" data-7000="opacity:1;" data-8500="opacity:0;"/>
 
     <img src="/img/infographic/above-clouds.png" class="ig-above-clouds" data-8000="opacity:0; top:0%;" data-8300="opacity:1; top:0%;" data-10000="opacity:1; top:-50%;" />
@@ -36,7 +36,7 @@
     <img src="/img/infographic/cloud.png" class="ig-cloud7" data-8500="top: 110%; left: 62%;" data-13000="top: 15%; left: 65%;" data-14000="top: 10%;" data-15000="top: 10%; left: 67%;" data-30000="left: 70%;"/>
     <img src="/img/infographic/mountain.jpg" class="ig-mountain-cover" data-13999="opacity: 0;" data-14000="opacity: 1;" data-30000/>
 
-    <img src="/img/infographic/cube-reflection.png" class="ig-cube-reflection" data-13000="opacity: 0; top: 100%;" data-14000="opacity: .2; top: 85%;" data-30000/>
+    <img src="/img/infographic/cube-reflection.png" class="ig-cube-reflection" data-13000="opacity: 0; top: 100%;" data-14000="opacity: .2; top: 85%;" data-23500="top: 85%;" data-25000="top: 90%; opacity: 0;"/>
     <div class="ig-cube-scanner" data-14000="opacity: 0;" data-16000="opacity: 1; left: 55%;" data-18000="left: 5%;" data-20000="left: 55%;" data-22000="left: 5%;" data-23000="opacity: 0;"> </div>
 
 </main>
