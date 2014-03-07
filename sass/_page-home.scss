@@ -20,10 +20,13 @@
 
 .wrapper {
   height: 300px;
-  margin-top: 50px;
-  position: relative;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 25%;
   perspective: 800;
   perspective-origin: 50%;
+  z-index: 1;
 }
 
 .cube {
