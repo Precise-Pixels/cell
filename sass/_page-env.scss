@@ -166,6 +166,7 @@
             width: 100%;
             height: 50px;
             line-height: 50px;
+            margin: 0% 0% 3% 0%;
         }
     }
 
@@ -176,11 +177,13 @@
 
     #model-interaction {
         width: 200px;
-        height: 90px;
+        height: 128px;
+        padding: 10px;
         position: absolute;
         top: 170px;
         right: 230px;
         text-align: center;
+        background: $sdgrey;
         p {
             display: block;
             margin-bottom: 0;
@@ -209,9 +212,9 @@
         width: 100%;
         height: 100%;
         float: right;
+        text-align: center;
         padding-bottom: 10px;
         visibility: visible;
-        background: none;
         opacity: 1;
         p {
             display: block;
