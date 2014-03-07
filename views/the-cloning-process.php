@@ -34,7 +34,7 @@
     <img src="/img/infographic/cloud.png" class="ig-cloud5" data-8500="top: 110%; left: 13%;" data-13000="top: 15%; left: 15%;" data-14000="top: 10%;" data-15000="top: 10%; left: 17%;" data-30000="left: 20%;"/>
     <img src="/img/infographic/cloud.png" class="ig-cloud6" data-8500="top: 110%; left: 42%;" data-13000="top: 15%; left: 45%;" data-14000="top: 10%;" data-15000="top: 10%; left: 47%;" data-30000="left: 50%;"/>
     <img src="/img/infographic/cloud.png" class="ig-cloud7" data-8500="top: 110%; left: 62%;" data-13000="top: 15%; left: 65%;" data-14000="top: 10%;" data-15000="top: 10%; left: 67%;" data-30000="left: 70%;"/>
-    <img src="/img/infographic/mountain.jpg" class="ig-mountain-cover" data-13999="opacity: 0;" data-14000="opacity: 1;" data-30000/>
+    <img src="/img/infographic/mountain.jpg" class="ig-mountain-cover" data-13999="opacity: 0;" data-14000="opacity: 1;" data-27000="opacity: 1;" data-28000="opacity: .5;" data-30000/>
 
     <img src="/img/infographic/cube-reflection.png" class="ig-cube-reflection" data-13000="opacity: 0; top: 100%;" data-14000="opacity: .2; top: 85%;" data-23500="top: 85%;" data-25000="top: 90%; opacity: 0;"/>
     <div class="ig-cube-scanner" data-14000="opacity: 0;" data-16000="opacity: 1; left: 55%;" data-18000="left: 5%;" data-20000="left: 55%;" data-22000="left: 5%;" data-23000="opacity: 0;"> </div>
