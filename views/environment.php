@@ -51,10 +51,10 @@
         </div>
     </section>
 
-<!--     <section id="env-data" class="lgrey"></section>
     <video id="video" autoplay></video>
     <canvas id="canvas"></canvas>
     <canvas id="comp"></canvas>
+<!--     <section id="env-data" class="lgrey"></section>
 
     <label for="sensitivity">more sensitive</label> <input type="radio" name="sensitivity">
     <label for="sensitivity">average</label> <input type="radio" name="sensitivity" checked>

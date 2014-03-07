@@ -190,6 +190,7 @@ function init() {
                 break;
             case 'webcam':
                 iWebcam.className += ' btn--selected';
+                initWebcam();
                 break;
         }
     }
