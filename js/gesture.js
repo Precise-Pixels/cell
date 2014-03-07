@@ -17,7 +17,14 @@ function initWebcam() {
         },
 
         function(error) {
-            console.log('Error: ' + error);
+            if(error.name == 'PermissionDeniedError') {
+                alert('Access to your webcam is required to use this feature.');
+                var iDefault       = document.getElementById('default');
+                var iWebcam        = document.getElementById('webcam');
+                iWebcam.className  = 'btn btn--interact';
+                iDefault.className += ' btn--selected';
+                controls.autoRotate = true;
+            }
         }
     );
 
