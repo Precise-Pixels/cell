@@ -8,9 +8,9 @@
         </div>
         <i class="ico-cell-logo homepage-logo"></i>
     </div>
-    <!--<hgroup class="align-vertical cell-header">
+    <hgroup class="align-vertical cell-header">
         <h1>CELL INDUSTRIES</h1>
-    </hgroup>-->
+    </hgroup>
     <a id="page-flow" class="arrow-down ico-arrow-down2" href="#firststeps"></a>
 </header>
 
