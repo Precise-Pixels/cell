@@ -39,4 +39,17 @@
     <img src="/img/infographic/cube-reflection.png" class="ig-cube-reflection" data-13000="opacity: 0; top: 100%;" data-14000="opacity: .2; top: 85%;" data-23500="top: 85%;" data-25000="top: 90%; opacity: 0;"/>
     <div class="ig-cube-scanner" data-14000="opacity: 0;" data-16000="opacity: 1; left: 55%;" data-18000="left: 5%;" data-20000="left: 55%;" data-22000="left: 5%;" data-23000="opacity: 0;"> </div>
 
+    <div data-27000="filter: opacity(0);" data-28000="filter: opacity(1);" data-30000>
+        <a href="the-cloning-process" class="cta cta--example half">
+            <hgroup class="align-vertical">
+                <h1>The cloning process</h1>
+            </hgroup>
+        </a>
+        <a href="project-titan" class="cta cta--example half">
+            <hgroup class="align-vertical">
+                <h1>What is Project Titan?</h1>
+            </hgroup>
+        </a>
+    </div>
+
 </main>
