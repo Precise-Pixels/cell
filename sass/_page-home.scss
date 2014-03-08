@@ -12,54 +12,53 @@
 /* cube */
 
 .wrapper {
-  height: 300px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 35%;
-  perspective: 800;
-  perspective-origin: 50%;
-  z-index: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30%;
+    perspective: 800;
+    perspective-origin: 50%;
+    z-index: 1;
 }
 
 .cube {
-  width: 150px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-  transform-style: preserve-3d;
-  transform: rotateY(-45deg);
-  animation: spin 36s infinite linear;
+    width: 150px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    transform-style: preserve-3d;
+    transform: rotateY(-45deg);
+    animation: spin 36s infinite linear;
 }
 
 /* outer cube */
 .cube > div {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  display: block;
-  font-size: 0;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    display: block;
+    font-size: 0;
 }
 
 .front {
-  transform: translateZ(75px);
+    transform: translateZ(75px);
 }
 .right {
-  transform: rotateY(90deg) translateZ(75px);
+    transform: rotateY(90deg) translateZ(75px);
 }
 .back {
-  transform: translateZ(-75px) rotateY(180deg);
+    transform: translateZ(-75px) rotateY(180deg);
 }
 .left {
-  transform: rotateY(270deg) translateZ(75px);
+    transform: rotateY(270deg) translateZ(75px);
 }
 
 .dark {
-  background: $dgrey;
+    background: $dgrey;
 }
 
 .light {
-  background: $mgrey;
+    background: $mgrey;
 }
 
 /* cube end */

@@ -1,7 +1,4 @@
 <header id="primary-header" class="section-padding">
-    <hgroup class="align-vertical">
-        <h1>CELL INDUSTRIES</h1>
-    </hgroup>
     <div class="wrapper">
         <div class="cube">
             <div class="front dark">FRONT</div>
@@ -10,6 +7,9 @@
             <div class="right light">RIGHT</div>
         </div>
     </div>
+    <hgroup class="align-vertical">
+        <h1>CELL INDUSTRIES</h1>
+    </hgroup>
     <a id="page-flow" class="arrow-down ico-arrow-down2" href="#firststeps"></a>
 </header>
 
