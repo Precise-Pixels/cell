@@ -61,7 +61,7 @@ if($hasData == 'true') {
                 break;
         }
 
-        echo '<div class="env-data-pod ' . $class . ' quarter">';
+        echo '<div class="env-data-pod ' . $class . '">';
 
         foreach($categoryPods as $pod) {
             echo '<h2>' . $pod[0]->attributes()->title . '</h2>' . '<p>' . $pod[0]->subpod->plaintext . '<p>';

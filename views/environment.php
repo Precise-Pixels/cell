@@ -15,7 +15,6 @@
 
     <section id="env-interface">
         <div id="model"><img src="/img/user/<?= $env->userId; ?>/capture-<?= $envId; ?>.jpg" alt="<?= $env->name; ?>"/></div>
-
         <div id="env-interface-elements">
             <div id="model-interaction" class="sdgrey">
                 <p>Interact</p>
@@ -34,7 +33,8 @@
             </div>
         </div>
     </section>
-    <section id="env-data"</section>
+
+    <section id="env-data"></section>
 
 <!--     <video id="video" autoplay></video>
     <canvas id="canvas"></canvas>
@@ -44,6 +44,7 @@
     <label for="sensitivity">average</label> <input type="radio" name="sensitivity" checked>
     <label for="sensitivity">less sensitive</label> <input type="radio" name="sensitivity"> -->
 
+    <!-- <div id="background"><img src="/img/user/<?= $env->userId; ?>/capture-<?= $envId; ?>.jpg" alt="<?= $env->name; ?>"/></div> -->
 </main>
 
 <div id="full-page-overlay" class="full-page-overlay full-page-overlay--loading"></div>
