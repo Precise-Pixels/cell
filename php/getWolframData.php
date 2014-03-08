@@ -7,34 +7,66 @@ $xml = simplexml_load_file($url);
 $hasData = $xml->attributes()->success;
 
 if($hasData == 'true') {
-    $dataArray = array();
+    $dataCategories = array(
+        $categoryLocation = array(),
+        $categoryNearby   = array(),
+        $categoryTime     = array(),
+        $categoryWeather  = array(),
+        $categoryPeople   = array()
+    );
 
-    $dataArray['location']            = $xml->xpath('pod[@id="Location"]');
+    $dataCategories['categoryLocation']['location']           = $xml->xpath('pod[@id="Location"]');
 
-    $dataArray['nearestCity']         = $xml->xpath('pod[@id="CartographicNearestCity"]');
-    $dataArray['nearbyCities1']       = $xml->xpath('pod[@id="CityHierarchyInfo:CityData"]');
-    $dataArray['nearbyCities2']       = $xml->xpath('pod[@id="CartographicCities"]');
-    $dataArray['nearestSea']          = $xml->xpath('pod[@id="OceansHierarchyInfo:CityData"]');
-    $dataArray['nearestIsland']       = $xml->xpath('pod[@id="CartographicNearestIsland"]');
-    $dataArray['nearbyAirports']      = $xml->xpath('pod[@id="AirportHierarchyInfo:CityData"]');
-    $dataArray['nearbyServices']      = $xml->xpath('pod[@id="CartographicServices"]');
-    $dataArray['nearbyFeatures']      = $xml->xpath('pod[@id="CartographicFeatures"]');
-    $dataArray['nearbyFeature']       = $xml->xpath('pod[@id="FeaturesHierarchyInfo:CityData"]');
+    $dataCategories['categoryNearby']['nearestCity']          = $xml->xpath('pod[@id="CartographicNearestCity"]');
+    $dataCategories['categoryNearby']['nearbyCities1']        = $xml->xpath('pod[@id="CityHierarchyInfo:CityData"]');
+    $dataCategories['categoryNearby']['nearbyCities2']        = $xml->xpath('pod[@id="CartographicCities"]');
+    $dataCategories['categoryNearby']['nearestSea']           = $xml->xpath('pod[@id="OceansHierarchyInfo:CityData"]');
+    $dataCategories['categoryNearby']['nearestIsland']        = $xml->xpath('pod[@id="CartographicNearestIsland"]');
+    $dataCategories['categoryNearby']['nearbyAirports']       = $xml->xpath('pod[@id="AirportHierarchyInfo:CityData"]');
+    $dataCategories['categoryNearby']['nearbyServices']       = $xml->xpath('pod[@id="CartographicServices"]');
+    $dataCategories['categoryNearby']['nearbyFeatures']       = $xml->xpath('pod[@id="CartographicFeatures"]');
+    $dataCategories['categoryNearby']['nearbyFeature']        = $xml->xpath('pod[@id="FeaturesHierarchyInfo:CityData"]');
 
-    $dataArray['currentLocalTime1']   = $xml->xpath('pod[@id="CartographicCurrentTime"]');
-    $dataArray['currentLocalTime2']   = $xml->xpath('pod[@id="CurrentTime:CityData"]');
+    $dataCategories['categoryTime']['currentLocalTime1']      = $xml->xpath('pod[@id="CartographicCurrentTime"]');
+    $dataCategories['categoryTime']['currentLocalTime2']      = $xml->xpath('pod[@id="CurrentTime:CityData"]');
 
-    $dataArray['localWeather']        = $xml->xpath('pod[@id="CartographicWeather"]');
-    $dataArray['currentWeather']      = $xml->xpath('pod[@id="WeatherPod:CityData"]');
-    $dataArray['daylightInformation'] = $xml->xpath('pod[@id="DaylightInformation"]');
-    $dataArray['uvIndex']             = $xml->xpath('pod[@id="UVIndex"]');
+    $dataCategories['categoryWeather']['localWeather']        = $xml->xpath('pod[@id="CartographicWeather"]');
+    $dataCategories['categoryWeather']['currentWeather']      = $xml->xpath('pod[@id="WeatherPod:CityData"]');
+    $dataCategories['categoryWeather']['daylightInformation'] = $xml->xpath('pod[@id="DaylightInformation"]');
+    $dataCategories['categoryWeather']['uvIndex']             = $xml->xpath('pod[@id="UVIndex"]');
 
-    $dataArray['population']          = $xml->xpath('pod[@id="Population:CityData"]');
-    $dataArray['notablePeople']       = $xml->xpath('pod[@id="NotablePeople:CityData"]');
+    $dataCategories['categoryPeople']['population']           = $xml->xpath('pod[@id="Population:CityData"]');
+    $dataCategories['categoryPeople']['notablePeople']        = $xml->xpath('pod[@id="NotablePeople:CityData"]');
 
-    foreach($dataArray as $dataPod) {
-        if($dataPod) {
-            echo '<div class="env-data-pod quarter">' . '<h2>' . $dataPod[0]->attributes()->title . '</h2>' . '<p>' . $dataPod[0]->subpod->plaintext . '<p>' . '</div>';
+    // Remove all the empty arrays
+    $dataCategories = array_map('array_filter', $dataCategories);
+    $dataCategories = array_filter($dataCategories);
+
+    foreach($dataCategories as $key=>$categoryPods) {
+        switch($key) {
+            case 'categoryLocation':
+                $class = 'env-data-pod--location';
+                break;
+            case 'categoryNearby':
+                $class = 'env-data-pod--nearby';
+                break;
+            case 'categoryTime':
+                $class = 'env-data-pod--time';
+                break;
+            case 'categoryWeather':
+                $class = 'env-data-pod--weather';
+                break;
+            case 'categoryPeople':
+                $class = 'env-data-pod--people';
+                break;
         }
+
+        echo '<div class="env-data-pod ' . $class . ' quarter">';
+
+        foreach($categoryPods as $pod) {
+            echo '<h2>' . $pod[0]->attributes()->title . '</h2>' . '<p>' . $pod[0]->subpod->plaintext . '<p>';
+        }
+
+        echo '</div>';
     }
 }
