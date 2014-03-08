@@ -756,7 +756,7 @@ function loadStats() {
     stats.setMode(0);
 
     stats.domElement.style.position = 'absolute';
-    stats.domElement.style.bottom = '130px';
+    stats.domElement.style.bottom = '0';
 
     document.body.appendChild( stats.domElement );
 
