@@ -16,7 +16,43 @@
                 font-weight: 300;
             }
         }
-    }   
+    }
+
+    #prog-bar {
+        width: 40%;
+        height: 12px;
+        position: fixed;
+        margin-left: -20%;
+        left: 50%;
+        bottom: 20%;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: none;
+        // IE: Value
+        color: #FFF;
+        z-index: 5;
+    }
+
+    // Webkit: Bar
+    #prog-bar::-webkit-progress-bar {
+        background: $dblue;
+    }
+
+    // Webkit: Value
+    #prog-bar::-webkit-progress-value {
+        background: #FFF;
+    }
+
+    // FF: Value
+    #prog-bar::-moz-progress-bar {
+        background: #FFF;
+    }
+
+    .no-webgl #prog-bar,
+    .env--loaded #prog-bar {
+        display: none; 
+    }
 
     .btn {
         width: auto;
@@ -159,26 +195,43 @@
     opacity: 1;
 }
 
-#more-models {
+#env-data {
+    float: left;
+    width: 100%;
+}
+
+.env-data-pod {
+    height: 250px;
+    border: 2px solid $sdgrey;
+    float: left;
+}
+    #model {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+#model {
+    width: 100%;
+    height: 600px;
+    text-align: center;
+}
+
+#video,
+#canvas {
     display: none;
 }
 
-@media ($min_bp_a) {
-    // show all View buttons
+#comp {
+    width: 300px;
+    transform: scaleX(-1);
+}
+
+footer {
+    display: none;
 }
 
 @media ($min_bp_c) {
-
-    .env {  
-        .btn--views {
-            width: 100%;
-            height: 50px;
-            margin: 5px 0 0;
-            float: left;
-            line-height: 50px;
-        }
-    }
-
     #model-menu-toggle,
     #model-menu-btn, {
         display: none;
@@ -248,86 +301,12 @@
             margin-bottom: 0;
         }
     }
-}
 
-
-
-
-
-
-
-
-
-///
-
-#env-data {
-    float: left;
-    width: 100%;
-}
-
-.env-data-pod {
-    height: 250px;
-    border: 2px solid $sdgrey;
-    float: left;
-}
-    #model {
+    .env .btn--views {
         width: 100%;
-        height: 100%;
-        margin: 0 auto;
+        height: 50px;
+        margin: 5px 0 0;
+        float: left;
+        line-height: 50px;
     }
-
-#model {
-    width: 100%;
-    height: 600px;
-    text-align: center;
-}
-
-#video,
-#canvas {
-    display: none;
-}
-
-#comp {
-    width: 300px;
-    transform: scaleX(-1);
-}
-
-#prog-bar {
-    width: 40%;
-    height: 12px;
-    position: fixed;
-    margin-left: -20%;
-    left: 50%;
-    bottom: 20%;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border: none;
-    // IE: Value
-    color: #FFF;
-    z-index: 5;
-}
-
-// Webkit: Bar
-#prog-bar::-webkit-progress-bar {
-    background: $dblue;
-}
-
-// Webkit: Value
-#prog-bar::-webkit-progress-value {
-    background: #FFF;
-}
-
-// FF: Value
-#prog-bar::-moz-progress-bar {
-    background: #FFF;
-}
-
-.no-webgl #prog-bar,
-.env--loaded #prog-bar {
-    display: none; 
-}
-
-footer {
-    display: none;
 }
