@@ -54,10 +54,9 @@
         }
     }
 
-    .btn {
-        width: auto;
+    #env-interface-elements .btn {
         cursor: pointer;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     .btn--menu:hover {
@@ -200,14 +199,17 @@
 }
 
 #env-data {
-    float: left;
+    position: absolute;
+    left: 0;
+    top: 140px;
+    height: 80%;
     width: 100%;
+    color: $lgrey;
 }
 
 .env-data-pod {
-    height: 250px;
+    height: auto;
     border: 2px solid $sdgrey;
-    float: left;
 }
 
 #model {

@@ -6,7 +6,6 @@
             <h2><i class="ico-pin"></i><?= $env->latitude; ?>, <?= $env->longitude; ?></h2>
         </hgroup>
         <div id="env-user-badge">
-            <i class="ico-my-cell"></i>Cloned by:
             <a href="/user/<?= $username ?>">
                 <img src="http://www.gravatar.com/avatar/<?= (isset($env->email) ? md5(strtolower(trim($env->email))) : 1); ?>?d=mm&amp;s=40" alt="<?= $username ?>"/>
                 <p><?= $username ?></p>
@@ -35,11 +34,11 @@
             </div>
         </div>
     </section>
+    <section id="env-data"</section>
 
-    <video id="video" autoplay></video>
+<!--     <video id="video" autoplay></video>
     <canvas id="canvas"></canvas>
-<!--     <canvas id="comp"></canvas>
-    <section id="env-data" class="lgrey"></section>
+    <canvas id="comp"></canvas>
 
     <label for="sensitivity">more sensitive</label> <input type="radio" name="sensitivity">
     <label for="sensitivity">average</label> <input type="radio" name="sensitivity" checked>
