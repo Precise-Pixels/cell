@@ -1,11 +1,11 @@
 // Full height homepage
 var primaryHeader   = document.getElementById('primary-header');
 var secondaryHeader = document.getElementById('secondary-header');
-primaryHeader.style.height = (window.innerHeight || document.documentElement.clientHeight) - 40 + 'px';
+primaryHeader.style.height = (window.innerHeight || document.documentElement.clientHeight) + 'px';
 secondaryHeader.style.marginTop = (parseInt(primaryHeader.style.height) + 40) + 'px';
 
 window.addEventListener('resize', function() {
-    primaryHeader.style.height = (window.innerHeight || document.documentElement.clientHeight) - 40 + 'px';
+    primaryHeader.style.height = (window.innerHeight || document.documentElement.clientHeight) + 'px';
     secondaryHeader.style.marginTop = (parseInt(primaryHeader.style.height) + 40) + 'px';
 });
 
