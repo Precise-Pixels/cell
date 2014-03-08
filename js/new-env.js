@@ -165,7 +165,6 @@ function init() {
     warnNoName.id      = 'new-env-warn-name';
     warnNoTile.className = warnUnavailable.className = warnNoName.className = 'full warn';
     warnNoTile.appendChild(document.createTextNode('Please select an area on the map.'));
-    warnUnavailable.appendChild(document.createTextNode('Your selected area has already been cloned. Please select another area or <a href="#"view the selected area</a>.'));
     warnNoName.appendChild(document.createTextNode('Please enter a name for your environment.'));
 
     cloneBtn.addEventListener('click', function(e) {
@@ -192,7 +191,7 @@ function init() {
                 if(request.readyState == 4 && request.status == 200) {
                     var tileAvailable = request.responseText;
 
-                    if(tileAvailable) {
+                    if(tileAvailable == 'true') {
                         var warnUnavailableElem = document.getElementById('new-env-warn-unavailable');
                         if(warnUnavailableElem) {
                             warnUnavailableElem.parentNode.removeChild(warnUnavailableElem);
@@ -205,6 +204,7 @@ function init() {
                             envForm.appendChild(warnNoName);
                         }
                     } else {
+                        warnUnavailable.innerHTML = 'Your selected area has already been cloned. Please select another area or <a href="' + tileAvailable.replace('false', '') + '">view the selected area</a>.';
                         envForm.appendChild(warnUnavailable);
 
                         var warnNoNameElem = document.getElementById('new-env-warn-name');
