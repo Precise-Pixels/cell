@@ -160,12 +160,12 @@ function init() {
     var warnUnavailable = document.createElement('p');
     var warnNoName      = document.createElement('p');
 
-    warnNoTile.id      = 'new-env-warn-tile';
-    warnUnavailable.id = 'new-env-warn-unavailable';
-    warnNoName.id      = 'new-env-warn-name';
+    warnNoTile.id        = 'new-env-warn-tile';
+    warnUnavailable.id   = 'new-env-warn-unavailable';
+    warnNoName.id        = 'new-env-warn-name';
     warnNoTile.className = warnUnavailable.className = warnNoName.className = 'full warn';
-    warnNoTile.appendChild(document.createTextNode('Please select an area on the map.'));
-    warnNoName.appendChild(document.createTextNode('Please enter a name for your environment.'));
+    warnNoTile.innerHTML = 'Please select an area on the map.';
+    warnNoName.innerHTML = 'Please enter a name for your environment.';
 
     cloneBtn.addEventListener('click', function(e) {
         validate();
