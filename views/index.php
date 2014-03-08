@@ -7,7 +7,7 @@
             <div class="right light">RIGHT</div>
         </div>
     </div>
-    <hgroup class="align-vertical">
+    <hgroup class="align-vertical cell-header">
         <h1>CELL INDUSTRIES</h1>
     </hgroup>
     <a id="page-flow" class="arrow-down ico-arrow-down2" href="#firststeps"></a>
