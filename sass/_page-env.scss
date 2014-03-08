@@ -1,3 +1,39 @@
+// Webkit: Bar
+#prog-bar::-webkit-progress-bar {
+    background: $dblue;
+}
+
+// Webkit: Value
+#prog-bar::-webkit-progress-value {
+    background: #FFF;
+}
+
+// FF: Value
+#prog-bar::-moz-progress-bar {
+    background: #FFF;
+}
+
+.no-webgl #prog-bar,
+.env--loaded #prog-bar {
+    display: none; 
+}
+
+#prog-bar {
+    width: 40%;
+    height: 12px;
+    position: fixed;
+    margin-left: -20%;
+    left: 50%;
+    bottom: 20%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    // IE: Value
+    color: #FFF;
+    z-index: 5;
+}
+
 .env {
     main {
         margin-top: 40px;
@@ -16,42 +52,6 @@
                 font-weight: 300;
             }
         }
-    }
-
-    #prog-bar {
-        width: 40%;
-        height: 12px;
-        position: fixed;
-        margin-left: -20%;
-        left: 50%;
-        bottom: 20%;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        border: none;
-        // IE: Value
-        color: #FFF;
-        z-index: 5;
-    }
-
-    // Webkit: Bar
-    #prog-bar::-webkit-progress-bar {
-        background: $dblue;
-    }
-
-    // Webkit: Value
-    #prog-bar::-webkit-progress-value {
-        background: #FFF;
-    }
-
-    // FF: Value
-    #prog-bar::-moz-progress-bar {
-        background: #FFF;
-    }
-
-    .no-webgl #prog-bar,
-    .env--loaded #prog-bar {
-        display: none; 
     }
 
     .btn {
@@ -83,6 +83,10 @@
         color: #333;
         background: $lgrey;
     }
+
+    footer {
+        display: none;
+    }
 }
 
 #env-user-badge {
@@ -95,14 +99,14 @@
      }
  }
 
-#interface {
+#env-interface {
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
     bottom: 90px;
 }
 
-#interface-elements {
+#env-interface-elements {
     display: none;
     background: none;
     .webgl & {
@@ -205,11 +209,12 @@
     border: 2px solid $sdgrey;
     float: left;
 }
-    #model {
-        width: 100%;
-        height: 100%;
-        margin: 0 auto;
-    }
+
+#model {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
 
 #model {
     width: 100%;
@@ -225,10 +230,6 @@
 #comp {
     width: 300px;
     transform: scaleX(-1);
-}
-
-footer {
-    display: none;
 }
 
 @media ($min_bp_c) {

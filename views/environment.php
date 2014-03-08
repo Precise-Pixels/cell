@@ -14,10 +14,10 @@
         </div>
     </header>
 
-    <section id="interface">
+    <section id="env-interface">
         <div id="model"><img src="/img/user/<?= $env->userId; ?>/capture-<?= $envId; ?>.jpg" alt="<?= $env->name; ?>"/></div>
 
-        <div id="interface-elements">
+        <div id="env-interface-elements">
             <div id="model-interaction" class="sdgrey">
                 <p>Interact</p>
                 <div id="default" class="btn btn--selected"><i class="ico-hand"></i></div>
