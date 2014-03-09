@@ -54,6 +54,10 @@
         }
     }
 
+    .btn {
+        width: auto;
+    }
+
     #env-interface-elements .btn {
         cursor: pointer;
         font-size: 1.2rem;
@@ -227,7 +231,6 @@
 }
 
 .env-data-pod--nearby {
-    display: none;
 }
 
 #model {
