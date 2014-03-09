@@ -203,23 +203,30 @@
 }
 
 @media ($min_bp_a) {
+    .wrapper {
+        top: 20%;
+    }
     .cube {
-      width: 200px;
+        width: 200px;
     }
 
     .cube > div {
-      width: 200px;
-      height: 200px;
+        width: 200px;
+        height: 200px;
     }
+
     .front {
-    transform: translateZ(100px);
+        transform: translateZ(100px);
     }
+
     .right {
         transform: rotateY(90deg) translateZ(100px);
     }
+
     .back {
         transform: translateZ(-100px) rotateY(180deg);
     }
+
     .left {
         transform: rotateY(270deg) translateZ(100px);
     }
