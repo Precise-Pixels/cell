@@ -98,9 +98,10 @@
 
 #env-interface {
     width: 100%;
-    max-width: 1400px;
+    height: 100%;
     margin: 0 auto;
-    bottom: 90px;
+    position: fixed;
+    top: 40px;
 }
 
 #env-interface-elements {
@@ -252,12 +253,6 @@
 #model {
     width: 100%;
     height: 100%;
-    margin: 0 auto;
-}
-
-#model {
-    width: 100%;
-    height: 600px;
     text-align: center;
 }
 
