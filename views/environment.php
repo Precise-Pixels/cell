@@ -28,11 +28,11 @@
                     <p>Views</p>
                     <div id="360" class="btn btn--views btn--selected">360</div>
                     <div id="top" class="btn btn--views">TOP</div>
-                    <div id="side" class="btn btn--views">SIDE</div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <section id="env-data"></section>
 
@@ -49,5 +49,3 @@
 
 <div id="full-page-overlay" class="full-page-overlay full-page-overlay--loading"></div>
 <progress id="prog-bar" min=0 max=100 value=0></progress>
-
-<footer></footer>

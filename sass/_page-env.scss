@@ -69,7 +69,7 @@
     }
 
     .btn--views {
-        width: 29.3%;
+        width: 45.3%;
         height: 40px;
         margin: 0 2% 4%;
         padding: 0;
@@ -144,7 +144,7 @@
 }
 
 #model-views-wrapper {
-    width: 65%;
+    width: 50%;
     max-width: 1400px;
     margin: 0 auto;
     position: fixed;
@@ -231,6 +231,11 @@
 }
 
 .env-data-pod--nearby {
+    display: none;
+}
+
+.env-data-pod--weather {
+    display: none;
 }
 
 #model {
