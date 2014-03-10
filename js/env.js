@@ -141,7 +141,7 @@ function init() {
         if(e.target.className.match(/btn--selected/)) { return false; }
 
         vMenuCheckbox.checked = false;
-        v360.className = vTop.className = vSide.className = 'btn btn--views';
+        v360.className = vTop.className = 'btn btn--views';
 
         controls.removeAllEventListeners();
 
@@ -160,15 +160,6 @@ function init() {
                 // TODO: Animation 'clicks' potentially due to OrbitControls.autoRotation not being animated
                 new TWEEN.Tween(camera.position).to({
                     x: 0, y: 1000, z: 0
-                }, 500).onUpdate(function() {
-                    camera.lookAt(scene.position);
-                }).start().onComplete(reinstateControls);
-                break;
-
-            case 'side':
-                vSide.className += ' btn--selected';
-                new TWEEN.Tween(camera.position).to({
-                    x: 1000, y: 0, z: 0
                 }, 500).onUpdate(function() {
                     camera.lookAt(scene.position);
                 }).start().onComplete(reinstateControls);
@@ -214,13 +205,11 @@ function init() {
     var vMenuCheckbox = document.getElementById('model-menu-toggle');
     var v360          = document.getElementById('360');
     var vTop          = document.getElementById('top');
-    var vSide         = document.getElementById('side');
     var iDefault      = document.getElementById('default');
     var iWebcam       = document.getElementById('webcam');
 
     v360.addEventListener('click', function(e) { switchView('360', e); });
     vTop.addEventListener('click', function(e) { switchView('top', e); });
-    vSide.addEventListener('click', function(e) { switchView('side', e); });
     iDefault.addEventListener('click', function(e) { switchInteraction('default', e); });
     iWebcam.addEventListener('click', function(e) { switchInteraction('webcam', e); });
 
