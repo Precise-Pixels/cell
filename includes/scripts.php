@@ -12,6 +12,10 @@
 
     <script src='/js/all.js'></script>
 
+    <?php if($isTechnology): ?>
+        <script src="/js/threejs-tweenjs-stats-loaders-controls-stackblur.js"></script>
+    <?php endif; ?>
+
     <?php if($isEnv): ?>
         <script>
             var userId    = <?= $userId; ?>;
@@ -47,6 +51,10 @@
     <?php endif; ?>
 
     <script src='/build/all.min.js'></script>
+
+    <?php if($isTechnology): ?>
+        <script src="/build/threejs-tweenjs-stats-loaders-controls-stackblur.min.js"></script>
+    <?php endif; ?>
 
     <?php if($isEnv): ?>
         <script>var userId=<?= $userId; ?>,envId=<?= $envId; ?>,latitude=<?= $env->latitude; ?>,longitude=<?= $env->longitude; ?>;</script>
