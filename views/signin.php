@@ -3,9 +3,9 @@ require_once('php/LoginSystem.php');
 $loginSystem = new LoginSystem();
 ?>
 
-<header class="fixed-header section-padding align-centre dgrey">
+<header id="fixed-header" class="fixed-header section-padding">
     <hgroup class="align-vertical">
-        <h1>MYCELL</h1>
+        <h1>MY CELL</h1>
     </hgroup>
 </header>
 
