@@ -17,7 +17,7 @@
 .homepage-logo {
     margin-top: 36px;
     margin-right: 0;
-    font-size: 5rem;
+    font-size: 10rem;
 }
 
 /* cube */
@@ -207,36 +207,37 @@
 
 @media ($min_bp_a) {
     .wrapper {
-      top: 25%;
+        top: 25%;
     }
     
     .homepage-logo {
-      font-size: 8rem;
+        margin-top: 58px;
+        font-size: 12rem;
     }
 
     .cube {
-        width: 200px;
+        width: 300px;
     }
 
     .cube > div {
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
     }
 
     .front {
-        transform: translateZ(100px);
+        transform: translateZ(150px);
     }
 
     .right {
-        transform: rotateY(90deg) translateZ(100px);
+        transform: rotateY(90deg) translateZ(150px);
     }
 
     .back {
-        transform: translateZ(-100px) rotateY(180deg);
+        transform: translateZ(-150px) rotateY(180deg);
     }
 
     .left {
-        transform: rotateY(270deg) translateZ(100px);
+        transform: rotateY(270deg) translateZ(150px);
     }
 }
 
