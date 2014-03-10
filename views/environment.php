@@ -2,15 +2,12 @@
 
     <header>
         <hgroup class="align-vertical">
-            <h1><i class="ico-env"></i><?= $env->name; ?></h1>
+            <a href="/user/<?= $username ?>">
+                <img src="http://www.gravatar.com/avatar/<?= (isset($env->email) ? md5(strtolower(trim($env->email))) : 1); ?>?d=mm&amp;s=60" alt="<?= $username ?>"/>
+            </a>
+            <h1><?= $env->name; ?></h1>
             <h2><i class="ico-pin"></i><?= $env->latitude; ?>, <?= $env->longitude; ?></h2>
         </hgroup>
-        <div id="env-user-badge">
-            <a href="/user/<?= $username ?>">
-                <img src="http://www.gravatar.com/avatar/<?= (isset($env->email) ? md5(strtolower(trim($env->email))) : 1); ?>?d=mm&amp;s=40" alt="<?= $username ?>"/>
-                <p><?= $username ?></p>
-            </a>
-        </div>
     </header>
 
     <section id="env-interface">
@@ -32,7 +29,6 @@
             </div>
         </div>
     </section>
-
 
     <section id="env-data"></section>
 

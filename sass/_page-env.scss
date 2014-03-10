@@ -44,9 +44,13 @@
             text-align: left;
             hgroup {
                 float: left;
-                width: auto;
+                width: 100%;
             }
-            h1 {
+            a {
+                margin-top: 4px;
+                margin-right: 15px;
+                float: left;
+                text-decoration: none;
             }
             h2 {
                 font-weight: 300;
@@ -91,16 +95,6 @@
         display: none;
     }
 }
-
-#env-user-badge {
-    margin-top: 10px;
-    float: right;
-    text-align: right;
-    p {
-        margin: 0;
-        font-size: 1rem;
-     }
- }
 
 #env-interface {
     width: 100%;
@@ -209,7 +203,7 @@
 .env-data-pod {
     position: absolute;
     padding: 10px;
-    border: 1px solid #444;
+    border: 1px solid #666;
     p {
         margin-bottom: 0;
     }
@@ -288,11 +282,11 @@
         height: auto;
         overflow: hidden;
         position: absolute;
+        top: 40px;
         right: 175px;
-        top: 140px;
         bottom: auto;
         padding: 5px;
-        border: 1px solid #444;
+        border: 1px solid #666;
         text-align: center;
         background: none;
             p {
@@ -327,12 +321,12 @@
         width: 140px;
         height: auto;
         position: absolute;
+        top: 40px;
         right: 20px;
-        top: 140px;
         bottom: auto;
         left: auto;
         padding: 5px;
-        border: 1px solid #444;
+        border: 1px solid #666;
     }
 
     #model-views {
