@@ -206,6 +206,10 @@
 }
 
 @media ($min_bp_a) {
+    .wrapper {
+      top: 25%;
+    }
+    
     .homepage-logo {
       font-size: 8rem;
     }
