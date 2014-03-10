@@ -2,54 +2,27 @@
 var $container, containerX, containerY, scene, camera, displace, renderer, controls;
 
 if(Detector.webgl) {
-    // REQUEST MAHOOSIVE FILE AND UPDATE PROGRESS BAR
-    var $progBar = document.getElementById('prog-bar');
+    // Blur height map
+    var heightMap = new Image();
+    heightMap.src  = '/img/user/' + userId + '/height-map-' + envId + '.png';
 
-    var xhr = new XMLHttpRequest();
+    heightMap.addEventListener('load', function() {
+        var canvas = document.createElement('canvas');
+        var ctx = canvas.getContext('2d');
+        ctx.drawImage(heightMap, 0, 0, heightMap.width, heightMap.height);
+        stackBlurImage(heightMap, canvas, 20);
+        ctx.lineWidth = 2;
+        ctx.strokeRect(0, 0, heightMap.width, heightMap.height);
+        displace = new THREE.Texture(canvas);
+        displace.needsUpdate = true;
 
-    xhr.open('get', '/php/getThreeJS.php', true);
-    xhr.send();
+        init();
+    });
 
-    xhr.onprogress = function(e) {
-        var responseText = xhr.responseText;
-
-        if(responseText.length > 10) {
-            var total = responseText.match(/\d{6}?/);
-            $progBar.value = e.loaded / total[0] * 100;
-        }
-
-        xhr.responseText = ''; // clear responseText to save memory
-    };
-
-    xhr.onreadystatechange = function() {
-        if(xhr.readyState == 4) {
-            var s = document.createElement('script');
-            s.appendChild(document.createTextNode(xhr.responseText));
-            document.body.appendChild(s);
-
-            // Blur height map
-            var heightMap = new Image();
-            heightMap.src  = '/img/user/' + userId + '/height-map-' + envId + '.png';
-
-            heightMap.addEventListener('load', function() {
-                var canvas = document.createElement('canvas');
-                var ctx = canvas.getContext('2d');
-                ctx.drawImage(heightMap, 0, 0, heightMap.width, heightMap.height);
-                stackBlurImage(heightMap, canvas, 20);
-                ctx.lineWidth = 2;
-                ctx.strokeRect(0, 0, heightMap.width, heightMap.height);
-                displace = new THREE.Texture(canvas);
-                displace.needsUpdate = true;
-
-                init();
-            });
-
-            heightMap.addEventListener('error', function() {
-                alert('Error: The height map data for this environment has gone missing. Please try cloning a new environment.');
-                window.location.href = '/user/' + userId + '/env/new';
-            });
-        }
-    }
+    heightMap.addEventListener('error', function() {
+        alert('Error: The height map data for this environment has gone missing. Please try cloning a new environment.');
+        window.location.href = '/user/' + userId + '/env/new';
+    });
 }
 
 // ThreeJS Setup

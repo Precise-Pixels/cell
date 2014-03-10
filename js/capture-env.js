@@ -1,34 +1,21 @@
 var $container, scene, camera, displace, renderer;
 
-var xhr = new XMLHttpRequest();
+// Blur height map
+var heightMap = new Image();
+heightMap.src  = '/img/user/' + userId + '/height-map-' + envId + '.png';
 
-xhr.open('get', '/php/getThreeJS.php', true);
-xhr.send();
+heightMap.addEventListener('load', function() {
+    var canvas = document.createElement('canvas');
+    var ctx = canvas.getContext('2d');
+    ctx.drawImage(heightMap, 0, 0, heightMap.width, heightMap.height);
+    stackBlurImage(heightMap, canvas, 20);
+    ctx.lineWidth = 2;
+    ctx.strokeRect(0, 0, heightMap.width, heightMap.height);
+    displace = new THREE.Texture(canvas);
+    displace.needsUpdate = true;
 
-xhr.onreadystatechange = function() {
-    if(xhr.readyState == 4) {
-        var s = document.createElement('script');
-        s.appendChild(document.createTextNode(xhr.responseText));
-        document.body.appendChild(s);
-
-        // Blur height map
-        var heightMap = new Image();
-        heightMap.src  = '/img/user/' + userId + '/height-map-' + envId + '.png';
-
-        heightMap.addEventListener('load', function() {
-            var canvas = document.createElement('canvas');
-            var ctx = canvas.getContext('2d');
-            ctx.drawImage(heightMap, 0, 0, heightMap.width, heightMap.height);
-            stackBlurImage(heightMap, canvas, 20);
-            ctx.lineWidth = 2;
-            ctx.strokeRect(0, 0, heightMap.width, heightMap.height);
-            displace = new THREE.Texture(canvas);
-            displace.needsUpdate = true;
-
-            init();
-        });
-    }
-}
+    init();
+});
 
 // ThreeJS Setup
 function init() {

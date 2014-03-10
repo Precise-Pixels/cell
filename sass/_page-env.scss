@@ -1,39 +1,3 @@
-// Webkit: Bar
-#prog-bar::-webkit-progress-bar {
-    background: $dblue;
-}
-
-// Webkit: Value
-#prog-bar::-webkit-progress-value {
-    background: #FFF;
-}
-
-// FF: Value
-#prog-bar::-moz-progress-bar {
-    background: #FFF;
-}
-
-.no-webgl #prog-bar,
-.env--loaded #prog-bar {
-    display: none; 
-}
-
-#prog-bar {
-    width: 40%;
-    height: 12px;
-    position: fixed;
-    margin-left: -20%;
-    left: 50%;
-    bottom: 20%;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border: none;
-    // IE: Value
-    color: #FFF;
-    z-index: 5;
-}
-
 .env {
     color: $lgrey;
     main {
