@@ -3,7 +3,7 @@ if(Detector.webgl) {
 }
 
 // ThreeJS Setup
-var $container, containerX, containerY, scene, camera, displace, renderer, controls;
+var $container, containerX, containerY, scene, camera, ambient, directional, loader, controls, renderer;
 
 function init() {
     $container = document.getElementById('clone-cube');
@@ -22,11 +22,29 @@ function init() {
     camera.lookAt(scene.position);
 
     // Lights
-    ambientLight = new THREE.AmbientLight(0xffffff);
-    scene.add(ambientLight);
+    // ambient = new THREE.AmbientLight(0xffffff);
+    // scene.add(ambient);
+
+    directional = new THREE.DirectionalLight(0xffffff, 1);
+    directional.position.set(600, 800, 100);
+    directional.caseShadow = true;
+    directional.shadowCameraVisible = true;
+    directional.shadowMapWidth = directional.shadowMapWidth = 2048;
+
+    var d = 50;
+
+    directional.shadowCameraLeft = -d;
+    directional.shadowCameraRight = d;
+    directional.shadowCameraTop = d;
+    directional.shadowCameraBottom = -d;
+
+    directional.shadowCameraFar = 1000;
+    directional.shadowDarkness = 0.5;
+
+    scene.add(directional);
 
     // Geometry
-    var loader = new THREE.OBJMTLLoader();
+    loader = new THREE.OBJMTLLoader();
 
     loader.addEventListener('load', function(e) {
         var object = e.content;
@@ -35,7 +53,7 @@ function init() {
         scene.add(object);
     });
 
-    loader.load( '/3d/clone-cube.obj', '/3d/clone-cube.mtl' );
+    loader.load('/3d/clone-cube.obj', '/3d/clone-cube.mtl');
 
     // Controls
     controls = new THREE.OrbitControls(camera, $container, '360', containerX);
