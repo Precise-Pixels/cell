@@ -6,6 +6,7 @@
     display: table;
     text-align: center;
     background-size: cover;
+    background-position: center;
     z-index: 2;
 }
 
@@ -14,11 +15,9 @@
 }
 
 .homepage-logo {
-    position: relative;
-    margin-top: -40px;
+    margin-top: 36px;
     margin-right: 0;
-    font-size: 14rem;
-    z-index: 1;
+    font-size: 5rem;
 }
 
 /* cube */
@@ -27,7 +26,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 30%;
+    top: 36%;
     perspective: 800;
     perspective-origin: 50%;
     z-index: 1;
@@ -50,27 +49,31 @@
     height: 150px;
     display: block;
     font-size: 0;
+    opacity: .3;
 }
 
 .front {
     transform: translateZ(75px);
 }
+
 .right {
     transform: rotateY(90deg) translateZ(75px);
 }
+
 .back {
     transform: translateZ(-75px) rotateY(180deg);
 }
+
 .left {
     transform: rotateY(270deg) translateZ(75px);
 }
 
 .dark {
-    background: $dgrey;
+    background: #CCC;
 }
 
 .light {
-    background: $mgrey;
+    background: #666;
 }
 
 /* cube end */
@@ -203,13 +206,8 @@
 }
 
 @media ($min_bp_a) {
-    .wrapper {
-        top: 20%;
-    }
-
     .homepage-logo {
-      margin-top: -70px;
-      font-size: 20rem;
+      font-size: 8rem;
     }
 
     .cube {

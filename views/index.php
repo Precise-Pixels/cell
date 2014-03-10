@@ -5,8 +5,8 @@
             <div class="back dark">BACK</div>
             <div class="left light">LEFT</div>
             <div class="right light">RIGHT</div>
+            <i class="ico-cell-logo homepage-logo"></i>
         </div>
-        <i class="ico-cell-logo homepage-logo"></i>
     </div>
     <hgroup class="align-vertical cell-header">
         <h1>CELL INDUSTRIES</h1>
