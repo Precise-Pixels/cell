@@ -39,7 +39,8 @@ function init() {
         zoomControl: false,
         panControl: false,
         mapTypeControl: false,
-        streetViewControl: false
+        streetViewControl: false,
+        backgroundColor: '#333'
     });
 
     var styles = [
