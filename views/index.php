@@ -1,4 +1,4 @@
-<header id="primary-header" class="section-padding sdgrey">
+<header id="primary-header" class="fixed-header--home section-padding sdgrey">
     <div class="wrapper">
         <div class="cube">
             <div class="front dark">FRONT</div>
