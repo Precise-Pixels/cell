@@ -5,7 +5,7 @@ $loginSystem = new LoginSystem();
 
 <header id="fixed-header" class="fixed-header section-padding">
     <hgroup class="align-vertical">
-        <h1>MY CELL</h1>
+        <h1>SIGN IN / REGISTER</h1>
     </hgroup>
 </header>
 
