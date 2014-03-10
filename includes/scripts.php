@@ -2,15 +2,15 @@
 // SANDBOX ?>
 
     <?php if($isHome): ?>
-        <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4&sensor=false&libraries=places'></script>
-        <script src='/js/page-home.js'></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4&sensor=false&libraries=places"></script>
+        <script src="/js/page-home.js"></script>
     <?php endif; ?>
 
     <?php if($isAbout): ?>
-        <script src='/js/timeline-scroll.js'></script>
+        <script src="/js/timeline-scroll.js"></script>
     <?php endif; ?>
 
-    <script src='/js/all.js'></script>
+    <script src="/js/all.js"></script>
 
     <?php if($isTechnology): ?>
         <script src="/js/threejs-tweenjs-stats-loaders-controls-stackblur.js"></script>
@@ -29,8 +29,8 @@
     <?php endif; ?>
 
     <?php if($isNewEnv): ?>
-        <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4&sensor=false&libraries=places'></script>
-        <script src='/js/new-env.js'></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4&sensor=false&libraries=places"></script>
+        <script src="/js/new-env.js"></script>
     <?php endif; ?>
 
     <?php if($isCapturing): ?>
@@ -42,15 +42,15 @@
 // LIVE ?>
 
     <?php if($isHome): ?>
-        <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4&sensor=false&libraries=places'></script>
-        <script src='/build/page-home.min.js'></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4&sensor=false&libraries=places"></script>
+        <script src="/build/page-home.min.js"></script>
     <?php endif; ?>
 
     <?php if($isAbout): ?>
-        <script src='/build/timeline-scroll.min.js'></script>
+        <script src="/build/timeline-scroll.min.js"></script>
     <?php endif; ?>
 
-    <script src='/build/all.min.js'></script>
+    <script src="/build/all.min.js"></script>
 
     <?php if($isTechnology): ?>
         <script src="/build/threejs-tweenjs-stats-loaders-controls-stackblur.min.js"></script>
@@ -64,8 +64,8 @@
     <?php endif; ?>
 
     <?php if($isNewEnv): ?>
-        <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4&sensor=false&libraries=places'></script>
-        <script src='/build/new-env.min.js'></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4&sensor=false&libraries=places"></script>
+        <script src="/build/new-env.min.js"></script>
     <?php endif; ?>
 
     <?php if($isCapturing): ?>
