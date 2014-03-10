@@ -14,6 +14,7 @@
 
     <?php if($isTechnology): ?>
         <script src="/js/threejs-tweenjs-stats-loaders-controls-stackblur.js"></script>
+        <script src="/js/page-technology.js"></script>
     <?php endif; ?>
 
     <?php if($isEnv): ?>
@@ -54,6 +55,7 @@
 
     <?php if($isTechnology): ?>
         <script src="/build/threejs-tweenjs-stats-loaders-controls-stackblur.min.js"></script>
+        <script src="/build/page-technology.min.js"></script>
     <?php endif; ?>
 
     <?php if($isEnv): ?>
