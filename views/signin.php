@@ -3,7 +3,7 @@ require_once('php/LoginSystem.php');
 $loginSystem = new LoginSystem();
 ?>
 
-<header id="fixed-header" class="fixed-header section-padding">
+<header id="fixed-header" class="fixed-header--signin section-padding">
     <hgroup class="align-vertical">
         <h1>SIGN IN / REGISTER</h1>
     </hgroup>
