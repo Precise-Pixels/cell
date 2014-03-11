@@ -15,8 +15,8 @@
     <section>
         <div class="section-padding align-centre lgrey">
             <h1><i class="ico-company"></i>THE COMPANY</h1>
-            <p class="half-margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo. Suspendisse adipiscing nunc tortor, eget accumsan tellus tincidunt at. Ut suscipit elit id tellus tincidunt, ac luctus nisi consectetur. Proin velit libero, faucibus sed ultricies eget, pulvinar sit amet erat.</p>
-            <p class="half-margin">Integer sit amet nibh sit amet lectus luctus placerat. Suspendisse eget arcu tortor. Fusce pretium sodales nisl et tempus. Curabitur pretium pellentesque libero. Curabitur pretium malesuada purus, id posuere neque. Donec ante metus, rutrum id lacus ut, ultricies aliquam magna.</p>
+            <p class="half-margin">Cell Industries is the fastest growing company to date and we achieved this by constnatly striving for a better world through technology. We invest heavily in our people as we believe that this is the key to constnat progresstion.</p>
+            <p class="half-margin">Every day Cell Industries pushes itself further in its capabilities. We are constantly discovering new and groundbreaking breakthroughs which we happily make avilable to everyone so we can move into the future together.</p>
         </div>
     </section>
 
