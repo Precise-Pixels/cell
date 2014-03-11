@@ -1,5 +1,5 @@
 <header id="primary-header" class="fixed-header--home section-padding sdgrey">
-    <div class="wrapper">
+    <div class="cube-wrapper">
         <div class="cube">
             <div class="front dark">FRONT</div>
             <div class="back dark">BACK</div>

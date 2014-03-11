@@ -19,9 +19,7 @@
     font-size: 6rem;
 }
 
-/* cube */
-
-.wrapper {
+.cube-wrapper {
     position: absolute;
     left: 0;
     right: 0;
@@ -41,7 +39,6 @@
     animation: spin 36s infinite linear;
 }
 
-/* outer cube */
 .cube > div {
     position: absolute;
     width: 150px;
@@ -74,8 +71,6 @@
 .light {
     background: #666;
 }
-
-/* cube end */
 
 #page-flow {
     width: 100%;
