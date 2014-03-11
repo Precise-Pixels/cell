@@ -113,6 +113,9 @@
 
 #homepage-company {
     padding: 120px;
+    h1 {
+        margin: 0;
+    }
 }
 
 @media ($min_bp_b) {
