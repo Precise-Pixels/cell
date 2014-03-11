@@ -71,12 +71,12 @@ if($hasData == 'true') {
                 break;
         }
 
-        echo '<div class="env-data-pod ' . $class . '">';   
+        echo '<div class="env-interface-element env-data-pod ' . $class . '">';
         
-            echo '<h1>' . '<i  class=" '. $icon .' "></i>' . $title . '</h1>';
+            echo '<h1><i class=" '. $icon .' "></i>' . $title . '</h1>';
         
         foreach($categoryPods as $pod) {
-            echo '<h2>' . $pod[0]->attributes()->title . '</h2>' . '<p>' . $pod[0]->subpod->plaintext . '<p>';
+            echo '<h2>' . $pod[0]->attributes()->title . '</h2><p>' . $pod[0]->subpod->plaintext . '<p>';
         }
 
         echo '</div>';

@@ -58,6 +58,10 @@
     display: none;
     background: none;
     .webgl & {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
         display: block;
     }
 }
@@ -101,31 +105,27 @@
 #env-map {
     width: 129px;
     height: 129px;
-    padding: 10px;
-    position: fixed;
-    top: 80px;
+    top: 40px;
     right: 336px;
-    overflow: hidden;
-    font-size: 1.5rem;
-    border: 1px solid $mgrey;
     text-align: center;
-    transition: all .3s;
     img {
         width: 100%;
-        height: auto;
     }
     &:hover {
         width: 400px;
         height: 400px;
-        background: $dgrey;
-        i {
-            display: none;
-        }
     }
 }
 
-#env-data {
+.env-interface-element {
+    position: absolute;
+    padding: 10px;
+    border: 1px solid $mgrey;
+    transition: width .3s, height .3s, background .3s;
     color: $lgrey;
+    &:hover {
+        background: $dgrey;
+    }
     h1 {
         margin: 0;
         font-weight: 300;
@@ -140,29 +140,22 @@
     }
 }
 
-.env-data-pod {
-    position: absolute;
-    padding: 10px;
-    border: 1px solid $mgrey;
+#env-share {
+    width: 300px;
+    right: 10px;
+    bottom: 10px;
 }
 
 .env-data-pod--time {
     width: 325px;
+    top: 160px;
     left: 20px;
-    transition: background .3s;
-    &:hover {
-        background: $dgrey;
-    }
 }
 
 .env-data-pod--weather {
     width: 325px;
     top: 320px;
     left: 20px;
-    transition: background .3s;
-    &:hover {
-        background: $dgrey;
-    }
 }
 
 .env-data-pod--people {
@@ -177,10 +170,6 @@
     overflow-y: auto;
     top: 185px;
     right: 20px;
-    transition: background .3s;
-    &:hover {
-        background: $dgrey;
-    }
 }
 
 #model {
