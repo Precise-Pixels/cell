@@ -5,7 +5,7 @@
             <div class="back dark">BACK</div>
             <div class="left light">LEFT</div>
             <div class="right light">RIGHT</div>
-            <i class="ico-cell-logo homepage-logo"></i>
+            <img src="/img/logo.gif">
         </div>
     </div>
     <hgroup class="align-vertical cell-header">
