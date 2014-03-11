@@ -222,6 +222,7 @@
         bottom: auto;
         padding: 10px;
         border: 1px solid $mgrey;
+        transition: background .3s;
         background: none;
         h1 {
             display: block;
@@ -229,6 +230,9 @@
         p {
             display: block;
             margin-bottom: 0;
+        }
+        &:hover {
+            background: $dgrey;
         }
     }
 
