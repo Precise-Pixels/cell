@@ -65,6 +65,7 @@
 #model-interaction {
     width: 100%;
     height: 40px;
+    padding: 0;
     position: fixed;
     bottom: 20px;
     background: none;
@@ -153,9 +154,9 @@
 
 .env-data-pod--nearby {
     width: 300px;
-    max-height: 400px;
+    max-height: 390px;
     overflow-y: auto;
-    top: 175px;
+    top: 185px;
     right: 20px;
     transition: background .3s;
     &:hover {
@@ -219,7 +220,7 @@
         top: 40px;
         right: 20px;
         bottom: auto;
-        padding: 5px;
+        padding: 10px;
         border: 1px solid $mgrey;
         background: none;
         h1 {

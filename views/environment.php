@@ -14,7 +14,7 @@
         <div id="model"><img src="/img/user/<?= $env->userId; ?>/capture-<?= $envId; ?>.jpg" alt="<?= $env->name; ?>"/></div>
         <div id="env-interface-elements">
             <div id="model-interaction" class="sdgrey">
-                <h1>Interact</h1>
+                <h1><i class="ico-home"></i>Interact</h1>
                 <div id="default" class="btn btn--selected"><i class="ico-hand"></i></div>
                 <div id="webcam" class="btn"><i class="ico-webcam"></i></div>
             </div>
