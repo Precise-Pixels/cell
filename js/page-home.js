@@ -23,7 +23,7 @@ pageFlow.addEventListener('click', function(e) {
     var target   = document.getElementById('firststeps').offsetParent.offsetTop;
     var timer = setInterval(function() {
         window.scrollTo(0, position);
-        position += 50;
+        position += 40;
         if(position >= target) {
             clearInterval(timer);
         }
