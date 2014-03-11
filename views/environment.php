@@ -22,6 +22,10 @@
                 <img src="http://maps.googleapis.com/maps/api/staticmap?center=<?= $env->latitude; ?>,<?= $env->longitude; ?>&zoom=10&size=380x380&scale=2&maptype=hybrid&sensor=false&key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4">
             </div>
             <section id="env-data"></section>
+            <div id="env-share" class="env-interface-element">
+                <h1><i class="ico-share"></i>SHARE</h1>
+                <div class="fb-share-button" data-href="http://<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>" data-type="button_count"></div>
+            </div>
         </div>
     </section>
 

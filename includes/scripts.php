@@ -22,6 +22,14 @@
         <script src="/js/threejs-stats-loaders-controls-stackblur.js"></script>
         <script src="/js/env.js"></script>
         <script src="/js/gesture.js"></script>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=140539425969500";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
     <?php endif; ?>
 
     <?php if($isNewEnv): ?>
@@ -53,6 +61,14 @@
         <script src="/build/threejs-stats-loaders-controls-stackblur.min.js"></script>
         <script src="/build/env.min.js"></script>
         <script src="/build/gesture.min.js"></script>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=140539425969500";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
     <?php endif; ?>
 
     <?php if($isNewEnv): ?>
