@@ -128,10 +128,11 @@
 
 .env-data-pod--nearby {
     width: 300px;
-    max-height: 370px;
+    max-height: 425px;
     overflow-y: scroll;
-    top: 210px;
+    top: 155px;
     right: 20px;
+    background: $dgrey;
 }
 
 #model {
