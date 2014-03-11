@@ -111,6 +111,10 @@
     background: $dgrey;
 }
 
+#homepage-company {
+    padding: 120px;
+}
+
 @media ($min_bp_b) {
     .homepage-map-data--left {
         position: absolute;

@@ -42,18 +42,18 @@
         </div>
     </section>
 
-    <section class="sdgrey">
+    <section id="homepage-company" class="sdgrey">
         <div class="section-padding align-centre">
             <div class="third-margin">
-                <h2>INNOVATE</h2>
+                <h1>INNOVATE</h1>
                 <p>Constantly breaking the boundaries of mondern day science.</p>
             </div>
             <div class="third-margin">
-                <h2>APPLY</h2>
+                <h1>APPLY</h1>
                 <p>Using the new technologies we discover for means that benifit you.</p>
             </div>
             <div class="third-margin">
-                <h2>CHANGE</h2>
+                <h1>CHANGE</h1>
                 <p>Improving your life and well being to improve all of our futures.</p>
             </div>
         </div>
