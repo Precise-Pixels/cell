@@ -46,15 +46,15 @@
         <div class="section-padding align-centre">
             <div class="third-margin">
                 <h1>INNOVATE</h1>
-                <p>Constantly breaking the boundaries of mondern day science.</p>
+                <p>Constantly breaking the boundaries of modern day science.</p>
             </div>
             <div class="third-margin">
                 <h1>APPLY</h1>
-                <p>Using the new technologies we discover for means that benifit you.</p>
+                <p>Using the new technologies we discover to benefit you.</p>
             </div>
             <div class="third-margin">
                 <h1>CHANGE</h1>
-                <p>Improving your life and well being to improve all of our futures.</p>
+                <p>Improving your life and wellbeing to develop all of our futures.</p>
             </div>
         </div>
     </section>
