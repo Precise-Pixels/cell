@@ -15,9 +15,10 @@
 
 .cube-wrapper {
     position: absolute;
+    margin-top: -75px;
+    top: 50%;
     left: 0;
     right: 0;
-    top: 36%;
     perspective: 800;
     perspective-origin: 50%;
     z-index: 1;
@@ -198,13 +199,8 @@
 }
 
 @media ($min_bp_a) {
-    .wrapper {
-        top: 25%;
-    }
-    
-    .homepage-logo {
-        margin-top: 58px;
-        font-size: 12rem;
+    .cube-wrapper {
+        margin-top: -150px;
     }
 
     .cube {
