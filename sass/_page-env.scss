@@ -109,17 +109,24 @@
 }
 
 .env-data-pod--time {
-    width: auto;
+    width: 325px;
     top: 180px;
     left: 20px;
 }
 
 .env-data-pod--nearby {
-    display: none;
+    width: 325px;
+    max-height: 400px;
+    overflow-y: scroll;
+    top: 210px;
+    right: 20px;
 }
 
 .env-data-pod--weather {
-    display: none;
+    width: 325px;
+    overflow-y: scroll;
+    top: 280px;
+    left: 20px;
 }
 
 #model {
@@ -142,7 +149,7 @@
     width: 100%;
     height: 40px;
     top: 0;
-    position: absolute;
+    position: fixed;
     background: $dgrey;
     z-index: 2;
 }
