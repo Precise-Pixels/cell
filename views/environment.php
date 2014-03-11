@@ -15,8 +15,8 @@
         <div id="env-interface-elements">
             <div id="model-interaction" class="sdgrey">
                 <h1><i class="ico-home"></i>Interact</h1>
-                <div id="default" class="btn btn--selected"><i class="ico-hand"></i></div>
-                <div id="webcam" class="btn"><i class="ico-webcam"></i></div>
+                <div id="default" class="btn btn--selected" title="Drag"><i class="ico-hand"></i></div>
+                <div id="webcam" class="btn" title="Webcam"><i class="ico-webcam"></i></div>
             </div>
         </div>
     </section>
