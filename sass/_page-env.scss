@@ -97,7 +97,6 @@
 
 #env-data {
     color: $lgrey;
-    transition: opacity .3s;
 }
 
 .env-data-pod {
@@ -114,16 +113,22 @@
     left: 20px;
     opacity: 0.5;
     background: $dgrey;
+    transition: opacity .3s;
     &:hover {
         opacity: 1;
     }
 }
 
 .env-data-pod--weather {
-    display: none;
-    margin-top: 20px;
+    margin-top: 105px;
     width: 325px;
     left: 20px;
+    opacity: 0.5;
+    transition: opacity .3s;
+    background: $dgrey;
+    &:hover {
+        opacity: 1;
+    }
 }
 
 .env-data-pod--people {
@@ -140,6 +145,7 @@
     top: 155px;
     right: 20px;
     opacity: 0.5;
+    transition: opacity .3s;
     background: $dgrey;
     &:hover {
         opacity: 1;
