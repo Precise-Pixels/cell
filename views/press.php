@@ -57,7 +57,7 @@
                         <footer>Professor Milhouse, Lecturer</footer>
                     </blockquote></li>
                     <li><blockquote>
-                        <p>Simply brillient. The best use of technology I have seen in a long time.</p>
+                        <p>Simply brilliant. The best use of technology I have seen in a long time.</p>
                         <footer>Sarah Bird, Editor of WIRED</footer>
                     </blockquote></li>
                 </ul>
