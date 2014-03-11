@@ -67,7 +67,15 @@
     height: 40px;
     position: fixed;
     bottom: 20px;
-    background: none;
+    background: none;    
+    h1 {
+        display: none;            
+        margin: 0;
+        font-weight: 300;
+        margin: 5px 0 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $mgrey;
+    }
     p {
         display: none;
     }
@@ -145,9 +153,9 @@
 
 .env-data-pod--nearby {
     width: 300px;
-    max-height: 425px;
+    max-height: 400px;
     overflow-y: auto;
-    top: 155px;
+    top: 175px;
     right: 20px;
     transition: background .3s;
     &:hover {   
@@ -214,6 +222,9 @@
         padding: 5px;
         border: 1px solid $mgrey;
         background: none;
+        h1 {
+            display: block;
+        }
         p {
             display: block;
             margin-bottom: 0;
