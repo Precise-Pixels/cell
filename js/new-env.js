@@ -206,7 +206,7 @@ function init() {
                             envForm.appendChild(warnNoName);
                         }
                     } else {
-                        warnUnavailable.innerHTML = 'Your selected area has already been cloned. Please select another area or <a href="' + tileAvailable.replace('false', '') + '">view the selected area</a>.';
+                        warnUnavailable.innerHTML = 'Your selected area has already been cloned. Please select another area or <a href="' + tileAvailable.replace('false', '') + '" target="_blank">view the selected area</a>.';
                         envForm.appendChild(warnUnavailable);
 
                         var warnNoNameElem = document.getElementById('new-env-warn-name');
