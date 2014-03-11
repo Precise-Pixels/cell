@@ -1,3 +1,7 @@
+#top-bar {
+    transition: background .8s;
+}
+
 body > header {
     width: 100%;
     height: 40px;
@@ -5,7 +9,6 @@ body > header {
     top: 0;
     z-index: 3;
     color: $lgrey;
-    transition: background .8s;
 }
 
 #site-nav,
