@@ -22,9 +22,12 @@
     </section>
 
     <section>
-        <div id="press-pack-download" class="align-centre section-padding sdgrey">
+        <div class="section-padding align-centre mblue">
             <h1><i class="ico-press-pack"></i>PRESS PACK</h1>
-            <a href="/signin" class="btn"><i class="ico-download"></i>DOWNLOAD</a>
+            <img src="/img/placeholder.gif" alt="Information pack" class="full"/>
+            <div id="press-pack-download">
+                <a href="/" class="btn"><i class="ico-download"></i>DOWNLOAD</a>
+            </div>
         </div>
     </section>
 
