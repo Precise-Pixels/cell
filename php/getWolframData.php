@@ -47,27 +47,27 @@ if($hasData == 'true') {
             case 'categoryLocation':
                 $class = 'env-data-pod--location';
                 $title = 'LOCATION';
-                $icon = 'ico-home';
+                $icon = 'ico-target';
                 break;
             case 'categoryNearby':
                 $class = 'env-data-pod--nearby';
                 $title = 'NEARBY';
-                $icon = 'ico-target';
+                $icon = 'ico-compass';
                 break;
             case 'categoryTime':
                 $class = 'env-data-pod--time';
                 $title = 'TIME';
-                $icon = 'ico-home';
+                $icon = 'ico-time';
                 break;
             case 'categoryWeather':
                 $class = 'env-data-pod--weather';
                 $title = 'WEATHER';
-                $icon = 'ico-key-people';
+                $icon = 'ico-weather';
                 break;
             case 'categoryPeople':
                 $class = 'env-data-pod--people';
                 $title = 'PEOPLE';
-                $icon = 'ico-people';
+                $icon = 'ico-key-people';
                 break;
         }
 
