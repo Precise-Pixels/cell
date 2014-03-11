@@ -45,16 +45,16 @@
     <section class="sdgrey">
         <div class="section-padding align-centre">
             <div class="third-margin">
-                <h2>.third-margin</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h2>INNOVATE</h2>
+                <p>Constantly breaking the boundaries of mondern day science.</p>
             </div>
             <div class="third-margin">
-                <h2>.third-margin</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h2>APPLY</h2>
+                <p>Using the new technologies we discover for means that benifit you.</p>
             </div>
             <div class="third-margin">
-                <h2>.third-margin</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h2>CHANGE</h2>
+                <p>Improving your life and well being to improve all of our futures.</p>
             </div>
         </div>
     </section>
