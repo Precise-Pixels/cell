@@ -14,7 +14,7 @@
             </div>
             <div class="section-padding half mblue">
                 <blockquote>
-                    <p>The process was easy to follow, efficient and intuative. The staff could not do enough for me and was very happy with the end product.</p>
+                    <p>Cloning an environment could not be easier. I found it fun and intuative to learn about the area in which I cloned.</p>
                     <footer>Mr Sea Shaw, Freelance Photographer</footer>
                 </blockquote>
             </div>
