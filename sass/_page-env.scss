@@ -219,10 +219,9 @@
 
     #default,
     #webcam {
-        width: 48%;
+        width: 49%;
         height: 50px;
         position: relative;
-        float: left;
         line-height: 20px;
         i {
             line-height: 15px
@@ -230,13 +229,12 @@
     }
 
     #default {
-        margin-right: 1%;
-        left: 0;
-        right: auto;
+        float: left;
+        left: auto;
     }
 
     #webcam {
-        right: 0;
-        left: auto;
+        float: right;
+        right: auto;
     }
 }
