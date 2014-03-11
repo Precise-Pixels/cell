@@ -23,7 +23,7 @@ function initWebcam() {
 
         function(error) {
             if(error.name == 'PermissionDeniedError') {
-                alert('Access to your webcam is required to use this feature.');
+                alert('Access to your webcam is required to use this feature. If you have previously denied access to your webcam on this website, you may need to re-enable it.');
                 var iDefault       = document.getElementById('default');
                 var iWebcam        = document.getElementById('webcam');
                 iWebcam.className  = 'btn btn--interact';
