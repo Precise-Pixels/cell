@@ -18,15 +18,6 @@
                 <div id="default" class="btn btn--selected"><i class="ico-hand"></i></div>
                 <div id="webcam" class="btn"><i class="ico-webcam"></i></div>
             </div>
-            <div id="model-views-wrapper" class="sdgrey">
-                <input type="checkbox" id="model-menu-toggle" class="checkbox-hack"/>
-                <label for="model-menu-toggle" id="model-menu-btn" class="ico-"></label>
-                <div id="model-views">
-                    <p>Views</p>
-                    <div id="360" class="btn btn--views btn--selected">360</div>
-                    <div id="top" class="btn btn--views">TOP</div>
-                </div>
-            </div>
         </div>
     </section>
 

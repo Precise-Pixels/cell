@@ -26,33 +26,19 @@
         width: auto;
     }
 
-    #env-interface-elements .btn {
-        cursor: pointer;
-        font-size: 1.2rem;
-    }
-
     .btn--menu:hover {
         color: #333;
         background:#ccc;
-    }
-
-    .btn--views {
-        width: 45.3%;
-        height: 40px;
-        margin: 0 2% 4%;
-        padding: 0;
-        float: left;
-        line-height: 40px;
-    }
-
-    .btn--selected:hover {
-        cursor:default;
     }
 
     .btn--selected {
         opacity: 1;
         color: #333;
         background: $lgrey;
+    }
+
+    .btn--selected:hover {
+        cursor: default;
     }
 
     footer {
@@ -92,6 +78,7 @@
     position: absolute;
     bottom: 0;
     line-height: 30px;
+    cursor: pointer;
 }
 
 #default {
@@ -100,65 +87,6 @@
 
 #webcam {
     right: 20px;
-}
-
-#model-views-wrapper {
-    width: 50%;
-    max-width: 1400px;
-    margin: 0 auto;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 20px;
-    background: none;
-}
-
-#model-menu-btn {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin-right: 0;
-    cursor: pointer;
-    font-size: 5rem;
-    text-align: center;
-    line-height: 50px;
-    opacity: 0.35;
-    z-index: 2;
-    &:before {
-       content: "\2d";
-    }
-}
-
-#model-views {
-    height: 0;
-    overflow: hidden;
-    margin-bottom: 23px;
-    padding: 10px 10px 40px;
-    opacity: 0;
-    text-align: center;
-    visibility: hidden;
-    transition: all .3s;
-    background: #222;
-}
-
-#model-menu-btn:hover {
-    opacity: 1;
-}
-
-#model-menu-toggle:checked ~ #model-menu-btn {
-    font-size: 3rem;
-    opacity: 1;
-}
-
-#model-menu-toggle:checked ~ #model-menu-btn:before {
-    content: "x";
-}
-
-#model-menu-toggle:checked ~ #model-views {
-    height: 100%;
-    visibility: visible;
-    opacity: 1;
 }
 
 #env-data {
@@ -231,27 +159,22 @@
 }
 
 @media ($min_bp_c) {
-    #model-menu-toggle,
-    #model-menu-btn, {
-        display: none;
-    }
-
     #model-interaction {
         width: 140px;
         height: auto;
         overflow: hidden;
         position: absolute;
         top: 40px;
-        right: 175px;
+        right: 20px;
         bottom: auto;
         padding: 5px;
         border: 1px solid #666;
         text-align: center;
         background: none;
-            p {
-                display: block;
-                margin-bottom: 0;
-            }
+        p {
+            display: block;
+            margin-bottom: 0;
+        }
     }
 
     #default,
@@ -274,38 +197,5 @@
     #webcam {
         right: 0;
         left: auto;
-    }
-
-    #model-views-wrapper {
-        width: 140px;
-        height: auto;
-        position: absolute;
-        top: 40px;
-        right: 20px;
-        bottom: auto;
-        left: auto;
-        padding: 5px;
-        border: 1px solid #666;
-    }
-
-    #model-views {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        visibility: visible;
-        opacity: 1;
-        background: none;
-        p {
-            display: block;
-            margin-bottom: 0;
-        }
-    }
-
-    .env .btn--views {
-        width: 100%;
-        height: 50px;
-        margin: 5px 0 0;
-        float: left;
-        line-height: 50px;
     }
 }

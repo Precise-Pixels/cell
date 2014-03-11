@@ -73,7 +73,7 @@ function init() {
     scene.add(podium);
 
     // Controls
-    controls = new THREE.OrbitControls(camera, $container, '360', containerX);
+    controls = new THREE.OrbitControls(camera, $container);
     controls.addEventListener('change', render);
 
     // Render
@@ -110,40 +110,6 @@ function init() {
         renderer.setSize(containerX, containerY);
     }
 
-    function switchView(view, e) {
-        if(e.target.className.match(/btn--selected/)) { return false; }
-
-        vMenuCheckbox.checked = false;
-        v360.className = vTop.className = 'btn btn--views';
-
-        controls.removeAllEventListeners();
-
-        switch(view) {
-            case '360':
-                v360.className += ' btn--selected';
-                new TWEEN.Tween(camera.position).to({
-                    x: 1000, y: 400, z: 400
-                }, 500).onUpdate(function() {
-                    camera.lookAt(scene.position);
-                }).start().onComplete(reinstateControls);
-                break;
-
-            case 'top':
-                vTop.className += ' btn--selected';
-                // TODO: Animation 'clicks' potentially due to OrbitControls.autoRotation not being animated
-                new TWEEN.Tween(camera.position).to({
-                    x: 0, y: 1000, z: 0
-                }, 500).onUpdate(function() {
-                    camera.lookAt(scene.position);
-                }).start().onComplete(reinstateControls);
-                break;
-        }
-
-        function reinstateControls() {
-            controls = new THREE.OrbitControls(camera, $container, view);
-        }
-    }
-
     function switchInteraction(interaction, e) {
         if(e.target.className.match(/btn--selected/)) { return false; }
 
@@ -175,14 +141,9 @@ function init() {
     }
 
     // Events
-    var vMenuCheckbox = document.getElementById('model-menu-toggle');
-    var v360          = document.getElementById('360');
-    var vTop          = document.getElementById('top');
-    var iDefault      = document.getElementById('default');
-    var iWebcam       = document.getElementById('webcam');
+    var iDefault = document.getElementById('default');
+    var iWebcam  = document.getElementById('webcam');
 
-    v360.addEventListener('click', function(e) { switchView('360', e); });
-    vTop.addEventListener('click', function(e) { switchView('top', e); });
     iDefault.addEventListener('click', function(e) { switchInteraction('default', e); });
     iWebcam.addEventListener('click', function(e) { switchInteraction('webcam', e); });
 

@@ -1757,11 +1757,10 @@ THREE.EventDispatcher.prototype.apply( THREE.OBJMTLLoader.prototype );
 //      controls.target.z = 150;
 // Simple substitute "OrbitControls" and the control should work as-is.
 
-THREE.OrbitControls = function ( object, domElement, view, maxDistance ) {
+THREE.OrbitControls = function ( object, domElement ) {
 
     this.object = object;
     this.domElement = ( domElement !== undefined ) ? domElement : document;
-    this.view = view;
 
     // API
 
@@ -1779,8 +1778,6 @@ THREE.OrbitControls = function ( object, domElement, view, maxDistance ) {
     this.minDistance = 80;
     this.maxDistance = 200;
     
-    // Limit rotation: 'x', both'
-    this.rotateDirection = 'both';
     this.rotateSpeed = .3;
 
     // Set to true to automatically rotate around the target
@@ -1796,13 +1793,6 @@ THREE.OrbitControls = function ( object, domElement, view, maxDistance ) {
     this.keys = { LEFT: 37, UP: 38, RIGHT: 39, DOWN: 40 };
     // Speed for keyboard rotation
     this.keyboardRotateSpeed = 6.0;
-
-    if ( view == 'top' ) {
-        this.rotateDirection = 'x';
-        this.autoRotate = false;
-    } else if ( view == 'side' ) {
-        this.rotateDirection = 'x';
-    }
 
     ////////////
     // internals
@@ -1968,11 +1958,7 @@ THREE.OrbitControls = function ( object, domElement, view, maxDistance ) {
 
             state = STATE.ROTATE;
 
-            if ( scope.rotateDirection == 'both' ) {
-                rotateStart.set( event.clientX, event.clientY );
-            } else {
-                rotateStart.set( event.clientX );
-            }
+            rotateStart.set( event.clientX, event.clientY );
 
         } else if ( event.button === 1 ) {
             if ( scope.noZoom === true ) { return; }
@@ -1999,26 +1985,13 @@ THREE.OrbitControls = function ( object, domElement, view, maxDistance ) {
 
         if ( state === STATE.ROTATE ) {
 
-            if ( scope.rotateDirection == 'both' ) {
-                rotateEnd.set( event.clientX, event.clientY );
-            } else {
-                rotateEnd.set( event.clientX );
-            }
+            rotateEnd.set( event.clientX, event.clientY );
             rotateDelta.subVectors( rotateEnd, rotateStart );
 
-            if ( scope.rotateDirection == 'both' ) {
-                // rotating across whole screen goes 360 degrees around
-                scope.rotateLeft( 2 * Math.PI * rotateDelta.x / element.clientWidth * scope.rotateSpeed );
-                // rotating up and down along whole screen attempts to go 360, but limited to 180
-                scope.rotateUp( 2 * Math.PI * rotateDelta.y / element.clientHeight * scope.rotateSpeed );
-            } else {
-                // rotating across whole screen goes 360 degrees around
-                if ( scope.view == 'top' ) {
-                    scope.rotateLeft( -2 * Math.PI * rotateDelta.x / element.clientWidth * scope.rotateSpeed );
-                } else {
-                    scope.rotateLeft( 2 * Math.PI * rotateDelta.x / element.clientWidth * scope.rotateSpeed );
-                }
-            }
+            // rotating across whole screen goes 360 degrees around
+            scope.rotateLeft( 2 * Math.PI * rotateDelta.x / element.clientWidth * scope.rotateSpeed );
+            // rotating up and down along whole screen attempts to go 360, but limited to 180
+            scope.rotateUp( 2 * Math.PI * rotateDelta.y / element.clientHeight * scope.rotateSpeed );
 
             rotateStart.copy( rotateEnd );
 
@@ -2093,30 +2066,26 @@ THREE.OrbitControls = function ( object, domElement, view, maxDistance ) {
         
         switch ( event.keyCode ) {
             case scope.keys.UP:
-                if ( scope.rotateDirection == 'both' ) {
-                    state = STATE.KEYBOARD_ROTATE_Y;
-                    scope.keyboardRotateSpeed = -6.0;
-                    needUpdate = true;
-                }
+                state = STATE.KEYBOARD_ROTATE_Y;
+                scope.keyboardRotateSpeed = -6.0;
+                needUpdate = true;
                 break;
 
             case scope.keys.DOWN:
-                if ( scope.rotateDirection == 'both' ) {
-                    state = STATE.KEYBOARD_ROTATE_Y;
-                    scope.keyboardRotateSpeed = 6.0;
-                    needUpdate = true;
-                }
+                state = STATE.KEYBOARD_ROTATE_Y;
+                scope.keyboardRotateSpeed = 6.0;
+                needUpdate = true;
                 break;
 
             case scope.keys.LEFT:
                 state = STATE.KEYBOARD_ROTATE_X;
-                scope.keyboardRotateSpeed = ( scope.view == 'top' ) ? 6.0 : -6.0;
+                scope.keyboardRotateSpeed = -6.0;
                 needUpdate = true;
                 break;
 
             case scope.keys.RIGHT:
                 state = STATE.KEYBOARD_ROTATE_X;
-                scope.keyboardRotateSpeed = ( scope.view == 'top' ) ? -6.0 : 6.0;
+                scope.keyboardRotateSpeed = 6.0;
                 needUpdate = true;
                 break;
         }
@@ -2142,11 +2111,7 @@ THREE.OrbitControls = function ( object, domElement, view, maxDistance ) {
 
                 state = STATE.TOUCH_ROTATE;
 
-                if ( scope.rotateDirection == 'both' ) {
-                    rotateStart.set( event.touches[ 0 ].pageX, event.touches[ 0 ].pageY );
-                } else {
-                    rotateStart.set( event.touches[ 0 ].pageX );
-                }
+                rotateStart.set( event.touches[ 0 ].pageX, event.touches[ 0 ].pageY );
                 break;
 
             case 2: // two-fingered touch: dolly
@@ -2182,26 +2147,13 @@ THREE.OrbitControls = function ( object, domElement, view, maxDistance ) {
             case 1: // one-fingered touch: rotate
                 if ( state !== STATE.TOUCH_ROTATE ) { return; }
 
-                if ( scope.rotateDirection == 'both' ) {
-                    rotateEnd.set( event.touches[ 0 ].pageX, event.touches[ 0 ].pageY );
-                } else {
-                    rotateEnd.set( event.touches[ 0 ].pageX );
-                }
+                rotateEnd.set( event.touches[ 0 ].pageX, event.touches[ 0 ].pageY );
                 rotateDelta.subVectors( rotateEnd, rotateStart );
 
-                if ( scope.rotateDirection == 'both' ) {
-                    // rotating across whole screen goes 360 degrees around
-                    scope.rotateLeft( 2 * Math.PI * rotateDelta.x / element.clientWidth * scope.rotateSpeed );
-                    // rotating up and down along whole screen attempts to go 360, but limited to 180
-                    scope.rotateUp( 2 * Math.PI * rotateDelta.y / element.clientHeight * scope.rotateSpeed );
-                } else {
-                    // rotating across whole screen goes 360 degrees around
-                    if ( scope.view == 'top' ) {
-                        scope.rotateLeft( -2 * Math.PI * rotateDelta.x / element.clientWidth * scope.rotateSpeed );
-                    } else {
-                        scope.rotateLeft( 2 * Math.PI * rotateDelta.x / element.clientWidth * scope.rotateSpeed );
-                    }
-                }
+                // rotating across whole screen goes 360 degrees around
+                scope.rotateLeft( 2 * Math.PI * rotateDelta.x / element.clientWidth * scope.rotateSpeed );
+                // rotating up and down along whole screen attempts to go 360, but limited to 180
+                scope.rotateUp( 2 * Math.PI * rotateDelta.y / element.clientHeight * scope.rotateSpeed );
 
                 rotateStart.copy( rotateEnd );
                 break;
