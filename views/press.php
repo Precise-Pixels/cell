@@ -9,7 +9,12 @@
     <section>
         <div class="section-padding align-centre lgrey">
             <h1><i class="ico-email"></i>CONTACT</h1>
-            <p>If you are interested with getting in contact with Cell Industries you can send an email to this address:</p>
+            <div class="half margin">
+                <p>If you are interested with getting in contact with Cell Industries to set up an interview or to get more information</p>
+            </div>
+            <div class="half margin">
+                <p>you can download our press pack or get in touch via either email or telephone.</p>
+            </div>
             <div class="half-margin contact-info">
                 <h2>EMAIL</h2>
                 <a href="mailto:press@cell.dev">press@cell.dev</a>
