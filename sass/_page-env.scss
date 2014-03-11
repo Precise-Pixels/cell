@@ -154,7 +154,11 @@
 
 #model {
     width: 100%;
-    height: 100%;
+    height: 0;
+    position: relative;
+    margin-top: -28.16%;
+    padding-bottom: 56.25%;
+    top: 50%;
     text-align: center;
 }
 
