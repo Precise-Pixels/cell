@@ -53,12 +53,12 @@
             <div class="slider half lgrey">
                 <ul class="panes">
                     <li><blockquote>
-                        <p>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
-                        <footer>Mr Person, Title Here</footer>
+                        <p>I love being able to pick and clone wherever I want. It's also facinating to learn about my chosen area.</p>
+                        <footer>Professor Milhouse, Lecturer</footer>
                     </blockquote></li>
                     <li><blockquote>
-                        <p>2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
-                        <footer>Mr Person, Title Here</footer>
+                        <p>Simply brillient. The best use of technology I have seen in a long time.</p>
+                        <footer>Sarah Bird, Editor of WIRED</footer>
                     </blockquote></li>
                 </ul>
             </div>
