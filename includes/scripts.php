@@ -10,6 +10,10 @@
         <script src='/js/timeline-scroll.js'></script>
     <?php endif; ?>
 
+    <?php if($isUser): ?>
+        <script src='/js/page-user-profile.js'></script>
+    <?php endif; ?>
+
     <?php if($isEnv): ?>
         <script>
             var userId    = <?= $userId; ?>;
@@ -45,6 +49,10 @@
 
     <?php if($isAbout): ?>
         <script src='/build/timeline-scroll.min.js'></script>
+    <?php endif; ?>
+
+    <?php if($isUser): ?>
+        <script src='/build/page-user-profile.min.js'></script>
     <?php endif; ?>
 
     <?php if($isEnv): ?>
