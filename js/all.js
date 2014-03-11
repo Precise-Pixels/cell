@@ -20,17 +20,17 @@ window.addEventListener('scroll', function () {
     }
 
     if (position >= target || siteNavToggle.checked || userNavToggle.checked) {
-        headerTop.style.backgroundColor = userArrow.style.backgroundColor = '#333';
+        headerTop.style.backgroundColor = userArrow.style.backgroundColor = 'rgba(51, 51, 51, 1)';
     } else {
-        headerTop.style.backgroundColor = userArrow.style.backgroundColor = 'transparent';
+        headerTop.style.backgroundColor = userArrow.style.backgroundColor = 'rgba(51, 51, 51, 0)';
     }
 });
 
 function changeTopbarBkg() {
     if (position >= target || siteNavToggle.checked || userNavToggle.checked) {
-        headerTop.style.backgroundColor = userArrow.style.backgroundColor = '#333';
+        headerTop.style.backgroundColor = userArrow.style.backgroundColor = 'rgba(51, 51, 51, 1)';
     } else {
-        headerTop.style.backgroundColor = userArrow.style.backgroundColor = 'transparent';
+        headerTop.style.backgroundColor = userArrow.style.backgroundColor = 'rgba(51, 51, 51, 0)';
     }
 }
 
