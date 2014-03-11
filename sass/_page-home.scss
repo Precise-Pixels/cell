@@ -112,9 +112,7 @@
 }
 
 #homepage-company {
-    h1 {
-        margin: 0;
-    }
+    padding: 40px 0;
 }
 
 @media ($min_bp_b) {
@@ -134,5 +132,9 @@
         width: 300px;
         margin: 0 auto;
         display: block;
+    }
+
+    #homepage-company {
+        padding: 120px 0;
     }
 }
