@@ -67,9 +67,9 @@
     height: 40px;
     position: fixed;
     bottom: 20px;
-    background: none;    
+    background: none;
     h1 {
-        display: none;            
+        display: none;
         margin: 0;
         font-weight: 300;
         margin: 5px 0 10px;
@@ -158,7 +158,7 @@
     top: 175px;
     right: 20px;
     transition: background .3s;
-    &:hover {   
+    &:hover {
         background: $dgrey;
     }
 }
