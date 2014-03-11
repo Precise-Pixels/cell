@@ -91,7 +91,7 @@ body > header {
     font-size: 1rem;
     text-align: center;
     line-height: 20px;
-    transition: background .3s;
+    transition: background .8s;
     transform: rotate(90deg);
     z-index: 1;
 }
@@ -111,7 +111,7 @@ body > header {
 }
 
 #user-nav-btn:hover ~ #user-arrow {
-    background: $mgrey;
+    background: $lgrey;
 }
 
 #user-nav-btn:hover > #user-pic {
