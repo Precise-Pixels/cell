@@ -46,25 +46,30 @@ if($hasData == 'true') {
         switch($key) {
             case 'categoryLocation':
                 $class = 'env-data-pod--location';
+                $icon = 'ico-home';
                 break;
             case 'categoryNearby':
                 $class = 'env-data-pod--nearby';
+                $icon = 'ico-home';
                 break;
             case 'categoryTime':
                 $class = 'env-data-pod--time';
+                $icon = 'ico-home';
                 break;
             case 'categoryWeather':
                 $class = 'env-data-pod--weather';
+                $icon = 'ico-home';
                 break;
             case 'categoryPeople':
                 $class = 'env-data-pod--people';
+                $icon = 'ico-home';
                 break;
         }
 
         echo '<div class="env-data-pod ' . $class . '">';
 
         foreach($categoryPods as $pod) {
-            echo '<h2>' . $pod[0]->attributes()->title . '</h2>' . '<p>' . $pod[0]->subpod->plaintext . '<p>';
+            echo '<h2>' . '<i  class=" '. $icon .' "></i>' . $pod[0]->attributes()->title . '</h2>' . '<p>' . $pod[0]->subpod->plaintext . '<p>';
         }
 
         echo '</div>';
