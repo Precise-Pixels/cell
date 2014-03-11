@@ -46,30 +46,37 @@ if($hasData == 'true') {
         switch($key) {
             case 'categoryLocation':
                 $class = 'env-data-pod--location';
+                $title = 'LOCATION';
                 $icon = 'ico-home';
                 break;
             case 'categoryNearby':
                 $class = 'env-data-pod--nearby';
-                $icon = 'ico-home';
+                $title = 'NEARBY';
+                $icon = 'ico-target';
                 break;
             case 'categoryTime':
                 $class = 'env-data-pod--time';
+                $title = 'TIME';
                 $icon = 'ico-home';
                 break;
             case 'categoryWeather':
                 $class = 'env-data-pod--weather';
-                $icon = 'ico-home';
+                $title = 'WEATHER';
+                $icon = 'ico-key-people';
                 break;
             case 'categoryPeople':
                 $class = 'env-data-pod--people';
-                $icon = 'ico-home';
+                $title = 'PEOPLE';
+                $icon = 'ico-people';
                 break;
         }
 
-        echo '<div class="env-data-pod ' . $class . '">';
-
+        echo '<div class="env-data-pod ' . $class . '">';   
+        
+            echo '<h1>' . '<i  class=" '. $icon .' "></i>' . $title . '</h1>';
+        
         foreach($categoryPods as $pod) {
-            echo '<h2>' . '<i  class=" '. $icon .' "></i>' . $pod[0]->attributes()->title . '</h2>' . '<p>' . $pod[0]->subpod->plaintext . '<p>';
+            echo '<h2>' . $pod[0]->attributes()->title . '</h2>' . '<p>' . $pod[0]->subpod->plaintext . '<p>';
         }
 
         echo '</div>';

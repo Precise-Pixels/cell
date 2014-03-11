@@ -97,6 +97,13 @@
 
 #env-data {
     color: $lgrey;
+    h1 {
+        margin: 0;
+        font-weight: 300;
+        margin: 5px 0 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $mgrey;
+    }
 }
 
 .env-data-pod {
