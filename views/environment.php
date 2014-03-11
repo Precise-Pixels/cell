@@ -39,4 +39,9 @@
 <div id="full-page-overlay" class="full-page-overlay full-page-overlay--loading"></div>
 
 <div id="background-top"></div>
+<svg height="0" xmlns="http://www.w3.org/2000/svg">
+    <filter id="svgBlur" x="-5%" y="-5%" width="110%" height="110%">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
+    </filter>
+</svg>
 <div id="background"><img src="/img/user/<?= $env->userId; ?>/capture-<?= $envId; ?>.jpg" alt="<?= $env->name; ?>"/></div>
