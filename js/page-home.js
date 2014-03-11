@@ -9,11 +9,6 @@ window.addEventListener('resize', function() {
     secondaryHeader.style.marginTop = (parseInt(primaryHeader.style.height) + 40) + 'px';
 });
 
-// Primary header mouse interaction
-primaryHeader.addEventListener('mousemove', function(e) {
-    this.style.backgroundPosition = Math.round(e.x / primaryHeader.offsetWidth * 100) + '%';
-});
-
 // Animated scroll
 var pageFlow = document.getElementById('page-flow');
 
