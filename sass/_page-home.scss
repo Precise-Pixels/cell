@@ -19,7 +19,7 @@
     top: 50%;
     left: 0;
     right: 0;
-    perspective: 800;
+    perspective: 800px;
     perspective-origin: 50%;
     z-index: 1;
 }
@@ -30,8 +30,12 @@
     position: relative;
     z-index: 1;
     transform-style: preserve-3d;
-    transform: rotateY(-45deg);
     animation: spin 36s infinite linear;
+}
+
+@keyframes spin {
+    from { transform: rotateY(0deg); }
+    to   { transform: rotateY(-360deg); }
 }
 
 .cube > div {
@@ -81,31 +85,6 @@
     text-align: center;
     color: $lgrey;
     animation: page-flow-arrow-color 3s infinite alternate;
-}
-
-@-webkit-keyframes spin {
-  from { transform: rotateY(-45); }
-  to   { transform: rotateY(-405deg); }
-  from { transform: rotateY(0); }
-  to   { transform: rotateY(-360deg); }
-}
-
-@keyframes front {
-  0%    { background: $dgrey; }
-  12.5% { background: #000; }
-  75%   { background: #999; }
-  100%  { background: $dgrey; }
-}
-
-@keyframes right {
-  0%    { background: $mgrey; }
-  37.5% { background: #000; }
-  100%  { background: $mgrey; }
-}
-
-@keyframes back {
-  from { background: #999; }
-  to   { background: $mgrey; }
 }
 
 @keyframes page-flow-arrow-color {
