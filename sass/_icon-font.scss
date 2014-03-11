@@ -118,7 +118,7 @@ a[class*="ico-"] {
 .ico-settings:before {
     content: "\2f";
 }
-.ico-compass:before {
+.ico-nearby:before {
     content: "\4e";
 }
 .ico-target:before {
@@ -171,6 +171,9 @@ a[class*="ico-"] {
 }
 .ico-weather:before {
     content: "\57";
+}
+.ico-share:before {
+    content: "\7e";
 }
 .ico-home:before {
     content: "\68";
