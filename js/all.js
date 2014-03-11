@@ -2,6 +2,7 @@
 var headerTop     = document.getElementById('top-bar');
 var header        = document.getElementById('fixed-header') || document.getElementById('primary-header');
 var target        = document.getElementsByTagName('main')[0].offsetTop;
+var userArrow  = document.getElementById('user-arrow');
 var siteNavToggle = document.getElementById('site-nav-toggle');
 var userNavToggle = document.getElementById('user-nav-toggle');
 var position;
@@ -20,16 +21,20 @@ window.addEventListener('scroll', function () {
 
     if (position >= target || siteNavToggle.checked || userNavToggle.checked) {
         headerTop.style.backgroundColor = '#333';
+        userArrow.style.backgroundColor = '#333';
     } else {
         headerTop.style.backgroundColor = 'transparent';
+        userArrow.style.backgroundColor = 'transparent';
     }
 });
 
 function changeTopbarBkg() {
     if (position >= target || siteNavToggle.checked || userNavToggle.checked) {
         headerTop.style.backgroundColor = '#333';
+        userArrow.style.backgroundColor = '#333';
     } else {
         headerTop.style.backgroundColor = 'transparent';
+        userArrow.style.backgroundColor = 'transparent';
     }
 }
 
