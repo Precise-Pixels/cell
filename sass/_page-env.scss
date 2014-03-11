@@ -110,23 +110,28 @@
 
 .env-data-pod--time {
     width: 325px;
-    top: 180px;
+    margin-top: 20px;
     left: 20px;
-}
-
-.env-data-pod--nearby {
-    width: 325px;
-    max-height: 400px;
-    overflow-y: scroll;
-    top: 210px;
-    right: 20px;
 }
 
 .env-data-pod--weather {
     width: 325px;
-    overflow-y: scroll;
-    top: 280px;
+    margin-top: 20px;
     left: 20px;
+}
+
+.env-data-pod--people {
+    width: 325px;
+    margin-top: 20px;
+    left: 20px;
+}
+
+.env-data-pod--nearby {
+    width: 300px;
+    max-height: 370px;
+    overflow-y: scroll;
+    top: 210px;
+    right: 20px;
 }
 
 #model {
@@ -173,7 +178,7 @@
 
 @media ($min_bp_c) {
     #model-interaction {
-        width: 140px;
+        width: 300px;
         height: auto;
         overflow: hidden;
         position: absolute;
@@ -182,7 +187,6 @@
         bottom: auto;
         padding: 5px;
         border: 1px solid #666;
-        text-align: center;
         background: none;
         p {
             display: block;
@@ -192,10 +196,10 @@
 
     #default,
     #webcam {
-        width: 100%;
+        width: 48%;
         height: 50px;
         position: relative;
-        margin: 5px 0 0;
+        float: left;
         line-height: 20px;
         i {
             line-height: 15px
@@ -203,6 +207,7 @@
     }
 
     #default {
+        margin-right: 1%;
         left: 0;
         right: auto;
     }
