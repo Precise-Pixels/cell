@@ -31,8 +31,8 @@
         <div class="section-padding align-centre sdgrey">
             <h1><i class="ico-my-cell"></i>HOW YOU ARE INVOLVED</h1>
             <div class="section-content-wrapper">
-                <p class="half-margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo. Suspendisse adipiscing nunc tortor, eget accumsan tellus tincidunt at. Ut suscipit elit id tellus tincidunt, ac luctus nisi consectetur. Proin velit libero, faucibus sed ultricies eget, pulvinar sit amet erat. Suspendisse vel leo sit amet magna sodales tincidunt.</p>
-                <p class="half-margin">Integer sit amet nibh sit amet lectus luctus placerat. Suspendisse eget arcu tortor. Fusce pretium sodales nisl et tempus. Curabitur pretium pellentesque libero. Curabitur pretium malesuada purus, id posuere neque. Donec ante metus, rutrum id lacus ut, ultricies aliquam magna.</p>
+                <p class="full-margin">Project Titan is a collabrative project forumlated to get everyone to help clone every part of planet Earth. Follow the instructions and build up your own libary of cloned environments and this will aid Cell Industries in better understanding the planet and helping to preserve it for the future.</p>
+                <!-- <p class="half-margin"></p> -->
             </div>
         </div>
     </section>
