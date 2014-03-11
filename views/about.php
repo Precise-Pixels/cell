@@ -45,7 +45,7 @@
                 <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
                 <figcaption>
                     <h1>JAMES LEE</h1>
-                    <p>This portion of the caption is hidden until the image is hovered.</p>
+                    <p>Born under a bridge, James started with nothing. He strived for greatest and is now the leading expert in everything.</p>
                 </figcaption>
             </div>
 
@@ -53,7 +53,7 @@
                 <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
                 <figcaption>
                     <h1>JACOB HAMMOND</h1>
-                    <p>This portion of the caption is hidden until the image is hovered.</p>
+                    <p>Jacob studied in the field of quantum mechanics and now is the team lead on most of the new projects that get started in Cell Industries.</p>
                 </figcaption>
             </div>
 
@@ -61,7 +61,7 @@
                 <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
                 <figcaption>
                     <h1>JOSEPH WILLIAMS</h1>
-                    <p>This portion of the caption is hidden until the image is hovered.</p>
+                    <p>Joseph's first position at Cell Industries was as a janitor. Now he runs his own research lab. Proving that everyone can alter their own future.</p>
                 </figcaption>
             </div>
         </div>
