@@ -89,6 +89,12 @@
     right: 20px;
 }
 
+#env-map {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
 #env-data {
     color: $lgrey;
 }
@@ -100,6 +106,36 @@
     p {
         margin-bottom: 0;
     }
+}
+
+.env-data-pod--time {
+    width: auto;
+    top: 180px;
+    left: 20px;
+}
+
+.env-data-pod--nearby {
+    display: none;
+}
+
+.env-data-pod--weather {
+    display: none;
+}
+
+#model {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#video,
+#canvas {
+    display: none;
+}
+
+#comp {
+    width: 300px;
+    transform: scaleX(-1);
 }
 
 #background-top {
@@ -126,36 +162,6 @@
 #background img {
     width: 100%;
     height: 100%;
-}
-
-.env-data-pod--time {
-    width: auto;
-    top: 140px;
-    left: 20px;
-}
-
-.env-data-pod--nearby {
-    display: none;
-}
-
-.env-data-pod--weather {
-    display: none;
-}
-
-#model {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-}
-
-#video,
-#canvas {
-    display: none;
-}
-
-#comp {
-    width: 300px;
-    transform: scaleX(-1);
 }
 
 @media ($min_bp_c) {
