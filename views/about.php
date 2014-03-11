@@ -15,7 +15,7 @@
     <section>
         <div class="section-padding align-centre lgrey">
             <h1><i class="ico-company"></i>THE COMPANY</h1>
-            <p class="half-margin">Cell Industries is the fastest growing company to date and we achieved this by constnatly striving for a better world through technology. We invest heavily in our people as we believe that this is the key to constnat progresstion.</p>
+            <p class="half-margin">As the fastest growing company on Earth, Cell Industries is always striving for a better world through technology. We believe the key to constant progression is investment in the people who also believe in technology as a means for a better future. We invest heavily in our people to help make their visions a reality.</p>
             <p class="half-margin">Every day Cell Industries pushes itself further in its capabilities. We are constantly discovering new and groundbreaking breakthroughs which we happily make avilable to everyone so we can move into the future together.</p>
         </div>
     </section>
