@@ -127,8 +127,8 @@
 }
 
 .env-data-pod--weather {
-    margin-top: 105px;
     width: 325px;
+    top: 320px;
     left: 20px;
     transition: background .3s;
     &:hover {
@@ -139,7 +139,7 @@
 .env-data-pod--people {
     display: none;
     width: 325px;
-    margin-top: 20px;
+    top: 150px;
     left: 20px;
 }
 
