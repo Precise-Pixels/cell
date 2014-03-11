@@ -10,14 +10,9 @@
     z-index: 2;
 }
 
-.cell-header {
-  padding-top: 250px;
-}
-
 .cube-wrapper {
     position: absolute;
-    margin-top: -75px;
-    top: 50%;
+    top: 32%;
     left: 0;
     right: 0;
     perspective: 800px;
@@ -74,6 +69,10 @@
 
 .cube > img {
     width: 100%;
+}
+
+.cell-header {
+    padding-top: 200px;
 }
 
 #page-flow {
@@ -180,7 +179,7 @@
 
 @media ($min_bp_a) {
     .cube-wrapper {
-        margin-top: -150px;
+        top: 25%;
     }
 
     .cube {
@@ -206,6 +205,10 @@
 
     .left {
         transform: rotateY(270deg) translateZ(150px);
+    }
+
+    .cell-header {
+        padding-top: 370px;
     }
 }
 
