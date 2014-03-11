@@ -89,7 +89,6 @@ function init() {
         requestAnimationFrame(animate);
         render();
         controls.update();
-        TWEEN.update();
     }
 
     function render() {
