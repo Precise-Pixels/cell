@@ -13,7 +13,7 @@ if(Detector.webgl) {
     var lon2;
     var centreLat;
     var centreLon;
-    var resolution   = 30;
+    var resolution   = 40;
     var tileSize     = 320;
     var requiredZoom = 10;
 
@@ -267,13 +267,15 @@ if(Detector.webgl) {
 
             (function() {
                 elevator.getElevationForLocations(positionalRequest, function(results, status) {
-                    if(status == google.maps.ElevationStatus.OK) {
-                        allResults = allResults.concat(results);
-                        requestCurrent = requestCurrent + requestLimit;
-                        requestElevations();
-                    } else {
-                        requestElevations();
-                    }
+                    setTimeout(function() {
+                        if(status == google.maps.ElevationStatus.OK) {
+                            allResults = allResults.concat(results);
+                            requestCurrent = requestCurrent + requestLimit;
+                            requestElevations();
+                        } else {
+                            requestElevations();
+                        }
+                    }, 100);
                 });
             })();
         }
