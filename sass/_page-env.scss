@@ -149,6 +149,14 @@
     width: 90px !important;
 }
 
+#env-data {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: fixed;
+    top: 40px;
+}
+
 .env-data-pod--time {
     width: 325px;
     top: 160px;
@@ -158,7 +166,9 @@
 .env-data-pod--weather {
     width: 325px;
     top: 320px;
+    bottom: 60px;
     left: 20px;
+    overflow: auto;
 }
 
 .env-data-pod--people {
@@ -168,6 +178,14 @@
 }
 
 .env-data-pod--nearby {
+    width: 300px;
+    overflow-y: auto;
+    top: 185px;
+    bottom: 179px;
+    right: 20px;
+}
+
+.env-data-pod--location {
     width: 300px;
     max-height: 390px;
     overflow-y: auto;
