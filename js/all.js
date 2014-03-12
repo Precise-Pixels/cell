@@ -2,7 +2,6 @@
 var headerTop     = document.getElementById('top-bar');
 var header        = document.getElementById('fixed-header') || document.getElementById('primary-header');
 var target        = document.getElementsByTagName('main')[0].offsetTop;
-var userArrow     = document.getElementById('user-arrow');
 var siteNavToggle = document.getElementById('site-nav-toggle');
 var userNavToggle = document.getElementById('user-nav-toggle');
 var position;
@@ -19,22 +18,14 @@ window.addEventListener('scroll', function () {
         hgroup.style.top = position * -1 / 2 + 'px';
     }
 
-    if (position >= target || siteNavToggle.checked || userNavToggle.checked) {
-        headerTop.style.backgroundColor = 'rgba(51, 51, 51, 1)';
-        userArrow.className = 'ico- user-arrow-background';
-    } else {
-        headerTop.style.backgroundColor = 'rgba(51, 51, 51, 0)';
-        userArrow.className = 'ico- user-arrow-background-none';
-    }
+    changeTopbarBkg();
 });
 
 function changeTopbarBkg() {
     if (position >= target || siteNavToggle.checked || userNavToggle.checked) {
-        headerTop.style.backgroundColor = 'rgba(51, 51, 51, 1)';
-        userArrow.className = 'ico- user-arrow-background';
+        headerTop.className = 'top-bar-background';
     } else {
-        headerTop.style.backgroundColor = 'rgba(51, 51, 51, 0)';
-        userArrow.className = 'ico- user-arrow-background-none';
+        headerTop.className = 'top-bar-background-none';
     }
 }
 
