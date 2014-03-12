@@ -66,7 +66,6 @@
 
 .cube > img {
     width: 100%;
-    user-select: none; 
 }
 
 .cell-header {
@@ -120,14 +119,6 @@
     top: 30%;
     right: 20%;
     box-shadow: 0px 0px 50px #FFF;
-}
-.ball--6 {
-    width: 45px;
-    height: 45px;
-    top: 10%;
-    right: 50%;
-    box-shadow: 0px 0px 50px #FFF;
-    display: none;
 }
 
 .ball--animation1 {
