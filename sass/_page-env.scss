@@ -195,14 +195,25 @@
     text-align: center;
 }
 
-#video,
+#webcam-wrapper {
+    bottom: 60px;
+    left: 365px;
+}
+
 #canvas {
     display: none;
 }
 
+#video {
+    left: 20px;
+    width: 150px;
+}
+
 #comp {
-    width: 300px;
+    left: 20px;
+    width: 150px;
     transform: scaleX(-1);
+    background: $dgrey;
 }
 
 #background-top {
