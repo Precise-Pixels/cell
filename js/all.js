@@ -20,17 +20,21 @@ window.addEventListener('scroll', function () {
     }
 
     if (position >= target || siteNavToggle.checked || userNavToggle.checked) {
-        headerTop.style.backgroundColor = userArrow.style.backgroundColor = 'rgba(51, 51, 51, 1)';
+        headerTop.style.backgroundColor = 'rgba(51, 51, 51, 1)';
+        userArrow.className = 'ico- user-arrow-background';
     } else {
-        headerTop.style.backgroundColor = userArrow.style.backgroundColor = 'rgba(51, 51, 51, 0)';
+        headerTop.style.backgroundColor = 'rgba(51, 51, 51, 0)';
+        userArrow.className = 'ico- user-arrow-background-none';
     }
 });
 
 function changeTopbarBkg() {
     if (position >= target || siteNavToggle.checked || userNavToggle.checked) {
-        headerTop.style.backgroundColor = userArrow.style.backgroundColor = 'rgba(51, 51, 51, 1)';
+        headerTop.style.backgroundColor = 'rgba(51, 51, 51, 1)';
+        userArrow.className = 'ico- user-arrow-background';
     } else {
-        headerTop.style.backgroundColor = userArrow.style.backgroundColor = 'rgba(51, 51, 51, 0)';
+        headerTop.style.backgroundColor = 'rgba(51, 51, 51, 0)';
+        userArrow.className = 'ico- user-arrow-background-none';
     }
 }
 

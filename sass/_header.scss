@@ -96,6 +96,14 @@ body > header {
     z-index: 1;
 }
 
+.user-arrow-background {
+    background: $dgrey;
+}
+
+.user-arrow-background-none {
+    background: none;
+}
+
 #user-arrow:before {
     content: "v";
 }
