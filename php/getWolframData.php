@@ -8,14 +8,10 @@ $hasData = $xml->attributes()->success;
 
 if($hasData == 'true') {
     $dataCategories = array(
-        $categoryLocation = array(),
-        $categoryNearby   = array(),
-        $categoryTime     = array(),
-        $categoryWeather  = array(),
-        $categoryPeople   = array()
+        $categoryNearby  = array(),
+        $categoryTime    = array(),
+        $categoryWeather = array()
     );
-
-    $dataCategories['categoryLocation']['location']           = $xml->xpath('pod[@id="Location"]');
 
     $dataCategories['categoryNearby']['nearestCity']          = $xml->xpath('pod[@id="CartographicNearestCity"]');
     $dataCategories['categoryNearby']['nearbyCities1']        = $xml->xpath('pod[@id="CityHierarchyInfo:CityData"]');
@@ -35,20 +31,12 @@ if($hasData == 'true') {
     $dataCategories['categoryWeather']['daylightInformation'] = $xml->xpath('pod[@id="DaylightInformation"]');
     $dataCategories['categoryWeather']['uvIndex']             = $xml->xpath('pod[@id="UVIndex"]');
 
-    $dataCategories['categoryPeople']['population']           = $xml->xpath('pod[@id="Population:CityData"]');
-    $dataCategories['categoryPeople']['notablePeople']        = $xml->xpath('pod[@id="NotablePeople:CityData"]');
-
     // Remove all the empty arrays
     $dataCategories = array_map('array_filter', $dataCategories);
     $dataCategories = array_filter($dataCategories);
 
     foreach($dataCategories as $key=>$categoryPods) {
         switch($key) {
-            case 'categoryLocation':
-                $class = 'env-data-pod--location';
-                $title = 'LOCATION';
-                $icon = 'ico-target';
-                break;
             case 'categoryNearby':
                 $class = 'env-data-pod--nearby';
                 $title = 'NEARBY';
@@ -63,11 +51,6 @@ if($hasData == 'true') {
                 $class = 'env-data-pod--weather';
                 $title = 'WEATHER';
                 $icon = 'ico-weather';
-                break;
-            case 'categoryPeople':
-                $class = 'env-data-pod--people';
-                $title = 'PEOPLE';
-                $icon = 'ico-key-people';
                 break;
         }
 
