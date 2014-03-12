@@ -31,12 +31,14 @@
             <video id="video" autoplay></video>
             <canvas id="canvas"></canvas>
             <canvas id="comp"></canvas>
+            <div id="webcam-sensitivity">
+                <label for="sensitivity">more sensitive</label> <input type="radio" name="sensitivity">
+                <label for="sensitivity">average</label> <input type="radio" name="sensitivity" checked>
+                <label for="sensitivity">less sensitive</label> <input type="radio" name="sensitivity">
+            </div>
         </div>
     </section>
 
-    <label for="sensitivity">more sensitive</label> <input type="radio" name="sensitivity">
-    <label for="sensitivity">average</label> <input type="radio" name="sensitivity" checked>
-    <label for="sensitivity">less sensitive</label> <input type="radio" name="sensitivity">
 
 </main>
 

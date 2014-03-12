@@ -196,8 +196,10 @@
 }
 
 #webcam-wrapper {
+    width: 495px;
+    height: 139px;
     bottom: 60px;
-    left: 365px;
+    left: 20px;
 }
 
 #canvas {
@@ -205,15 +207,28 @@
 }
 
 #video {
-    left: 20px;
     width: 150px;
+    left: 20px;
 }
 
 #comp {
-    left: 20px;
     width: 150px;
+    left: 20px;
     transform: scaleX(-1);
     background: $dgrey;
+}
+
+#webcam-sensitivity {
+    width: 150px;
+    float: left;
+    font-size: 1.2rem;
+    label {
+        float: left;
+        font-size: 1.2rem;
+    }
+    input {
+        float: left;
+    }
 }
 
 #background-top {
