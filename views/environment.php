@@ -12,23 +12,21 @@
 
     <section id="env-interface">
         <div id="model"><img src="/img/user/<?= $env->userId; ?>/capture-<?= $envId; ?>.jpg" alt="<?= $env->name; ?>"/></div>
-        <div id="env-interface-elements">
-            <div id="model-interaction" class="sdgrey">
-                <h1><i class="ico-interact"></i>INTERACT</h1>
-                <div id="default" class="btn btn--selected" title="Drag"><i class="ico-hand"></i></div>
-                <div id="webcam" class="btn" title="Webcam"><i class="ico-webcam"></i></div>
-            </div>
-            <div id="env-map" class="env-interface-element">
-                <img src="http://maps.googleapis.com/maps/api/staticmap?center=<?= $env->latitude; ?>,<?= $env->longitude; ?>&zoom=10&size=380x380&scale=2&maptype=hybrid&sensor=false&key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4">
-            </div>
-            <section id="env-data"></section>
-            <div id="env-share" class="env-interface-element">
-                <h1><i class="ico-share"></i>SHARE</h1>
-                <div class="fb-share-button" data-href="http://<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>" data-type="button_count"></div>
-                <div class="g-plus" data-action="share" data-annotation="bubble" data-href="http://<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>"></div>
-                <a href="https://twitter.com/share?url=http://<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>&amp;text=I just cloned part of the planet! Clone your part now!&hashtags=PreservingThePlanet,ProjectTitan,CellIndustries" class="twitter-share-button">Tweet</a>
-            </div>
+        <div id="env-share" class="env-interface-element">
+            <h1><i class="ico-share"></i>SHARE</h1>
+            <div class="fb-share-button" data-href="http://<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>" data-type="button_count"></div>
+            <div class="g-plus" data-action="share" data-annotation="bubble" data-href="http://<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>"></div>
+            <a href="https://twitter.com/share?url=http://<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>&amp;text=I just cloned part of the planet! Clone your part now!&hashtags=PreservingThePlanet,ProjectTitan,CellIndustries" class="twitter-share-button">Tweet</a>
         </div>
+        <div id="model-interaction" class="sdgrey">
+            <h1><i class="ico-interact"></i>INTERACT</h1>
+            <div id="default" class="btn btn--selected" title="Drag"><i class="ico-hand"></i></div>
+            <div id="webcam" class="btn" title="Webcam"><i class="ico-webcam"></i></div>
+        </div>
+        <div id="env-map" class="env-interface-element">
+            <img src="http://maps.googleapis.com/maps/api/staticmap?center=<?= $env->latitude; ?>,<?= $env->longitude; ?>&zoom=10&size=380x380&scale=2&maptype=hybrid&sensor=false&key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4">
+        </div>
+        <section id="env-data"></section>
     </section>
 
 <!--     <video id="video" autoplay></video>
