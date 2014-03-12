@@ -25,6 +25,7 @@
             <div id="env-share" class="env-interface-element">
                 <h1><i class="ico-share"></i>SHARE</h1>
                 <div class="fb-share-button" data-href="http://<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>" data-type="button_count"></div>
+                <a href="https://twitter.com/share?url=http://<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>&amp;text=I just cloned part of the planet! Clone your part now!&hashtags=PreservingThePlanet,ProjectTitan,CellIndustries" class="twitter-share-button">Tweet</a>
             </div>
         </div>
     </section>
