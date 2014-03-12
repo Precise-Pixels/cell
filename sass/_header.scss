@@ -122,7 +122,7 @@ body > header {
 }
 
 #user-nav-btn:hover ~ #user-arrow {
-    background: rgba(168, 168, 168, 1);
+    background: $mgrey;
 }
 
 #user-nav-btn:hover > #user-pic {
