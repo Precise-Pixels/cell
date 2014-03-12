@@ -1,10 +1,10 @@
 <header id="primary-header" class="fixed-header--home section-padding sdgrey">
     <div class="cube-wrapper">
         <div class="cube">
-            <div class="front dark">FRONT</div>
-            <div class="back dark">BACK</div>
-            <div class="left light">LEFT</div>
-            <div class="right light">RIGHT</div>
+            <div class="front">FRONT</div>
+            <div class="back">BACK</div>
+            <div class="left">LEFT</div>
+            <div class="right">RIGHT</div>
             <img src="/img/logo.gif">
         </div>
     </div>
@@ -12,6 +12,11 @@
         <h1>CELL INDUSTRIES</h1>
     </hgroup>
     <a id="page-flow" class="arrow-down ico-arrow-down2" href="#firststeps"></a>
+        <b class="ball ball--1 ball--animation1"></b>
+        <b class="ball ball--2 ball--animation1"></b>
+        <b class="ball ball--3 ball--animation2"></b>
+        <b class="ball ball--4 ball--animation2"></b>
+        <b class="ball ball--5 ball--animation2"></b>
 </header>
 
 <main>
