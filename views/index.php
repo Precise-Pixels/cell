@@ -44,15 +44,17 @@
 
     <section id="homepage-company" class="sdgrey">
         <div class="section-padding align-centre">
-            <div class="third-margin">
+            <div class="cell-values">
                 <h2>INNOVATE</h2>
                 <p>Constantly breaking the boundaries of modern day science.</p>
             </div>
-            <div class="third-margin">
+            <i class="ico-arrow-down2 homepage-arrow"></i>
+            <div class="cell-values">
                 <h2>APPLY</h2>
                 <p>Using the new technologies we discover to benefit you.</p>
             </div>
-            <div class="third-margin">
+            <i class="ico-arrow-down2 homepage-arrow"></i>
+            <div class="cell-values">
                 <h2>CHANGE</h2>
                 <p>Improving your life and wellbeing to develop all of our futures.</p>
             </div>
