@@ -130,8 +130,7 @@
 @media ($min-bp-a) {
     .cell-values {
         width: 25.3%;
-        margin-left: .5%;
-        margin-right: .5%;
+        margin: 0 .5% 0 .5%;
     }
 
     .cell-values:first-of-type {
@@ -146,8 +145,7 @@
 
     .homepage-arrow {
         width: 12px;
-        margin-left: 4%;
-        margin-right: 4%;
+        margin: 60px 4% 0 4%;
         transform: rotate(-90deg);
     }
 }
