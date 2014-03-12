@@ -14,7 +14,7 @@
 <?php if($isEnv): ?>
     <meta property="og:title" content="I just cloned part of the planet! Clone your part now! #PreservingThePlanet #ProjectTitan"/>
     <meta property="og:type" content="article"/>
-    <meta property="og:url" content="http://<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>"/>
+    <meta property="og:url" content="<?= $currentUrl; ?>"/>
     <meta property="og:image" content="http://<?= $_SERVER['HTTP_HOST']; ?>/img/user/<?= $env->userId; ?>/capture-<?= $envId; ?>.jpg" />
     <meta property="og:site_name" content="Cell Industries"/>
     <meta property="og:description" content="Cell Industries presents Project Titan - Preserving The Planet"/>

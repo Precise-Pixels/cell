@@ -14,9 +14,9 @@
         <div id="model"><img src="/img/user/<?= $env->userId; ?>/capture-<?= $envId; ?>.jpg" alt="<?= $env->name; ?>"/></div>
         <div id="env-share" class="env-interface-element">
             <h1><i class="ico-share"></i>SHARE</h1>
-            <div class="fb-share-button" data-href="http://<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>" data-type="button_count"></div>
-            <div class="g-plus" data-action="share" data-annotation="bubble" data-href="http://<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>"></div>
-            <a href="https://twitter.com/share?url=http://<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>&amp;text=I just cloned part of the planet! Clone your part now!&hashtags=PreservingThePlanet,ProjectTitan,CellIndustries" class="twitter-share-button">Tweet</a>
+            <div class="fb-share-button" data-href="<?= $currentUrl; ?>" data-type="button_count"></div>
+            <div class="g-plus" data-action="share" data-annotation="bubble" data-href="<?= $currentUrl; ?>"></div>
+            <a href="https://twitter.com/share?url=<?= $currentUrl; ?>&amp;text=I just cloned part of the planet! Clone your part now!&hashtags=PreservingThePlanet,ProjectTitan,CellIndustries" class="twitter-share-button">Tweet</a>
         </div>
         <div id="model-interaction" class="sdgrey">
             <h1><i class="ico-interact"></i>INTERACT</h1>
