@@ -13,7 +13,7 @@ if(Detector.webgl) {
     var lon2;
     var centreLat;
     var centreLon;
-    var resolution   = 30;
+    var resolution   = 40;
     var tileSize     = 320;
     var requiredZoom = 10;
 
@@ -251,59 +251,34 @@ if(Detector.webgl) {
             }
         }
 
-        var latLonArrayLength = latLonArray.length;
-
-        var positionalRequest1 = { 'locations': latLonArray.slice(0,latLonArrayLength/5) };
-        var positionalRequest2 = { 'locations': latLonArray.slice(latLonArrayLength/5,latLonArrayLength/5*2) };
-        var positionalRequest3 = { 'locations': latLonArray.slice(latLonArrayLength/5*2,latLonArrayLength/5*3) };
-        var positionalRequest4 = { 'locations': latLonArray.slice(latLonArrayLength/5*3,latLonArrayLength/5*4) };
-        var positionalRequest5 = { 'locations': latLonArray.slice(latLonArrayLength/5*4,latLonArrayLength/5*5) };
-
-        var allResults = [];
-
+        // Request elevations bit by bit in a loop until complete
         var elevator = new google.maps.ElevationService();
+        var latLonArrayLength = latLonArray.length;
+        var allResults = [];
+        var requestCurrent = 0;
+        var requestLimit = 180;
 
-        // Chain elevation calls together so results are requested in the correct order
-        elevator.getElevationForLocations(positionalRequest1, function(results, status) {
-            if(status == google.maps.ElevationStatus.OK) {
-                allResults = allResults.concat(results);
+        requestElevations();
 
-                elevator.getElevationForLocations(positionalRequest2, function(results, status) {
-                    if(status == google.maps.ElevationStatus.OK) {
-                        allResults = allResults.concat(results);
+        function requestElevations() {
+            if(requestCurrent >= latLonArrayLength) { getElevations(); return false; }
 
-                        elevator.getElevationForLocations(positionalRequest3, function(results, status) {
-                            if(status == google.maps.ElevationStatus.OK) {
-                                allResults = allResults.concat(results);
+            var positionalRequest = { 'locations': latLonArray.slice(requestCurrent, requestCurrent + requestLimit) };
 
-                                elevator.getElevationForLocations(positionalRequest4, function(results, status) {
-                                    if(status == google.maps.ElevationStatus.OK) {
-                                        allResults = allResults.concat(results);
-
-                                        elevator.getElevationForLocations(positionalRequest5, function(results, status) {
-                                            if(status == google.maps.ElevationStatus.OK) {
-                                                allResults = allResults.concat(results);
-                                                getElevations();
-                                            } else {
-                                                console.log('Elevation request 5 failed due to: ' + status);
-                                            }
-                                        });
-                                    } else {
-                                        console.log('Elevation request 4 failed due to: ' + status);
-                                    }
-                                });
-                            } else {
-                                console.log('Elevation request 3 failed due to: ' + status);
-                            }
-                        });
-                    } else {
-                        console.log('Elevation request 2 failed due to: ' + status);
-                    }
+            (function() {
+                elevator.getElevationForLocations(positionalRequest, function(results, status) {
+                    setTimeout(function() {
+                        if(status == google.maps.ElevationStatus.OK) {
+                            allResults = allResults.concat(results);
+                            requestCurrent = requestCurrent + requestLimit;
+                            requestElevations();
+                        } else {
+                            requestElevations();
+                        }
+                    }, 100);
                 });
-            } else {
-                console.log('Elevation request 1 failed due to: ' + status);
-            }
-        });
+            })();
+        }
 
         var elevations = [];
 

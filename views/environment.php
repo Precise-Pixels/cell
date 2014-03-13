@@ -26,17 +26,19 @@
             <img src="http://maps.googleapis.com/maps/api/staticmap?center=<?= $env->latitude; ?>,<?= $env->longitude; ?>&zoom=10&size=380x380&scale=2&maptype=hybrid&sensor=false&key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4">
         </div>
         <section id="env-data"></section>
+        <div id="webcam-wrapper" class="env-interface-element"> 
+            <video id="video" autoplay></video>
+            <canvas id="canvas"></canvas>
+            <canvas id="comp"></canvas>
+            <div id="webcam-sensitivity">
+                <label for="sensitivity">more sensitive</label> <input type="radio" name="sensitivity">
+                <label for="sensitivity">average</label> <input type="radio" name="sensitivity" checked>
+                <label for="sensitivity">less sensitive</label> <input type="radio" name="sensitivity">
+            </div>
+        </div>
     </section>
 
-<!--     <video id="video" autoplay></video>
-    <canvas id="canvas"></canvas>
-    <canvas id="comp"></canvas>
 
-    <label for="sensitivity">more sensitive</label> <input type="radio" name="sensitivity">
-    <label for="sensitivity">average</label> <input type="radio" name="sensitivity" checked>
-    <label for="sensitivity">less sensitive</label> <input type="radio" name="sensitivity"> -->
-
-    <!-- <div id="background"><img src="/img/user/<?= $env->userId; ?>/capture-<?= $envId; ?>.jpg" alt="<?= $env->name; ?>"/></div> -->
 </main>
 
 <div id="full-page-overlay" class="full-page-overlay full-page-overlay--loading"></div>
