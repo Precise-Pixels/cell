@@ -7,12 +7,12 @@
 <main>
 
     <section>
-        <div class="align-centre lgrey">
-            <div class="section-padding half">
+        <div class="align-centre mblue">
+            <div class="section-padding half lgrey">
                 <h1><i class="ico-project-titan"></i>OUR AIM</h1>
                 <p class="full-margin">We at Cell Industries empower you to preserve the future of your planet. Using our groundbreaking QuantumCell™ technology we can clone your environment leaving it protected and ready to be restored in the event of undesirable occurrences.</p>
             </div>
-            <div class="half mblue">
+            <div class="half">
                 <blockquote>
                     <p>Simply brilliant. The best use of technology I have seen in a long time. Now everyone can save the planet from the comfort of their own home.</p>
                     <footer>Sarah Bird, National Geographic</footer>
