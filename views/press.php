@@ -2,6 +2,12 @@
     <hgroup class="align-vertical">
         <h1>PRESS</h1>
     </hgroup>
+    <b class="ball ball--1 ball--animation1"></b>
+    <b class="ball ball--2 ball--animation1"></b>
+    <b class="ball ball--3 ball--animation2"></b>
+    <b class="ball ball--4 ball--animation2"></b>
+    <b class="ball ball--5 ball--animation2"></b>
+    <a id="page-flow" class="arrow-down ico-arrow-down2" href="#firststeps"></a>
 </header>
 
 <main>
