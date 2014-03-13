@@ -15,7 +15,6 @@
         <div id="env-share" class="env-interface-element">
             <h1><i class="ico-share"></i>SHARE</h1>
             <div class="fb-share-button" data-href="<?= $currentUrl; ?>" data-type="button_count"></div>
-            <div class="g-plus" data-action="share" data-annotation="bubble" data-href="<?= $currentUrl; ?>"></div>
             <a href="https://twitter.com/share?url=<?= $currentUrl; ?>&amp;text=I just cloned part of the planet! Clone your part now!&hashtags=PreservingThePlanet,ProjectTitan,CellIndustries" class="twitter-share-button">Tweet</a>
         </div>
         <div id="model-interaction" class="sdgrey">
