@@ -45,12 +45,20 @@ a:hover {
     background: $red;
 }
 
-blockquote p {
-    margin-bottom: 0;
-    font-size: 1.6rem;
-    font-weight: 400;
-    font-style: italic;
-    line-height: 3rem;
+blockquote {
+    padding: 60px 10px;
+    p {
+        margin-bottom: 0;
+        font-size: 1.4rem;
+        font-weight: 400;
+        font-style: italic;
+        line-height: 2.6rem;
+    }
+    footer {
+        height: auto;
+        margin-bottom: 15px;
+        float: right;
+    }
 }
 
 blockquote p:before {
@@ -68,12 +76,6 @@ blockquote p:after {
     font-weight: 600;
 }
 
-blockquote footer {
-    height: auto;
-    margin-bottom: 15px;
-    float: right;
-}
-
 blockquote footer:before {
     content: '—';
     margin-right: 10px;
@@ -86,5 +88,13 @@ blockquote footer:before {
 
     p {
         font-size: 1.2rem;
+    }
+
+    blockquote {
+        padding: 40px 25px;
+        p {
+            font-size: 1.6rem;
+            line-height: 3rem;
+        }
     }
 }

@@ -9,34 +9,39 @@
     <section>
         <div class="section-padding align-centre lgrey">
             <h1><i class="ico-email"></i>CONTACT</h1>
-            <div class="half margin">
-                <p>If you are interested with getting in contact with Cell Industries to set up an interview or to get more information</p>
-            </div>
-            <div class="half margin">
-                <p>you can download our press pack or get in touch via either email or telephone.</p>
-            </div>
-            <div class="half-margin contact-info">
-                <h2>EMAIL</h2>
+            <div class="half-margin">
+                <h2>Press Office</h2>
                 <a href="mailto:press@cell.dev">press@cell.dev</a>
-            </div>
-
-            <div class="half-margin contact-info">
-                <h2>PHONE</h2>
-                <p>01920CELLCELLCELL100</p>
             </div>
         </div>
     </section>
 
     <section>
-        <div class="section-padding align-centre mblue">
+        <div id="press-pack" class="section-padding align-centre mblue">
             <h1><i class="ico-press-pack"></i>PRESS PACK</h1>
-            <img src="/img/placeholder.gif" alt="Information pack" class="full"/>
+            <img src="/img/placeholder.gif" alt="Information pack"/>
             <div id="press-pack-download">
                 <a href="/" class="btn"><i class="ico-download"></i>DOWNLOAD</a>
             </div>
         </div>
     </section>
 
+    <section>
+        <div class="align-centre lgrey">
+            <div class="half lgrey">
+                <blockquote>
+                    <p>Without doubt the most exciting and pioneering bussiness of it's time. Cell Industries excells where no other company can.</p>
+                    <footer>Dolly Bah, Ewe Scientist</footer>
+                </blockquote>
+            </div>
+            <div class="half sdgrey">
+                <blockquote>
+                    <p>Without doubt the most exciting and pioneering bussiness of it's time. Cell Industries excells where no other company can.</p>
+                    <footer>Sarah Bird, Editor of WIRED</footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
     <section>
         <div class="align-centre lgrey">
             <a href="/ted" class="cta cta--example half">
@@ -50,18 +55,6 @@
                     <h2>Find out about Cell Industries</h2>
                 </hgroup>
             </a>
-            <div class="slider half lgrey">
-                <ul class="panes">
-                    <li><blockquote>
-                        <p>I love being able to pick and clone wherever I want. It's also facinating to learn about my chosen area.</p>
-                        <footer>Professor Milhouse, Lecturer</footer>
-                    </blockquote></li>
-                    <li><blockquote>
-                        <p>Simply brilliant. The best use of technology I have seen in a long time.</p>
-                        <footer>Sarah Bird, Editor of WIRED</footer>
-                    </blockquote></li>
-                </ul>
-            </div>
         </div>
     </section>
 
