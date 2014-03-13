@@ -1,12 +1,12 @@
 <header id="fixed-header" class="fixed-header--about section-padding">
     <hgroup class="align-vertical">
         <h1>ABOUT</h1>
-    </hgroup>
     <b class="ball ball--1 ball--animation1"></b>
     <b class="ball ball--2 ball--animation1"></b>
     <b class="ball ball--3 ball--animation2"></b>
     <b class="ball ball--4 ball--animation2"></b>
     <b class="ball ball--5 ball--animation2"></b>
+    </hgroup>
 </header>
 
 <main>

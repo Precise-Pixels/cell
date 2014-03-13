@@ -2,12 +2,12 @@
     <hgroup class="align-vertical">
         <h1>TECHNOLOGY</h1>
         <h2>QuantumCell&trade; CLONE CUBE</h2>
-    </hgroup>
     <b class="ball ball--1 ball--animation1"></b>
     <b class="ball ball--2 ball--animation1"></b>
     <b class="ball ball--3 ball--animation2"></b>
     <b class="ball ball--4 ball--animation2"></b>
     <b class="ball ball--5 ball--animation2"></b>
+    </hgroup>
 </header>
 
 <main>
