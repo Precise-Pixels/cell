@@ -248,8 +248,8 @@
     top: 0;
     left: 0;
     opacity: 0.4;
-    filter: blur(10px);
     filter: url(/views/blur.svg#blur);
+    filter: blur(10px);
     transform: scale(5);
 }
 
