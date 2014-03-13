@@ -36,8 +36,8 @@
             </div>
             <div class="half sdgrey">
                 <blockquote>
-                    <p>Without doubt the most exciting and pioneering bussiness of it's time. Cell Industries excells where no other company can.</p>
-                    <footer>Sarah Bird, Editor of WIRED</footer>
+                    <p>The science world was crying out for someone to harness the true potential of Quantum Technology. Cell Industries has answered those cries.</p>
+                    <footer>Sarah Bird, Quantum Realm</footer>
                 </blockquote>
             </div>
         </div>
