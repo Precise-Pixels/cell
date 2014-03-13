@@ -8,7 +8,6 @@
     <b class="ball ball--3 ball--animation2"></b>
     <b class="ball ball--4 ball--animation2"></b>
     <b class="ball ball--5 ball--animation2"></b>
-    <a id="page-flow" class="arrow-down ico-arrow-down2" href="#firststeps"></a>
 </header>
 
 <main>
