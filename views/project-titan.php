@@ -14,8 +14,8 @@
             </div>
             <div class="section-padding half mblue">
                 <blockquote>
-                    <p>Cloning an environment could not be easier. I found it fun and intuative to learn about the area in which I cloned.</p>
-                    <footer>Mr Sea Shaw, Freelance Photographer</footer>
+                    <p>Simply brilliant. The best use of technology I have seen in a long time. Now everyone can save the planet from the comfort of their own home.</p>
+                    <footer>Sarah Bird, National Geographic</footer>
                 </blockquote>
             </div>
         </div>
