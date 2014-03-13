@@ -32,7 +32,7 @@
             <h1><i class="ico-my-cell"></i>HOW YOU ARE INVOLVED</h1>
             <div class="section-content-wrapper">
                 <p class="half-margin">Project Titan is a collaborative project formulated to get everyone to clone every part of planet Earth. We at Cell Industries believe that if we want to move forward, we need to do it together.</p>
-                <p class="half-margin">Follow the instructions and build up your own libary of cloned environments and this will aid Cell Industries in better understanding the planet and helping to preserve it for the future.</p>
+                <p class="half-margin">Follow the instructions and build up your own selection of cloned environments and this will aid Cell Industries in better understanding the planet and helping to preserve it for the future.</p>
             </div>
         </div>
     </section>
