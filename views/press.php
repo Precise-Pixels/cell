@@ -1,11 +1,11 @@
 <header id="fixed-header" class="fixed-header--press section-padding">
     <hgroup class="align-vertical">
         <h1>PRESS</h1>
-    <b class="ball ball--1 ball--animation1"></b>
-    <b class="ball ball--2 ball--animation1"></b>
-    <b class="ball ball--3 ball--animation2"></b>
-    <b class="ball ball--4 ball--animation2"></b>
-    <b class="ball ball--5 ball--animation2"></b>
+        <div class="ball ball--1 ball--animation1"></div>
+        <div class="ball ball--2 ball--animation1"></div>
+        <div class="ball ball--3 ball--animation2"></div>
+        <div class="ball ball--4 ball--animation2"></div>
+        <div class="ball ball--5 ball--animation2"></div>
     </hgroup>
 </header>
 
