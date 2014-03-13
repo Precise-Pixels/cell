@@ -2,10 +2,8 @@
     position: absolute;
     opacity: 0.2;
     border-radius: 50%;
-    box-shadow: inset -25px -25px 120px rgba(0, 0, 0, 0.5);
     filter: blur(5px);
     background-color: rgba(255, 255, 255, 1);
-    background-image: -webkit-linear-gradient(-45deg, rgba(142, 214, 255, 0.2) 0%, transparent 100%);
 }
 
 .ball--1 {
