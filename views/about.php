@@ -95,7 +95,7 @@
                         <div class="event-img-wrapper">
                             <img class="event-img" src="/img/placeholder.gif">
                         </div> 
-                        <p class="event-text">Cell Industries sponsors and performs the research and development behind the first test tube baby born in the U.K.</p>
+                        <p class="event-text">The first laser eye surgery was performed on the human eye successfully.</p>
                     </div>
 
                     <div class="event stem-cells">
