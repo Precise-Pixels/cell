@@ -196,10 +196,7 @@
 }
 
 #webcam-wrapper {
-    width: 495px;
-    height: 139px;
-    bottom: 60px;
-    left: 20px;
+    display: none;
 }
 
 #canvas {
@@ -209,24 +206,30 @@
 #video {
     width: 150px;
     left: 20px;
+    float: left;
 }
 
 #comp {
     width: 150px;
     left: 20px;
+    float: left;
     transform: scaleX(-1);
-    background: $dgrey;
 }
 
 #webcam-sensitivity {
-    width: 150px;
+    width: 125px;
+    padding-left: 15px;
     float: left;
     font-size: 1.2rem;
     label {
+        width: 75%;
         float: left;
-        font-size: 1.2rem;
+        font-size: 1rem;
+        font-weight: 300;
     }
     input {
+        width: 25%;
+        margin: 5px 0;
         float: left;
     }
 }
@@ -256,6 +259,20 @@
 #background img {
     width: 100%;
     height: 100%;
+}
+
+.webcam {
+    #webcam-wrapper {
+        display: block;
+        width: 495px;
+        height: 139px;
+        bottom: 60px;
+        left: 20px;
+    }
+
+    .env-data-pod--weather {
+        bottom: 214px;
+    }
 }
 
 @media ($min_bp_c) {

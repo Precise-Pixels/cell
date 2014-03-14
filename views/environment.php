@@ -31,9 +31,10 @@
             <canvas id="canvas"></canvas>
             <canvas id="comp"></canvas>
             <div id="webcam-sensitivity">
-                <label for="sensitivity">more sensitive</label> <input type="radio" name="sensitivity">
-                <label for="sensitivity">average</label> <input type="radio" name="sensitivity" checked>
-                <label for="sensitivity">less sensitive</label> <input type="radio" name="sensitivity">
+                <h2>Sensitivity</h2>
+                <label for="sensitivity">High</label> <input type="radio" name="sensitivity">
+                <label for="sensitivity">Medium</label> <input type="radio" name="sensitivity" checked>
+                <label for="sensitivity">Low</label> <input type="radio" name="sensitivity">
             </div>
         </div>
     </section>

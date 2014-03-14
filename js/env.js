@@ -123,6 +123,7 @@ function init() {
                 break;
             case 'webcam':
                 iWebcam.className += ' btn--selected';
+                envInterface.setAttribute('class','webcam');
                 if(Detector.webrtc) {
                     initWebcam();
                     controls.autoRotate = false;
@@ -135,12 +136,14 @@ function init() {
                 break;
         }
 
-        function resetClassNames() {
+    function resetClassNames() {
             iDefault.className = iWebcam.className = 'btn btn--interact';
+            envInterface.setAttribute('class','');
         }
     }
 
     // Events
+    var envInterface = document.getElementById('env-interface');
     var iDefault = document.getElementById('default');
     var iWebcam  = document.getElementById('webcam');
 
