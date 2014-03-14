@@ -68,6 +68,16 @@
                         <p class="event-text">Founded and established with the vision to advance technology.</p>
                     </div>
 
+                    <div class="event funded">
+                        <div class="event-date-wrapper">
+                            <p class="event-date">1960</p>
+                        </div>
+                        <div class="event-img-wrapper">
+                            <img class="event-img" src="/img/placeholder.gif">
+                        </div> 
+                        <p class="event-text">Backed and funded by Royal appointment to develop technology to protect the commonwealth.</p>
+                    </div>
+
                     <div class="event moon-landing">
                         <div class="event-date-wrapper">
                             <p class="event-date">1969</p>
@@ -108,15 +118,6 @@
                         <p class="event-text">Cell Industries discover how to use human skin cells to create embryonic stem cells driving biological science into the future.</p>
                     </div>
 
-                    <div class="event renewable-energy">
-                        <div class="event-date-wrapper">
-                            <p class="event-date">2012</p>
-                        </div>
-                        <div class="event-img-wrapper">
-                            <img class="event-img" src="/img/placeholder.gif">
-                        </div> 
-                        <p class="event-text">Scientist Richard Manning discovered a way to triple the output of a uranium while making it renewable and eco friendly. </p>
-                    </div>
 
                     <div class="event research">
                         <div class="event-date-wrapper">
