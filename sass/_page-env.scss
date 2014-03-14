@@ -207,6 +207,8 @@
     width: 150px;
     left: 20px;
     float: left;
+    transform: scale(-1, 1);
+    filter: FlipH;
 }
 
 #comp {
@@ -214,6 +216,7 @@
     left: 20px;
     float: left;
     transform: scaleX(-1);
+    filter: grayscale(100%);
 }
 
 #webcam-sensitivity {
