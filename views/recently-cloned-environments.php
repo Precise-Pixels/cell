@@ -9,6 +9,11 @@
 
     <section id="environment-listing" class="section--spacer sdgrey">
         <div class="align-centre">
+            <div id="pagination" class="full">
+                <a href="?page=<?= $page - 1; ?>" class="btn half"><i class="ico-arrow-left"></i>NEWER</a>
+                <a href="?page=<?= $page + 1; ?>" class="btn half"><i class="ico-arrow-right"></i>OLDER</a>
+            </div>
+
             <?php if(!empty($environments)):
                 foreach($environments as $env): ?>
                     <a href="/user/<?= $env->username; ?>/env/<?= $env->envId; ?>">
