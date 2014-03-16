@@ -13,8 +13,8 @@
             text-align: left;
             z-index: 1;
             hgroup {
-                float: left;
                 width: 100%;
+                float: left;
             }
             h1 {
                 width: 100%;
@@ -42,8 +42,8 @@
     }
 
     .btn--selected {
-        opacity: 1;
         color: #333;
+        opacity: 1;
         background: $lgrey;
     }
 
@@ -106,9 +106,7 @@
     display: none;
     position: fixed;
     top: 0;
-    overflow: auto;
-    background: $dgrey;
-    z-index: 6;
+    overflow-y: auto;
 }
 
 .env-interface-element {
@@ -258,12 +256,6 @@
 }
 
 @media ($min_bp_c) {
-
-    .env {
-        header {
-            z-index: 1;
-        }
-    }
 
     .env-interface-element {
         position: absolute;
