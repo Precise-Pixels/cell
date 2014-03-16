@@ -19,6 +19,7 @@ function initWebcam() {
             video.onplay = function() {
                 setInterval(dump, 30);
             };
+            document.body.className += ' env--webcam';
         },
 
         function(error) {
@@ -28,6 +29,7 @@ function initWebcam() {
                 var iWebcam        = document.getElementById('webcam');
                 iWebcam.className  = 'btn btn--interact';
                 iDefault.className += ' btn--selected';
+                document.body.className = document.body.className.replace(' env--webcam', '');
                 controls.autoRotate = true;
                 pending = false;
             }
