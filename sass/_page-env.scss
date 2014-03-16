@@ -208,6 +208,7 @@
 }
 
 #webcam-wrapper {
+    position: absolute;
     display: none;
 }
 
@@ -216,7 +217,8 @@
 }
 
 #video {
-    width: 150px;
+    width: 33.33%;
+    max-width: 150px;
     left: 20px;
     float: left;
     transform: scaleX(-1);
@@ -224,7 +226,8 @@
 }
 
 #comp {
-    width: 150px;
+    width: 33.33%;
+    max-width: 150px;
     left: 20px;
     float: left;
     transform: scaleX(-1);
@@ -232,7 +235,8 @@
 }
 
 #webcam-sensitivity {
-    width: 125px;
+    width: 33.33%;
+    max-width: 150px;
     padding-left: 15px;
     float: left;
     font-size: 1.2rem;
@@ -255,7 +259,7 @@
     top: 0;
     position: fixed;
     background: $dgrey;
-    z-index: 1;
+    z-index: 2;
 }
 
 #background {
@@ -278,16 +282,16 @@
 
 .env--webcam {
     #webcam-wrapper {
+        width: 100%;
+        bottom: 145px;
         display: block;
-        width: 495px;
-        height: 139px;
-        bottom: 60px;
-        left: 20px;
+        background: none;
+        z-index: -1;
     }
 
-    .env-data-pod--weather {
-        bottom: 214px;
-    }
+    // #env-interface-pods-btn {
+    //     display: none;
+    // }
 }
 
 @media ($min_bp_c) {
@@ -423,5 +427,19 @@
         bottom: 179px;
         right: 20px;
         overflow: auto;
+    }
+
+    .env--webcam {
+        #webcam-wrapper {
+            width: auto;
+            bottom: 60px;
+            left: 20px;
+            display: block;
+            z-index: :;
+        }
+
+        .env-data-pod--weather {
+            bottom: 202px;
+        }
     }
 }
