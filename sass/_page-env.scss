@@ -113,9 +113,6 @@
     transition: width .3s, height .3s, background .3s;
     color: $lgrey;
     background: $dgrey;
-    &:hover {
-        background: $dgrey;
-    }
     h1 {
         margin: 0;
         font-weight: 300;
@@ -258,20 +255,25 @@
 
 @media ($min_bp_c) {
 
-    // .env {
-    //     header {
-    //         z-index: 2;
-    //     }
-    // }
+    .env {
+        header {
+            z-index: 1;
+        }
+    }
+
+    .env-interface-element {
+        position: absolute;
+        border: 1px solid $mgrey;
+        background: none;
+        &:hover {
+            background: $dgrey;
+        }
+    }
 
     #env-interface-pods {
         position: initial;
         background: none;     
         display: block;
-    }
-
-    .env-interface-element {
-        background: none;
     }
 
     #model-interaction {
@@ -317,30 +319,6 @@
     #webcam {
         float: right;
         right: auto;
-    }
-
-    .env-interface-element {
-        position: absolute;
-        padding: 10px;
-        border: 1px solid $mgrey;
-        transition: width .3s, height .3s, background .3s;
-        color: $lgrey;
-        background: none;
-        &:hover {
-            background: $dgrey;
-        }
-        h1 {
-            margin: 0;
-            font-weight: 300;
-            margin: 5px 0 10px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid $mgrey;
-        }
-        p {
-            margin-bottom: 10px;
-            font-size: 1rem;
-            line-height: 28px;
-        }
     }
 
     #env-map {
