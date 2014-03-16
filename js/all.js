@@ -19,7 +19,6 @@ window.addEventListener('scroll', function () {
     }
 
     changeTopbarBkg();
-
 });
 
 function changeTopbarBkg() {
