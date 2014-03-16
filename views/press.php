@@ -15,6 +15,14 @@
                     <a href="mailto:press@cell.dev">press@cell.dev</a>
                 </div>
             </div>
+            <div class="half">
+                <a href="/about" class="cta cta--about">
+                    <hgroup class="align-vertical">
+                        <h1>About Cell</h1>
+                        <h2>Find out about Cell Industries</h2>
+                    </hgroup>
+                </a>
+            </div>
         </div>
     </section>
 
