@@ -21,6 +21,7 @@
     perspective: 800px;
     perspective-origin: 50%;
     z-index: 1;
+    user-select: none;
 }
 
 .cube {
@@ -175,7 +176,6 @@
 
 @media ($min_bp_a) {
     .cube-wrapper {
-        user-select: none;
         top: 25%;
     }
 
