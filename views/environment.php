@@ -29,18 +29,18 @@
                 <div class="fb-share-button" data-href="<?= $currentUrl; ?>" data-type="button_count"></div>
                 <a href="https://twitter.com/share?url=<?= $currentUrl; ?>&amp;text=I just cloned part of the planet! Clone your part now!&hashtags=PreservingThePlanet,ProjectTitan,CellIndustries" class="twitter-share-button">Tweet</a>
             </div>
-            <div id="webcam-wrapper" class="env-interface-element"> 
-                <video id="video" autoplay></video>
-                <canvas id="canvas"></canvas>
-                <canvas id="comp"></canvas>
-                <div id="webcam-sensitivity">
-                    <h2>Sensitivity</h2>
-                    <label for="sensitivity">High</label> <input type="radio" name="sensitivity">
-                    <label for="sensitivity">Medium</label> <input type="radio" name="sensitivity" checked>
-                    <label for="sensitivity">Low</label> <input type="radio" name="sensitivity">
-                </div>
-            </div>
             <div id="env-interface-pods-bkg"></div>
+        </div>
+        <div id="webcam-wrapper" class="env-interface-element"> 
+            <video id="video" autoplay></video>
+            <canvas id="canvas"></canvas>
+            <canvas id="comp"></canvas>
+            <div id="webcam-sensitivity">
+                <h2>Sensitivity</h2>
+                <label for="sensitivity">High</label> <input type="radio" name="sensitivity">
+                <label for="sensitivity">Medium</label> <input type="radio" name="sensitivity" checked>
+                <label for="sensitivity">Low</label> <input type="radio" name="sensitivity">
+            </div>
         </div>
     </section>
 
