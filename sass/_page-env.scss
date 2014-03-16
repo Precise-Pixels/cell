@@ -368,25 +368,11 @@
         overflow: auto;
     }
 
-    .env-data-pod--people {
-        width: 325px;
-        left: 20px;
-        background: red;
-    }
-
     .env-data-pod--nearby {
         width: 300px;
-        overflow-y: auto;
         top: 185px;
         bottom: 179px;
         right: 20px;
-    }
-
-    .env-data-pod--location {
-        width: 300px;
-        max-height: 390px;
-        overflow-y: auto;
-        top: 185px;
-        right: 20px;
+        overflow: auto;
     }
 }
