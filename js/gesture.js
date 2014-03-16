@@ -150,7 +150,7 @@ function initWebcam() {
                 var d = Math.abs(draw.data[pix] - last.data[pix]) + Math.abs(draw.data[pix+1] - last.data[pix+1]) + Math.abs(draw.data[pix+2] - last.data[pix+2]);
 
                 if(d > thresh) {
-                    delt.data[pix]   = 160;
+                    delt.data[pix]   =
                     delt.data[pix+1] =
                     delt.data[pix+2] =
                     delt.data[pix+3] = 255;

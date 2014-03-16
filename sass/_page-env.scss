@@ -6,7 +6,7 @@
     main {
         margin-top: 40px;
         header {
-            width: auto;
+            width: 100%;
             padding: 20px 25px;
             position: fixed;
             overflow: hidden;
@@ -19,6 +19,7 @@
             h1 {
                 width: 100%;
                 margin-left: 65px;
+                font-size: 1.8rem;
             }
             a {
                 margin-top: 4px;
@@ -27,6 +28,7 @@
                 text-decoration: none;
             }
             h2 {
+                font-size: 1rem;
                 font-weight: 300;
             }
         }
@@ -100,13 +102,47 @@
     right: 20px;
 }
 
+#env-interface-pods-btn {
+    position: absolute;
+    bottom: 70px;
+    left: -25px;
+    margin-left: 50%;
+    display: block;
+    font-size: 3rem;
+    z-index: 1;
+}
+
+#env-interface-pods-btn:before {
+    content: "i";
+}
+
+#env-interface-pods-toggle:checked ~ #env-interface-pods {
+    display: block;
+}
+
+#env-interface-pods-toggle:checked ~ #env-interface-pods-btn:before {
+    content: "x";
+}
+
+#env-interface-pods-toggle:checked > #model-interaction {
+    display: none;
+}
+
 #env-interface-pods {
     width: 100%;
-    height: 100%;
     display: none;
     position: fixed;
-    top: 0;
+    top: 155px;
+    bottom: 100px;
     overflow-y: auto;
+}
+
+#env-interface-pods-bkg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: block;
+    background: $dgrey;
 }
 
 .env-interface-element {
@@ -131,7 +167,6 @@
 
 #env-map {
     width: 100%;
-    margin-top: 40px;
     text-align: center;
     img {
         width: 50%;
@@ -184,7 +219,7 @@
     width: 150px;
     left: 20px;
     float: left;
-    transform: scale(-1, 1);
+    transform: scaleX(-1);
     filter: FlipH;
 }
 
@@ -193,7 +228,7 @@
     left: 20px;
     float: left;
     transform: scaleX(-1);
-    filter: grayscale(100%);
+    filter: FlipH;
 }
 
 #webcam-sensitivity {
@@ -257,6 +292,20 @@
 
 @media ($min_bp_c) {
 
+    .env {
+        main {
+            header {
+                width: auto;
+                h1 {
+                    font-size: 3.5rem;
+                }
+                h2 {
+                    font-size: 1.2rem;  
+                }
+            }
+        }
+    }
+
     .env-interface-element {
         position: absolute;
         border: 1px solid $mgrey;
@@ -266,10 +315,18 @@
         }
     }
 
+    #env-interface-pods-btn {
+        display: none;
+    }
+
     #env-interface-pods {
         position: initial;
         background: none;     
         display: block;
+    }
+
+    #env-interface-pods-bkg {
+        display: none;
     }
 
     #model-interaction {

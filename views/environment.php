@@ -17,6 +17,8 @@
             <div id="default" class="btn btn--selected" title="Drag"><i class="ico-hand"></i></div>
             <div id="webcam" class="btn" title="Webcam"><i class="ico-webcam"></i></div>
         </div>
+        <input type="checkbox" id="env-interface-pods-toggle" class="checkbox-hack" autocomplete="off"/>
+        <label for="env-interface-pods-toggle" id="env-interface-pods-btn" class="ico-"></label>
         <div id="env-interface-pods">
             <div id="env-map" class="env-interface-element">
                 <img src="http://maps.googleapis.com/maps/api/staticmap?center=<?= $env->latitude; ?>,<?= $env->longitude; ?>&zoom=10&size=380x380&scale=2&maptype=hybrid&sensor=false&key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4">
@@ -38,6 +40,7 @@
                     <label for="sensitivity">Low</label> <input type="radio" name="sensitivity">
                 </div>
             </div>
+            <div id="env-interface-pods-bkg"></div>
         </div>
     </section>
 
