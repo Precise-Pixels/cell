@@ -1,3 +1,14 @@
+.press-email {
+    color: $mblue;
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: color .3s;
+}
+
+.press-email:hover {
+    color: $dgrey;
+}
+
 #press-pack {
     img {
         width: 100%;
@@ -10,5 +21,23 @@
     text-align: center;
     i {
         margin-right: 15px;
+    }
+}
+
+@media ($min-bp-a) {
+    #press-page-cta {
+        height: 285px;
+    }
+}
+
+@media  ($min-bp-b) {
+    #press-page-cta {
+        height: 325px;
+    }
+}
+
+@media  ($min-bp-c) {
+    #press-page-cta {
+        height: 293px;
     }
 }
