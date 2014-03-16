@@ -5,7 +5,7 @@
             <div class="back">BACK</div>
             <div class="left">LEFT</div>
             <div class="right">RIGHT</div>
-            <img src="/img/logo.gif">
+            <img src="/img/logo.gif" alt="Cell Industries logo in a spinning cube">
         </div>
     </div>
     <hgroup class="align-vertical cell-header">
