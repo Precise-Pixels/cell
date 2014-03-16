@@ -327,11 +327,35 @@ if(Detector.webgl) {
             // Normalise the min and max so that the minimum is 0
             var normaliseMax = elevationsMax - elevationsMin;
 
+            // Split environments into bands depending upon the range of elevations
+            // Emphasise the flatter areas to give them a slightly exaggerated form
+            // NOTE: The range at Mount Everest is ~5900
+
+            var band = 255;
+
+            switch(true) {
+                case (normaliseMax < 200):
+                    band = 40;
+                    break;
+                case (normaliseMax < 500):
+                    band = 70;
+                    break;
+                case (normaliseMax < 1000):
+                    band = 100;
+                    break;
+                case (normaliseMax < 2000):
+                    band = 200;
+                    break;
+                case (normaliseMax < 6000):
+                    band = 255;
+                    break;
+            }
+
             // Loop through all the heights
             // Calculate the percentatage of the given value between the min and normalised max
             // Multiple by 255 to convert that value into an 8-bit greyscale value between 0 and 255
             for(var i = 0; i < l; i++) {
-                elevationsGreyscale.push( Math.round((elevations[i] - elevationsMin) / normaliseMax * 255) );
+                elevationsGreyscale.push( Math.round((elevations[i] - elevationsMin) / normaliseMax * band) );
             }
 
             // Convert the array to a string to send to the PHP
