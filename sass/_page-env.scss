@@ -8,7 +8,6 @@
             position: fixed;
             overflow: hidden;
             text-align: left;
-            z-index: 2;
             hgroup {
                 float: left;
                 width: 100%;
@@ -97,27 +96,23 @@
     right: 20px;
 }
 
-#env-map {
-    width: 129px;
-    height: 129px;
-    top: 40px;
-    right: 336px;
-    text-align: center;
-    img {
-        width: 100%;
-    }
-    &:hover {
-        width: 400px;
-        height: 400px;
-    }
+#env-interface-pods {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    top: 0;
+    overflow: auto;
+    background: $dgrey;
+    z-index: 6;
 }
 
 .env-interface-element {
-    position: absolute;
+    position: relative;
     padding: 10px;
-    border: 1px solid $mgrey;
     transition: width .3s, height .3s, background .3s;
     color: $lgrey;
+    background: $dgrey;
     &:hover {
         background: $dgrey;
     }
@@ -135,10 +130,17 @@
     }
 }
 
+#env-map {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    img {
+        width: 50%;
+    }
+}
+
 #env-share {
-    width: 300px;
-    right: 20px;
-    bottom: 60px;
+    width: 100%;
 }
 
 .fb_iframe_widget {
@@ -150,39 +152,15 @@
 }
 
 .env-data-pod--time {
-    width: 325px;
-    top: 160px;
-    left: 20px;
+    width: 100%;
 }
 
 .env-data-pod--weather {
-    width: 325px;
-    top: 320px;
-    bottom: 60px;
-    left: 20px;
-    overflow: auto;
-}
-
-.env-data-pod--people {
-    width: 325px;
-    left: 20px;
-    background: red;
+    width: 100%;
 }
 
 .env-data-pod--nearby {
-    width: 300px;
-    overflow-y: auto;
-    top: 185px;
-    bottom: 179px;
-    right: 20px;
-}
-
-.env-data-pod--location {
-    width: 300px;
-    max-height: 390px;
-    overflow-y: auto;
-    top: 185px;
-    right: 20px;
+    width: 100%;
 }
 
 #model {
@@ -196,10 +174,7 @@
 }
 
 #webcam-wrapper {
-    width: 495px;
-    height: 139px;
-    bottom: 60px;
-    left: 20px;
+    display: none;
 }
 
 #canvas {
@@ -209,24 +184,33 @@
 #video {
     width: 150px;
     left: 20px;
+    float: left;
+    transform: scale(-1, 1);
+    filter: FlipH;
 }
 
 #comp {
     width: 150px;
     left: 20px;
+    float: left;
     transform: scaleX(-1);
-    background: $dgrey;
+    filter: grayscale(100%);
 }
 
 #webcam-sensitivity {
-    width: 150px;
+    width: 125px;
+    padding-left: 15px;
     float: left;
     font-size: 1.2rem;
     label {
+        width: 75%;
         float: left;
-        font-size: 1.2rem;
+        font-size: 1rem;
+        font-weight: 300;
     }
     input {
+        width: 25%;
+        margin: 5px 0;
         float: left;
     }
 }
@@ -237,7 +221,7 @@
     top: 0;
     position: fixed;
     background: $dgrey;
-    z-index: 2;
+    z-index: 1;
 }
 
 #background {
@@ -248,9 +232,9 @@
     top: 0;
     left: 0;
     opacity: 0.4;
-    filter: blur(10px);
     filter: url(/views/blur.svg#blur);
-    transform: scale(5);
+    filter: blur(10px);
+    transform: scale(14);
 }
 
 #background img {
@@ -258,7 +242,38 @@
     height: 100%;
 }
 
+.webcam {
+    #webcam-wrapper {
+        display: block;
+        width: 495px;
+        height: 139px;
+        bottom: 60px;
+        left: 20px;
+    }
+
+    .env-data-pod--weather {
+        bottom: 214px;
+    }
+}
+
 @media ($min_bp_c) {
+
+    // .env {
+    //     header {
+    //         z-index: 2;
+    //     }
+    // }
+
+    #env-interface-pods {
+        position: initial;
+        background: none;     
+        display: block;
+    }
+
+    .env-interface-element {
+        background: none;
+    }
+
     #model-interaction {
         width: 300px;
         height: auto;
@@ -302,5 +317,95 @@
     #webcam {
         float: right;
         right: auto;
+    }
+
+    .env-interface-element {
+        position: absolute;
+        padding: 10px;
+        border: 1px solid $mgrey;
+        transition: width .3s, height .3s, background .3s;
+        color: $lgrey;
+        background: none;
+        &:hover {
+            background: $dgrey;
+        }
+        h1 {
+            margin: 0;
+            font-weight: 300;
+            margin: 5px 0 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid $mgrey;
+        }
+        p {
+            margin-bottom: 10px;
+            font-size: 1rem;
+            line-height: 28px;
+        }
+    }
+
+    #env-map {
+        width: 129px;
+        height: 129px;
+        margin-top: 0;
+        top: 40px;
+        right: 336px;
+        text-align: center;
+        img {
+            width: 100%;
+        }
+        &:hover {
+            width: 400px;
+            height: 400px;
+        }
+    }
+
+    #env-share {
+        width: 300px;
+        right: 20px;
+        bottom: 60px;
+    }
+
+    .fb_iframe_widget {
+        top: -4px;
+    }
+
+    #twitter-widget-0 {
+        width: 90px !important;
+    }
+
+    .env-data-pod--time {
+        width: 325px;
+        top: 160px;
+        left: 20px;
+    }
+
+    .env-data-pod--weather {
+        width: 325px;
+        top: 320px;
+        bottom: 60px;
+        left: 20px;
+        overflow: auto;
+    }
+
+    .env-data-pod--people {
+        width: 325px;
+        left: 20px;
+        background: red;
+    }
+
+    .env-data-pod--nearby {
+        width: 300px;
+        overflow-y: auto;
+        top: 185px;
+        bottom: 179px;
+        right: 20px;
+    }
+
+    .env-data-pod--location {
+        width: 300px;
+        max-height: 390px;
+        overflow-y: auto;
+        top: 185px;
+        right: 20px;
     }
 }

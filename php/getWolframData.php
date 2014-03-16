@@ -13,6 +13,14 @@ if($hasData == 'true') {
         $categoryWeather = array()
     );
 
+    $dataCategories['categoryTime']['currentLocalTime1']      = $xml->xpath('pod[@id="CartographicCurrentTime"]');
+    $dataCategories['categoryTime']['currentLocalTime2']      = $xml->xpath('pod[@id="CurrentTime:CityData"]');
+
+    $dataCategories['categoryWeather']['localWeather']        = $xml->xpath('pod[@id="CartographicWeather"]');
+    $dataCategories['categoryWeather']['currentWeather']      = $xml->xpath('pod[@id="WeatherPod:CityData"]');
+    $dataCategories['categoryWeather']['daylightInformation'] = $xml->xpath('pod[@id="DaylightInformation"]');
+    $dataCategories['categoryWeather']['uvIndex']             = $xml->xpath('pod[@id="UVIndex"]');
+
     $dataCategories['categoryNearby']['nearestCity']          = $xml->xpath('pod[@id="CartographicNearestCity"]');
     $dataCategories['categoryNearby']['nearbyCities1']        = $xml->xpath('pod[@id="CityHierarchyInfo:CityData"]');
     $dataCategories['categoryNearby']['nearbyCities2']        = $xml->xpath('pod[@id="CartographicCities"]');
@@ -22,14 +30,6 @@ if($hasData == 'true') {
     $dataCategories['categoryNearby']['nearbyServices']       = $xml->xpath('pod[@id="CartographicServices"]');
     $dataCategories['categoryNearby']['nearbyFeatures']       = $xml->xpath('pod[@id="CartographicFeatures"]');
     $dataCategories['categoryNearby']['nearbyFeature']        = $xml->xpath('pod[@id="FeaturesHierarchyInfo:CityData"]');
-
-    $dataCategories['categoryTime']['currentLocalTime1']      = $xml->xpath('pod[@id="CartographicCurrentTime"]');
-    $dataCategories['categoryTime']['currentLocalTime2']      = $xml->xpath('pod[@id="CurrentTime:CityData"]');
-
-    $dataCategories['categoryWeather']['localWeather']        = $xml->xpath('pod[@id="CartographicWeather"]');
-    $dataCategories['categoryWeather']['currentWeather']      = $xml->xpath('pod[@id="WeatherPod:CityData"]');
-    $dataCategories['categoryWeather']['daylightInformation'] = $xml->xpath('pod[@id="DaylightInformation"]');
-    $dataCategories['categoryWeather']['uvIndex']             = $xml->xpath('pod[@id="UVIndex"]');
 
     // Remove all the empty arrays
     $dataCategories = array_map('array_filter', $dataCategories);
