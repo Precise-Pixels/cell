@@ -49,6 +49,10 @@
                             <figcaption>
                                 <h1><?= $env->name; ?></h1>
                             </figcaption>
+                            <?php // If user is signed in and viewing their own profile
+                            if(isset($_SESSION['userId']) && $_SESSION['userId'] == $user->userId): ?>
+                                <i class="ico-cross env-delete"></i>
+                            <?php endif; ?>
                         </div>
                     </a>
                 <?php endforeach;

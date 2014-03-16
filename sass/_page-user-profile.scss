@@ -30,6 +30,19 @@
     text-align: right;
 }
 
+.env-delete {
+    position: absolute;
+    margin-right: 0;
+    padding: 15px;
+    top: 0;
+    right: 0;
+    color: $mgrey;
+    &:hover {
+        color: #FFF;
+    }
+}
+
+
 #no-environments {
     width: 100%;
     h1 {
