@@ -3,6 +3,7 @@
 
 <script>
     var userId    = <?= $_SESSION['userId']; ?>;
+    var username  = '<?= $_SESSION['username']; ?>';
     var envId     = <?= $_SESSION['envId']; ?>;
     var envURL    = '<?= $_SESSION['envURL']; ?>';
     var latitude  = <?= $_SESSION['lat']; ?>;

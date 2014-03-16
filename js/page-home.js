@@ -119,7 +119,7 @@ function init() {
 
             google.maps.event.addListener(marker, 'click', (function(marker, i) {
                 return function() {
-                    window.location.href = '/user/' + locations[i]['username'] + '/env/' + locations[i]['envId'];
+                    window.open('/user/' + locations[i]['username'] + '/env/' + locations[i]['envId'], '_blank');
                 }
             })(marker, i));
         }
