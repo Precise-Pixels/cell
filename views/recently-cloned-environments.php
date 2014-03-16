@@ -9,18 +9,24 @@
 
     <section id="environment-listing" class="section--spacer sdgrey">
         <div class="align-centre">
-            <?php foreach($environments as $env): ?>
-                <a href="/user/<?= $env->username; ?>/env/<?= $env->envId; ?>">
-                    <div class="imagebox zoombox quarter mblue">
-                        <figure>
-                            <img src="/img/user/<?= $env->userId; ?>/capture-<?= $env->envId; ?>.jpg" alt="<?= $env->name; ?>">
-                       </figure>
-                        <figcaption>
-                            <h1><?= $env->name; ?></h1>
-                        </figcaption>
-                    </div>
-                </a>
-            <?php endforeach; ?>
+            <?php if(!empty($environments)):
+                foreach($environments as $env): ?>
+                    <a href="/user/<?= $env->username; ?>/env/<?= $env->envId; ?>">
+                        <div class="imagebox zoombox quarter mblue">
+                            <figure>
+                                <img src="/img/user/<?= $env->userId; ?>/capture-<?= $env->envId; ?>.jpg" alt="<?= $env->name; ?>">
+                           </figure>
+                            <figcaption>
+                                <h1><?= $env->name; ?></h1>
+                            </figcaption>
+                        </div>
+                    </a>
+                <?php endforeach;
+            else: ?>
+                <div id="no-environments" class="section-padding mblue">
+                    <h1>There are no more environments.</h1>
+                </div>
+            <?php endif; ?>
         </div>
     </section>
 
