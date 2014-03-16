@@ -25,11 +25,11 @@
             <div id="user-buttons" class="quarter">
             <?php // If user is signed in and viewing their own profile
             if(isset($_SESSION['userId']) && $_SESSION['userId'] == $user->userId): ?>
-                <?php if(!empty($environments)): ?>
-                    <a href="<?= $user->username; ?>/env/new" class="btn" title="Clone New Environment"><i class="ico-env-new"></i></a>
+                <?php if(empty($environments) && !isset($_GET['page'])): ?>
+                    <a href="<?= $user->username; ?>/env/new" class="btn" title="Clone New Environment"><i class="ico-env-new"></i> NEW CLONE</a>
                     <a href="/signout?r=<?= $_SERVER['REQUEST_URI']; ?>" class="btn" title="Sign Out"><i class="ico-logout"></i></a>
                 <?php else: ?>
-                    <a href="<?= $user->username; ?>/env/new" class="btn" title="Clone New Environment"><i class="ico-env-new"></i> NEW CLONE</a>
+                    <a href="<?= $user->username; ?>/env/new" class="btn" title="Clone New Environment"><i class="ico-env-new"></i></a>
                     <a href="/signout?r=<?= $_SERVER['REQUEST_URI']; ?>" class="btn" title="Sign Out"><i class="ico-logout"></i></a>
                 <?php endif; ?>
             <?php endif; ?>
@@ -39,6 +39,11 @@
 
     <section id="environment-listing" class="section--spacer sdgrey">
         <div class="align-centre">
+            <div id="pagination" class="full">
+                <a href="?page=<?= $page - 1; ?>" class="btn half"><i class="ico-arrow-left"></i>NEWER</a>
+                <a href="?page=<?= $page + 1; ?>" class="btn half"><i class="ico-arrow-right"></i>OLDER</a>
+            </div>
+
             <?php if(!empty($environments)):
                 foreach($environments as $env): ?>
                     <a href="/user/<?= $user->username; ?>/env/<?= $env->envId; ?>">
@@ -56,7 +61,11 @@
                         </div>
                     </a>
                 <?php endforeach;
-            else: ?>
+            elseif(empty($environments) && isset($_GET['page'])): ?>
+                <div id="no-environments" class="section-padding mblue">
+                    <h1>There are no more environments.</h1>
+                </div>
+            <?php else: ?>
                 <div id="no-environments" class="section-padding mblue">
                     <h1>This user hasn't cloned any environments yet.</h1>
                 </div>
