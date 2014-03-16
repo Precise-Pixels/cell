@@ -4,6 +4,7 @@
     border-radius: 50%;
     filter: blur(5px);
     background-color: #FFF;
+    animation-timing-function: ease-in-out;
 }
 
 .ball--1 {
@@ -55,31 +56,13 @@
 }
 
 @keyframes ball {
-   0% {
-       transform: translate(0, 0);
-       animation-timing-function:ease-in-out
-   }
-   50% {
-       transform: translate(0, 50px);
-       animation-timing-function:ease-in-out
-   }
-   100% {
-       transform: translate(0, 0);
-       animation-timing-function:ease-in-out
-   }
+   0%   { transform: translate(0, 0);    }
+   50%  { transform: translate(0, 50px); }
+   100% { transform: translate(0, 0);    }
 }
 
 @keyframes ball2 {
-   0% {
-       transform: translate(0, 10px);
-       animation-timing-function:ease-in-out
-   }
-   50% {
-       transform: translate(0, 0);
-       animation-timing-function:ease-in-out
-   }
-   100% {
-       transform: translate(0, 10px);
-       animation-timing-function:ease-in-out
-   }
+   0%   { transform: translate(0, 10px); }
+   50%  { transform: translate(0, 0);    }
+   100% { transform: translate(0, 10px); }
 }
