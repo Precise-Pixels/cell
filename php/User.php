@@ -41,6 +41,18 @@ class User {
         return $result;
     }
 
+    static function getTotalEnvironments($username) {
+        require('db.php');
+
+        $userId = User::getUserId($username);
+
+        $sth = $dbh->query("SELECT envId, timestamp, latitude, longitude, name FROM environments WHERE userId='$userId'");
+        $sth->setFetchMode(PDO::FETCH_OBJ);
+        $result = $sth->fetchAll();
+
+        return $result;
+    }
+
     static function getTotalParticipants() {
         require('db.php');
 
