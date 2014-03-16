@@ -12,6 +12,10 @@
 
     <script src='/js/all.js'></script>
 
+    <?php if($isUser): ?>
+        <script src='/js/page-user-profile.js'></script>
+    <?php endif; ?>
+
     <?php if($isEnv): ?>
         <script>
             var userId    = <?= $userId; ?>;
@@ -50,6 +54,10 @@
     <?php endif; ?>
 
     <script src='/build/all.min.js'></script>
+
+    <?php if($isUser): ?>
+        <script src='/build/page-user-profile.min.js'></script>
+    <?php endif; ?>
 
     <?php if($isEnv): ?>
         <script>var userId=<?= $userId; ?>,envId=<?= $envId; ?>,latitude=<?= $env->latitude; ?>,longitude=<?= $env->longitude; ?>;</script>

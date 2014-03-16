@@ -27,18 +27,14 @@ window.addEventListener('scroll', function () {
         hgroup.style.top = position * -1 / 2 + 'px';
     }
 
-    if (position >= target || siteNavToggle.checked || userNavToggle.checked) {
-        headerTop.style.backgroundColor = '#333';
-    } else {
-        headerTop.style.backgroundColor = 'transparent';
-    }
+    changeTopbarBkg();
 });
 
 function changeTopbarBkg() {
     if (position >= target || siteNavToggle.checked || userNavToggle.checked) {
-        headerTop.style.backgroundColor = '#333';
+        headerTop.className = 'top-bar-background';
     } else {
-        headerTop.style.backgroundColor = 'transparent';
+        headerTop.className = 'top-bar-background-none';
     }
 }
 
