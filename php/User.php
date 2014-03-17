@@ -46,7 +46,7 @@ class User {
 
         $userId = User::getUserId($username);
 
-        $sth = $dbh->query("SELECT envId, timestamp, latitude, longitude, name FROM environments WHERE userId='$userId'");
+        $sth = $dbh->query("SELECT envId FROM environments WHERE userId='$userId'");
         $sth->setFetchMode(PDO::FETCH_OBJ);
         $result = $sth->fetchAll();
 

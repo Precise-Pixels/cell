@@ -10,8 +10,19 @@
     <section id="environment-listing" class="section--spacer sdgrey">
         <div class="align-centre">
             <div id="pagination" class="full">
-                <a href="?page=<?= $page - 1; ?>" class="btn half"><i class="ico-arrow-left"></i>NEWER</a>
-                <a href="?page=<?= $page + 1; ?>" class="btn half"><i class="ico-arrow-right"></i>OLDER</a>
+                <?php if($page == 1): ?>
+                    <div class="btn btn--disabled"><i class="ico-arrow-left"></i>NEWER</div>
+                <?php else: ?>
+                    <a href="?page=<?= $page - 1; ?>"><div class="btn"><i class="ico-arrow-left"></i>NEWER</div></a>
+                <?php endif; ?>
+
+                <span><?= $page; ?> of <?= ceil(count($totalEnvironments) / 12); ?></span>
+
+                <?php if($page == ceil(count($totalEnvironments) / 12)): ?>
+                    <div class="btn btn--disabled"><i class="ico-arrow-right"></i>OLDER</div>
+                <?php else: ?>
+                    <a href="?page=<?= $page + 1; ?>"><div class="btn"><i class="ico-arrow-right"></i>OLDER</div></a>
+                <?php endif; ?>
             </div>
 
             <?php if(!empty($environments)):

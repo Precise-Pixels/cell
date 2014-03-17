@@ -7,4 +7,5 @@ if(isset($_GET['page'])) {
 }
 
 require_once('php/Environment.php');
-$environments = Environment::getRecentEnvironments($page);
+$environments      = Environment::getRecentEnvironments($page);
+$totalEnvironments = Environment::getTotalEnvironments();

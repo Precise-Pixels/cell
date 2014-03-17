@@ -28,4 +28,14 @@ class Environment {
 
         return $result;
     }
+
+    static function getTotalEnvironments() {
+        require('db.php');
+
+        $sth = $dbh->query("SELECT envId FROM environments");
+        $sth->setFetchMode(PDO::FETCH_OBJ);
+        $result = $sth->fetchAll();
+
+        return $result;
+    }
 }
