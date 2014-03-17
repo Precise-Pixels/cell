@@ -119,6 +119,7 @@
 
 #env-interface-pods-toggle:checked ~ #env-interface-pods {
     display: block;
+    top: 155px;
 }
 
 #env-interface-pods-toggle:checked ~ #env-interface-pods-btn:before {
@@ -133,7 +134,7 @@
     width: 100%;
     display: none;
     position: fixed;
-    top: 155px;
+    top: 40px;
     bottom: 100px;
     overflow-y: auto;
     z-index: 2;
