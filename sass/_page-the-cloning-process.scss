@@ -162,9 +162,21 @@
     left: 50%;
 }
 
-.ig-cube-scanner {
+.ig-cube-scanner-wrapper {
     width: 40%;
-    height: 40%;
-    top: 40%;
-    background: red;
+    height: 10%;
+    margin-top: -5%;
+    margin-left: -20%;
+    top: 50%;
+    left: 50%;
+    perspective: 50px;
+    perspective-origin: 50%;
+}
+
+.ig-cube-scanner {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 200px #F00;
+    background: rgba(255,0,0,.5);
+    transform-style: preserve-3d;
 }
