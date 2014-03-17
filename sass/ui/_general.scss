@@ -27,3 +27,33 @@ ol h1 {
 ol p {
     font-size: 1.4rem;
 }
+
+#pagination {
+    margin-top: 40px;
+    i {
+        transform: rotate(90deg);
+    }
+
+    span {
+        width: auto;
+        position: absolute;
+        left: 50%;
+        margin-left: -20px;
+        padding: 20px 0;
+    }
+
+    .pagination-next {
+        margin-top: 60px;
+    }
+
+    @media ($min_bp_a) {
+        .pagination-previous {
+            float: left;
+        }
+
+        .pagination-next {
+            margin-top: 0;
+            float: right;
+        }
+    }
+}

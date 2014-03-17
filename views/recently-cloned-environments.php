@@ -9,22 +9,6 @@
 
     <section id="environment-listing" class="section--spacer sdgrey">
         <div class="align-centre">
-            <div id="pagination" class="full">
-                <?php if($page <= 1): ?>
-                    <div class="btn btn--disabled"><i class="ico-arrow-left"></i>PREVIOUS</div>
-                <?php else: ?>
-                    <a href="?page=<?= $page - 1; ?>"><div class="btn"><i class="ico-arrow-left"></i>PREVIOUS</div></a>
-                <?php endif; ?>
-
-                <span><?= $page; ?> of <?= ceil(count($totalEnvironments) / 12); ?></span>
-
-                <?php if($page >= ceil(count($totalEnvironments) / 12)): ?>
-                    <div class="btn btn--disabled"><i class="ico-arrow-right"></i>NEXT</div>
-                <?php else: ?>
-                    <a href="?page=<?= $page + 1; ?>"><div class="btn"><i class="ico-arrow-right"></i>NEXT</div></a>
-                <?php endif; ?>
-            </div>
-
             <?php if(!empty($environments)):
                 foreach($environments as $env): ?>
                     <a href="/user/<?= $env->username; ?>/env/<?= $env->envId; ?>">
@@ -43,6 +27,21 @@
                     <h1>There are no more environments.</h1>
                 </div>
             <?php endif; ?>
+            <div id="pagination" class="full">
+                <?php if($page <= 1): ?>
+                    <div class="btn btn--disabled pagination-previous"><i class="ico-arrow-down"></i>PREVIOUS</div>
+                <?php else: ?>
+                    <a href="?page=<?= $page - 1; ?>" class="btn pagination-previous"><i class="ico-arrow-down"></i>PREVIOUS</a>
+                <?php endif; ?>
+
+                <span><?= $page; ?> of <?= ceil(count($totalEnvironments) / 12); ?></span>
+
+                <?php if($page >= ceil(count($totalEnvironments) / 12)): ?>
+                    <div class="btn btn--disabled pagination-next">NEXT<i class="ico-arrow-up"></i></div>
+                <?php else: ?>
+                    <a href="?page=<?= $page + 1; ?>" class="btn pagination-next">NEXT<i class="ico-arrow-up"></i></a>
+                <?php endif; ?>
+            </div>
         </div>
     </section>
 

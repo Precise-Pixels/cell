@@ -45,8 +45,13 @@ a.btn {
     }
 }
 
+.btn--disabled {
+    opacity: 0.1;
+    line-height: 20px;
+}
+
 @media ($min-bp-a) {
-    .btn {        
+    .btn {
         width: auto;
         margin-top: 0;
         display: inline-block;
