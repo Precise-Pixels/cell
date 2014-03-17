@@ -2,12 +2,12 @@
 var Detector = {
     webgl:     ( function() { try { var canvas = document.createElement('canvas'); return !! window.WebGLRenderingContext && (canvas.getContext('webgl') || canvas.getContext('experimental-webgl')); } catch(e) { return false; } } )(),
     webrtc:    ( function() { try { return navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia } catch(e) { return false; } } )(),
-    svgfilter: ( function() { try { return 'SVGFEColorMatrixElement' in window && SVGFEColorMatrixElement.SVG_FECOLORMATRIX_TYPE_SATURATE == 2; } catch(e) { return false; } } )()
+    cssfilter: ( function() { try { var el = document.createElement('div'); el.style.cssText = '-webkit-filter:blur(2px);filter:blur(2px);'; return !!el.style.length && ((document.documentMode === undefined || document.documentMode > 9)); } catch(e) { return false; } } )()
 }
 
 if(Detector.webgl)     { document.documentElement.className = document.documentElement.className.replace('no-webgl', 'webgl'); };
 if(Detector.webrtc)    { document.documentElement.className = document.documentElement.className.replace('no-webrtc', 'webrtc'); };
-if(Detector.svgfilter) { document.documentElement.className = document.documentElement.className.replace('no-svgfilter', 'svgfilter'); };
+if(Detector.cssfilter) { document.documentElement.className = document.documentElement.className.replace('no-cssfilter', 'cssfilter'); };
 
 // Top Bar parallax / hide
 var headerTop     = document.getElementById('top-bar');
