@@ -98,7 +98,7 @@ $loginSystem = new LoginSystem();
                 <table>
                     <tr>
                         <td><label for="username">Username:</label></td>
-                        <td><input type="text" name="username" required/></td>
+                        <td><input type="text" name="username" maxlength="19" required/></td>
                     </tr>
 
                     <tr>
