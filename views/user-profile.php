@@ -41,17 +41,17 @@
         <div class="align-centre">
             <div id="pagination" class="full">
                 <?php if($page == 1): ?>
-                    <div class="btn btn--disabled"><i class="ico-arrow-left"></i>NEWER</div>
+                    <div class="btn btn--disabled"><i class="ico-arrow-left"></i>PREVIOUS</div>
                 <?php else: ?>
-                    <a href="?page=<?= $page - 1; ?>"><div class="btn"><i class="ico-arrow-left"></i>NEWER</div></a>
+                    <a href="?page=<?= $page - 1; ?>"><div class="btn"><i class="ico-arrow-left"></i>PREVIOUS</div></a>
                 <?php endif; ?>
 
                 <span><?= $page; ?> of <?= ceil(count($totalEnvironments) / 12); ?></span>
 
                 <?php if($page == ceil(count($totalEnvironments) / 12)): ?>
-                    <div class="btn btn--disabled"><i class="ico-arrow-right"></i>OLDER</div>
+                    <div class="btn btn--disabled"><i class="ico-arrow-right"></i>NEXT</div>
                 <?php else: ?>
-                    <a href="?page=<?= $page + 1; ?>"><div class="btn"><i class="ico-arrow-right"></i>OLDER</div></a>
+                    <a href="?page=<?= $page + 1; ?>"><div class="btn"><i class="ico-arrow-right"></i>NEXT</div></a>
                 <?php endif; ?>
             </div>
 
