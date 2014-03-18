@@ -48,6 +48,7 @@ a.btn {
 .btn--disabled {
     opacity: .1;
     line-height: 20px;
+    cursor: default;
 }
 
 @media ($min-bp-a) {
