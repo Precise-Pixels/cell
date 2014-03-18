@@ -50,10 +50,12 @@ ol p {
     @media ($min_bp_a) {
         .pagination-previous {
             float: left;
+            padding-left: 5px;
         }
 
         .pagination-next {
             margin-top: 0;
+            padding-left: 5px;
             float: right;
         }
     }
