@@ -4,23 +4,38 @@ var x = 0;
 
 var timeline = document.getElementById('timeline');
 
-timeline.addEventListener('mousedown', function(e) {
+timeline.addEventListener('touchstart', start);
+timeline.addEventListener('mousedown', start);
+
+timeline.addEventListener('touchend', end);
+timeline.addEventListener('mouseup', end);
+
+timeline.addEventListener('touchmove', move);
+timeline.addEventListener('mousemove', move);
+
+timeline.addEventListener('touchcancel', leave);
+timeline.addEventListener('mouseleave', leave);
+
+function start(e) {
+    e.preventDefault();
     down = true;
     scrollLeft = this.scrollLeft;
-    x = e.clientX; 
-});
+    x = e.clientX || e.touches[0].clientX;
+}
 
-timeline.addEventListener('mouseup', function() {
+function end(e) {
+    e.preventDefault(); 
     down = false;
-});
+}
 
-timeline.addEventListener('mousemove', function(e) {
+function move(e) {
     e.preventDefault();
     if(down) {
-        this.scrollLeft = scrollLeft + x - e.clientX;
+        this.scrollLeft = scrollLeft + x - (e.clientX || e.touches[0].clientX);
     }
-});
+}
 
-timeline.addEventListener('mouseleave', function() {
+function leave(e) {
+    e.preventDefault(); 
     down = false;
-});
+}
