@@ -12,6 +12,12 @@
 
 <main>
 
+    <section class="full">
+        <div class="align-centre sdgrey">
+            <p><i class="ico-info"></i>Zoom in fully to select an area to clone!</p>
+        </div>
+    </section>
+
     <section id="new-env-interface" class="sdgrey">
         <div class="unsupported">
             <hgroup class="align-vertical">
