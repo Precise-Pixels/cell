@@ -30,6 +30,7 @@ ol p {
 
 #pagination {
     margin-top: 40px;
+    padding: 0 5px;
     i {
         transform: rotate(90deg);
     }
@@ -48,13 +49,11 @@ ol p {
 
     @media ($min_bp_a) {
         .pagination-previous {
-            margin-left: 5px;
             float: left;
         }
 
         .pagination-next {
             margin-top: 0;
-            margin-right: 5px;
             float: right;
         }
     }
