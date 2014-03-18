@@ -13,7 +13,7 @@
 <main>
 
     <section class="full">
-        <div class="align-centre sdgrey">
+        <div id="new-env-tip" class="align-centre sdgrey">
             <p><i class="ico-info"></i>Zoom in fully to select an area to clone!</p>
         </div>
     </section>
