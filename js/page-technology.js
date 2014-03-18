@@ -3,7 +3,7 @@ if(Detector.webgl) {
 }
 
 // ThreeJS Setup
-var $container, containerX, containerY, scene, camera, ambient, directional, loader, controls, renderer;
+var $container, containerX, containerY, scene, camera, ambient, directional1, directional2, loader, controls, renderer;
 
 function init() {
     $container = document.getElementById('clone-cube');
@@ -22,26 +22,18 @@ function init() {
     camera.lookAt(scene.position);
 
     // Lights
-    // ambient = new THREE.AmbientLight(0xffffff);
-    // scene.add(ambient);
+    ambient = new THREE.AmbientLight(0x333333);
+    scene.add(ambient);
 
-    directional = new THREE.DirectionalLight(0xffffff, 1);
-    directional.position.set(600, 800, 100);
-    directional.caseShadow = true;
-    directional.shadowCameraVisible = true;
-    directional.shadowMapWidth = directional.shadowMapWidth = 2048;
+    directional1 = new THREE.DirectionalLight(0xffffff);
+    directional1.position.set(40, 35, 40);
+    directional1.castShadow = true;
+    scene.add(directional1);
 
-    var d = 50;
-
-    directional.shadowCameraLeft = -d;
-    directional.shadowCameraRight = d;
-    directional.shadowCameraTop = d;
-    directional.shadowCameraBottom = -d;
-
-    directional.shadowCameraFar = 1000;
-    directional.shadowDarkness = 0.5;
-
-    scene.add(directional);
+    directional2 = new THREE.DirectionalLight(0xffffff, .3);
+    directional2.position.set(-40, -35, -40);
+    directional1.castShadow = true;
+    scene.add(directional2);
 
     // Geometry
     loader = new THREE.OBJMTLLoader();
@@ -55,6 +47,18 @@ function init() {
 
     loader.load('/3d/clone-cube.obj', '/3d/clone-cube.mtl');
 
+    var geometry = new THREE.SphereGeometry( 1, 32, 32 );
+    var material = new THREE.MeshBasicMaterial( {color: 0xffff00} );
+    var sphere = new THREE.Mesh( geometry, material );
+    sphere.position = directional1.position;
+    scene.add( sphere );
+
+    var geometry = new THREE.SphereGeometry( 1, 32, 32 );
+    var material = new THREE.MeshBasicMaterial( {color: 0xffff00} );
+    var sphere = new THREE.Mesh( geometry, material );
+    sphere.position = directional2.position;
+    scene.add( sphere );
+
     // Controls
     controls = new THREE.OrbitControls(camera, $container, '360', containerX);
     controls.addEventListener('change', render);
@@ -62,6 +66,8 @@ function init() {
     // Render
     renderer = new THREE.WebGLRenderer({alpha: true, antialias: true});
     renderer.setSize(containerX, containerY);
+    renderer.shadowMapEnabled = true;
+    renderer.shadowMapSoft = true;
     $container.appendChild(renderer.domElement);
 
     animate();
