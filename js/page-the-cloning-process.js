@@ -18,8 +18,18 @@ function calculateSquare() {
 }
 
 // Handle interaction
-var igSections = document.getElementById('ig-sections');
+var igSections     = document.getElementById('ig-sections');
+var igPrev         = document.getElementById('ig-prev');
+var igNext         = document.getElementById('ig-next');
 var currentSection = 1;
+
+igPrev.addEventListener('click', function() {
+    prevSection();
+});
+
+igNext.addEventListener('click', function() {
+    nextSection();
+});
 
 window.addEventListener('mousewheel', function(e) {
     if(e.wheelDelta > 0) {

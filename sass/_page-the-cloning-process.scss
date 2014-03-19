@@ -47,3 +47,27 @@
 .ig-current-section--4 {
     top: -300%;
 }
+
+#ig-prev,
+#ig-next {
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    cursor: pointer;
+    font-size: 3rem;
+    text-align: center;
+    color: $lgrey;
+}
+
+#ig-prev {
+    top: 0;
+}
+
+#ig-next {
+    bottom: 0;
+}
+
+.ig-current-section--1 ~ #ig-prev,
+.ig-current-section--4 ~ #ig-next {
+    display: none;
+}
