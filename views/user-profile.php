@@ -7,7 +7,7 @@
                     <img src="http://www.gravatar.com/avatar/<?= (isset($user->email) ? md5(strtolower(trim($user->email))) : 1); ?>?d=mm&amp;s=350" />
                 </figure>
                 <figcaption>
-                    <h1><?= $user->username; ?></h1>
+                    <h1 id="user-profile-username"><?= $user->username; ?></h1>
                 </figcaption>
             </div>
             <div id="user-info" class="half">
@@ -16,19 +16,21 @@
                     <p class="user-profile-title"><i class="ico-my-cell"></i>Welcome to MyCell, <?= $user->username; ?></p>
                 <?php endif; ?>
                 <p><i class="ico-env"></i><?= count($totalEnvironments); ?> Environments Cloned</p>
-                <p><i class="ico-pin"></i>Canterbury, UK</p>
+                <p><i class="ico-pin"></i><span id="user-profile-location">No location details</span><input type="text" name="location" value="Enter your current location" id="user-profile-location-input" class="user-profile-input user-profile-input--hidden"/></p>
                 <div id="user-social">
-                    <a href="#"><i class="ico-facebook"></i></a>
-                    <a href="#"><i class="ico-twitter"></i></a>
+                    <a href="#"><i class="ico-facebook"></i></a><input type="text" name="facebook" value="/username" id="user-profile-facebook-input" class="user-profile-input user-profile-input--hidden"/>
+                    <a href="#"><i class="ico-twitter"></i></a><input type="text" name="twitter" value="@username" id="user-profile-twitter-input" class="user-profile-input user-profile-input--hidden"/>
                 </div>
             </div>
-            <div id="user-buttons" class="quarter">
+            <div id="user-buttons">
             <?php // If user is signed in and viewing their own profile
             if(isset($_SESSION['userId']) && $_SESSION['userId'] == $user->userId): ?>
                 <?php if(empty($environments) && !isset($_GET['page'])): ?>
+                    <a href="#" id="user-profile-edit" class="btn" title="Edit your profile"><i class="ico-edit"></i></a>
                     <a href="<?= $user->username; ?>/env/new" class="btn" title="Clone New Environment"><i class="ico-env-new"></i> NEW CLONE</a>
                     <a href="/signout?r=<?= $_SERVER['REQUEST_URI']; ?>" class="btn" title="Sign Out"><i class="ico-logout"></i></a>
                 <?php else: ?>
+                    <a href="#" id="user-profile-edit" class="btn" title="Edit your profile"><i class="ico-edit"></i></a>
                     <a href="<?= $user->username; ?>/env/new" class="btn" title="Clone New Environment"><i class="ico-env-new"></i></a>
                     <a href="/signout?r=<?= $_SERVER['REQUEST_URI']; ?>" class="btn" title="Sign Out"><i class="ico-logout"></i></a>
                 <?php endif; ?>

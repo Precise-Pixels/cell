@@ -26,8 +26,9 @@
 }
 
 #user-buttons {
+    width: 100%;
+    float: left;
     margin-top: 20px;
-    text-align: right;
 }
 
 .env-delete {
@@ -42,6 +43,21 @@
     }
 }
 
+#user-profile-location-input {
+    width: 87%;
+}
+
+.user-profile-input {
+    width: 35%;
+}
+
+.user-profile-input--hidden {
+    display: none;
+}
+
+#user-profile-facebook-input {
+    margin-right: 36px;
+}
 
 #no-environments {
     width: 100%;
@@ -64,7 +80,15 @@
     }
 
     #user-buttons {
+        width: 141px;
+        position: absolute;
         margin-top: 0;
+        top: 0;
+        right: 0;
+        text-align: right;
+        > a {
+            margin-bottom: 3px;
+        }
     }
 }
 
@@ -82,6 +106,7 @@
     }
 
     #user-buttons {
+        width: auto;
         margin-top: 20px;
     }
 
