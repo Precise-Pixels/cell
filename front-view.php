@@ -5,7 +5,7 @@
 <head>
     <?php require_once('includes/head.php'); ?>
 </head>
-<body>
+<body class="<?= ($isCloningProcess) ? 'the-cloning-process' : ''; ?>">
     <?php require_once('includes/header.php'); ?>
     <?php require_once("views/$file.php"); ?>
     <?php require_once('includes/footer.php'); ?>
