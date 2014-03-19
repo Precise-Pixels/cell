@@ -75,6 +75,13 @@ a.cta {
     }
 }
 
+#user-social a {
+    border-bottom: 0;
+    &:hover {
+        border-bottom: 0;
+    }
+}
+
 .warn {
     padding: 10px;
     color: $lgrey;
