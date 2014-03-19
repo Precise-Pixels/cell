@@ -10,6 +10,10 @@
         <script src='/js/timeline-scroll.js'></script>
     <?php endif; ?>
 
+    <?php if($isCloningProcess): ?>
+        <script src='/js/page-the-cloning-process.js'></script>
+    <?php endif; ?>
+
     <?php if($isUser): ?>
         <script src='/js/page-user-profile.js'></script>
     <?php endif; ?>
@@ -49,6 +53,10 @@
 
     <?php if($isAbout): ?>
         <script src='/build/timeline-scroll.min.js'></script>
+    <?php endif; ?>
+
+    <?php if($isCloningProcess): ?>
+        <script src='/build/page-the-cloning-process.min.js'></script>
     <?php endif; ?>
 
     <?php if($isUser): ?>
