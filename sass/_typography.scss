@@ -32,14 +32,9 @@ p {
 }
 
 a {
-    font-size: 1.2rem;
     transition: all .3s;
     text-decoration: none;
     color: $lgrey;
-}
-
-#site-nav a {
-    border-bottom: 0;
 }
 
 .dgrey a,
