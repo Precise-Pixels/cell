@@ -1,3 +1,4 @@
+// Calculate the dimensions of a square that always fits in the viewport (with added padding)
 var igSectionWrapper = document.getElementById('ig-section-wrapper');
 calculateSquare();
 
@@ -6,25 +7,19 @@ window.addEventListener('resize', function() {
 });
 
 function calculateSquare() {
-    var windowWidth      = (window.innerWidth || document.documentElement.clientWidth);
-    var windowHeight     = (window.innerHeight || document.documentElement.clientHeight) - 40;
+    var windowWidth  = (window.innerWidth || document.documentElement.clientWidth);
+    var windowHeight = (window.innerHeight || document.documentElement.clientHeight) - 40;
 
     if(windowWidth > windowHeight) {
-        igSectionWrapper.style.width = igSectionWrapper.style.paddingBottom = windowHeight - 120 + 'px';
+        igSectionWrapper.style.width = igSectionWrapper.style.height = windowHeight - 120 + 'px';
     } else {
-        igSectionWrapper.style.width = igSectionWrapper.style.paddingBottom = windowWidth - 80 + 'px';
+        igSectionWrapper.style.width = igSectionWrapper.style.height = windowWidth - 80 + 'px';
     }
 }
 
-var igSections = document.getElementsByClassName('ig-section');
-var igSectionsLength = igSections.length;
-var igSection1 = document.getElementById('ig-section--1');
-var igSection2 = document.getElementById('ig-section--2');
-var igSection3 = document.getElementById('ig-section--3');
-var igSection4 = document.getElementById('ig-section--4');
-var currentSection = 0;
-
-console.log(igSections);
+// Handle interaction
+var igSections = document.getElementById('ig-sections');
+var currentSection = 1;
 
 window.addEventListener('mousewheel', function(e) {
     if(e.wheelDelta > 0) {
@@ -35,33 +30,25 @@ window.addEventListener('mousewheel', function(e) {
 });
 
 function prevSection() {
-    if(currentSection == 0) { return false; }
+    if(currentSection == 1) { return false; }
     currentSection--;
-    updateClasses();
+    updateSection();
 }
 
 function nextSection() {
-    if(currentSection == 3) { return false; }
+    if(currentSection == 4) { return false; }
     currentSection++;
-    updateClasses();
+    updateSection();
 }
 
-function updateClasses() {
-    for(var i = 0; i < igSectionsLength; i++) {
-        if(i == currentSection) {
-            igSections[i].className = 'ig-section ig-section--current';
-        } else if(i == currentSection - 1) {
-            igSections[i].className = 'ig-section ig-section--prev';
-        } else {
-            igSections[i].className = 'ig-section';
-        }
-    }
+function updateSection() {
+    igSections.className = 'ig-current-section--' + currentSection;
 }
 
-igSection1.addEventListener(whichTransitionEvent(), transitionComplete);
-igSection2.addEventListener(whichTransitionEvent(), transitionComplete);
-igSection3.addEventListener(whichTransitionEvent(), transitionComplete);
-igSection4.addEventListener(whichTransitionEvent(), transitionComplete);
+// Add a class when CSS transition is complete
+igSections.addEventListener(whichTransitionEvent(), function() {
+    igSections.className += ' ig-transition-complete';
+});
 
 function whichTransitionEvent() {
     var t;
@@ -78,8 +65,4 @@ function whichTransitionEvent() {
             return transitions[t];
         }
     }
-}
-
-function transitionComplete() {
-
 }
