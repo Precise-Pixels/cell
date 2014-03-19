@@ -65,6 +65,16 @@ a {
     }   
 }
 
+.cell-logo a,
+a.cta {    
+    color: $lgrey;
+    border-bottom: 0;
+    &:hover {
+        border-bottom: 0;
+        color: $lgrey;
+    }
+}
+
 .warn {
     padding: 10px;
     color: $lgrey;
