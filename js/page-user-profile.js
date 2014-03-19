@@ -20,7 +20,6 @@ userProfileEdit.addEventListener('click', function(e) {
 
         request.onreadystatechange = function() {
             if(request.readyState == 4 && request.status == 200) {
-                console.log(request.responseText);
                 editing = false;
                 e.target.firstChild.className = 'ico-edit';
 
@@ -31,6 +30,8 @@ userProfileEdit.addEventListener('click', function(e) {
                 userProfileLocationInput.className += ' user-profile-input--hidden';
                 userProfileFacebookInput.className += ' user-profile-input--hidden';
                 userProfileTwitterInput.className  += ' user-profile-input--hidden';
+
+                location.reload();
             }
         }
 
