@@ -7,44 +7,56 @@ var userProfileFacebookInput = document.getElementById('user-profile-facebook-in
 var userProfileTwitterInput  = document.getElementById('user-profile-twitter-input');
 
 var editing = false;
-var userProfileUsernameText;
+var userProfileUsernameCurrent = userProfileUsername.innerHTML;
+var userProfileLocationCurrent = userProfileLocation.innerHTML;
+var href = userProfileFacebookInput.previousSibling.href.split('/');
+var userProfileFacebookCurrent = href[href.length - 1];
+var href = userProfileTwitterInput.previousSibling.href.split('/');
+var userProfileTwitterCurrent  = href[href.length - 1];
 
 userProfileEdit.addEventListener('click', function(e) {
     if(editing) {
         // Save
-        var data = 'location=' + userProfileLocationInput.value + '&facebook=' + userProfileFacebookInput.value + '&twitter=' + userProfileTwitterInput.value;
-        var request = new XMLHttpRequest;
-        request.open('POST', '/php/saveUserProfile.php', true);
-        request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        request.send(data);
+        // Only send the request if something has changed
+        if(userProfileLocationInput.value == userProfileLocationCurrent && userProfileFacebookInput.value == userProfileFacebookCurrent && userProfileTwitterInput.value == userProfileTwitterCurrent) {
+            resetForm();
+        } else {
+            var data = 'location=' + userProfileLocationInput.value + '&facebook=' + userProfileFacebookInput.value + '&twitter=' + userProfileTwitterInput.value;
+            var request = new XMLHttpRequest;
+            request.open('POST', '/php/saveUserProfile.php', true);
+            request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            request.send(data);
 
-        request.onreadystatechange = function() {
-            if(request.readyState == 4 && request.status == 200) {
-                editing = false;
-                e.target.firstChild.className = 'ico-edit';
-
-                // Reinstate username
-                userProfileUsername.innerHTML = userProfileUsernameText;
-
-                // Hide input fields
-                userProfileLocationInput.className += ' user-profile-input--hidden';
-                userProfileFacebookInput.className += ' user-profile-input--hidden';
-                userProfileTwitterInput.className  += ' user-profile-input--hidden';
-
-                location.reload();
+            request.onreadystatechange = function() {
+                if(request.readyState == 4 && request.status == 200) {
+                    resetForm();
+                    location.reload();
+                }
             }
+
+            request.onerror = function() {
+                alert('Something went wrong. Please try again.');
+            };
         }
 
-        request.onerror = function() {
-            alert('Something went wrong. Please try again.');
-        };
+        function resetForm() {
+            editing = false;
+            e.target.firstChild.className = 'ico-edit';
+
+            // Reinstate username
+            userProfileUsername.innerHTML = userProfileUsernameCurrent;
+
+            // Hide input fields
+            userProfileLocationInput.className += ' user-profile-input--hidden';
+            userProfileFacebookInput.className += ' user-profile-input--hidden';
+            userProfileTwitterInput.className  += ' user-profile-input--hidden';
+        }
     } else {
         // Edit
         editing = true;
         e.target.firstChild.className = 'ico-save';
 
         // Show link to Gravatar
-        userProfileUsernameText = userProfileUsername.innerHTML;
         userProfileUsername.innerHTML = '<a href="http://gravatar.com/" target="_blank" title="Change your avatar at Gravatar.com"><i class="ico-edit"></i>Gravatar.com</a>';
 
         // Show input fields
@@ -54,18 +66,16 @@ userProfileEdit.addEventListener('click', function(e) {
 
         // If location has already been entered, put it into the input field
         if(userProfileLocation.innerHTML != 'No location details') {
-            userProfileLocationInput.value = userProfileLocation.innerHTML;
+            userProfileLocationInput.value = userProfileLocationCurrent;
         }
 
         // If Facebook/Twitter usernames have already been entered, put them into the input fields
         if(userProfileFacebookInput.previousSibling.href.slice(-1) != '#') {
-            var href = userProfileFacebookInput.previousSibling.href.split('/');
-            userProfileFacebookInput.value = href[href.length - 1];
+            userProfileFacebookInput.value = userProfileFacebookCurrent;
         }
 
         if(userProfileTwitterInput.previousSibling.href.slice(-1) != '#') {
-            var href = userProfileTwitterInput.previousSibling.href.split('/');
-            userProfileTwitterInput.value = href[href.length - 1];
+            userProfileTwitterInput.value = userProfileTwitterCurrent;
         }
     }
 });
