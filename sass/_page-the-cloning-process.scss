@@ -27,10 +27,16 @@
     transition: top .6s;
 }
 
-#ig-slides > img {
+.ig-slide {
+    position: relative;
+    & > img {
+        display: block;
+        user-select: none;
+    }
+}
+
+.ig-slide-background {
     width: 100%;
-    display: block;
-    user-select: none;
 }
 
 .ig-current-slide--1 {
@@ -47,16 +53,6 @@
 
 .ig-current-slide--4 {
     top: -300%;
-}
-
-#ig-cube {
-    width: 10%;
-    height: 10%;
-    position: absolute;
-    margin-top: -5%;
-    margin-left: -5%;
-    top: 50%;
-    left: 50%;
 }
 
 #ig-prev,
@@ -81,4 +77,30 @@
 .ig-current-slide--1 ~ #ig-prev,
 .ig-current-slide--4 ~ #ig-next {
     display: none;
+}
+
+#ig-cube {
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    margin-top: -5%;
+    margin-left: -5%;
+    top: 50%;
+    left: 50%;
+}
+
+.ig-animate {
+    position: absolute;
+}
+
+#ig-plane {
+    width: 13%;
+    height: 6%;
+    top: 30%;
+    animation: ig-plane 20s linear infinite;
+}
+
+@keyframes ig-plane {
+    from { left: 100%; }
+    to   { left: -20%; }
 }
