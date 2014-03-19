@@ -32,11 +32,37 @@ p {
 }
 
 a {
-    color: #285989;
+    font-size: 1.2rem;
+    transition: all .3s;
+    text-decoration: none;
 }
 
-a:hover {
+.dgrey a,
+.sdgrey a {
+    color: $mblue;
+    border-bottom: 1px solid $mblue;
+    &:hover {
+        color: $lgrey;
+        border-bottom: 1px solid $lgrey;
+    }
+}
+
+.lgrey a {
+    color: $mblue;
+    border-bottom: 1px solid $mblue;
+    &:hover {
+        color: $dgrey;
+        border-bottom: 1px solid $dgrey;
+    }   
+}
+
+.mblue a {
     color: $lgrey;
+    border-bottom: 1px solid $lgrey;
+    &:hover {
+        color: $dgrey;
+        border-bottom: 1px solid $dgrey;
+    }   
 }
 
 .warn {
