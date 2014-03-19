@@ -30,6 +30,7 @@
 #ig-slides > img {
     width: 100%;
     display: block;
+    user-select: none;
 }
 
 .ig-current-slide--1 {
