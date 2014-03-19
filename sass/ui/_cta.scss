@@ -41,6 +41,15 @@
     }
 }
 
+a.cta {
+    border-bottom: 0;
+    color: $lgrey;
+    &:hover {
+        border-bottom: 0;
+        color: $lgrey;
+    }
+}
+
 .cta--example {
     height: 200px;
     background-image: url(/img/placeholder.gif);
