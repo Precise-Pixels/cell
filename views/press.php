@@ -9,7 +9,6 @@
     <section>
         <div class="align-centre">
             <div class="section-padding lgrey">
-                <h1><i class="ico-email"></i>CONTACT</h1>
                 <div id="press-email">
                     <p>For all enquiries please contact:</p>
                     <a href="mailto:press@cell-industries.co.uk">press@cell-industries.co.uk</a>
