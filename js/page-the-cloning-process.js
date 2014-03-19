@@ -29,6 +29,14 @@ window.addEventListener('mousewheel', function(e) {
     }
 });
 
+window.addEventListener('keydown', function(e) {
+    if(e.which == 38) {
+        prevSection();
+    } else if(e.which == 40) {
+        nextSection();
+    }
+});
+
 function prevSection() {
     if(currentSection == 1) { return false; }
     currentSection--;
