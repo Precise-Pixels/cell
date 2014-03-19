@@ -8,3 +8,28 @@
         display: none;
     }
 }
+
+.ig-section {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-position: center;
+    background-size: cover;
+}
+
+.ig-section--1 {
+    background-image: url(/img/infographic/1.jpg);
+}
+
+.ig-section--2 {
+    background-image: url(/img/infographic/2.jpg);
+}
+
+.ig-section--3 {
+    background-image: url(/img/infographic/3.jpg);
+}
+
+.ig-section--4 {
+    background-image: url(/img/infographic/4.jpg);
+}
