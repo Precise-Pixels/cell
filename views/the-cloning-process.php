@@ -7,6 +7,7 @@
             <img src="/img/infographic/3.jpg" alt=""/>
             <img src="/img/infographic/4.jpg" alt=""/>
         </div>
+        <img id="ig-cube" alt="Clone Cube"/>
         <i id="ig-prev" class="ico-arrow-up2"></i>
         <i id="ig-next" class="ico-arrow-down2"></i>
     </div>
