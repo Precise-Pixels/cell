@@ -12,21 +12,37 @@ var userProfileUsernameText;
 userProfileEdit.addEventListener('click', function(e) {
     if(editing) {
         // Save
-        editing = false;
-        e.target.firstChild.className = 'ico-edit';
+        var data = 'location=' + userProfileLocationInput.value + '&facebook=' + userProfileFacebookInput.value + '&twitter=' + userProfileTwitterInput.value;
+        var request = new XMLHttpRequest;
+        request.open('POST', '/php/saveUserProfile.php', true);
+        request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        request.send(data);
 
-        userProfileUsername.innerHTML = userProfileUsernameText;
+        request.onreadystatechange = function() {
+            if(request.readyState == 4 && request.status == 200) {
+                console.log(request.responseText);
+                editing = false;
+                e.target.firstChild.className = 'ico-edit';
 
-        // Hide input fields
-        userProfileLocationInput.className += ' user-profile-input--hidden';
-        userProfileFacebookInput.className += ' user-profile-input--hidden';
-        userProfileTwitterInput.className  += ' user-profile-input--hidden';
+                // Reinstate username
+                userProfileUsername.innerHTML = userProfileUsernameText;
+
+                // Hide input fields
+                userProfileLocationInput.className += ' user-profile-input--hidden';
+                userProfileFacebookInput.className += ' user-profile-input--hidden';
+                userProfileTwitterInput.className  += ' user-profile-input--hidden';
+            }
+        }
+
+        request.onerror = function() {
+            alert('Something went wrong. Please try again.');
+        };
     } else {
         // Edit
         editing = true;
         e.target.firstChild.className = 'ico-save';
 
-        // Add Gravatar link
+        // Show link to Gravatar
         userProfileUsernameText = userProfileUsername.innerHTML;
         userProfileUsername.innerHTML = '<a href="http://gravatar.com/" target="_blank" title="Change your avatar at Gravatar.com"><i class="ico-edit"></i>Gravatar.com</a>';
 

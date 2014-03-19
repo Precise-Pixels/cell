@@ -16,10 +16,10 @@
                     <p class="user-profile-title"><i class="ico-my-cell"></i>Welcome to MyCell, <?= $user->username; ?></p>
                 <?php endif; ?>
                 <p><i class="ico-env"></i><?= count($totalEnvironments); ?> Environments Cloned</p>
-                <p><i class="ico-pin"></i><span id="user-profile-location">No location details</span><input type="text" name="location" value="Enter your current location" id="user-profile-location-input" class="user-profile-input user-profile-input--hidden"/></p>
+                <p><i class="ico-pin"></i><span id="user-profile-location">No location details</span><input type="text" name="location" placeholder="Enter your current location" id="user-profile-location-input" class="user-profile-input user-profile-input--hidden"/></p>
                 <div id="user-social">
-                    <a href="#"><i class="ico-facebook"></i></a><input type="text" name="facebook" value="/username" id="user-profile-facebook-input" class="user-profile-input user-profile-input--hidden"/>
-                    <a href="#"><i class="ico-twitter"></i></a><input type="text" name="twitter" value="@username" id="user-profile-twitter-input" class="user-profile-input user-profile-input--hidden"/>
+                    <a href="#"><i class="ico-facebook"></i></a><input type="text" name="facebook" placeholder="/username" id="user-profile-facebook-input" class="user-profile-input user-profile-input--hidden"/>
+                    <a href="#"><i class="ico-twitter"></i></a><input type="text" name="twitter" placeholder="@username" id="user-profile-twitter-input" class="user-profile-input user-profile-input--hidden"/>
                 </div>
             </div>
             <div id="user-buttons">
