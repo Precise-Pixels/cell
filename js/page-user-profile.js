@@ -16,6 +16,8 @@ var href              = upTwitterInput.previousSibling.href.split('/');
 var upTwitterCurrent  = href[href.length - 1];
 
 upEdit.addEventListener('click', function(e) {
+    e.preventDefault();
+
     if(editing) {
         // Save
         // Only send the request if something has changed
