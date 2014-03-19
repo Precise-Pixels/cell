@@ -79,6 +79,14 @@ a.cta {
     padding: 10px;
     color: $lgrey;
     background: $red;
+    a {
+        font-weight: 600;
+        border-bottom: 1px solid $lgrey;
+        &:hover {
+            color: $lgrey;
+            border-bottom: 1px solid $lgrey;
+        }
+    }
 }
 
 blockquote {
