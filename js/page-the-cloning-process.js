@@ -1,5 +1,5 @@
 // Calculate the dimensions of a square that always fits in the viewport (with added padding)
-var igSectionWrapper = document.getElementById('ig-section-wrapper');
+var igSlideWrapper = document.getElementById('ig-slide-wrapper');
 calculateSquare();
 
 window.addEventListener('resize', function() {
@@ -11,61 +11,61 @@ function calculateSquare() {
     var windowHeight = (window.innerHeight || document.documentElement.clientHeight) - 40;
 
     if(windowWidth > windowHeight) {
-        igSectionWrapper.style.width = igSectionWrapper.style.height = windowHeight - 120 + 'px';
+        igSlideWrapper.style.width = igSlideWrapper.style.height = windowHeight - 120 + 'px';
     } else {
-        igSectionWrapper.style.width = igSectionWrapper.style.height = windowWidth - 80 + 'px';
+        igSlideWrapper.style.width = igSlideWrapper.style.height = windowWidth - 80 + 'px';
     }
 }
 
 // Handle interaction
-var igSections     = document.getElementById('ig-sections');
-var igPrev         = document.getElementById('ig-prev');
-var igNext         = document.getElementById('ig-next');
-var currentSection = 1;
+var igSlides = document.getElementById('ig-slides');
+var igPrev   = document.getElementById('ig-prev');
+var igNext   = document.getElementById('ig-next');
+var currentSlide = 1;
 
 igPrev.addEventListener('click', function() {
-    prevSection();
+    prevSlide();
 });
 
 igNext.addEventListener('click', function() {
-    nextSection();
+    nextSlide();
 });
 
 window.addEventListener('mousewheel', function(e) {
     if(e.wheelDelta > 0) {
-        prevSection();
+        prevSlide();
     } else {
-        nextSection();
+        nextSlide();
     }
 });
 
 window.addEventListener('keydown', function(e) {
     if(e.which == 38) {
-        prevSection();
+        prevSlide();
     } else if(e.which == 40) {
-        nextSection();
+        nextSlide();
     }
 });
 
-function prevSection() {
-    if(currentSection == 1) { return false; }
-    currentSection--;
-    updateSection();
+function prevSlide() {
+    if(currentSlide == 1) { return false; }
+    currentSlide--;
+    updateSlide();
 }
 
-function nextSection() {
-    if(currentSection == 4) { return false; }
-    currentSection++;
-    updateSection();
+function nextSlide() {
+    if(currentSlide == 4) { return false; }
+    currentSlide++;
+    updateSlide();
 }
 
-function updateSection() {
-    igSections.className = 'ig-current-section--' + currentSection;
+function updateSlide() {
+    igSlides.className = 'ig-current-slide--' + currentSlide;
 }
 
 // Add a class when CSS transition is complete
-igSections.addEventListener(whichTransitionEvent(), function() {
-    igSections.className += ' ig-transition-complete';
+igSlides.addEventListener(whichTransitionEvent(), function() {
+    igSlides.className += ' ig-transition-complete';
 });
 
 function whichTransitionEvent() {
