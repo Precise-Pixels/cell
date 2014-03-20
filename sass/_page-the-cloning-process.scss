@@ -109,29 +109,22 @@
 #ig-satellite {
     height: 25%;
     left: 10%;
-    animation: ig-satellite 15s infinite ease-in-out;
+    animation: ig-satellite 7s alternate infinite ease-in-out;
     // filter: blur(2px);
 }
 
 @keyframes ig-satellite {
-   0% {
-       top: 65%;
-   }
-   50% {
-       top: 60%;
-   }
-   100% {
-       top: 65%;
-   }
+   0%   { top: 65%; }
+   100% { top: 60%; }
 }
 
 #ig-plane {
     height: 6%;
     top: 15%;
-    animation: ig-plane 10s linear infinite;
+    animation: ig-plane 10s infinite linear;
 }
 
 @keyframes ig-plane {
-    from { left: 100%; }
-    to   { left: -20%; }
+    0%   { left: 100%; }
+    100% { left: -20%; }
 }
