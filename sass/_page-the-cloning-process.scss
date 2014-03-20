@@ -13,30 +13,43 @@
     }
 }
 
-#ig-slide-wrapper {
-    width: 320px;
-    height: 320px;
-    position: relative;
-    margin: 80px auto 0;
-    overflow: hidden;
-    background: #4679BD;
-}
-
 #ig-slides {
-    position: absolute;
+    width: 100%;
+    height: 100%;
+    position: fixed;
     transition: top .6s;
 }
 
 .ig-slide {
+    width: 100%;
+    height: 100%;
     position: relative;
+    & > div,
     & > img {
-        display: block;
         user-select: none;
     }
 }
 
-.ig-slide-background {
+.ig-slide {
     width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.ig-slide--1 {
+    background-image: url(/img/infographic/1.jpg);
+}
+
+.ig-slide--2 {
+    background-image: url(/img/infographic/2.jpg);
+}
+
+.ig-slide--3 {
+    background-image: url(/img/infographic/3.jpg);
+}
+
+.ig-slide--4 {
+    background-image: url(/img/infographic/4.jpg);
 }
 
 .ig-current-slide--1 {
@@ -59,7 +72,7 @@
 #ig-next {
     width: 100%;
     height: 60px;
-    position: absolute;
+    position: fixed;
     cursor: pointer;
     font-size: 3rem;
     text-align: center;
@@ -67,7 +80,7 @@
 }
 
 #ig-prev {
-    top: 0;
+    top: 40px;
 }
 
 #ig-next {
@@ -81,8 +94,7 @@
 
 #ig-cube {
     width: 10%;
-    height: 10%;
-    position: absolute;
+    position: fixed;
     margin-top: -5%;
     margin-left: -5%;
     top: 50%;
