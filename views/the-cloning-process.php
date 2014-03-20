@@ -3,10 +3,10 @@
     <div id="ig-slides" class="ig-current-slide--1 ig-transition-complete">
         <div class="ig-slide">
             <div class="ig-slide ig-slide--1"></div>
-            <img src="/img/infographic/satellite.png" alt="Satellitee" id="ig-satellite" class="ig-animate"/>
         </div>
         <div class="ig-slide">
             <div class="ig-slide ig-slide--2"></div>
+            <img src="/img/infographic/satellite.png" alt="Satellite" id="ig-satellite" class="ig-animate"/>
         </div>
         <div class="ig-slide">
             <div class="ig-slide ig-slide--3"></div>
