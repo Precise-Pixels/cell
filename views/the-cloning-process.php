@@ -14,6 +14,7 @@
         </div>
         <div class="ig-slide">
             <div class="ig-slide ig-slide--4"></div>
+            <div id="ig-scanner-wrapper" class="ig-animate"><img src="/img/infographic/scanner.png" alt="Scanner" id="ig-scanner"/></div>
         </div>
     </div>
     <img src="/img/infographic/cube.jpg" id="ig-cube" alt="Clone Cube"/>
