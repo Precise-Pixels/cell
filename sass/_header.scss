@@ -130,11 +130,11 @@ body > header {
 }
 
 #site-nav {
-    width: 200px;
+    width: 215px;
     height: 100%;
     position: fixed;
     top: 40px;
-    left: -200px;
+    left: -215px;
     display: block;
     transition: all .3s;
     ul {
@@ -208,8 +208,8 @@ header > .cell-logo {
 
 @media ($min-bp-a) {
     #site-nav {
-        width: 270px;
-        left: -270px;
+        width: 325px;
+        left: -325px;
     }
 
     #site-nav a {
