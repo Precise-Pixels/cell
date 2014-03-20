@@ -15,7 +15,7 @@
                 if(isset($_SESSION['userId']) && $_SESSION['userId'] == $user->userId): ?>
                     <p class="user-profile-title"><i class="ico-my-cell"></i>Welcome to MyCell, <?= $user->username; ?></p>
                 <?php endif; ?>
-                <p><i class="ico-env"></i><?= count($environments); ?> Environments Cloned</p>
+                <p><i class="ico-env"></i><?= count($totalEnvironments); ?> Environments Cloned</p>
                 <p><i class="ico-pin"></i>Canterbury, UK</p>
                 <div id="user-social">
                     <a href="#"><i class="ico-facebook"></i></a>
@@ -25,11 +25,11 @@
             <div id="user-buttons" class="quarter">
             <?php // If user is signed in and viewing their own profile
             if(isset($_SESSION['userId']) && $_SESSION['userId'] == $user->userId): ?>
-                <?php if(!empty($environments)): ?>
-                    <a href="<?= $user->username; ?>/env/new" class="btn" title="Clone New Environment"><i class="ico-env-new"></i></a>
+                <?php if(empty($environments) && !isset($_GET['page'])): ?>
+                    <a href="<?= $user->username; ?>/env/new" class="btn" title="Clone New Environment"><i class="ico-env-new"></i> NEW CLONE</a>
                     <a href="/signout?r=<?= $_SERVER['REQUEST_URI']; ?>" class="btn" title="Sign Out"><i class="ico-logout"></i></a>
                 <?php else: ?>
-                    <a href="<?= $user->username; ?>/env/new" class="btn" title="Clone New Environment"><i class="ico-env-new"></i> NEW CLONE</a>
+                    <a href="<?= $user->username; ?>/env/new" class="btn" title="Clone New Environment"><i class="ico-env-new"></i></a>
                     <a href="/signout?r=<?= $_SERVER['REQUEST_URI']; ?>" class="btn" title="Sign Out"><i class="ico-logout"></i></a>
                 <?php endif; ?>
             <?php endif; ?>
@@ -49,14 +49,37 @@
                             <figcaption>
                                 <h1><?= $env->name; ?></h1>
                             </figcaption>
+                            <?php // If user is signed in and viewing their own profile
+                            if(isset($_SESSION['userId']) && $_SESSION['userId'] == $user->userId): ?>
+                                <i class="ico-cross env-delete"></i>
+                            <?php endif; ?>
                         </div>
                     </a>
                 <?php endforeach;
-            else: ?>
+            elseif(empty($environments) && isset($_GET['page'])): ?>
+                <div id="no-environments" class="section-padding mblue">
+                    <h1>There are no more environments.</h1>
+                </div>
+            <?php else: ?>
                 <div id="no-environments" class="section-padding mblue">
                     <h1>This user hasn't cloned any environments yet.</h1>
                 </div>
             <?php endif; ?>
+            <div id="pagination" class="full">
+                <?php if($page <= 1): ?>
+                    <div class="btn btn--disabled pagination-previous"><i class="ico-arrow-down"></i>PREVIOUS</div>
+                <?php else: ?>
+                    <a href="?page=<?= $page - 1; ?>" class="btn pagination-previous"><i class="ico-arrow-down"></i>PREVIOUS</a>
+                <?php endif; ?>
+
+                <span><?= $page; ?> of <?= ceil(count($totalEnvironments) / 12); ?></span>
+
+                <?php if($page >= ceil(count($totalEnvironments) / 12)): ?>
+                    <div class="btn btn--disabled pagination-next">NEXT<i class="ico-arrow-up"></i></div>
+                <?php else: ?>
+                    <a href="?page=<?= $page + 1; ?>" class="btn pagination-next">NEXT<i class="ico-arrow-up"></i></a>
+                <?php endif; ?>
+            </div>
         </div>
     </section>
 

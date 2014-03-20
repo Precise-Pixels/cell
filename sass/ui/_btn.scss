@@ -20,7 +20,7 @@ a.btn {
 .lgrey .btn {
     color: $dgrey;
     box-shadow: inset 4px 4px 0 $dgrey, inset -4px -4px 0 $dgrey;
-    &:hover {
+    &:not(.btn--disabled):hover {
         color: $lgrey;
         box-shadow: inset 4px 240px 0 $dgrey, inset -4px 4px 0 $dgrey; 
     }
@@ -29,7 +29,7 @@ a.btn {
 .mblue .btn {
     color: $lgrey;
     box-shadow: inset 4px 4px 0 $lgrey, inset -4px -4px 0 $lgrey;
-    &:hover {
+    &:not(.btn--disabled):hover {
         color: $mblue;
         box-shadow: inset 4px 240px 0 $lgrey, inset -4px -4px 0 $lgrey; 
     }
@@ -39,14 +39,20 @@ a.btn {
 .sdgrey .btn {
     color: $lgrey;
     box-shadow: inset 4px 4px 0 $lgrey, inset -4px -4px 0 $lgrey;
-    &:hover {
+    &:not(.btn--disabled):hover {
         color: $dgrey;
         box-shadow: inset 4px 240px 0 $lgrey, inset -4px -4px 0 $lgrey; 
     }
 }
 
+.btn--disabled {
+    opacity: .1;
+    line-height: 20px;
+    cursor: default;
+}
+
 @media ($min-bp-a) {
-    .btn {        
+    .btn {
         width: auto;
         margin-top: 0;
         display: inline-block;
