@@ -1,4 +1,4 @@
-<div id="capture-model" style="width: 600px; height: 600px;"></div>
+<div id="capture-model" style="width: 1000px; height: 1000px;"></div>
 <div class="full-page-overlay full-page-overlay--loading"></div>
 
 <script>
