@@ -1,5 +1,6 @@
 var stream,
     video,
+    interval,
     pending = false;
 
 function initWebcam() {
@@ -18,7 +19,7 @@ function initWebcam() {
             video = document.getElementById('video');
             video.src = window.URL.createObjectURL(stream);
             video.onplay = function() {
-                setInterval(dump, 30);
+                interval = setInterval(dump, 30);
             };
             document.body.className += ' env--webcam';
         },
@@ -273,6 +274,7 @@ function stopWebcam() {
     if(stream) {
         stream.stop();
         video.src = '';
+        clearInterval(interval);
         pending = false;
     }
 }
