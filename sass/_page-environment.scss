@@ -188,6 +188,11 @@
     width: 90px !important;
 }
 
+#env-info-note {
+    font-size: .8rem;
+    padding: 10px;
+}
+
 .env-data-pod--time {
     width: 100%;
 }
@@ -404,7 +409,7 @@
     #env-share {
         width: 300px;
         right: 20px;
-        bottom: 60px;
+        bottom: 80px;
     }
 
     .fb_iframe_widget {
@@ -413,6 +418,12 @@
 
     #twitter-widget-0 {
         width: 90px !important;
+    }
+
+    #env-info-note {
+        position: absolute;
+        right: 10px;
+        bottom: 40px;
     }
 
     .env-data-pod--time {
@@ -432,7 +443,7 @@
     .env-data-pod--nearby {
         width: 300px;
         top: 185px;
-        bottom: 179px;
+        bottom: 199px;
         right: 20px;
         overflow: auto;
     }

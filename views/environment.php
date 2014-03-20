@@ -29,6 +29,7 @@
                 <div class="fb-share-button" data-href="<?= $currentUrl; ?>" data-type="button_count"></div>
                 <a href="https://twitter.com/share?url=<?= $currentUrl; ?>&amp;text=I just cloned part of the planet! Clone your part now!&hashtags=PreservingThePlanet,ProjectTitan,CellIndustries" class="twitter-share-button">Tweet</a>
             </div>
+            <span id="env-info-note"><i class="ico-info"></i>Additional environment information is dependant on data availability.</span>
             <div id="env-interface-pods-bkg"></div>
         </div>
         <div id="webcam-wrapper" class="env-interface-element"> 
@@ -43,7 +44,6 @@
             </div>
         </div>
     </section>
-
 
 </main>
 
