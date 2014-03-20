@@ -1,10 +1,10 @@
 <header id="primary-header" class="fixed-header--home section-padding sdgrey">
     <div class="cube-wrapper">
         <div class="cube">
-            <div class="front">FRONT</div>
-            <div class="back">BACK</div>
-            <div class="left">LEFT</div>
-            <div class="right">RIGHT</div>
+            <div class="front"></div>
+            <div class="back"></div>
+            <div class="left"></div>
+            <div class="right"></div>
             <img src="/img/logo.gif" alt="Cell Industries logo in a spinning cube">
         </div>
     </div>
