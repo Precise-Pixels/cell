@@ -1,6 +1,7 @@
 <header id="fixed-header" class="fixed-header--press section-padding">
     <hgroup class="align-vertical">
         <h1>PRESS</h1>
+        <?php require_once('includes/balls.php'); ?>
     </hgroup>
 </header>
 
@@ -11,12 +12,12 @@
             <h1><i class="ico-email"></i>CONTACT</h1>
             <div class="half-margin">
                 <h2>Press</h2>
-                <a href="mailto:press@cell.dev">press@cell.dev</a>
+                <a href="mailto:press@cell-industries.co.uk">press@cell-industries.co.uk</a>
             </div>
 
             <div class="half-margin">
                 <h2>Press</h2>
-                <a href="mailto:press@cell.dev">press@cell.dev</a>
+                <a href="mailto:press@cell-industries.co.uk">press@cell-industries.co.uk</a>
             </div>
         </div>
     </section>

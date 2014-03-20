@@ -10,6 +10,10 @@
 <?php endif; ?>
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900' rel='stylesheet' type='text/css'>
 <link rel="shortcut icon" href="/img/favicon.ico"/>
+<link rel="apple-touch-icon-precomposed" href="/img/touchicon-57.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/touchicon-72.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/touchicon-114.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/touchicon-144.png">
 
 <?php if($isEnv): ?>
     <meta property="og:title" content="I just cloned part of the planet! Clone your part now! #PreservingThePlanet #ProjectTitan"/>

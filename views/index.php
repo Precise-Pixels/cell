@@ -1,6 +1,16 @@
-<header id="primary-header" class="section-padding">
-    <hgroup class="align-vertical">
+<header id="primary-header" class="fixed-header--home section-padding sdgrey">
+    <div class="cube-wrapper">
+        <div class="cube">
+            <div class="front">FRONT</div>
+            <div class="back">BACK</div>
+            <div class="left">LEFT</div>
+            <div class="right">RIGHT</div>
+            <img src="/img/logo.gif" alt="Cell Industries logo in a spinning cube">
+        </div>
+    </div>
+    <hgroup class="align-vertical cell-header">
         <h1>CELL INDUSTRIES</h1>
+        <?php require_once('includes/balls.php'); ?>
     </hgroup>
     <a id="page-flow" class="arrow-down ico-arrow-down2" href="#firststeps"></a>
 </header>
@@ -18,7 +28,7 @@
     </header>
 
     <section class="dgrey">
-        <div class="align-centre">
+        <div class="section-padding align-centre">
             <div id="homepage-map"></div>
         </div>
     </section>

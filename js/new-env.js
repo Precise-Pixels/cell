@@ -34,7 +34,8 @@ if(Detector.webgl) {
                 mapTypeIds: [google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.TERRAIN]
             },
             panControl: false,
-            streetViewControl: false
+            streetViewControl: false,
+            backgroundColor: '#222'
         });
 
         currentZoom = map.getZoom();
