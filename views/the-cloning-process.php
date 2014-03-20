@@ -10,7 +10,7 @@
             </div>
             <div class="ig-slide">
                 <img src="/img/infographic/3.jpg" alt="" class="ig-slide-background"/>
-                <img src="/img/infographic/plane.jpg" alt="Plane" id="ig-plane" class="ig-animate"/>
+                <img src="/img/infographic/plane.png" alt="Plane" id="ig-plane" class="ig-animate"/>
             </div>
             <div class="ig-slide">
                 <img src="/img/infographic/4.jpg" alt="" class="ig-slide-background"/>
