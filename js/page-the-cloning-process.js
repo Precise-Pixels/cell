@@ -32,12 +32,14 @@ function prevSlide() {
     if(currentSlide == 1) { return false; }
     currentSlide--;
     updateSlide();
+    if(currentSlide == 4) { transitionComplete(); }
 }
 
 function nextSlide() {
-    if(currentSlide == 4) { return false; }
+    if(currentSlide == 5) { return false; }
     currentSlide++;
     updateSlide();
+    if(currentSlide == 5) { transitionComplete(); }
 }
 
 function updateSlide() {
@@ -45,9 +47,11 @@ function updateSlide() {
 }
 
 // Add a class when CSS transition is complete
-igSlides.addEventListener(whichTransitionEvent(), function() {
+igSlides.addEventListener(whichTransitionEvent(), transitionComplete);
+
+function transitionComplete() {
     igSlides.className += ' ig-transition-complete';
-});
+}
 
 function whichTransitionEvent() {
     var t;

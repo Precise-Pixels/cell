@@ -65,7 +65,8 @@
     top: -200%;
 }
 
-.ig-current-slide--4 {
+.ig-current-slide--4,
+.ig-current-slide--5 {
     top: -300%;
 }
 
@@ -89,7 +90,7 @@
 }
 
 .ig-current-slide--1 ~ #ig-prev,
-.ig-current-slide--4 ~ #ig-next {
+.ig-current-slide--5 ~ #ig-next {
     display: none;
 }
 
@@ -119,6 +120,13 @@
             animation: ig-cube-2 .1s alternate infinite linear;
         }
     }
+
+    &.ig-current-slide--5 {
+        ~ #ig-cube {
+            animation: ig-cube-5 1s ease-in;
+            animation-fill-mode: both;
+        }
+    }
 }
 
 @keyframes ig-cube-1 {
@@ -130,6 +138,11 @@
 @keyframes ig-cube-2 {
     0%   { left: 50%; }
     100% { left: 51%; }
+}
+
+@keyframes ig-cube-5 {
+    0%   { top: 50%;  }
+    100% { top: -10%; }
 }
 
 #ig-satellite {
