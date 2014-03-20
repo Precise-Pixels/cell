@@ -124,6 +124,9 @@ function init() {
             case 'webcam':
                 iWebcam.className += ' btn--selected';
                 if(Detector.webrtc) {
+                    if((window.innerWidth || document.documentElement.clientWidth) < 800) {
+                        alert('Please note, this is an experimental feature. Although it does work on some devices, the performance may be very slow.');
+                    }
                     initWebcam();
                     controls.autoRotate = false;
                 } else {
