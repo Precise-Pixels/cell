@@ -55,16 +55,16 @@
     .ball--animation2 {
         animation: ball2 6s infinite;
     }
+}
 
-    @keyframes ball {
-       0%   { transform: translate(0, 0);    }
-       50%  { transform: translate(0, 50px); }
-       100% { transform: translate(0, 0);    }
-    }
+@keyframes ball {
+   0%   { transform: translate(0, 0);    }
+   50%  { transform: translate(0, 50px); }
+   100% { transform: translate(0, 0);    }
+}
 
-    @keyframes ball2 {
-       0%   { transform: translate(0, 10px); }
-       50%  { transform: translate(0, 0);    }
-       100% { transform: translate(0, 10px); }
-    }
+@keyframes ball2 {
+   0%   { transform: translate(0, 10px); }
+   50%  { transform: translate(0, 0);    }
+   100% { transform: translate(0, 10px); }
 }
