@@ -106,6 +106,20 @@
     position: absolute;
 }
 
+.ig-transition-complete {
+    &.ig-current-slide--1 {
+        ~ #ig-cube {
+            animation: ig-cube-1 3s ease-in-out;
+        }
+    }
+}
+
+@keyframes ig-cube-1 {
+    0%   { width: 1%;  top: 20%; left: 85%; }
+    50%  {                       left: 45%; }
+    100% { width: 10%; top: 50%; left: 50%; }
+}
+
 #ig-satellite {
     height: 25%;
     left: 10%;
