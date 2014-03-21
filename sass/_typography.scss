@@ -54,7 +54,7 @@ blockquote p {
 }
 
 blockquote p:before {
-    content: '“';
+    content: "\201c";
     margin-right: 14px;
     vertical-align: -20px;
     font-size: 4rem;
@@ -62,7 +62,7 @@ blockquote p:before {
 }
 
 blockquote p:after {
-    content: '”';
+    content: "\201D";
     vertical-align: -20px;
     font-size: 4rem;
     font-weight: 600;
@@ -75,7 +75,7 @@ blockquote footer {
 }
 
 blockquote footer:before {
-    content: '—';
+    content: '\2014';
     margin-right: 10px;
 }
 
