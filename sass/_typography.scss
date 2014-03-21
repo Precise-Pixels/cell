@@ -39,6 +39,10 @@ a:hover {
     color: $lgrey;
 }
 
+a img {
+    border: 0;
+}
+
 .warn {
     padding: 10px;
     color: $lgrey;
