@@ -32,6 +32,10 @@
     .user-nav--open #user-menu-wrapper {
         right: 0;
     }
+
+    .ball {
+        display: none;
+    }
 </style>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <script src="/build/respond.min.js"></script>
