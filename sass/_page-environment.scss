@@ -191,6 +191,7 @@
 #env-info-note {
     font-size: .8rem;
     padding: 10px;
+    background: $dgrey;
 }
 
 .env-data-pod--time {
@@ -424,6 +425,7 @@
         position: absolute;
         right: 10px;
         bottom: 40px;
+        background: none;
     }
 
     .env-data-pod--time {
