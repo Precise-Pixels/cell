@@ -4,38 +4,23 @@ var x = 0;
 
 var timeline = document.getElementById('timeline');
 
-timeline.addEventListener('touchstart', start);
-timeline.addEventListener('mousedown', start);
-
-timeline.addEventListener('touchend', end);
-timeline.addEventListener('mouseup', end);
-
-timeline.addEventListener('touchmove', move);
-timeline.addEventListener('mousemove', move);
-
-timeline.addEventListener('touchcancel', leave);
-timeline.addEventListener('mouseleave', leave);
-
-function start(e) {
-    e.preventDefault();
+timeline.addEventListener('mousedown', function(e) {
     down = true;
     scrollLeft = this.scrollLeft;
-    x = e.clientX || e.touches[0].clientX;
-}
+    x = e.clientX; 
+});
 
-function end(e) {
-    e.preventDefault(); 
+timeline.addEventListener('mouseup', function() {
     down = false;
-}
+});
 
-function move(e) {
+timeline.addEventListener('mousemove', function(e) {
     e.preventDefault();
     if(down) {
-        this.scrollLeft = scrollLeft + x - (e.clientX || e.touches[0].clientX);
+        this.scrollLeft = scrollLeft + x - e.clientX;
     }
-}
+});
 
-function leave(e) {
-    e.preventDefault(); 
+timeline.addEventListener('mouseleave', function() {
     down = false;
-}
+});
