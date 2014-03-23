@@ -54,92 +54,90 @@
         <div class="section-padding align-centre sdgrey">
             <h1 class="timeline-header"><i class="ico-calendar"></i>TIMELINE</h1>
         </div>
-        <div class="align-centre dgrey">
-            <div id="timeline">
-                <div id="timeline-wrapper">
+        <div id="timeline" class="dgrey">
+            <div id="timeline-wrapper">
 
-                    <div class="event founded">
-                        <div class="event-date-wrapper">
-                            <p class="event-date">1952</p>
-                        </div>
-                        <div class="event-img-wrapper">
-                            <img class="event-img" src="/img/placeholder.gif"/>
-                        </div> 
-                        <p class="event-text">Founded and established with the vision to advance technology.</p>
+                <div class="event founded">
+                    <div class="event-date-wrapper">
+                        <p class="event-date">1952</p>
                     </div>
-
-                    <div class="event funded">
-                        <div class="event-date-wrapper">
-                            <p class="event-date">1960</p>
-                        </div>
-                        <div class="event-img-wrapper">
-                            <img class="event-img" src="/img/placeholder.gif"/>
-                        </div> 
-                        <p class="event-text">Backed and funded by Royal appointment to develop technology to protect the commonwealth.</p>
+                    <div class="event-img-wrapper">
+                        <img class="event-img" src="/img/placeholder.gif"/>
                     </div>
-
-                    <div class="event moon-landing">
-                        <div class="event-date-wrapper">
-                            <p class="event-date">1969</p>
-                        </div>
-                        <div class="event-img-wrapper">
-                            <img class="event-img" src="/img/placeholder.gif"/>
-                        </div> 
-                        <p class="event-text">Cell Industries assisted with the technology that went into Apollo 11 and partnered with NASA to put the first man on the moon.</p>
-                    </div>
-
-                    <div class="event test-tube">
-                        <div class="event-date-wrapper">
-                            <p class="event-date">1978</p>
-                        </div>
-                        <div class="event-img-wrapper">
-                            <img class="event-img" src="/img/placeholder.gif"/>
-                        </div> 
-                        <p class="event-text">Cell Industries sponsors and performs the research and development behind the first test tube baby born in the U.K.</p>
-                    </div>
-
-                    <div class="event lazer-eye">
-                        <div class="event-date-wrapper">
-                            <p class="event-date">1981</p>
-                        </div>
-                        <div class="event-img-wrapper">
-                            <img class="event-img" src="/img/placeholder.gif"/>
-                        </div> 
-                        <p class="event-text">The first laser eye surgery was performed on the human eye successfully.</p>
-                    </div>
-
-                    <div class="event stem-cells">
-                        <div class="event-date-wrapper">
-                            <p class="event-date">2007</p>
-                        </div>
-                        <div class="event-img-wrapper">
-                            <img class="event-img" src="/img/placeholder.gif"/>
-                        </div> 
-                        <p class="event-text">Cell Industries discover how to use human skin cells to create embryonic stem cells driving biological science into the future.</p>
-                    </div>
-
-
-                    <div class="event research">
-                        <div class="event-date-wrapper">
-                            <p class="event-date">2074</p>
-                        </div>
-                        <div class="event-img-wrapper">
-                            <img class="event-img" src="/img/placeholder.gif"/>
-                        </div> 
-                        <p class="event-text">Dr Ree publishes his research into quantum cell technologies and wins a nobel prize in his field. A research facility dedicated to developing the technology is opened.</p>
-                    </div>
-
-                    <div class="event first-clone">
-                        <div class="event-date-wrapper">
-                            <p class="event-date">2108</p>
-                        </div>
-                        <div class="event-img-wrapper">
-                            <img class="event-img" src="/img/placeholder.gif"/>
-                        </div> 
-                        <p class="event-text">The first clone cube is created and the first environment is stored and recovered.</p>
-                    </div>
-
+                    <p class="event-text">Founded and established with the vision to advance technology.</p>
                 </div>
+
+                <div class="event funded">
+                    <div class="event-date-wrapper">
+                        <p class="event-date">1960</p>
+                    </div>
+                    <div class="event-img-wrapper">
+                        <img class="event-img" src="/img/placeholder.gif"/>
+                    </div> 
+                    <p class="event-text">Backed and funded by Royal appointment to develop technology to protect the commonwealth.</p>
+                </div>
+
+                <div class="event moon-landing">
+                    <div class="event-date-wrapper">
+                        <p class="event-date">1969</p>
+                    </div>
+                    <div class="event-img-wrapper">
+                        <img class="event-img" src="/img/placeholder.gif"/>
+                    </div>
+                    <p class="event-text">Cell Industries assisted with the technology that went into Apollo 11 and partnered with NASA to put the first man on the moon.</p>
+                </div>
+
+                <div class="event test-tube">
+                    <div class="event-date-wrapper">
+                        <p class="event-date">1978</p>
+                    </div>
+                    <div class="event-img-wrapper">
+                        <img class="event-img" src="/img/placeholder.gif"/>
+                    </div>
+                    <p class="event-text">Cell Industries sponsors and performs the research and development behind the first test tube baby born in the U.K.</p>
+                </div>
+
+                <div class="event lazer-eye">
+                    <div class="event-date-wrapper">
+                        <p class="event-date">1981</p>
+                    </div>
+                    <div class="event-img-wrapper">
+                        <img class="event-img" src="/img/placeholder.gif"/>
+                    </div>
+                    <p class="event-text">The first laser eye surgery was performed on the human eye successfully.</p>
+                </div>
+
+                <div class="event stem-cells">
+                    <div class="event-date-wrapper">
+                        <p class="event-date">2007</p>
+                    </div>
+                    <div class="event-img-wrapper">
+                        <img class="event-img" src="/img/placeholder.gif"/>
+                    </div>
+                    <p class="event-text">Cell Industries discover how to use human skin cells to create embryonic stem cells driving biological science into the future.</p>
+                </div>
+
+
+                <div class="event research">
+                    <div class="event-date-wrapper">
+                        <p class="event-date">2074</p>
+                    </div>
+                    <div class="event-img-wrapper">
+                        <img class="event-img" src="/img/placeholder.gif"/>
+                    </div>
+                    <p class="event-text">Dr Ree publishes his research into quantum cell technologies and wins a nobel prize in his field. A research facility dedicated to developing the technology is opened.</p>
+                </div>
+
+                <div class="event first-clone">
+                    <div class="event-date-wrapper">
+                        <p class="event-date">2108</p>
+                    </div>
+                    <div class="event-img-wrapper">
+                        <img class="event-img" src="/img/placeholder.gif"/>
+                    </div>
+                    <p class="event-text">The first clone cube is created and the first environment is stored and recovered.</p>
+                </div>
+
             </div>
         </div>
     </section>

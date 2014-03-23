@@ -3,6 +3,8 @@
 }
 
 #timeline {
+    width: 100%;
+    max-width: 1200px;
     height: auto;
     margin: 0 auto;
     overflow-x: scroll;
@@ -11,7 +13,6 @@
 
 #timeline-wrapper {
     width: 2400px;
-    overflow: hidden;
 }
 
 .event {
