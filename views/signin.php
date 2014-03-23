@@ -49,8 +49,14 @@ $loginSystem = new LoginSystem();
 
                     <tr>
                         <td></td>
-                        <td><input type="submit" name="signin-submit" value="Sign in" class="btn"/></td>
+                        <td><input type="submit" name="signin-submit" value="SIGN IN" class="btn"/></td>
                     </tr>
+
+                    <tr>
+                        <td></td>
+                        <td><a href="forgotten-password.php" class="btn">FORGOTTEN PASSWORD?</a></td>
+                    </tr>
+
                 </table>
             </form>
         </div>
