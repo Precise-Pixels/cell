@@ -61,7 +61,7 @@
             <i class="ico-arrow-down2 homepage-arrow"></i>
             <div class="cell-values">
                 <h2>CLONE</h2>
-                <p>We clone your chosen environment using our groundbreaking QuantumCell&#8482; technology.</p>
+                <p>We clone your chosen environment using our groundbreaking QuantumCell&trade; technology.</p>
             </div>
             <i class="ico-arrow-down2 homepage-arrow"></i>
             <div class="cell-values">
