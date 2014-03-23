@@ -55,18 +55,18 @@
     <section id="homepage-company" class="sdgrey">
         <div class="section-padding align-centre">
             <div class="cell-values">
-                <h2>INNOVATE</h2>
-                <p>Constantly breaking the boundaries of modern day science.</p>
+                <h2>YOU</h2>
+                <p>You decide which parts of the planet you would like to preserve.</p>
             </div>
             <i class="ico-arrow-down2 homepage-arrow"></i>
             <div class="cell-values">
-                <h2>APPLY</h2>
-                <p>Using the new technologies we discover to benefit you.</p>
+                <h2>CLONE</h2>
+                <p>We clone your chosen environment using our groundbreaking QuantumCell&#8482; technology.</p>
             </div>
             <i class="ico-arrow-down2 homepage-arrow"></i>
             <div class="cell-values">
-                <h2>CHANGE</h2>
-                <p>Improving your life and wellbeing to develop all of our futures.</p>
+                <h2>PRESERVE</h2>
+                <p>Environments are stored in deep space, protected and ready to be restored in the event of undesirable occurrences.</p>
             </div>
         </div>
     </section>
