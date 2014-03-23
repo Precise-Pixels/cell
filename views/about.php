@@ -125,7 +125,7 @@
                     <div class="event-img-wrapper">
                         <img class="event-img" src="/img/placeholder.gif"/>
                     </div>
-                    <p class="event-text">Dr Ree publishes his research into quantum cell technologies and wins a nobel prize in his field. A research facility dedicated to developing the technology is opened.</p>
+                    <p class="event-text">Dr Lee publishes his research into QuantumCell&#8482; technology and wins a nobel prize in his field. A research facility dedicated to developing the technology is opened.</p>
                 </div>
 
                 <div class="event first-clone">
@@ -135,7 +135,7 @@
                     <div class="event-img-wrapper">
                         <img class="event-img" src="/img/placeholder.gif"/>
                     </div>
-                    <p class="event-text">The first clone cube is created and the first environment is stored and recovered.</p>
+                    <p class="event-text">The first clone cube is created and the first environment is cloned, preserved and restored.</p>
                 </div>
 
             </div>
