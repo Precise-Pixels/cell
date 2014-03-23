@@ -8,18 +8,11 @@
 
     <section>
         <div class="align-centre">
-            <div class="half section-padding lgrey">
-                <h1><i class="ico-email"></i>CONTACT</h1>
+            <div class="section-padding lgrey">
+                <div id="press-email">
                     <p>For all enquiries please contact:</p>
-                    <a class="press-email" href="mailto:press@cell-industries.co.uk">press@cell-industries.co.uk</a>
-            </div>
-            <div class="half">
-                <a href="/about" id="press-page-cta" class="cta cta--about">
-                    <hgroup class="align-vertical">
-                        <h1>About Cell</h1>
-                        <h2>Find out about Cell Industries</h2>
-                    </hgroup>
-                </a>
+                    <a href="mailto:press@cell-industries.co.uk">press@cell-industries.co.uk</a>
+                </div>
             </div>
         </div>
     </section>

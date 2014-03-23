@@ -149,6 +149,10 @@ body > header {
     }
 }
 
+#site-nav a {
+    border-bottom: 0;
+}
+
 #site-nav-toggle:checked + #site-nav {
     left: 0;
 }

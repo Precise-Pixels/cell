@@ -32,17 +32,68 @@ p {
 }
 
 a {
-    color: #285989;
+    transition: all .3s;
+    text-decoration: none;
+    color: $lgrey;
 }
 
-a:hover {
+.dgrey a,
+.sdgrey a {
+    color: $mblue;
+    border-bottom: 1px solid $mblue;
+    &:hover {
+        color: $lgrey;
+        border-bottom: 1px solid $lgrey;
+    }
+}
+
+.lgrey a {
+    color: $mblue;
+    border-bottom: 1px solid $mblue;
+    &:hover {
+        color: $dgrey;
+        border-bottom: 1px solid $dgrey;
+    }   
+}
+
+.mblue a {
     color: $lgrey;
+    border-bottom: 1px solid $lgrey;
+    &:hover {
+        color: $dgrey;
+        border-bottom: 1px solid $dgrey;
+    }   
+}
+
+.cell-logo a,
+a.cta {    
+    color: $lgrey;
+    border-bottom: 0;
+    &:hover {
+        border-bottom: 0;
+        color: $lgrey;
+    }
+}
+
+#user-social a {
+    border-bottom: 0;
+    &:hover {
+        border-bottom: 0;
+    }
 }
 
 .warn {
     padding: 10px;
     color: $lgrey;
     background: $red;
+    a {
+        font-weight: 600;
+        border-bottom: 1px solid $lgrey;
+        &:hover {
+            color: $lgrey;
+            border-bottom: 1px solid $lgrey;
+        }
+    }
 }
 
 blockquote {
