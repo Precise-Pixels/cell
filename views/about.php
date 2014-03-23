@@ -37,7 +37,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="key-people">
         <div class="section-padding align-centre lgrey">
             <h1><i class="ico-key-people"></i>KEY PEOPLE</h1>
 
