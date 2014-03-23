@@ -11,7 +11,7 @@
             <div class="section-padding half lgrey">
                 <h1><i class="ico-project-titan"></i>OUR AIM</h1>
                 <p>In an ever changing and increasingly turbulent world the natural environments of our planet often bear the brunt of modern society.</p>
-                <p>Using our groundbreaking QuantumCell™ technology we want to ensure the environments that matter to you are preserved for millennia to come. We can clone whole areas of environments leaving them protected and ready to be restored in the event of undesirable occurrences.</p>
+                <p>Using our groundbreaking QuantumCell&trade; technology we want to ensure the environments that matter to you are preserved for millennia to come. We can clone whole areas of environments leaving them protected and ready to be restored in the event of undesirable occurrences.</p>
             </div>
             <div class="half">
                 <blockquote>
