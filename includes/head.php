@@ -24,6 +24,16 @@
 <![endif]-->
 
 <!--[if lt IE 9]>
+<style>
+    .site-nav--open #site-nav {
+        left: 0;
+    }
+
+    .user-nav--open #user-menu-wrapper {
+        right: 0;
+    }
+</style>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<script src="/js/respond.min.js"></script>
+<script src="/build/respond.min.js"></script>
+<script src="/build/ie8.min.js"></script>
 <![endif]-->
