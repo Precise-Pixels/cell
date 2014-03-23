@@ -45,7 +45,7 @@
             <div class="half sdgrey">
                 <blockquote>
                     <p>The science world was crying out for someone to harness the true potential of Quantum Technology. Cell Industries has answered those cries.</p>
-                    <footer>Sarah Bird, Quantum Realm</footer>
+                    <footer>Mukaku Ukakum, Quantum Realm</footer>
                 </blockquote>
             </div>
         </div>
