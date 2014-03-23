@@ -32,7 +32,7 @@
                     <li>Nuclear fusion reactor power source</li>
                     <li>Thermo-resistant shell - coated with Teflon 3.0</li>
                     <li>Navigational thrusters (for more refined movements)</li>
-                    <li>Einstein-Rosen bridge initiator (for long-distance travel to remote storage facility)</li>
+                    <li>Einstein-Rosen bridge initiator (for long-distance travel to deep space storage facility)</li>
                 </ul>
             </div>
 
