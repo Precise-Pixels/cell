@@ -6,7 +6,7 @@
             <li><a href="/"><i class="ico-home menu-icon"></i>HOME</a></li>
             <li><a href="/about"><i class="ico-people menu-icon"></i>ABOUT</a></li>
             <li><a href="/project-titan"><i class="ico-project-titan menu-icon"></i>PROJECT TITAN</a></li>
-            <li><a href="/the-cloning-process"><i class="ico-the-cloning-process menu-icon"></i>THE CLONING PROCESS</a></li>
+            <li><a href="/the-cloning-process"><i class="ico-cloning-process menu-icon"></i>THE CLONING PROCESS</a></li>
             <li><a href="/technology"><i class="ico-atom menu-icon"></i>TECHNOLOGY</a></li>
             <li><a href="/press"><i class="ico-press menu-icon"></i>PRESS</a></li>
         </ul>

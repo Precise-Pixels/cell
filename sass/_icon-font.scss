@@ -118,11 +118,17 @@ a[class*="ico-"] {
 .ico-settings:before {
     content: "\2f";
 }
+.ico-nearby:before {
+    content: "\4e";
+}
 .ico-target:before {
     content: "\2e";
 }
 .ico-hash:before {
     content: "\23";
+}
+.ico-interact:before {
+    content: "\49";
 }
 .ico-logout:before {
     content: "\5a";
@@ -145,6 +151,18 @@ a[class*="ico-"] {
 .ico-atom:before {
     content: "\40";
 }
+.ico-project-titan:before {
+    content: "\5b";
+}
+.ico-edit:before {
+    content: "\71";
+}
+.ico-save:before {
+    content: "\51";
+}
+.ico-cloning-process:before {
+    content: "\22";
+}
 .ico-warning:before {
     content: "\21";
 }
@@ -159,6 +177,15 @@ a[class*="ico-"] {
 }
 .ico-arrow-down2:before {
     content: "\56";
+}
+.ico-time:before {
+    content: "\2c";
+}
+.ico-weather:before {
+    content: "\57";
+}
+.ico-share:before {
+    content: "\7e";
 }
 .ico-home:before {
     content: "\68";
@@ -175,6 +202,6 @@ a[class*="ico-"] {
 .ico-key-people:before {
     content: "\6b";
 }
-.ico-project-titan:before {
-    content: "\5b";
+.ico-arrow-up2:before {
+    content: "\75";
 }
