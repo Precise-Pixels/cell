@@ -321,10 +321,8 @@ if(Detector.webgl) {
                         if(status == google.maps.ElevationStatus.OK) {
                             allResults = allResults.concat(results);
                             requestCurrent = requestCurrent + requestLimit;
-                            requestElevations();
-                        } else {
-                            requestElevations();
                         }
+                        requestElevations();
                     }, 100);
                 });
             })();
