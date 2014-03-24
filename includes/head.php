@@ -15,13 +15,6 @@
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/touchicon-114.png">
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/touchicon-144.png">
 
-<meta property="og:title" content="Cell Industries"/>
-<meta property="og:type" content="website"/>
-<meta property="og:url" content="http://cell-industries.co.uk"/>
-<meta property="og:image" content="http://cell-industries.co.uk/img/touchicon-144.png"/>
-<meta property="og:site_name" content="Cell Industries"/>
-<meta property="og:description" content="Cell Industries presents Project Titan - Preserving The Planet"/>
-
 <?php if($isEnv): ?>
     <meta property="og:title" content="I just cloned part of the planet! Clone your part now! #PreservingThePlanet #ProjectTitan"/>
     <meta property="og:type" content="article"/>
@@ -30,6 +23,13 @@
     <meta property="og:site_name" content="Cell Industries"/>
     <meta property="og:description" content="Cell Industries presents Project Titan - Preserving The Planet"/>
     <meta property="article:published_time" content="<?= $env->timestamp; ?>">
+<?php else: ?>
+    <meta property="og:title" content="Cell Industries"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://cell-industries.co.uk"/>
+    <meta property="og:image" content="http://cell-industries.co.uk/img/touchicon-144.png"/>
+    <meta property="og:site_name" content="Cell Industries"/>
+    <meta property="og:description" content="Cell Industries presents Project Titan - Preserving The Planet"/>
 <?php endif; ?>
 
 <!--[if lt IE 9]>
