@@ -167,13 +167,16 @@ if(Detector.webgl) {
         var warnNoTile      = document.createElement('p');
         var warnUnavailable = document.createElement('p');
         var warnNoName      = document.createElement('p');
+        var warnProfanity   = document.createElement('p');
 
-        warnNoTile.id        = 'new-env-warn-tile';
-        warnUnavailable.id   = 'new-env-warn-unavailable';
-        warnNoName.id        = 'new-env-warn-name';
-        warnNoTile.className = warnUnavailable.className = warnNoName.className = 'full warn';
-        warnNoTile.innerHTML = 'Please select an area on the map.';
-        warnNoName.innerHTML = 'Please enter a name for your environment.';
+        warnNoTile.className = warnUnavailable.className = warnNoName.className = warnProfanity.className = 'full warn';
+        warnNoTile.id           = 'new-env-warn-tile';
+        warnUnavailable.id      = 'new-env-warn-unavailable';
+        warnNoName.id           = 'new-env-warn-name';
+        warnProfanity.id        = 'new-env-warn-profanity';
+        warnNoTile.innerHTML    = 'Please select an area on the map.';
+        warnNoName.innerHTML    = 'Please enter a name for your environment.';
+        warnProfanity.innerHTML = 'No profanity please.';
 
         cloneBtn.addEventListener('click', function(e) {
             validate();
@@ -206,8 +209,29 @@ if(Detector.webgl) {
                             }
 
                             if(envNameInput.checkValidity()) {
-                                document.getElementById('full-page-overlay--loading').className += ' full-page-overlay--loading';
-                                generateEnv(lat1, lon1, lat2, lon2);
+                                // Check if environment name is profanity free
+                                var data = 'str=' + document.getElementById('new-env-name').value;
+                                var request2 = new XMLHttpRequest;
+                                request2.open('POST', '/php/checkProfanity.php', true);
+                                request2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                                request2.send(data);
+
+                                request2.onreadystatechange = function() {
+                                    if(request2.readyState == 4 && request2.status == 200) {
+                                        var containsProfanity = request2.responseText;
+
+                                        if(!containsProfanity) {
+                                            document.getElementById('new-env-overlay').className += ' new-env-overlay--cloning';
+                                            generateEnv(lat1, lon1, lat2, lon2);
+                                        } else {
+                                            var warnNoNameElem = document.getElementById('new-env-warn-name');
+                                            if(warnNoNameElem) {
+                                                warnNoNameElem.parentNode.removeChild(warnNoNameElem);
+                                            }
+                                            envForm.appendChild(warnProfanity);
+                                        }
+                                    }
+                                }
                             } else {
                                 envForm.appendChild(warnNoName);
                             }

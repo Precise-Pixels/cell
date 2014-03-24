@@ -8,6 +8,10 @@
     background-size: cover;
     background-position: center;
     z-index: 2;
+    hgroup {
+        transform: translate3d(0, 0, 0);
+    }
+
     h1 {
         text-shadow: 0 0 25px #FFF;
     }
@@ -176,7 +180,7 @@
 
 @media ($min_bp_a) {
     .cube-wrapper {
-        top: 25%;
+        top: 23%;
     }
 
     .cube {

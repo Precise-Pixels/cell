@@ -151,6 +151,18 @@ a[class*="ico-"] {
 .ico-atom:before {
     content: "\40";
 }
+.ico-project-titan:before {
+    content: "\5b";
+}
+.ico-edit:before {
+    content: "\71";
+}
+.ico-save:before {
+    content: "\51";
+}
+.ico-cloning-process:before {
+    content: "\22";
+}
 .ico-warning:before {
     content: "\21";
 }
@@ -190,6 +202,6 @@ a[class*="ico-"] {
 .ico-key-people:before {
     content: "\6b";
 }
-.ico-project-titan:before {
-    content: "\5b";
+.ico-arrow-up2:before {
+    content: "\75";
 }
