@@ -1,4 +1,4 @@
-<header id="fixed-header" class="fixed-header--signin section-padding">
+<header id="fixed-header" class="fixed-header--forgotten section-padding">
     <hgroup class="align-vertical">
         <h1>FORGOTTEN YOUR PASSWORD</h1>
     </hgroup>
