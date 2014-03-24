@@ -2,6 +2,7 @@
     <hgroup class="align-vertical">
         <h1>TECHNOLOGY</h1>
         <h2>QuantumCell&trade; CLONE CUBE</h2>
+        <?php require_once('includes/balls.php'); ?>
     </hgroup>
 </header>
 

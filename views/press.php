@@ -1,6 +1,7 @@
 <header id="fixed-header" class="fixed-header--press section-padding">
     <hgroup class="align-vertical">
         <h1>PRESS</h1>
+        <?php require_once('includes/balls.php'); ?>
     </hgroup>
 </header>
 
