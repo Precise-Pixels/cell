@@ -1,7 +1,7 @@
 <main>
 
     <div id="ig-slides" class="ig-current-slide--1 ig-transition-complete">
-    <h1 class="ig-title">The Cloning Process</h1>
+    <h1 id="ig-title">The Cloning Process</h1>
         <div class="ig-slide">
             <div class="ig-slide ig-slide--1">
             </div>
