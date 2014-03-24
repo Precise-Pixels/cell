@@ -8,7 +8,7 @@
 
         <section>
         <div class="section-padding align-centre lgrey">
-            <p>Oops! Sorry, but the page you are looking for has not been found. Try checking the url for errors or <a href="index">return to the homepage.</a></p>
+            <p>Oops! Sorry, but the page you are looking for has not been found. Try checking the URL for errors or <a href="index">return to the homepage.</a></p>
         </div>
     </section>
 
