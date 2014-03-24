@@ -68,21 +68,21 @@
                     <div class="event-date-wrapper">
                         <p class="event-date">1960</p>
                     </div> 
-                    <p class="event-text">Backed and funded by Royal appointment to develop technology to protect the commonwealth.</p>
+                    <p class="event-text">Backed by Royal appointment to develop technology to protect the commonwealth.</p>
                 </div>
 
                 <div class="event moon-landing">
                     <div class="event-date-wrapper">
                         <p class="event-date">1969</p>
                     </div>
-                    <p class="event-text">Cell Industries assisted with the technology that went into Apollo 11 and partnered with NASA to put the first man on the moon.</p>
+                    <p class="event-text">Cell Industries assisted with the technology that was used for Apollo 11 and partnered with NASA to put the first man on the moon.</p>
                 </div>
 
                 <div class="event test-tube">
                     <div class="event-date-wrapper">
                         <p class="event-date">1978</p>
                     </div>
-                    <p class="event-text">Cell Industries sponsors and performs the research and development behind the first test tube baby born in the U.K.</p>
+                    <p class="event-text">Cell Industries sponsors the research and development behind the first test tube baby born in the U.K.</p>
                 </div>
 
                 <div class="event stem-cells">
