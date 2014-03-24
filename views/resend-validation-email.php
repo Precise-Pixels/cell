@@ -1,4 +1,4 @@
-<header id="fixed-header" class="fixed-header--validation section-padding">
+<header id="fixed-header" class="fixed-header--signin section-padding">
     <hgroup class="align-vertical">
         <h1>RESEND VALIDATION EMAIL</h1>
     </hgroup>
