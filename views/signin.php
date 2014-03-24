@@ -12,7 +12,7 @@ $loginSystem = new LoginSystem();
 <main>
 
     <section>
-        <div class="section-padding align-centre lgrey">
+        <div class="section-padding align-centre mblue">
             <?php
             if(isset($_SESSION['status'])) {
                 if($_SESSION['status'] == 'notsignedin') {
