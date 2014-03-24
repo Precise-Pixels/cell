@@ -32,7 +32,7 @@
         <div class="align-centre lgrey">
             <div class="half lgrey">
                 <blockquote>
-                    <p>Without a doubt the most exciting and pioneering business of its time. Cell Industries excells where no other company can.</p>
+                    <p>Without a doubt the most exciting and pioneering business of its time. Cell Industries excels where no other company can.</p>
                     <footer>Dolly Barr, Ewe Scientist</footer>
                 </blockquote>
             </div>
