@@ -1,0 +1,474 @@
+.env {
+    color: $lgrey;
+    #top-bar {
+        z-index: 3;
+    }
+    main {
+        margin-top: 40px;
+        header {
+            width: 100%;
+            padding: 20px 25px;
+            position: fixed;
+            overflow: hidden;
+            text-align: left;
+            z-index: 1;
+            hgroup {
+                width: 100%;
+                float: left;
+            }
+            h1 {
+                width: 100%;
+                margin-left: 65px;
+                font-size: 1.8rem;
+            }
+            a {
+                margin-top: 4px;
+                margin-right: 15px;
+                float: left;
+                text-decoration: none;
+            }
+            h2 {
+                font-size: 1rem;
+                font-weight: 300;
+            }
+        }
+    }
+
+    .btn {
+        width: auto;
+    }
+
+    .btn--menu:hover {
+        color: #333;
+        background:#ccc;
+    }
+
+    .btn--selected {
+        color: #333;
+        opacity: 1;
+        background: $lgrey;
+    }
+
+    .btn--selected:hover {
+        cursor: default;
+    }
+
+    footer {
+        display: none;
+    }
+}
+
+#env-interface {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: fixed;
+    top: 40px;
+}
+
+#model-interaction {
+    width: 100%;
+    height: 66px;
+    padding: 0;
+    position: fixed;
+    bottom: 20px;
+    background: none;
+    h1 {
+        display: none;
+        margin: 0;
+        font-weight: 300;
+        margin: 5px 0 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $mgrey;
+    }
+    p {
+        display: none;
+    }
+}
+
+#default,
+#webcam {
+    position: absolute;
+    bottom: 0;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+#default {
+    left: 20px;
+}
+
+#webcam {
+    right: 20px;
+}
+
+#env-interface-pods-btn {
+    position: absolute;
+    bottom: 70px;
+    left: -25px;
+    margin-left: 50%;
+    display: block;
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 3;
+}
+
+#env-interface-pods-btn:before {
+    content: "i";
+}
+
+#env-interface-pods-toggle:checked ~ #env-interface-pods {
+    display: block;
+    top: 155px;
+}
+
+#env-interface-pods-toggle:checked ~ #env-interface-pods-btn:before {
+    content: "x";
+}
+
+#env-interface-pods-toggle:checked > #model-interaction {
+    display: none;
+}
+
+#env-interface-pods {
+    width: 100%;
+    display: none;
+    position: fixed;
+    top: 40px;
+    bottom: 100px;
+    overflow-y: auto;
+    z-index: 2;
+}
+
+#env-interface-pods-bkg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: block;
+    background: $dgrey;
+}
+
+.env-interface-element {
+    position: relative;
+    padding: 10px;
+    transition: width .3s, height .3s, background .3s;
+    color: $lgrey;
+    background: $dgrey;
+    h1 {
+        margin: 0;
+        font-weight: 300;
+        margin: 5px 0 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $mgrey;
+    }
+    p {
+        margin-bottom: 10px;
+        font-size: 1rem;
+        line-height: 28px;
+    }
+}
+
+#env-map {
+    width: 100%;
+    text-align: center;
+    img {
+        width: 50%;
+    }
+}
+
+#env-share {
+    width: 100%;
+}
+
+.fb_iframe_widget {
+    top: -4px;
+}
+
+#twitter-widget-0 {
+    width: 90px !important;
+}
+
+#env-info-note {
+    font-size: .8rem;
+    padding: 10px;
+    background: $dgrey;
+}
+
+.env-data-pod--time {
+    width: 100%;
+}
+
+.env-data-pod--weather {
+    width: 100%;
+}
+
+.env-data-pod--nearby {
+    width: 100%;
+}
+
+#model {
+    width: 100%;
+    height: 0;
+    position: relative;
+    margin-top: -28.16%;
+    padding-bottom: 56.25%;
+    top: 50%;
+    text-align: center;
+    img {
+        height: 100%;
+        position: absolute;
+        margin-left: -25%;
+        left: 50%;
+    }
+}
+
+#webcam-wrapper {
+    position: absolute;
+    display: none;
+}
+
+#canvas {
+    display: none;
+}
+
+#video,
+#comp {
+    width: 33.33%;
+    max-width: 150px;
+    transform: scaleX(-1);
+    filter: FlipH;
+}
+
+#video {
+    float: left;
+}
+
+#comp {
+    float: right;
+}
+
+#webcam-sensitivity {
+    display: none;
+}
+
+#background-top {
+    width: 100%;
+    height: 40px;
+    top: 0;
+    position: fixed;
+    background: $dgrey;
+    z-index: 2;
+}
+
+#background {
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    filter: blur(10px);
+    transform: scale(14);
+}
+
+#background img {
+    width: 100%;
+    height: 100%;
+}
+
+.env--webcam {
+    #webcam-wrapper {
+        width: 100%;
+        bottom: 145px;
+        display: block;
+        background: none;
+        z-index: -1;
+    }
+}
+
+@media ($min_bp_c) {
+    .env {
+        main {
+            header {
+                width: auto;
+                h1 {
+                    font-size: 3.5rem;
+                }
+                h2 {
+                    font-size: 1.2rem;  
+                }
+            }
+        }
+    }
+
+    .env-interface-element {
+        position: absolute;
+        border: 1px solid $mgrey;
+        background: none;
+        &:hover {
+            background: $dgrey;
+        }
+    }
+
+    #env-interface-pods-btn {
+        display: none;
+    }
+
+    #env-interface-pods {
+        position: initial;
+        background: none;     
+        display: block;
+    }
+
+    #env-interface-pods-bkg {
+        display: none;
+    }
+
+    #model-interaction {
+        width: 300px;
+        height: auto;
+        overflow: hidden;
+        position: absolute;
+        top: 40px;
+        right: 20px;
+        bottom: auto;
+        padding: 10px;
+        border: 1px solid $mgrey;
+        transition: background .3s;
+        background: none;
+        h1 {
+            display: block;
+        }
+        p {
+            display: block;
+            margin-bottom: 0;
+        }
+        &:hover {
+            background: $dgrey;
+        }
+    }
+
+    #default,
+    #webcam {
+        width: 49%;
+        height: 50px;
+        position: relative;
+        line-height: 20px;
+        i {
+            line-height: 15px
+        }
+    }
+
+    #default {
+        float: left;
+        left: auto;
+    }
+
+    #webcam {
+        float: right;
+        right: auto;
+    }
+
+    #env-map {
+        width: 129px;
+        height: 129px;
+        margin-top: 0;
+        top: 40px;
+        right: 336px;
+        img {
+            width: 100%;
+        }
+        &:hover {
+            width: 400px;
+            height: 400px;
+        }
+    }
+
+    #env-share {
+        width: 300px;
+        right: 20px;
+        bottom: 80px;
+    }
+
+    .fb_iframe_widget {
+        top: -4px;
+    }
+
+    #twitter-widget-0 {
+        width: 90px !important;
+    }
+
+    #env-info-note {
+        position: absolute;
+        right: 10px;
+        bottom: 40px;
+        background: none;
+    }
+
+    .env-data-pod--time {
+        width: 325px;
+        top: 160px;
+        left: 20px;
+    }
+
+    .env-data-pod--weather {
+        width: 325px;
+        top: 320px;
+        bottom: 60px;
+        left: 20px;
+        overflow: auto;
+    }
+
+    .env-data-pod--nearby {
+        width: 300px;
+        top: 185px;
+        bottom: 199px;
+        right: 20px;
+        overflow: auto;
+    }
+
+    #video,
+    #comp {
+        float: left;
+    }
+
+    #webcam-sensitivity {
+        width: 33.33%;
+        max-width: 150px;
+        padding-left: 15px;
+        float: left;
+        display: block;
+        font-size: 1.2rem;
+        label {
+            width: 75%;
+            float: left;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+        input {
+            width: 25%;
+            margin: 5px 0;
+            float: left;
+        }
+    }
+
+    .env--webcam {
+        #webcam-wrapper {
+            width: auto;
+            bottom: 60px;
+            left: 20px;
+            display: block;
+            z-index: 1;
+        }
+
+        .env-data-pod--weather {
+            bottom: 202px;
+        }
+    }
+
+    .cssfilter #background {
+        display: block;
+    }
+}

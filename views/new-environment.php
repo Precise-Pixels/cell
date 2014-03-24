@@ -12,26 +12,40 @@
 
 <main>
 
-    <section id="new-env-interface" class="sdgrey">
-        <div class="align-centre mblue">
-            <input type="text" placeholder="Search Box" id="pac-input" class="controls">
-            <div id="new-env-map"></div>
-
-            <div id="new-env-form" class="section-padding mblue">
-                <img src="/img/tile-select.jpg" id="selected-tile"/>
-                <form method="POST">
-                    <table>
-                        <tr>
-                            <td><label for="env-name">Your Environment Name:</label></td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" name="new-env-name" id="new-env-name" maxlength="30" required/></td>
-                            <td><input type="button" id="clone-btn" value="CLONE" class="btn"/></td>
-                        </tr>
-                    </table>
-                </form>
-            </div>
+    <section class="full">
+        <div id="new-env-tip" class="align-centre sdgrey">
+            <p><i class="ico-info"></i>Zoom in fully to select an area to clone!</p>
         </div>
+    </section>
+
+    <section id="new-env-interface" class="sdgrey">
+        <div class="unsupported">
+            <hgroup class="align-vertical">
+                <h1>Your browser does not support the cloning process</h1>
+            </hgroup>
+        </div>
+
+        <script type="text/x-new-env-interface-markup" id="new-env-interface-markup">
+            <div class="align-centre mblue">
+                <input type="text" placeholder="Search Box" id="pac-input" class="controls">
+                <div id="new-env-map"></div>
+
+                <div id="new-env-form" class="section-padding mblue">
+                    <img src="/img/tile-select.jpg" id="selected-tile"/>
+                    <form method="POST">
+                        <table>
+                            <tr>
+                                <td><label for="env-name">Your Environment Name:</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="new-env-name" id="new-env-name" maxlength="30" required/></td>
+                                <td><input type="button" id="clone-btn" value="CLONE" class="btn"/></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </script>
     </section>
 
     <section class="dgrey align-centre">
@@ -73,4 +87,4 @@
 
 </main>
 
-<div id="new-env-overlay" class="new-env-overlay"></div>
+<div id="full-page-overlay--loading" class="full-page-overlay"></div>
