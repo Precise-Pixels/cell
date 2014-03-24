@@ -61,18 +61,12 @@
                     <div class="event-date-wrapper">
                         <p class="event-date">1952</p>
                     </div>
-                    <div class="event-img-wrapper">
-                        <img class="event-img" src="/img/placeholder.gif"/>
-                    </div>
                     <p class="event-text">Founded and established with the vision to advance technology.</p>
                 </div>
 
                 <div class="event funded">
                     <div class="event-date-wrapper">
                         <p class="event-date">1960</p>
-                    </div>
-                    <div class="event-img-wrapper">
-                        <img class="event-img" src="/img/placeholder.gif"/>
                     </div> 
                     <p class="event-text">Backed and funded by Royal appointment to develop technology to protect the commonwealth.</p>
                 </div>
@@ -81,9 +75,6 @@
                     <div class="event-date-wrapper">
                         <p class="event-date">1969</p>
                     </div>
-                    <div class="event-img-wrapper">
-                        <img class="event-img" src="/img/placeholder.gif"/>
-                    </div>
                     <p class="event-text">Cell Industries assisted with the technology that went into Apollo 11 and partnered with NASA to put the first man on the moon.</p>
                 </div>
 
@@ -91,28 +82,12 @@
                     <div class="event-date-wrapper">
                         <p class="event-date">1978</p>
                     </div>
-                    <div class="event-img-wrapper">
-                        <img class="event-img" src="/img/placeholder.gif"/>
-                    </div>
                     <p class="event-text">Cell Industries sponsors and performs the research and development behind the first test tube baby born in the U.K.</p>
-                </div>
-
-                <div class="event lazer-eye">
-                    <div class="event-date-wrapper">
-                        <p class="event-date">1981</p>
-                    </div>
-                    <div class="event-img-wrapper">
-                        <img class="event-img" src="/img/placeholder.gif"/>
-                    </div>
-                    <p class="event-text">The first laser eye surgery was performed on the human eye successfully.</p>
                 </div>
 
                 <div class="event stem-cells">
                     <div class="event-date-wrapper">
-                        <p class="event-date">2007</p>
-                    </div>
-                    <div class="event-img-wrapper">
-                        <img class="event-img" src="/img/placeholder.gif"/>
+                        <p class="event-date">2986</p>
                     </div>
                     <p class="event-text">Cell Industries discover how to use human skin cells to create embryonic stem cells driving biological science into the future.</p>
                 </div>
@@ -120,20 +95,14 @@
 
                 <div class="event research">
                     <div class="event-date-wrapper">
-                        <p class="event-date">2074</p>
-                    </div>
-                    <div class="event-img-wrapper">
-                        <img class="event-img" src="/img/placeholder.gif"/>
+                        <p class="event-date">2000</p>
                     </div>
                     <p class="event-text">Dr Lee publishes his research into QuantumCell&#8482; technology and wins a nobel prize in his field. A research facility dedicated to developing the technology is opened.</p>
                 </div>
 
                 <div class="event first-clone">
                     <div class="event-date-wrapper">
-                        <p class="event-date">2108</p>
-                    </div>
-                    <div class="event-img-wrapper">
-                        <img class="event-img" src="/img/placeholder.gif"/>
+                        <p class="event-date">2014</p>
                     </div>
                     <p class="event-text">The first clone cube is created and the first environment is cloned, preserved and restored.</p>
                 </div>
