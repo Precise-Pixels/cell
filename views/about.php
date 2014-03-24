@@ -68,7 +68,7 @@
                     <div class="event-date-wrapper">
                         <p class="event-date">1960</p>
                     </div> 
-                    <p class="event-text">Backed by Royal appointment to develop technology to protect the commonwealth.</p>
+                    <p class="event-text">The EU put their faith in Cell Industries and began to fund their projects.s</p>
                 </div>
 
                 <div class="event backed">
