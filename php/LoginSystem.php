@@ -57,14 +57,14 @@ class LoginSystem {
 
         $timestamp = date("Y-m-d H:i:s");
 
-        $sth = $dbh->prepare("INSERT INTO users (email, password, valid, validateRand, resetRand, timestamp, username) value (:email, :password, 0, $rand1, $rand2, :timestamp, :username)");
+        $sth = $dbh->prepare("INSERT INTO users (email, password, valid, validateRand, resetRand, timestamp, username, location, facebook, twitter) value (:email, :password, 0, $rand1, $rand2, :timestamp, :username, '', '', '')");
         $sth->bindParam(':email', $email);
         $sth->bindParam(':password', $passwordE);
         $sth->bindParam(':timestamp', $timestamp);
         $sth->bindParam(':username', $username);
         $sth->execute();
 
-        MailClient::sendMsg($email, 'Verify your MyCell account', "Please follow this link to verify your MyCell account: http://cell.dev/verify-account?e=$email&r=$rand1");
+        MailClient::sendMsg($email, 'Verify your MyCell account', "Please follow this link to verify your MyCell account: http://cell-industries.co.uk/verify-account?e=$email&r=$rand1");
 
         return LoginSystem::wrapStart . 'Account successfully created. We have sent a verification link to your email. Please verify your account before attempting to sign in. If you have not receive a verification email, please check your spam/junk or <a href="resend-validation-email">request another verification email</a>.' . LoginSystem::wrapEnd;
     }
@@ -78,7 +78,7 @@ class LoginSystem {
         $sth = $dbh->prepare("UPDATE users SET validateRand='$rand' WHERE email='$email'");
         $sth->execute();
 
-        MailClient::sendMsg($email, 'Verify your MyCell account', "Please follow this link to verify your MyCell account: http://cell.dev/verify-account?e=$email&r=$rand");
+        MailClient::sendMsg($email, 'Verify your MyCell account', "Please follow this link to verify your MyCell account: http://cell-industries.co.uk/verify-account?e=$email&r=$rand");
 
         return LoginSystem::wrapStart . 'We have sent a verification link to your email. Please verify your account before attempting to sign in.' . LoginSystem::wrapEnd;
     }
@@ -120,7 +120,7 @@ class LoginSystem {
         $sth = $dbh->prepare("UPDATE users SET resetRand='$rand' WHERE email='$email'");
         $sth->execute();
 
-        MailClient::sendMsg($email, 'Reset your MyCell account password', "Please follow this link to reset your MyCell account password: http://cell.dev/reset-password?e=$email&r=$rand");
+        MailClient::sendMsg($email, 'Reset your MyCell account password', "Please follow this link to reset your MyCell account password: http://cell-industries.co.uk/reset-password?e=$email&r=$rand");
 
         return LoginSystem::wrapStart . 'We have sent instructions on how to reset your password to your email. Please check your emails.' . LoginSystem::wrapEnd;
     }

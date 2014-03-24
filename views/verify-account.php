@@ -18,7 +18,7 @@
 
             $response = $loginSystem->validateUser($_GET['e'], $_GET['r']);
 
-            echo '<p class="full warn">' . ($response ? 'User account verified. You may now <a href="signin">sign in</a>.' : 'An error has occurred whilst verifying your account. Please contact <a href="mailto:info@cell.dev">info@cell.dev</a>.') . '</p>';
+            echo '<p class="full warn">' . ($response ? 'User account verified. You may now <a href="signin">sign in</a>.' : 'An error has occurred whilst verifying your account. Please contact <a href="mailto:info@cell-industries.co.uk">info@cell-industries.co.uk</a>.') . '</p>';
             ?>
         </div>
     </section>

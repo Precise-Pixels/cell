@@ -1,3 +1,5 @@
+document.cookie = 'preventRecapture=false; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';
+
 if(Detector.webgl) {
     var newEnvInterface = document.getElementById('new-env-interface');
     var newEnvInterfaceMarkup = document.getElementById('new-env-interface-markup').text;
@@ -32,7 +34,8 @@ if(Detector.webgl) {
                 mapTypeIds: [google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.TERRAIN]
             },
             panControl: false,
-            streetViewControl: false
+            streetViewControl: false,
+        backgroundColor: '#222'
         });
 
         currentZoom = map.getZoom();
@@ -98,8 +101,6 @@ if(Detector.webgl) {
                 centreLat = lat2 - ((lat2 - lat1) / 2);
                 centreLon = lon2 - ((lon2 - lon1) / 2);
 
-                // console.log([lat1, lon1, lat2, lon2, centreLat, centreLon]);
-
                 var selectedTile = document.getElementById('selected-tile');
                 selectedTile.src = 'http://maps.googleapis.com/maps/api/staticmap?center=' + centreLat + ',' + centreLon + '&zoom=' + (requiredZoom + 1) + '&size=' + tileSize * 2 + 'x' + tileSize * 2 + '&scale=1&maptype=satellite&sensor=false&key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4';
 
@@ -160,17 +161,22 @@ if(Detector.webgl) {
             redrawOverlayMap();
         });
 
-        var envForm      = document.getElementById('new-env-form');
-        var cloneBtn     = document.getElementById('clone-btn');
-        var envNameInput = document.getElementById('new-env-name');
-        var warnNoTile   = document.createElement('p');
-        var warnNoName   = document.createElement('p');
+        var envForm         = document.getElementById('new-env-form');
+        var cloneBtn        = document.getElementById('clone-btn');
+        var envNameInput    = document.getElementById('new-env-name');
+        var warnNoTile      = document.createElement('p');
+        var warnUnavailable = document.createElement('p');
+        var warnNoName      = document.createElement('p');
+        var warnProfanity   = document.createElement('p');
 
-        warnNoTile.id = 'new-env-warn-tile';
-        warnNoName.id = 'new-env-warn-name';
-        warnNoTile.className = warnNoName.className = 'full warn';
-        warnNoTile.appendChild(document.createTextNode('Please select an area on the map.'));
-        warnNoName.appendChild(document.createTextNode('Please enter a name for your environment.'));
+        warnNoTile.className = warnUnavailable.className = warnNoName.className = warnProfanity.className = 'full warn';
+        warnNoTile.id           = 'new-env-warn-tile';
+        warnUnavailable.id      = 'new-env-warn-unavailable';
+        warnNoName.id           = 'new-env-warn-name';
+        warnProfanity.id        = 'new-env-warn-profanity';
+        warnNoTile.innerHTML    = 'Please select an area on the map.';
+        warnNoName.innerHTML    = 'Please enter a name for your environment.';
+        warnProfanity.innerHTML = 'No profanity please.';
 
         cloneBtn.addEventListener('click', function(e) {
             validate();
@@ -185,18 +191,62 @@ if(Detector.webgl) {
 
         function validate() {
             if(currentTile != undefined) {
-                if(envNameInput.checkValidity()) {
-                    document.getElementById('full-page-overlay--loading').className += ' full-page-overlay--loading';
+                // Check if selected tile is already cloned
+                var data = 'cLat=' + centreLat + '&cLon=' + centreLon;
+                var request = new XMLHttpRequest;
+                request.open('POST', '/php/checkTileAvailability.php', true);
+                request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                request.send(data);
 
-                    var warnNoNameElem = document.getElementById('new-env-warn-name');
-                    if(warnNoNameElem) {
-                        warnNoNameElem.parentNode.removeChild(warnNoNameElem);
+                request.onreadystatechange = function() {
+                    if(request.readyState == 4 && request.status == 200) {
+                        var tileAvailable = request.responseText;
+
+                        if(tileAvailable == 'true') {
+                            var warnUnavailableElem = document.getElementById('new-env-warn-unavailable');
+                            if(warnUnavailableElem) {
+                                warnUnavailableElem.parentNode.removeChild(warnUnavailableElem);
+                            }
+
+                            if(envNameInput.checkValidity()) {
+                                // Check if environment name is profanity free
+                                var data = 'str=' + document.getElementById('new-env-name').value;
+                                var request2 = new XMLHttpRequest;
+                                request2.open('POST', '/php/checkProfanity.php', true);
+                                request2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                                request2.send(data);
+
+                                request2.onreadystatechange = function() {
+                                    if(request2.readyState == 4 && request2.status == 200) {
+                                        var containsProfanity = request2.responseText;
+
+                                        if(!containsProfanity) {
+                                            document.getElementById('full-page-overlay--loading').className += ' full-page-overlay--loading';
+                                            generateEnv(lat1, lon1, lat2, lon2);
+                                        } else {
+                                            var warnNoNameElem = document.getElementById('new-env-warn-name');
+                                            if(warnNoNameElem) {
+                                                warnNoNameElem.parentNode.removeChild(warnNoNameElem);
+                                            }
+                                            envForm.appendChild(warnProfanity);
+                                        }
+                                    }
+                                }
+                            } else {
+                                envForm.appendChild(warnNoName);
+                            }
+                        } else {
+                            warnUnavailable.innerHTML = 'Your selected area has already been cloned. Please select another area or <a href="' + tileAvailable.replace('false', '') + '" target="_blank">view the selected area</a>.';
+                            envForm.appendChild(warnUnavailable);
+
+                            var warnNoNameElem = document.getElementById('new-env-warn-name');
+                            if(warnNoNameElem) {
+                                warnNoNameElem.parentNode.removeChild(warnNoNameElem);
+                            }
+                        }
                     }
-
-                    generateEnv(lat1, lon1, lat2, lon2);
-                } else {
-                    envForm.appendChild(warnNoName);
                 }
+
             } else {
                 envForm.appendChild(warnNoTile);
             }
@@ -344,12 +394,8 @@ if(Detector.webgl) {
             // Remove the last dash
             elevationsString = elevationsString.substring(0, elevationsString.length - 1);
 
-            // console.log(elevations);
-            // console.log(elevationsGreyscale);
-            // console.log(elevationsString);
-
             // Send elevationsString to PHP to generate and store image
-            var data = 'cLat=' + centreLat + '&cLon=' + centreLon + '&h=' + elevationsString + '&r=' + resolution + '&t=' + tileSize * 4 + '&n=' + encodeURIComponent(document.getElementsByName('new-env-name')[0].value);
+            var data = 'cLat=' + centreLat + '&cLon=' + centreLon + '&h=' + elevationsString + '&r=' + resolution + '&t=' + tileSize * 4 + '&n=' + encodeURIComponent(document.getElementById('new-env-name').value);
 
             var request = new XMLHttpRequest;
             request.open('POST', '/php/cloneEnv.php', true);

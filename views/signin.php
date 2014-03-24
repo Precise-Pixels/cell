@@ -3,9 +3,9 @@ require_once('php/LoginSystem.php');
 $loginSystem = new LoginSystem();
 ?>
 
-<header class="fixed-header section-padding align-centre dgrey">
+<header id="fixed-header" class="fixed-header--signin section-padding">
     <hgroup class="align-vertical">
-        <h1>MYCELL</h1>
+        <h1>SIGN IN / REGISTER</h1>
     </hgroup>
 </header>
 
@@ -61,6 +61,8 @@ $loginSystem = new LoginSystem();
             <h1>REGISTER</h1>
 
             <?php
+            require_once('php/ProfanityFilter.php');
+
             $wrapStart = '<p class="full warn">';
             $wrapEnd   = '</p>';
 
@@ -72,17 +74,25 @@ $loginSystem = new LoginSystem();
                 $passwordAgain = $_POST['password-again'];
 
                 if(!empty($username) && !empty($email) && !empty($password) && !empty($emailAgain) && !empty($passwordAgain)) {
-                    if($email === $emailAgain && $password === $passwordAgain) {
-                        $exists = $loginSystem->checkUserExists($email, $username);
+                    if(preg_match('/^[a-zA-Z0-9]+$/', $username)) {
+                        if($email === $emailAgain && $password === $passwordAgain) {
+                            $exists = $loginSystem->checkUserExists($email, $username);
 
-                        if($exists) {
-                            echo $wrapStart . 'An account with this email/username already exists.' . $wrapEnd;
+                            if($exists) {
+                                echo $wrapStart . 'An account with this email/username already exists.' . $wrapEnd;
+                            } else {
+                                if(!ProfanityFilter::containsProfanity($username)) {
+                                    $response = $loginSystem->createUser($email, $password, $username);
+                                    echo $response;
+                                } else {
+                                    echo $wrapStart . 'No profanity please.' . $wrapEnd;
+                                }
+                            }
                         } else {
-                            $response = $loginSystem->createUser($email, $password, $username);
-                            echo $response;
+                            echo $wrapStart . 'Email and/or password did not match. Please try again.' . $wrapEnd;
                         }
                     } else {
-                        echo $wrapStart . 'Email and/or password did not match. Please try again.' . $wrapEnd;
+                        echo $wrapStart . 'Username must be alphanumeric (a-z A-Z 0-9).' . $wrapEnd;
                     }
                 } else {
                     echo $wrapStart . 'Please enter your email and password.' . $wrapEnd;
@@ -94,7 +104,7 @@ $loginSystem = new LoginSystem();
                 <table>
                     <tr>
                         <td><label for="username">Username:</label></td>
-                        <td><input type="text" name="username" required/></td>
+                        <td><input type="text" name="username" maxlength="19" required/></td>
                     </tr>
 
                     <tr>

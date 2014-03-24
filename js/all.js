@@ -23,22 +23,24 @@ window.addEventListener('scroll', function () {
     position = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
 
     if (header != null) {
-        header.style.top = position * -1 / 3 + 'px';
-        hgroup.style.top = position * -1 / 2 + 'px';
+        var headerTransformString    = 'translate3d(0, ' + position * -1 / 3 + 'px' + ', 0)';
+        var hgroupTransformString    = 'translate3d(0, ' + position * -1 / 2 + 'px' + ', 0)';
+        header.style.WebkitTransform = headerTransformString;
+        header.style.msTransform     = headerTransformString;
+        header.style.transform       = headerTransformString;
+        hgroup.style.WebkitTransform = hgroupTransformString;
+        hgroup.style.msTransform     = hgroupTransformString;
+        hgroup.style.transform       = hgroupTransformString;
     }
 
-    if (position >= target || siteNavToggle.checked || userNavToggle.checked) {
-        headerTop.style.backgroundColor = '#333';
-    } else {
-        headerTop.style.backgroundColor = 'transparent';
-    }
+    changeTopbarBkg();
 });
 
 function changeTopbarBkg() {
     if (position >= target || siteNavToggle.checked || userNavToggle.checked) {
-        headerTop.style.backgroundColor = '#333';
+        headerTop.className = 'top-bar-background';
     } else {
-        headerTop.style.backgroundColor = 'transparent';
+        headerTop.className = 'top-bar-background-none';
     }
 }
 
@@ -54,3 +56,6 @@ navOverlay.addEventListener('click', function() {
     siteNavToggle.checked = false;
     userNavToggle.checked = false;
 });
+
+// Console FYP notice
+console.info('___________________________________________________________________\n  _____     _ _   _____           _           _        _\n / ____|   | | | |_   _|         | |         | |      (_)\n| |     ___| | |   | |  _ __   __| |_   _ ___| |_ _ __ _  ___  ___\n| |    / _ \\ | |   | | | \'_ \\ / _` | | | / __| __| \'__| |/ _ \\/ __|\n| |___|  __/ | |  _| |_| | | | (_| | |_| \\__ \\ |_| |  | |  __/\\__ \\ \n \\_____\\___|_|_| |_____|_| |_|\\__,_|\\__,_|___/\\__|_|  |_|\\___||___/\n\nThankyou for visiting Cell Industries!\n\nCell Industries is a Multimedia Technology and Design\nUniversity of Kent final year project by\nPrecise Pixels  (http://precisepixels.co.uk):\n\nJacob Hammond   (http://jacobhammond.co.uk)\nJames Lee       (http://jalproductions.co.uk)\nJoseph Williams (http://faooful.com)\n\nFor more information, please visit: http://cell-industries.co.uk/fyp\n____________________________________________________________________');

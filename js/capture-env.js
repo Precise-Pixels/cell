@@ -1,98 +1,107 @@
-var $container, scene, camera, displace, renderer;
+if(document.cookie.replace(/(?:(?:^|.*;\s*)preventRecapture\s*\=\s*([^;]*).*$)|^.*$/, '$1') === 'true') {
+    // If user is visiting this page from any page other than new-env, or user presses the
+    // browser's back button from the env page, redirect to new-env
+    window.location.href = '/user/' + username + '/env/new';
+} else {
+    // Else continue cloning
+    document.cookie = 'preventRecapture=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';
 
-// Blur height map
-var heightMap = new Image();
-heightMap.src  = '/img/user/' + userId + '/height-map-' + envId + '.png';
+    var $container, scene, camera, displace, renderer;
 
-heightMap.addEventListener('load', function() {
-    var canvas = document.createElement('canvas');
-    var ctx = canvas.getContext('2d');
-    ctx.drawImage(heightMap, 0, 0, heightMap.width, heightMap.height);
-    stackBlurImage(heightMap, canvas, 20);
-    ctx.lineWidth = 2;
-    ctx.strokeRect(0, 0, heightMap.width, heightMap.height);
-    displace = new THREE.Texture(canvas);
-    displace.needsUpdate = true;
+    // Blur height map
+    var heightMap = new Image();
+    heightMap.src  = '/img/user/' + userId + '/height-map-' + envId + '.png';
 
-    init();
-});
+    heightMap.addEventListener('load', function() {
+        var canvas = document.createElement('canvas');
+        var ctx = canvas.getContext('2d');
+        ctx.drawImage(heightMap, 0, 0, heightMap.width, heightMap.height);
+        stackBlurImage(heightMap, canvas, 20);
+        ctx.lineWidth = 2;
+        ctx.strokeRect(0, 0, heightMap.width, heightMap.height);
+        displace = new THREE.Texture(canvas);
+        displace.needsUpdate = true;
 
-// ThreeJS Setup
-function init() {
-    // Scene
-    $container = document.getElementById('capture-model');
-    renderer = new THREE.WebGLRenderer({alpha: true, antialias: true, preserveDrawingBuffer: true});
-    renderer.setSize($container.clientWidth, $container.clientHeight);
-    renderer.setClearColor(0x333333, 1);
-    $container.appendChild(renderer.domElement);
+        init();
+    });
 
-    scene = new THREE.Scene();
+    // ThreeJS Setup
+    function init() {
+        // Scene
+        $container = document.getElementById('capture-model');
+        renderer = new THREE.WebGLRenderer({alpha: true, antialias: true, preserveDrawingBuffer: true});
+        renderer.setSize($container.clientWidth, $container.clientHeight);
+        renderer.setClearColor(0x333333, 1);
+        $container.appendChild(renderer.domElement);
 
-    // Camera
-    camera = new THREE.PerspectiveCamera(45, renderer.domElement.width / renderer.domElement.height);
-    camera.position.x = 400;
-    camera.position.y = 200;
-    camera.position.z = 400;
-    camera.lookAt(scene.position);
+        scene = new THREE.Scene();
 
-    // Control
-    controls = new THREE.OrbitControls(camera, $container, '360');
-    controls.addEventListener('change', render);
+        // Camera
+        camera = new THREE.PerspectiveCamera(45, renderer.domElement.width / renderer.domElement.height);
+        camera.position.x = 400;
+        camera.position.y = 200;
+        camera.position.z = 400;
+        camera.lookAt(scene.position);
 
-    // Lights
-    ambientLight = new THREE.AmbientLight(0xffffff);
-    scene.add(ambientLight);
+        // Control
+        controls = new THREE.OrbitControls(camera, $container, '360');
+        controls.addEventListener('change', render);
 
-    // Shaders
-    var texture  = new THREE.ImageUtils.loadTexture('/php/getEnvTexture.php?lat=' + latitude + '&lon=' + longitude, {}, function() { loadComplete() });
-    var shader   = THREE.ShaderLib['normalmap'];
-    var uniforms = THREE.UniformsUtils.clone(shader.uniforms);
+        // Lights
+        ambientLight = new THREE.AmbientLight(0xffffff);
+        scene.add(ambientLight);
 
-    uniforms[ "enableDisplacement" ].value = true;
-    uniforms[ "enableDiffuse" ].value      = true;
-    uniforms[ "tDisplacement" ].value      = displace;
-    uniforms[ "tDiffuse" ].value           = texture;
-    uniforms[ "uDisplacementScale" ].value = 20;
+        // Shaders
+        var texture  = new THREE.ImageUtils.loadTexture('/php/getEnvTexture.php?lat=' + latitude + '&lon=' + longitude, {}, function() { loadComplete() });
+        var shader   = THREE.ShaderLib['normalmap'];
+        var uniforms = THREE.UniformsUtils.clone(shader.uniforms);
 
-    var dispMapShader = new THREE.ShaderMaterial({ fragmentShader: shader.fragmentShader, vertexShader: shader.vertexShader, uniforms: uniforms, lights: true, wireframe: false });
-    var podiumShader  = new THREE.MeshLambertMaterial({ ambient: 0x222222 });
+        uniforms[ "enableDisplacement" ].value = true;
+        uniforms[ "enableDiffuse" ].value      = true;
+        uniforms[ "tDisplacement" ].value      = displace;
+        uniforms[ "tDiffuse" ].value           = texture;
+        uniforms[ "uDisplacementScale" ].value = 20;
 
-    var cubeFaceMaterials = [podiumShader, podiumShader, dispMapShader, podiumShader, podiumShader, podiumShader];
+        var dispMapShader = new THREE.ShaderMaterial({ fragmentShader: shader.fragmentShader, vertexShader: shader.vertexShader, uniforms: uniforms, lights: true, wireframe: false });
+        var podiumShader  = new THREE.MeshLambertMaterial({ ambient: 0x222222 });
 
-    // Geometry
-    var geometry = new THREE.CubeGeometry(100, 2, 100, 200, 1, 200, cubeFaceMaterials);
-    geometry.computeTangents();
+        var cubeFaceMaterials = [podiumShader, podiumShader, dispMapShader, podiumShader, podiumShader, podiumShader];
 
-    var podium = new THREE.Mesh( geometry, new THREE.MeshFaceMaterial(cubeFaceMaterials) );
+        // Geometry
+        var geometry = new THREE.CubeGeometry(100, 2, 100, 200, 1, 200, cubeFaceMaterials);
+        geometry.computeTangents();
 
-    scene.add(podium);
+        var podium = new THREE.Mesh( geometry, new THREE.MeshFaceMaterial(cubeFaceMaterials) );
 
-    // Functions
-    function animate() {
+        scene.add(podium);
+
+        // Functions
+        function animate() {
+            requestAnimationFrame(animate);
+            renderer.render(scene, camera);
+            controls.update();
+        }
+
+        function render() {
+            renderer.render(scene, camera);
+        }
+
         requestAnimationFrame(animate);
-        renderer.render(scene, camera);
-        controls.update();
-    }
 
-    function render() {
-        renderer.render(scene, camera);
-    }
+        function loadComplete() {
+            render();
+            var data = 's=' + encodeURIComponent(renderer.domElement.toDataURL('image/png').replace('data:image/png;base64,', ''));
+            var request = new XMLHttpRequest;
+            request.open('POST', '/php/captureEnv.php', true);
+            request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            request.send(data);
 
-    requestAnimationFrame(animate);
-
-    function loadComplete() {
-        render();
-        var data = 's=' + encodeURIComponent(renderer.domElement.toDataURL('image/png').replace('data:image/png;base64,', ''));
-        var request = new XMLHttpRequest;
-        request.open('POST', '/php/captureEnv.php', true);
-        request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        request.send(data);
-
-        request.onreadystatechange = function() {
-            if(request.readyState == 4 && request.status == 200) {
-                window.location.href = envURL;
-            } else if(request.status != 200) {
-                console.log('An error has occurred.');
+            request.onreadystatechange = function() {
+                if(request.readyState == 4 && request.status == 200) {
+                    window.location.href = envURL;
+                } else if(request.status != 200) {
+                    console.log('An error has occurred.');
+                }
             }
         }
     }

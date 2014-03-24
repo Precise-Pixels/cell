@@ -17,6 +17,10 @@
         <script src="/js/page-technology.js"></script>
     <?php endif; ?>
 
+    <?php if($isUser): ?>
+        <script src='/js/page-user-profile.js'></script>
+    <?php endif; ?>
+
     <?php if($isEnv): ?>
         <script>
             var userId    = <?= $userId; ?>;
@@ -56,6 +60,10 @@
     <?php if($isTechnology): ?>
         <script src="/build/threejs-tweenjs-stats-loaders-controls-stackblur.min.js"></script>
         <script src="/build/page-technology.min.js"></script>
+    <?php endif; ?>
+
+    <?php if($isUser): ?>
+        <script src='/build/page-user-profile.min.js'></script>
     <?php endif; ?>
 
     <?php if($isEnv): ?>
