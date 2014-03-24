@@ -94,6 +94,15 @@
     display: none;
 }
 
+.ig-title {
+    width: 100%;
+    position: absolute;
+    top: 10%;
+    text-align: center;
+    color: #FFF;
+    z-index: 4;
+}
+
 #ig-cube {
     width: 12%;
     position: fixed;
