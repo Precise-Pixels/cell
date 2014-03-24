@@ -1,4 +1,4 @@
-<header id="fixed-header" class="fixed-header--signin section-padding">
+<header id="fixed-header" class="fixed-header--404 section-padding">
     <hgroup class="align-vertical">
         <h1>404: PAGE NOT FOUND</h1>
     </hgroup>
