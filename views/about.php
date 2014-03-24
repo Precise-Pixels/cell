@@ -64,6 +64,13 @@
                     <p class="event-text">Founded and established with the vision to advance technology.</p>
                 </div>
 
+                <div class="event funded">
+                    <div class="event-date-wrapper">
+                        <p class="event-date">1960</p>
+                    </div> 
+                    <p class="event-text">Backed by Royal appointment to develop technology to protect the commonwealth.</p>
+                </div>
+
                 <div class="event backed">
                     <div class="event-date-wrapper">
                         <p class="event-date">1960</p>
