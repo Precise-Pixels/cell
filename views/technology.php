@@ -9,7 +9,7 @@
 
     <section>
         <div class="section-padding align-centre">
-            <div id="clone-cube"><img src="/img/placeholder.gif" alt="Clone Cube" class="full"></div>
+            <div id="clone-cube"><img src="/img/clone-cube" alt="Clone Cube" class="full"></div>
         </div>
     </section>
 
