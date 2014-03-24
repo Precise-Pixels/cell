@@ -44,7 +44,7 @@
                 </table>
             </form>
 
-            <p class="half-padding">Please enter your email and a link to reset your password should be with you shortly. If it has been five minutes and you still haven't received it, please check your spam.</p>
+            <p class="half-padding"><i class="ico-info"></i>Please enter your email and a link to reset your password should be with you shortly. If it has been five minutes and you still haven't received it, please check your spam.</p>
         </div>
     </section>
 
