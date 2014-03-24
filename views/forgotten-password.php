@@ -44,7 +44,7 @@
                 </table>
             </form>
 
-            <p class="half-padding">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, porro, ex maiores amet dolore cum vitae aut quos! Architecto, et illo vel facilis repellendus inventore labore explicabo assumenda exercitationem sit.</p>
+            <p class="half-padding">Please enter your email and a link to reset your password should be with you shortly. If it has been five minutes and you still haven't received it, please check your spam.</p>
         </div>
     </section>
 
