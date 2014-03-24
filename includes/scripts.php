@@ -58,7 +58,9 @@
     <script src='/build/all.min.js'></script>
 
     <?php if($isUser): ?>
-        <script src='/build/page-user-profile.min.js'></script>
+        <?php if(isset($_SESSION['userId'])): ?>
+            <script src='/build/page-user-profile.min.js'></script>
+        <?php endif; ?>
     <?php endif; ?>
 
     <?php if($isEnv): ?>
