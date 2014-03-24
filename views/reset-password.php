@@ -44,7 +44,7 @@
                 </table>
             </form>
 
-            <p class="half-padding">Please enter a new password into the field above.</p>
+            <p class="half-padding"><i class="ico-info"></i>Please enter a new password into the field above.</p>
         </div>
     </section>
 

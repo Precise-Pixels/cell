@@ -38,7 +38,7 @@
                 </table>
             </form>
 
-            <p class="half-padding">Please enter in your email above and we will send you another email so you can validate your account.</p>
+            <p class="half-padding"><i class="ico-info"></i>Please enter in your email above and we will send you another email so you can validate your account.</p>
         </div>
     </section>
 
