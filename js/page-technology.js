@@ -47,18 +47,6 @@ function init() {
 
     loader.load('/3d/clone-cube.obj', '/3d/clone-cube.mtl');
 
-    var geometry = new THREE.SphereGeometry( 1, 32, 32 );
-    var material = new THREE.MeshBasicMaterial( {color: 0xffff00} );
-    var sphere = new THREE.Mesh( geometry, material );
-    sphere.position = directional1.position;
-    scene.add( sphere );
-
-    var geometry = new THREE.SphereGeometry( 1, 32, 32 );
-    var material = new THREE.MeshBasicMaterial( {color: 0xffff00} );
-    var sphere = new THREE.Mesh( geometry, material );
-    sphere.position = directional2.position;
-    scene.add( sphere );
-
     // Controls
     controls = new THREE.OrbitControls(camera, $container, '360', containerX);
     controls.addEventListener('change', render);
