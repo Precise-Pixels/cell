@@ -18,7 +18,8 @@
         </div>
     </div>
     <img src="/img/infographic/clone-cube.png" id="ig-cube" alt="Clone Cube"/>
-    <img src="/img/infographic/clone-cube-fire.png" alt="Plane" id="ig-cube-fire" class="ig-animate"/>
+    <img src="/img/infographic/clone-cube-fire.png" alt="Fire" id="ig-cube-fire" class="ig-animate"/>
+    <img src="/img/infographic/thrusters.png" alt="Thrusters" id="ig-thrusters" class="ig-animate"/>
     <i id="ig-prev" class="ico-arrow-up2"></i>
     <i id="ig-next" class="ico-arrow-down2"></i>
 

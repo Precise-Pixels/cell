@@ -101,19 +101,30 @@
     margin-left: -6%;
     top: 50%;
     left: 50%;
-    z-index: 1;
+    z-index: 2;
 }
 
 #ig-cube-fire {
-    width: 16%;
+    width: 20%;
     position: fixed;
-    margin-top: -8%;
-    margin-left: -8%;
+    margin-top: -10%;
+    margin-left: -10%;
     top: 50%;
     left: 50%;
     display: none;
-    z-index: 2;
+    z-index: 3;
     animation: ig-cube-2 .1s alternate infinite linear;
+}
+
+#ig-thrusters {
+    width: 12%;
+    position: fixed;
+    margin-top: -6%;
+    margin-left: -6%;
+    top: 50%;
+    left: 50%;
+    display: none;
+    z-index: 1;
 }
 
 .ig-animate {
@@ -133,6 +144,15 @@
         }
         ~ #ig-cube-fire {
             display: block;
+        }
+    }
+
+    &.ig-current-slide--3 {        
+        ~ #ig-cube {
+        }
+        ~ #ig-thrusters {
+            display: block;
+            animation: ig-cube-3-thrusters 2s alternate infinite linear;
         }
     }
 
@@ -161,8 +181,13 @@
     100% { left: 51%; }
 }
 
+@keyframes ig-cube-3-thrusters {
+    0%   { top: 50%; opacity: 1; }
+    100% { top: 49%; opacity: 0.5; }
+}
+
 @keyframes ig-cube-5 {
-    0%   { top: 50%;  }
+    0%   { top: 50%; }
     100% { top: -10%; }
 }
 
