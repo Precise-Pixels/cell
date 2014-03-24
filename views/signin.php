@@ -54,7 +54,7 @@ $loginSystem = new LoginSystem();
 
                     <tr>
                         <td></td>
-                        <td><a href="forgotten-password.php"><p><i class="ico-question"></i>Forgotten Password</p></a></td>
+                        <td><a href="forgotten-password.php"><p class="forgot-password"><i class="ico-question"></i>Forgotten Password</p></a></td>
                     </tr>
 
                 </table>
