@@ -73,7 +73,7 @@
 
                 <div class="event backed">
                     <div class="event-date-wrapper">
-                        <p class="event-date">1960</p>
+                        <p class="event-date">1962</p>
                     </div> 
                     <p class="event-text">Backed by Royal appointment to develop technology to protect the commonwealth.</p>
                 </div>
