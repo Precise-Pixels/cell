@@ -32,11 +32,54 @@ p {
 }
 
 a {
-    color: #285989;
+    transition: all .3s;
+    text-decoration: none;
+    color: $lgrey;
 }
 
-a:hover {
+.dgrey a,
+.sdgrey a {
+    color: $mblue;
+    border-bottom: 1px solid $mblue;
+    &:hover {
+        color: $lgrey;
+        border-bottom: 1px solid $lgrey;
+    }
+}
+
+.lgrey a {
+    color: $mblue;
+    border-bottom: 1px solid $mblue;
+    &:hover {
+        color: $dgrey;
+        border-bottom: 1px solid $dgrey;
+    }   
+}
+
+.mblue a {
     color: $lgrey;
+    border-bottom: 1px solid $lgrey;
+    &:hover {
+        color: $dgrey;
+        border-bottom: 1px solid $dgrey;
+    }   
+}
+
+.cell-logo a,
+a.cta {    
+    color: $lgrey;
+    border-bottom: 0;
+    &:hover {
+        border-bottom: 0;
+        color: $lgrey;
+    }
+}
+
+#user-social a {
+    border-bottom: 0;
+    &:hover {
+        border-bottom: 0;
+    }
 }
 
 a img {
@@ -47,14 +90,30 @@ a img {
     padding: 10px;
     color: $lgrey;
     background: $red;
+    a {
+        font-weight: 600;
+        border-bottom: 1px solid $lgrey;
+        &:hover {
+            color: $lgrey;
+            border-bottom: 1px solid $lgrey;
+        }
+    }
 }
 
-blockquote p {
-    margin-bottom: 0;
-    font-size: 1.6rem;
-    font-weight: 400;
-    font-style: italic;
-    line-height: 3rem;
+blockquote {
+    padding: 60px 10px;
+    p {
+        margin-bottom: 0;
+        font-size: 1.4rem;
+        font-weight: 400;
+        font-style: italic;
+        line-height: 2.6rem;
+    }
+    footer {
+        height: auto;
+        margin-bottom: 15px;
+        float: right;
+    }
 }
 
 blockquote p:before {
@@ -72,12 +131,6 @@ blockquote p:after {
     font-weight: 600;
 }
 
-blockquote footer {
-    height: auto;
-    margin-bottom: 15px;
-    float: right;
-}
-
 blockquote footer:before {
     content: '\2014';
     margin-right: 10px;
@@ -90,5 +143,13 @@ blockquote footer:before {
 
     p {
         font-size: 1.2rem;
+    }
+
+    blockquote {
+        padding: 40px 25px;
+        p {
+            font-size: 1.6rem;
+            line-height: 3rem;
+        }
     }
 }

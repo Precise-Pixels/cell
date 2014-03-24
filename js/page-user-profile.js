@@ -24,22 +24,39 @@ upEdit.addEventListener('click', function(e) {
         if(upLocationInput.value == upLocationCurrent && upFacebookInput.value == upFacebookCurrent && upTwitterInput.value == upTwitterCurrent) {
             resetForm();
         } else {
-            var data = 'location=' + upLocationInput.value + '&facebook=' + upFacebookInput.value + '&twitter=' + upTwitterInput.value;
+            // Check if location is profanity free
+            var data = 'str=' + upLocationInput.value;
             var request = new XMLHttpRequest;
-            request.open('POST', '/php/saveUserProfile.php', true);
+            request.open('POST', '/php/checkProfanity.php', true);
             request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
             request.send(data);
 
             request.onreadystatechange = function() {
                 if(request.readyState == 4 && request.status == 200) {
-                    resetForm();
-                    location.reload();
+                    var containsProfanity = request.responseText;
+
+                    if(!containsProfanity) {
+                        var data = 'location=' + upLocationInput.value + '&facebook=' + upFacebookInput.value + '&twitter=' + upTwitterInput.value;
+                        var request2 = new XMLHttpRequest;
+                        request2.open('POST', '/php/saveUserProfile.php', true);
+                        request2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                        request2.send(data);
+
+                        request2.onreadystatechange = function() {
+                            if(request2.readyState == 4 && request2.status == 200) {
+                                resetForm();
+                                location.reload();
+                            }
+                        }
+
+                        request2.onerror = function() {
+                            alert('Something went wrong. Please try again.');
+                        };
+                    } else {
+                        alert('No profanity please');
+                    }
                 }
             }
-
-            request.onerror = function() {
-                alert('Something went wrong. Please try again.');
-            };
         }
 
         function resetForm() {
