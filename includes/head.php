@@ -36,6 +36,10 @@
     .ball {
         display: none;
     }
+
+    #fixed-header {
+        background: #333;
+    }
 </style>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <script src="/build/respond.min.js"></script>
