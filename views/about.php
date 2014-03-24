@@ -87,7 +87,7 @@
 
                 <div class="event stem-cells">
                     <div class="event-date-wrapper">
-                        <p class="event-date">2986</p>
+                        <p class="event-date">1986</p>
                     </div>
                     <p class="event-text">Cell Industries discover how to use human skin cells to create embryonic stem cells driving biological science into the future.</p>
                 </div>
