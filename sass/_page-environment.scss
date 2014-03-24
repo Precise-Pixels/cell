@@ -231,41 +231,24 @@
     display: none;
 }
 
-#video {
-    width: 33.33%;
-    max-width: 150px;
-    left: 20px;
-    float: left;
-    transform: scaleX(-1);
-    filter: FlipH;
-}
-
+#video,
 #comp {
     width: 33.33%;
     max-width: 150px;
-    left: 20px;
-    float: left;
     transform: scaleX(-1);
     filter: FlipH;
 }
 
-#webcam-sensitivity {
-    width: 33.33%;
-    max-width: 150px;
-    padding-left: 15px;
+#video {
     float: left;
-    font-size: 1.2rem;
-    label {
-        width: 75%;
-        float: left;
-        font-size: 1rem;
-        font-weight: 300;
-    }
-    input {
-        width: 25%;
-        margin: 5px 0;
-        float: left;
-    }
+}
+
+#comp {
+    float: right;
+}
+
+#webcam-sensitivity {
+    display: none;
 }
 
 #background-top {
@@ -444,6 +427,31 @@
         bottom: 199px;
         right: 20px;
         overflow: auto;
+    }
+
+    #video,
+    #comp {
+        float: left;
+    }
+
+    #webcam-sensitivity {
+        width: 33.33%;
+        max-width: 150px;
+        padding-left: 15px;
+        float: left;
+        display: block;
+        font-size: 1.2rem;
+        label {
+            width: 75%;
+            float: left;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+        input {
+            width: 25%;
+            margin: 5px 0;
+            float: left;
+        }
     }
 
     .env--webcam {
