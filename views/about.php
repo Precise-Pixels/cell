@@ -104,7 +104,7 @@
                     <div class="event-date-wrapper">
                         <p class="event-date">2000</p>
                     </div>
-                    <p class="event-text">Dr Lee publishes his research into QuantumCell&#8482; technology and wins a nobel prize in his field. A research facility dedicated to developing the technology is opened.</p>
+                    <p class="event-text">Joseph Williams publishes his research into QuantumCell&trade; technology and wins a nobel prize in his field. A research facility dedicated to developing the technology is opened.</p>
                 </div>
 
                 <div class="event first-clone">
