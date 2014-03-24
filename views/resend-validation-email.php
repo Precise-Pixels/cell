@@ -38,7 +38,7 @@
                 </table>
             </form>
 
-            <p class="half-padding">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, porro, ex maiores amet dolore cum vitae aut quos! Architecto, et illo vel facilis repellendus inventore labore explicabo assumenda exercitationem sit.</p>
+            <p class="half-padding">Please enter in your email above and we will send you another email so you can validate your account.</p>
         </div>
     </section>
 
