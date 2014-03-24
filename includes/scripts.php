@@ -13,7 +13,9 @@
     <script src='/js/all.js'></script>
 
     <?php if($isUser): ?>
-        <script src='/js/page-user-profile.js'></script>
+        <?php if(isset($_SESSION['userId'])): ?>
+            <script src='/js/page-user-profile.js'></script>
+        <?php endif; ?>
     <?php endif; ?>
 
     <?php if($isEnv): ?>
