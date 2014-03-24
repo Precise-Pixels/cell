@@ -95,13 +95,25 @@
 }
 
 #ig-cube {
-    width: 10%;
+    width: 12%;
     position: fixed;
-    margin-top: -5%;
-    margin-left: -5%;
+    margin-top: -6%;
+    margin-left: -6%;
     top: 50%;
     left: 50%;
-    background: #CCC;
+    z-index: 1;
+}
+
+#ig-cube-fire {
+    width: 16%;
+    position: fixed;
+    margin-top: -8%;
+    margin-left: -8%;
+    top: 50%;
+    left: 50%;
+    display: none;
+    z-index: 2;
+    animation: ig-cube-2 .1s alternate infinite linear;
 }
 
 .ig-animate {
@@ -118,6 +130,9 @@
     &.ig-current-slide--2 {
         ~ #ig-cube {
             animation: ig-cube-2 .1s alternate infinite linear;
+        }
+        ~ #ig-cube-fire {
+            display: block;
         }
     }
 
