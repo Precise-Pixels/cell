@@ -147,7 +147,7 @@
         }
     }
 
-    &.ig-current-slide--3 {        
+    &.ig-current-slide--3 {
         ~ #ig-cube {
         }
         ~ #ig-thrusters {
@@ -171,7 +171,7 @@
 }
 
 @keyframes ig-cube-1 {
-    0%   { width: 1%;  top: 20%; left: 85%; }
+    0%   { width: 0%;  top: 38%; left: 74%; }
     50%  {                       left: 45%; }
     100% { width: 12%; top: 50%; left: 50%; }
 }
@@ -195,7 +195,6 @@
     height: 25%;
     left: 10%;
     animation: ig-satellite 7s alternate infinite ease-in-out;
-    // filter: blur(2px);
 }
 
 @keyframes ig-satellite {
