@@ -43,7 +43,7 @@ function init() {
     camera.lookAt(scene.position);
 
     // Lights
-    ambientLight = new THREE.AmbientLight(0xffffff);
+    var ambientLight = new THREE.AmbientLight(0xffffff);
     scene.add(ambientLight);
 
     // Shaders

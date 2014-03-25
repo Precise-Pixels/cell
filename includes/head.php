@@ -2,7 +2,7 @@
 <meta name="description" content=""/>
 <meta name="author" content="Precise Pixels"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
-<title>Cell</title>
+<title>Cell Industries</title>
 <?php if($_SERVER['SERVER_NAME'] == 'cell.dev'): ?>
     <link rel="stylesheet" type="text/css" href="/css/styles.css"/>
 <?php else: ?>
@@ -23,6 +23,13 @@
     <meta property="og:site_name" content="Cell Industries"/>
     <meta property="og:description" content="Cell Industries presents Project Titan - Preserving The Planet"/>
     <meta property="article:published_time" content="<?= $env->timestamp; ?>">
+<?php else: ?>
+    <meta property="og:title" content="Cell Industries"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://cell-industries.co.uk"/>
+    <meta property="og:image" content="http://cell-industries.co.uk/img/touchicon-144.png"/>
+    <meta property="og:site_name" content="Cell Industries"/>
+    <meta property="og:description" content="Cell Industries presents Project Titan - Preserving The Planet"/>
 <?php endif; ?>
 
 <!--[if lt IE 9]>

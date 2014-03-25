@@ -14,8 +14,14 @@
 }
 
 a.btn {
+    border-bottom: 0;
     line-height: 20px;
+    &:hover {
+        border-bottom: 0;
+    }
 }
+
+
 
 .lgrey .btn {
     color: $dgrey;

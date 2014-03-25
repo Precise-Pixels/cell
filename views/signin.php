@@ -61,6 +61,8 @@ $loginSystem = new LoginSystem();
             <h1>REGISTER</h1>
 
             <?php
+            require_once('php/ProfanityFilter.php');
+
             $wrapStart = '<p class="full warn">';
             $wrapEnd   = '</p>';
 
@@ -79,8 +81,12 @@ $loginSystem = new LoginSystem();
                             if($exists) {
                                 echo $wrapStart . 'An account with this email/username already exists.' . $wrapEnd;
                             } else {
-                                $response = $loginSystem->createUser($email, $password, $username);
-                                echo $response;
+                                if(!ProfanityFilter::containsProfanity($username)) {
+                                    $response = $loginSystem->createUser($email, $password, $username);
+                                    echo $response;
+                                } else {
+                                    echo $wrapStart . 'No profanity please.' . $wrapEnd;
+                                }
                             }
                         } else {
                             echo $wrapStart . 'Email and/or password did not match. Please try again.' . $wrapEnd;

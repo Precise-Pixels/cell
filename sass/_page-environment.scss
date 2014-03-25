@@ -188,6 +188,12 @@
     width: 90px !important;
 }
 
+#env-info-note {
+    font-size: .8rem;
+    padding: 10px;
+    background: $dgrey;
+}
+
 .env-data-pod--time {
     width: 100%;
 }
@@ -225,41 +231,24 @@
     display: none;
 }
 
-#video {
-    width: 33.33%;
-    max-width: 150px;
-    left: 20px;
-    float: left;
-    transform: scaleX(-1);
-    filter: FlipH;
-}
-
+#video,
 #comp {
     width: 33.33%;
     max-width: 150px;
-    left: 20px;
-    float: left;
     transform: scaleX(-1);
     filter: FlipH;
 }
 
-#webcam-sensitivity {
-    width: 33.33%;
-    max-width: 150px;
-    padding-left: 15px;
+#video {
     float: left;
-    font-size: 1.2rem;
-    label {
-        width: 75%;
-        float: left;
-        font-size: 1rem;
-        font-weight: 300;
-    }
-    input {
-        width: 25%;
-        margin: 5px 0;
-        float: left;
-    }
+}
+
+#comp {
+    float: right;
+}
+
+#webcam-sensitivity {
+    display: none;
 }
 
 #background-top {
@@ -297,10 +286,6 @@
         background: none;
         z-index: -1;
     }
-
-    // #env-interface-pods-btn {
-    //     display: none;
-    // }
 }
 
 @media ($min_bp_c) {
@@ -404,7 +389,7 @@
     #env-share {
         width: 300px;
         right: 20px;
-        bottom: 60px;
+        bottom: 80px;
     }
 
     .fb_iframe_widget {
@@ -413,6 +398,13 @@
 
     #twitter-widget-0 {
         width: 90px !important;
+    }
+
+    #env-info-note {
+        position: absolute;
+        right: 10px;
+        bottom: 40px;
+        background: none;
     }
 
     .env-data-pod--time {
@@ -432,9 +424,34 @@
     .env-data-pod--nearby {
         width: 300px;
         top: 185px;
-        bottom: 179px;
+        bottom: 199px;
         right: 20px;
         overflow: auto;
+    }
+
+    #video,
+    #comp {
+        float: left;
+    }
+
+    #webcam-sensitivity {
+        width: 33.33%;
+        max-width: 150px;
+        padding-left: 15px;
+        float: left;
+        display: block;
+        font-size: 1.2rem;
+        label {
+            width: 75%;
+            float: left;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+        input {
+            width: 25%;
+            margin: 5px 0;
+            float: left;
+        }
     }
 
     .env--webcam {

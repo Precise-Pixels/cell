@@ -27,34 +27,26 @@ if(document.cookie.replace(/(?:(?:^|.*;\s*)preventRecapture\s*\=\s*([^;]*).*$)|^
 
     // ThreeJS Setup
     function init() {
-        // Scene
         $container = document.getElementById('capture-model');
-        renderer = new THREE.WebGLRenderer({alpha: true, antialias: true, preserveDrawingBuffer: true});
-        renderer.setSize($container.clientWidth, $container.clientHeight);
-        renderer.setClearColor(0x333333, 1);
-        $container.appendChild(renderer.domElement);
 
+        // Scene
         scene = new THREE.Scene();
 
         // Camera
-        camera = new THREE.PerspectiveCamera(45, renderer.domElement.width / renderer.domElement.height);
-        camera.position.x = 400;
-        camera.position.y = 200;
-        camera.position.z = 400;
+        camera = new THREE.PerspectiveCamera(25, $container.clientWidth / $container.clientHeight);
+        camera.position.x = 250;
+        camera.position.y = 150;
+        camera.position.z = 250;
         camera.lookAt(scene.position);
 
-        // Control
-        controls = new THREE.OrbitControls(camera, $container, '360');
-        controls.addEventListener('change', render);
-
         // Lights
-        ambientLight = new THREE.AmbientLight(0xffffff);
+        var ambientLight = new THREE.AmbientLight(0xffffff);
         scene.add(ambientLight);
 
         // Shaders
-        var texture  = new THREE.ImageUtils.loadTexture('/php/getEnvTexture.php?lat=' + latitude + '&lon=' + longitude, {}, function() { loadComplete() });
         var shader   = THREE.ShaderLib['normalmap'];
         var uniforms = THREE.UniformsUtils.clone(shader.uniforms);
+        var texture  = new THREE.ImageUtils.loadTexture('/php/getEnvTexture.php?lat=' + latitude + '&lon=' + longitude, {}, function() { loadComplete() });
 
         uniforms[ "enableDisplacement" ].value = true;
         uniforms[ "enableDiffuse" ].value      = true;
@@ -71,25 +63,18 @@ if(document.cookie.replace(/(?:(?:^|.*;\s*)preventRecapture\s*\=\s*([^;]*).*$)|^
         var geometry = new THREE.CubeGeometry(100, 2, 100, 200, 1, 200, cubeFaceMaterials);
         geometry.computeTangents();
 
-        var podium = new THREE.Mesh( geometry, new THREE.MeshFaceMaterial(cubeFaceMaterials) );
+        var podium = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(cubeFaceMaterials));
 
         scene.add(podium);
 
-        // Functions
-        function animate() {
-            requestAnimationFrame(animate);
-            renderer.render(scene, camera);
-            controls.update();
-        }
-
-        function render() {
-            renderer.render(scene, camera);
-        }
-
-        requestAnimationFrame(animate);
+        // Render
+        renderer = new THREE.WebGLRenderer({antialias: true, preserveDrawingBuffer: true});
+        renderer.setSize($container.clientWidth, $container.clientHeight);
+        renderer.setClearColor(0x333333, 1);
+        $container.appendChild(renderer.domElement);
 
         function loadComplete() {
-            render();
+            renderer.render(scene, camera);
             var data = 's=' + encodeURIComponent(renderer.domElement.toDataURL('image/png').replace('data:image/png;base64,', ''));
             var request = new XMLHttpRequest;
             request.open('POST', '/php/captureEnv.php', true);
