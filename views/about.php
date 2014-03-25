@@ -109,9 +109,16 @@
 
                 <div class="event first-clone">
                     <div class="event-date-wrapper">
-                        <p class="event-date">2014</p>
+                        <p class="event-date">2013</p>
                     </div>
                     <p class="event-text">The first clone cube is created and the first environment is cloned, preserved and restored.</p>
+                </div>
+
+                <div class="event public">
+                    <div class="event-date-wrapper">
+                        <p class="event-date">2014</p>
+                    </div>
+                    <p class="event-text">Project Titan is made available to the public so they can start cloning environments that they choose.</p>
                 </div>
 
             </div>
