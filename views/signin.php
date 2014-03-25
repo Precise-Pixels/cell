@@ -114,7 +114,7 @@ $loginSystem = new LoginSystem();
                     </tr>
 
                     <tr>
-                        <td><label for="email">Email:</label></td>
+                        <td><label for="email">Email <small>(private)</small>:</label></td>
                         <td><input type="email" name="email" required/></td>
                     </tr>
 
