@@ -116,6 +116,10 @@
     text-shadow: 0px 0px 5px #000;
 }
 
+.ig-text--5 {
+    display: none;
+}
+
 #ig-cube {
     width: 12%;
     position: fixed;
@@ -188,6 +192,12 @@
         ~ #ig-cube {
             animation: ig-cube-5 1s ease-in;
             animation-fill-mode: both;
+        }
+        .ig-text--4 {
+            display: none;
+        }
+        .ig-text--5 {
+            display: block;
         }
     }
 }
