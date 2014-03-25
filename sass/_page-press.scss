@@ -1,3 +1,30 @@
-#press-pack-download {
+#press-email {
     text-align: center;
+}
+
+#press-pack {
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+#press-pack-download {
+    width: 100%;
+    text-align: center;
+    i {
+        margin-right: 15px;
+    }
+}
+
+@media ($min-bp-a) {
+    #press-page-cta {
+        height: 261px;
+    }
+}
+
+@media ($min-bp-b) {
+    #press-page-cta {
+        height: 301px;
+    }
 }

@@ -86,17 +86,17 @@ if($hasData == 'true') {
             case 'categoryNearby':
                 $class = 'env-data-pod--nearby';
                 $title = 'NEARBY';
-                $icon = 'ico-nearby';
+                $icon  = 'ico-nearby';
                 break;
             case 'categoryTime':
                 $class = 'env-data-pod--time';
                 $title = 'TIME';
-                $icon = 'ico-time';
+                $icon  = 'ico-time';
                 break;
             case 'categoryWeather':
                 $class = 'env-data-pod--weather';
                 $title = 'WEATHER';
-                $icon = 'ico-weather';
+                $icon  = 'ico-weather';
                 break;
         }
 
