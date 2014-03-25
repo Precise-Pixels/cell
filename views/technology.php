@@ -20,7 +20,7 @@
 
             <div class="third-margin">
                 <h2 class="tech-icons"><i class="ico-chip"></i></h2>
-                <ul>
+                <ul class="tech-specs">
                     <li>Dimensions: 300x300x300cm (118x118x118inches)</li>
                     <li>Weight: 50kg</li>
                 </ul>
@@ -28,7 +28,7 @@
 
             <div class="third-margin">
                 <h2 class="tech-icons"><i class="ico-hdd"></i></h2>
-                <ul>
+                <ul class="tech-specs">
                     <li>Storage capacity: 3.14 petabytes</li>
                     <li>Nuclear fusion reactor power source</li>
                     <li>Thermo-resistant shell - coated with Teflon 3.0</li>
@@ -39,7 +39,7 @@
 
             <div class="third-margin">
                 <h2 class="tech-icons"><i class="ico-connect"></i></h2>
-                <ul>
+                <ul class="tech-specs">
                     <li>Topographic profile scanner</li>
                     <li>Gyroscope</li>
                     <li>High Sensitivity Universal Positional System</li>
