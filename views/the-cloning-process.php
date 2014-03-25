@@ -10,7 +10,7 @@
         <div class="ig-slide">
             <div class="ig-slide ig-slide--2"></div>
             <img src="/img/infographic/satellite.png" alt="Satellite" id="ig-satellite" class="ig-animate"/>
-            <p class="ig-text">The Quantum Clone Cube travels from our deep space storage facility through the Einstein Rosenbridge</p>
+            <p class="ig-text">The Clone Cube enters the Earth's atmosphere, protected by its Thermo-resistant shell, coated with Teflon 3.0</p>
         </div>
         <div class="ig-slide">
             <div class="ig-slide ig-slide--3"></div>
