@@ -4,13 +4,13 @@
     <h1 id="ig-title">The Cloning Process</h1>
         <div class="ig-slide">
             <div class="ig-slide ig-slide--1">
-            <p class="ig-text">The Quantum Clone Cube travels from our deep space storage facility through an Einstein Rosenbridge portal.</p>
+            <p class="ig-text">The Quantum Clone Cube, powered by its nuclear fusion reactor power source, travels from our deep space storage facility through an Einstein Rosenbridge portal.</p>
             </div>
         </div>
         <div class="ig-slide">
             <div class="ig-slide ig-slide--2"></div>
             <img src="/img/infographic/satellite.png" alt="Satellite" id="ig-satellite" class="ig-animate"/>
-            <p class="ig-text">The Clone Cube enters the Earth's atmosphere, protected by its Thermo-resistant shell, coated with Teflon 3.0</p>
+            <p class="ig-text">The Clone Cube enters the Earth's atmosphere, protected by its Thermo-resistant shell, coated with Teflon 3.0.</p>
         </div>
         <div class="ig-slide">
             <div class="ig-slide ig-slide--3"></div>
