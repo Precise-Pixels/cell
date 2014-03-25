@@ -7,7 +7,7 @@
 <main>
 
         <section>
-        <div class="section-padding align-centre lgrey">
+        <div class="section-padding align-centre mblue">
             <p><i class="ico-info"></i>Oops! Sorry, but the page you are looking for has not been found. Try checking the URL for errors or <a href="/">return to the homepage.</a></p>
         </div>
     </section>
