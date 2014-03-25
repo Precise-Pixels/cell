@@ -20,7 +20,7 @@
         <div class="ig-slide">
             <div class="ig-slide ig-slide--4"></div>
             <div id="ig-scanner-wrapper" class="ig-animate"><img src="/img/infographic/scanner.png" alt="Scanner" id="ig-scanner"/></div>
-            <p class="ig-text">Scanning.</p>
+            <p class="ig-text ig-text--4">Scanning.</p>
             <p class="ig-text ig-text--5">The Quantum Clone Cube returns to our deep space storage facility for safe keeping.</p>
         </div>
     </div>
