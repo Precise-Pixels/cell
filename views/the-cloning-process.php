@@ -4,20 +4,24 @@
     <h1 id="ig-title">The Cloning Process</h1>
         <div class="ig-slide">
             <div class="ig-slide ig-slide--1">
+            <p class="ig-text">The Quantum Clone Cube travels from our deep space storage facility through a Einstein Rosenbridge portal.</p>
             </div>
         </div>
         <div class="ig-slide">
             <div class="ig-slide ig-slide--2"></div>
             <img src="/img/infographic/satellite.png" alt="Satellite" id="ig-satellite" class="ig-animate"/>
+            <p class="ig-text">The Quantum Clone Cube travels from our deep space storage facility through the Einstein Rosenbridge</p>
         </div>
         <div class="ig-slide">
             <div class="ig-slide ig-slide--3"></div>
             <img src="/img/infographic/plane.png" alt="Plane" id="ig-plane" class="ig-animate"/>
+            <p class="ig-text">The Quantum Clone Cube travels from our deep space storage facility through the Einstein Rosenbridge</p>
         </div>
         <div class="ig-slide">
             <div class="ig-slide ig-slide--4"></div>
             <div id="ig-scanner-wrapper" class="ig-animate"><img src="/img/infographic/scanner.png" alt="Scanner" id="ig-scanner"/></div>
         </div>
+            <p class="ig-text">The Quantum Clone Cube returns to our deep space storage facility for safe keeping.</p>
     </div>
     <img src="/img/infographic/clone-cube.png" id="ig-cube" alt="Clone Cube"/>
     <img src="/img/infographic/clone-cube-fire.png" alt="Fire" id="ig-cube-fire" class="ig-animate"/>
