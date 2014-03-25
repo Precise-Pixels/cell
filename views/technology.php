@@ -19,7 +19,7 @@
             <h1><i class="ico-domain"></i>SPECIFICATIONS</h1>
 
             <div class="third-margin">
-                <h2><i class="ico-chip"></i></h2>
+                <h2 class="tech-icons"><i class="ico-chip"></i></h2>
                 <ul>
                     <li>Dimensions: 300x300x300cm (118x118x118inches)</li>
                     <li>Weight: 50kg</li>
@@ -27,7 +27,7 @@
             </div>
 
             <div class="third-margin">
-                <h2><i class="ico-hdd"></i></h2>
+                <h2 class="tech-icons"><i class="ico-hdd"></i></h2>
                 <ul>
                     <li>Storage capacity: 3.14 petabytes</li>
                     <li>Nuclear fusion reactor power source</li>
@@ -38,7 +38,7 @@
             </div>
 
             <div class="third-margin">
-                <h2><i class="ico-connect"></i></h2>
+                <h2 class="tech-icons"><i class="ico-connect"></i></h2>
                 <ul>
                     <li>Topographic profile scanner</li>
                     <li>Gyroscope</li>
