@@ -44,8 +44,13 @@
                 </table>
             </form>
 
-            <p class="half-padding"><i class="ico-info"></i>Please enter your email and a link to reset your password should be with you shortly. If it has been five minutes and you still haven't received it, please check your spam.</p>
         </div>
     </section>
 
+    <section>
+        <div class="align-centre section-padding mblue">
+            <p><i class="ico-info"></i>Please enter the email you signed up with and a link to reset your password will be with you shortly.</p>
+            <p><i class="ico-info"></i>Please note that the email may come through to your spam/junk folder.</p>
+        </div>
+    </section>
 </main>
