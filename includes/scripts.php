@@ -25,7 +25,6 @@
             var latitude  = <?= $env->latitude; ?>;
             var longitude = <?= $env->longitude; ?>;
         </script>
-
         <script src="/js/threejs-loaders-controls-stackblur.js"></script>
         <script src="/js/page-environment.js"></script>
         <script src="/js/gesture.js"></script>
