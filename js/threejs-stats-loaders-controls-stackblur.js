@@ -708,33 +708,6 @@ fragmentShader:"precision mediump float;\nuniform lowp int renderType;\nuniform 
 
 
 
-//    _______                      
-//   |__   __|                     
-//      | |_      _____  ___ _ __  
-//      | \ \ /\ / / _ \/ _ \ '_ \ 
-//      | |\ V  V /  __/  __/ | | |
-//      |_| \_/\_/ \___|\___|_| |_|
-
-
-
-// tween.js - http://github.com/sole/tween.js
-'use strict';void 0===Date.now&&(Date.now=function(){return(new Date).valueOf()});
-var TWEEN=TWEEN||function(){var a=[];return{REVISION:"12",getAll:function(){return a},removeAll:function(){a=[]},add:function(c){a.push(c)},remove:function(c){c=a.indexOf(c);-1!==c&&a.splice(c,1)},update:function(c){if(0===a.length)return!1;for(var b=0,c=void 0!==c?c:"undefined"!==typeof window&&void 0!==window.performance&&void 0!==window.performance.now?window.performance.now():Date.now();b<a.length;)a[b].update(c)?b++:a.splice(b,1);return!0}}}();
-TWEEN.Tween=function(a){var c={},b={},d={},e=1E3,g=0,h=!1,j=!1,q=0,m=null,v=TWEEN.Easing.Linear.None,w=TWEEN.Interpolation.Linear,n=[],r=null,s=!1,t=null,u=null,k;for(k in a)c[k]=parseFloat(a[k],10);this.to=function(a,c){void 0!==c&&(e=c);b=a;return this};this.start=function(e){TWEEN.add(this);j=!0;s=!1;m=void 0!==e?e:"undefined"!==typeof window&&void 0!==window.performance&&void 0!==window.performance.now?window.performance.now():Date.now();m+=q;for(var f in b){if(b[f]instanceof Array){if(0===b[f].length)continue;
-b[f]=[a[f]].concat(b[f])}c[f]=a[f];!1===c[f]instanceof Array&&(c[f]*=1);d[f]=c[f]||0}return this};this.stop=function(){if(!j)return this;TWEEN.remove(this);j=!1;this.stopChainedTweens();return this};this.stopChainedTweens=function(){for(var a=0,b=n.length;a<b;a++)n[a].stop()};this.delay=function(a){q=a;return this};this.repeat=function(a){g=a;return this};this.yoyo=function(a){h=a;return this};this.easing=function(a){v=a;return this};this.interpolation=function(a){w=a;return this};this.chain=function(){n=
-arguments;return this};this.onStart=function(a){r=a;return this};this.onUpdate=function(a){t=a;return this};this.onComplete=function(a){u=a;return this};this.update=function(p){var f;if(p<m)return!0;!1===s&&(null!==r&&r.call(a),s=!0);var i=(p-m)/e,i=1<i?1:i,j=v(i);for(f in b){var k=c[f]||0,l=b[f];l instanceof Array?a[f]=w(l,j):("string"===typeof l&&(l=k+parseFloat(l,10)),"number"===typeof l&&(a[f]=k+(l-k)*j))}null!==t&&t.call(a,j);if(1==i)if(0<g){isFinite(g)&&g--;for(f in d)"string"===typeof b[f]&&
-(d[f]+=parseFloat(b[f],10)),h&&(i=d[f],d[f]=b[f],b[f]=i),c[f]=d[f];m=p+q}else{null!==u&&u.call(a);f=0;for(i=n.length;f<i;f++)n[f].start(p);return!1}return!0}};
-TWEEN.Easing={Linear:{None:function(a){return a}},Quadratic:{In:function(a){return a*a},Out:function(a){return a*(2-a)},InOut:function(a){return 1>(a*=2)?0.5*a*a:-0.5*(--a*(a-2)-1)}},Cubic:{In:function(a){return a*a*a},Out:function(a){return--a*a*a+1},InOut:function(a){return 1>(a*=2)?0.5*a*a*a:0.5*((a-=2)*a*a+2)}},Quartic:{In:function(a){return a*a*a*a},Out:function(a){return 1- --a*a*a*a},InOut:function(a){return 1>(a*=2)?0.5*a*a*a*a:-0.5*((a-=2)*a*a*a-2)}},Quintic:{In:function(a){return a*a*a*
-a*a},Out:function(a){return--a*a*a*a*a+1},InOut:function(a){return 1>(a*=2)?0.5*a*a*a*a*a:0.5*((a-=2)*a*a*a*a+2)}},Sinusoidal:{In:function(a){return 1-Math.cos(a*Math.PI/2)},Out:function(a){return Math.sin(a*Math.PI/2)},InOut:function(a){return 0.5*(1-Math.cos(Math.PI*a))}},Exponential:{In:function(a){return 0===a?0:Math.pow(1024,a-1)},Out:function(a){return 1===a?1:1-Math.pow(2,-10*a)},InOut:function(a){return 0===a?0:1===a?1:1>(a*=2)?0.5*Math.pow(1024,a-1):0.5*(-Math.pow(2,-10*(a-1))+2)}},Circular:{In:function(a){return 1-
-Math.sqrt(1-a*a)},Out:function(a){return Math.sqrt(1- --a*a)},InOut:function(a){return 1>(a*=2)?-0.5*(Math.sqrt(1-a*a)-1):0.5*(Math.sqrt(1-(a-=2)*a)+1)}},Elastic:{In:function(a){var c,b=0.1;if(0===a)return 0;if(1===a)return 1;!b||1>b?(b=1,c=0.1):c=0.4*Math.asin(1/b)/(2*Math.PI);return-(b*Math.pow(2,10*(a-=1))*Math.sin((a-c)*2*Math.PI/0.4))},Out:function(a){var c,b=0.1;if(0===a)return 0;if(1===a)return 1;!b||1>b?(b=1,c=0.1):c=0.4*Math.asin(1/b)/(2*Math.PI);return b*Math.pow(2,-10*a)*Math.sin((a-c)*
-2*Math.PI/0.4)+1},InOut:function(a){var c,b=0.1;if(0===a)return 0;if(1===a)return 1;!b||1>b?(b=1,c=0.1):c=0.4*Math.asin(1/b)/(2*Math.PI);return 1>(a*=2)?-0.5*b*Math.pow(2,10*(a-=1))*Math.sin((a-c)*2*Math.PI/0.4):0.5*b*Math.pow(2,-10*(a-=1))*Math.sin((a-c)*2*Math.PI/0.4)+1}},Back:{In:function(a){return a*a*(2.70158*a-1.70158)},Out:function(a){return--a*a*(2.70158*a+1.70158)+1},InOut:function(a){return 1>(a*=2)?0.5*a*a*(3.5949095*a-2.5949095):0.5*((a-=2)*a*(3.5949095*a+2.5949095)+2)}},Bounce:{In:function(a){return 1-
-TWEEN.Easing.Bounce.Out(1-a)},Out:function(a){return a<1/2.75?7.5625*a*a:a<2/2.75?7.5625*(a-=1.5/2.75)*a+0.75:a<2.5/2.75?7.5625*(a-=2.25/2.75)*a+0.9375:7.5625*(a-=2.625/2.75)*a+0.984375},InOut:function(a){return 0.5>a?0.5*TWEEN.Easing.Bounce.In(2*a):0.5*TWEEN.Easing.Bounce.Out(2*a-1)+0.5}}};
-TWEEN.Interpolation={Linear:function(a,c){var b=a.length-1,d=b*c,e=Math.floor(d),g=TWEEN.Interpolation.Utils.Linear;return 0>c?g(a[0],a[1],d):1<c?g(a[b],a[b-1],b-d):g(a[e],a[e+1>b?b:e+1],d-e)},Bezier:function(a,c){var b=0,d=a.length-1,e=Math.pow,g=TWEEN.Interpolation.Utils.Bernstein,h;for(h=0;h<=d;h++)b+=e(1-c,d-h)*e(c,h)*a[h]*g(d,h);return b},CatmullRom:function(a,c){var b=a.length-1,d=b*c,e=Math.floor(d),g=TWEEN.Interpolation.Utils.CatmullRom;return a[0]===a[b]?(0>c&&(e=Math.floor(d=b*(1+c))),g(a[(e-
-1+b)%b],a[e],a[(e+1)%b],a[(e+2)%b],d-e)):0>c?a[0]-(g(a[0],a[0],a[1],a[1],-d)-a[0]):1<c?a[b]-(g(a[b],a[b],a[b-1],a[b-1],d-b)-a[b]):g(a[e?e-1:0],a[e],a[b<e+1?b:e+1],a[b<e+2?b:e+2],d-e)},Utils:{Linear:function(a,c,b){return(c-a)*b+a},Bernstein:function(a,c){var b=TWEEN.Interpolation.Utils.Factorial;return b(a)/b(c)/b(a-c)},Factorial:function(){var a=[1];return function(c){var b=1,d;if(a[c])return a[c];for(d=c;1<d;d--)b*=d;return a[c]=b}}(),CatmullRom:function(a,c,b,d,e){var a=0.5*(b-a),d=0.5*(d-c),g=
-e*e;return(2*c-2*b+a+d)*e*g+(-3*c+3*b-2*a-d)*g+a*e+c}}};
-
-
-
 //     _____ _        _       
 //    / ____| |      | |      
 //   | (___ | |_ __ _| |_ ___ 
@@ -756,7 +729,7 @@ function loadStats() {
     stats.setMode(0);
 
     stats.domElement.style.position = 'absolute';
-    stats.domElement.style.bottom = '0px';
+    stats.domElement.style.bottom = '0';
 
     document.body.appendChild( stats.domElement );
 
@@ -1757,11 +1730,10 @@ THREE.EventDispatcher.prototype.apply( THREE.OBJMTLLoader.prototype );
 //      controls.target.z = 150;
 // Simple substitute "OrbitControls" and the control should work as-is.
 
-THREE.OrbitControls = function ( object, domElement, view, maxDistance ) {
+THREE.OrbitControls = function ( object, domElement ) {
 
     this.object = object;
     this.domElement = ( domElement !== undefined ) ? domElement : document;
-    this.view = view;
 
     // API
 
@@ -1776,11 +1748,9 @@ THREE.OrbitControls = function ( object, domElement, view, maxDistance ) {
     this.noZoom = false;
     this.zoomSpeed = 1.0;
     // Limits to how far you can dolly in and out
-    this.minDistance = 80;
-    this.maxDistance = 200;
+    this.minDistance = 100;
+    this.maxDistance = 250;
     
-    // Limit rotation: 'x', both'
-    this.rotateDirection = 'both';
     this.rotateSpeed = .3;
 
     // Set to true to automatically rotate around the target
@@ -1796,13 +1766,6 @@ THREE.OrbitControls = function ( object, domElement, view, maxDistance ) {
     this.keys = { LEFT: 37, UP: 38, RIGHT: 39, DOWN: 40 };
     // Speed for keyboard rotation
     this.keyboardRotateSpeed = 6.0;
-
-    if ( view == 'top' ) {
-        this.rotateDirection = 'x';
-        this.autoRotate = false;
-    } else if ( view == 'side' ) {
-        this.rotateDirection = 'x';
-    }
 
     ////////////
     // internals
@@ -1968,11 +1931,7 @@ THREE.OrbitControls = function ( object, domElement, view, maxDistance ) {
 
             state = STATE.ROTATE;
 
-            if ( scope.rotateDirection == 'both' ) {
-                rotateStart.set( event.clientX, event.clientY );
-            } else {
-                rotateStart.set( event.clientX );
-            }
+            rotateStart.set( event.clientX, event.clientY );
 
         } else if ( event.button === 1 ) {
             if ( scope.noZoom === true ) { return; }
@@ -1999,26 +1958,13 @@ THREE.OrbitControls = function ( object, domElement, view, maxDistance ) {
 
         if ( state === STATE.ROTATE ) {
 
-            if ( scope.rotateDirection == 'both' ) {
-                rotateEnd.set( event.clientX, event.clientY );
-            } else {
-                rotateEnd.set( event.clientX );
-            }
+            rotateEnd.set( event.clientX, event.clientY );
             rotateDelta.subVectors( rotateEnd, rotateStart );
 
-            if ( scope.rotateDirection == 'both' ) {
-                // rotating across whole screen goes 360 degrees around
-                scope.rotateLeft( 2 * Math.PI * rotateDelta.x / element.clientWidth * scope.rotateSpeed );
-                // rotating up and down along whole screen attempts to go 360, but limited to 180
-                scope.rotateUp( 2 * Math.PI * rotateDelta.y / element.clientHeight * scope.rotateSpeed );
-            } else {
-                // rotating across whole screen goes 360 degrees around
-                if ( scope.view == 'top' ) {
-                    scope.rotateLeft( -2 * Math.PI * rotateDelta.x / element.clientWidth * scope.rotateSpeed );
-                } else {
-                    scope.rotateLeft( 2 * Math.PI * rotateDelta.x / element.clientWidth * scope.rotateSpeed );
-                }
-            }
+            // rotating across whole screen goes 360 degrees around
+            scope.rotateLeft( 2 * Math.PI * rotateDelta.x / element.clientWidth * scope.rotateSpeed );
+            // rotating up and down along whole screen attempts to go 360, but limited to 180
+            scope.rotateUp( 2 * Math.PI * rotateDelta.y / element.clientHeight * scope.rotateSpeed );
 
             rotateStart.copy( rotateEnd );
 
@@ -2093,30 +2039,26 @@ THREE.OrbitControls = function ( object, domElement, view, maxDistance ) {
         
         switch ( event.keyCode ) {
             case scope.keys.UP:
-                if ( scope.rotateDirection == 'both' ) {
-                    state = STATE.KEYBOARD_ROTATE_Y;
-                    scope.keyboardRotateSpeed = -6.0;
-                    needUpdate = true;
-                }
+                state = STATE.KEYBOARD_ROTATE_Y;
+                scope.keyboardRotateSpeed = -6.0;
+                needUpdate = true;
                 break;
 
             case scope.keys.DOWN:
-                if ( scope.rotateDirection == 'both' ) {
-                    state = STATE.KEYBOARD_ROTATE_Y;
-                    scope.keyboardRotateSpeed = 6.0;
-                    needUpdate = true;
-                }
+                state = STATE.KEYBOARD_ROTATE_Y;
+                scope.keyboardRotateSpeed = 6.0;
+                needUpdate = true;
                 break;
 
             case scope.keys.LEFT:
                 state = STATE.KEYBOARD_ROTATE_X;
-                scope.keyboardRotateSpeed = ( scope.view == 'top' ) ? 6.0 : -6.0;
+                scope.keyboardRotateSpeed = -6.0;
                 needUpdate = true;
                 break;
 
             case scope.keys.RIGHT:
                 state = STATE.KEYBOARD_ROTATE_X;
-                scope.keyboardRotateSpeed = ( scope.view == 'top' ) ? -6.0 : 6.0;
+                scope.keyboardRotateSpeed = 6.0;
                 needUpdate = true;
                 break;
         }
@@ -2142,11 +2084,7 @@ THREE.OrbitControls = function ( object, domElement, view, maxDistance ) {
 
                 state = STATE.TOUCH_ROTATE;
 
-                if ( scope.rotateDirection == 'both' ) {
-                    rotateStart.set( event.touches[ 0 ].pageX, event.touches[ 0 ].pageY );
-                } else {
-                    rotateStart.set( event.touches[ 0 ].pageX );
-                }
+                rotateStart.set( event.touches[ 0 ].pageX, event.touches[ 0 ].pageY );
                 break;
 
             case 2: // two-fingered touch: dolly
@@ -2182,26 +2120,13 @@ THREE.OrbitControls = function ( object, domElement, view, maxDistance ) {
             case 1: // one-fingered touch: rotate
                 if ( state !== STATE.TOUCH_ROTATE ) { return; }
 
-                if ( scope.rotateDirection == 'both' ) {
-                    rotateEnd.set( event.touches[ 0 ].pageX, event.touches[ 0 ].pageY );
-                } else {
-                    rotateEnd.set( event.touches[ 0 ].pageX );
-                }
+                rotateEnd.set( event.touches[ 0 ].pageX, event.touches[ 0 ].pageY );
                 rotateDelta.subVectors( rotateEnd, rotateStart );
 
-                if ( scope.rotateDirection == 'both' ) {
-                    // rotating across whole screen goes 360 degrees around
-                    scope.rotateLeft( 2 * Math.PI * rotateDelta.x / element.clientWidth * scope.rotateSpeed );
-                    // rotating up and down along whole screen attempts to go 360, but limited to 180
-                    scope.rotateUp( 2 * Math.PI * rotateDelta.y / element.clientHeight * scope.rotateSpeed );
-                } else {
-                    // rotating across whole screen goes 360 degrees around
-                    if ( scope.view == 'top' ) {
-                        scope.rotateLeft( -2 * Math.PI * rotateDelta.x / element.clientWidth * scope.rotateSpeed );
-                    } else {
-                        scope.rotateLeft( 2 * Math.PI * rotateDelta.x / element.clientWidth * scope.rotateSpeed );
-                    }
-                }
+                // rotating across whole screen goes 360 degrees around
+                scope.rotateLeft( 2 * Math.PI * rotateDelta.x / element.clientWidth * scope.rotateSpeed );
+                // rotating up and down along whole screen attempts to go 360, but limited to 180
+                scope.rotateUp( 2 * Math.PI * rotateDelta.y / element.clientHeight * scope.rotateSpeed );
 
                 rotateStart.copy( rotateEnd );
                 break;
@@ -2270,3 +2195,350 @@ THREE.OrbitControls = function ( object, domElement, view, maxDistance ) {
 };
 
 THREE.OrbitControls.prototype = Object.create( THREE.EventDispatcher.prototype );
+
+
+
+//     _____ _             _    ____  _            
+//    / ____| |           | |  |  _ \| |           
+//   | (___ | |_ __ _  ___| | _| |_) | |_   _ _ __ 
+//    \___ \| __/ _` |/ __| |/ /  _ <| | | | | '__|
+//    ____) | || (_| | (__|   <| |_) | | |_| | |   
+//   |_____/ \__\__,_|\___|_|\_\____/|_|\__,_|_|   
+
+
+
+/*
+StackBlur - a fast almost Gaussian Blur For Canvas
+
+Version:    0.5
+Author:     Mario Klingemann
+Contact:    mario@quasimondo.com
+Website:    http://www.quasimondo.com/StackBlurForCanvas
+Twitter:    @quasimondo
+
+In case you find this class useful - especially in commercial projects -
+I am not totally unhappy for a small donation to my PayPal account
+mario@quasimondo.de
+
+Or support me on flattr: 
+https://flattr.com/thing/72791/StackBlur-a-fast-almost-Gaussian-Blur-Effect-for-CanvasJavascript
+
+Copyright (c) 2010 Mario Klingemann
+
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+var mul_table = [
+        512,512,456,512,328,456,335,512,405,328,271,456,388,335,292,512,
+        454,405,364,328,298,271,496,456,420,388,360,335,312,292,273,512,
+        482,454,428,405,383,364,345,328,312,298,284,271,259,496,475,456,
+        437,420,404,388,374,360,347,335,323,312,302,292,282,273,265,512,
+        497,482,468,454,441,428,417,405,394,383,373,364,354,345,337,328,
+        320,312,305,298,291,284,278,271,265,259,507,496,485,475,465,456,
+        446,437,428,420,412,404,396,388,381,374,367,360,354,347,341,335,
+        329,323,318,312,307,302,297,292,287,282,278,273,269,265,261,512,
+        505,497,489,482,475,468,461,454,447,441,435,428,422,417,411,405,
+        399,394,389,383,378,373,368,364,359,354,350,345,341,337,332,328,
+        324,320,316,312,309,305,301,298,294,291,287,284,281,278,274,271,
+        268,265,262,259,257,507,501,496,491,485,480,475,470,465,460,456,
+        451,446,442,437,433,428,424,420,416,412,408,404,400,396,392,388,
+        385,381,377,374,370,367,363,360,357,354,350,347,344,341,338,335,
+        332,329,326,323,320,318,315,312,310,307,304,302,299,297,294,292,
+        289,287,285,282,280,278,275,273,271,269,267,265,263,261,259];
+        
+   
+var shg_table = [
+         9, 11, 12, 13, 13, 14, 14, 15, 15, 15, 15, 16, 16, 16, 16, 17, 
+        17, 17, 17, 17, 17, 17, 18, 18, 18, 18, 18, 18, 18, 18, 18, 19, 
+        19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 20, 20, 20,
+        20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 21,
+        21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
+        21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 22, 22, 22, 22, 22, 22, 
+        22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22,
+        22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 23, 
+        23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23,
+        23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23,
+        23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 
+        23, 23, 23, 23, 23, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 
+        24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24,
+        24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24,
+        24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24,
+        24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24 ];
+
+function stackBlurImage( img, canvas, radius )
+{
+            
+    var w = img.naturalWidth;
+    var h = img.naturalHeight;
+      
+    canvas.style.width  = w + "px";
+    canvas.style.height = h + "px";
+    canvas.width = w;
+    canvas.height = h;
+    
+    var context = canvas.getContext("2d");
+    context.clearRect( 0, 0, w, h );
+    context.drawImage( img, 0, 0 );
+
+    if ( isNaN(radius) || radius < 1 ) return;
+    
+    stackBlurCanvasRGB( canvas, 0, 0, w, h, radius );
+}
+
+function stackBlurCanvasRGB( canvas, top_x, top_y, width, height, radius )
+{
+    if ( isNaN(radius) || radius < 1 ) return;
+    radius |= 0;
+
+    var context = canvas.getContext("2d");
+    var imageData;
+    
+    try {
+      try {
+        imageData = context.getImageData( top_x, top_y, width, height );
+      } catch(e) {
+      
+        // NOTE: this part is supposedly only needed if you want to work with local files
+        // so it might be okay to remove the whole try/catch block and just use
+        // imageData = context.getImageData( top_x, top_y, width, height );
+        try {
+            netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserRead");
+            imageData = context.getImageData( top_x, top_y, width, height );
+        } catch(e) {
+            alert("Cannot access local image");
+            throw new Error("unable to access local image data: " + e);
+            return;
+        }
+      }
+    } catch(e) {
+      alert("Cannot access image");
+      throw new Error("unable to access image data: " + e);
+    }
+            
+    var pixels = imageData.data;
+            
+    var x, y, i, p, yp, yi, yw, r_sum, g_sum, b_sum,
+    r_out_sum, g_out_sum, b_out_sum,
+    r_in_sum, g_in_sum, b_in_sum,
+    pr, pg, pb, rbs;
+            
+    var div = radius + radius + 1;
+    var w4 = width << 2;
+    var widthMinus1  = width - 1;
+    var heightMinus1 = height - 1;
+    var radiusPlus1  = radius + 1;
+    var sumFactor = radiusPlus1 * ( radiusPlus1 + 1 ) / 2;
+    
+    var stackStart = new BlurStack();
+    var stack = stackStart;
+    for ( i = 1; i < div; i++ )
+    {
+        stack = stack.next = new BlurStack();
+        if ( i == radiusPlus1 ) var stackEnd = stack;
+    }
+    stack.next = stackStart;
+    var stackIn = null;
+    var stackOut = null;
+    
+    yw = yi = 0;
+    
+    var mul_sum = mul_table[radius];
+    var shg_sum = shg_table[radius];
+    
+    for ( y = 0; y < height; y++ )
+    {
+        r_in_sum = g_in_sum = b_in_sum = r_sum = g_sum = b_sum = 0;
+        
+        r_out_sum = radiusPlus1 * ( pr = pixels[yi] );
+        g_out_sum = radiusPlus1 * ( pg = pixels[yi+1] );
+        b_out_sum = radiusPlus1 * ( pb = pixels[yi+2] );
+        
+        r_sum += sumFactor * pr;
+        g_sum += sumFactor * pg;
+        b_sum += sumFactor * pb;
+        
+        stack = stackStart;
+        
+        for( i = 0; i < radiusPlus1; i++ )
+        {
+            stack.r = pr;
+            stack.g = pg;
+            stack.b = pb;
+            stack = stack.next;
+        }
+        
+        for( i = 1; i < radiusPlus1; i++ )
+        {
+            p = yi + (( widthMinus1 < i ? widthMinus1 : i ) << 2 );
+            r_sum += ( stack.r = ( pr = pixels[p])) * ( rbs = radiusPlus1 - i );
+            g_sum += ( stack.g = ( pg = pixels[p+1])) * rbs;
+            b_sum += ( stack.b = ( pb = pixels[p+2])) * rbs;
+            
+            r_in_sum += pr;
+            g_in_sum += pg;
+            b_in_sum += pb;
+            
+            stack = stack.next;
+        }
+        
+        
+        stackIn = stackStart;
+        stackOut = stackEnd;
+        for ( x = 0; x < width; x++ )
+        {
+            pixels[yi]   = (r_sum * mul_sum) >> shg_sum;
+            pixels[yi+1] = (g_sum * mul_sum) >> shg_sum;
+            pixels[yi+2] = (b_sum * mul_sum) >> shg_sum;
+            
+            r_sum -= r_out_sum;
+            g_sum -= g_out_sum;
+            b_sum -= b_out_sum;
+            
+            r_out_sum -= stackIn.r;
+            g_out_sum -= stackIn.g;
+            b_out_sum -= stackIn.b;
+            
+            p =  ( yw + ( ( p = x + radius + 1 ) < widthMinus1 ? p : widthMinus1 ) ) << 2;
+            
+            r_in_sum += ( stackIn.r = pixels[p]);
+            g_in_sum += ( stackIn.g = pixels[p+1]);
+            b_in_sum += ( stackIn.b = pixels[p+2]);
+            
+            r_sum += r_in_sum;
+            g_sum += g_in_sum;
+            b_sum += b_in_sum;
+            
+            stackIn = stackIn.next;
+            
+            r_out_sum += ( pr = stackOut.r );
+            g_out_sum += ( pg = stackOut.g );
+            b_out_sum += ( pb = stackOut.b );
+            
+            r_in_sum -= pr;
+            g_in_sum -= pg;
+            b_in_sum -= pb;
+            
+            stackOut = stackOut.next;
+
+            yi += 4;
+        }
+        yw += width;
+    }
+
+    
+    for ( x = 0; x < width; x++ )
+    {
+        g_in_sum = b_in_sum = r_in_sum = g_sum = b_sum = r_sum = 0;
+        
+        yi = x << 2;
+        r_out_sum = radiusPlus1 * ( pr = pixels[yi]);
+        g_out_sum = radiusPlus1 * ( pg = pixels[yi+1]);
+        b_out_sum = radiusPlus1 * ( pb = pixels[yi+2]);
+        
+        r_sum += sumFactor * pr;
+        g_sum += sumFactor * pg;
+        b_sum += sumFactor * pb;
+        
+        stack = stackStart;
+        
+        for( i = 0; i < radiusPlus1; i++ )
+        {
+            stack.r = pr;
+            stack.g = pg;
+            stack.b = pb;
+            stack = stack.next;
+        }
+        
+        yp = width;
+        
+        for( i = 1; i <= radius; i++ )
+        {
+            yi = ( yp + x ) << 2;
+            
+            r_sum += ( stack.r = ( pr = pixels[yi])) * ( rbs = radiusPlus1 - i );
+            g_sum += ( stack.g = ( pg = pixels[yi+1])) * rbs;
+            b_sum += ( stack.b = ( pb = pixels[yi+2])) * rbs;
+            
+            r_in_sum += pr;
+            g_in_sum += pg;
+            b_in_sum += pb;
+            
+            stack = stack.next;
+        
+            if( i < heightMinus1 )
+            {
+                yp += width;
+            }
+        }
+        
+        yi = x;
+        stackIn = stackStart;
+        stackOut = stackEnd;
+        for ( y = 0; y < height; y++ )
+        {
+            p = yi << 2;
+            pixels[p]   = (r_sum * mul_sum) >> shg_sum;
+            pixels[p+1] = (g_sum * mul_sum) >> shg_sum;
+            pixels[p+2] = (b_sum * mul_sum) >> shg_sum;
+            
+            r_sum -= r_out_sum;
+            g_sum -= g_out_sum;
+            b_sum -= b_out_sum;
+            
+            r_out_sum -= stackIn.r;
+            g_out_sum -= stackIn.g;
+            b_out_sum -= stackIn.b;
+            
+            p = ( x + (( ( p = y + radiusPlus1) < heightMinus1 ? p : heightMinus1 ) * width )) << 2;
+            
+            r_sum += ( r_in_sum += ( stackIn.r = pixels[p]));
+            g_sum += ( g_in_sum += ( stackIn.g = pixels[p+1]));
+            b_sum += ( b_in_sum += ( stackIn.b = pixels[p+2]));
+            
+            stackIn = stackIn.next;
+            
+            r_out_sum += ( pr = stackOut.r );
+            g_out_sum += ( pg = stackOut.g );
+            b_out_sum += ( pb = stackOut.b );
+            
+            r_in_sum -= pr;
+            g_in_sum -= pg;
+            b_in_sum -= pb;
+            
+            stackOut = stackOut.next;
+            
+            yi += width;
+        }
+    }
+    
+    context.putImageData( imageData, top_x, top_y );
+    
+}
+
+function BlurStack()
+{
+    this.r = 0;
+    this.g = 0;
+    this.b = 0;
+    this.a = 0;
+    this.next = null;
+}
