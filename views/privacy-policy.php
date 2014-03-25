@@ -25,7 +25,7 @@
             <ul>
                 <li>preventRecapture - set by us to ensure errors do not occur when capturing an environment</li>
                 <li>Session cookies - set by us in order to ensure that you remain signed in throughout the site</li>
-                <li>Google Analytics - set by Google in order to provide us with useful statitics regarding your visit</li>
+                <li>Google Analytics - set by Google in order to provide us with useful statistics regarding your visit</li>
                 <li>gravatar - set by Gravatar when loading in your avatar image from their service</li>
             </ul>
             <p>You can adjust the settings on your computer to decline any cookies if you wish. This can easily be done by activating the reject cookies setting on your computer.</p>
@@ -38,14 +38,14 @@
                 <li>Your username is publically displayed on your profile, your cloned environments and in hyperlinks throughout the site</li>
                 <li>The location, Facebook and Twitter information you optionally provide us on your profile are only publically visible on your profile page</li>
                 <li>The name you give your environments are visible on the environment page itself, your profile page and on the Recently Cloned Environments page</li>
-                <li>Your email is never publically visible anywhere on the site</li>
+                <li>Your email is never publicly visible anywhere on the site</li>
             </ul>
         </div>
 
         <div class="section-padding align-centre lgrey">
             <h1>STORING YOUR PERSONAL DATA</h1>
             <p>All passwords are securely encrypted.</p>
-            <p>In operating our website it is necessary to transfer data that we collect from you to locations outside of the European Union for processing and storing. By providing your personal data to us, you agree to this transfer, storing or processing. We do our upmost to ensure that all reasonable steps are taken to make sure that your data is stored securely.</p>
+            <p>In operating our website it is necessary to transfer data that we collect from you to locations outside of the European Union for processing and storing. By providing your personal data to us, you agree to this transfer, storing or processing. We do our utmost to ensure that all reasonable steps are taken to make sure that your data is stored securely.</p>
             <p>Unfortunately the sending of information via the internet is not totally secure and on occasion such information can be intercepted. We cannot guarantee the security of data that you choose to send us electronically. Sending such information is entirely at your own risk.</p>
         </div>
 
