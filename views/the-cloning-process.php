@@ -4,7 +4,7 @@
     <h1 id="ig-title">The Cloning Process</h1>
         <div class="ig-slide">
             <div class="ig-slide ig-slide--1">
-            <p class="ig-text">The Quantum Clone Cube, powered by its Nuclear Fusion Reactor Power Source, travels from our deep space storage facility through an Einstein Rosenbridge portal.</p>
+            <p class="ig-text">The Quantum Clone Cube, powered by its Nuclear Fusion Reactor Power Source, travels from our deep space storage facility through an Einstein-Rosen bridge.</p>
             </div>
         </div>
         <div class="ig-slide">
