@@ -12,10 +12,8 @@
 
     <script src='/js/all.js'></script>
 
-    <?php if($isUser): ?>
-        <?php if(isset($_SESSION['userId'])): ?>
-            <script src='/js/page-user-profile.js'></script>
-        <?php endif; ?>
+    <?php if($isUser && isset($_SESSION['userId'])): ?>
+        <script src='/js/page-user-profile.js'></script>
     <?php endif; ?>
 
     <?php if($isEnv): ?>
@@ -57,10 +55,8 @@
 
     <script src='/build/all.min.js'></script>
 
-    <?php if($isUser): ?>
-        <?php if(isset($_SESSION['userId'])): ?>
-            <script src='/build/page-user-profile.min.js'></script>
-        <?php endif; ?>
+    <?php if($isUser && isset($_SESSION['userId'])): ?>
+        <script src='/build/page-user-profile.min.js'></script>
     <?php endif; ?>
 
     <?php if($isEnv): ?>
