@@ -30,7 +30,7 @@
             }
             ?>
 
-            <form method="post" class="half-padding">
+            <form method="post">
                 <table>
                     <tr>
                         <td><label for="email">Email:</label></td>
