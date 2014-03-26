@@ -24,9 +24,7 @@
     </section>
 
     <section>
-        <div class="align-centre">
-            <img src="/img/project-titan-scanning.jpg" alt="Clone Cube" class="full"/>
-        </div>
+        <div id="project-titan-image" class="align-centre"></div>
     </section>
 
     <section>
