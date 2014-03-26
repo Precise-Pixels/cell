@@ -176,8 +176,6 @@
     }
 
     &.ig-current-slide--3 {
-        ~ #ig-cube {
-        }
         ~ #ig-thrusters {
             display: block;
             animation: ig-cube-3-thrusters 2s alternate infinite linear;
