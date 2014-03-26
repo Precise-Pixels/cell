@@ -4,24 +4,24 @@
     <h1 id="ig-title">The Cloning Process</h1>
         <div class="ig-slide">
             <div class="ig-slide ig-slide--1">
-            <p class="ig-text">The Quantum Clone Cube, powered by its Nuclear Fusion Reactor Power Source, travels from our deep space storage facility through an Einstein-Rosen bridge.</p>
+            <p class="ig-text">The QuantumCell&trade; Clone Cube, powered by its nuclear fusion reactor power source, travels from our deep space storage facility through an Einstein-Rosen bridge (wormhole).</p>
             </div>
         </div>
         <div class="ig-slide">
             <div class="ig-slide ig-slide--2"></div>
             <img src="/img/infographic/satellite.png" alt="Satellite" id="ig-satellite" class="ig-animate"/>
-            <p class="ig-text">The Clone Cube enters the Earth's atmosphere, protected by its Thermo-Resistant Shell, coated with Teflon 3.0.</p>
+            <p class="ig-text">The Clone Cube enters the Earth's atmosphere, protected by its thermo-resistant shell, coated with Teflon 3.0.</p>
         </div>
         <div class="ig-slide">
             <div class="ig-slide ig-slide--3"></div>
             <img src="/img/infographic/plane.png" alt="Plane" id="ig-plane" class="ig-animate"/>
-            <p class="ig-text">When approaching the Earth's surface the Cube's Navigational Thrusters are activated, helping it slow down and allowing for more refined movements towards its target location.</p>
+            <p class="ig-text">When approaching the Earth's surface the Clone Cube's navigational thrusters are activated, helping it slow down and allowing for more refined movements towards its target environment.</p>
         </div>
         <div class="ig-slide">
             <div class="ig-slide ig-slide--4"></div>
             <div id="ig-scanner-wrapper" class="ig-animate"><img src="/img/infographic/scanner.png" alt="Scanner" id="ig-scanner"/></div>
-            <p class="ig-text ig-text--4">Using its Topographic Profile Scanner the Cube generates a profile of the envronment it's scanning.</p>
-            <p class="ig-text ig-text--5">Once the environment scan is complete the Cube returns to our deep space storage facility for safe keeping.</p>
+            <p class="ig-text ig-text--4">Its topographic profile scanner is used to generate a profile of the environment it's cloning.</p>
+            <p class="ig-text ig-text--5">Once the environment scan is complete the Clone Cube returns to our deep space storage facility for safe keeping.</p>
             <section id="ig-cta" class="full">
                 <div class="align-centre">
                     <a href="/project-titan" class="cta cta--pt-small half">
