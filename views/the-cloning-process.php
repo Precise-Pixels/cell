@@ -22,6 +22,21 @@
             <div id="ig-scanner-wrapper" class="ig-animate"><img src="/img/infographic/scanner.png" alt="Scanner" id="ig-scanner"/></div>
             <p class="ig-text ig-text--4">Using its Topographic Profile Scanner the Cube generates a profile of the envronment it's scanning.</p>
             <p class="ig-text ig-text--5">Once the environment scan is complete the Cube returns to our deep space storage facility for safe keeping.</p>
+            <section id="ig-cta" class="full">
+                <div class="align-centre">
+                    <a href="the-cloning-process" class="cta cta--example half">
+                        <hgroup class="align-vertical">
+                            <h1>The cloning process</h1>
+                        </hgroup>
+                    </a>
+                    <a href="/technology" class="cta cta--technology half">
+                        <hgroup class="align-vertical">
+                            <h1>Technology</h1>
+                            <h2>Learn about our QuantumCell&trade; technology</h2>
+                        </hgroup>
+                    </a>
+                </div>
+            </section>
         </div>
     </div>
     <img src="/img/infographic/clone-cube.png" id="ig-cube" alt="Clone Cube"/>
