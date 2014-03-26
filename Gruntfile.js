@@ -23,7 +23,7 @@ module.exports = function(grunt) {
                 },
                 src: '.',
                 dest: '/precisepixels/cell',
-                exclusions: ['.ftppass', '.gitignore', 'Gruntfile.js', 'package.json', 'README.md', '.git', '.sass-cache', 'css', 'capture-*', 'height-*', 'js', 'node_modules', 'sass']
+                exclusions: ['.git', '.sass-cache', 'css', './img/user', 'js', 'node_modules', 'sass', '.ftppass', '.gitignore', 'Gruntfile.js', 'package.json', 'README.md']
             }
         },
         jshint: {
