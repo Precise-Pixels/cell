@@ -1,4 +1,4 @@
-<header class="fixed-header section-padding align-centre dgrey">
+<header id="fixed-header" class="fixed-header--signin section-padding">
     <hgroup class="align-vertical">
         <h1>FORGOTTEN YOUR PASSWORD</h1>
     </hgroup>
@@ -16,21 +16,21 @@
                 $email = $_POST['email'];
 
                 if(!empty($email)) {
-                    $exists = $loginSystem->checkUserExists($email);
+                    $exists = $loginSystem->checkUserExists($email, '');
 
                     if($exists) {
                         $response = $loginSystem->sendResetPasswordLink($email);
                         echo $response;
                     } else {
-                        echo '<p class="full warn">No account with this email exists.</p>';
+                        echo '<p class="full warn"><i class="ico-info"></i>No account with this email exists.</p>';
                     }
                 } else {
-                    echo '<p class="full warn">Please enter your email.</p>';
+                    echo '<p class="full warn"><i class="ico-info"></i>Please enter your email.</p>';
                 }
             }
             ?>
 
-            <form method="post" class="half-padding">
+            <form method="post">
                 <table>
                     <tr>
                         <td><label for="email">Email:</label></td>
@@ -44,8 +44,13 @@
                 </table>
             </form>
 
-            <p class="half-padding">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, porro, ex maiores amet dolore cum vitae aut quos! Architecto, et illo vel facilis repellendus inventore labore explicabo assumenda exercitationem sit.</p>
         </div>
     </section>
 
+    <section>
+        <div class="align-centre section-padding mblue">
+            <p><i class="ico-info"></i>Please enter the email you signed up with and a link to reset your password will be with you shortly.</p>
+            <p><i class="ico-info"></i>Please note that the email may come through to your spam/junk folder.</p>
+        </div>
+    </section>
 </main>
