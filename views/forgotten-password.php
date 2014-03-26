@@ -16,7 +16,7 @@
                 $email = $_POST['email'];
 
                 if(!empty($email)) {
-                    $exists = $loginSystem->checkUserExists($email);
+                    $exists = $loginSystem->checkUserExists($email, '');
 
                     if($exists) {
                         $response = $loginSystem->sendResetPasswordLink($email);
