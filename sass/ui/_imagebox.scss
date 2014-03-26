@@ -10,6 +10,9 @@
         font-size: 1.2rem;
         font-weight: 400;
         background: $mblue;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     figure {

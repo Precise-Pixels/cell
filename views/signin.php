@@ -12,11 +12,11 @@ $loginSystem = new LoginSystem();
 <main>
 
     <section>
-        <div class="section-padding align-centre lgrey">
+        <div class="section-padding align-centre mblue">
             <?php
             if(isset($_SESSION['status'])) {
                 if($_SESSION['status'] == 'notsignedin') {
-                    echo '<p class="full warn">You must be logged in to view this page.</p>';
+                    echo '<p class="full warn"><i class="ico-info"></i>You must be logged in to view this page.</p>';
                     unset($_SESSION['status']);
                 } elseif($_SESSION['status'] == 'signedin') {
                     header("location: /user/{$_SESSION['username']}");
@@ -49,8 +49,14 @@ $loginSystem = new LoginSystem();
 
                     <tr>
                         <td></td>
-                        <td><input type="submit" name="signin-submit" value="Sign in" class="btn"/></td>
+                        <td><input type="submit" name="signin-submit" value="SIGN IN" class="btn"/></td>
                     </tr>
+
+                    <tr>
+                        <td></td>
+                        <td><p class="forgot-password"><i class="ico-question"></i><a href="forgotten-password">Forgotten Password</a></p></td>
+                    </tr>
+
                 </table>
             </form>
         </div>
@@ -61,7 +67,9 @@ $loginSystem = new LoginSystem();
             <h1>REGISTER</h1>
 
             <?php
-            $wrapStart = '<p class="full warn">';
+            require_once('php/ProfanityFilter.php');
+
+            $wrapStart = '<p class="full warn"><i class="ico-info"></i>';
             $wrapEnd   = '</p>';
 
             if(!empty($_POST['register-submit'])) {
@@ -72,17 +80,25 @@ $loginSystem = new LoginSystem();
                 $passwordAgain = $_POST['password-again'];
 
                 if(!empty($username) && !empty($email) && !empty($password) && !empty($emailAgain) && !empty($passwordAgain)) {
-                    if($email === $emailAgain && $password === $passwordAgain) {
-                        $exists = $loginSystem->checkUserExists($email, $username);
+                    if(preg_match('/^[a-zA-Z0-9]+$/', $username)) {
+                        if($email === $emailAgain && $password === $passwordAgain) {
+                            $exists = $loginSystem->checkUserExists($email, $username);
 
-                        if($exists) {
-                            echo $wrapStart . 'An account with this email/username already exists.' . $wrapEnd;
+                            if($exists) {
+                                echo $wrapStart . 'An account with this email/username already exists.' . $wrapEnd;
+                            } else {
+                                if(!ProfanityFilter::containsProfanity($username)) {
+                                    $response = $loginSystem->createUser($email, $password, $username);
+                                    echo $response;
+                                } else {
+                                    echo $wrapStart . 'No profanity please.' . $wrapEnd;
+                                }
+                            }
                         } else {
-                            $response = $loginSystem->createUser($email, $password, $username);
-                            echo $response;
+                            echo $wrapStart . 'Email and/or password did not match. Please try again.' . $wrapEnd;
                         }
                     } else {
-                        echo $wrapStart . 'Email and/or password did not match. Please try again.' . $wrapEnd;
+                        echo $wrapStart . 'Username must be alphanumeric (a-z A-Z 0-9).' . $wrapEnd;
                     }
                 } else {
                     echo $wrapStart . 'Please enter your email and password.' . $wrapEnd;
@@ -94,11 +110,11 @@ $loginSystem = new LoginSystem();
                 <table>
                     <tr>
                         <td><label for="username">Username:</label></td>
-                        <td><input type="text" name="username" required/></td>
+                        <td><input type="text" name="username" maxlength="19" required/></td>
                     </tr>
 
                     <tr>
-                        <td><label for="email">Email:</label></td>
+                        <td><label for="email">Email <small>(private)</small>:</label></td>
                         <td><input type="email" name="email" required/></td>
                     </tr>
 

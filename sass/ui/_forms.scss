@@ -24,7 +24,7 @@ input,
 select,
 textarea {
     width: 100%;
-    display: block;
+    display: inline-block;
     padding: 15px;
     color: $lgrey;
     font-size: 1.2rem;
@@ -32,6 +32,13 @@ textarea {
     border: 0;
     background: $dgrey;
 }
+
+.dgrey input,
+.dgrey select,
+.dgrey textarea {
+    background: $sdgrey;
+}
+
 
 input:focus,
 select:focus,

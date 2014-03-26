@@ -1,6 +1,7 @@
 <header id="fixed-header" class="fixed-header--pt section-padding">
     <hgroup class="align-vertical">
         <h1>PROJECT TITAN</h1>
+        <?php require_once('includes/balls.php'); ?>
     </hgroup>
 </header>
 
