@@ -10,6 +10,10 @@
         <script src='/js/timeline-scroll.js'></script>
     <?php endif; ?>
 
+    <?php if($isCloningProcess): ?>
+        <script src='/js/page-the-cloning-process.js'></script>
+    <?php endif; ?>
+
     <script src='/js/all.js'></script>
 
     <?php if($isUser && isset($_SESSION['userId'])): ?>
@@ -51,6 +55,10 @@
 
     <?php if($isAbout): ?>
         <script src='/build/timeline-scroll.min.js'></script>
+    <?php endif; ?>
+
+    <?php if($isCloningProcess): ?>
+        <script src='/build/page-the-cloning-process.min.js'></script>
     <?php endif; ?>
 
     <script src='/build/all.min.js'></script>
