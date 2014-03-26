@@ -4,7 +4,7 @@ class User {
     static function getData($username) {
         require('db.php');
 
-        $sth = $dbh->query("SELECT userId, email, timestamp, username FROM users WHERE username='$username'");
+        $sth = $dbh->query("SELECT userId, email, timestamp, username, location, facebook, twitter FROM users WHERE username='$username'");
         $sth->setFetchMode(PDO::FETCH_OBJ);
         $result = $sth->fetch();
 

@@ -11,7 +11,7 @@
             <li><a href="/press"><i class="ico-press menu-icon"></i>PRESS</a></li>
         </ul>
     </nav>
-    <i class="ico- site-nav-btn-icon"></i>
+    <i id="site-nav-btn-icon" class="ico- site-nav-btn-icon"></i>
 
     <p id="user-message"><?php
         if(isset($_SESSION['username'])) {

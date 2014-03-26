@@ -41,6 +41,7 @@ body > header {
     text-align: center;
     line-height: 40px;
     transition: background .3s;
+    cursor: pointer;
     z-index: 3;
 }
 
@@ -137,7 +138,8 @@ body > header {
     left: -225px;
     display: block;
     transition: all .3s;
-    ul {
+    ul,
+    li {
         margin: 0;
         padding: 0;
         list-style: none;
@@ -157,6 +159,10 @@ body > header {
             background: $lgrey;
         }
     }
+}
+
+#site-nav a {
+    border-bottom: 0;
 }
 
 #site-nav-toggle:checked + #site-nav {

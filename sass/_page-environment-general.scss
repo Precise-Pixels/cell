@@ -1,0 +1,46 @@
+.full-page-overlay {
+    width: 100%;
+    height: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    transition: height .3s;
+    z-index: 4;
+}
+
+.full-page-overlay--loading {
+    height: 100%;
+    display: block;
+    background: $dblue url(/img/spinner.gif) center no-repeat;
+}
+
+.no-webgl .full-page-overlay {
+    display: none;
+}
+
+.webgl .full-page-overlay {
+    display: block;
+}
+
+.env--loaded .full-page-overlay {
+    height: 0;
+}
+
+#environment-listing {
+    padding: 20px;
+    .imagebox {
+        border: 5px solid $sdgrey;
+        figcaption h1 {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+@media ($min_bp_c) {
+    #environment-listing {
+        padding: 40px 0;
+    }
+}

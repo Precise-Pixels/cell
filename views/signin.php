@@ -12,11 +12,11 @@ $loginSystem = new LoginSystem();
 <main>
 
     <section>
-        <div class="section-padding align-centre lgrey">
+        <div class="section-padding align-centre mblue">
             <?php
             if(isset($_SESSION['status'])) {
                 if($_SESSION['status'] == 'notsignedin') {
-                    echo '<p class="full warn">You must be logged in to view this page.</p>';
+                    echo '<p class="full warn"><i class="ico-info"></i>You must be logged in to view this page.</p>';
                     unset($_SESSION['status']);
                 } elseif($_SESSION['status'] == 'signedin') {
                     header("location: /user/{$_SESSION['username']}");
@@ -49,8 +49,14 @@ $loginSystem = new LoginSystem();
 
                     <tr>
                         <td></td>
-                        <td><input type="submit" name="signin-submit" value="Sign in" class="btn"/></td>
+                        <td><input type="submit" name="signin-submit" value="SIGN IN" class="btn"/></td>
                     </tr>
+
+                    <tr>
+                        <td></td>
+                        <td><p class="forgot-password"><i class="ico-question"></i><a href="forgotten-password">Forgotten Password</a></p></td>
+                    </tr>
+
                 </table>
             </form>
         </div>
@@ -61,7 +67,9 @@ $loginSystem = new LoginSystem();
             <h1>REGISTER</h1>
 
             <?php
-            $wrapStart = '<p class="full warn">';
+            require_once('php/ProfanityFilter.php');
+
+            $wrapStart = '<p class="full warn"><i class="ico-info"></i>';
             $wrapEnd   = '</p>';
 
             if(!empty($_POST['register-submit'])) {
@@ -79,8 +87,12 @@ $loginSystem = new LoginSystem();
                             if($exists) {
                                 echo $wrapStart . 'An account with this email/username already exists.' . $wrapEnd;
                             } else {
-                                $response = $loginSystem->createUser($email, $password, $username);
-                                echo $response;
+                                if(!ProfanityFilter::containsProfanity($username)) {
+                                    $response = $loginSystem->createUser($email, $password, $username);
+                                    echo $response;
+                                } else {
+                                    echo $wrapStart . 'No profanity please.' . $wrapEnd;
+                                }
                             }
                         } else {
                             echo $wrapStart . 'Email and/or password did not match. Please try again.' . $wrapEnd;
@@ -102,7 +114,7 @@ $loginSystem = new LoginSystem();
                     </tr>
 
                     <tr>
-                        <td><label for="email">Email:</label></td>
+                        <td><label for="email">Email <small>(private)</small>:</label></td>
                         <td><input type="email" name="email" required/></td>
                     </tr>
 

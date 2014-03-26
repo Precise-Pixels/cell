@@ -1,7 +1,7 @@
 <?php
 
 class LoginSystem {
-    const wrapStart = '<p class="full warn">';
+    const wrapStart = '<p class="full warn"><i class="ico-info"></i>';
     const wrapEnd   = '</p>';
 
     static function signin($email, $password) {
@@ -57,7 +57,7 @@ class LoginSystem {
 
         $timestamp = date("Y-m-d H:i:s");
 
-        $sth = $dbh->prepare("INSERT INTO users (email, password, valid, validateRand, resetRand, timestamp, username) value (:email, :password, 0, $rand1, $rand2, :timestamp, :username)");
+        $sth = $dbh->prepare("INSERT INTO users (email, password, valid, validateRand, resetRand, timestamp, username, location, facebook, twitter) value (:email, :password, 0, $rand1, $rand2, :timestamp, :username, '', '', '')");
         $sth->bindParam(':email', $email);
         $sth->bindParam(':password', $passwordE);
         $sth->bindParam(':timestamp', $timestamp);

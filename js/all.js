@@ -1,3 +1,14 @@
+// Feature detection
+var Detector = {
+    webgl:     ( function() { try { var canvas = document.createElement('canvas'); return !! window.WebGLRenderingContext && (canvas.getContext('webgl') || canvas.getContext('experimental-webgl')); } catch(e) { return false; } } )(),
+    webrtc:    ( function() { try { return navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia } catch(e) { return false; } } )(),
+    cssfilter: ( function() { try { var el = document.createElement('div'); el.style.cssText = '-webkit-filter:blur(2px);filter:blur(2px);'; return !!el.style.length && ((document.documentMode === undefined || document.documentMode > 9)); } catch(e) { return false; } } )()
+}
+
+if(Detector.webgl)     { document.documentElement.className = document.documentElement.className.replace('no-webgl', 'webgl'); };
+if(Detector.webrtc)    { document.documentElement.className = document.documentElement.className.replace('no-webrtc', 'webrtc'); };
+if(Detector.cssfilter) { document.documentElement.className = document.documentElement.className.replace('no-cssfilter', 'cssfilter'); };
+
 // Top Bar parallax / hide
 var headerTop     = document.getElementById('top-bar');
 var header        = document.getElementById('fixed-header') || document.getElementById('primary-header');
@@ -14,8 +25,14 @@ window.addEventListener('scroll', function () {
     position = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
 
     if (header != null) {
-        header.style.top = position * -1 / 3 + 'px';
-        hgroup.style.top = position * -1 / 2 + 'px';
+        var headerTransformString    = 'translate3d(0, ' + position * -1 / 3 + 'px' + ', 0)';
+        var hgroupTransformString    = 'translate3d(0, ' + position * -1 / 2 + 'px' + ', 0)';
+        header.style.WebkitTransform = headerTransformString;
+        header.style.msTransform     = headerTransformString;
+        header.style.transform       = headerTransformString;
+        hgroup.style.WebkitTransform = hgroupTransformString;
+        hgroup.style.msTransform     = hgroupTransformString;
+        hgroup.style.transform       = hgroupTransformString;
     }
 
     changeTopbarBkg();
@@ -40,6 +57,16 @@ var userNavToggle = document.getElementById('user-nav-toggle');
 navOverlay.addEventListener('click', function() {
     siteNavToggle.checked = false;
     userNavToggle.checked = false;
+});
+
+// Burger icon sits above the actual nav button making it unclickable in <=IE10
+var siteNavBtnIcon = document.getElementById('site-nav-btn-icon');
+siteNavBtnIcon.addEventListener('click', function(e) {
+    if(siteNavToggle.checked) {
+        siteNavToggle.checked = false;
+    } else {
+        siteNavToggle.checked = true;
+    }
 });
 
 // Console FYP notice
