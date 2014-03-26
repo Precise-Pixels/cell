@@ -43,7 +43,7 @@
             <li class="half">
                 <h1>1</h1>
                 <img src="/img/project-titan-example-1.jpg" class="scale">
-                <p>Select an area of earth to clone</p>
+                <p>Select an area of Earth to clone</p>
             </li>
             <li class="half">
                 <h1>2</h1>
@@ -51,6 +51,13 @@
                 <p>View your 3D cloned environment</p>
             </li>
         </ol>
+    </section>
+
+    <section>
+        <div id="project-titan-sign-up" class="align-centre section-padding sdgrey">
+            <h2>Start preserving the planet today</h2>
+            <a href="/signin" class="btn"><i class="ico-my-cell"></i>SIGN UP</a>
+        </div>
     </section>
 
     <section>
@@ -66,13 +73,6 @@
                     <h2>Learn about our QuantumCell&trade; technology</h2>
                 </hgroup>
             </a>
-        </div>
-    </section>
-
-    <section>
-        <div id="project-titan-sign-up" class="align-centre section-padding sdgrey">
-            <h2>Start preserving the planet today</h2>
-            <a href="/signin" class="btn"><i class="ico-my-cell"></i>SIGN UP</a>
         </div>
     </section>
 
