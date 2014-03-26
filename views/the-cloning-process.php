@@ -15,7 +15,7 @@
         <div class="ig-slide">
             <div class="ig-slide ig-slide--3"></div>
             <img src="/img/infographic/plane.png" alt="Plane" id="ig-plane" class="ig-animate"/>
-            <p class="ig-text">When approaching the Earths surface the Cube's Navigational Thrusters are activated, helping it slow down and allowing for more refined movements towards its target location.</p>
+            <p class="ig-text">When approaching the Earth's surface the Cube's Navigational Thrusters are activated, helping it slow down and allowing for more refined movements towards its target location.</p>
         </div>
         <div class="ig-slide">
             <div class="ig-slide ig-slide--4"></div>

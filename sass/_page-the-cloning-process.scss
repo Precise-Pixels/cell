@@ -228,13 +228,13 @@
 
 #ig-satellite {
     height: 25%;
-    left: 10%;
+    left: 8%;
     animation: ig-satellite 7s alternate infinite ease-in-out;
 }
 
 @keyframes ig-satellite {
-   0%   { top: 65%; }
-   100% { top: 60%; }
+   0%   { top: 15%; }
+   100% { top: 10%; }
 }
 
 #ig-plane {
