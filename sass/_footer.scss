@@ -28,15 +28,25 @@ footer > .cell-logo {
     margin-top: 30px;
 }
 
-@media ($min-bp-a) {
+@media ($min_bp_a) {
     #copyright,
+    #privacy,
     #social-icons {
         width: auto;
         position: absolute;
     }
 
     #copyright {
+        top: 30px;
         left: 20px;
+    }
+
+    #privacy {
+        top: 60px;
+        left: 20px;
+        p {
+            margin-bottom: 0;
+        }
     }
 
     #social-icons {
@@ -50,9 +60,25 @@ footer > .cell-logo {
     }
 }
 
-@media ($min-bp-c) {
+@media ($min_bp_b) {
     #copyright {
-        left: 0px;
+        top: 40px;
+    }
+
+    #privacy {
+        top: 90px;
+    }
+}
+
+@media ($min_bp_c) {
+    #copyright {
+        top: 40px;
+        left: 0;
+    }
+
+    #privacy {
+        top: 90px;
+        left: 0;
     }
 
     #social-icons {
