@@ -24,7 +24,7 @@
 
     <section>
         <div class="align-centre">
-            <img src="/img/placeholder.gif" alt="Clone Cube" class="full"/>
+            <img src="/img/project-titan-scanning.jpg" alt="Clone Cube" class="full"/>
         </div>
     </section>
 
@@ -55,9 +55,9 @@
 
     <section>
         <div class="align-centre">
-            <a href="the-cloning-process" class="cta cta--example half">
+            <a href="the-cloning-process" class="cta cta--process half">
                 <hgroup class="align-vertical">
-                    <h1>The cloning process</h1>
+                    <h1>The Cloning Process</h1>
                 </hgroup>
             </a>
             <a href="/technology" class="cta cta--technology half">
