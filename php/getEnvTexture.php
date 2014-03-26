@@ -11,6 +11,6 @@ $tex = imagecreatefrompng("http://maps.googleapis.com/maps/api/staticmap?center=
 
 imagecopy($img, $tex, 8, 8, 0, 0, 1280, 1280);
 
-header('Content-Type: image/png');
-imagepng($img);
+header('Content-Type: image/jpeg');
+imagejpeg($img);
 imagedestroy($img);

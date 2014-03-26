@@ -137,7 +137,8 @@ body > header {
     left: -200px;
     display: block;
     transition: all .3s;
-    ul {
+    ul,
+    li {
         margin: 0;
         padding: 0;
         list-style: none;

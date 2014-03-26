@@ -11,28 +11,21 @@ $name          = $_POST['n'];
 $userId        = $_SESSION['userId'];
 
 // Generate the height map
-$img = imagecreatetruecolor(1282, 1282);
-$map = imagecreatetruecolor($resolution, $resolution);
+$img = imagecreatetruecolor($resolution, $resolution);
 
 $rows = explode('-', $heightsString);
 
 foreach($rows as $y => $row) {
     $columns = explode(',', $row);
     foreach($columns as $x => $column) {
-        $colour = imagecolorallocate($map, $column, $column, $column);
-        imagesetpixel($map, $x, $y, $colour);
+        $colour = imagecolorallocate($img, $column, $column, $column);
+        imagesetpixel($img, $x, $y, $colour);
     }
 }
 
-// Resize and blur the height map
+// Resize the height map
 $scaledImg = imagecreatetruecolor($tileSize, $tileSize);
-imagecopyresampled($scaledImg, $map, 0, 0, 0, 0, $tileSize, $tileSize, $resolution, $resolution);
-
-for ($i = 1; $i < 50; $i++) {
-    imagefilter($scaledImg, IMG_FILTER_GAUSSIAN_BLUR);
-}
-
-imagecopy($img, $scaledImg, 1, 1, 0, 0, 1280, 1280);
+imagecopyresampled($scaledImg, $img, 0, 0, 0, 0, $tileSize, $tileSize, $resolution, $resolution);
 
 // Save the data in the database
 $timestamp = date("Y-m-d H:i:s");
@@ -57,5 +50,5 @@ $_SESSION['lat']    = $latitude;
 $_SESSION['lon']    = $longitude;
 
 // Save height map and clean up
-imagepng($img, "../img/user/$userId/height-map-{$_SESSION['envId']}.png");
-imagedestroy($img);
+imagepng($scaledImg, "../img/user/$userId/height-map-{$_SESSION['envId']}.png");
+imagedestroy($scaledImg);

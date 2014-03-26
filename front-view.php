@@ -1,11 +1,11 @@
 <?php require_once('includes/session.php'); ?>
 
 <!DOCTYPE HTML>
-<html>
+<html class="no-webgl no-webrtc no-cssfilter">
 <head>
     <?php require_once('includes/head.php'); ?>
 </head>
-<body>
+<body class="<?= ($isEnv) ? 'env' : ''; ?>">
     <?php require_once('includes/cookies.php'); ?>
     <?php require_once('includes/header.php'); ?>
     <?php require_once("views/$file.php"); ?>

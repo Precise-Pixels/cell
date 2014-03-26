@@ -20,6 +20,8 @@ $isNewEnv             = preg_match('#env\/new/?$#', $q);
 $isRecentlyClonedEnvs = preg_match('#recently-cloned-environments/?$#', $q);
 $isCapturing          = preg_match('#capturing-environment#', $q);
 
+$currentUrl           = "http://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
+
 if($isHome) {
     require_once('model-home.php');
 }
