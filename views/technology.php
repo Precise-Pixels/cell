@@ -50,9 +50,9 @@
 
     <section>
         <div class="align-centre">
-            <a href="the-cloning-process" class="cta cta--example half">
+            <a href="the-cloning-process" class="cta cta--process half">
                 <hgroup class="align-vertical">
-                    <h1>The cloning process</h1>
+                    <h1>The Cloning Process</h1>
                 </hgroup>
             </a>
             <a href="/project-titan" class="cta cta--pt-small half">
