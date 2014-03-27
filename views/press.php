@@ -12,7 +12,7 @@
             <div class="section-padding lgrey">
                 <div id="press-email">
                     <p>For all enquiries please contact:</p>
-                    <p><a href="mailto:press@cell-industries.co.uk">press@cell-industries.co.uk</a>
+                    <p><a href="mailto:press@cell-industries.co.uk">press@cell-industries.co.uk</a></p>
                 </div>
             </div>
         </div>
