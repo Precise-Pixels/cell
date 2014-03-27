@@ -7,33 +7,32 @@
 
 <main>
 
-    <section>
+    <section id="project-titan-our-aim">
         <div class="align-centre lgrey">
             <div class="section-padding half">
                 <h1><i class="ico-project-titan"></i>OUR AIM</h1>
-                <p class="full-margin">We at Cell Industries empower you to preserve the future of your planet. Using our groundbreaking QuantumCell™ technology we can clone your environment leaving it protected and ready to be restored in the event of undesirable occurrences.</p>
+                <p>In an ever changing and increasingly turbulent world the natural environments of our planet often bear the brunt of modern society.</p>
+                <p>Using our groundbreaking QuantumCell&trade; technology we want to ensure the environments that matter to you are preserved for millennia to come. We can clone whole areas of environments leaving them protected and ready to be restored in the event of undesirable occurrences.</p>
             </div>
-            <div class="section-padding half mblue">
+            <div class="half">
                 <blockquote>
-                    <p>The process was easy to follow, efficient and intuative. The staff could not do enough for me and was very happy with the end product.</p>
-                    <footer>Mr Sea Shaw, Freelance Photographer</footer>
+                    <p>Simply brilliant. The best use of technology I have seen in a long time. Now everyone can save the planet from the comfort of their own home.</p>
+                    <footer>Sarah Bird, National Geographic</footer>
                 </blockquote>
             </div>
         </div>
     </section>
 
     <section>
-        <div class="align-centre">
-            <img src="/img/placeholder.gif" alt="Clone Cube" class="full"/>
-        </div>
+        <div id="project-titan-image" class="align-centre"></div>
     </section>
 
     <section>
         <div class="section-padding align-centre sdgrey">
             <h1><i class="ico-my-cell"></i>HOW YOU ARE INVOLVED</h1>
             <div class="section-content-wrapper">
-                <p class="half-margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo. Suspendisse adipiscing nunc tortor, eget accumsan tellus tincidunt at. Ut suscipit elit id tellus tincidunt, ac luctus nisi consectetur. Proin velit libero, faucibus sed ultricies eget, pulvinar sit amet erat. Suspendisse vel leo sit amet magna sodales tincidunt.</p>
-                <p class="half-margin">Integer sit amet nibh sit amet lectus luctus placerat. Suspendisse eget arcu tortor. Fusce pretium sodales nisl et tempus. Curabitur pretium pellentesque libero. Curabitur pretium malesuada purus, id posuere neque. Donec ante metus, rutrum id lacus ut, ultricies aliquam magna.</p>
+                <p class="half-margin">Project Titan is a collaborative project designed to involve everyone in preserving the Earths environments. You get to decide which part of the planet we preserve next. Simply sign up for free, follow the instructions and build up your own collection of cloned environments.</p>
+                <p class="half-margin">You will be able to view the 3D representation of the environments you clone at any time, along with live information associated with the environments. You can then share your environments and let everyone know that you have done your part to help preserve the planet.</p>
             </div>
         </div>
     </section>
@@ -43,7 +42,7 @@
             <li class="half">
                 <h1>1</h1>
                 <img src="/img/project-titan-example-1.jpg" class="scale">
-                <p>Select an area of earth to clone</p>
+                <p>Select an area of Earth to clone</p>
             </li>
             <li class="half">
                 <h1>2</h1>
@@ -54,10 +53,17 @@
     </section>
 
     <section>
+        <div id="project-titan-sign-up" class="align-centre section-padding sdgrey">
+            <h2>Start preserving the planet today</h2>
+            <a href="/signin" class="btn"><i class="ico-my-cell"></i>SIGN UP</a>
+        </div>
+    </section>
+
+    <section>
         <div class="align-centre">
-            <a href="the-cloning-process" class="cta cta--example half">
+            <a href="the-cloning-process" class="cta cta--process half">
                 <hgroup class="align-vertical">
-                    <h1>The cloning process</h1>
+                    <h1>The Cloning Process</h1>
                 </hgroup>
             </a>
             <a href="/technology" class="cta cta--technology half">
@@ -66,13 +72,6 @@
                     <h2>Learn about our QuantumCell&trade; technology</h2>
                 </hgroup>
             </a>
-        </div>
-    </section>
-
-    <section>
-        <div id="project-titan-sign-up" class="align-centre section-padding sdgrey">
-            <h2>Start preserving the planet today</h2>
-            <a href="/signin" class="btn"><i class="ico-my-cell"></i>SIGN UP</a>
         </div>
     </section>
 

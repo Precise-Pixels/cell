@@ -15,7 +15,7 @@ if(Detector.webgl) {
     var lon2;
     var centreLat;
     var centreLon;
-    var resolution   = 30;
+    var resolution   = 40;
     var tileSize     = 320;
     var requiredZoom = 10;
 
@@ -35,7 +35,7 @@ if(Detector.webgl) {
             },
             panControl: false,
             streetViewControl: false,
-        backgroundColor: '#222'
+            backgroundColor: '#222'
         });
 
         currentZoom = map.getZoom();
@@ -174,9 +174,9 @@ if(Detector.webgl) {
         warnUnavailable.id      = 'new-env-warn-unavailable';
         warnNoName.id           = 'new-env-warn-name';
         warnProfanity.id        = 'new-env-warn-profanity';
-        warnNoTile.innerHTML    = 'Please select an area on the map.';
-        warnNoName.innerHTML    = 'Please enter a name for your environment.';
-        warnProfanity.innerHTML = 'No profanity please.';
+        warnNoTile.innerHTML    = '<i class="ico-info"></i>Please select an area on the map.';
+        warnNoName.innerHTML    = '<i class="ico-info"></i>Please enter a name for your environment.';
+        warnProfanity.innerHTML = '<i class="ico-info"></i>No profanity please.';
 
         cloneBtn.addEventListener('click', function(e) {
             validate();
@@ -301,59 +301,32 @@ if(Detector.webgl) {
             }
         }
 
-        var latLonArrayLength = latLonArray.length;
-
-        var positionalRequest1 = { 'locations': latLonArray.slice(0,latLonArrayLength/5) };
-        var positionalRequest2 = { 'locations': latLonArray.slice(latLonArrayLength/5,latLonArrayLength/5*2) };
-        var positionalRequest3 = { 'locations': latLonArray.slice(latLonArrayLength/5*2,latLonArrayLength/5*3) };
-        var positionalRequest4 = { 'locations': latLonArray.slice(latLonArrayLength/5*3,latLonArrayLength/5*4) };
-        var positionalRequest5 = { 'locations': latLonArray.slice(latLonArrayLength/5*4,latLonArrayLength/5*5) };
-
-        var allResults = [];
-
+        // Request elevations bit by bit in a loop until complete
         var elevator = new google.maps.ElevationService();
+        var latLonArrayLength = latLonArray.length;
+        var allResults = [];
+        var requestCurrent = 0;
+        var requestLimit = 180;
 
-        // Chain elevation calls together so results are requested in the correct order
-        elevator.getElevationForLocations(positionalRequest1, function(results, status) {
-            if(status == google.maps.ElevationStatus.OK) {
-                allResults = allResults.concat(results);
+        requestElevations();
 
-                elevator.getElevationForLocations(positionalRequest2, function(results, status) {
-                    if(status == google.maps.ElevationStatus.OK) {
-                        allResults = allResults.concat(results);
+        function requestElevations() {
+            if(requestCurrent >= latLonArrayLength) { getElevations(); return false; }
 
-                        elevator.getElevationForLocations(positionalRequest3, function(results, status) {
-                            if(status == google.maps.ElevationStatus.OK) {
-                                allResults = allResults.concat(results);
+            var positionalRequest = { 'locations': latLonArray.slice(requestCurrent, requestCurrent + requestLimit) };
 
-                                elevator.getElevationForLocations(positionalRequest4, function(results, status) {
-                                    if(status == google.maps.ElevationStatus.OK) {
-                                        allResults = allResults.concat(results);
-
-                                        elevator.getElevationForLocations(positionalRequest5, function(results, status) {
-                                            if(status == google.maps.ElevationStatus.OK) {
-                                                allResults = allResults.concat(results);
-                                                getElevations();
-                                            } else {
-                                                console.log('Elevation request 5 failed due to: ' + status);
-                                            }
-                                        });
-                                    } else {
-                                        console.log('Elevation request 4 failed due to: ' + status);
-                                    }
-                                });
-                            } else {
-                                console.log('Elevation request 3 failed due to: ' + status);
-                            }
-                        });
-                    } else {
-                        console.log('Elevation request 2 failed due to: ' + status);
-                    }
+            (function() {
+                elevator.getElevationForLocations(positionalRequest, function(results, status) {
+                    setTimeout(function() {
+                        if(status == google.maps.ElevationStatus.OK) {
+                            allResults = allResults.concat(results);
+                            requestCurrent = requestCurrent + requestLimit;
+                        }
+                        requestElevations();
+                    }, 100);
                 });
-            } else {
-                console.log('Elevation request 1 failed due to: ' + status);
-            }
-        });
+            })();
+        }
 
         var elevations = [];
 
@@ -377,11 +350,35 @@ if(Detector.webgl) {
             // Normalise the min and max so that the minimum is 0
             var normaliseMax = elevationsMax - elevationsMin;
 
+            // Split environments into bands depending upon the range of elevations
+            // Emphasise the flatter areas to give them a slightly exaggerated form
+            // NOTE: The range at Mount Everest is ~5900
+
+            var band = 255;
+
+            switch(true) {
+                case (normaliseMax < 200):
+                    band = 40;
+                    break;
+                case (normaliseMax < 500):
+                    band = 70;
+                    break;
+                case (normaliseMax < 1000):
+                    band = 100;
+                    break;
+                case (normaliseMax < 2000):
+                    band = 200;
+                    break;
+                case (normaliseMax < 6000):
+                    band = 255;
+                    break;
+            }
+
             // Loop through all the heights
             // Calculate the percentatage of the given value between the min and normalised max
             // Multiple by 255 to convert that value into an 8-bit greyscale value between 0 and 255
             for(var i = 0; i < l; i++) {
-                elevationsGreyscale.push( Math.round((elevations[i] - elevationsMin) / normaliseMax * 255) );
+                elevationsGreyscale.push( Math.round((elevations[i] - elevationsMin) / normaliseMax * band) );
             }
 
             // Convert the array to a string to send to the PHP

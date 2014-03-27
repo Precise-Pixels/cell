@@ -41,6 +41,7 @@ body > header {
     text-align: center;
     line-height: 40px;
     transition: background .3s;
+    cursor: pointer;
     z-index: 3;
 }
 
@@ -130,14 +131,15 @@ body > header {
 }
 
 #site-nav {
-    width: 200px;
+    width: 225px;
     height: 100%;
     position: fixed;
     top: 40px;
-    left: -200px;
+    left: -225px;
     display: block;
     transition: all .3s;
-    ul {
+    ul,
+    li {
         margin: 0;
         padding: 0;
         list-style: none;
@@ -212,8 +214,8 @@ header > .cell-logo {
 
 @media ($min-bp-a) {
     #site-nav {
-        width: 270px;
-        left: -270px;
+        width: 345px;
+        left: -345px;
     }
 
     #site-nav a {

@@ -1,4 +1,6 @@
 var stream,
+    video,
+    interval,
     pending = false;
 
 function initWebcam() {
@@ -14,20 +16,22 @@ function initWebcam() {
 
         function(s) {
             stream = s;
-            var video = document.getElementById('video');
+            video = document.getElementById('video');
             video.src = window.URL.createObjectURL(stream);
             video.onplay = function() {
-                setInterval(dump, 30);
+                interval = setInterval(dump, 30);
             };
+            document.body.className += ' env--webcam';
         },
 
         function(error) {
             if(error.name == 'PermissionDeniedError') {
-                alert('Access to your webcam is required to use this feature.');
+                alert('Access to your webcam is required to use this feature. If you have previously denied access to your webcam on this website, you may need to re-enable it.');
                 var iDefault       = document.getElementById('default');
                 var iWebcam        = document.getElementById('webcam');
                 iWebcam.className  = 'btn btn--interact';
                 iDefault.className += ' btn--selected';
+                document.body.className = document.body.className.replace(' env--webcam', '');
                 controls.autoRotate = true;
                 pending = false;
             }
@@ -148,7 +152,7 @@ function initWebcam() {
                 var d = Math.abs(draw.data[pix] - last.data[pix]) + Math.abs(draw.data[pix+1] - last.data[pix+1]) + Math.abs(draw.data[pix+2] - last.data[pix+2]);
 
                 if(d > thresh) {
-                    delt.data[pix]   = 160;
+                    delt.data[pix]   =
                     delt.data[pix+1] =
                     delt.data[pix+2] =
                     delt.data[pix+3] = 255;
@@ -269,6 +273,8 @@ function initWebcam() {
 function stopWebcam() {
     if(stream) {
         stream.stop();
+        video.src = '';
+        clearInterval(interval);
         pending = false;
     }
 }

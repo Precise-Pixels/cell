@@ -1,7 +1,7 @@
 <?php
 
 class LoginSystem {
-    const wrapStart = '<p class="full warn">';
+    const wrapStart = '<p class="full warn"><i class="ico-info"></i>';
     const wrapEnd   = '</p>';
 
     static function signin($email, $password) {

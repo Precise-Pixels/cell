@@ -1,0 +1,18 @@
+#cookies {
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    z-index: 9;
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.cookies--hide {
+    display: none;
+}
