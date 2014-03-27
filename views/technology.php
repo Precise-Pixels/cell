@@ -19,14 +19,14 @@
             <h1><i class="ico-domain"></i>SPECIFICATIONS</h1>
 
             <div class="third-margin">
-                <h2 class="tech-icons"><i class="ico-hdd"></i></h2>
+                <i class="ico-hdd tech-icons"></i>
                 <div class="tech-row">Dimensions: 300 x 300 x 300cm</div>
                 <div class="tech-row">Weight: 50kg</div>
                 <div class="tech-row">Storage capacity: 3.14 petabytes</div>
             </div>
 
             <div class="third-margin">
-                <h2 class="tech-icons"><i class="ico-chip"></i></h2>
+                <i class="ico-chip tech-icons"></i>
                 <div class="tech-row">Nuclear fusion reactor power source</div>
                 <div class="tech-row">Thermo-resistant shell - coated with Teflon 3.0</div>
                 <div class="tech-row">Navigational thrusters (for more refined movements)</div>
@@ -34,7 +34,7 @@
             </div>
 
             <div class="third-margin">
-                <h2 class="tech-icons"><i class="ico-connect"></i></h2>
+                <i class="ico-connect tech-icons"></i>
                 <div class="tech-row">Topographic profile scanner</div>
                 <div class="tech-row">Gyroscope</div>
                 <div class="tech-row">High Sensitivity Universal Positional System</div>
