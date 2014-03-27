@@ -1,16 +1,17 @@
-<header class="dgrey">
+<header id="top-bar">
     <label for="site-nav-toggle" id="site-nav-btn"></label>
-    <input type="checkbox" id="site-nav-toggle" class="checkbox-hack"/>
+    <input type="checkbox" id="site-nav-toggle" class="checkbox-hack" autocomplete="off"/>
     <nav id="site-nav" class="force-repaint dgrey">
         <ul>
             <li><a href="/"><i class="ico-home menu-icon"></i>HOME</a></li>
             <li><a href="/about"><i class="ico-people menu-icon"></i>ABOUT</a></li>
             <li><a href="/project-titan"><i class="ico-project-titan menu-icon"></i>PROJECT TITAN</a></li>
+            <li><a href="/the-cloning-process"><i class="ico-cloning-process menu-icon"></i>THE CLONING PROCESS</a></li>
             <li><a href="/technology"><i class="ico-atom menu-icon"></i>TECHNOLOGY</a></li>
             <li><a href="/press"><i class="ico-press menu-icon"></i>PRESS</a></li>
         </ul>
     </nav>
-    <i class="ico- site-nav-btn-icon"></i>
+    <i id="site-nav-btn-icon" class="ico- site-nav-btn-icon"></i>
 
     <p id="user-message"><?php
         if(isset($_SESSION['username'])) {
@@ -23,7 +24,7 @@
     <label for="user-nav-toggle" id="user-nav-btn">
         <img id="user-pic" src="http://www.gravatar.com/avatar/<?= (isset($_SESSION['userEmail']) ? md5(strtolower(trim($_SESSION['userEmail']))) : 1); ?>?d=mm&amp;s=60"/>
     </label>
-    <input type="checkbox" id="user-nav-toggle" class="checkbox-hack"/>
+    <input type="checkbox" id="user-nav-toggle" class="checkbox-hack" autocomplete="off"/>
     <nav id="user-menu-wrapper" class="force-repaint sdgrey">
         <div id="user-menu">
             <?php if(isset($_SESSION['status']) && $_SESSION['status'] == 'signedin'): ?>

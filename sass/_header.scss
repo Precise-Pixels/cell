@@ -4,7 +4,19 @@ body > header {
     position: fixed;
     top: 0;
     z-index: 3;
+    color: $lgrey;
+    transition: background .8s;
+}
+
+.top-bar-background {
     background: $dgrey;
+    & > #user-arrow {
+        background: $dgrey;
+    }
+}
+
+.top-bar-background-none {
+    background: none;
 }
 
 #site-nav,
@@ -29,6 +41,7 @@ body > header {
     text-align: center;
     line-height: 40px;
     transition: background .3s;
+    cursor: pointer;
     z-index: 3;
 }
 
@@ -90,8 +103,7 @@ body > header {
     font-size: 1rem;
     text-align: center;
     line-height: 20px;
-    background: $dgrey;
-    transition: background .3s;
+    transition: background .8s;
     transform: rotate(90deg);
     z-index: 1;
 }
@@ -107,7 +119,7 @@ body > header {
     top: 0;
     right: 0;
     filter: brightness(50%);
-    transition: all .3s;
+    transition: all .8s;
 }
 
 #user-nav-btn:hover ~ #user-arrow {
@@ -119,14 +131,15 @@ body > header {
 }
 
 #site-nav {
-    width: 200px;
+    width: 225px;
     height: 100%;
     position: fixed;
     top: 40px;
-    left: -200px;
+    left: -225px;
     display: block;
     transition: all .3s;
-    ul {
+    ul,
+    li {
         margin: 0;
         padding: 0;
         list-style: none;
@@ -146,6 +159,10 @@ body > header {
             background: $lgrey;
         }
     }
+}
+
+#site-nav a {
+    border-bottom: 0;
 }
 
 #site-nav-toggle:checked + #site-nav {
@@ -197,8 +214,8 @@ header > .cell-logo {
 
 @media ($min-bp-a) {
     #site-nav {
-        width: 270px;
-        left: -270px;
+        width: 345px;
+        left: -345px;
     }
 
     #site-nav a {

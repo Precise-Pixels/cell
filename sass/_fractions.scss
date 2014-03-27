@@ -31,16 +31,16 @@
     }
 
     .half-margin {
-        width: (98%/2);
+        width: (96%/2);
         margin-left: 1%;
         margin-right: 1%;
     }
 
-    .half-margin:first-of-type {
+    .half-margin:nth-of-type(odd) {
         margin-left: 0;
     }
 
-    .half-margin:last-of-type {
+    .half-margin:nth-of-type(even) {
         margin-right: 0;
     }
 

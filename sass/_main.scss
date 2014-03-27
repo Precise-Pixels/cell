@@ -1,18 +1,56 @@
-.fixed-header {
-    height: 260px;
+#fixed-header {
+    height: 800px;
     position: fixed;
-    top: 40px;
-    left: 0;
-    right: 0;
     display: table;
-    z-index: 1;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+    transition: opacity .8s;
+}
+
+.fixed-header--home {
+    background: url(/img/homepage-bg.jpg);
+}
+
+.fixed-header--about {
+    background: url(/img/about-bg.jpg);
+}
+
+.fixed-header--signin {
+    background: url(/img/signin-bg.jpg);
+}
+
+.fixed-header--pt {
+    background: url(/img/pt-bg.jpg);
+}
+
+.fixed-header--tech {
+    background: url(/img/tech-bg.jpg);
+}
+
+.fixed-header--press {
+    background: url(/img/press-bg.jpg);
+}
+
+.fixed-header--recent {
+    background: url(/img/recent-bg.jpg);
+}
+
+.fixed-header--newenv {
+    background: url(/img/newenv-bg.jpg);
+}
+
+#fixed-header > .align-vertical {
+    display: table-cell;
+    vertical-align: middle;
+    padding-bottom: 460px;
 }
 
 main {
     position: relative;
     margin-top: 300px;
     z-index: 2;
-    background: $dgrey;
 }
 
 .main--top {

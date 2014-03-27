@@ -6,10 +6,13 @@
     h1 {
         width: 100%;
         display: block;
-        margin-bottom: 10px;
-        font-size: 1.2rem;
-        font-weight: 400;
+        margin-bottom: 20px;
+        font-size: 1.4rem;
+        font-weight: 600;
         background: $mblue;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     figure {
@@ -30,7 +33,7 @@
         bottom: 0;
         color: #FFF;
         background: $mblue;
-        transition: height .3s, padding .3s;
+        transition: height 1s, padding .3s;
     }
 }
 

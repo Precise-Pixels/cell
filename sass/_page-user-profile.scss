@@ -26,8 +26,33 @@
 }
 
 #user-buttons {
+    width: 100%;
+    float: left;
     margin-top: 20px;
-    text-align: right;
+}
+
+.env-delete {
+    position: absolute;
+    margin-right: 0;
+    padding: 15px;
+    top: 0;
+    right: 0;
+    color: $mgrey;
+    &:hover {
+        color: #FFF;
+    }
+}
+
+#user-profile-location-input {
+    width: 100%;
+}
+
+.user-profile-input {
+    width: 100%;
+}
+
+.user-profile-input--hidden {
+    display: none;
 }
 
 #no-environments {
@@ -51,7 +76,19 @@
     }
 
     #user-buttons {
+        width: 141px;
+        position: absolute;
         margin-top: 0;
+        top: 0;
+        right: 0;
+        text-align: right;
+        > a {
+            margin-bottom: 3px;
+        }
+    }
+
+    .user-profile-input {
+        width: 86%;
     }
 }
 
@@ -69,10 +106,19 @@
     }
 
     #user-buttons {
+        width: auto;
         margin-top: 20px;
     }
 
     #user-profile-main {
         margin-top: 380px;
+    }
+
+    .user-profile-input {
+        width: 35%;
+    }
+
+    #user-profile-facebook-input {
+        margin-right: 20px;
     }
 }

@@ -1,6 +1,16 @@
-<header id="primary-header" class="fixed-header section-padding align-centre dgrey">
-    <hgroup class="align-vertical">
+<header id="primary-header" class="fixed-header--home section-padding sdgrey">
+    <hgroup class="align-vertical cell-header">
         <h1>CELL INDUSTRIES</h1>
+        <div class="cube-wrapper">
+            <div class="cube">
+                <div class="front"></div>
+                <div class="back"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+                <img src="/img/logo.gif" alt="Cell Industries logo in a spinning cube">
+            </div>
+        </div>
+        <?php require_once('includes/balls.php'); ?>
     </hgroup>
     <a id="page-flow" class="arrow-down ico-arrow-down2" href="#firststeps"></a>
 </header>
@@ -10,67 +20,79 @@
     <a id="firststeps"></a>
     <header id="secondary-header" class="mblue">
         <div class="section-padding align-centre">
-            <hgroup class="align-vertical">
+            <hgroup>
                 <h1>PROJECT TITAN</h1>
-                <h2>SUBHEADER</h2>
+                <h2>PRESERVING THE PLANET</h2>
             </hgroup>
         </div>
     </header>
 
     <section class="dgrey">
-        <div class="align-centre">
+        <div class="section-padding align-centre">
             <div id="homepage-map"></div>
         </div>
     </section>
 
-    <section class="mblue">
+    <section id="homepage-map-info" class="mblue">
+        <i id="homepage-map-env-icon" class="ico-env"></i>
+        <p id="homepage-map-env-icon-perc">&nbsp;</p>
         <div class="section-padding align-centre">
-            <h1>FULL BLEED SECTION</h1>
-            <p class="text-align-center">Do your bit to save the planet</p>
-            <p class="third-margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rho.</p>
-            <a href="#" class="btn third-margin">LEARN MORE</a>
-            <p class="third-margin">Donec consequat est sed eros condimentum, nec porttitor mi convallis. Sed porttitor.</p>
+            <h2 class="homepage-map-data homepage-map-env-icon-title">OF THE PLANET PRESERVED</h2>
+            <div class="homepage-map-data homepage-map-data--left half">
+                <h2 id="homepage-map-data--participants"><?= $participants; ?></h2>
+                <p>PARTICIPANTS</p>
+            </div>
+            <div class="homepage-map-data homepage-map-data--right half">
+                <h2 id="homepage-map-data--environments">&nbsp;</h2>
+                <p>ENVIRONMENTS CLONED</p>
+            </div>
+            <div id="homepage-map-learn-more" class="align-centre">
+                <a href="/project-titan" class="btn">LEARN MORE</a>
+            </div>
         </div>
     </section>
 
-    <section>
-        <div class="section-padding align-centre dgrey">
-            <div class="third-margin">
-                <h2>.third-margin</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <section id="homepage-company" class="sdgrey">
+        <div class="section-padding align-centre">
+            <div class="cell-values">
+                <h2>YOU</h2>
+                <p>You decide which parts of the planet you would like to preserve.</p>
             </div>
-            <div class="third-margin">
-                <h2>.third-margin</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <i class="ico-arrow-down2 homepage-arrow"></i>
+            <div class="cell-values">
+                <h2>CLONE</h2>
+                <p>We clone your chosen environment using our groundbreaking QuantumCell&trade; technology.</p>
             </div>
-            <div class="third-margin">
-                <h2>.third-margin</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <i class="ico-arrow-down2 homepage-arrow"></i>
+            <div class="cell-values">
+                <h2>PRESERVE</h2>
+                <p>Environments are stored in deep space, protected and ready to be restored in the event of undesirable occurrences.</p>
             </div>
         </div>
     </section>
 
     <section class="sdgrey">
-        <div class="section-padding align-centre sdgrey">
-            <div class="cta cta--home1 half">
+        <div class="align-centre sdgrey">
+            <a href="/project-titan" class="cta cta--pt-large half">
                 <hgroup class="align-vertical">
-                    <h1>CTA Title</h1>
-                    <h2>Optional subtitle</h2>
+                    <h1>Project Titan</h1>
+                    <h2>Discover the groundbreaking project</h2>
                 </hgroup>
-            </div>
-            <div class="cta cta--home2 half">
+            </a>
+            <a href="/about" class="cta cta--about half">
                 <hgroup class="align-vertical">
-                    <h1>CTA Title</h1>
-                    <h2>Optional subtitle</h2>
+                    <h1>About Cell</h1>
+                    <h2>Find out about Cell Industries</h2>
                 </hgroup>
-            </div>
-            <div class="cta cta--home3 half">
+            </a>
+            <a href="/technology" class="cta cta--technology half">
                 <hgroup class="align-vertical">
-                    <h1>CTA Title</h1>
-                    <h2>Optional subtitle</h2>
+                    <h1>Technology</h1>
+                    <h2>Learn about our QuantumCell&trade; technology</h2>
                 </hgroup>
-            </div>
+            </a>
         </div>
+            <div id="homepage-cta-bkg"></div>
     </section>
 
 </main>

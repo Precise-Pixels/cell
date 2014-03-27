@@ -3,7 +3,6 @@
 @import 'breakpoints';
 @import 'colours';
 @import 'fractions';
-
 @import 'typography';
 
 @import 'ui/general';
@@ -14,12 +13,20 @@
 
 @import 'base';
 @import 'header';
-@import 'page-home';
-@import 'timeline';
-@import 'slider';
-@import 'env-general';
-@import 'page-env';
-@import 'page-new-env';
-@import 'page-user-profile';
+@import 'balls';
 @import 'main';
+@import 'page-home';
+@import 'page-about';
+@import 'timeline';
+@import 'page-project-titan';
+@import 'page-the-cloning-process';
+@import 'page-press';
+@import 'page-signin';
+@import 'page-environment-general';
+@import 'page-environment';
+@import 'page-new-environment';
+@import 'page-capturing-environment';
+@import 'page-user-profile';
+@import 'page-404';
 @import 'footer';
+@import 'cookies';
