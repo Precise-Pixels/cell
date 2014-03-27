@@ -8,16 +8,10 @@
 <main>
 
     <section>
-        <div id="about-logo-header" class="align-centre mblue">
-            <i class="ico-cell-logo"></i>
-        </div>
-    </section>
-
-    <section>
         <div class="section-padding align-centre lgrey">
             <h1><i class="ico-company"></i>THE COMPANY</h1>
-            <p class="half-margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo. Suspendisse adipiscing nunc tortor, eget accumsan tellus tincidunt at. Ut suscipit elit id tellus tincidunt, ac luctus nisi consectetur. Proin velit libero, faucibus sed ultricies eget, pulvinar sit amet erat.</p>
-            <p class="half-margin">Integer sit amet nibh sit amet lectus luctus placerat. Suspendisse eget arcu tortor. Fusce pretium sodales nisl et tempus. Curabitur pretium pellentesque libero. Curabitur pretium malesuada purus, id posuere neque. Donec ante metus, rutrum id lacus ut, ultricies aliquam magna.</p>
+            <p class="half-margin">As the fastest growing company on Earth, Cell Industries is always striving for a better world through technology. We believe the key to constant progression is investment in the people who also believe in technology as a means for a better future.</p>
+            <p class="half-margin">Every day Cell Industries pushes itself further and is constantly devoted to discovering new and groundbreaking technologies that will help everyone move into a happier and more prosperous future together.</p>
         </div>
     </section>
 
@@ -38,31 +32,31 @@
         </div>
     </section>
 
-    <section>
+    <section id="key-people">
         <div class="section-padding align-centre lgrey">
             <h1><i class="ico-key-people"></i>KEY PEOPLE</h1>
 
             <div class="imagebox hoverbox third-margin">
-                <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
-                <figcaption>
-                    <h1>JAMES LEE</h1>
-                    <p>This portion of the caption is hidden until the image is hovered.</p>
-                </figcaption>
-            </div>
-
-            <div class="imagebox hoverbox third-margin">
-                <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
+                <figure><div id="key-people-jacob"></div></figure>
                 <figcaption>
                     <h1>JACOB HAMMOND</h1>
-                    <p>This portion of the caption is hidden until the image is hovered.</p>
+                    <p>As Visionary Creative Director, Jacob is the brains behind new concepts and projects that Cell Industries produces.</p>
                 </figcaption>
             </div>
 
             <div class="imagebox hoverbox third-margin">
-                <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
+                <figure><div id="key-people-james"></div></figure>
+                <figcaption>
+                    <h1>JAMES LEE</h1>
+                    <p>As Technical Development Director, James governs the augmentation of products and projects key to the success of Cell Industries.</p>
+                </figcaption>
+            </div>
+
+            <div class="imagebox hoverbox third-margin">
+                <figure><div id="key-people-joseph"></div></figure>
                 <figcaption>
                     <h1>JOSEPH WILLIAMS</h1>
-                    <p>This portion of the caption is hidden until the image is hovered.</p>
+                    <p>As Director of Research and Development, Joseph is in charge of conducting revolutionary experiments to help push Cell Industries into the future.</p>
                 </figcaption>
             </div>
         </div>
