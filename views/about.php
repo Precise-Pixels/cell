@@ -68,14 +68,14 @@
                     <div class="event-date-wrapper">
                         <p class="event-date">1960</p>
                     </div> 
-                    <p class="event-text">The EU put their faith in Cell Industries and began to fund their projects.</p>
+                    <p class="event-text">The United Nations put their faith in Cell Industries and began to fund their projects.</p>
                 </div>
 
                 <div class="event backed">
                     <div class="event-date-wrapper">
                         <p class="event-date">1962</p>
                     </div> 
-                    <p class="event-text">Backed by Royal appointment to develop technology to protect the commonwealth.</p>
+                    <p class="event-text">Received Royal backing from Queen Elizabeth II and the Royal Family to develop technology to protect the commonwealth.</p>
                 </div>
 
                 <div class="event moon-landing">
@@ -89,14 +89,14 @@
                     <div class="event-date-wrapper">
                         <p class="event-date">1978</p>
                     </div>
-                    <p class="event-text">Cell Industries sponsors the research and development behind the first test tube baby born in the U.K.</p>
+                    <p class="event-text">Cell Industries sponsored the research and development behind the first test tube baby born in the U.K.</p>
                 </div>
 
                 <div class="event stem-cells">
                     <div class="event-date-wrapper">
                         <p class="event-date">1986</p>
                     </div>
-                    <p class="event-text">Cell Industries discover how to use human skin cells to create embryonic stem cells driving biological science into the future.</p>
+                    <p class="event-text">Cell Industries funded research leading to the discovery of using human skin cells to create embryonic stem cells driving biological science into the future.</p>
                 </div>
 
 
@@ -104,21 +104,21 @@
                     <div class="event-date-wrapper">
                         <p class="event-date">2000</p>
                     </div>
-                    <p class="event-text">Joseph Williams publishes his research into QuantumCell&trade; technology and wins a nobel prize in his field. A research facility dedicated to developing the technology is opened.</p>
+                    <p class="event-text">Joseph Williams published his research into QuantumCell&trade; technology and won a nobel prize in his field. A research facility dedicated to developing the technology was opened.</p>
                 </div>
 
                 <div class="event first-clone">
                     <div class="event-date-wrapper">
-                        <p class="event-date">2013</p>
+                        <p class="event-date">2007</p>
                     </div>
-                    <p class="event-text">The first clone cube is created and the first environment is cloned, preserved and restored.</p>
+                    <p class="event-text">The first QuantumCell&trade; Clone Cube was created and the first environment was cloned, preserved and restored.</p>
                 </div>
 
                 <div class="event public">
                     <div class="event-date-wrapper">
                         <p class="event-date">2014</p>
                     </div>
-                    <p class="event-text">Project Titan is made available to the public so they can start cloning environments that they choose.</p>
+                    <p class="event-text"><a href="/project-titan">Project Titan</a> was launched to the public.</p>
                 </div>
 
             </div>
