@@ -11,6 +11,37 @@
     }
 }
 
+#key-people figure div {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    background-size: cover;
+}
+
+#key-people-jacob {
+    background-image: url(/img/key-people/jacob-1.jpg);
+}
+
+#key-people .imagebox:hover #key-people-jacob {
+    background-image: url(/img/key-people/jacob-2.jpg);
+}
+
+#key-people-james {
+    background-image: url(/img/key-people/james-1.jpg);
+}
+
+#key-people .imagebox:hover #key-people-james {
+    background-image: url(/img/key-people/james-2.jpg);
+}
+
+#key-people-joseph {
+    background-image: url(/img/key-people/joseph-1.jpg);
+}
+
+#key-people .imagebox:hover #key-people-joseph {
+    background-image: url(/img/key-people/joseph-2.jpg);
+}
+
 @media ($min_bp_a) and ($max_bp_c) {
     #key-people {
         .imagebox {

@@ -36,15 +36,7 @@
             <h1><i class="ico-key-people"></i>KEY PEOPLE</h1>
 
             <div class="imagebox hoverbox third-margin">
-                <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
-                <figcaption>
-                    <h1>JAMES LEE</h1>
-                    <p>As Technical Development Director, James governs the augmentation of products and projects key to the success of Cell Industries.</p>
-                </figcaption>
-            </div>
-
-            <div class="imagebox hoverbox third-margin">
-                <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
+                <figure><div id="key-people-jacob"></div></figure>
                 <figcaption>
                     <h1>JACOB HAMMOND</h1>
                     <p>As Visionary Creative Director, Jacob is the brains behind new concepts and projects that Cell Industries produces.</p>
@@ -52,7 +44,15 @@
             </div>
 
             <div class="imagebox hoverbox third-margin">
-                <figure><img src="/img/placeholder.gif" alt="Hoverbox image"/></figure>
+                <figure><div id="key-people-james"></div></figure>
+                <figcaption>
+                    <h1>JAMES LEE</h1>
+                    <p>As Technical Development Director, James governs the augmentation of products and projects key to the success of Cell Industries.</p>
+                </figcaption>
+            </div>
+
+            <div class="imagebox hoverbox third-margin">
+                <figure><div id="key-people-joseph"></div></figure>
                 <figcaption>
                     <h1>JOSEPH WILLIAMS</h1>
                     <p>As Director of Research and Development, Joseph is in charge of conducting revolutionary experiments to help push Cell Industries into the future.</p>
