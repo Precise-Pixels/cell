@@ -7,3 +7,12 @@
     font-size: 4rem;
     text-align: center;
 }
+
+.tech-row {
+    padding: 10px;
+
+    &:nth-child(even) {
+        color: $lgrey;
+        background: $mblue;
+    }
+}

@@ -19,31 +19,25 @@
             <h1><i class="ico-domain"></i>SPECIFICATIONS</h1>
 
             <div class="third-margin">
-                <h2 class="tech-icons"><i class="ico-chip"></i></h2>
-                <ul>
-                    <li>Dimensions: 300x300x300cm (118x118x118inches)</li>
-                    <li>Weight: 50kg</li>
-                </ul>
+                <h2 class="tech-icons"><i class="ico-hdd"></i></h2>
+                <div class="tech-row">Dimensions: 300 x 300 x 300cm</div>
+                <div class="tech-row">Weight: 50kg</div>
+                <div class="tech-row">Storage capacity: 3.14 petabytes</div>
             </div>
 
             <div class="third-margin">
-                <h2 class="tech-icons"><i class="ico-hdd"></i></h2>
-                <ul>
-                    <li>Storage capacity: 3.14 petabytes</li>
-                    <li>Nuclear fusion reactor power source</li>
-                    <li>Thermo-resistant shell - coated with Teflon 3.0</li>
-                    <li>Navigational thrusters (for more refined movements)</li>
-                    <li>Einstein-Rosen bridge initiator (for long-distance travel to deep space storage facility)</li>
-                </ul>
+                <h2 class="tech-icons"><i class="ico-chip"></i></h2>
+                <div class="tech-row">Nuclear fusion reactor power source</div>
+                <div class="tech-row">Thermo-resistant shell - coated with Teflon 3.0</div>
+                <div class="tech-row">Navigational thrusters (for more refined movements)</div>
+                <div class="tech-row">Einstein-Rosen bridge initiator (for long-distance travel to deep space storage facility)</div>
             </div>
 
             <div class="third-margin">
                 <h2 class="tech-icons"><i class="ico-connect"></i></h2>
-                <ul>
-                    <li>Topographic profile scanner</li>
-                    <li>Gyroscope</li>
-                    <li>High Sensitivity Universal Positional System</li>
-                </ul>
+                <div class="tech-row">Topographic profile scanner</div>
+                <div class="tech-row">Gyroscope</div>
+                <div class="tech-row">High Sensitivity Universal Positional System</div>
             </div>
         </div>
     </section>
