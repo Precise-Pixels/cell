@@ -66,41 +66,72 @@
         <div class="section-padding align-centre sdgrey">
             <h1 class="timeline-header"><i class="ico-calendar"></i>TIMELINE</h1>
         </div>
-        <div class="align-centre dgrey">
-            <div id="timeline">
-                <div id="timeline-wrapper">
+        <div id="timeline" class="dgrey">
+            <div id="timeline-wrapper">
 
-                    <div class="event founded">
-                        <div class="event-date-wrapper">
-                            <p class="event-date">1952</p>
-                        </div>
-                        <div class="event-img-wrapper">
-                            <img class="event-img" src="/img/placeholder.gif">
-                        </div> 
-                        <p class="event-text">Dr Lee felt the progression of technology was moving too slowly so he took a more active role in shaping the planets future. Thus, Cell Industries was born.</p>
+                <div class="event">
+                    <div class="event-date-wrapper">
+                        <p class="event-date">1952</p>
                     </div>
-
-                    <div class="event funding">
-                        <div class="event-date-wrapper">
-                            <p class="event-date">2005</p>
-                        </div>
-                        <div class="event-img-wrapper">
-                            <img class="event-img" src="/img/placeholder.gif">
-                        </div> 
-                        <p class="event-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero,rhoncus at sodales et, fringilla vitae justo. Suspendisse adipiscing nunc tortor, eget accumsan tellus</p>
-                    </div>
-
-                    <div class="event party">
-                        <div class="event-date-wrapper">
-                            <p class="event-date">2200</p>
-                        </div>
-                        <div class="event-img-wrapper">
-                            <img class="event-img" src="/img/placeholder.gif">
-                        </div> 
-                        <p class="event-text">Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,</p>
-                    </div>
-
+                    <p class="event-text">Founded and established with the vision to advance technology.</p>
                 </div>
+
+                <div class="event">
+                    <div class="event-date-wrapper">
+                        <p class="event-date">1960</p>
+                    </div> 
+                    <p class="event-text">The United Nations put their faith in Cell Industries and began to fund their projects.</p>
+                </div>
+
+                <div class="event">
+                    <div class="event-date-wrapper">
+                        <p class="event-date">1962</p>
+                    </div> 
+                    <p class="event-text">Received Royal backing from Queen Elizabeth II and the Royal Family to develop technology to protect the commonwealth.</p>
+                </div>
+
+                <div class="event">
+                    <div class="event-date-wrapper">
+                        <p class="event-date">1969</p>
+                    </div>
+                    <p class="event-text">Cell Industries assisted with the technology that was used for Apollo 11 and partnered with NASA to put the first man on the moon.</p>
+                </div>
+
+                <div class="event">
+                    <div class="event-date-wrapper">
+                        <p class="event-date">1978</p>
+                    </div>
+                    <p class="event-text">Cell Industries sponsored the research and development behind the first test tube baby born in the U.K.</p>
+                </div>
+
+                <div class="event">
+                    <div class="event-date-wrapper">
+                        <p class="event-date">1986</p>
+                    </div>
+                    <p class="event-text">Cell Industries funded research leading to the discovery of using human skin cells to create embryonic stem cells driving biological science into the future.</p>
+                </div>
+
+                <div class="event">
+                    <div class="event-date-wrapper">
+                        <p class="event-date">2000</p>
+                    </div>
+                    <p class="event-text">Joseph Williams published his research into QuantumCell&trade; technology and won a nobel prize in his field. A research facility dedicated to developing the technology was opened.</p>
+                </div>
+
+                <div class="event">
+                    <div class="event-date-wrapper">
+                        <p class="event-date">2007</p>
+                    </div>
+                    <p class="event-text">The first QuantumCell&trade; Clone Cube was created and the first environment was cloned, preserved and restored.</p>
+                </div>
+
+                <div class="event">
+                    <div class="event-date-wrapper">
+                        <p class="event-date">2014</p>
+                    </div>
+                    <p class="event-text"><a href="/project-titan">Project Titan</a> was launched to the public.</p>
+                </div>
+
             </div>
         </div>
     </section>
