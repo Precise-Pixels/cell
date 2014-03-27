@@ -17,6 +17,7 @@
 }
 
 .event {
+    width: 300px;
     height: 300px;
     float: left;
     vertical-align: top;
@@ -54,15 +55,3 @@
 .event-text {
     padding: 20px;
 }
-
-.founded,
-.funded,
-.backed,
-.moon-landing,
-.test-tube,
-.stem-cells,
-.research,
-.first-clone,
-.public {
-    width: 300px;  
- }

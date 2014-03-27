@@ -69,63 +69,63 @@
         <div id="timeline" class="dgrey">
             <div id="timeline-wrapper">
 
-                <div class="event founded">
+                <div class="event">
                     <div class="event-date-wrapper">
                         <p class="event-date">1952</p>
                     </div>
                     <p class="event-text">Founded and established with the vision to advance technology.</p>
                 </div>
 
-                <div class="event funded">
+                <div class="event">
                     <div class="event-date-wrapper">
                         <p class="event-date">1960</p>
                     </div> 
                     <p class="event-text">The United Nations put their faith in Cell Industries and began to fund their projects.</p>
                 </div>
 
-                <div class="event backed">
+                <div class="event">
                     <div class="event-date-wrapper">
                         <p class="event-date">1962</p>
                     </div> 
                     <p class="event-text">Received Royal backing from Queen Elizabeth II and the Royal Family to develop technology to protect the commonwealth.</p>
                 </div>
 
-                <div class="event moon-landing">
+                <div class="event">
                     <div class="event-date-wrapper">
                         <p class="event-date">1969</p>
                     </div>
                     <p class="event-text">Cell Industries assisted with the technology that was used for Apollo 11 and partnered with NASA to put the first man on the moon.</p>
                 </div>
 
-                <div class="event test-tube">
+                <div class="event">
                     <div class="event-date-wrapper">
                         <p class="event-date">1978</p>
                     </div>
                     <p class="event-text">Cell Industries sponsored the research and development behind the first test tube baby born in the U.K.</p>
                 </div>
 
-                <div class="event stem-cells">
+                <div class="event">
                     <div class="event-date-wrapper">
                         <p class="event-date">1986</p>
                     </div>
                     <p class="event-text">Cell Industries funded research leading to the discovery of using human skin cells to create embryonic stem cells driving biological science into the future.</p>
                 </div>
 
-                <div class="event research">
+                <div class="event">
                     <div class="event-date-wrapper">
                         <p class="event-date">2000</p>
                     </div>
                     <p class="event-text">Joseph Williams published his research into QuantumCell&trade; technology and won a nobel prize in his field. A research facility dedicated to developing the technology was opened.</p>
                 </div>
 
-                <div class="event first-clone">
+                <div class="event">
                     <div class="event-date-wrapper">
                         <p class="event-date">2007</p>
                     </div>
                     <p class="event-text">The first QuantumCell&trade; Clone Cube was created and the first environment was cloned, preserved and restored.</p>
                 </div>
 
-                <div class="event public">
+                <div class="event">
                     <div class="event-date-wrapper">
                         <p class="event-date">2014</p>
                     </div>
