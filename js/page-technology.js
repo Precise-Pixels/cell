@@ -61,7 +61,6 @@ function init() {
     $container.appendChild(renderer.domElement);
 
     animate();
-    loadStats();
 
     // Functions
     function animate() {

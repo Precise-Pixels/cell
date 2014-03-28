@@ -13,7 +13,7 @@
     <script src="/js/all.js"></script>
 
     <?php if($isTechnology): ?>
-        <script src="/js/threejs-stats-loaders-controls-stackblur.js"></script>
+        <script src="/js/threejs-loaders-controls-stackblur.js"></script>
         <script src="/js/page-technology.js"></script>
     <?php endif; ?>
 
@@ -65,7 +65,7 @@
     <script src="/build/all.min.js"></script>
 
     <?php if($isTechnology): ?>
-        <script src="/build/threejs-stats-loaders-controls-stackblur.min.js"></script>
+        <script src="/build/threejs-loaders-controls-stackblur.min.js"></script>
         <script src="/build/page-technology.min.js"></script>
     <?php endif; ?>
 
