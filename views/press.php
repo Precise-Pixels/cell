@@ -9,28 +9,30 @@
 
     <section>
         <div class="align-centre">
-            <div class="section-padding lgrey">
+            <div class="section-padding mblue">
                 <div id="press-email">
                     <p>For all enquiries please contact:</p>
-                    <a href="mailto:press@cell-industries.co.uk">press@cell-industries.co.uk</a>
+                    <p><a href="mailto:press@cell-industries.co.uk">press@cell-industries.co.uk</a></p>
                 </div>
             </div>
         </div>
     </section>
 
     <section>
-        <div id="press-pack" class="section-padding align-centre mblue">
+        <div id="press-pack" class="section-padding align-centre lgrey">
             <h1><i class="ico-press-pack"></i>PRESS PACK</h1>
-            <img src="/img/placeholder.gif" alt="Information pack"/>
+            <h2>Contains:</h2>
+            <p>Business card, Project Titan poster, Project Titan brochure</p>
+            <img src="/img/press-pack-promo.jpg" alt="Press pack"/>
             <div id="press-pack-download">
-                <a href="/" class="btn"><i class="ico-download"></i>DOWNLOAD</a>
+                <a href="/download/cell-industries-press-pack.zip" class="btn"><i class="ico-download"></i>DOWNLOAD <small>(3.4MB)</small></a>
             </div>
         </div>
     </section>
 
     <section>
-        <div class="align-centre lgrey">
-            <div class="half lgrey">
+        <div class="align-centre">
+            <div class="half mblue">
                 <blockquote>
                     <p>Without a doubt the most exciting and pioneering business of its time. Cell Industries excels where no other company can.</p>
                     <footer>Dolly Barr, Ewe Scientist</footer>
@@ -46,15 +48,16 @@
     </section>
     <section>
         <div class="align-centre lgrey">
-            <a href="/ted" class="cta cta--example half">
-                <hgroup class="align-vertical">
-                    <h1>TED Talk</h1>
-                </hgroup>
-            </a>
             <a href="/about" class="cta cta--about half">
                 <hgroup class="align-vertical">
                     <h1>About Cell</h1>
                     <h2>Find out about Cell Industries</h2>
+                </hgroup>
+            </a>
+            <a href="/project-titan" class="cta cta--pt-small half">
+                <hgroup class="align-vertical">
+                    <h1>Project Titan</h1>
+                    <h2>Discover the groundbreaking project</h2>
                 </hgroup>
             </a>
         </div>
