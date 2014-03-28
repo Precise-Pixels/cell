@@ -42,6 +42,23 @@
         </div>
     </section>
 
+    <section class="align-centre mblue">
+        <ol>
+            <li class="third">
+                <img src="/img/technology/cube-top.jpg" class="scale">
+                <p>Top</p>
+            </li>
+            <li class="third">
+                <img src="/img/technology/cube-side.jpg" class="scale">
+                <p>Side</p>
+            </li>
+            <li class="third">
+                <img src="/img/technology/cube-bottom.jpg" class="scale">
+                <p>Bottom</p>
+            </li>
+        </ol>
+    </section>
+
     <section>
         <div class="align-centre">
             <a href="the-cloning-process" class="cta cta--process half">
