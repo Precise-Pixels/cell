@@ -50,6 +50,7 @@ function init() {
     // Controls
     controls = new THREE.OrbitControls(camera, $container, '360', containerX);
     controls.noScrollZoom = true;
+    controls.maxDistance = 190;
     controls.addEventListener('change', render);
 
     // Render

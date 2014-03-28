@@ -9,7 +9,7 @@
 <main>
 
     <section>
-        <div class="section-padding align-centre">
+        <div class="align-centre">
             <div id="clone-cube"><img src="/img/clone-cube" alt="Clone Cube" class="full"></div>
         </div>
     </section>
