@@ -25,7 +25,7 @@
             <p>Business card, Project Titan poster, Project Titan brochure</p>
             <img src="/img/press-pack-promo.jpg" alt="Press pack"/>
             <div id="press-pack-download">
-                <a href="/download/press-pack.zip" class="btn"><i class="ico-download"></i>DOWNLOAD <small>(3.4MB)</small></a>
+                <a href="/download/cell-industries-press-pack.zip" class="btn"><i class="ico-download"></i>DOWNLOAD <small>(3.4MB)</small></a>
             </div>
         </div>
     </section>
