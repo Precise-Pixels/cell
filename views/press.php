@@ -23,7 +23,7 @@
             <h1><i class="ico-press-pack"></i>PRESS PACK</h1>
             <img src="/img/placeholder.gif" alt="Information pack"/>
             <div id="press-pack-download">
-                <a href="/" class="btn"><i class="ico-download"></i>DOWNLOAD</a>
+                <a href="/download/press-pack.zip" class="btn"><i class="ico-download"></i>DOWNLOAD</a>
             </div>
         </div>
     </section>
