@@ -45,15 +45,15 @@
     <section class="align-centre mblue">
         <ol>
             <li class="third">
-                <img src="/img/technology/cube-top.jpg" class="scale">
+                <img src="/img/technology/cube-top.jpg" class="scale" alt="Clone Cube Blueprint - Top">
                 <p>Top</p>
             </li>
             <li class="third">
-                <img src="/img/technology/cube-side.jpg" class="scale">
+                <img src="/img/technology/cube-side.jpg" class="scale" alt="Clone Cube Blueprint - Side">
                 <p>Side</p>
             </li>
             <li class="third">
-                <img src="/img/technology/cube-bottom.jpg" class="scale">
+                <img src="/img/technology/cube-bottom.jpg" class="scale" alt="Clone Cube Blueprint - Bottom">
                 <p>Bottom</p>
             </li>
         </ol>
