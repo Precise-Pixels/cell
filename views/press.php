@@ -9,7 +9,7 @@
 
     <section>
         <div class="align-centre">
-            <div class="section-padding lgrey">
+            <div class="section-padding mblue">
                 <div id="press-email">
                     <p>For all enquiries please contact:</p>
                     <p><a href="mailto:press@cell-industries.co.uk">press@cell-industries.co.uk</a></p>
@@ -19,18 +19,20 @@
     </section>
 
     <section>
-        <div id="press-pack" class="section-padding align-centre mblue">
+        <div id="press-pack" class="section-padding align-centre lgrey">
             <h1><i class="ico-press-pack"></i>PRESS PACK</h1>
+            <h2>Contains:</h2>
+            <p>Business card, Project Titan poster, Project Titan brochure</p>
             <img src="/img/press-pack-promo.jpg" alt="Press pack"/>
             <div id="press-pack-download">
-                <a href="/download/press-pack.zip" class="btn"><i class="ico-download"></i>DOWNLOAD</a>
+                <a href="/download/press-pack.zip" class="btn"><i class="ico-download"></i>DOWNLOAD <small>(3.4MB)</small></a>
             </div>
         </div>
     </section>
 
     <section>
-        <div class="align-centre lgrey">
-            <div class="half lgrey">
+        <div class="align-centre">
+            <div class="half mblue">
                 <blockquote>
                     <p>Without a doubt the most exciting and pioneering business of its time. Cell Industries excels where no other company can.</p>
                     <footer>Dolly Barr, Ewe Scientist</footer>
