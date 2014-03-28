@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<meta name="description" content=""/>
+<meta name="description" content="Cell Industries presents Project Titan - Preserving The Planet"/>
 <meta name="author" content="Precise Pixels"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
 <title>Cell Industries</title>
