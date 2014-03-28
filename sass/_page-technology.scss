@@ -5,7 +5,8 @@
 
 .tech-icons {
     margin-right: 0;
-    margin-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     display: block;
     font-size: 4rem;
     text-align: center;
@@ -13,9 +14,17 @@
 
 .tech-row {
     padding: 10px;
-
     &:nth-child(even) {
-        color: $lgrey;
-        background: $mblue;
+        background: #CCC;
+    }
+}
+
+@media ($min_bp_a) {
+    .tech-icons {
+        margin-right: 0;
+        padding-bottom: 40px;
+        display: block;
+        font-size: 4rem;
+        text-align: center;
     }
 }
