@@ -2,19 +2,24 @@
 // SANDBOX ?>
 
     <?php if($isHome): ?>
-        <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4&sensor=false&libraries=places'></script>
-        <script src='/js/page-home.js'></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4&sensor=false&libraries=places"></script>
+        <script src="/js/page-home.js"></script>
     <?php endif; ?>
 
     <?php if($isAbout): ?>
-        <script src='/js/timeline-scroll.js'></script>
+        <script src="/js/timeline-scroll.js"></script>
+    <?php endif; ?>
+
+    <script src="/js/all.js"></script>
+
+    <?php if($isTechnology): ?>
+        <script src="/js/threejs-stats-loaders-controls-stackblur.js"></script>
+        <script src="/js/page-technology.js"></script>
     <?php endif; ?>
 
     <?php if($isCloningProcess): ?>
         <script src='/js/page-the-cloning-process.js'></script>
     <?php endif; ?>
-
-    <script src='/js/all.js'></script>
 
     <?php if($isUser && isset($_SESSION['userId'])): ?>
         <script src='/js/page-user-profile.js'></script>
@@ -49,19 +54,24 @@
 // LIVE ?>
 
     <?php if($isHome): ?>
-        <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4&sensor=false&libraries=places'></script>
-        <script src='/build/page-home.min.js'></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4&sensor=false&libraries=places"></script>
+        <script src="/build/page-home.min.js"></script>
     <?php endif; ?>
 
     <?php if($isAbout): ?>
-        <script src='/build/timeline-scroll.min.js'></script>
+        <script src="/build/timeline-scroll.min.js"></script>
+    <?php endif; ?>
+
+    <script src="/build/all.min.js"></script>
+
+    <?php if($isTechnology): ?>
+        <script src="/build/threejs-stats-loaders-controls-stackblur.min.js"></script>
+        <script src="/build/page-technology.min.js"></script>
     <?php endif; ?>
 
     <?php if($isCloningProcess): ?>
         <script src='/build/page-the-cloning-process.min.js'></script>
     <?php endif; ?>
-
-    <script src='/build/all.min.js'></script>
 
     <?php if($isUser && isset($_SESSION['userId'])): ?>
         <script src='/build/page-user-profile.min.js'></script>

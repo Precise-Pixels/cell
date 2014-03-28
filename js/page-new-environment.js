@@ -392,7 +392,7 @@ if(Detector.webgl) {
             elevationsString = elevationsString.substring(0, elevationsString.length - 1);
 
             // Send elevationsString to PHP to generate and store image
-            var data = 'cLat=' + centreLat + '&cLon=' + centreLon + '&h=' + elevationsString + '&r=' + resolution + '&t=' + tileSize * 4 + '&n=' + encodeURIComponent(document.getElementsByName('new-env-name')[0].value);
+            var data = 'cLat=' + centreLat + '&cLon=' + centreLon + '&h=' + elevationsString + '&r=' + resolution + '&t=' + tileSize * 4 + '&n=' + encodeURIComponent(document.getElementById('new-env-name').value);
 
             var request = new XMLHttpRequest;
             request.open('POST', '/php/cloneEnv.php', true);

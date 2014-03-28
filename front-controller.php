@@ -14,6 +14,7 @@ if(empty($path)) {                                  // HOME
 
 $isHome               = ($q == '');
 $isAbout              = preg_match('#about/?$#', $q);
+$isTechnology         = preg_match('#technology/?$#', $q);
 $isCloningProcess     = preg_match('#the-cloning-process/?$#', $q);
 $isUser               = preg_match('#user\/[0-9a-zA-Z]+/?$#', $q);
 $isEnv                = preg_match('#env\/\d+/?$#', $q);
