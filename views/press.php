@@ -21,7 +21,7 @@
     <section>
         <div id="press-pack" class="section-padding align-centre mblue">
             <h1><i class="ico-press-pack"></i>PRESS PACK</h1>
-            <img src="/img/placeholder.gif" alt="Information pack"/>
+            <img src="/img/press-pack-promo.jpg" alt="Press pack"/>
             <div id="press-pack-download">
                 <a href="/download/press-pack.zip" class="btn"><i class="ico-download"></i>DOWNLOAD</a>
             </div>
