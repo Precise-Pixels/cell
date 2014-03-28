@@ -174,9 +174,9 @@ if(Detector.webgl) {
         warnUnavailable.id      = 'new-env-warn-unavailable';
         warnNoName.id           = 'new-env-warn-name';
         warnProfanity.id        = 'new-env-warn-profanity';
-        warnNoTile.innerHTML    = 'Please select an area on the map.';
-        warnNoName.innerHTML    = 'Please enter a name for your environment.';
-        warnProfanity.innerHTML = 'No profanity please.';
+        warnNoTile.innerHTML    = '<i class="ico-info"></i>Please select an area on the map.';
+        warnNoName.innerHTML    = '<i class="ico-info"></i>Please enter a name for your environment.';
+        warnProfanity.innerHTML = '<i class="ico-info"></i>No profanity please.';
 
         cloneBtn.addEventListener('click', function(e) {
             validate();
@@ -392,7 +392,7 @@ if(Detector.webgl) {
             elevationsString = elevationsString.substring(0, elevationsString.length - 1);
 
             // Send elevationsString to PHP to generate and store image
-            var data = 'cLat=' + centreLat + '&cLon=' + centreLon + '&h=' + elevationsString + '&r=' + resolution + '&t=' + tileSize * 4 + '&n=' + encodeURIComponent(document.getElementsByName('new-env-name')[0].value);
+            var data = 'cLat=' + centreLat + '&cLon=' + centreLon + '&h=' + elevationsString + '&r=' + resolution + '&t=' + tileSize * 4 + '&n=' + encodeURIComponent(document.getElementById('new-env-name').value);
 
             var request = new XMLHttpRequest;
             request.open('POST', '/php/cloneEnv.php', true);

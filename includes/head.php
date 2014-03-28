@@ -32,7 +32,33 @@
     <meta property="og:description" content="Cell Industries presents Project Titan - Preserving The Planet"/>
 <?php endif; ?>
 
+<!--[if lte IE 9]>
+<style>
+    .cube > div {
+        display: none;
+    }
+</style>
+<![endif]-->
+
 <!--[if lt IE 9]>
+<style>
+    .site-nav--open #site-nav {
+        left: 0;
+    }
+
+    .user-nav--open #user-menu-wrapper {
+        right: 0;
+    }
+
+    .ball {
+        display: none;
+    }
+
+    #fixed-header {
+        background: #333;
+    }
+</style>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<script src="/js/respond.min.js"></script>
+<script src="/build/respond.min.js"></script>
+<script src="/build/ie8.min.js"></script>
 <![endif]-->

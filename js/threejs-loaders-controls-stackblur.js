@@ -1714,6 +1714,7 @@ THREE.OrbitControls = function ( object, domElement ) {
     // This option actually enables dollying in and out; left as "zoom" for
     // backwards compatibility
     this.noZoom = false;
+    this.noScrollZoom = false;
     this.zoomSpeed = 1.0;
     // Limits to how far you can dolly in and out
     this.minDistance = 100;
@@ -1974,7 +1975,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 
     function onMouseWheel( event ) {
 
-        if ( scope.noZoom === true ) return;
+        if ( scope.noZoom === true || scope.noScrollZoom === true ) return;
 
         var delta = 0;
 

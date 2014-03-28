@@ -1,0 +1,26 @@
+#clone-cube {
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.tech-icons {
+    margin-right: 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: block;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.tech-row {
+    padding: 10px;
+    &:nth-child(even) {
+        background: #CCC;
+    }
+}
+
+@media ($min_bp_a) {
+    .tech-icons {
+        padding-top: 0;
+    }
+}

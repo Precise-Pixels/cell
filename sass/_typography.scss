@@ -82,6 +82,10 @@ a.cta {
     }
 }
 
+a img {
+    border: 0;
+}
+
 .warn {
     padding: 10px;
     color: $lgrey;
@@ -113,7 +117,7 @@ blockquote {
 }
 
 blockquote p:before {
-    content: '“';
+    content: "\201c";
     margin-right: 14px;
     vertical-align: -20px;
     font-size: 4rem;
@@ -121,14 +125,14 @@ blockquote p:before {
 }
 
 blockquote p:after {
-    content: '”';
+    content: "\201D";
     vertical-align: -20px;
     font-size: 4rem;
     font-weight: 600;
 }
 
 blockquote footer:before {
-    content: '—';
+    content: '\2014';
     margin-right: 10px;
 }
 

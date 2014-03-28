@@ -1,0 +1,305 @@
+.the-cloning-process {
+    #top-bar,
+    #user-arrow {
+        background: $dgrey;
+    }
+
+    main {
+        margin-top: 40px;
+    }
+
+    footer {
+        display: none;
+    }
+}
+
+#ig-slides {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    margin: 0 auto;
+    transition: top .6s;
+}
+
+.ig-slide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    & > div,
+    & > img {
+        user-select: none;
+    }
+}
+
+.ig-slide {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.ig-slide--1 {
+    background-image: url(/img/infographic/1.jpg);
+}
+
+.ig-slide--2 {
+    background-image: url(/img/infographic/2.jpg);
+}
+
+.ig-slide--3 {
+    background-image: url(/img/infographic/3.jpg);
+}
+
+.ig-slide--4 {
+    background-image: url(/img/infographic/4.jpg);
+}
+
+.ig-current-slide--1 {
+    top: 0;
+}
+
+.ig-current-slide--2 {
+    top: -100%;
+}
+
+.ig-current-slide--3 {
+    top: -200%;
+}
+
+.ig-current-slide--4,
+.ig-current-slide--5 {
+    top: -300%;
+}
+
+#ig-prev,
+#ig-next {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    cursor: pointer;
+    font-size: 3rem;
+    text-align: center;
+    color: $lgrey;
+}
+
+#ig-prev {
+    top: 40px;
+}
+
+#ig-next {
+    bottom: 0;
+}
+
+.ig-current-slide--1 ~ #ig-prev,
+.ig-current-slide--5 ~ #ig-next {
+    display: none;
+}
+
+#ig-title {
+    width: 100%;
+    position: absolute;
+    top: 10%;
+    text-align: center;
+    color: #FFF;
+    z-index: 4;
+}
+
+.ig-text {
+    width: 94%;
+    position: absolute;
+    bottom: 10%;
+    padding: 40px;
+    margin: 0 3%;
+    font-weight: 400;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+    background: #333;
+    background: rgba(#333, .4);
+}
+
+.ig-text--5 {
+    display: none;
+}
+
+#ig-cube {
+    width: 12%;
+    position: fixed;
+    margin-top: -6%;
+    margin-left: -6%;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+}
+
+#ig-cube-fire {
+    width: 28%;
+    position: fixed;
+    margin-top: -14%;
+    margin-left: -14%;
+    top: 50%;
+    left: 50%;
+    display: none;
+    z-index: 3;
+    animation: ig-cube-2 .1s alternate infinite linear;
+}
+
+#ig-thrusters {
+    width: 12%;
+    position: fixed;
+    margin-top: -6%;
+    margin-left: -6%;
+    top: 50%;
+    left: 50%;
+    display: none;
+    z-index: 1;
+}
+
+.ig-animate {
+    position: absolute;
+}
+
+.ig-transition-complete {
+    &.ig-current-slide--1 {
+        ~ #ig-cube {
+            animation: ig-cube-1 3s ease-in-out;
+        }
+    }
+
+    &.ig-current-slide--2 {
+        ~ #ig-cube {
+            animation: ig-cube-2 .1s alternate infinite linear;
+        }
+        ~ #ig-cube-fire {
+            display: block;
+        }
+    }
+
+    &.ig-current-slide--3 {
+        ~ #ig-thrusters {
+            display: block;
+            animation: ig-cube-3-thrusters 2s alternate infinite linear;
+        }
+    }
+
+    &.ig-current-slide--4 {
+        #ig-scanner-wrapper {
+            display: block;
+        }
+    }
+
+    &.ig-current-slide--5 {
+        ~ #ig-cube {
+            animation: ig-cube-5 1s ease-in;
+            animation-fill-mode: both;
+        }
+        .ig-text--4 {
+            display: none;
+        }
+        .ig-text--5 {
+            display: block;
+        }
+        #ig-cta {
+            display: block;
+            animation: ig-cta 2s linear;
+        }
+    }
+}
+
+@keyframes ig-cube-1 {
+    0%   { width: 0%;  top: 38%; left: 74%; }
+    15%  { opacity: 0; }
+    50%  {                       left: 45%; }
+    100% { width: 12%; top: 50%; left: 50%; }
+}
+
+@keyframes ig-cube-2 {
+    0%   { left: 50%; }
+    100% { left: 51%; }
+}
+
+@keyframes ig-cube-3-thrusters {
+    0%   { top: 50%; opacity: 1; }
+    100% { top: 49%; opacity: 0.5; }
+}
+
+@keyframes ig-cube-5 {
+    0%   { top: 50%; }
+    100% { top: -10%; }
+}
+
+#ig-satellite {
+    height: 25%;
+    top: 12%;
+    left: 8%;
+    animation: ig-satellite 7s alternate infinite ease-in-out;
+}
+
+@keyframes ig-satellite {
+   0%   { top: 15%; }
+   100% { top: 10%; }
+}
+
+#ig-plane {
+    height: 6%;
+    top: 15%;
+    left: 20%;
+    animation: ig-plane 10s infinite linear;
+}
+
+@keyframes ig-plane {
+    0%   { left: 100%; }
+    100% { left: -20%; }
+}
+
+#ig-scanner-wrapper {
+    width: 50%;
+    margin-top: -25%;
+    margin-left: -25%;
+    top: 50%;
+    left: 50%;
+    display: none;
+    perspective: 300px;
+    perspective-origin: 50%;
+}
+
+#ig-scanner {
+    width: 100%;
+    transform-style: preserve-3d;
+    animation: ig-scanner 4s infinite linear;
+}
+
+@keyframes ig-scanner {
+    0%   { opacity: 0; transform: translateX(-50%) rotateY(180deg); }
+    25%  { opacity: 1; }
+    50%  { opacity: 0; transform: translateX(50%)  rotateY(360deg); }
+    51%  { opacity: 0; transform: translateY(-50%) rotateX(360deg) rotateZ(270deg); }
+    75%  { opacity: 1; }
+    100% { opacity: 0; transform: translateY(50%)  rotateX(180deg) rotateZ(270deg); }
+}
+
+#ig-cta {
+    top: 20%;
+    position: absolute;
+    left: 0;
+    display: none;
+}
+
+@keyframes ig-cta {
+    0%    { opacity: 0; }
+    100%  { opacity: 1; }
+}
+
+@media ($min-bp-b) {
+    
+    #ig-cta {
+        top: 30%;
+    }
+
+    .ig-text {
+        max-width: 800px;
+        left: 50%;
+        margin-left: -400px;
+    }
+
+}
