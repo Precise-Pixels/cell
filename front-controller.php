@@ -1,4 +1,6 @@
 <?php
+ob_start();
+session_start();
 
 $q = $_GET['q'];
 

@@ -1,5 +1,3 @@
-<?php require_once('includes/session.php'); ?>
-
 <!DOCTYPE HTML>
 <html class="no-webgl no-webrtc no-cssfilter">
 <head>
