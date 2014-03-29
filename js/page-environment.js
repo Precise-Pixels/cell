@@ -159,7 +159,7 @@ function init() {
 var envData = document.getElementById('env-data');
 var UTM = latLonToUTM(latitude, longitude);
 
-var data = 'u=' + encodeURIComponent('http://api.wolframalpha.com/v2/query?appid=&format=plaintext&input=' + UTM);
+var data = 'u=' + encodeURIComponent('http://api.wolframalpha.com/v2/query?appid=WXLG6E-WP5KKHL9GR&format=plaintext&input=' + UTM);
 var request = new XMLHttpRequest;
 request.open('POST', '/php/getWolframData.php', true);
 request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
