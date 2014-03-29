@@ -108,6 +108,13 @@
     padding-bottom: 56.25%;
 }
 
+.homepage-hidden-search {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+    opacity: 0;
+}
+
 #homepage-map-info {
     position: relative;
 }

@@ -30,6 +30,7 @@
     <section class="dgrey">
         <div class="section-padding align-centre">
             <div id="homepage-map"></div>
+            <input type="text" placeholder="Search Box" id="pac-input" class="homepage-hidden-search" autofocus>
         </div>
     </section>
 
