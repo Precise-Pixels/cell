@@ -23,6 +23,7 @@
             <p>When using our site, we may set cookies on your computer in order to assist with providing you a great user experience.</p>
             <p>We or our third-party providers may set the following cookies whilst using our site:</p>
             <ul>
+                <li>cookiesMessage - set by us to hide the cookies message you saw when you first came to the site</li>
                 <li>preventRecapture - set by us to ensure errors do not occur when capturing an environment</li>
                 <li>Session cookies - set by us in order to ensure that you remain signed in throughout the site</li>
                 <li>Google Analytics - set by Google in order to provide us with useful statistics regarding your visit</li>
