@@ -110,10 +110,15 @@ function init() {
         renderer.setSize(containerX, containerY);
     }
 
-    function switchInteraction(interaction, e) {
-        if(e.target.className.match(/btn--selected/)) { return false; }
+    window.addEventListener('resize', onWindowResize);
+}
 
-        resetClassNames();
+function switchInteraction(interaction, e) {
+    if(e.target.className.match(/btn--selected/) || e.target.parentElement.className.match(/btn--selected/)) { return false; }
+
+    if(Detector.webrtc) {
+        iDefault.className = iWebcam.className = 'btn btn--interact';
+        document.body.className = document.body.className.replace(' env--webcam', '');
 
         switch(interaction) {
             case 'default':
@@ -122,37 +127,25 @@ function init() {
                 controls.autoRotate = true;
                 break;
             case 'webcam':
-                iWebcam.className += ' btn--selected';
-                if(Detector.webrtc) {
-                    if((window.innerWidth || document.documentElement.clientWidth) < 800) {
-                        alert('Please note, this is an experimental feature. Although it does work on some devices, the performance may be very slow.');
-                    }
-                    initWebcam();
-                    controls.autoRotate = false;
-                } else {
-                    alert('Your browser does not support webcam interaction.');
-                    resetClassNames();
-                    iDefault.className += ' btn--selected';
-                    controls.autoRotate = true;
+                if((window.innerWidth || document.documentElement.clientWidth) < 800) {
+                    alert('Please note, this is an experimental feature. Although it does work on some devices, the performance may be very slow.');
                 }
+                iWebcam.className += ' btn--selected';
+                initWebcam();
+                controls.autoRotate = false;
                 break;
         }
-
-        function resetClassNames() {
-            iDefault.className = iWebcam.className = 'btn btn--interact';
-            document.body.className = document.body.className.replace(' env--webcam', '');
-        }
+    } else {
+        alert('Your browser does not support webcam interaction.');
     }
-
-    // Events
-    var iDefault = document.getElementById('default');
-    var iWebcam  = document.getElementById('webcam');
-
-    iDefault.addEventListener('click', function(e) { switchInteraction('default', e); });
-    iWebcam.addEventListener('click', function(e) { switchInteraction('webcam', e); });
-
-    window.addEventListener('resize', onWindowResize);
 }
+
+// Events
+var iDefault = document.getElementById('default');
+var iWebcam  = document.getElementById('webcam');
+
+iDefault.addEventListener('click', function(e) { switchInteraction('default', e); });
+iWebcam.addEventListener('click', function(e) { switchInteraction('webcam', e); });
 
 
 // WolframAlpha
