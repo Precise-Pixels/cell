@@ -20,6 +20,14 @@ window.addEventListener('mousewheel', function(e) {
     }
 });
 
+window.addEventListener('DOMMouseScroll', function(e) {
+    if(e.detail < 0) {
+        prevSlide();
+    } else {
+        nextSlide();
+    }
+});
+
 window.addEventListener('keydown', function(e) {
     if(e.which == 38) {
         prevSlide();
