@@ -13,7 +13,7 @@
     <script src="/js/all.js"></script>
 
     <?php if($isTechnology): ?>
-        <script src="/js/threejs-stats-loaders-controls-stackblur.js"></script>
+        <script src="/js/threejs-loaders-controls-stackblur.js"></script>
         <script src="/js/page-technology.js"></script>
     <?php endif; ?>
 
@@ -32,7 +32,7 @@
             var latitude  = <?= $env->latitude; ?>;
             var longitude = <?= $env->longitude; ?>;
         </script>
-        <script src="/js/threejs-stats-loaders-controls-stackblur.js"></script>
+        <script src="/js/threejs-loaders-controls-stackblur.js"></script>
         <script src="/js/page-environment.js"></script>
         <script src="/js/gesture.js"></script>
         <div id="fb-root"></div>
@@ -46,7 +46,7 @@
     <?php endif; ?>
 
     <?php if($isCapturing): ?>
-        <script src="/js/threejs-stats-loaders-controls-stackblur.js"></script>
+        <script src="/js/threejs-loaders-controls-stackblur.js"></script>
         <script src="/js/page-capturing-environment.js"></script>
     <?php endif; ?>
 
@@ -65,7 +65,7 @@
     <script src="/build/all.min.js"></script>
 
     <?php if($isTechnology): ?>
-        <script src="/build/threejs-stats-loaders-controls-stackblur.min.js"></script>
+        <script src="/build/threejs-loaders-controls-stackblur.min.js"></script>
         <script src="/build/page-technology.min.js"></script>
     <?php endif; ?>
 
@@ -79,7 +79,7 @@
 
     <?php if($isEnv): ?>
         <script>var userId=<?= $userId; ?>,envId=<?= $envId; ?>,latitude=<?= $env->latitude; ?>,longitude=<?= $env->longitude; ?>;</script>
-        <script src="/build/threejs-stats-loaders-controls-stackblur.min.js"></script>
+        <script src="/build/threejs-loaders-controls-stackblur.min.js"></script>
         <script src="/build/page-environment.min.js"></script>
         <script src="/build/gesture.min.js"></script>
         <div id="fb-root"></div>
@@ -93,7 +93,7 @@
     <?php endif; ?>
 
     <?php if($isCapturing): ?>
-        <script src="/build/threejs-stats-loaders-controls-stackblur.min.js"></script>
+        <script src="/build/threejs-loaders-controls-stackblur.min.js"></script>
         <script src="/build/page-capturing-environment.min.js"></script>
     <?php endif; ?>
 
