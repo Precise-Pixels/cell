@@ -1,9 +1,9 @@
 <?php if($_SERVER['SERVER_NAME'] == 'cell.dev'):
 // SANDBOX ?>
 
-    <?php if($isHome): ?>
+    <?php if($isProgress): ?>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4&sensor=false&libraries=places"></script>
-        <script src="/js/page-home.js"></script>
+        <script src="/js/page-progress.js"></script>
     <?php endif; ?>
 
     <?php if($isAbout): ?>

@@ -15,6 +15,7 @@ if(empty($path)) {                                  // HOME
 }
 
 $isHome               = ($q == '');
+$isProgress           = preg_match('#progress/?$#', $q);
 $isAbout              = preg_match('#about/?$#', $q);
 $isTechnology         = preg_match('#technology/?$#', $q);
 $isCloningProcess     = preg_match('#the-cloning-process/?$#', $q);
