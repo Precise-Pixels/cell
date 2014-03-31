@@ -3,6 +3,7 @@ var igSlides = document.getElementById('ig-slides');
 var igPrev   = document.getElementById('ig-prev');
 var igNext   = document.getElementById('ig-next');
 var currentSlide = 1;
+var sliding = false;
 
 igPrev.addEventListener('click', function() {
     prevSlide();
@@ -37,6 +38,7 @@ window.addEventListener('keydown', function(e) {
 });
 
 function prevSlide() {
+    if(sliding)           { return false; }
     if(currentSlide == 1) { return false; }
     currentSlide--;
     updateSlide();
@@ -44,6 +46,7 @@ function prevSlide() {
 }
 
 function nextSlide() {
+    if(sliding)           { return false; }
     if(currentSlide == 5) { return false; }
     currentSlide++;
     updateSlide();
@@ -52,6 +55,7 @@ function nextSlide() {
 
 function updateSlide() {
     igSlides.className = 'ig-current-slide--' + currentSlide;
+    sliding = true;
 }
 
 // Add a class when CSS transition is complete
@@ -59,6 +63,7 @@ igSlides.addEventListener(whichTransitionEvent(), transitionComplete);
 
 function transitionComplete() {
     igSlides.className += ' ig-transition-complete';
+    sliding = false;
 }
 
 function whichTransitionEvent() {
