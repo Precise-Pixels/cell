@@ -2,25 +2,26 @@ var down = false;
 var scrollLeft = 0;
 var x = 0;
 
-var timeline = document.getElementById('timeline');
+var timeline        = document.getElementById('timeline');
+var timelineWrapper = document.getElementById('timeline-wrapper');
 
-timeline.addEventListener('mousedown', function(e) {
+timelineWrapper.addEventListener('mousedown', function(e) {
     down = true;
-    scrollLeft = this.scrollLeft;
+    scrollLeft = timeline.scrollLeft;
     x = e.clientX; 
 });
 
-timeline.addEventListener('mouseup', function() {
+timelineWrapper.addEventListener('mouseup', function() {
     down = false;
 });
 
-timeline.addEventListener('mousemove', function(e) {
+timelineWrapper.addEventListener('mousemove', function(e) {
     e.preventDefault();
     if(down && e.which == 1) {
-        this.scrollLeft = scrollLeft + x - e.clientX;
+        timeline.scrollLeft = scrollLeft + x - e.clientX;
     }
 });
 
-timeline.addEventListener('mouseleave', function() {
+timelineWrapper.addEventListener('mouseleave', function() {
     down = false;
 });

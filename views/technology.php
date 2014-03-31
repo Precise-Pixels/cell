@@ -10,7 +10,7 @@
 
     <section>
         <div class="align-centre">
-            <div id="clone-cube"><img src="/img/clone-cube" alt="Clone Cube" class="full"></div>
+            <div id="clone-cube"><img src="/img/clone-cube.png" alt="Clone Cube" class="full"></div>
         </div>
     </section>
 

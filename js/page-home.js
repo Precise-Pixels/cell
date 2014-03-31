@@ -132,3 +132,9 @@ function init() {
         percentage.innerHTML   = (locLength / 167076 * 100).toFixed(2) + '%';
     }
 }
+
+// Activating the search box seems to get around the z-index map issue
+// Create the hidden search box and link it to the UI element
+var input = document.getElementById('pac-input');
+var searchBox = new google.maps.places.SearchBox(input);
+input.style.display = 'none';

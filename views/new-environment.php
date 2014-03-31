@@ -27,7 +27,7 @@
 
         <script type="text/x-new-env-interface-markup" id="new-env-interface-markup">
             <div class="align-centre mblue">
-                <input type="text" placeholder="Search Box" id="pac-input" class="controls">
+                <input type="text" placeholder="Search Box" id="pac-input" class="controls" autofocus>
                 <div id="new-env-map"></div>
 
                 <div id="new-env-form" class="section-padding mblue">

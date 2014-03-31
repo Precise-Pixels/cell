@@ -10,6 +10,7 @@
     z-index: 2;
     hgroup {
         transform: translate3d(0, 0, 0);
+        z-index: 2;
     }
 
     h1 {
@@ -81,6 +82,7 @@
     position: absolute;
     left: 0;
     bottom: 0;
+    border: 0;
     font-size: 3rem;
     text-align: center;
     color: $lgrey;

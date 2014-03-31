@@ -79,6 +79,7 @@
     font-size: 3rem;
     text-align: center;
     color: $lgrey;
+    z-index: 5;
 }
 
 #ig-prev {
@@ -107,10 +108,10 @@
     width: 94%;
     position: absolute;
     bottom: 10%;
-    padding: 40px;
+    padding: 20px;
     margin: 0 3%;
     font-weight: 400;
-    font-size: 1.4rem;
+    font-size: 1rem;
     text-align: center;
     color: #fff;
     text-shadow: 0 0 5px #000;
@@ -249,7 +250,7 @@
 
 @keyframes ig-plane {
     0%   { left: 100%; }
-    100% { left: -20%; }
+    100% { left: -60%; }
 }
 
 #ig-scanner-wrapper {
@@ -300,6 +301,8 @@
         max-width: 800px;
         left: 50%;
         margin-left: -400px;
+        padding: 40px;
+        font-size: 1.4rem;
     }
 
 }
