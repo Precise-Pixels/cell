@@ -74,7 +74,7 @@
                     <a href="?page=<?= $page - 1; ?>" class="btn pagination-previous"><i class="ico-arrow-down"></i>PREVIOUS</a>
                 <?php endif; ?>
 
-                <span><?= $page; ?> of <?= ceil(count($totalEnvironments) / 12); ?></span>
+                <span><?= $page; ?> of <?= (count($totalEnvironments) == 0 ? '1' : ceil(count($totalEnvironments) / 12)); ?></span>
 
                 <?php if($page >= ceil(count($totalEnvironments) / 12)): ?>
                     <div class="btn btn--disabled pagination-next">NEXT<i class="ico-arrow-up"></i></div>
