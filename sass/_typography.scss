@@ -103,6 +103,14 @@ a img {
 
 .success {
     background: $green;
+    a {
+        font-weight: 600;
+        border-bottom: 1px solid $lgrey;
+        &:hover {
+            color: $lgrey;
+            border-bottom: 1px solid $lgrey;
+        }
+    }
 }
 
 blockquote {

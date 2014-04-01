@@ -66,7 +66,7 @@ class LoginSystem {
 
         MailClient::sendMsg($email, 'Verify your MyCell account', "Please follow this link to verify your MyCell account: http://cell-industries.co.uk/verify-account?e=$email&r=$rand1");
 
-        return LoginSystem::wrapStart . 'Account successfully created. We have sent a verification link to your email. Please verify your account before attempting to sign in. If you have not receive a verification email, please check your spam/junk or <a href="resend-validation-email">request another verification email</a>.' . LoginSystem::wrapEnd;
+        return '<p class="full success"><i class="ico-info"></i>Account successfully created. We have sent a verification link to your email. Please verify your account before attempting to sign in. If you have not receive a verification email, please check your spam/junk or <a href="resend-validation-email">request another verification email</a>.' . LoginSystem::wrapEnd;
     }
 
     static function resendValidationEmail($email) {
