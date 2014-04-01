@@ -221,7 +221,7 @@ if(Detector.webgl) {
                                         var containsProfanity = request2.responseText;
 
                                         if(!containsProfanity) {
-                                            document.getElementById('full-page-overlay--loading').className += ' full-page-overlay--loading';
+                                            document.getElementById('full-page-overlay').className += ' full-page-overlay--loading';
                                             generateEnv(lat1, lon1, lat2, lon2);
                                         } else {
                                             var warnNoNameElem = document.getElementById('new-env-warn-name');
