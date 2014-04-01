@@ -40,12 +40,14 @@
     </section>
 
     <section id="environment-listing" class="section--spacer sdgrey">
+        <?php if(!empty($environments)): ?>
+            <div id="no-environments" class="section-padding">
+                <h1>Here are your cloned environments, <a href="/user/<?= $_SESSION['username']; ?>/env/new">why not clone another?</a></h1>
+            </div>
+        <?php endif; ?>
         <div class="align-centre">
             <?php if(!empty($environments)):
                 foreach($environments as $env): ?>
-                <div id="no-environments" class="section-padding">
-                    <h1>Here are your cloned environments, <a href="/user/<?= $_SESSION['username']; ?>/env/new">why not clone another?</a></h1>
-                </div>
                     <a href="/user/<?= $user->username; ?>/env/<?= $env->envId; ?>">
                         <div class="imagebox zoombox quarter mblue">
                             <figure>
