@@ -22,10 +22,10 @@
                         $response = $loginSystem->sendResetPasswordLink($email);
                         echo $response;
                     } else {
-                        echo '<p class="full warn"><i class="ico-info"></i>No account with this email exists.</p>';
+                        echo '<p class="full warn"><i class="ico-warning"></i>No account with this email exists.</p>';
                     }
                 } else {
-                    echo '<p class="full warn"><i class="ico-info"></i>Please enter your email.</p>';
+                    echo '<p class="full warn"><i class="ico-warning"></i>Please enter your email.</p>';
                 }
             }
             ?>
