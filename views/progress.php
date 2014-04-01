@@ -24,12 +24,12 @@
                 <p>PARTICIPANTS</p>
             </div>
             <div class="progress-map-data zoom-text third">
-                <h2 id="progress-map-env-perc" class="progress-map-data">&nbsp;</h2>
-                <p>OF THE PLANET PRESERVED</p>
-            </div>
-            <div class="progress-map-data zoom-text third">
                 <h2 id="progress-map-data--environments">&nbsp;</h2>
                 <p>ENVIRONMENTS CLONED</p>
+            </div>
+            <div class="progress-map-data zoom-text third">
+                <h2 id="progress-map-env-perc" class="progress-map-data">&nbsp;</h2>
+                <p>OF THE PLANET PRESERVED</p>
             </div>
         </div>
     </section>

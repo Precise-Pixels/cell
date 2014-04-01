@@ -15,31 +15,37 @@
     h1 {
         position: relative;
         display: inline-block;
-        top: -48px;
-        font-size: 6rem;
+        top: -35px;
+        font-size: 3rem;
     }
     h2 {
         margin-top: 60px;
-        font-size: 2rem;
+        font-size: 1.4rem;
         font-weight: 200;
     }
     h3 {
         margin-top: 60px;
-        font-size: 3.4rem;
+        font-size: 3rem;
         font-weight: 200;
     }    
 }
 
 #primary-header-padding {
-        padding: 140px 0;
+        padding-top: 60px;
+}
+
+#homepage-fixed-header {
+    height: 1000px;
+    position: fixed;
+    display: table;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+    transition: opacity .8s;
 }
 
 .cube-wrapper {
-    // float: left;
-    // // position: absolute;
-    // // top: 32%;
-    // // left: 0;
-    // // right: 0;
     display: inline-block;
     margin-right: 50px;
     perspective: 800px;
@@ -48,7 +54,7 @@
 }
 
 .cube {
-    width: 150px;
+    width: 100px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
@@ -63,27 +69,27 @@
 
 .cube > div {
     position: absolute;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     display: block;
     opacity: .3;
     background: url(/img/cube-bg.jpg);
 }
 
 .front {
-    transform: translateZ(75px);
+    transform: translateZ(50px);
 }
 
 .right {
-    transform: rotateY(90deg) translateZ(75px);
+    transform: rotateY(90deg) translateZ(50px);
 }
 
 .back {
-    transform: translateZ(-75px) rotateY(180deg);
+    transform: translateZ(-50px) rotateY(180deg);
 }
 
 .left {
-    transform: rotateY(270deg) translateZ(75px);
+    transform: rotateY(270deg) translateZ(50px);
 }
 
 .cube > img {
@@ -101,20 +107,12 @@
     text-align: center;
 }
 
-#homepage-arrow {
-    margin-top: 50px;
-    font-size: 3rem;
-}
-
 #homepage-main {
-    margin-top: 0;
-    padding-top: 0;
+    margin-top: 600px;
 }
 
-.homepage-icon {
-    i {
-        font-size: 14rem;
-    }     
+#homepage-diagram {
+    text-align: center;
 }
 
 #homepage-sign-up {
