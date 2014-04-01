@@ -65,6 +65,8 @@ function init() {
 
     var cubeFaceMaterials = [podiumShader, podiumShader, dispMapShader, podiumBottom, podiumShader, podiumShader];
 
+    var lineMaterial = new THREE.LineBasicMaterial({ color: 0xeeeeee, transparent: true, opacity: .5 });
+
     // Geometry
     var geometry = new THREE.CubeGeometry(100, 2, 100, 200, 1, 200, cubeFaceMaterials);
     geometry.computeTangents();
@@ -72,6 +74,64 @@ function init() {
     var podium = new THREE.Mesh(geometry, new THREE.MeshFaceMaterial(cubeFaceMaterials));
 
     scene.add(podium);
+
+    var rulerGeometry = new THREE.Geometry();
+    rulerGeometry.vertices.push(new THREE.Vector3(-50, 1, 52));
+    rulerGeometry.vertices.push(new THREE.Vector3(-50, 1, 55));
+    rulerGeometry.vertices.push(new THREE.Vector3(50, 1, 55));
+    rulerGeometry.vertices.push(new THREE.Vector3(50, 1, 52));
+
+    var fiveGeometry = new THREE.Geometry();
+    fiveGeometry.vertices.push(new THREE.Vector3(-1, 1, 56));
+    fiveGeometry.vertices.push(new THREE.Vector3(-3, 1, 56));
+    fiveGeometry.vertices.push(new THREE.Vector3(-3, 1, 57));
+    fiveGeometry.vertices.push(new THREE.Vector3(-1, 1, 57));
+    fiveGeometry.vertices.push(new THREE.Vector3(-1, 1, 58));
+    fiveGeometry.vertices.push(new THREE.Vector3(-1.4, 1, 58.5));
+    fiveGeometry.vertices.push(new THREE.Vector3(-1.7, 1, 59));
+    fiveGeometry.vertices.push(new THREE.Vector3(-2.3, 1, 59));
+    fiveGeometry.vertices.push(new THREE.Vector3(-2.6, 1, 58.5));
+    fiveGeometry.vertices.push(new THREE.Vector3(-3, 1, 58));
+
+    var zeroGeometry = new THREE.Geometry();
+    zeroGeometry.vertices.push(new THREE.Vector3(0.5, 1, 56));
+    zeroGeometry.vertices.push(new THREE.Vector3(1.5, 1, 56));
+    zeroGeometry.vertices.push(new THREE.Vector3(2, 1, 57));
+    zeroGeometry.vertices.push(new THREE.Vector3(2, 1, 58));
+    zeroGeometry.vertices.push(new THREE.Vector3(1.5, 1, 59));
+    zeroGeometry.vertices.push(new THREE.Vector3(0.5, 1, 59));
+    zeroGeometry.vertices.push(new THREE.Vector3(0, 1, 58));
+    zeroGeometry.vertices.push(new THREE.Vector3(0, 1, 57));
+    zeroGeometry.vertices.push(new THREE.Vector3(0.5, 1, 56));
+
+    var kGeometry = new THREE.Geometry();
+    kGeometry.vertices.push(new THREE.Vector3(3, 1, 56));
+    kGeometry.vertices.push(new THREE.Vector3(3, 1, 59));
+    kGeometry.vertices.push(new THREE.Vector3(3, 1, 58));
+    kGeometry.vertices.push(new THREE.Vector3(4, 1, 57));
+    kGeometry.vertices.push(new THREE.Vector3(3, 1, 58));
+    kGeometry.vertices.push(new THREE.Vector3(4, 1, 59));
+
+    var mGeometry = new THREE.Geometry();
+    mGeometry.vertices.push(new THREE.Vector3(4.5, 1, 59));
+    mGeometry.vertices.push(new THREE.Vector3(4.8, 1, 58));
+    mGeometry.vertices.push(new THREE.Vector3(5.2, 1, 58));
+    mGeometry.vertices.push(new THREE.Vector3(5.5, 1, 59));
+    mGeometry.vertices.push(new THREE.Vector3(5.8, 1, 58));
+    mGeometry.vertices.push(new THREE.Vector3(6.2, 1, 58));
+    mGeometry.vertices.push(new THREE.Vector3(6.5, 1, 59));
+
+    var ruler = new THREE.Line(rulerGeometry, lineMaterial);
+    var five  = new THREE.Line(fiveGeometry, lineMaterial);
+    var zero  = new THREE.Line(zeroGeometry, lineMaterial);
+    var k     = new THREE.Line(kGeometry, lineMaterial);
+    var m     = new THREE.Line(mGeometry, lineMaterial);
+
+    scene.add(ruler);
+    scene.add(five);
+    scene.add(zero);
+    scene.add(k);
+    scene.add(m);
 
     // Controls
     controls = new THREE.OrbitControls(camera, $container);
