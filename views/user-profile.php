@@ -13,7 +13,7 @@
             <div id="user-info" class="half">
                 <?php // If user is signed in and viewing their own profile
                 if(isset($_SESSION['userId']) && $_SESSION['userId'] == $user->userId): ?>
-                    <p class="user-profile-title"><i class="ico-my-cell"></i>Welcome to MyCell, <?= $user->username; ?></p>
+                    <p class="user-profile-title"><i class="ico-my-cell"></i>Welcome to your profile, <?= $user->username; ?></p>
                 <?php endif; ?>
                 <p><i class="ico-env"></i><?= count($totalEnvironments); ?> Environments Cloned</p>
                 <p><i class="ico-pin"></i><span id="user-profile-location"><?= ($user->location != '' ? $user->location : 'No location details') ?></span><input type="text" name="location" placeholder="Enter your current location" id="user-profile-location-input" class="user-profile-input user-profile-input--hidden"/></p>

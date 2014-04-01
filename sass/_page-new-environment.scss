@@ -1,10 +1,3 @@
-#new-env-tip {
-    padding: 40px;
-    p {
-        margin-bottom: 0;
-    }
-}
-
 #new-env-interface {
     padding: 80px 40px;
 }
@@ -71,6 +64,7 @@
         left: 68px;
         border: 10px solid $mblue;
     }
+
     #new-env-form form {
         width: 64%;
         float: right;
@@ -90,6 +84,7 @@
     #selected-tile {
         border: 10px solid $mblue;
     }
+
     #new-env-form form {
         width: 70%;
         float: right;
