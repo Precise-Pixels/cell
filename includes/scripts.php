@@ -1,16 +1,16 @@
 <?php if($_SERVER['SERVER_NAME'] == 'cell.dev'):
 // SANDBOX ?>
 
-    <?php if($isProgress): ?>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4&sensor=false&libraries=places"></script>
-        <script src="/js/page-progress.js"></script>
-    <?php endif; ?>
-
     <?php if($isAbout): ?>
         <script src="/js/timeline-scroll.js"></script>
     <?php endif; ?>
 
     <script src="/js/all.js"></script>
+
+    <?php if($isProgress): ?>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4&sensor=false&libraries=places"></script>
+        <script src="/js/page-progress.js"></script>
+    <?php endif; ?>
 
     <?php if($isTechnology): ?>
         <script src="/js/threejs-loaders-controls-stackblur.js"></script>

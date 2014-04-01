@@ -25,8 +25,8 @@ window.addEventListener('scroll', function () {
     position = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
 
     if (header != null) {
-        var headerTransformString    = 'translate3d(0, ' + position * -1 / 3 + 'px' + ', 0)';
-        var hgroupTransformString    = 'translate3d(0, ' + position * -1 / 2 + 'px' + ', 0)';
+        var headerTransformString    = 'translate3d(0, ' + position * -1 / 6 + 'px' + ', 0)';
+        var hgroupTransformString    = 'translate3d(0, ' + position * -1 / 3 + 'px' + ', 0)';
         header.style.WebkitTransform = headerTransformString;
         header.style.msTransform     = headerTransformString;
         header.style.transform       = headerTransformString;

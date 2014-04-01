@@ -1,4 +1,4 @@
-<header id="primary-header" class="fixed-header--home section-padding sdgrey">
+<!-- <header id="primary-header" class="fixed-header--home section-padding sdgrey">
     <hgroup class="align-vertical cell-header">
         <h1>CELL INDUSTRIES</h1>
         <?php require_once('includes/balls.php'); ?>
@@ -13,9 +13,9 @@
         </div>
     </div>
     <a id="page-flow" class="arrow-down ico-arrow-down2" href="#firststeps"></a>
-</header>
+</header> -->
 
-<main>
+<main id="homepage-main">
 
     <a id="firststeps"></a>
 
@@ -36,30 +36,6 @@
                 <p>Environments are stored in deep space, protected and ready to be restored in the event of undesirable occurrences.</p>
             </div>
         </div>
-    </section>
-
-    <section class="sdgrey">
-        <div class="align-centre sdgrey">
-            <a href="/project-titan" class="cta cta--pt-large half">
-                <hgroup class="align-vertical">
-                    <h1>Project Titan</h1>
-                    <h2>Discover the groundbreaking project</h2>
-                </hgroup>
-            </a>
-            <a href="/about" class="cta cta--about half">
-                <hgroup class="align-vertical">
-                    <h1>About Cell</h1>
-                    <h2>Find out about Cell Industries</h2>
-                </hgroup>
-            </a>
-            <a href="/technology" class="cta cta--technology half">
-                <hgroup class="align-vertical">
-                    <h1>Technology</h1>
-                    <h2>Learn about our QuantumCell&trade; technology</h2>
-                </hgroup>
-            </a>
-        </div>
-            <div id="homepage-cta-bkg"></div>
     </section>
 
 </main>

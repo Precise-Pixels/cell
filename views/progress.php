@@ -1,7 +1,8 @@
-<header id="fixed-header" class="section-padding">
+<header id="fixed-header" class="fixed-header--progress section-padding">
     <hgroup class="align-vertical">
         <h1>PROGRESS</h1>
         <h2>How is Project Titan going so far?</h2>
+        <?php require_once('includes/balls.php'); ?>
     </hgroup>
 </header>
 
@@ -10,10 +11,9 @@
     <section>
         <div class="section-padding align-centre mblue">
             <h1><i class="ico-earth"></i>ON THE MAP</h1>
+            <p><i class="ico-info"></i>Each marker on the map represents an environment that has been cloned. Click the markers to view the cloned environments.</p>
             <div id="progress-map"></div>
             <input type="text" placeholder="Search Box" id="pac-input" style="position:fixed;top:0;left:-9999px;opacity:0;" autofocus>
-            <p><i class="ico-info"></i>Each marker on the map represents an environment that has been cloned</p>
-            <p><i class="ico-info"></i>Click the markers to view the cloned environments</p>
         </div>
     </section>
     <section>
