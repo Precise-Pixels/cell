@@ -31,8 +31,8 @@
         <div class="section-padding align-centre sdgrey">
             <h1><i class="ico-my-cell"></i>HOW YOU ARE INVOLVED</h1>
             <div class="section-content-wrapper">
-                <p class="half-margin">Project Titan is a collaborative project designed to involve everyone in preserving the Earths environments. You get to decide which part of the planet we preserve next. Simply sign up for free, follow the instructions and build up your own collection of cloned environments.</p>
-                <p class="half-margin">You will be able to view the 3D representation of the environments you clone at any time, along with live information associated with the environments. You can then share your environments and let everyone know that you have done your part to help preserve the planet.</p>
+                <p class="half-margin">Project Titan is a collaborative project designed to involve everyone in preserving the Earth's environments. You get to decide which part of the planet we preserve next. Simply sign up for free, follow the instructions and build up your own collection of cloned environments.</p>
+                <p class="half-margin">You will be able to view the 3D representation of the environments you clone at any time, along with live information associated with those environments. You can then share your environments and let everyone know that you have done your part to help preserve the planet.</p>
             </div>
         </div>
     </section>

@@ -79,6 +79,7 @@ body > header {
     line-height: 40px;
     transition: background .3s;
     user-select: none;
+    -webkit-font-smoothing: antialiased;
     &:hover {
         background: $mgrey;
     }
@@ -100,6 +101,7 @@ body > header {
 
 .signin-status {
     line-height: 38px;
+    -webkit-font-smoothing: antialiased;
 }
 
 .user-nav-profile {

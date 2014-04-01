@@ -34,6 +34,10 @@
         color: #FFF;
         background: $mblue;
         transition: height 1s, padding .3s;
+
+        a {
+            color: $lgrey;
+        }
     }
 }
 
