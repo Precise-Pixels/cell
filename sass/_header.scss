@@ -93,32 +93,26 @@ body > header {
     background: $mgrey;
 }
 
-.signin-status {
+.signin-status,
+.user-nav-profile {
     height: 40px;
-    position: absolute;
     padding: 0 5px 0 5px;
-    top: 0;
-    right: 0;
+    float: right;
     color: #FFF;
     line-height: 40px;
     transition: background .3s;
 }
 
-.signin-status:hover {
-    background: $mgrey;
+.signin-status {
+    line-height: 38px;
 }
 
 .user-nav-profile {
-    height: 40px;
-    position: absolute;
-    padding: 0 5px 0 5px;
-    top: 0;
-    right: 40px;
-    color: #FFF;
-    line-height: 38px;
-    transition: background .3s;
+    width: 40px;
+    text-align: center;
 }
 
+.signin-status:hover,
 .user-nav-profile:hover {
     background: $mgrey;
 }

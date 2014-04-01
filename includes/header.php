@@ -14,8 +14,8 @@
     <i id="site-nav-btn-icon" class="ico- site-nav-btn-icon"></i>
 
     <?php if(isset($_SESSION['status']) && $_SESSION['status'] == 'signedin'): ?>
-        <a href="/user/<?= $_SESSION['username']; ?>" title="Your Profile"><i class="user-nav-profile ico-my-cell"></i></a>
         <a href="/signout?r=<?= $_SERVER['REQUEST_URI']; ?>"><p class="signin-status">Sign out</p></i></a>
+        <a href="/user/<?= $_SESSION['username']; ?>" title="Your Profile"><i class="user-nav-profile ico-my-cell"></i></a>
     <?php else: ?>
         <a href="/signin"><p class="signin-status">Sign in / Register</p></i></a>
     <?php endif; ?>
