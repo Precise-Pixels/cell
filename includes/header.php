@@ -1,6 +1,7 @@
 <header id="top-bar">
     <label for="site-nav-toggle" id="site-nav-btn"></label>
     <input type="checkbox" id="site-nav-toggle" class="checkbox-hack" autocomplete="off"/>
+    <p id="menu-lable">MENU</p>
     <nav id="site-nav" class="force-repaint dgrey">
         <ul>
             <li><a href="/"><i class="ico-home menu-icon"></i>HOME</a></li>
@@ -28,7 +29,7 @@
     <nav id="user-menu-wrapper" class="force-repaint sdgrey">
         <div id="user-menu">
             <?php if(isset($_SESSION['status']) && $_SESSION['status'] == 'signedin'): ?>
-                    <a href="/user/<?= $_SESSION['username']; ?>" class="btn user" title="Your Profile"><i class="ico-my-cell"></i></a>
+                    <a href="/user/<?= $_SESSION['username']; ?>" class="btn user" title="Your Profile "><i class="ico-my-cell"></i></a>
                     <a href="/user/<?= $_SESSION['username']; ?>/env/new" class="btn" title="Clone New Environment"><i class="ico-env-new"></i></a>
                     <a href="/signout?r=<?= $_SERVER['REQUEST_URI']; ?>" class="btn" title="Sign Out"><i class="ico-logout"></i></a>
             <?php else: ?>
