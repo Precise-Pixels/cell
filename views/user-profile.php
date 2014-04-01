@@ -25,15 +25,8 @@
             <div id="user-buttons">
             <?php // If user is signed in and viewing their own profile
             if(isset($_SESSION['userId']) && $_SESSION['userId'] == $user->userId): ?>
-                <?php if(empty($environments) && !isset($_GET['page'])): ?>
-                    <a href="#" id="user-profile-edit" class="btn" title="Edit your profile"><i class="ico-edit"></i></a>
-                    <a href="<?= $user->username; ?>/env/new" class="btn" title="Clone New Environment"><i class="ico-env-new"></i> NEW CLONE</a>
-                    <a href="/signout?r=<?= $_SERVER['REQUEST_URI']; ?>" class="btn" title="Sign Out"><i class="ico-logout"></i></a>
-                <?php else: ?>
-                    <a href="#" id="user-profile-edit" class="btn" title="Edit your profile"><i class="ico-edit"></i></a>
-                    <a href="<?= $user->username; ?>/env/new" class="btn" title="Clone New Environment"><i class="ico-env-new"></i></a>
-                    <a href="/signout?r=<?= $_SERVER['REQUEST_URI']; ?>" class="btn" title="Sign Out"><i class="ico-logout"></i></a>
-                <?php endif; ?>
+                <a href="<?= $user->username; ?>/env/new" class="btn" title="Clone a new environment"><i class="ico-env-new"></i> NEW CLONE</a>
+                <a href="#" id="user-profile-edit" class="btn" title="Edit your profile"><i class="ico-edit"></i> EDIT PROFILE</a>
             <?php endif; ?>
             </div>
         </div>
