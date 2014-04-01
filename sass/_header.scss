@@ -92,7 +92,7 @@ body > header {
 .signin-status,
 .user-nav-profile {
     height: 40px;
-    float: right;
+    position: absolute;
     color: #FFF;
     line-height: 40px;
     transition: background .3s;
@@ -100,6 +100,7 @@ body > header {
 
 .signin-status {
     padding: 0 10px;
+    right: 0;
     line-height: 38px;
     -webkit-font-smoothing: antialiased;
 }
@@ -107,6 +108,7 @@ body > header {
 .user-nav-profile {
     width: 40px;
     padding: 0 5px;
+    right: 80px;
     font-size: 1.4rem;
     text-align: center;
 }
