@@ -99,6 +99,11 @@ body > header {
     right: 10px;
     color: #FFF;
     line-height: 40px;
+    transition: background .3s;
+}
+
+#user-message:hover {
+    background: $mgrey;
 }
 
 #user-nav-btn {
