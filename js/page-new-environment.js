@@ -197,6 +197,9 @@ if(Detector.webgl) {
         });
 
         function validate() {
+            var preloader = document.getElementById('full-page-overlay--loading');
+            preloader.className += ' full-page-overlay--loading';
+
             if(currentTile != undefined) {
                 // Check if selected tile is already cloned
                 var data = 'cLat=' + centreLat + '&cLon=' + centreLon;
@@ -228,22 +231,24 @@ if(Detector.webgl) {
                                         var containsProfanity = request2.responseText;
 
                                         if(!containsProfanity) {
-                                            document.getElementById('full-page-overlay--loading').className += ' full-page-overlay--loading';
                                             generateEnv(lat1, lon1, lat2, lon2);
                                         } else {
                                             var warnNoNameElem = document.getElementById('new-env-warn-name');
                                             if(warnNoNameElem) {
                                                 warnNoNameElem.parentNode.removeChild(warnNoNameElem);
                                             }
+                                            hidePreloader();
                                             envForm.appendChild(warnProfanity);
                                         }
                                     }
                                 }
                             } else {
+                                hidePreloader();
                                 envForm.appendChild(warnNoName);
                             }
                         } else {
                             warnUnavailable.innerHTML = 'Your selected area has already been cloned. Please select another area or <a href="' + tileAvailable.replace('false', '') + '" target="_blank">view the selected area</a>.';
+                            hidePreloader();
                             envForm.appendChild(warnUnavailable);
 
                             var warnNoNameElem = document.getElementById('new-env-warn-name');
@@ -255,7 +260,12 @@ if(Detector.webgl) {
                 }
 
             } else {
+                hidePreloader();
                 envForm.appendChild(warnNoTile);
+            }
+
+            function hidePreloader() {
+                preloader.className = preloader.className.replace(' full-page-overlay--loading', '');
             }
         }
     }
