@@ -43,7 +43,7 @@
         <div class="align-centre">
             <?php if(!empty($environments)):
                 foreach($environments as $env): ?>
-                <div id="no-environments" class="section-padding mblue">
+                <div id="no-environments">
                     <h1>Here are you cloned environments, <a href="/user/<?= $_SESSION['username']; ?>/env/new" title="Clone New Environment">why not clone another?</a></h1>
                 </div>
                     <a href="/user/<?= $user->username; ?>/env/<?= $env->envId; ?>">
