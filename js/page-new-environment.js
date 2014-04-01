@@ -174,9 +174,9 @@ if(Detector.webgl) {
         warnUnavailable.id      = 'new-env-warn-unavailable';
         warnNoName.id           = 'new-env-warn-name';
         warnProfanity.id        = 'new-env-warn-profanity';
-        warnNoTile.innerHTML    = '<i class="ico-info"></i>Please select an area on the map.';
-        warnNoName.innerHTML    = '<i class="ico-info"></i>Please enter a name for your environment.';
-        warnProfanity.innerHTML = '<i class="ico-info"></i>No profanity please.';
+        warnNoTile.innerHTML    = '<i class="ico-warning"></i>Please select an area on the map.';
+        warnNoName.innerHTML    = '<i class="ico-warning"></i>Please enter a name for your environment.';
+        warnProfanity.innerHTML = '<i class="ico-warning"></i>No profanity please.';
 
         cloneBtn.addEventListener('click', function(e) {
             validate();
