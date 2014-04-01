@@ -93,7 +93,7 @@ body > header {
     background: $mgrey;
 }
 
-.user-message {
+.login-status {
     height: 40px;
     position: absolute;
     padding: 0 5px 0 5px;
@@ -104,7 +104,7 @@ body > header {
     transition: background .3s;
 }
 
-.user-message:hover {
+.login-status:hover {
     background: $mgrey;
 }
 
@@ -131,43 +131,6 @@ body > header {
     right: 0;
     cursor: pointer;
     z-index: 2;
-}
-
-#user-arrow {
-    width: 20px;
-    height: 20px;
-    margin-right: 0;
-    position: absolute;
-    top: 40px;
-    right: 60px;
-    font-size: 1rem;
-    text-align: center;
-    line-height: 20px;
-    transition: background .8s;
-    transform: rotate(90deg);
-    z-index: 1;
-}
-
-#user-arrow:before {
-    content: "v";
-}
-
-#user-pic {
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    filter: brightness(50%);
-    transition: all .8s;
-}
-
-#user-nav-btn:hover ~ #user-arrow {
-    background: $mgrey;
-}
-
-#user-nav-btn:hover > #user-pic {
-    filter: brightness(100%);
 }
 
 #site-nav {
