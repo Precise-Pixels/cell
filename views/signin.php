@@ -35,7 +35,7 @@ $loginSystem = new LoginSystem();
             }
             ?>
 
-            <form method="post" id="signin-form">
+            <form method="post" id="signin">
                 <table>
                     <tr>
                         <td><label for="email">Email:</label></td>
@@ -106,7 +106,7 @@ $loginSystem = new LoginSystem();
             }
             ?>
 
-            <form method="post" id="register-form">
+            <form action="#register" method="post" id="register">
                 <table>
                     <tr>
                         <td><label for="username">Username:</label></td>
