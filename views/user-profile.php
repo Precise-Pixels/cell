@@ -43,7 +43,7 @@
         <div class="align-centre">
             <?php if(!empty($environments)):
                 if(isset($_SESSION['userId']) && $_SESSION['userId'] == $user->userId): ?>
-                    <div id="no-environments" class="section-padding">
+                    <div id="user-profile-environments-message" class="section-padding">
                         <h1>Here are your cloned environments, <a href="/user/<?= $_SESSION['username']; ?>/env/new">why not clone another?</a></h1>
                     </div>
                 <?php endif;
@@ -64,11 +64,11 @@
                     </a>
                 <?php endforeach;
             elseif(empty($environments) && isset($_GET['page'])): ?>
-                <div id="no-environments" class="section-padding mblue">
+                <div id="user-profile-environments-message" class="section-padding mblue">
                     <h1>There are no more environments.</h1>
                 </div>
             <?php else: ?>
-                <div id="no-environments" class="section-padding mblue">
+                <div id="user-profile-environments-message" class="section-padding mblue">
                     <h1>This user hasn't cloned any environments yet.</h1>
                 </div>
             <?php endif; ?>
