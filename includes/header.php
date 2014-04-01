@@ -23,4 +23,6 @@
     <div class="cell-logo">
         <a href="/" class="ico-cell-logo"></a>
     </div>
+
+    <div id="nav-overlay"></div>
 </header>
