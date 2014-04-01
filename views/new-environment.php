@@ -22,7 +22,7 @@
             <li class="third">
                 <h1>2</h1>
                 <img src="/img/new-env-instructions-2.png" class="scale">
-                <p>Name your environment and click the clone button</p>
+                <p>Give your environment a name and click the clone button</p>
             </li>
             <li class="third">
                 <h1>3</h1>
