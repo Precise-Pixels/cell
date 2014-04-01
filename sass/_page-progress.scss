@@ -1,70 +1,17 @@
 #progress-map {
     width: 100%;
     padding-bottom: 56.25%;
-}
-
-#progress-map-info {
-    position: relative;
-}
-
-#progress-map-env-perc {
-    width: 100%;
-    // position: absolute;
-    // margin-left: -55px;
-    // top: -18px;
-    left: 50%;
-    text-align: center;
-    // font-size: 2rem;
-}
-
-.progress-map-env-icon-title {
-    margin-top: -30px;
-    margin-bottom: 50px;
-    font-weight: 200;
-    font-size: 1.6rem;
+    margin-bottom: 40px;
 }
 
 .progress-map-data {
-    text-align: center;
-    line-height: 45px;
-
     h2 {
         font-size: 4rem;
-        font-weight: 200;
+        font-weight: 400;
     }
 
     p {
         margin: 0;
         font-size: 1.4rem;
-    }
-}
-
-.progress-map-data--left,
-.progress-map-data--right {
-    position: relative;
-    margin-bottom: 40px;
-}
-
-#progress-map-learn-more {
-    width: 100%;
-    display: inline-block;
-    text-align: center;
-
-    i {
-        margin-right: 15px;
-    }
-}
-
-@media ($min_bp_b) {
-    .homepage-map-data--left {
-        position: absolute;
-        left: 45px;
-        text-align: left;
-    }
-
-    .homepage-map-data--right {
-        position: absolute;
-        right: 45px;
-        text-align: right;
     }
 }
