@@ -1,15 +1,6 @@
 <header id="fixed-header" class="fixed-header--home section-padding">
     <div id="fixed-header-homepage" class="align-centre">
         <hgroup>
-<!--             <div class="cube-wrapper">
-                <div class="cube">
-                    <div class="front"></div>
-                    <div class="back"></div>
-                    <div class="left"></div>
-                    <div class="right"></div>
-                    <img src="/img/logo.gif" alt="Cell Industries logo in a spinning cube">
-                </div>
-            </div> -->
             <h1>CELL INDUSTRIES</h1>
             <p>PRESENTS</p>
             <h2>PROJECT TITAN: PRESERVING THE PLANET</h2>

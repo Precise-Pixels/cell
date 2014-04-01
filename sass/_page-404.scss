@@ -1,9 +1,52 @@
-.cube-wrapper-2 {
+.cube-wrapper {
     margin-bottom: 20px;
     position: relative;
     perspective: 800px;
     perspective-origin: 50%;
     user-select: none;
+}
+
+.cube {
+    width: 260px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    transform-style: preserve-3d;
+    animation: spin 36s infinite linear;
+}
+
+@keyframes spin {
+    from { transform: rotateY(0deg); }
+    to   { transform: rotateY(360deg); }
+}
+
+.cube > div {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    display: block;
+    opacity: .3;
+    background: url(/img/cube-bg.jpg);
+}
+
+.front {
+    transform: translateZ(130px);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(130px);
+}
+
+.back {
+    transform: translateZ(-130px) rotateY(180deg);
+}
+
+.left {
+    transform: rotateY(270deg) translateZ(130px);
+}
+
+.cube > img {
+    width: 100%;
 }
 
 #fourohfour-text p {

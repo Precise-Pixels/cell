@@ -64,65 +64,6 @@
     }
 }
 
-.cube-wrapper {
-    top: 20px;
-    display: inline-block;
-    margin-right: 20px;
-    perspective: 800px;
-    perspective-origin: 50%;
-    z-index: 1;
-    user-select: none;
-}
-
-.cube {
-    width: 80px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-    transform-style: preserve-3d;
-    animation: spin 36s infinite linear;
-}
-
-@keyframes spin {
-    from { transform: rotateY(0deg); }
-    to   { transform: rotateY(360deg); }
-}
-
-.cube > div {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    display: block;
-    opacity: .3;
-    background: url(/img/cube-bg.jpg);
-}
-
-.front {
-    transform: translateZ(40px);
-}
-
-.right {
-    transform: rotateY(90deg) translateZ(40px);
-}
-
-.back {
-    transform: translateZ(-40px) rotateY(180deg);
-}
-
-.left {
-    transform: rotateY(270deg) translateZ(40px);
-}
-
-.cube > img {
-    width: 100%;
-}
-
-.cell-values {
-    width: 100%;
-    float: left;
-    text-align: center;
-}
-
 #homepage-main {
     margin-top: 550px;
 }
