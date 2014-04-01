@@ -1,7 +1,7 @@
 <?php
 
-$userVars = explode('/', $q);
-$username = $userVars[1];
+$userVars     = explode('/', $q);
+$userUsername = $userVars[1];
 
 if(isset($_GET['page'])) {
     $page = $_GET['page'];
@@ -10,11 +10,11 @@ if(isset($_GET['page'])) {
 }
 
 require_once('php/User.php');
-$user = User::getData($username);
+$user = User::getData($userUsername);
 
 if($user) {
-    $environments      = User::getEnvironments($username, $page);
-    $totalEnvironments = User::getTotalEnvironments($username);
+    $environments      = User::getEnvironments($userUsername, $page);
+    $totalEnvironments = User::getTotalEnvironments($userUsername);
     $file = 'user-profile';
 } else {
     $file = '404';

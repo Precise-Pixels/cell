@@ -1,7 +1,7 @@
 <?php
 
 class LoginSystem {
-    const wrapStart = '<p class="full warn"><i class="ico-info"></i>';
+    const wrapStart = '<p class="full warn"><i class="ico-warning"></i>';
     const wrapEnd   = '</p>';
 
     static function signin($email, $password) {
@@ -64,9 +64,9 @@ class LoginSystem {
         $sth->bindParam(':username', $username);
         $sth->execute();
 
-        MailClient::sendMsg($email, 'Verify your MyCell account', "Please follow this link to verify your MyCell account: http://cell-industries.co.uk/verify-account?e=$email&r=$rand1");
+        MailClient::sendMsg($email, 'Verify your account', "Please follow this link to verify your account: http://cell-industries.co.uk/verify-account?e=$email&r=$rand1");
 
-        return LoginSystem::wrapStart . 'Account successfully created. We have sent a verification link to your email. Please verify your account before attempting to sign in. If you have not receive a verification email, please check your spam/junk or <a href="resend-validation-email">request another verification email</a>.' . LoginSystem::wrapEnd;
+        return '<p class="full success"><i class="ico-info"></i>Account successfully created. We have sent a verification link to your email. Please verify your account before attempting to sign in. If you have not received a verification email, check your spam/junk or <a href="resend-validation-email">request another verification email</a>. Please also bear in mind that, while usually instantaneous, the email may take up to an hour to send.' . LoginSystem::wrapEnd;
     }
 
     static function resendValidationEmail($email) {
@@ -78,9 +78,9 @@ class LoginSystem {
         $sth = $dbh->prepare("UPDATE users SET validateRand='$rand' WHERE email='$email'");
         $sth->execute();
 
-        MailClient::sendMsg($email, 'Verify your MyCell account', "Please follow this link to verify your MyCell account: http://cell-industries.co.uk/verify-account?e=$email&r=$rand");
+        MailClient::sendMsg($email, 'Verify your account', "Please follow this link to verify your account: http://cell-industries.co.uk/verify-account?e=$email&r=$rand");
 
-        return LoginSystem::wrapStart . 'We have sent a verification link to your email. Please verify your account before attempting to sign in.' . LoginSystem::wrapEnd;
+        return LoginSystem::wrapStart . 'We have sent a verification link to your email. Please verify your account before attempting to sign in. If you have not received a verification email, check your spam/junk. Please also bear in mind that, while usually instantaneous, the email may take up to an hour to send.' . LoginSystem::wrapEnd;
     }
 
     static function validateUser($email, $rand) {
@@ -120,7 +120,7 @@ class LoginSystem {
         $sth = $dbh->prepare("UPDATE users SET resetRand='$rand' WHERE email='$email'");
         $sth->execute();
 
-        MailClient::sendMsg($email, 'Reset your MyCell account password', "Please follow this link to reset your MyCell account password: http://cell-industries.co.uk/reset-password?e=$email&r=$rand");
+        MailClient::sendMsg($email, 'Reset your account password', "Please follow this link to reset your account password: http://cell-industries.co.uk/reset-password?e=$email&r=$rand");
 
         return LoginSystem::wrapStart . 'We have sent instructions on how to reset your password to your email. Please check your emails.' . LoginSystem::wrapEnd;
     }

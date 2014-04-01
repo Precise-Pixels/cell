@@ -17,7 +17,7 @@
     </div>
     <section id="fourohfour-text">
         <div class="section-padding align-centre">
-            <p class="dgrey"><i class="ico-info"></i>Oops! Sorry, but the page you are looking for has not been found. Try checking the URL for errors or <a href="/">return to the homepage.</a></p>
+            <p class="dgrey"><i class="ico-warning"></i>Oops! Sorry, but the page you are looking for has not been found. Try checking the URL for errors or <a href="/">return to the homepage.</a></p>
         </div>
     </section>
 
