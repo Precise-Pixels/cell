@@ -27,8 +27,8 @@ $isCapturing          = preg_match('#capturing-environment#', $q);
 
 $currentUrl           = "http://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
 
-if($isHome) {
-    require_once('model-home.php');
+if($isProgress) {
+    require_once('model-progress.php');
 }
 
 if($isUser) {

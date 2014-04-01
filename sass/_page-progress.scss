@@ -7,24 +7,14 @@
     position: relative;
 }
 
-#progress-map-env-icon {
-    width: 146px;
-    position: absolute;
-    margin-left: -73px;
-    top: -88px;
-    left: 50%;
-    color: $mblue;
-    font-size: 8rem;
-}
-
-#progress-map-env-icon-perc {
-    width: 110px;
-    position: absolute;
-    margin-left: -55px;
-    top: -18px;
+#progress-map-env-perc {
+    width: 100%;
+    // position: absolute;
+    // margin-left: -55px;
+    // top: -18px;
     left: 50%;
     text-align: center;
-    font-size: 2rem;
+    // font-size: 2rem;
 }
 
 .progress-map-env-icon-title {
@@ -62,5 +52,19 @@
 
     i {
         margin-right: 15px;
+    }
+}
+
+@media ($min_bp_b) {
+    .homepage-map-data--left {
+        position: absolute;
+        left: 45px;
+        text-align: left;
+    }
+
+    .homepage-map-data--right {
+        position: absolute;
+        right: 45px;
+        text-align: right;
     }
 }

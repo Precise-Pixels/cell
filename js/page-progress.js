@@ -3,7 +3,7 @@ google.maps.event.addDomListener(window, 'load', init);
 
 function init() {
     // Setup the map
-    var map = new google.maps.Map(document.getElementById('homepage-map'), {
+    var map = new google.maps.Map(document.getElementById('progress-map'), {
         center: new google.maps.LatLng(43, 10),
         zoom: 2,
         maxZoom: 10,
@@ -63,7 +63,7 @@ function init() {
     var locations = [];
 
     var request = new XMLHttpRequest;
-    request.open('GET', '/php/getHomepageMapMarkers.php', true);
+    request.open('GET', '/php/getProgressMapMarkers.php', true);
     request.send();
 
     request.onreadystatechange = function() {
@@ -99,8 +99,8 @@ function init() {
     }
 
     function updateData() {
-        var environments       = document.getElementById('homepage-map-data--environments');
-        var percentage         = document.getElementById('homepage-map-env-icon-perc');
+        var environments       = document.getElementById('progress-map-data--environments');
+        var percentage         = document.getElementById('progress-map-env-perc');
         environments.innerHTML = locLength;
         percentage.innerHTML   = (locLength / 167076 * 100).toFixed(2) + '%';
     }

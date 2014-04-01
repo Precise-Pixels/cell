@@ -53,9 +53,9 @@
 <?php else:
 // LIVE ?>
 
-    <?php if($isHome): ?>
+    <?php if($isProgress): ?>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4&sensor=false&libraries=places"></script>
-        <script src="/build/page-home.min.js"></script>
+        <script src="/build/page-progress.js"></script>
     <?php endif; ?>
 
     <?php if($isAbout): ?>
