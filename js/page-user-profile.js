@@ -68,7 +68,7 @@ upEdit.addEventListener('click', function(e) {
 
         function resetForm() {
             editing = false;
-            upEdit.firstChild.className = 'ico-edit';
+            upEdit.innerHTML = '<i class="ico-edit"></i> EDIT PROFILE';
 
             // Reinstate username
             upUsername.innerHTML = upUsernameCurrent;
@@ -81,7 +81,7 @@ upEdit.addEventListener('click', function(e) {
     } else {
         // Edit
         editing = true;
-        upEdit.firstChild.className = 'ico-save';
+            upEdit.innerHTML = '<i class="ico-save"></i> SAVE CHANGES';
 
         // Show link to Gravatar
         upUsername.innerHTML = '<a href="http://gravatar.com/" target="_blank" title="Change your avatar at Gravatar.com"><i class="ico-edit"></i>Gravatar.com</a>';

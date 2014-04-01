@@ -76,7 +76,7 @@
     }
 
     #user-buttons {
-        width: 141px;
+        width: 155px;
         position: absolute;
         margin-top: 0;
         top: 0;
@@ -86,6 +86,10 @@
             margin-bottom: 3px;
             line-height: 22px;
         }
+    }
+
+    #user-profile-location-input {
+        width: 95%;
     }
 
     .user-profile-input {
@@ -125,9 +129,9 @@
 
 @media ($min_bp_c) {
     #user-buttons {
-        width: 250px;
+        width: 270px;
         > a {
-            width: 250px;
+            width: 270px;
         }
     }
 }
