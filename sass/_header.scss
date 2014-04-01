@@ -10,17 +10,13 @@ body > header {
 
 .top-bar-background {
     background: $dgrey;
-    & > #user-arrow {
-        background: $dgrey;
-    }
 }
 
 .top-bar-background-none {
     background: none;
 }
 
-#site-nav,
-#user-nav {
+#site-nav {
     display: none;
     z-index: 1;
 }
@@ -69,13 +65,12 @@ body > header {
     transition: opacity .3s;
 }
 
-#site-nav-toggle:checked ~ #nav-overlay,
-#user-nav-toggle:checked ~ #nav-overlay {
+#site-nav-toggle:checked ~ #nav-overlay {
     visibility: visible;
     opacity: .8;
 }
 
-#menu-lable {
+#menu-label {
     height: 40px;
     position: absolute;
     padding-right: 5px;
@@ -83,13 +78,15 @@ body > header {
     color: #FFF;
     line-height: 40px;
     transition: background .3s;
+    user-select: none;
+
+    &:hover {
+        background: $mgrey;
+    }
 }
 
-#menu-lable:hover {
-    background: $mgrey;
-}
 
-#site-nav-btn:hover > #menu-lable {
+#site-nav-btn:hover > #menu-label {
     background: $mgrey;
 }
 
@@ -116,16 +113,6 @@ body > header {
 .signin-status:hover,
 .user-nav-profile:hover {
     background: $mgrey;
-}
-
-#user-nav-btn {
-    width: 80px;
-    height: 60px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    cursor: pointer;
-    z-index: 2;
 }
 
 #site-nav {
@@ -188,18 +175,6 @@ body > header {
     padding: 10px;
     background: $dgrey;
     transition: padding .3s;
-}
-
-#user-nav-toggle:checked + #user-menu-wrapper {
-    right: 0;
-}
-
-#user-nav-toggle:checked ~ #user-arrow:before {
-    content: "^";
-}
-
-#user-nav a {
-    display: block;
 }
 
 header > .cell-logo {

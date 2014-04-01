@@ -1,5 +1,5 @@
 <header id="top-bar">
-    <label for="site-nav-toggle" id="site-nav-btn"><p id="menu-lable">MENU</p></label>
+    <label for="site-nav-toggle" id="site-nav-btn"><p id="menu-label">MENU</p></label>
     <input type="checkbox" id="site-nav-toggle" class="checkbox-hack" autocomplete="off"/>
     <nav id="site-nav" class="force-repaint dgrey">
         <ul>
