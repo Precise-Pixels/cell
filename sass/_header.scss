@@ -81,6 +81,15 @@ body > header {
     left: 40px;
     color: #FFF;
     line-height: 40px;
+    transition: background .3s;
+}
+
+#menu-lable:hover {
+    background: $mgrey;
+}
+
+#site-nav-btn:hover > #menu-lable {
+    background: $mgrey;
 }
 
 #user-message {

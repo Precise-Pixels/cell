@@ -1,7 +1,6 @@
 <header id="top-bar">
-    <label for="site-nav-toggle" id="site-nav-btn"></label>
+    <label for="site-nav-toggle" id="site-nav-btn"><p id="menu-lable">MENU</p></label>
     <input type="checkbox" id="site-nav-toggle" class="checkbox-hack" autocomplete="off"/>
-    <p id="menu-lable">MENU</p>
     <nav id="site-nav" class="force-repaint dgrey">
         <ul>
             <li><a href="/"><i class="ico-home menu-icon"></i>HOME</a></li>
