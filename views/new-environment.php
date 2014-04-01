@@ -17,7 +17,7 @@
             <li class="third">
                 <h1>1</h1>
                 <img src="/img/new-env-instructions-1.png" class="scale">
-                <p>Zoom in fully to select an area of the map</p>
+                <p>Zoom in fully and click on a tile to select an area of the map</p>
             </li>
             <li class="third">
                 <h1>2</h1>
@@ -27,7 +27,7 @@
             <li class="third">
                 <h1>3</h1>
                 <img src="/img/new-env-instructions-3.png" class="scale">
-                <p>View your newly cloned environment</p>
+                <p>View and interact with your 3D cloned environment</p>
             </li>
         </ol>
     </section>
