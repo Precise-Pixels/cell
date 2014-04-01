@@ -13,15 +13,22 @@
     </nav>
     <i id="site-nav-btn-icon" class="ico- site-nav-btn-icon"></i>
 
-    <p id="user-message"><?php
+<!--     <p id="user-message"><?php
         if(isset($_SESSION['username'])) {
             echo "Welcome, {$_SESSION['username']}";
         } else {
             echo 'Sign in / Register';
         }
-    ?></p>
+    ?></p> -->
 
-    <label for="user-nav-toggle" id="user-nav-btn">
+    <?php if(isset($_SESSION['status']) && $_SESSION['status'] == 'signedin'): ?>
+        <a href="/user/<?= $_SESSION['username']; ?>" class="btn user" title="Your Profile "><i class="ico-my-cell"></i></a>
+        <a href="/signout?r=<?= $_SERVER['REQUEST_URI']; ?>" class="btn" title="Sign Out"><p>Logout</p></i></a>
+    <?php else: ?>
+        <a href="/signin" title="Sign In"><p id="user-message">Sign in / Register</p></i></a>
+    <?php endif; ?>
+
+<!--     <label for="user-nav-toggle" id="user-nav-btn">
         <img id="user-pic" src="http://www.gravatar.com/avatar/<?= (isset($_SESSION['userEmail']) ? md5(strtolower(trim($_SESSION['userEmail']))) : 1); ?>?d=mm&amp;s=60"/>
     </label>
     <input type="checkbox" id="user-nav-toggle" class="checkbox-hack" autocomplete="off"/>
@@ -37,7 +44,7 @@
         </div>
     </nav>
     <div id="user-arrow" class="ico-"></div>
-    <div id="nav-overlay"></div>
+    <div id="nav-overlay"></div> -->
     <div class="cell-logo">
         <a href="/" class="ico-cell-logo"></a>
     </div>
