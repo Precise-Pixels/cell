@@ -96,7 +96,8 @@ body > header {
 #user-message {
     height: 40px;
     position: absolute;
-    right: 10px;
+    padding: 0 5px 0 5px;
+    right: 0;
     color: #FFF;
     line-height: 40px;
     transition: background .3s;
