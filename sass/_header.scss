@@ -93,7 +93,7 @@ body > header {
     background: $mgrey;
 }
 
-.login-status {
+.signin-status {
     height: 40px;
     position: absolute;
     padding: 0 5px 0 5px;
@@ -104,7 +104,7 @@ body > header {
     transition: background .3s;
 }
 
-.login-status:hover {
+.signin-status:hover {
     background: $mgrey;
 }
 
