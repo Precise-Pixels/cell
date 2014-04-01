@@ -93,17 +93,33 @@ body > header {
     background: $mgrey;
 }
 
-#user-message {
+.user-message {
     height: 40px;
     position: absolute;
     padding: 0 5px 0 5px;
+    top: 0;
     right: 0;
     color: #FFF;
     line-height: 40px;
     transition: background .3s;
 }
 
-#user-message:hover {
+.user-message:hover {
+    background: $mgrey;
+}
+
+.user-nav-profile {
+    height: 40px;
+    position: absolute;
+    padding: 0 5px 0 5px;
+    top: 0;
+    right: 40px;
+    color: #FFF;
+    line-height: 40px;
+    transition: background .3s;
+}
+
+.user-nav-profile:hover {
     background: $mgrey;
 }
 
