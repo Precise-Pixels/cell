@@ -50,14 +50,14 @@
         <section>
             <div id="homepage-sign-up" class="align-centre section-padding sdgrey">
                 <h2>View your cloned environments</h2>
-                <a href="/user/<?= $_SESSION['username']; ?>" class="btn"><i class="ico-my-cell"></i> MyCell</a>
+                <a href="/user/<?= $_SESSION['username']; ?>" class="btn"><i class="ico-my-cell"></i> YOUR PROFILE</a>
             </div>
         </section>
     <?php else: ?>
         <section>
             <div id="homepage-sign-up" class="align-centre section-padding sdgrey">
                 <h2>Start preserving the planet today</h2>
-                <a href="/signin" class="btn"><i class="ico-my-cell"></i>SIGN UP</a>
+                <a href="/signin#register" class="btn"><i class="ico-my-cell"></i>REGISTER</a>
             </div>
         </section>
     <?php endif; ?>

@@ -16,6 +16,7 @@
             <input type="text" placeholder="Search Box" id="pac-input" style="position:fixed;top:0;left:-9999px;opacity:0;" autofocus>
         </div>
     </section>
+    
     <section>
         <div class="section-padding align-centre lgrey">
             <h1><i class="ico-progress"></i>STATISTICS</h1>
@@ -33,6 +34,7 @@
             </div>
         </div>
     </section>
+
     <section>
         <div class="align-centre">
             <a href="/recently-cloned-environments" class="cta cta--recent">

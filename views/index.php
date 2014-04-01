@@ -1,7 +1,7 @@
-<header id="homepage-fixed-header" class="fixed-header--home section-padding">
-    <div id="primary-header-padding" class="align-centre">
+<header id="fixed-header" class="fixed-header--home section-padding">
+    <div id="fixed-header-homepage" class="align-centre">
         <hgroup>
-            <div class="cube-wrapper">
+<!--             <div class="cube-wrapper">
                 <div class="cube">
                     <div class="front"></div>
                     <div class="back"></div>
@@ -9,11 +9,11 @@
                     <div class="right"></div>
                     <img src="/img/logo.gif" alt="Cell Industries logo in a spinning cube">
                 </div>
-            </div>
+            </div> -->
             <h1>CELL INDUSTRIES</h1>
+            <p>PRESENTS</p>
+            <h2>PROJECT TITAN: PRESERVING THE PLANET</h2>
         </hgroup>
-        <h2>PRESENTS</h2>
-        <h3>PROJECT TITAN: PRESERVING THE PLANET</h3>
     </div>
 </header>
 
@@ -34,7 +34,7 @@
 
     <section id="homepage-diagram">
         <div class="section-padding align-centre mblue">
-            <h1>Simply sign up for free, follow the instructions and build up your own collection of cloned environments.</h2>
+            <h1>Simply register for free, follow the instructions and build up your own collection of cloned environments.</h2>
             <ol class="align-centre">
                 <li class="third">
                     <h1>1</h1>
@@ -55,11 +55,21 @@
         </div>
     </section>
 
-    <section>
-        <div id="homepage-sign-up" class="align-centre section-padding sdgrey">
-            <h2>Start preserving the planet today</h2>
-            <a href="/signin" class="btn"><i class="ico-my-cell"></i>SIGN UP</a>
-        </div>
-    </section>
+    <?php // If user is signed in
+    if(isset($_SESSION['userId'])): ?>
+        <section>
+            <div id="homepage-sign-up" class="align-centre section-padding sdgrey">
+                <h2>View your cloned environments</h2>
+                <a href="/user/<?= $_SESSION['username']; ?>" class="btn"><i class="ico-my-cell"></i> YOUR PROFILE</a>
+            </div>
+        </section>
+    <?php else: ?>
+        <section>
+            <div id="homepage-sign-up" class="align-centre section-padding sdgrey">
+                <h2>Start preserving the planet today</h2>
+                <a href="/signin#register" class="btn"><i class="ico-my-cell"></i> REGISTER</a>
+            </div>
+        </section>
+    <?php endif; ?>
 
 </main>

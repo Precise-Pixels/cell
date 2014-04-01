@@ -40,6 +40,6 @@
     <div id="user-arrow" class="ico-"></div>
     <div id="nav-overlay"></div>
     <div class="cell-logo">
-        <a href="/" class="ico-cell-logo"></a>
+        <a href="/" class="ico-project-titan"></a>
     </div>
 </header>

@@ -6,6 +6,6 @@
         <a href="https://twitter.com/cell_industries" target="_blank" class="btn social-btn ico-twitter"></a>
     </div>
     <div class="cell-logo">
-        <a href="/" class="ico-cell-logo"></a>
+        <a href="/" class="ico-project-titan"></a>
     </div>
 </footer>
