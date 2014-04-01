@@ -15,6 +15,11 @@ var upFacebookCurrent = href[href.length - 1];
 var href              = upTwitterInput.previousSibling.href.split('/');
 var upTwitterCurrent  = href[href.length - 1];
 
+// Force details to be empty for simpler change check below
+if(upLocationCurrent == 'No location details') { upLocationCurrent = ''; }
+if(upFacebookCurrent.slice(-1) == '#')         { upFacebookCurrent = ''; }
+if(upTwitterCurrent.slice(-1) == '#')          { upTwitterCurrent  = ''; }
+
 upEdit.addEventListener('click', function(e) {
     e.preventDefault();
 
