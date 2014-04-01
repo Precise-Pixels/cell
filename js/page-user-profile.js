@@ -29,6 +29,8 @@ upEdit.addEventListener('click', function(e) {
         if(upLocationInput.value == upLocationCurrent && upFacebookInput.value == upFacebookCurrent && upTwitterInput.value == upTwitterCurrent) {
             resetForm();
         } else {
+            document.getElementById('full-page-overlay').className += ' full-page-overlay--loading';
+
             // Check if location is profanity free
             var data = 'str=' + upLocationInput.value;
             var request = new XMLHttpRequest;

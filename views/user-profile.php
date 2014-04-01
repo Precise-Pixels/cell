@@ -103,3 +103,5 @@
     </section>
 
 </main>
+
+<div id="full-page-overlay" class="full-page-overlay"></div>
