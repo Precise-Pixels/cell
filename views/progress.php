@@ -16,7 +16,6 @@
             <p><i class="ico-info"></i>Click the markers to view the cloned environments</p>
         </div>
     </section>
-
     <section>
         <div class="section-padding align-centre lgrey">
             <h1><i class="ico-progress"></i>STATISTICS</h1>
@@ -32,6 +31,16 @@
                 <h2 id="progress-map-data--environments">&nbsp;</h2>
                 <p>ENVIRONMENTS CLONED</p>
             </div>
+        </div>
+    </section>
+    <section>
+        <div class="align-centre">
+            <a href="/recently-cloned-environments" class="cta cta--recent">
+                <hgroup class="align-vertical">
+                    <h1>Recently Cloned</h1>
+                    <h2>See the most recently cloned environments</h2>
+                </hgroup>
+            </a>
         </div>
     </section>
 
