@@ -155,6 +155,13 @@ if(Detector.webgl) {
 
         google.maps.event.addListener(map, 'zoom_changed', function() {
             currentZoom = map.getZoom();
+
+            // Change cursor to pointer if at required zoom level
+            if(currentZoom == requiredZoom) {
+                map.setOptions({ draggableCursor: 'pointer' });
+            } else {
+                map.setOptions({ draggableCursor: null });
+            }
         });
 
         google.maps.event.addListener(map, 'maptypeid_changed', function() {
