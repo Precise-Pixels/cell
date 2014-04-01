@@ -86,7 +86,8 @@ a img {
     border: 0;
 }
 
-.warn {
+.warn,
+.success {
     padding: 10px;
     color: $lgrey;
     background: $red;
@@ -98,6 +99,10 @@ a img {
             border-bottom: 1px solid $lgrey;
         }
     }
+}
+
+.success {
+    background: $green;
 }
 
 blockquote {
