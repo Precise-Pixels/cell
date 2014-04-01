@@ -66,9 +66,27 @@
 
 #homepage-main {
     margin-top: 550px;
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+#homepage-top {
+    p {
+        margin-bottom: 0;
+    }
+}
+
+.homepage-project-titan-1 {
 }
 
 #homepage-diagram {
+    text-align: center;
+}
+
+#homepage-three {
     text-align: center;
 }
 
