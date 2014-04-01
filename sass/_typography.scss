@@ -93,7 +93,7 @@ a img {
     background: $red;
     a {
         font-weight: 600;
-        border-bottom: 1px solid $lgrey;
+        border-bottom: none;
         &:hover {
             color: $lgrey;
             border-bottom: 1px solid $lgrey;
@@ -105,7 +105,6 @@ a img {
     background: $green;
     a {
         font-weight: 600;
-        border-bottom: 1px solid $lgrey;
         color: #08327e;
         &:hover {
             color: $lgrey;
