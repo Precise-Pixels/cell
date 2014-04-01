@@ -15,6 +15,11 @@ var upFacebookCurrent = href[href.length - 1];
 var href              = upTwitterInput.previousSibling.href.split('/');
 var upTwitterCurrent  = href[href.length - 1];
 
+// Force details to be empty for simpler change check below
+if(upLocationCurrent == 'No location details') { upLocationCurrent = ''; }
+if(upFacebookCurrent.slice(-1) == '#')         { upFacebookCurrent = ''; }
+if(upTwitterCurrent.slice(-1) == '#')          { upTwitterCurrent  = ''; }
+
 if(upEdit) {
     upEdit.addEventListener('click', function(e) {
         e.preventDefault();
@@ -25,6 +30,8 @@ if(upEdit) {
             if(upLocationInput.value == upLocationCurrent && upFacebookInput.value == upFacebookCurrent && upTwitterInput.value == upTwitterCurrent) {
                 resetForm();
             } else {
+                document.getElementById('full-page-overlay').className += ' full-page-overlay--loading';
+
                 // Check if location is profanity free
                 var data = 'str=' + upLocationInput.value;
                 var request = new XMLHttpRequest;
@@ -62,7 +69,7 @@ if(upEdit) {
 
             function resetForm() {
                 editing = false;
-                upEdit.firstChild.className = 'ico-edit';
+                upEdit.innerHTML = '<i class="ico-edit"></i> EDIT PROFILE';
 
                 // Reinstate username
                 upUsername.innerHTML = upUsernameCurrent;
@@ -75,7 +82,20 @@ if(upEdit) {
         } else {
             // Edit
             editing = true;
-            upEdit.firstChild.className = 'ico-save';
+            upEdit.innerHTML = '<i class="ico-save"></i> SAVE CHANGES';
+
+            // Show link to Gravatar
+            upUsername.innerHTML = '<a href="http://gravatar.com/" target="_blank" title="Change your avatar at Gravatar.com"><i class="ico-edit"></i>Gravatar.com</a>';
+
+            // Show input fields
+            upLocationInput.className = upLocationInput.className.replace(' user-profile-input--hidden', '');
+            upFacebookInput.className = upFacebookInput.className.replace(' user-profile-input--hidden', '');
+            upTwitterInput.className  = upTwitterInput.className.replace(' user-profile-input--hidden', '');
+
+            // If location has already been entered, put it into the input field
+            if(upLocation.innerHTML != 'No location details') {
+                upLocationInput.value = upLocationCurrent;
+            }
 
             // Show link to Gravatar
             upUsername.innerHTML = '<a href="http://gravatar.com/" target="_blank" title="Change your avatar at Gravatar.com"><i class="ico-edit"></i>Gravatar.com</a>';

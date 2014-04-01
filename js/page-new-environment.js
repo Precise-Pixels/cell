@@ -197,7 +197,7 @@ if(Detector.webgl) {
         });
 
         function validate() {
-            var preloader = document.getElementById('full-page-overlay--loading');
+            var preloader = document.getElementById('full-page-overlay');
             preloader.className += ' full-page-overlay--loading';
 
             if(currentTile != undefined) {

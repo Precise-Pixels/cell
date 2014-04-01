@@ -64,4 +64,4 @@
 
 </main>
 
-<div id="full-page-overlay--loading" class="full-page-overlay"></div>
+<div id="full-page-overlay" class="full-page-overlay"></div>
