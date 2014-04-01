@@ -61,14 +61,10 @@ window.onload = function() {
     var headerTop      = document.getElementById('top-bar');
     var siteNavBtn     = document.getElementById('site-nav-btn');
     var siteNavBtnIcon = document.getElementById('site-nav-btn-icon');
-    var userNavBtn     = document.getElementById('user-nav-btn');
     var siteNavOpen    = false;
-    var userNavOpen    = false;
 
     siteNavBtn.attachEvent('onclick', toggleSiteNav);
     siteNavBtnIcon.attachEvent('onclick', toggleSiteNav);
-
-    userNavBtn.attachEvent('onclick', toggleUserNav);
 
     function toggleSiteNav() {
         if(siteNavOpen) {
@@ -78,17 +74,5 @@ window.onload = function() {
             headerTop.className += ' site-nav--open';
             siteNavOpen = true;
         }
-        console.log(headerTop.className);
-    }
-
-    function toggleUserNav() {
-        if(userNavOpen) {
-            headerTop.className = headerTop.className.replace(' user-nav--open', '');
-            userNavOpen = false;
-        } else {
-            headerTop.className += ' user-nav--open';
-            userNavOpen = true;
-        }
-        console.log(headerTop.className);
     }
 }
