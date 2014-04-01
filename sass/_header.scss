@@ -79,12 +79,10 @@ body > header {
     line-height: 40px;
     transition: background .3s;
     user-select: none;
-
     &:hover {
         background: $mgrey;
     }
 }
-
 
 #site-nav-btn:hover > #menu-label {
     background: $mgrey;
@@ -104,9 +102,9 @@ body > header {
     line-height: 38px;
 }
 
-.user-profile-nav-btn {
+.user-nav-profile {
     width: 40px;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     text-align: center;
 }
 
@@ -179,10 +177,6 @@ body > header {
 
 header > .cell-logo {
     display: none;
-}
-
-.user {
-    margin-top: 0;
 }
 
 @media ($min-bp-a) {
