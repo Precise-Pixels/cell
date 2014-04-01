@@ -46,10 +46,6 @@
         left: 0;
     }
 
-    .user-nav--open #user-menu-wrapper {
-        right: 0;
-    }
-
     .ball {
         display: none;
     }
