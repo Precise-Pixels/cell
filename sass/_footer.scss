@@ -31,6 +31,7 @@ footer > .cell-logo {
 @media ($min_bp_a) {
     #copyright,
     #privacy,
+    #feedback,
     #social-icons {
         width: auto;
         position: absolute;
@@ -49,12 +50,22 @@ footer > .cell-logo {
         }
     }
 
-    #social-icons {
+    #feedback {
+        top: 90px;
         right: 20px;
-        .btn {
-        display: inline-block;
+        p {
+            margin-bottom: 0;
         }
     }
+
+    #social-icons {
+        top: 30px;
+        right: 20px;
+        .btn {
+            display: inline-block;
+        }
+    }
+
     footer > .cell-logo {
         margin-top: 0;
     }
@@ -79,6 +90,10 @@ footer > .cell-logo {
     #privacy {
         top: 90px;
         left: 0;
+    }
+
+    #feedback {
+        right: 0;
     }
 
     #social-icons {
