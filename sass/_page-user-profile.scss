@@ -29,6 +29,9 @@
     width: 100%;
     float: left;
     margin-top: 20px;
+    > a {
+        font-size: 1.2rem;
+    }
 }
 
 .env-delete {
@@ -111,7 +114,11 @@
     }
 
     #user-buttons {
+        width: 170px;
         margin-top: 20px;
+        > a {
+            font-size: 1.4rem;
+        }
     }
 
     #user-profile-main {
@@ -131,6 +138,7 @@
     #user-buttons {
         width: 270px;
         > a {
+            font-size: 1.8rem;
             width: 270px;
         }
     }
