@@ -37,7 +37,7 @@
 
     <section>
         <div class="align-centre">
-            <a href="/recently-cloned-environments" class="cta cta--recent">
+            <a href="/recently-cloned-environments" class="cta cta--recent full">
                 <hgroup class="align-vertical">
                     <h1>Recently Cloned</h1>
                     <h2>See the most recently cloned environments</h2>

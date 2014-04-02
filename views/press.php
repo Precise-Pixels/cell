@@ -48,7 +48,7 @@
     </section>
     <section>
         <div class="align-centre lgrey">
-            <a href="/about-cell-industries" class="cta cta--about">
+            <a href="/about-cell-industries" class="cta cta--about full">
                 <hgroup class="align-vertical">
                     <h1>About Cell</h1>
                     <h2>Find out about Cell Industries</h2>

@@ -61,7 +61,7 @@
 
     <section>
         <div class="align-centre">
-            <a href="the-cloning-process" class="cta cta--process">
+            <a href="the-cloning-process" class="cta cta--process full">
                 <hgroup class="align-vertical">
                     <h1>The Cloning Process</h1>
                 </hgroup>

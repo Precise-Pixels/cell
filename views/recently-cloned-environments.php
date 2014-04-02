@@ -64,7 +64,7 @@
 
     <section>
         <div class="align-centre">
-            <a href="/progress" class="cta cta--progress">
+            <a href="/progress" class="cta cta--progress full">
                 <hgroup class="align-vertical">
                     <h1>Progress</h1>
                     <h2>How is Project Titan going so far?</h2>

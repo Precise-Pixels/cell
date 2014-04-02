@@ -138,7 +138,7 @@
 
     <section>
         <div class="align-centre">
-            <a href="/press" class="cta cta--press">
+            <a href="/press" class="cta cta--press full">
                 <hgroup class="align-vertical">
                     <h1>Press</h1>
                 </hgroup>
