@@ -9,23 +9,6 @@
 </header>
 
 <main id="homepage-main">
-
-<!--     <section id="homepage-three">
-        <div class="align-centre section-padding lgrey">
-            <div class="third-margin">
-                <h2></i>DECIDE</h2>
-                <p>You get to choose which parts of the planet you would like to preserve.</p>
-            </div>
-            <div class="third-margin">
-                <h2></i>CLONE</h2>
-                <p>Your chosen environments are cloned using our groundbreaking QuantumCell™ technology.</p>
-            </div>
-            <div class="third-margin">
-                <h2></i>PRESERVE</h2>
-                <p>Environments are stored in deep space, protected and ready to be restored in the event of undesirable occurrences.</p>
-            </div>
-        </div>
-    </section> -->
     <section id="homepage-top">
         <div class="align-centre lgrey">
             <div class="section-padding half">
@@ -53,17 +36,17 @@
             <ol class="align-centre">
                 <li class="third">
                     <h1>1</h1>
-                    <img src="/img/new-env-instructions-1.png" class="scale">
+                    <img src="/img/homepage-diagram-1.jpg" class="scale">
                     <p>Zoom in fully to select an area of the map</p>
                 </li>
                 <li class="third">
                     <h1>2</h1>
-                    <img src="/img/new-env-instructions-2.png" class="scale">
+                    <img src="/img/homepage-diagram-2.jpg" class="scale">
                     <p>Name your environment and click the clone button</p>
                 </li>
                 <li class="third">
                     <h1>3</h1>
-                    <img src="/img/new-env-instructions-3.png" class="scale">
+                    <img src="/img/homepage-diagram-3.jpg" class="scale">
                     <p>View your newly cloned environment</p>
                 </li>
             </ol>
