@@ -122,7 +122,7 @@ class LoginSystem {
 
         MailClient::sendMsg($email, 'Reset your account password', "Please follow this link to reset your account password: http://cell-industries.co.uk/reset-password?e=$email&r=$rand");
 
-        return LoginSystem::wrapStart . 'We have sent instructions on how to reset your password to your email. Please check your emails.' . LoginSystem::wrapEnd;
+        return '<p class="full warn"><i class="ico-info"></i>We have sent instructions on how to reset your password to your email. Please check your emails.' . LoginSystem::wrapEnd;
     }
 
     static function resetPassword($email, $password, $rand) {
