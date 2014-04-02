@@ -6,7 +6,7 @@
                 <img src="http://www.gravatar.com/avatar/<?= (isset($env->email) ? md5(strtolower(trim($env->email))) : 1); ?>?d=mm&amp;s=60" alt="<?= $username ?>"/>
             </a>
             <h1><?= $env->name; ?></h1>
-            <h2><i class="ico-pin"></i><?= $env->latitude; ?>, <?= $env->longitude; ?></h2>
+            <h2><i class="ico-pin"></i><?= $env->latitude; ?>, <?= $env->longitude; ?> ( 50km<sup>2</sup> )</h2>
         </hgroup>
     </header>
 

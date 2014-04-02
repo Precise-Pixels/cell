@@ -6,7 +6,7 @@
 
 <main>
 
-    <div class="cube-wrapper-2">
+    <div class="cube-wrapper">
         <div class="cube">
             <div class="front"></div>
             <div class="back"></div>

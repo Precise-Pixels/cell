@@ -2,32 +2,6 @@
     display: none;
 }
 
-ul {
-    list-style: square;
-}
-
-ol { 
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    list-style: none;
-    text-align: center;
-}
-
-ol li {
-    padding: 20px;
-}
-
-ol h1 {
-    margin-bottom: 0;
-    margin-top: 30px;
-    font-size: 1.6rem;
-}
-
-ol p {
-    font-size: 1.4rem;
-}
-
 #pagination {
     margin-top: 40px;
     padding: 0 5px;
@@ -58,5 +32,16 @@ ol p {
             padding-right: 5px;
             float: right;
         }
+    }
+}
+
+.zoom-text {
+    text-align: center;
+    transition: transform .3s;
+    h2 {
+        font-size: 3rem;
+    }
+    &:hover {
+        transform: scale(1.1);
     }
 }

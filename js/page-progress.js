@@ -1,36 +1,9 @@
-// Full height homepage
-var primaryHeader   = document.getElementById('primary-header');
-var secondaryHeader = document.getElementById('secondary-header');
-primaryHeader.style.height = (window.innerHeight || document.documentElement.clientHeight) + 'px';
-secondaryHeader.style.marginTop = (parseInt(primaryHeader.style.height) + 40) + 'px';
-
-window.addEventListener('resize', function() {
-    primaryHeader.style.height = (window.innerHeight || document.documentElement.clientHeight) + 'px';
-    secondaryHeader.style.marginTop = (parseInt(primaryHeader.style.height) + 40) + 'px';
-});
-
-// Animated scroll
-var pageFlow = document.getElementById('page-flow');
-
-pageFlow.addEventListener('click', function(e) {
-    e.preventDefault();
-    var position = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-    var target   = document.getElementById('firststeps').offsetParent.offsetTop;
-    var timer = setInterval(function() {
-        window.scrollTo(0, position);
-        position += 40;
-        if(position >= target) {
-            clearInterval(timer);
-        }
-    }, 10);
-});
-
 // Google Maps
 google.maps.event.addDomListener(window, 'load', init);
 
 function init() {
     // Setup the map
-    var map = new google.maps.Map(document.getElementById('homepage-map'), {
+    var map = new google.maps.Map(document.getElementById('progress-map'), {
         center: new google.maps.LatLng(43, 10),
         zoom: 2,
         maxZoom: 10,
@@ -90,7 +63,7 @@ function init() {
     var locations = [];
 
     var request = new XMLHttpRequest;
-    request.open('GET', '/php/getHomepageMapMarkers.php', true);
+    request.open('GET', '/php/getProgressMapMarkers.php', true);
     request.send();
 
     request.onreadystatechange = function() {
@@ -126,8 +99,8 @@ function init() {
     }
 
     function updateData() {
-        var environments       = document.getElementById('homepage-map-data--environments');
-        var percentage         = document.getElementById('homepage-map-env-icon-perc');
+        var environments       = document.getElementById('progress-map-data--environments');
+        var percentage         = document.getElementById('progress-map-env-perc');
         environments.innerHTML = locLength;
         percentage.innerHTML   = (locLength / 167076 * 100).toFixed(2) + '%';
     }

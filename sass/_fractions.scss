@@ -1,13 +1,13 @@
 .full,
 .half,
-.third {
+.third,
+.quarter {
     width: (100%/1);
     float: left;
 }
 
-.quarter {
-    width: (100%/1);
-    float: left;
+.half--right {
+    float: right;
 }
 
 .half-margin {

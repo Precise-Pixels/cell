@@ -15,7 +15,8 @@ if(empty($path)) {                                  // HOME
 }
 
 $isHome               = ($q == '');
-$isAbout              = preg_match('#about/?$#', $q);
+$isProgress           = preg_match('#progress/?$#', $q);
+$isAbout              = preg_match('#about-cell-industries/?$#', $q);
 $isTechnology         = preg_match('#technology/?$#', $q);
 $isCloningProcess     = preg_match('#the-cloning-process/?$#', $q);
 $isUser               = preg_match('#user\/[0-9a-zA-Z]+/?$#', $q);
@@ -26,8 +27,8 @@ $isCapturing          = preg_match('#capturing-environment#', $q);
 
 $currentUrl           = "http://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
 
-if($isHome) {
-    require_once('model-home.php');
+if($isProgress) {
+    require_once('model-progress.php');
 }
 
 if($isUser) {

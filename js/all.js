@@ -11,7 +11,7 @@ if(Detector.cssfilter) { document.documentElement.className = document.documentE
 
 // Top Bar parallax / hide
 var headerTop     = document.getElementById('top-bar');
-var header        = document.getElementById('fixed-header') || document.getElementById('primary-header');
+var header        = document.getElementById('fixed-header');
 var target        = document.getElementsByTagName('main')[0].offsetTop;
 var siteNavToggle = document.getElementById('site-nav-toggle');
 var position;
@@ -24,8 +24,8 @@ window.addEventListener('scroll', function () {
     position = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
 
     if (header != null) {
-        var headerTransformString    = 'translate3d(0, ' + position * -1 / 3 + 'px' + ', 0)';
-        var hgroupTransformString    = 'translate3d(0, ' + position * -1 / 2 + 'px' + ', 0)';
+        var headerTransformString    = 'translate3d(0, ' + position * -1 / 6 + 'px' + ', 0)';
+        var hgroupTransformString    = 'translate3d(0, ' + position * -1 / 3 + 'px' + ', 0)';
         header.style.WebkitTransform = headerTransformString;
         header.style.msTransform     = headerTransformString;
         header.style.transform       = headerTransformString;
