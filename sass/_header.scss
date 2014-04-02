@@ -99,6 +99,12 @@ body > header {
     transition: background .3s;
 }
 
+.signin-status:hover,
+.user-nav-profile:hover,
+.new-environment:hover, {
+    background: $mgrey;
+}
+
 .signin-status {
     padding: 0 10px;
     right: 0;
@@ -106,19 +112,20 @@ body > header {
     -webkit-font-smoothing: antialiased;
 }
 
-.user-nav-profile,
+.user-nav-profile {
+    width: 40px;
+    padding: 0 5px;
+    right: 135px;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
 .new-environment {
     width: 40px;
     padding: 0 5px;
     right: 80px;
     font-size: 1.4rem;
     text-align: center;
-}
-
-.signin-status:hover,
-.user-nav-profile:hover,
-.new-environment:hover, {
-    background: $mgrey;
 }
 
 #site-nav {
