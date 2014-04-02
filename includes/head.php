@@ -37,6 +37,10 @@
     .cube > div {
         display: none;
     }
+
+    #ig-slides #ig-cta {
+        display: none;
+    }
 </style>
 <![endif]-->
 
