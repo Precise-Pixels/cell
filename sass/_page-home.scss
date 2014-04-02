@@ -56,6 +56,13 @@
     }
 }
 
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
 
 @media ($min-bp-a) {
     #fixed-header-homepage {

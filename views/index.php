@@ -21,12 +21,12 @@
         </div>
         <section>
         <div class="align-centre lgrey">
-            <div class="section-padding half">
-                <img src="img/project-titan-scanning.jpg" alt="">
-            </div>
-            <div class="section-padding half">
+            <div class="section-padding half half--right">
                 <h1><i class="ico-my-cell"></i>HOW ARE YOU INVOLVED?</h1>
                 <p>Project Titan is a collaborative project designed to involve everyone in preserving the Earth's environments. You get to decide which part of the planet we preserve next. You will be able to view the 3D representation of the environments you clone at any time, along with live information associated with those environments. You can then share your environments and let everyone know that you have done your part to help preserve the planet.</p>
+            </div>
+            <div class="section-padding half half--right">
+                <img src="img/project-titan-scanning.jpg" alt="">
             </div>
         </div>
     </section>
