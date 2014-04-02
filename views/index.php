@@ -37,17 +37,17 @@
                 <li class="third">
                     <h1>1</h1>
                     <img src="/img/homepage-diagram-1.jpg" class="scale">
-                    <p>Zoom in fully to select an area of the map</p>
+                    <p>Register for free to create your personal profile page</p>
                 </li>
                 <li class="third">
                     <h1>2</h1>
                     <img src="/img/homepage-diagram-2.jpg" class="scale">
-                    <p>Name your environment and click the clone button</p>
+                    <p>Clone environments using our environment cloning interface</p>
                 </li>
                 <li class="third">
                     <h1>3</h1>
                     <img src="/img/homepage-diagram-3.jpg" class="scale">
-                    <p>View your newly cloned environment</p>
+                    <p>View and interact with your newly cloned 3D environment</p>
                 </li>
             </ol>
         </div>
