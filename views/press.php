@@ -48,16 +48,10 @@
     </section>
     <section>
         <div class="align-centre lgrey">
-            <a href="/about-cell-industries" class="cta cta--about half">
+            <a href="/about-cell-industries" class="cta cta--about">
                 <hgroup class="align-vertical">
                     <h1>About Cell</h1>
                     <h2>Find out about Cell Industries</h2>
-                </hgroup>
-            </a>
-            <a href="/project-titan" class="cta cta--pt-small half">
-                <hgroup class="align-vertical">
-                    <h1>Project Titan</h1>
-                    <h2>Discover the groundbreaking project</h2>
                 </hgroup>
             </a>
         </div>

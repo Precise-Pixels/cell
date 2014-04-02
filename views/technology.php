@@ -61,15 +61,9 @@
 
     <section>
         <div class="align-centre">
-            <a href="the-cloning-process" class="cta cta--process half">
+            <a href="the-cloning-process" class="cta cta--process">
                 <hgroup class="align-vertical">
                     <h1>The Cloning Process</h1>
-                </hgroup>
-            </a>
-            <a href="/project-titan" class="cta cta--pt-small half">
-                <hgroup class="align-vertical">
-                    <h1>Project Titan</h1>
-                    <h2>Discover the groundbreaking project</h2>
                 </hgroup>
             </a>
         </div>

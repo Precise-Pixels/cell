@@ -41,24 +41,9 @@
     }
 }
 
-.cta--example {
+.cta--progress {
     height: 200px;
-    background-image: url(/img/placeholder.gif);
-}
-
-.cta--pt-large {
-    height: 400px;
-    background-image: url(/img/cta/625x400-project-titan.jpg);
-}
-
-.cta--pt-small {
-    height: 200px;
-    background-image: url(/img/cta/625x200-project-titan.jpg);
-}
-
-.cta--about {
-    height: 200px;
-    background-image: url(/img/cta/625x200-about.jpg);
+    background-image: url(/img/cta/625x200-progress.jpg);
 }
 
 .cta--technology {
@@ -66,12 +51,22 @@
     background-image: url(/img/cta/625x200-technology.jpg);
 }
 
-.cta--recent {
-    height: 200px;
-    background-image: url(/img/cta/625x200-recent.jpg);
-}
-
 .cta--process {
     height: 200px;
     background-image: url(/img/cta/625x200-process.jpg);
+}
+
+.cta--about {
+    height: 200px;
+    background-image: url(/img/cta/625x200-about.jpg);
+}
+
+.cta--press {
+    height: 200px;
+    background-image: url(/img/cta/625x200-press.jpg);
+}
+
+.cta--recent {
+    height: 200px;
+    background-image: url(/img/cta/625x200-recent.jpg);
 }

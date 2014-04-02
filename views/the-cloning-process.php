@@ -24,13 +24,7 @@
             <p class="ig-text ig-text--5">Once the environment scan is complete the Clone Cube returns to our deep space storage facility for safe keeping.</p>
             <section id="ig-cta" class="full">
                 <div class="align-centre">
-                    <a href="/project-titan" class="cta cta--pt-small half">
-                        <hgroup class="align-vertical">
-                            <h1>Project Titan</h1>
-                            <h2>Discover the groundbreaking project</h2>
-                        </hgroup>
-                    </a>
-                    <a href="/technology" class="cta cta--technology half">
+                    <a href="/technology" class="cta cta--technology">
                         <hgroup class="align-vertical">
                             <h1>Technology</h1>
                             <h2>Learn about our QuantumCell&trade; technology</h2>

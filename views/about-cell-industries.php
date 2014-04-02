@@ -138,16 +138,9 @@
 
     <section>
         <div class="align-centre">
-            <a href="/project-titan" class="cta cta--pt-small half">
+            <a href="/press" class="cta cta--press">
                 <hgroup class="align-vertical">
-                    <h1>Project Titan</h1>
-                    <h2>Discover the groundbreaking project</h2>
-                </hgroup>
-            </a>
-            <a href="/technology" class="cta cta--technology half">
-                <hgroup class="align-vertical">
-                    <h1>Technology</h1>
-                    <h2>Learn about our QuantumCell&trade; technology</h2>
+                    <h1>Press</h1>
                 </hgroup>
             </a>
         </div>
