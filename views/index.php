@@ -32,7 +32,7 @@
     </section>
     <section id="homepage-diagram">
         <div class="section-padding align-centre mblue">
-            <!-- <h1>Simply register for free, follow the instructions and build up your own collection of cloned environments.</h2> -->
+            <h1>Follow the instructions and build up your own collection of cloned environments.</h2>
             <ol class="align-centre">
                 <li class="third">
                     <h1>1</h1>
