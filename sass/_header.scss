@@ -90,7 +90,8 @@ body > header {
 }
 
 .signin-status,
-.user-nav-profile {
+.user-nav-profile,
+.new-environment {
     height: 40px;
     float: right;
     color: #FFF;
@@ -104,7 +105,8 @@ body > header {
     -webkit-font-smoothing: antialiased;
 }
 
-.user-nav-profile {
+.user-nav-profile,
+.new-environment {
     width: 40px;
     padding: 0 5px;
     font-size: 1.4rem;
@@ -112,7 +114,8 @@ body > header {
 }
 
 .signin-status:hover,
-.user-nav-profile:hover {
+.user-nav-profile:hover,
+.new-environment:hover, {
     background: $mgrey;
 }
 
