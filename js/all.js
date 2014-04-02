@@ -1,7 +1,7 @@
 // Feature detection
 var Detector = {
     webgl:     ( function() { try { var canvas = document.createElement('canvas'); return !! window.WebGLRenderingContext && (canvas.getContext('webgl') || canvas.getContext('experimental-webgl')); } catch(e) { return false; } } )(),
-    webrtc:    ( function() { try { return navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia } catch(e) { return false; } } )(),
+    webrtc:    ( function() { try { if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1) { return false; } else { return navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia } } catch(e) { return false; } } )(),
     cssfilter: ( function() { try { var el = document.createElement('div'); el.style.cssText = '-webkit-filter:blur(2px);filter:blur(2px);'; return !!el.style.length && ((document.documentMode === undefined || document.documentMode > 9)); } catch(e) { return false; } } )()
 }
 
