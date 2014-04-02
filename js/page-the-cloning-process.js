@@ -38,7 +38,7 @@ window.addEventListener('keydown', function(e) {
 });
 
 function prevSlide() {
-    if(sliding)           { return false; }
+    if(sliding && whichTransitionEvent() != undefined) { return false; }
     if(currentSlide == 1) { return false; }
     currentSlide--;
     updateSlide();
@@ -46,7 +46,7 @@ function prevSlide() {
 }
 
 function nextSlide() {
-    if(sliding)           { return false; }
+    if(sliding && whichTransitionEvent() != undefined) { return false; }
     if(currentSlide == 5) { return false; }
     currentSlide++;
     updateSlide();
