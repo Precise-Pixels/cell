@@ -232,9 +232,11 @@
 }
 
 #webcam-info-note {
-    position: relative;
-    font-size: .8rem;
-    padding: 10px;
+    position: initial;
+    padding: 5px;
+    i {
+        font-size: 2rem;
+    }
 }
 
 #canvas {
@@ -480,7 +482,7 @@
         }
 
         .env-data-pod--weather {
-            bottom: 202px;
+            bottom: 268px;
         }
     }
 

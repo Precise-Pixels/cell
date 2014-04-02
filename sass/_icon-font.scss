@@ -34,6 +34,9 @@ a[class*="ico-"] {
     margin-right: 0;
 }
 
+.ico-gesture:before {
+    content: "\47";
+}
 .ico-cross:before {
     content: "\78";
 }
@@ -178,6 +181,9 @@ a[class*="ico-"] {
 .ico-arrow-down2:before {
     content: "\56";
 }
+.ico-progress:before {
+    content: "\6e";
+}
 .ico-time:before {
     content: "\2c";
 }
@@ -204,7 +210,4 @@ a[class*="ico-"] {
 }
 .ico-arrow-up2:before {
     content: "\75";
-}
-.ico-progress:before {
-    content: "\6e";
 }
