@@ -232,7 +232,6 @@
 }
 
 #webcam-info-note {
-    position: initial;
     padding: 5px;
     i {
         font-size: 2rem;
@@ -445,12 +444,6 @@
     #video,
     #comp {
         float: left;
-    }
-
-    #env-info-note {
-        right: 10px;
-        bottom: 40px;
-        background: none;
     }
 
     #webcam-sensitivity {
