@@ -32,7 +32,8 @@
             <div id="env-info-note"><i class="ico-info"></i>Additional environment information is dependant on data availability.</div>
             <div id="env-interface-pods-bkg"></div>
         </div>
-        <div id="webcam-wrapper" class="env-interface-element"> 
+        <div id="webcam-wrapper" class="env-interface-element">
+        <div id="webcam-info-note"><i class="ico-info"></i>Try using short, fast movements for easier control.</div> 
             <video id="video" autoplay></video>
             <canvas id="canvas"></canvas>
             <canvas id="comp"></canvas>

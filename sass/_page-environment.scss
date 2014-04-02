@@ -231,6 +231,12 @@
     display: none;
 }
 
+#webcam-info-note {
+    position: relative;
+    font-size: .8rem;
+    padding: 10px;
+}
+
 #canvas {
     display: none;
 }
@@ -436,6 +442,12 @@
     #video,
     #comp {
         float: left;
+    }
+
+    #env-info-note {
+        right: 10px;
+        bottom: 40px;
+        background: none;
     }
 
     #webcam-sensitivity {
