@@ -1815,6 +1815,12 @@ THREE.OrbitControls = function ( object, domElement ) {
 
     this.update = function () {
 
+        // Stop auto rotation once user starts to interact
+
+        if ( state != STATE.NONE ) {
+            this.autoRotate = false;
+        }
+
         var position = this.object.position;
         var offset = position.clone().sub( this.target );
 

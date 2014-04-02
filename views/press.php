@@ -31,7 +31,7 @@
     </section>
 
     <section>
-        <div class="align-centre">
+        <div class="align-centre mblue">
             <div class="half mblue">
                 <blockquote>
                     <p>Without a doubt the most exciting and pioneering business of its time. Cell Industries excels where no other company can.</p>
