@@ -91,10 +91,10 @@
                     <h2>See the most recently cloned environments</h2>
                 </hgroup>
             </a>
-            <a href="/project-titan" class="cta cta--pt-small half">
+            <a href="/progress" class="cta cta--progress half">
                 <hgroup class="align-vertical">
-                    <h1>Project Titan</h1>
-                    <h2>Discover the groundbreaking project</h2>
+                    <h1>Progress</h1>
+                    <h2>How is Project Titan going so far?</h2>
                 </hgroup>
             </a>
         </div>

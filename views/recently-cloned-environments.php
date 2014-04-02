@@ -64,16 +64,10 @@
 
     <section>
         <div class="align-centre">
-            <a href="/project-titan" class="cta cta--pt-small half">
+            <a href="/progress" class="cta cta--progress">
                 <hgroup class="align-vertical">
-                    <h1>Project Titan</h1>
-                    <h2>Discover the groundbreaking project</h2>
-                </hgroup>
-            </a>
-            <a href="/technology" class="cta cta--technology half">
-                <hgroup class="align-vertical">
-                    <h1>Technology</h1>
-                    <h2>Learn about our QuantumCell&trade; technology</h2>
+                    <h1>Progress</h1>
+                    <h2>How is Project Titan going so far?</h2>
                 </hgroup>
             </a>
         </div>
