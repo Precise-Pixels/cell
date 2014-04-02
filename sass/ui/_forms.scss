@@ -6,10 +6,13 @@ label {
     font-size: 1.4rem;
 }
 
-form .btn {
-    width: 100%;
-    font-size: 1.2rem;
-    padding: 15px;
+form {
+    clear: both;
+    .btn {
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 15px;
+    }
 }
 
 input[type="submit"],
