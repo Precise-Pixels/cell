@@ -1,3 +1,9 @@
+// Removes #register if coming from /signin#register
+window.location.hash = '';
+if(history.pushState) {
+    history.pushState('', document.title, window.location.pathname);
+}
+
 // Edit user profile
 // up == user profile
 var upEdit          = document.getElementById('user-profile-edit');
