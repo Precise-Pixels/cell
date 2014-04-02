@@ -1,6 +1,5 @@
 #cookies {
     width: 100%;
-    max-width: 350px;
     padding: 20px;
     position: fixed;
     right: 0;
@@ -15,4 +14,10 @@
 
 .cookies--hide {
     display: none;
+}
+
+@media ($min_bp_a) {
+    #cookies {
+        max-width: 350px;
+    }
 }
