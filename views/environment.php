@@ -33,7 +33,7 @@
             <div id="env-interface-pods-bkg"></div>
         </div>
         <div id="webcam-wrapper" class="env-interface-element">
-        <div id="webcam-info-note"><i class="ico-info"></i>Try using short, fast movements for easier control.</div> 
+        <div id="webcam-info-note"><i class="ico-info"></i>Try using short, sharp hand gestures to interact with your environment.</div> 
             <video id="video" autoplay></video>
             <canvas id="canvas"></canvas>
             <canvas id="comp"></canvas>
