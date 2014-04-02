@@ -142,7 +142,7 @@ class LoginSystem {
             $sth = $dbh->prepare("UPDATE users SET password='$passwordE', resetRand='$newRand' WHERE email='$email'");
             $sth->execute();
 
-            return LoginSystem::wrapStart . 'Password successfully reset. Please <a href="signin">sign in</a>.' . LoginSystem::wrapEnd;
+            return '<p class="full success"><i class="ico-info"></i>Password successfully reset. Please <a href="signin">sign in</a>.' . LoginSystem::wrapEnd;
         } else {
             return LoginSystem::wrapStart . 'This link has expired. Please <a href="forgotten-password">request a new password reset link</a>.' . LoginSystem::wrapEnd;
         }
