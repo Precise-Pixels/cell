@@ -86,13 +86,26 @@ a img {
     border: 0;
 }
 
-.warn {
+.warn,
+.success {
     padding: 10px;
     color: $lgrey;
     background: $red;
     a {
         font-weight: 600;
-        border-bottom: 1px solid $lgrey;
+        border-bottom: none;
+        &:hover {
+            color: $lgrey;
+            border-bottom: 1px solid $lgrey;
+        }
+    }
+}
+
+.success {
+    background: $green;
+    a {
+        font-weight: 600;
+        color: $dblue;
         &:hover {
             color: $lgrey;
             border-bottom: 1px solid $lgrey;

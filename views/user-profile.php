@@ -13,27 +13,20 @@
             <div id="user-info" class="half">
                 <?php // If user is signed in and viewing their own profile
                 if(isset($_SESSION['userId']) && $_SESSION['userId'] == $user->userId): ?>
-                    <p class="user-profile-title"><i class="ico-my-cell"></i>Welcome to MyCell, <?= $user->username; ?></p>
+                    <p class="user-profile-title"><i class="ico-my-cell"></i>Welcome to your profile, <?= $user->username; ?></p>
                 <?php endif; ?>
                 <p><i class="ico-env"></i><?= count($totalEnvironments); ?> Environments Cloned</p>
                 <p><i class="ico-pin"></i><span id="user-profile-location"><?= ($user->location != '' ? $user->location : 'No location details') ?></span><input type="text" name="location" placeholder="Enter your current location" id="user-profile-location-input" class="user-profile-input user-profile-input--hidden"/></p>
                 <div id="user-social">
-                    <a href="<?= ($user->facebook != '' ? "http://facebook.com/$user->facebook" : '#') ?>" target="_blank"><i class="ico-facebook"></i></a><input type="text" name="facebook" placeholder="/username" id="user-profile-facebook-input" class="user-profile-input user-profile-input--hidden"/>
-                    <a href="<?= ($user->twitter != '' ? "http://twitter.com/$user->twitter" : '#') ?>" target="_blank"><i class="ico-twitter"></i></a><input type="text" name="twitter" placeholder="@username" id="user-profile-twitter-input" class="user-profile-input user-profile-input--hidden"/>
+                    <a href=<?= ($user->facebook != '' ? '"http://facebook.com/' . $user->facebook . '" target="_blank"' : '#') ?>><i class="ico-facebook"></i></a><input type="text" name="facebook" placeholder="/username" id="user-profile-facebook-input" class="user-profile-input user-profile-input--hidden"/>
+                    <a href=<?= ($user->twitter != '' ? '"http://twitter.com/' . $user->twitter . '" target="_blank"' : '#') ?>><i class="ico-twitter"></i></a><input type="text" name="twitter" placeholder="@username" id="user-profile-twitter-input" class="user-profile-input user-profile-input--hidden"/>
                 </div>
             </div>
             <div id="user-buttons">
             <?php // If user is signed in and viewing their own profile
             if(isset($_SESSION['userId']) && $_SESSION['userId'] == $user->userId): ?>
-                <?php if(empty($environments) && !isset($_GET['page'])): ?>
-                    <a href="#" id="user-profile-edit" class="btn" title="Edit your profile"><i class="ico-edit"></i></a>
-                    <a href="<?= $user->username; ?>/env/new" class="btn" title="Clone New Environment"><i class="ico-env-new"></i> NEW CLONE</a>
-                    <a href="/signout?r=<?= $_SERVER['REQUEST_URI']; ?>" class="btn" title="Sign Out"><i class="ico-logout"></i></a>
-                <?php else: ?>
-                    <a href="#" id="user-profile-edit" class="btn" title="Edit your profile"><i class="ico-edit"></i></a>
-                    <a href="<?= $user->username; ?>/env/new" class="btn" title="Clone New Environment"><i class="ico-env-new"></i></a>
-                    <a href="/signout?r=<?= $_SERVER['REQUEST_URI']; ?>" class="btn" title="Sign Out"><i class="ico-logout"></i></a>
-                <?php endif; ?>
+                <a href="<?= $user->username; ?>/env/new" class="btn" title="Clone a new environment"><i class="ico-env-new"></i> NEW CLONE</a>
+                <a href="#" id="user-profile-edit" class="btn" title="Edit your profile"><i class="ico-edit"></i> EDIT PROFILE</a>
             <?php endif; ?>
             </div>
         </div>
@@ -79,7 +72,7 @@
                     <a href="?page=<?= $page - 1; ?>" class="btn pagination-previous"><i class="ico-arrow-down"></i>PREVIOUS</a>
                 <?php endif; ?>
 
-                <span><?= $page; ?> of <?= ceil(count($totalEnvironments) / 12); ?></span>
+                <span><?= $page; ?> of <?= (count($totalEnvironments) == 0 ? '1' : ceil(count($totalEnvironments) / 12)); ?></span>
 
                 <?php if($page >= ceil(count($totalEnvironments) / 12)): ?>
                     <div class="btn btn--disabled pagination-next">NEXT<i class="ico-arrow-up"></i></div>
@@ -108,3 +101,5 @@
     </section>
 
 </main>
+
+<div id="full-page-overlay" class="full-page-overlay"></div>

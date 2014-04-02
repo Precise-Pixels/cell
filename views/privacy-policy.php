@@ -13,7 +13,7 @@
             <p>In running and maintaining our website we may collect and process the following data about you:</p>
             <ul>
                 <li>Information about your use of our site including details of your visits such as pages viewed and the resources that you access. Such information includes but is not exclusive to traffic data, location data and other communication data.</li>
-                <li>Information provided voluntarily by you. For example, when you register for MyCell or enter your details on your profile page.</li>
+                <li>Information provided voluntarily by you. For example, when you register for your account or enter your details on your profile page.</li>
                 <li>Information that you provide when you communicate with us by any means.</li>
             </ul>
         </div>

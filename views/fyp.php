@@ -15,4 +15,12 @@
         </div>
     </section>
 
+    <section>
+        <div class="section-padding align-centre mblue">
+            <h1><i class="ico-speech"></i>USER FEEDBACK</h1>
+            <p class="full">As part of the project, it is important that we gather real user feedback.</p>
+            <p class="full">Please <a href="https://docs.google.com/forms/d/1BxVO4AInJ2K8zNFQ2DxVs-wp76895AKe4DNR4R2ECkc/viewform" target="_blank">fill out this quick survey</a>. It should only take around 5 minutes.</p>
+        </div>
+    </section>
+
 </main>

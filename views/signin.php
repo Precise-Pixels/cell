@@ -16,7 +16,7 @@ $loginSystem = new LoginSystem();
             <?php
             if(isset($_SESSION['status'])) {
                 if($_SESSION['status'] == 'notsignedin') {
-                    echo '<p class="full warn"><i class="ico-info"></i>You must be logged in to view this page.</p>';
+                    echo '<p class="full warn"><i class="ico-warning"></i>You must be logged in to view this page.</p>';
                     unset($_SESSION['status']);
                 } elseif($_SESSION['status'] == 'signedin') {
                     header("location: /user/{$_SESSION['username']}");
@@ -35,7 +35,7 @@ $loginSystem = new LoginSystem();
             }
             ?>
 
-            <form method="post" id="signin-form">
+            <form method="post" id="signin">
                 <table>
                     <tr>
                         <td><label for="email">Email:</label></td>
@@ -69,7 +69,7 @@ $loginSystem = new LoginSystem();
             <?php
             require_once('php/ProfanityFilter.php');
 
-            $wrapStart = '<p class="full warn"><i class="ico-info"></i>';
+            $wrapStart = '<p class="full warn"><i class="ico-warning"></i>';
             $wrapEnd   = '</p>';
 
             if(!empty($_POST['register-submit'])) {
@@ -106,7 +106,7 @@ $loginSystem = new LoginSystem();
             }
             ?>
 
-            <form method="post" id="register-form">
+            <form action="#register" method="post" id="register">
                 <table>
                     <tr>
                         <td><label for="username">Username:</label></td>

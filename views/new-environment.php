@@ -12,10 +12,24 @@
 
 <main>
 
-    <section class="full">
-        <div id="new-env-tip" class="align-centre sdgrey">
-            <p><i class="ico-info"></i>Zoom in fully to select an area to clone!</p>
-        </div>
+    <section class="dgrey">
+        <ol class="align-centre">
+            <li class="third">
+                <h1>1</h1>
+                <img src="/img/new-env-instructions-1.png" class="scale">
+                <p>Zoom in fully and click on a tile to select an area of the map</p>
+            </li>
+            <li class="third">
+                <h1>2</h1>
+                <img src="/img/new-env-instructions-2.png" class="scale">
+                <p>Give your environment a name and click the clone button</p>
+            </li>
+            <li class="third">
+                <h1>3</h1>
+                <img src="/img/new-env-instructions-3.png" class="scale">
+                <p>View and interact with your 3D cloned environment</p>
+            </li>
+        </ol>
     </section>
 
     <section id="new-env-interface" class="sdgrey">
@@ -48,43 +62,6 @@
         </script>
     </section>
 
-    <section class="dgrey align-centre">
-        <ol class="align-centre">
-            <li class="third">
-                <h1>1</h1>
-                <img src="/img/new-env-instructions-1.png" class="scale">
-                <p>Zoom in fully to select an area of the map</p>
-            </li>
-            <li class="third">
-                <h1>2</h1>
-                <img src="/img/new-env-instructions-2.png" class="scale">
-                <p>Name your environment and click the clone button</p>
-            </li>
-            <li class="third">
-                <h1>3</h1>
-                <img src="/img/new-env-instructions-3.png" class="scale">
-                <p>View your newly cloned environment</p>
-            </li>
-        </ol>
-    </section>
-
-    <section class="align-centre sdgrey">   
-        <section class="section-content-wrapper">
-            <a href="/project-titan" class="cta cta--pt-small half">
-                <hgroup class="align-vertical">
-                    <h1>Project Titan</h1>
-                    <h2>Discover the groundbreaking project</h2>
-                </hgroup>
-            </a>
-            <a href="/recently-cloned-environments" class="cta cta--recent half">
-                <hgroup class="align-vertical">
-                    <h1>Recently Cloned</h1>
-                    <h2>See the most recently cloned environments</h2>
-                </hgroup>
-            </a>
-        </section>
-    </section>
-
 </main>
 
-<div id="full-page-overlay--loading" class="full-page-overlay"></div>
+<div id="full-page-overlay" class="full-page-overlay"></div>

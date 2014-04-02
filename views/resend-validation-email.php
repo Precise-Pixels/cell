@@ -19,7 +19,7 @@
                     $response = $loginSystem->resendValidationEmail($email);
                     echo $response;
                 } else {
-                    echo '<p class="full warn">Please enter your email.</p>';
+                    echo '<p class="full warn"><i class="ico-warning"></i>Please enter your email.</p>';
                 }
             }
             ?>

@@ -7,7 +7,6 @@ var $container, containerX, containerY, scene, camera, ambient, directional1, di
 
 function init() {
     $container = document.getElementById('clone-cube');
-    $container.innerHTML = '';
 
     getContainerSize();
 
@@ -43,6 +42,8 @@ function init() {
         object.castShadow = true;
         object.receiveShadow = true;
         scene.add(object);
+        $container.innerHTML = '';
+        $container.appendChild(renderer.domElement);
     });
 
     loader.load('/3d/clone-cube.obj', '/3d/clone-cube.mtl');
@@ -58,7 +59,6 @@ function init() {
     renderer.setSize(containerX, containerY);
     renderer.shadowMapEnabled = true;
     renderer.shadowMapSoft = true;
-    $container.appendChild(renderer.domElement);
 
     animate();
 

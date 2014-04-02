@@ -155,6 +155,13 @@ if(Detector.webgl) {
 
         google.maps.event.addListener(map, 'zoom_changed', function() {
             currentZoom = map.getZoom();
+
+            // Change cursor to pointer if at required zoom level
+            if(currentZoom == requiredZoom) {
+                map.setOptions({ draggableCursor: 'pointer' });
+            } else {
+                map.setOptions({ draggableCursor: null });
+            }
         });
 
         google.maps.event.addListener(map, 'maptypeid_changed', function() {
@@ -174,9 +181,9 @@ if(Detector.webgl) {
         warnUnavailable.id      = 'new-env-warn-unavailable';
         warnNoName.id           = 'new-env-warn-name';
         warnProfanity.id        = 'new-env-warn-profanity';
-        warnNoTile.innerHTML    = '<i class="ico-info"></i>Please select an area on the map.';
-        warnNoName.innerHTML    = '<i class="ico-info"></i>Please enter a name for your environment.';
-        warnProfanity.innerHTML = '<i class="ico-info"></i>No profanity please.';
+        warnNoTile.innerHTML    = '<i class="ico-warning"></i>Please select an area on the map.';
+        warnNoName.innerHTML    = '<i class="ico-warning"></i>Please enter a name for your environment.';
+        warnProfanity.innerHTML = '<i class="ico-warning"></i>No profanity please.';
 
         cloneBtn.addEventListener('click', function(e) {
             validate();
@@ -190,6 +197,9 @@ if(Detector.webgl) {
         });
 
         function validate() {
+            var preloader = document.getElementById('full-page-overlay');
+            preloader.className += ' full-page-overlay--loading';
+
             if(currentTile != undefined) {
                 // Check if selected tile is already cloned
                 var data = 'cLat=' + centreLat + '&cLon=' + centreLon;
@@ -221,22 +231,24 @@ if(Detector.webgl) {
                                         var containsProfanity = request2.responseText;
 
                                         if(!containsProfanity) {
-                                            document.getElementById('full-page-overlay--loading').className += ' full-page-overlay--loading';
                                             generateEnv(lat1, lon1, lat2, lon2);
                                         } else {
                                             var warnNoNameElem = document.getElementById('new-env-warn-name');
                                             if(warnNoNameElem) {
                                                 warnNoNameElem.parentNode.removeChild(warnNoNameElem);
                                             }
+                                            hidePreloader();
                                             envForm.appendChild(warnProfanity);
                                         }
                                     }
                                 }
                             } else {
+                                hidePreloader();
                                 envForm.appendChild(warnNoName);
                             }
                         } else {
                             warnUnavailable.innerHTML = 'Your selected area has already been cloned. Please select another area or <a href="' + tileAvailable.replace('false', '') + '" target="_blank">view the selected area</a>.';
+                            hidePreloader();
                             envForm.appendChild(warnUnavailable);
 
                             var warnNoNameElem = document.getElementById('new-env-warn-name');
@@ -248,7 +260,12 @@ if(Detector.webgl) {
                 }
 
             } else {
+                hidePreloader();
                 envForm.appendChild(warnNoTile);
+            }
+
+            function hidePreloader() {
+                preloader.className = preloader.className.replace(' full-page-overlay--loading', '');
             }
         }
     }
