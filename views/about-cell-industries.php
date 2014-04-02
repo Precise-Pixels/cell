@@ -129,7 +129,7 @@
                     <div class="event-date-wrapper">
                         <p class="event-date">2014</p>
                     </div>
-                    <p class="event-text"><a href="/project-titan">Project Titan</a> was launched to the public.</p>
+                    <p class="event-text">Project Titan was launched to the public.</p>
                 </div>
 
             </div>
