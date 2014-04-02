@@ -28,6 +28,7 @@
     <?php if($isEnv): ?>
         <script>
             var userId    = <?= $userId; ?>;
+            var username  = '<?= $username; ?>';
             var envId     = <?= $envId; ?>;
             var latitude  = <?= $env->latitude; ?>;
             var longitude = <?= $env->longitude; ?>;
@@ -78,7 +79,7 @@
     <?php endif; ?>
 
     <?php if($isEnv): ?>
-        <script>var userId=<?= $userId; ?>,envId=<?= $envId; ?>,latitude=<?= $env->latitude; ?>,longitude=<?= $env->longitude; ?>;</script>
+        <script>var userId=<?= $userId; ?>,username='<?= $username; ?>',envId=<?= $envId; ?>,latitude=<?= $env->latitude; ?>,longitude=<?= $env->longitude; ?>;</script>
         <script src="/build/threejs-loaders-controls-stackblur.min.js"></script>
         <script src="/build/page-environment.min.js"></script>
         <script src="/build/gesture.min.js"></script>
