@@ -61,9 +61,8 @@ function init() {
 
     var dispMapShader = new THREE.ShaderMaterial({ fragmentShader: shader.fragmentShader, vertexShader: shader.vertexShader, uniforms: uniforms, lights: true, wireframe: false });
     var podiumShader  = new THREE.MeshLambertMaterial({ ambient: 0x222222 });
-    var podiumBottom  = new THREE.MeshBasicMaterial({ map: THREE.ImageUtils.loadTexture('/img/podium-bottom.jpg') });
 
-    var cubeFaceMaterials = [podiumShader, podiumShader, dispMapShader, podiumBottom, podiumShader, podiumShader];
+    var cubeFaceMaterials = [podiumShader, podiumShader, dispMapShader, podiumShader, podiumShader, podiumShader];
 
     // Geometry
     var geometry = new THREE.CubeGeometry(100, 2, 100, 200, 1, 200, cubeFaceMaterials);
@@ -75,6 +74,7 @@ function init() {
 
     // Controls
     controls = new THREE.OrbitControls(camera, $container);
+    controls.maxPolarAngle = Math.PI / 2;
     controls.addEventListener('change', render);
 
     // Render
