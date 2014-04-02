@@ -11,7 +11,7 @@ if(Detector.cssfilter) { document.documentElement.className = document.documentE
 
 // Top Bar parallax / hide
 var headerTop     = document.getElementById('top-bar');
-var header        = document.getElementById('fixed-header')/* || document.getElementById('primary-header')*/;
+var header        = document.getElementById('fixed-header');
 var target        = document.getElementsByTagName('main')[0].offsetTop;
 var siteNavToggle = document.getElementById('site-nav-toggle');
 var position;

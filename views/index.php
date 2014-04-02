@@ -16,7 +16,7 @@
                 <p>In an ever changing and increasingly turbulent world the natural environments of our planet often bear the brunt of modern society. Using our groundbreaking QuantumCell&trade; technology we want to ensure the environments that matter to you are preserved for millennia to come. Using our QuantumCell&trade; Clone Cubes we can clone whole areas of environments leaving them protected and ready to be restored in the event of undesirable occurrences.</p>
             </div>
             <div class="section-padding half">
-                <img src="img/project-titan-earth.jpg" alt="">
+                <img src="img/project-titan-earth.jpg" alt="Clone Cube entering the atmosphere" class="scale">
             </div>
         </div>
         <section>
@@ -26,7 +26,7 @@
                 <p>Project Titan is a collaborative project designed to involve everyone in preserving the Earth's environments. You get to decide which part of the planet we preserve next. You will be able to view the 3D representation of the environments you clone at any time, along with live information associated with those environments. You can then share your environments and let everyone know that you have done your part to help preserve the planet.</p>
             </div>
             <div class="section-padding half half--right">
-                <img src="img/project-titan-scanning.jpg" alt="">
+                <img src="img/project-titan-scanning.jpg" alt="Clone Cube scanning an environment" class="scale">
             </div>
         </div>
     </section>

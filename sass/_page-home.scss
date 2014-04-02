@@ -19,11 +19,6 @@
 
 #homepage-main {
     margin-top: 550px;
-    img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
 }
 
 #homepage-top {
@@ -32,14 +27,7 @@
     }
 }
 
-.homepage-project-titan-1 {
-}
-
 #homepage-diagram {
-    text-align: center;
-}
-
-#homepage-three {
     text-align: center;
 }
 
@@ -54,14 +42,6 @@
         font-size: 2rem;
         font-weight: 200;
     }
-}
-
-.float-left {
-    float: left;
-}
-
-.float-right {
-    float: right;
 }
 
 @media ($min-bp-a) {
