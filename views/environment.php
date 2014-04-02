@@ -32,7 +32,8 @@
             <div id="env-info-note"><i class="ico-info"></i>Additional environment information is dependant on data availability.</div>
             <div id="env-interface-pods-bkg"></div>
         </div>
-        <div id="webcam-wrapper" class="env-interface-element"> 
+        <div id="webcam-wrapper" class="env-interface-element">
+        <p id="webcam-info-note"><i class="ico-gesture"></i>Try using short, sharp hand gestures to interact with the environment</p> 
             <video id="video" autoplay></video>
             <canvas id="canvas"></canvas>
             <canvas id="comp"></canvas>

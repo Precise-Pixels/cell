@@ -231,6 +231,14 @@
     display: none;
 }
 
+#webcam-info-note {
+    position: initial;
+    padding: 5px;
+    i {
+        font-size: 2rem;
+    }
+}
+
 #canvas {
     display: none;
 }
@@ -439,6 +447,12 @@
         float: left;
     }
 
+    #env-info-note {
+        right: 10px;
+        bottom: 40px;
+        background: none;
+    }
+
     #webcam-sensitivity {
         width: 33.33%;
         max-width: 150px;
@@ -469,7 +483,7 @@
         }
 
         .env-data-pod--weather {
-            bottom: 202px;
+            bottom: 268px;
         }
     }
 
