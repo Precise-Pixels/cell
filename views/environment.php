@@ -2,8 +2,8 @@
 
     <header>
         <hgroup class="align-vertical">
-            <a href="/user/<?= $username ?>">
-                <img src="http://www.gravatar.com/avatar/<?= (isset($env->email) ? md5(strtolower(trim($env->email))) : 1); ?>?d=mm&amp;s=60" alt="<?= $username ?>"/>
+            <a href="/user/<?= $userUsername ?>">
+                <img src="http://www.gravatar.com/avatar/<?= (isset($env->email) ? md5(strtolower(trim($env->email))) : 1); ?>?d=mm&amp;s=60" alt="<?= $userUsername ?>"/>
             </a>
             <h1><?= $env->name; ?></h1>
             <h2><i class="ico-pin"></i><?= $env->latitude; ?>, <?= $env->longitude; ?> ( 50km<sup>2</sup> )</h2>

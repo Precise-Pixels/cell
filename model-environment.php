@@ -1,14 +1,14 @@
 <?php
 
-$envVars  = explode('/', $q);
-$username = $envVars[1];
-$envId    = $envVars[3];
+$envVars      = explode('/', $q);
+$userUsername = $envVars[1];
+$envId        = $envVars[3];
 
 require_once('php/User.php');
-$userId = User::getUserId($username);
+$userUserId = User::getUserId($userUsername);
 
 require_once('php/Environment.php');
-$env = Environment::getData($envId, $userId);
+$env = Environment::getData($envId, $userUserId);
 
 if($env) {
     $file = 'environment';
