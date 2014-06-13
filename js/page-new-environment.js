@@ -302,13 +302,13 @@ if(Detector.webgl) {
         var tileHeight = lat2 - lat1;
         var tileWidth  = lon2 - lon1;
 
-        // Divide the tile into 20x20 points
+        // Divide the tile into (resolution)x(resolution) points
         var tileHeightDivision = tileHeight / resolution;
         var tileWidthDivision  = tileWidth / resolution;
 
         var latLonArray = [];
 
-        // Concatinate the coordinates of all the division points together
+        // Concatenate the coordinates of all the division points together
         for (var y = resolution; y >= 0; y--) {
             for (var x = 0; x < resolution; x++) {
                 var latDivision = (lat1 + (tileHeightDivision * y)).toFixed(4);
