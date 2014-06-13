@@ -1,13 +1,14 @@
+<header id="fixed-header" class="fixed-header--fyp section-padding">
+    <hgroup class="align-vertical">
+        <h1>FRONT-END TEMPLATE DEMO</h1>
+        <h2>A demo of all the elements used across the site</h2>
+        <?php require_once('includes/balls.php'); ?>
+    </hgroup>
+</header>
+
 <main>
 
     <!-- Generous spacing between major sections-->
-    <header class="section-padding align-centre dgrey">
-        <hgroup class="align-vertical">
-            <h1>PAGE TITLE</h1>
-            <h2>OPTIONAL TITLE</h2>
-        </hgroup>
-    </header>
-
     <section>
         <div class="section-padding align-centre lgrey">
             <h1>FLOATING SECTION</h1>
@@ -30,9 +31,9 @@
         <div class="section-padding align-centre lgrey">
             <h1>FRACTIONS</h1>
 
-            <p class="warn">If more than one type of fraction needs to be used within one section, wrap each 'section' in <code>.section-content-wrapper</code>, if not leave that div out.</p>
+            <p class="success">If more than one type of fraction needs to be used within one section, wrap each 'section' in <code>.section-content-wrapper</code>, if not leave that div out.</p>
 
-            <p class="warn"><code>:first-of-type</code> and <code>:last-of-type</code> are used to reset the outer margins to keep the content inline.</p>
+            <p class="success"><code>:first-of-type</code> and <code>:last-of-type</code> are used to reset the outer margins to keep the content inline.</p>
 
             <div class="section-content-wrapper">
                 <h2>.full</h2>
@@ -71,9 +72,9 @@
         <div class="section-padding align-centre lgrey">
             <h1>CALL TO ACTIONS</h1>
 
-            <p class="warn">Each <code>.cta</code> will be accompanied by its own modifier (e.g <code>.cta--example</code>) where individual <code>height</code> and <code>background-image</code> styles can be set. <code>background-position: center</code> and <code>background-size: cover</code> have already been set on <code>.cta</code></p>
+            <p class="success">Each <code>.cta</code> will be accompanied by its own modifier (e.g <code>.cta--example</code>) where individual <code>height</code> and <code>background-image</code> styles can be set. <code>background-position: center</code> and <code>background-size: cover</code> have already been set on <code>.cta</code></p>
 
-            <p class="warn">Transparent grey overlay is applied on top of the image using <code>:after</code> to promote reusability of the original image.</p>
+            <p class="success">Transparent grey overlay is applied on top of the image using <code>:after</code> to promote reusability of the original image.</p>
 
             <div class="cta cta--example half">
                 <hgroup class="align-vertical">
@@ -207,32 +208,44 @@
             </form>
         </div>
     </section>
-    
-    <section class="align-centre dgrey">
+
+    <section class="section--spacer align-centre lgrey">
         <h1 class="section-padding">QUOTES</h1>
-        <div class="section-padding half lgrey">
-            <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
-                <footer>Mr Person, Title Here</footer>
-            </blockquote>  
+        <div class="section-content-wrapper">
+            <div class="section-padding half lgrey">
+                <blockquote>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
+                    <footer>Mr Person, Title Here</footer>
+                </blockquote>
+            </div>
+            <div class="section-padding half dgrey">
+                <blockquote>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
+                    <footer>Mr Person, Title Here</footer>
+                </blockquote>
+            </div>
         </div>
-        <div class="section-padding half dgrey">
-            <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
-                <footer>Mr Person, Title Here</footer>
-            </blockquote>
+        <div class="section-content-wrapper">
+            <div class="section-padding half sdgrey">
+                <blockquote>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
+                    <footer>Mr Person, Title Here</footer>
+                </blockquote>
+            </div>
+            <div class="section-padding half mblue">
+                <blockquote>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
+                    <footer>Mr Person, Title Here</footer>
+                </blockquote>
+            </div>
         </div>
-        <div class="section-padding half sdgrey">
-            <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
-                <footer>Mr Person, Title Here</footer>
-            </blockquote>
-        </div>
-        <div class="section-padding half mblue">
-            <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
-                <footer>Mr Person, Title Here</footer>
-            </blockquote>
+    </section>
+
+    <section>
+        <div class="section-padding align-centre lgrey">
+            <h1>SUCCESS AND WARNING MESSAGES</h1>
+            <p class="full success"><i class="ico-info"></i>Success!</p>
+            <p class="full warn"><i class="ico-warning"></i>Warning!</p>
         </div>
     </section>
 
