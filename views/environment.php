@@ -21,7 +21,7 @@
         <label for="env-interface-pods-toggle" id="env-interface-pods-btn" class="ico-"></label>
         <div id="env-interface-pods">
             <div id="env-map" class="env-interface-element">
-                <img src="http://maps.googleapis.com/maps/api/staticmap?center=<?= $env->latitude; ?>,<?= $env->longitude; ?>&zoom=10&size=380x380&scale=2&maptype=hybrid&sensor=false&key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4">
+                <img src="http://maps.googleapis.com/maps/api/staticmap?center=<?= $env->latitude; ?>,<?= $env->longitude; ?>&zoom=10&size=380x380&scale=2&maptype=hybrid&sensor=false&key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4&format=jpg">
             </div>
             <section id="env-data"></section>
             <div id="env-share" class="env-interface-element">
