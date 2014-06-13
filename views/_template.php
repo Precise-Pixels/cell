@@ -212,20 +212,6 @@
     <section class="section--spacer align-centre lgrey">
         <h1 class="section-padding">QUOTES</h1>
         <div class="section-content-wrapper">
-            <div class="section-padding half lgrey">
-                <blockquote>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
-                    <footer>Mr Person, Title Here</footer>
-                </blockquote>
-            </div>
-            <div class="section-padding half dgrey">
-                <blockquote>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
-                    <footer>Mr Person, Title Here</footer>
-                </blockquote>
-            </div>
-        </div>
-        <div class="section-content-wrapper">
             <div class="section-padding half sdgrey">
                 <blockquote>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
@@ -233,6 +219,20 @@
                 </blockquote>
             </div>
             <div class="section-padding half mblue">
+                <blockquote>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
+                    <footer>Mr Person, Title Here</footer>
+                </blockquote>
+            </div>
+        </div>
+        <div class="section-content-wrapper">
+            <div class="section-padding half lgrey">
+                <blockquote>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
+                    <footer>Mr Person, Title Here</footer>
+                </blockquote>
+            </div>
+            <div class="section-padding half dgrey">
                 <blockquote>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa libero, rhoncus at sodales et, fringilla vitae justo.</p>
                     <footer>Mr Person, Title Here</footer>
