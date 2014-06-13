@@ -2,7 +2,7 @@
 
 $url = $_POST['u'];
 
-$xml = simplexml_load_file($url);
+$xml = simplexml_load_file(urlencode($url));
 
 $hasData = $xml->attributes()->success;
 
