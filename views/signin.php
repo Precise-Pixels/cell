@@ -98,7 +98,7 @@ $loginSystem = new LoginSystem();
                             echo $wrapStart . 'Email and/or password did not match. Please try again.' . $wrapEnd;
                         }
                     } else {
-                        echo $wrapStart . 'Username must be alphanumeric (a-z A-Z 0-9).' . $wrapEnd;
+                        echo $wrapStart . 'Username must be alphanumeric (a-z A-Z 0-9) with no spaces.' . $wrapEnd;
                     }
                 } else {
                     echo $wrapStart . 'Please enter your email and password.' . $wrapEnd;
