@@ -23,4 +23,15 @@
         </div>
     </section>
 
+    <section>
+        <div class="section-padding align-centre lgrey">
+            <h1><i class="ico-cell-logo"></i>GITHUB INFO</h1>
+            <p>URL: <a href="https://github.com/Precise-Pixels/cell" target="_blank">https://github.com/Precise-Pixels/cell</a></p>
+            <p>Language Distribution: PHP 48.9% | Javascript 29.2% | CSS 21.9%</p>
+            <p>Commits: <?= $commits; ?></p>
+            <p>Branches: <?= count($branches); ?></p>
+            <p>Pull Requests: <?= count($pulls); ?></p>
+        </div>
+    </section>
+
 </main>

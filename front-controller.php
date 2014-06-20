@@ -24,6 +24,7 @@ $isEnv                = preg_match('#env\/\d+/?$#', $q);
 $isNewEnv             = preg_match('#env\/new/?$#', $q);
 $isRecentlyClonedEnvs = preg_match('#recently-cloned-environments/?$#', $q);
 $isCapturing          = preg_match('#capturing-environment#', $q);
+$isFYP                = preg_match('#fyp#', $q);
 
 $currentUrl           = "http://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
 
@@ -46,6 +47,10 @@ if($isNewEnv) {
 if($isRecentlyClonedEnvs) {
     require_once('model-recently-cloned-environments.php');
     $file = 'recently-cloned-environments';
+}
+
+if($isFYP) {
+    require_once('model-fyp.php');
 }
 
 require_once('front-view.php');
