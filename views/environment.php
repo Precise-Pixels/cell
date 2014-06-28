@@ -2,11 +2,11 @@
 
     <header>
         <hgroup class="align-vertical">
-            <a href="/user/<?= $userUsername ?>">
+            <a href="/user/<?= $userUsername ?>" id="user-thumb">
                 <img src="http://www.gravatar.com/avatar/<?= (isset($env->email) ? md5(strtolower(trim($env->email))) : 1); ?>?d=mm&amp;s=60" alt="<?= $userUsername ?>"/>
             </a>
             <h1><?= $env->name; ?></h1>
-            <h2><i class="ico-pin"></i><?= $env->latitude; ?>, <?= $env->longitude; ?> ( 50km<sup>2</sup> )</h2>
+            <h2><i class="ico-pin"></i><a href="http://maps.google.com/maps?q=<?= $env->latitude; ?>, <?= $env->longitude; ?>" target="_blank"><?= $env->latitude; ?>, <?= $env->longitude; ?></a> ( 50km<sup>2</sup> )</h2>
         </hgroup>
     </header>
 
