@@ -6,27 +6,19 @@
 }
 
 #key-people-jacob {
-    background-image: url(/img/key-people/jacob-1.jpg);
-}
-
-#key-people .imagebox:hover #key-people-jacob {
-    background-image: url(/img/key-people/jacob-2.jpg);
+    background-image: url(/img/key-people/jacob.jpg);
 }
 
 #key-people-james {
-    background-image: url(/img/key-people/james-1.jpg);
-}
-
-#key-people .imagebox:hover #key-people-james {
-    background-image: url(/img/key-people/james-2.jpg);
+    background-image: url(/img/key-people/james.jpg);
 }
 
 #key-people-joseph {
-    background-image: url(/img/key-people/joseph-1.jpg);
+    background-image: url(/img/key-people/joseph.jpg);
 }
 
-#key-people .imagebox:hover #key-people-joseph {
-    background-image: url(/img/key-people/joseph-2.jpg);
+#key-people .imagebox:hover div {
+    background-position: bottom;
 }
 
 @media ($min_bp_a) and ($max_bp_c) {
