@@ -10,8 +10,11 @@
     <section>
         <div class="section-padding align-centre lgrey">
             <h1><i class="ico-cell-logo"></i>THE PROJECT</h1>
-            <p class="full">Cell Industries is a Multimedia Technology and Design University of Kent final year project by <a href="http://jacobhammond.co.uk/" target="_blank">Jacob Hammond</a>, <a href="http://jalproductions.co.uk/" target="_blank">James Lee</a> and <a href="http://faooful.com/" target="_blank">Joseph Williams</a>.</p>
-            <p class="full">More information coming soon.</p>
+            <p class="full">Cell Industries is a Multimedia Technology and Design University of Kent Final Year Project by <a href="http://precisepixels.co.uk" target="_blank">Precise Pixels</a>:</p>
+            <p class="full"><a href="http://jacobhammond.co.uk/" target="_blank">Jacob Hammond</a><br>
+            <a href="http://jalproductions.co.uk/" target="_blank">James Lee</a><br>
+            <a href="http://faooful.com/" target="_blank">Joseph Williams</a></p>
+            <p class="full">For more information, see the <a href="http://precisepixels.co.uk/blog/" target="_blank">Progress Blog</a>.</p>
         </div>
     </section>
 
@@ -27,7 +30,7 @@
         <div class="section-padding align-centre lgrey">
             <h1><i class="ico-cell-logo"></i>GITHUB INFO</h1>
             <p>URL: <a href="https://github.com/Precise-Pixels/cell" target="_blank">https://github.com/Precise-Pixels/cell</a></p>
-            <p>Language Distribution: PHP 48.9% | Javascript 29.2% | CSS 21.9%</p>
+            <p>Language Distribution: PHP 49.5% | Javascript 29.5% | CSS 21.0%</p>
             <p>Commits: <?= $commits; ?></p>
             <p>Branches: <?= count($branches); ?></p>
             <p>Pull Requests: <?= count($pulls); ?></p>
