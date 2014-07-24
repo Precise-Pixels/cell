@@ -32,8 +32,8 @@
             <p>URL: <a href="https://github.com/Precise-Pixels/cell" target="_blank">https://github.com/Precise-Pixels/cell</a></p>
             <p>Language Distribution: PHP 49.5% | Javascript 29.5% | CSS 21.0%</p>
             <p>Commits: <?= $commits; ?></p>
-            <p>Branches: <?= count($branches); ?></p>
-            <p>Pull Requests: <?= count($pulls); ?></p>
+            <p>Branches: <?= $branches; ?></p>
+            <p>Pull Requests: <?= $pulls; ?></p>
         </div>
     </section>
 
