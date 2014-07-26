@@ -27,7 +27,7 @@
     <meta property="og:title" content="Cell Industries"/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="http://cell-industries.co.uk"/>
-    <meta property="og:image" content="http://cell-industries.co.uk/img/touchicon-144.png"/>
+    <meta property="og:image" content="http://cell-industries.co.uk/img/logo.png"/>
     <meta property="og:site_name" content="Cell Industries"/>
     <meta property="og:description" content="Cell Industries presents Project Titan - Preserving The Planet"/>
 <?php endif; ?>
