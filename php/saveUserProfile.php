@@ -3,9 +3,9 @@ session_start();
 
 require('db.php');
 
-$location = $_POST['location'];
-$facebook = $_POST['facebook'];
-$twitter  = $_POST['twitter'];
+$location = strip_tags($_POST['location']);
+$facebook = strip_tags($_POST['facebook']);
+$twitter  = strip_tags($_POST['twitter']);
 
 if(strpos($facebook, '/') === 0) {
     $facebook = substr($facebook, 1);

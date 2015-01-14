@@ -7,7 +7,7 @@ $longitude     = $_POST['cLon'];
 $heightsString = $_POST['h'];
 $resolution    = $_POST['r'];
 $tileSize      = $_POST['t'];
-$name          = $_POST['n'];
+$name          = strip_tags($_POST['n']);
 $userId        = $_SESSION['userId'];
 
 // Generate the height map
