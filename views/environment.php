@@ -3,10 +3,10 @@
     <header>
         <hgroup class="align-vertical">
             <a href="/user/<?= $userUsername ?>" id="user-thumb">
-                <img src="http://www.gravatar.com/avatar/<?= (isset($env->email) ? md5(strtolower(trim($env->email))) : 1); ?>?d=mm&amp;s=60" alt="<?= $userUsername ?>"/>
+                <img src="https://www.gravatar.com/avatar/<?= (isset($env->email) ? md5(strtolower(trim($env->email))) : 1); ?>?d=mm&amp;s=60" alt="<?= $userUsername ?>"/>
             </a>
             <h1><?= $env->name; ?></h1>
-            <h2><i class="ico-pin"></i><a href="http://maps.google.com/maps?q=<?= $env->latitude; ?>, <?= $env->longitude; ?>" target="_blank"><?= $env->latitude; ?>, <?= $env->longitude; ?></a> ( 50km<sup>2</sup> )</h2>
+            <h2><i class="ico-pin"></i><a href="https://maps.google.com/maps?q=<?= $env->latitude; ?>, <?= $env->longitude; ?>" target="_blank"><?= $env->latitude; ?>, <?= $env->longitude; ?></a> ( 50km<sup>2</sup> )</h2>
         </hgroup>
     </header>
 
@@ -21,7 +21,7 @@
         <label for="env-interface-pods-toggle" id="env-interface-pods-btn" class="ico-"></label>
         <div id="env-interface-pods">
             <div id="env-map" class="env-interface-element">
-                <img src="http://maps.googleapis.com/maps/api/staticmap?center=<?= $env->latitude; ?>,<?= $env->longitude; ?>&zoom=10&size=380x380&scale=2&maptype=hybrid&sensor=false&key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4&format=jpg">
+                <img src="https://maps.googleapis.com/maps/api/staticmap?center=<?= $env->latitude; ?>,<?= $env->longitude; ?>&zoom=10&size=380x380&scale=2&maptype=hybrid&sensor=false&key=AIzaSyCNlx7Q6EFJ2nlJfkAnMIsCm94fdSzaqf4&format=jpg">
             </div>
             <section id="env-data"></section>
             <div id="env-share" class="env-interface-element">

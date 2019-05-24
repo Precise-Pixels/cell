@@ -8,7 +8,7 @@
 <?php else: ?>
     <link rel="stylesheet" type="text/css" href="/build/styles.min.css"/>
 <?php endif; ?>
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900' rel='stylesheet' type='text/css'>
 <link rel="shortcut icon" href="/img/favicon.ico"/>
 <link rel="apple-touch-icon-precomposed" href="/img/touchicon-57.png">
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/touchicon-72.png">
