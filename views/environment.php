@@ -11,7 +11,7 @@
     </header>
 
     <section id="env-interface">
-        <div id="model"><img src="/img/user/<?= $env->userId; ?>/capture-<?= $envId; ?>.jpg" alt="<?= $env->name; ?>"/></div>
+        <div id="model"><img src="/img/user/<?= $env->userId; ?>/capture-<?= $envId; ?>.jpg" alt="<?= $env->name; ?>" onerror="this.src='/img/imagebox-error.png'"/></div>
         <div id="model-interaction" class="sdgrey">
             <h1><i class="ico-interact"></i>INTERACT</h1>
             <div id="default" class="btn btn--selected" title="Drag"><i class="ico-hand"></i></div>

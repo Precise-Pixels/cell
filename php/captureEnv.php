@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $string = $_POST['s'];
 $data = base64_decode($string);

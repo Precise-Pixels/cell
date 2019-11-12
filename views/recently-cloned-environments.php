@@ -14,7 +14,7 @@
                     <a href="/user/<?= $env->username; ?>/env/<?= $env->envId; ?>">
                         <div class="imagebox zoombox quarter mblue">
                             <figure>
-                                <img src="/img/user/<?= $env->userId; ?>/capture-<?= $env->envId; ?>.jpg" alt="<?= $env->name; ?>">
+                                <img src="/img/user/<?= $env->userId; ?>/capture-<?= $env->envId; ?>.jpg" alt="<?= $env->name; ?>" onerror="this.src='/img/imagebox-error.png'">
                            </figure>
                             <figcaption>
                                 <h1><?= $env->name; ?></h1>
